@@ -1,17 +1,26 @@
 {
   "name": "Apprenda",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://apprenda.com/",
   "status": "Production",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "private"
   ],
+  "pricing": "Annually",
   "runtimes": [
-    "java",
-    "dotnet"
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "dotnet",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,

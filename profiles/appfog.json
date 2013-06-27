@@ -1,29 +1,59 @@
 {
   "name": "AppFog",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://appfog.com",
   "status": "Production",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public",
     "private"
   ],
+  "pricing": "Monthly Fee",
   "runtimes": [
-    "java",
-    "python",
-    "php",
-    "ruby",
-    "node"
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": false
   },
   "infrastructures": [
-    "NA",
-    "AS",
-    "EU"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    }
   ]
 }

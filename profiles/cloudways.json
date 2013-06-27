@@ -1,27 +1,54 @@
 {
   "name": "Cloudways",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.cloudways.com/en/",
   "status": "Production",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Monthly",
   "runtimes": [
-    "java",
-    "python",
-    "php",
-    "ruby"
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": false,
     "auto": false
   },
   "infrastructures": [
-    "NA",
-    "EU",
-    "OC"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "OC",
+      "country": "",
+      "region": ""
+    }
   ]
 }

@@ -1,25 +1,44 @@
 {
   "name": "Cloud Control",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://cloudcontrol.com/",
   "status": "Production",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Metered",
   "runtimes": [
-    "java",
-    "python",
-    "php",
-    "ruby"
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    }
   ],
   "extendable": true,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": false
   },
   "infrastructures": [
-    "EU"
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    }
   ]
 }

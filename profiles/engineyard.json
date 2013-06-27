@@ -1,28 +1,60 @@
 {
   "name": "EngineYard",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.engineyard.com/",
   "status": "Production",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Metered",
   "runtimes": [
-    "php",
-    "ruby",
-    "node"
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": false
   },
   "infrastructures": [
-    "NA",
-    "SA",
-    "AS",
-    "EU",
-    "OC"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "OC",
+      "country": "",
+      "region": ""
+    }
   ]
 }

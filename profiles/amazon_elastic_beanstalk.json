@@ -1,31 +1,72 @@
 {
   "name": "Amazon Elastic Beanstalk",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://aws.amazon.com/elasticbeanstalk/",
   "status": "Beta",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Metered",
   "runtimes": [
-    "java",
-    "dotnet",
-    "python",
-    "php",
-    "ruby",
-    "node"
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "dotnet",
+      "version": ""
+    },
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": true
   },
   "infrastructures": [
-    "NA",
-    "SA",
-    "AS",
-    "EU",
-    "OC"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "OC",
+      "country": "",
+      "region": ""
+    }
   ]
 }

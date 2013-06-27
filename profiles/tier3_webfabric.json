@@ -1,29 +1,58 @@
 {
   "name": "Tier3 WebFabric",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.tier3.com/products/services/web-fabric",
   "status": "Production",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Metered",
   "runtimes": [
-    "java",
-    "dotnet",
-    "python",
-    "php",
-    "ruby",
-    "node",
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "dotnet",
+      "version": ""
+    },
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    },
     "erlang"
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": false
   },
   "infrastructures": [
-    "NA",
-    "EU"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    }
   ]
 }

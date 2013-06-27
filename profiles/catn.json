@@ -1,22 +1,32 @@
 {
   "name": "CatN",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://catn.com/",
   "status": "Production",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Monthly Threshold",
   "runtimes": [
-    "php"
+    {
+      "language": "php",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,
     "auto": true
   },
   "infrastructures": [
-    "EU"
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    }
   ]
 }

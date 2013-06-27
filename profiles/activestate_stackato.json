@@ -1,22 +1,43 @@
 {
   "name": "ActiveState Stackato",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "www.activestate.com/stackato",
   "status": "Production",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "private"
   ],
+  "pricing": "Annually",
   "runtimes": [
-    "java",
-    "dotnet",
-    "python",
-    "php",
-    "ruby",
-    "node",
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "dotnet",
+      "version": ""
+    },
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    },
     "perl"
   ],
   "extendable": true,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,

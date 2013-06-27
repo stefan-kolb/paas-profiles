@@ -1,16 +1,22 @@
 {
   "name": "mOSAIC",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://developers.mosaic-cloud.eu",
   "status": "Beta",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "private"
   ],
+  "pricing": "Free",
   "runtimes": [
-    "java"
+    {
+      "language": "java",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": true,

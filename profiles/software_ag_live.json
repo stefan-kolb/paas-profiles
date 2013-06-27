@@ -1,23 +1,33 @@
 {
   "name": "Software AG Live",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.softwareag.com/live/",
   "status": "Production",
-  "type": "aPaaS",
+  "status_since": null,
   "hosting": [
     "public",
     "private"
   ],
+  "pricing": "Monthly",
   "runtimes": [
-    "java"
+    {
+      "language": "java",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,
     "auto": true
   },
   "infrastructures": [
-    "NA"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    }
   ]
 }

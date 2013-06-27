@@ -1,28 +1,50 @@
 {
   "name": "OpenShift",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "https://www.openshift.com",
   "status": "Production",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public",
     "private"
   ],
+  "pricing": "Monthly + Metered",
   "runtimes": [
-    "java",
-    "python",
-    "php",
-    "ruby",
-    "node",
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    },
     "perl"
   ],
   "extendable": true,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": true,
     "auto": true
   },
   "infrastructures": [
-    "NA"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    }
   ]
 }

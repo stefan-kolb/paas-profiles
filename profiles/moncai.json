@@ -1,16 +1,22 @@
 {
   "name": "Moncai",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://moncai.com/",
   "status": "Beta",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": null,
   "runtimes": [
-    "dotnet"
+    {
+      "language": "dotnet",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,

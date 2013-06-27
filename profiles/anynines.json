@@ -1,23 +1,36 @@
 {
   "name": "Anynines",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.anynines.com/",
   "status": "Beta",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": null,
   "runtimes": [
-    "ruby",
-    "node"
+    {
+      "language": "ruby",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    }
   ],
   "extendable": true,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,
     "auto": false
   },
   "infrastructures": [
-    "EU"
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    }
   ]
 }

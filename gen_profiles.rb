@@ -2,7 +2,7 @@ require 'roo'
 require 'json'
 require 'date'
 
-klass = Struct.new(:name, :revision, :url, :status, :type, :hosting, :runtimes, :extendable, :scaling, :infrastructures)
+klass = Struct.new(:name, :revision, :vendor_verified, :url, :status, :status_since, :hosting, :pricing, :runtimes, :extendable, :addons, :scaling, :infrastructures)
 
 class Profile < klass
   def to_map
@@ -32,18 +32,28 @@ class Helper
 			arr << names[e]
 		end
 		
-		arr
+		runtimes = []
+		
+		arr.each do |a|
+			runtimes << { :language => a, :version => "" }
+		end
+		runtimes
 	end
 
 	def self.rename_geo k
 		names = [ "NA", "SA", "AS", "EU", "AF", "OC" ]
 		arr = []
 		
-		k.each do |e, i|
+		k.each do |e|
 			arr << names[e]
 		end
 		
-		arr
+		infras = []
+		
+		arr.each do |a|
+			infras << { :continent => a, :country => "", :region => ""}
+		end
+		infras
 	end
 
 end
@@ -74,8 +84,6 @@ entries = Hash.new
 		profile.status = file.cell(line,'Q')
 		# url
 		profile.url = file.cell(line,'R')
-		# paas type
-		profile.type = file.cell(line,'F')
 		# hosting
 		h = []
 		unless file.cell(line, 'AK').nil?
@@ -129,6 +137,7 @@ entries = Hash.new
 		
 		# infras
 		infras = []
+		
 		unless file.cell(line,'AB').nil? 
 			infras << 0
 		end
@@ -171,6 +180,12 @@ entries = Hash.new
 		end
 		
 		profile.scaling = scaling
+		
+		# verified
+		profile.vendor_verified = false
+		
+		# pricing
+		profile.pricing = file.cell(line,'AA')
 		
 		puts JSON.pretty_generate profile
 

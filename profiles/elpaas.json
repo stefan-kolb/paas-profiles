@@ -1,23 +1,33 @@
 {
   "name": "ELPaaS",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "https://www.elpaas.com/",
   "status": "Production",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Monthly",
   "runtimes": [
-    "java",
+    {
+      "language": "java",
+      "version": ""
+    },
     "cobol"
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,
     "auto": false
   },
   "infrastructures": [
-    "NA"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    }
   ]
 }

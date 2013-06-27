@@ -1,17 +1,26 @@
 {
   "name": "SmartCloud",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.ibm.com/cloud-computing/us/en/",
   "status": "Production",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
 
   ],
+  "pricing": null,
   "runtimes": [
-    "java",
-    "php"
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,

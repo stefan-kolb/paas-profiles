@@ -1,27 +1,46 @@
 {
   "name": "Static",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://static.com/",
   "status": "Production",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public",
     "private"
   ],
+  "pricing": "Monthly",
   "runtimes": [
-    "java",
-    "python",
-    "php",
-    "ruby",
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    },
     "erlang"
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": false
   },
   "infrastructures": [
-    "NA"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    }
   ]
 }

@@ -1,16 +1,19 @@
 {
   "name": "Force.com",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.force.com/",
   "status": "Production",
-  "type": "aPaaS",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Monthly",
   "runtimes": [
     "apex"
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,

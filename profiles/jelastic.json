@@ -1,26 +1,51 @@
 {
   "name": "Jelastic",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://jelastic.com",
   "status": "Production",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Monthly, Metered",
   "runtimes": [
-    "java",
-    "php"
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": true
   },
   "infrastructures": [
-    "NA",
-    "SA",
-    "AS",
-    "EU"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    }
   ]
 }

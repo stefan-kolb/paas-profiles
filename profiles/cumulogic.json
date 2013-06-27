@@ -1,17 +1,26 @@
 {
   "name": "Cumulogic",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.cumulogic.com/",
   "status": "Beta",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "private"
   ],
+  "pricing": "Monthly",
   "runtimes": [
-    "java",
-    "php"
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": true,

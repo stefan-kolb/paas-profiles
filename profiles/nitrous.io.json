@@ -1,29 +1,61 @@
 {
   "name": "Nitrous.io",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "https://www.nitrous.io",
   "status": "Beta",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Monthly",
   "runtimes": [
-    "python",
-    "ruby",
-    "node",
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    },
     "go"
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": false,
     "auto": false
   },
   "infrastructures": [
-    "NA",
-    "SA",
-    "AS",
-    "EU",
-    "OC"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "OC",
+      "country": "",
+      "region": ""
+    }
   ]
 }

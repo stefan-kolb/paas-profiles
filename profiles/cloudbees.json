@@ -1,23 +1,37 @@
 {
   "name": "CloudBees",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.cloudbees.com/",
   "status": "Production",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Monthly",
   "runtimes": [
-    "java"
+    {
+      "language": "java",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": true
   },
   "infrastructures": [
-    "NA",
-    "EU"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    }
   ]
 }

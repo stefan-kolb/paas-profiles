@@ -1,26 +1,52 @@
 {
   "name": "Acquia Cloud",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.acquia.com/acquia-cloud",
   "status": "Production",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Monthly",
   "runtimes": [
-    "php"
+    {
+      "language": "php",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": false
   },
   "infrastructures": [
-    "NA",
-    "SA",
-    "AS",
-    "EU",
-    "OC"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "OC",
+      "country": "",
+      "region": ""
+    }
   ]
 }

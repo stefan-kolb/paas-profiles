@@ -1,17 +1,26 @@
 {
   "name": "ConPaaS",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "www.conpaas.eu",
   "status": "Beta",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "private"
   ],
+  "pricing": "Free",
   "runtimes": [
-    "java",
-    "php"
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    }
   ],
   "extendable": true,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": true,

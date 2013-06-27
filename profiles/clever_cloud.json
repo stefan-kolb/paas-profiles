@@ -1,26 +1,45 @@
 {
   "name": "Clever Cloud",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.clever-cloud.com/",
   "status": "Production",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Metered",
   "runtimes": [
-    "java",
-    "python",
-    "php",
-    "node",
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    },
     "scala"
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": true
   },
   "infrastructures": [
-    "EU"
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    }
   ]
 }

@@ -1,22 +1,32 @@
 {
   "name": "brightbox",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.brightbox.co.uk/",
   "status": "Production",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Monthly",
   "runtimes": [
-    "ruby"
+    {
+      "language": "ruby",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": false
   },
   "infrastructures": [
-    "EU"
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    }
   ]
 }

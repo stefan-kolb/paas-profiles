@@ -1,18 +1,30 @@
 {
   "name": "Cloudify",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "www.gigaspaces.com/cloudify",
   "status": "Production",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "private"
   ],
+  "pricing": "Free",
   "runtimes": [
-    "java",
-    "php",
-    "ruby"
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    }
   ],
   "extendable": true,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": true,

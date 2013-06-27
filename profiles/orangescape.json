@@ -1,17 +1,23 @@
 {
   "name": "OrangeScape",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.orangescape.com/paas/platform-as-a-service/",
   "status": "Production",
-  "type": "aPaaS",
+  "status_since": null,
   "hosting": [
     "public",
     "private"
   ],
+  "pricing": null,
   "runtimes": [
-    "java"
+    {
+      "language": "java",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,

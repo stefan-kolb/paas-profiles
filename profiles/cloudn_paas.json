@@ -1,27 +1,53 @@
 {
   "name": "Cloudn PaaS",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.ntt.com/cloudn/",
   "status": "Production",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Metered",
   "runtimes": [
-    "java",
-    "python",
-    "php",
-    "ruby",
-    "node"
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": true
   },
   "infrastructures": [
-    "NA",
-    "AS"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "",
+      "region": ""
+    }
   ]
 }

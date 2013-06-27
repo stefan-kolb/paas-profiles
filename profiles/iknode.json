@@ -1,22 +1,32 @@
 {
   "name": "iKnode",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://iknode.com",
   "status": "Beta",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": "Monthly Threshold",
   "runtimes": [
-    "dotnet"
+    {
+      "language": "dotnet",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,
     "auto": true
   },
   "infrastructures": [
-    "NA"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    }
   ]
 }

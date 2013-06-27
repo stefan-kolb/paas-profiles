@@ -1,32 +1,70 @@
 {
   "name": "ElasticBox",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.elasticbox.com",
   "status": "Beta",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public",
     "private"
   ],
+  "pricing": null,
   "runtimes": [
-    "java",
-    "dotnet",
-    "python",
-    "php",
-    "node",
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "dotnet",
+      "version": ""
+    },
+    {
+      "language": "python",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    },
     "perl"
   ],
   "extendable": true,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,
     "auto": false
   },
   "infrastructures": [
-    "NA",
-    "SA",
-    "AS",
-    "EU",
-    "OC"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "OC",
+      "country": "",
+      "region": ""
+    }
   ]
 }

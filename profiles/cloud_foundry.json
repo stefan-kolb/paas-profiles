@@ -1,27 +1,43 @@
 {
   "name": "Cloud Foundry",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "http://www.cloudfoundry.com/",
   "status": "Beta",
-  "type": "Polyglot",
+  "status_since": null,
   "hosting": [
     "public",
     "private"
   ],
+  "pricing": null,
   "runtimes": [
-    "java",
-    "ruby",
-    "node",
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    },
     "groovy",
     "scala"
   ],
   "extendable": true,
+  "addons": null,
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": false
   },
   "infrastructures": [
-    "NA"
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    }
   ]
 }

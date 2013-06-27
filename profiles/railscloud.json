@@ -1,22 +1,32 @@
 {
   "name": "Railscloud",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "https://www.railscloud.de/",
   "status": "Beta",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": null,
   "runtimes": [
-    "ruby"
+    {
+      "language": "ruby",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": true,
     "auto": true
   },
   "infrastructures": [
-    "EU"
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    }
   ]
 }

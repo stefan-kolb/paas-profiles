@@ -1,16 +1,22 @@
 {
   "name": "Durga",
   "revision": "2013-06-27",
+  "vendor_verified": false,
   "url": "https://durga.onesme.com/",
   "status": "Beta",
-  "type": "Language-specific",
+  "status_since": null,
   "hosting": [
     "public"
   ],
+  "pricing": null,
   "runtimes": [
-    "php"
+    {
+      "language": "php",
+      "version": ""
+    }
   ],
   "extendable": false,
+  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,
