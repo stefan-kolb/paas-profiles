@@ -3,8 +3,9 @@
   "revision": "2013-06-27",
   "vendor_verified": false,
   "url": "http://stackable.com/",
-  "status": "Production",
+  "status": "production",
   "status_since": null,
+  "type": "language-specific",
   "hosting": [
     "public"
   ],

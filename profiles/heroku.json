@@ -3,8 +3,9 @@
   "revision": "2013-06-27",
   "vendor_verified": false,
   "url": "http://www.heroku.com/",
-  "status": "Production",
-  "status_since": null,
+  "status": "production",
+  "status_since": "2007-10-30",
+  "type": "polyglot",
   "hosting": [
     "public"
   ],

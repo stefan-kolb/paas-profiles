@@ -3,8 +3,9 @@
   "revision": "2013-06-27",
   "vendor_verified": false,
   "url": "http://www.pogoapp.com/",
-  "status": "Beta",
+  "status": "beta",
   "status_since": null,
+  "type": "polyglot",
   "hosting": [
     "public"
   ],

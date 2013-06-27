@@ -2,7 +2,7 @@ require 'roo'
 require 'json'
 require 'date'
 
-klass = Struct.new(:name, :revision, :vendor_verified, :url, :status, :status_since, :hosting, :pricing, :runtimes, :extendable, :addons, :scaling, :infrastructures)
+klass = Struct.new(:name, :revision, :vendor_verified, :url, :status, :status_since, :type, :hosting, :pricing, :runtimes, :extendable, :addons, :scaling, :infrastructures)
 
 class Profile < klass
   def to_map
@@ -81,9 +81,17 @@ entries = Hash.new
 		# revision
 		profile.revision = Date.today
 		# status
-		profile.status = file.cell(line,'Q')
+		profile.status = file.cell(line,'Q').downcase
+		# status since
+		if profile.status.casecmp DevStatus::BETA
+			profile.status_since = file.cell(line,'W')
+		else
+			profile.status_since = file.cell(line,'X')
+		end
 		# url
 		profile.url = file.cell(line,'R')
+		# type
+		profile.type = file.cell(line,'F').downcase
 		# hosting
 		h = []
 		unless file.cell(line, 'AK').nil?

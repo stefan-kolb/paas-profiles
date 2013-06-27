@@ -1,10 +1,11 @@
 {
-  "name": "Microsoft Windows Azure",
+  "name": "Windows Azure",
   "revision": "2013-06-27",
   "vendor_verified": false,
   "url": "http://www.microsoft.com/windowsazure/",
-  "status": "Production",
-  "status_since": null,
+  "status": "production",
+  "status_since": "2008-10-27",
+  "type": "polyglot",
   "hosting": [
     "public"
   ],
@@ -35,7 +36,7 @@
       "version": ""
     }
   ],
-  "extendable": false,
+  "extendable": true,
   "addons": null,
   "scaling": {
     "vertical": true,

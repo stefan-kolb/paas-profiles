@@ -3,8 +3,9 @@
   "revision": "2013-06-27",
   "vendor_verified": false,
   "url": "http://www.ntt.com/cloudn/",
-  "status": "Production",
-  "status_since": null,
+  "status": "production",
+  "status_since": "2012-12-01",
+  "type": "polyglot",
   "hosting": [
     "public"
   ],

@@ -3,8 +3,9 @@
   "revision": "2013-06-27",
   "vendor_verified": false,
   "url": "http://relbit.com/",
-  "status": "Beta",
-  "status_since": null,
+  "status": "beta",
+  "status_since": "2011-03-01",
+  "type": "language-specific",
   "hosting": [
     "public"
   ],

@@ -3,8 +3,9 @@
   "revision": "2013-06-27",
   "vendor_verified": false,
   "url": "http://wso2.com/cloud/stratos/",
-  "status": "Beta",
-  "status_since": null,
+  "status": "beta",
+  "status_since": "2010-11-15",
+  "type": "polyglot",
   "hosting": [
     "private"
   ],
