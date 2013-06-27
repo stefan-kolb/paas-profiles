@@ -1,0 +1,23 @@
+{
+  "name": "ELPaaS",
+  "revision": "2013-06-27",
+  "url": "https://www.elpaas.com/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "cobol"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

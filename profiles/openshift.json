@@ -1,0 +1,28 @@
+{
+  "name": "OpenShift",
+  "revision": "2013-06-27",
+  "url": "https://www.openshift.com",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public",
+    "private"
+  ],
+  "runtimes": [
+    "java",
+    "python",
+    "php",
+    "ruby",
+    "node",
+    "perl"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

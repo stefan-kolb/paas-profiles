@@ -1,0 +1,23 @@
+{
+  "name": "SmartCloud",
+  "revision": "2013-06-27",
+  "url": "http://www.ibm.com/cloud-computing/us/en/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+
+  ],
+  "runtimes": [
+    "java",
+    "php"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+
+  ]
+}

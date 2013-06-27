@@ -1,0 +1,22 @@
+{
+  "name": "CatN",
+  "revision": "2013-06-27",
+  "url": "http://catn.com/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "php"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": true
+  },
+  "infrastructures": [
+    "EU"
+  ]
+}

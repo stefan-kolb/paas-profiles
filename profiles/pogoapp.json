@@ -1,0 +1,26 @@
+{
+  "name": "Pogoapp",
+  "revision": "2013-06-27",
+  "url": "http://www.pogoapp.com/",
+  "status": "Beta",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "python",
+    "php",
+    "ruby",
+    "node",
+    "lua"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

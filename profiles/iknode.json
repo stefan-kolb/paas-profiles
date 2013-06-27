@@ -1,0 +1,22 @@
+{
+  "name": "iKnode",
+  "revision": "2013-06-27",
+  "url": "http://iknode.com",
+  "status": "Beta",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "dotnet"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": true
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

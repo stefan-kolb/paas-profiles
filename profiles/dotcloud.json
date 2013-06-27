@@ -1,0 +1,28 @@
+{
+  "name": "dotCloud",
+  "revision": "2013-06-27",
+  "url": "http://www.dotcloud.com/",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "python",
+    "php",
+    "ruby",
+    "node",
+    "opa",
+    "perl"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Tier3 WebFabric",
+  "revision": "2013-06-27",
+  "url": "http://www.tier3.com/products/services/web-fabric",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "dotnet",
+    "python",
+    "php",
+    "ruby",
+    "node",
+    "erlang"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA",
+    "EU"
+  ]
+}

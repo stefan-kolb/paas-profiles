@@ -1,0 +1,32 @@
+{
+  "name": "ElasticBox",
+  "revision": "2013-06-27",
+  "url": "http://www.elasticbox.com",
+  "status": "Beta",
+  "type": "Polyglot",
+  "hosting": [
+    "public",
+    "private"
+  ],
+  "runtimes": [
+    "java",
+    "dotnet",
+    "python",
+    "php",
+    "node",
+    "perl"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA",
+    "SA",
+    "AS",
+    "EU",
+    "OC"
+  ]
+}

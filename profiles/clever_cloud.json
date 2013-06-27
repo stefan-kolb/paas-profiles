@@ -1,0 +1,26 @@
+{
+  "name": "Clever Cloud",
+  "revision": "2013-06-27",
+  "url": "http://www.clever-cloud.com/",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "python",
+    "php",
+    "node",
+    "scala"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+    "EU"
+  ]
+}

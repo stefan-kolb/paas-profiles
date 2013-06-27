@@ -1,0 +1,23 @@
+{
+  "name": "Mendix",
+  "revision": "2013-06-27",
+  "url": "http://www.mendix.com",
+  "status": "Production",
+  "type": "aPaaS",
+  "hosting": [
+    "public",
+    "private"
+  ],
+  "runtimes": [
+    "java"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": true
+  },
+  "infrastructures": [
+
+  ]
+}

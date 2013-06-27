@@ -1,0 +1,22 @@
+{
+  "name": "Cordys",
+  "revision": "2013-06-27",
+  "url": "http://www.cordys.com/",
+  "status": "Production",
+  "type": "aPaaS",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+
+  ]
+}

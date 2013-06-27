@@ -1,0 +1,25 @@
+{
+  "name": "Webbynode",
+  "revision": "2013-06-27",
+  "url": "http://webbynode.com/",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "python",
+    "php",
+    "ruby",
+    "node"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Stackable",
+  "revision": "2013-06-27",
+  "url": "http://stackable.com/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "python",
+    "php"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

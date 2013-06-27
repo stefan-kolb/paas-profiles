@@ -1,0 +1,23 @@
+{
+  "name": "Apprenda",
+  "revision": "2013-06-27",
+  "url": "http://apprenda.com/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "private"
+  ],
+  "runtimes": [
+    "java",
+    "dotnet"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+
+  ]
+}

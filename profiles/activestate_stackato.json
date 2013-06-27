@@ -1,0 +1,28 @@
+{
+  "name": "ActiveState Stackato",
+  "revision": "2013-06-27",
+  "url": "www.activestate.com/stackato",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "private"
+  ],
+  "runtimes": [
+    "java",
+    "dotnet",
+    "python",
+    "php",
+    "ruby",
+    "node",
+    "perl"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Cumulogic",
+  "revision": "2013-06-27",
+  "url": "http://www.cumulogic.com/",
+  "status": "Beta",
+  "type": "Polyglot",
+  "hosting": [
+    "private"
+  ],
+  "runtimes": [
+    "java",
+    "php"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+
+  ]
+}

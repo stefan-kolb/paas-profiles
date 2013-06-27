@@ -1,0 +1,22 @@
+{
+  "name": "SAP HANA Cloud",
+  "revision": "2013-06-27",
+  "url": "http://scn.sap.com/docs/DOC-39315",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+    "EU"
+  ]
+}

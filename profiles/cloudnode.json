@@ -1,0 +1,22 @@
+{
+  "name": "CloudNode",
+  "revision": "2013-06-27",
+  "url": "http://cloudno.de/",
+  "status": "Beta",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "node"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+    "EU"
+  ]
+}

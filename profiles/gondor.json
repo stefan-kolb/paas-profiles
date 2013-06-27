@@ -1,0 +1,22 @@
+{
+  "name": "Gondor",
+  "revision": "2013-06-27",
+  "url": "https://gondor.io/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "python"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

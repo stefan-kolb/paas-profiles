@@ -1,0 +1,29 @@
+{
+  "name": "Microsoft Windows Azure",
+  "revision": "2013-06-27",
+  "url": "http://www.microsoft.com/windowsazure/",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "dotnet",
+    "python",
+    "php",
+    "ruby",
+    "node"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+    "NA",
+    "AS",
+    "EU"
+  ]
+}

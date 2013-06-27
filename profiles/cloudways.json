@@ -1,0 +1,27 @@
+{
+  "name": "Cloudways",
+  "revision": "2013-06-27",
+  "url": "http://www.cloudways.com/en/",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "python",
+    "php",
+    "ruby"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA",
+    "EU",
+    "OC"
+  ]
+}

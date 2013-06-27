@@ -1,0 +1,25 @@
+{
+  "name": "Google AppEngine",
+  "revision": "2013-06-27",
+  "url": "https://developers.google.com/appengine/",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "python",
+    "php",
+    "go"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

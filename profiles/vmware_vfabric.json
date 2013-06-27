@@ -1,0 +1,22 @@
+{
+  "name": "VMWARE vFabric",
+  "revision": "2013-06-27",
+  "url": "http://www.vmware.com/de/products/application-platform/vfabric/overview.html",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "private"
+  ],
+  "runtimes": [
+    "java"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+
+  ]
+}

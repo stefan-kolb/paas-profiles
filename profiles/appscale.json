@@ -1,0 +1,25 @@
+{
+  "name": "AppScale",
+  "revision": "2013-06-27",
+  "url": "www.appscale.com/",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "private"
+  ],
+  "runtimes": [
+    "java",
+    "python",
+    "node",
+    "go"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+
+  ]
+}

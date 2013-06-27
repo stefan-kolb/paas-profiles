@@ -1,0 +1,22 @@
+{
+  "name": "Force.com",
+  "revision": "2013-06-27",
+  "url": "http://www.force.com/",
+  "status": "Production",
+  "type": "aPaaS",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "apex"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": true
+  },
+  "infrastructures": [
+
+  ]
+}

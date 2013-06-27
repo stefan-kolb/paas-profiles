@@ -1,0 +1,22 @@
+{
+  "name": "Orchestra",
+  "revision": "2013-06-27",
+  "url": "http://orchestra.io/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "php"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

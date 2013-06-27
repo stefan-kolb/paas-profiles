@@ -1,0 +1,26 @@
+{
+  "name": "Webappcabaret",
+  "revision": "2013-06-27",
+  "url": "http://webappcabaret.com/",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "python",
+    "php",
+    "ruby",
+    "scala"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

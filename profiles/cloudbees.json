@@ -1,0 +1,23 @@
+{
+  "name": "CloudBees",
+  "revision": "2013-06-27",
+  "url": "http://www.cloudbees.com/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+    "NA",
+    "EU"
+  ]
+}

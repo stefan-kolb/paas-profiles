@@ -1,0 +1,29 @@
+{
+  "name": "Standing Cloud",
+  "revision": "2013-06-27",
+  "url": "www.standingcloud.com",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "python",
+    "php",
+    "ruby"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA",
+    "SA",
+    "AS",
+    "EU",
+    "OC"
+  ]
+}

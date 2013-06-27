@@ -1,0 +1,22 @@
+{
+  "name": "Railscloud",
+  "revision": "2013-06-27",
+  "url": "https://www.railscloud.de/",
+  "status": "Beta",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "ruby"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+    "EU"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Cloud Control",
+  "revision": "2013-06-27",
+  "url": "http://cloudcontrol.com/",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "python",
+    "php",
+    "ruby"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "EU"
+  ]
+}

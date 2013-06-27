@@ -1,0 +1,24 @@
+{
+  "name": "Cloudify",
+  "revision": "2013-06-27",
+  "url": "www.gigaspaces.com/cloudify",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "private"
+  ],
+  "runtimes": [
+    "java",
+    "php",
+    "ruby"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+
+  ]
+}

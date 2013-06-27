@@ -1,0 +1,22 @@
+{
+  "name": "brightbox",
+  "revision": "2013-06-27",
+  "url": "http://www.brightbox.co.uk/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "ruby"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "EU"
+  ]
+}

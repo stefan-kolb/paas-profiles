@@ -1,0 +1,28 @@
+{
+  "name": "EngineYard",
+  "revision": "2013-06-27",
+  "url": "http://www.engineyard.com/",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "php",
+    "ruby",
+    "node"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA",
+    "SA",
+    "AS",
+    "EU",
+    "OC"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Relbit",
+  "revision": "2013-06-27",
+  "url": "http://relbit.com/",
+  "status": "Beta",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "php"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+    "EU"
+  ]
+}

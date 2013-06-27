@@ -1,0 +1,22 @@
+{
+  "name": "mOSAIC",
+  "revision": "2013-06-27",
+  "url": "http://developers.mosaic-cloud.eu",
+  "status": "Beta",
+  "type": "Language-specific",
+  "hosting": [
+    "private"
+  ],
+  "runtimes": [
+    "java"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+
+  ]
+}

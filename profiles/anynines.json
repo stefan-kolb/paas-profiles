@@ -1,0 +1,23 @@
+{
+  "name": "Anynines",
+  "revision": "2013-06-27",
+  "url": "http://www.anynines.com/",
+  "status": "Beta",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "ruby",
+    "node"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+    "EU"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "AppHarbor",
+  "revision": "2013-06-27",
+  "url": "https://appharbor.com/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "dotnet"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA",
+    "EU"
+  ]
+}

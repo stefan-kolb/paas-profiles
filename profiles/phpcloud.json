@@ -1,0 +1,23 @@
+{
+  "name": "PHPCloud",
+  "revision": "2013-06-27",
+  "url": "http://www.phpcloud.com/",
+  "status": "Beta",
+  "type": "Language-specific",
+  "hosting": [
+    "public",
+    "private"
+  ],
+  "runtimes": [
+    "php"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": true
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "BitNami",
+  "revision": "2013-06-27",
+  "url": "http://bitnami.org/cloud",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "python",
+    "php",
+    "ruby",
+    "node"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA",
+    "SA",
+    "AS",
+    "EU",
+    "OC"
+  ]
+}

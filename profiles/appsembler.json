@@ -1,0 +1,28 @@
+{
+  "name": "Appsembler",
+  "revision": "2013-06-27",
+  "url": "http://appsembler.com",
+  "status": "Beta",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "dotnet",
+    "python",
+    "php",
+    "ruby",
+    "node",
+    "perl"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

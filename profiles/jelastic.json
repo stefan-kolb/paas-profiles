@@ -1,0 +1,26 @@
+{
+  "name": "Jelastic",
+  "revision": "2013-06-27",
+  "url": "http://jelastic.com",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "php"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+    "NA",
+    "SA",
+    "AS",
+    "EU"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Tsuru",
+  "revision": "2013-06-27",
+  "url": "http://www.tsuru.io/",
+  "status": "Beta",
+  "type": "Polyglot",
+  "hosting": [
+    "public",
+    "private"
+  ],
+  "runtimes": [
+    "python"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+
+  ]
+}

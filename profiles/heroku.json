@@ -1,0 +1,29 @@
+{
+  "name": "Heroku",
+  "revision": "2013-06-27",
+  "url": "http://www.heroku.com/",
+  "status": "Production",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "java",
+    "python",
+    "php",
+    "ruby",
+    "node",
+    "scala",
+    "clojure"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA",
+    "EU"
+  ]
+}

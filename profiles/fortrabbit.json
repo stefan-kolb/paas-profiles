@@ -1,0 +1,22 @@
+{
+  "name": "fortrabbit",
+  "revision": "2013-06-27",
+  "url": "http://fortrabbit.com/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "php"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "EU"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Software AG Live",
+  "revision": "2013-06-27",
+  "url": "http://www.softwareag.com/live/",
+  "status": "Production",
+  "type": "aPaaS",
+  "hosting": [
+    "public",
+    "private"
+  ],
+  "runtimes": [
+    "java"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": true
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

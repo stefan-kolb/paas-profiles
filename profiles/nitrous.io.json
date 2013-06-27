@@ -1,0 +1,29 @@
+{
+  "name": "Nitrous.io",
+  "revision": "2013-06-27",
+  "url": "https://www.nitrous.io",
+  "status": "Beta",
+  "type": "Polyglot",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "python",
+    "ruby",
+    "node",
+    "go"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": true,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA",
+    "SA",
+    "AS",
+    "EU",
+    "OC"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Cloud Foundry",
+  "revision": "2013-06-27",
+  "url": "http://www.cloudfoundry.com/",
+  "status": "Beta",
+  "type": "Polyglot",
+  "hosting": [
+    "public",
+    "private"
+  ],
+  "runtimes": [
+    "java",
+    "ruby",
+    "node",
+    "groovy",
+    "scala"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA"
+  ]
+}

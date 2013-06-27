@@ -1,0 +1,22 @@
+{
+  "name": "Phenona",
+  "revision": "2013-06-27",
+  "url": "http://www.phenona.com/",
+  "status": "Beta",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "perl"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+
+  ]
+}

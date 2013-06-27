@@ -1,0 +1,23 @@
+{
+  "name": "ConPaaS",
+  "revision": "2013-06-27",
+  "url": "www.conpaas.eu",
+  "status": "Beta",
+  "type": "Polyglot",
+  "hosting": [
+    "private"
+  ],
+  "runtimes": [
+    "java",
+    "php"
+  ],
+  "extendable": true,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "infrastructures": [
+
+  ]
+}

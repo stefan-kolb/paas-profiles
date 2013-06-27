@@ -1,0 +1,23 @@
+{
+  "name": "Oracle Cloud PaaS",
+  "revision": "2013-06-27",
+  "url": "http://cloud.oracle.com",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public",
+    "private"
+  ],
+  "runtimes": [
+    "java"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "infrastructures": [
+
+  ]
+}

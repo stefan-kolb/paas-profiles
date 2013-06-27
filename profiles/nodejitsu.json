@@ -1,0 +1,23 @@
+{
+  "name": "Nodejitsu",
+  "revision": "2013-06-27",
+  "url": "http://www.nodejitsu.com/",
+  "status": "Production",
+  "type": "Language-specific",
+  "hosting": [
+    "public"
+  ],
+  "runtimes": [
+    "node"
+  ],
+  "extendable": false,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": false
+  },
+  "infrastructures": [
+    "NA",
+    "EU"
+  ]
+}
