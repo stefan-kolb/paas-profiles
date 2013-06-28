@@ -1,6 +1,6 @@
 {
   "name": "OpenShift",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "https://www.openshift.com",
   "status": "production",
@@ -11,6 +11,14 @@
     "private"
   ],
   "pricing": "Monthly + Metered",
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -32,15 +40,15 @@
       "language": "node",
       "version": ""
     },
-    "perl"
+    {
+      "language": "perl",
+      "version": ""
+    }
   ],
-  "extendable": true,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": false,
-    "horizontal": true,
-    "auto": true
-  },
+  "extendable": true,
   "infrastructures": [
     {
       "continent": "NA",

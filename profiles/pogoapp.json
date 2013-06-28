@@ -1,6 +1,6 @@
 {
   "name": "Pogoapp",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://www.pogoapp.com/",
   "status": "beta",
@@ -10,6 +10,14 @@
     "public"
   ],
   "pricing": "Monthly",
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "python",
@@ -27,15 +35,15 @@
       "language": "node",
       "version": ""
     },
-    "lua"
+    {
+      "language": "lua",
+      "version": ""
+    }
   ],
-  "extendable": true,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": false,
-    "horizontal": true,
-    "auto": false
-  },
+  "extendable": true,
   "infrastructures": [
     {
       "continent": "NA",

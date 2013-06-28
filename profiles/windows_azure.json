@@ -1,6 +1,6 @@
 {
   "name": "Windows Azure",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://www.microsoft.com/windowsazure/",
   "status": "production",
@@ -10,6 +10,14 @@
     "public"
   ],
   "pricing": "Metered",
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -36,13 +44,10 @@
       "version": ""
     }
   ],
-  "extendable": true,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": true,
-    "horizontal": true,
-    "auto": true
-  },
+  "extendable": true,
   "infrastructures": [
     {
       "continent": "NA",

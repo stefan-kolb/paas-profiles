@@ -1,6 +1,6 @@
 {
   "name": "Cloudify",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "www.gigaspaces.com/cloudify",
   "status": "production",
@@ -10,6 +10,14 @@
     "private"
   ],
   "pricing": "Free",
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -24,13 +32,10 @@
       "version": ""
     }
   ],
-  "extendable": true,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": false,
-    "horizontal": true,
-    "auto": true
-  },
+  "extendable": true,
   "infrastructures": [
 
   ]

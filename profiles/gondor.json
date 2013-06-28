@@ -1,6 +1,6 @@
 {
   "name": "Gondor",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "https://gondor.io/",
   "status": "production",
@@ -10,19 +10,24 @@
     "public"
   ],
   "pricing": "Monthly",
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "python",
       "version": ""
     }
   ],
-  "extendable": false,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": false,
-    "horizontal": true,
-    "auto": false
-  },
+  "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",

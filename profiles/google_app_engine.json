@@ -1,6 +1,6 @@
 {
-  "name": "Google AppEngine",
-  "revision": "2013-06-27",
+  "name": "Google App Engine",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "https://developers.google.com/appengine/",
   "status": "production",
@@ -10,6 +10,15 @@
     "public"
   ],
   "pricing": "Metered",
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "compliance": [
+    "ssae 16 type ii",
+    "isae 3402 type ii"
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -23,18 +32,23 @@
       "language": "php",
       "version": ""
     },
-    "go"
+    {
+      "language": "go",
+      "version": ""
+    }
   ],
-  "extendable": false,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": false,
-    "horizontal": true,
-    "auto": true
-  },
+  "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
       "country": "",
       "region": ""
     }

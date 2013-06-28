@@ -1,6 +1,6 @@
 {
   "name": "AppScale",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "www.appscale.com/",
   "status": "production",
@@ -10,6 +10,14 @@
     "private"
   ],
   "pricing": "Free",
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -23,15 +31,15 @@
       "language": "node",
       "version": ""
     },
-    "go"
+    {
+      "language": "go",
+      "version": ""
+    }
   ],
-  "extendable": false,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": false,
-    "horizontal": true,
-    "auto": true
-  },
+  "extendable": false,
   "infrastructures": [
 
   ]

@@ -1,6 +1,6 @@
 {
   "name": "Relbit",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://relbit.com/",
   "status": "beta",
@@ -10,19 +10,24 @@
     "public"
   ],
   "pricing": "Monthly",
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "php",
       "version": ""
     }
   ],
-  "extendable": false,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": true,
-    "horizontal": true,
-    "auto": true
-  },
+  "extendable": false,
   "infrastructures": [
     {
       "continent": "EU",

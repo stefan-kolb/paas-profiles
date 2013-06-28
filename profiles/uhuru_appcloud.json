@@ -1,6 +1,6 @@
 {
   "name": "Uhuru AppCloud",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://www.uhurusoftware.com/",
   "status": "beta",
@@ -11,6 +11,14 @@
     "private"
   ],
   "pricing": null,
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -33,13 +41,10 @@
       "version": ""
     }
   ],
-  "extendable": false,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": true,
-    "horizontal": true,
-    "auto": false
-  },
+  "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",

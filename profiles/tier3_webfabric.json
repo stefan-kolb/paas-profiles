@@ -1,6 +1,6 @@
 {
   "name": "Tier3 WebFabric",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://www.tier3.com/products/services/web-fabric",
   "status": "production",
@@ -10,6 +10,14 @@
     "public"
   ],
   "pricing": "Metered",
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -35,15 +43,15 @@
       "language": "node",
       "version": ""
     },
-    "erlang"
+    {
+      "language": "erlang",
+      "version": ""
+    }
   ],
-  "extendable": false,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": true,
-    "horizontal": true,
-    "auto": false
-  },
+  "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",

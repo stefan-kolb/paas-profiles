@@ -1,6 +1,6 @@
 {
   "name": "Apprenda",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://apprenda.com/",
   "status": "production",
@@ -10,6 +10,14 @@
     "private"
   ],
   "pricing": "Annually",
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -20,13 +28,10 @@
       "version": ""
     }
   ],
-  "extendable": false,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": true,
-    "horizontal": true,
-    "auto": true
-  },
+  "extendable": false,
   "infrastructures": [
 
   ]

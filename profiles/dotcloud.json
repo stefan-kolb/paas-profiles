@@ -1,6 +1,6 @@
 {
   "name": "dotCloud",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://www.dotcloud.com/",
   "status": "production",
@@ -10,6 +10,14 @@
     "public"
   ],
   "pricing": "Metered",
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -31,16 +39,19 @@
       "language": "node",
       "version": ""
     },
-    "opa",
-    "perl"
+    {
+      "language": "opa",
+      "version": ""
+    },
+    {
+      "language": "perl",
+      "version": ""
+    }
   ],
-  "extendable": true,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": true,
-    "horizontal": true,
-    "auto": false
-  },
+  "extendable": true,
   "infrastructures": [
     {
       "continent": "NA",

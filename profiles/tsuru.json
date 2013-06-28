@@ -1,6 +1,6 @@
 {
   "name": "Tsuru",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://www.tsuru.io/",
   "status": "beta",
@@ -11,19 +11,24 @@
     "private"
   ],
   "pricing": null,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "python",
       "version": ""
     }
   ],
-  "extendable": true,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": false,
-    "horizontal": false,
-    "auto": false
-  },
+  "extendable": true,
   "infrastructures": [
 
   ]

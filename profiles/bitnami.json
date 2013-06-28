@@ -1,6 +1,6 @@
 {
   "name": "BitNami",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://bitnami.org/cloud",
   "status": "production",
@@ -10,6 +10,14 @@
     "public"
   ],
   "pricing": "Monthly + Metered AWS costs",
+  "scaling": {
+    "vertical": true,
+    "horizontal": false,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -32,13 +40,10 @@
       "version": ""
     }
   ],
-  "extendable": false,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": true,
-    "horizontal": false,
-    "auto": false
-  },
+  "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",

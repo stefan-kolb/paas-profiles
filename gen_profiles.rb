@@ -2,7 +2,7 @@ require 'roo'
 require 'json'
 require 'date'
 
-klass = Struct.new(:name, :revision, :vendor_verified, :url, :status, :status_since, :type, :hosting, :pricing, :runtimes, :extendable, :addons, :scaling, :infrastructures)
+klass = Struct.new(:name, :revision, :vendor_verified, :url, :status, :status_since, :type, :hosting, :pricing, :scaling, :compliance, :runtimes, :frameworks, :services, :addons, :extendable, :infrastructures)
 
 class Profile < klass
   def to_map
@@ -131,7 +131,7 @@ entries = Hash.new
 		# other
 		unless file.cell(line,'M').nil?
 			e = file.cell(line,'M').split ','
-			runtimes.concat e.map!{|e| e.downcase.strip }
+			runtimes.concat e.map!{|e| { :language => e.downcase.strip, "version" => "" } }
 		end
 		
 		# extendable
@@ -194,6 +194,15 @@ entries = Hash.new
 		
 		# pricing
 		profile.pricing = file.cell(line,'AA')
+
+		# compliance
+		compliance = []
+		unless file.cell(line,'AN').nil?
+			e = file.cell(line,'AN').split ','
+			compliance.concat e.map!{|e| e.downcase.strip }
+		end
+		
+		profile.compliance = compliance
 		
 		puts JSON.pretty_generate profile
 

@@ -1,6 +1,6 @@
 {
   "name": "Force.com",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://www.force.com/",
   "status": "production",
@@ -10,16 +10,24 @@
     "public"
   ],
   "pricing": "Monthly",
-  "runtimes": [
-    "apex"
-  ],
-  "extendable": false,
-  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,
     "auto": true
   },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "apex",
+      "version": ""
+    }
+  ],
+  "frameworks": null,
+  "services": null,
+  "addons": null,
+  "extendable": false,
   "infrastructures": [
 
   ]

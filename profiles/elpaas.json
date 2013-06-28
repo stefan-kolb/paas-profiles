@@ -1,6 +1,6 @@
 {
   "name": "ELPaaS",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "https://www.elpaas.com/",
   "status": "production",
@@ -10,20 +10,28 @@
     "public"
   ],
   "pricing": "Monthly",
-  "runtimes": [
-    {
-      "language": "java",
-      "version": ""
-    },
-    "cobol"
-  ],
-  "extendable": false,
-  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,
     "auto": false
   },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "cobol",
+      "version": ""
+    }
+  ],
+  "frameworks": null,
+  "services": null,
+  "addons": null,
+  "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",

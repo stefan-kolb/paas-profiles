@@ -1,6 +1,6 @@
 {
   "name": "Clever Cloud",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://www.clever-cloud.com/",
   "status": "production",
@@ -10,6 +10,14 @@
     "public"
   ],
   "pricing": "Metered",
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -27,15 +35,15 @@
       "language": "node",
       "version": ""
     },
-    "scala"
+    {
+      "language": "scala",
+      "version": ""
+    }
   ],
-  "extendable": false,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": true,
-    "horizontal": true,
-    "auto": true
-  },
+  "extendable": false,
   "infrastructures": [
     {
       "continent": "EU",

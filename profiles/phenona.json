@@ -1,6 +1,6 @@
 {
   "name": "Phenona",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://www.phenona.com/",
   "status": "beta",
@@ -10,16 +10,24 @@
     "public"
   ],
   "pricing": null,
-  "runtimes": [
-    "perl"
-  ],
-  "extendable": false,
-  "addons": null,
   "scaling": {
     "vertical": false,
     "horizontal": false,
     "auto": false
   },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "perl",
+      "version": ""
+    }
+  ],
+  "frameworks": null,
+  "services": null,
+  "addons": null,
+  "extendable": false,
   "infrastructures": [
 
   ]

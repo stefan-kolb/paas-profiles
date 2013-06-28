@@ -1,6 +1,6 @@
 {
   "name": "Webappcabaret",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://webappcabaret.com/",
   "status": "production",
@@ -10,6 +10,14 @@
     "public"
   ],
   "pricing": "Monthly",
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -27,15 +35,15 @@
       "language": "ruby",
       "version": ""
     },
-    "scala"
+    {
+      "language": "scala",
+      "version": ""
+    }
   ],
-  "extendable": false,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": false,
-    "horizontal": false,
-    "auto": false
-  },
+  "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",

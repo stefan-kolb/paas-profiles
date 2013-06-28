@@ -1,6 +1,6 @@
 {
   "name": "WSO2 Stratos",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://wso2.com/cloud/stratos/",
   "status": "beta",
@@ -10,19 +10,24 @@
     "private"
   ],
   "pricing": null,
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "php",
       "version": ""
     }
   ],
-  "extendable": true,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": false,
-    "horizontal": true,
-    "auto": true
-  },
+  "extendable": true,
   "infrastructures": [
 
   ]

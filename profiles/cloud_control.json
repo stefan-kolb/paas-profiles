@@ -1,6 +1,6 @@
 {
   "name": "Cloud Control",
-  "revision": "2013-06-27",
+  "revision": "2013-06-28",
   "vendor_verified": false,
   "url": "http://cloudcontrol.com/",
   "status": "production",
@@ -10,6 +10,14 @@
     "public"
   ],
   "pricing": "Metered",
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
   "runtimes": [
     {
       "language": "java",
@@ -28,13 +36,10 @@
       "version": ""
     }
   ],
-  "extendable": true,
+  "frameworks": null,
+  "services": null,
   "addons": null,
-  "scaling": {
-    "vertical": true,
-    "horizontal": true,
-    "auto": false
-  },
+  "extendable": true,
   "infrastructures": [
     {
       "continent": "EU",
