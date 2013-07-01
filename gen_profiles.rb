@@ -62,6 +62,7 @@ file = Roo::Excelx.new("Cloud Platforms (PaaS).xlsx")
 file.default_sheet = file.sheets.first
 
 entries = Hash.new
+id = 1
 
 4.upto(85) do |line|
 	unless file.cell(line,'Q') == DevStatus::EOL

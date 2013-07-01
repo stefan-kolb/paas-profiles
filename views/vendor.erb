@@ -1,0 +1,28 @@
+<% 
+	require 'json'
+	
+	profile = JSON.parse(File.read("profiles/#{params[:name]}.json"));
+%>
+<html>
+<body>
+<a href="<%= profile["url"] %>" target="_blank"><%= profile["name"] %></a>
+<%= profile["vendor_verified"] %>
+<%= profile["status"] %>
+<%= profile["status_since"] %>
+<%= profile["revision"] %>
+
+<ul>
+<% 
+	profile["runtimes"].each do |rt|
+%>
+	<li><img src="/images/lng.png" title="<%= rt["language"] %>"/></li>
+<% 
+	end
+	
+	if profile["extendable"]
+%>
+	<li><img src="/images/extendable.png" title="extendable"/></li>
+<% 	end  %>
+</ul>
+</body>
+</html>

@@ -17,3 +17,6 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+helper
+public
