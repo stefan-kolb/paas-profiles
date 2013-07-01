@@ -1,10 +1,10 @@
 {
   "name": "Acquia Cloud",
-  "revision": "2013-06-28",
+  "revision": "2013-07-01",
   "vendor_verified": false,
   "url": "http://www.acquia.com/acquia-cloud",
   "status": "production",
-  "status_since": null,
+  "status_since": "2009-03-04",
   "type": "language-specific",
   "hosting": [
     "public"

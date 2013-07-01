@@ -1,10 +1,10 @@
 {
   "name": "Cloudn PaaS",
-  "revision": "2013-06-28",
+  "revision": "2013-07-01",
   "vendor_verified": false,
   "url": "http://www.ntt.com/cloudn/",
   "status": "production",
-  "status_since": "2012-12-01",
+  "status_since": "2013-03-28",
   "type": "polyglot",
   "hosting": [
     "public"

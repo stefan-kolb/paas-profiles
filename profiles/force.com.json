@@ -1,10 +1,10 @@
 {
   "name": "Force.com",
-  "revision": "2013-06-28",
+  "revision": "2013-07-01",
   "vendor_verified": false,
   "url": "http://www.force.com/",
   "status": "production",
-  "status_since": null,
+  "status_since": "2008-01-01",
   "type": "apaas",
   "hosting": [
     "public"

@@ -83,7 +83,7 @@ entries = Hash.new
 		# status
 		profile.status = file.cell(line,'Q').downcase
 		# status since
-		if profile.status.casecmp DevStatus::BETA
+		if profile.status == DevStatus::BETA.downcase
 			profile.status_since = file.cell(line,'W')
 		else
 			profile.status_since = file.cell(line,'X')
