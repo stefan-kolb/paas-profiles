@@ -19,7 +19,9 @@
 <tr><th>Name</th><th>Status</th><th>Runtimes</th><th>Scaling</th><th>Hosting</th><th>Infrastructures</th><th>Revision</th></tr>
 </thead>
 <%
-	Dir.glob('profiles/*.json') do |file|
+	files = Dir.glob('profiles/*.json').sort
+	
+	files.each do |file|
 		# profile
 		profile = JSON.parse(File.read(file));
 %>
