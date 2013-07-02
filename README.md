@@ -32,9 +32,19 @@ The code below shows a sample profile. The profile specification is beta and the
   "runtimes": [
     { "language": "java", "version": "1.7" } // [java, php, python, ruby, dotnet, node, go, ...]
   ],
-  "frameworks": null,
-  "services": null,
-  "addons": null,
+  "middleware" [
+    { "name": "tomcat", "version": "6.0.35" }
+  ],
+  "frameworks": [
+  ],
+  "services": {
+    "native": [
+      { "name": "mongodb", "version": "1.8" } // tbd
+    ],
+    "addon": [
+      { "name": "mongolab" } // tbd
+    ]
+  },
   "extendable": false, // buildpack-like support
   "infrastructures": [
     { 
