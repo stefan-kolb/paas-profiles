@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Template &middot; Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	</head>
+<% 
+	require 'json'
+%>
+<body>
+<table class="table table-bordered">
+<thead>
+<tr><th>Name</th><th>Status</th><th>Runtimes</th><th>Scaling</th><th>Hosting</th><th>Infrastructures</th><th>Revision</th></tr>
+</thead>
+<%
+	Dir.glob('profiles/*.json') do |file|
+		# profile
+		profile = JSON.parse(File.read(file));
+%>
+<tr>
+<td><a href="<%= profile["url"] %>" target="_blank"><%= profile["name"] %></a>
+<% if profile["vendor_verified"] %>
+&nbsp;<span class="icon-ok-sign" title="Vendor Profile"></span>
+<% end %>
+</td>
+<td>
+<% if profile["status"] == "beta" %>
+<span class="label label-warning">Beta</span></td>
+<% else %>
+<span class="label label-success">Production</span></td>
+<% end %>
+
+<td>
+<div class="row-fluid">
+<% 
+	profile["runtimes"].uniq { |h| h["language"] }.each do |rt|
+	
+	
+%>
+	<span class="label label-info"><%= rt["language"] %></span>
+<% 
+	end
+	
+	if profile["extendable"]
+%>
+	<span class="label label-success">extendable</span>
+<% 	end  %>
+</div>
+</td>
+
+<td>
+<% if profile["scaling"]["vertical"] %>
+<span class="icon-resize-vertical" title="vertical"></span>
+<% end %>
+<% if profile["scaling"]["horizontal"] %>
+<span class="icon-resize-horizontal" title="horizontal"></span>
+<% end %>
+<% if profile["scaling"]["auto"] %>
+<span class="icon-refresh" title="auto"></span>
+<% end %>
+<td>
+<% if profile["hosting"].include? "public" %>
+<span class="icon-eye-open" title="public"></span>
+<% end
+	if profile["hosting"].include? "private"
+%>
+<span class="icon-home" title="private"></span>
+<% end %>
+</td>
+
+<td>
+<div class="row-fluid">
+<% 
+	profile["infrastructures"].uniq { |h| h["continent"] }.each do |rt|
+	
+	title = ""
+	
+	case rt["continent"]
+		when "EU"
+			title = "Europe"
+		when "SA"
+			title = "South America"
+		when "NA"
+			title = "North America"
+		when "AS"
+			title = "Asia"
+		when "OC"
+			title = "Oceania"
+		else
+			title = "Africa"
+	end
+%>
+	<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
+<% 
+	end
+%>
+</div>
+</td>
+
+<td>
+<small><%= profile["revision"] %></small>
+</td>
+</tr>
+<% 	
+	end
+%>
+</table>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

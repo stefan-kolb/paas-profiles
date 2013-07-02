@@ -1,7 +1,7 @@
 {
   "name": "Cloud Control",
   "revision": "2013-07-02",
-  "vendor_verified": false,
+  "vendor_verified": true,
   "url": "http://cloudcontrol.com/",
   "status": "production",
   "status_since": "2010-12-01",
