@@ -21,15 +21,7 @@
   "runtimes": [
     {
       "language": "java",
-      "version": "1.6"
-    },
-    {
-      "language": "java",
-      "version": "1.7"
-    },
-    {
-      "language": "java",
-      "version": "1.8"
+      "version": ""
     },
     {
       "language": "python",
@@ -44,15 +36,15 @@
       "version": ""
     }
   ],
+  "middleware": null,
   "frameworks": null,
   "services": null,
-  "addons": null,
   "extendable": true,
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "IE",
-      "region": "Ireland"
+      "country": "",
+      "region": ""
     }
   ]
 }

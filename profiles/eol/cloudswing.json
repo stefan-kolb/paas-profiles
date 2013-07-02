@@ -1,0 +1,70 @@
+{
+  "name": "CloudSwing",
+  "revision": "2013-07-02",
+  "vendor_verified": false,
+  "url": "http://www.openlogic.com/cloud/about.php",
+  "status": "eol",
+  "status_since": null,
+  "type": "polyglot",
+  "hosting": [
+    "public"
+  ],
+  "pricing": "Monthly + IaaS Fees",
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "java",
+      "version": ""
+    },
+    {
+      "language": "php",
+      "version": ""
+    },
+    {
+      "language": "ruby",
+      "version": ""
+    },
+    {
+      "language": "node",
+      "version": ""
+    }
+  ],
+  "middleware": null,
+  "frameworks": null,
+  "services": null,
+  "extendable": false,
+  "infrastructures": [
+    {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "OC",
+      "country": "",
+      "region": ""
+    }
+  ]
+}

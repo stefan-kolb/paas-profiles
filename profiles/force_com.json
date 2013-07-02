@@ -1,0 +1,34 @@
+{
+  "name": "Force.com",
+  "revision": "2013-07-02",
+  "vendor_verified": false,
+  "url": "http://www.force.com/",
+  "status": "production",
+  "status_since": "2008-01-01",
+  "type": "apaas",
+  "hosting": [
+    "public"
+  ],
+  "pricing": "Monthly",
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": true
+  },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "apex",
+      "version": ""
+    }
+  ],
+  "middleware": null,
+  "frameworks": null,
+  "services": null,
+  "extendable": false,
+  "infrastructures": [
+
+  ]
+}

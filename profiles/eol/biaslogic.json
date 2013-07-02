@@ -1,0 +1,34 @@
+{
+  "name": "BiasLogic",
+  "revision": "2013-07-02",
+  "vendor_verified": false,
+  "url": "http://www.linkedin.com/company/biaslogic-ltd",
+  "status": "eol",
+  "status_since": null,
+  "type": "language-specific",
+  "hosting": [
+
+  ],
+  "pricing": null,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "dotnet",
+      "version": ""
+    }
+  ],
+  "middleware": null,
+  "frameworks": null,
+  "services": null,
+  "extendable": false,
+  "infrastructures": [
+
+  ]
+}

@@ -50,7 +50,6 @@
   ],
   "frameworks": null,
   "services": null,
-  "addons": null,
   "extendable": false,
   "infrastructures": [
     {

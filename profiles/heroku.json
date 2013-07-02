@@ -66,20 +66,19 @@
   ],
   "frameworks": null,
   "services": null,
-  "addons": null,
   "extendable": true,
   "infrastructures": [
     {
       "continent": "NA",
       "country": "US",
       "region": "Virginia",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
-	  "provider": "AWS"
+      "provider": "AWS"
     }
   ]
 }

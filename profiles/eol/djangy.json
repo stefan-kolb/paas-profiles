@@ -1,0 +1,34 @@
+{
+  "name": "Djangy",
+  "revision": "2013-07-02",
+  "vendor_verified": false,
+  "url": "https://github.com/dpaola2/djangy",
+  "status": "eol",
+  "status_since": null,
+  "type": "language-specific",
+  "hosting": [
+    "public"
+  ],
+  "pricing": null,
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "python",
+      "version": ""
+    }
+  ],
+  "middleware": null,
+  "frameworks": null,
+  "services": null,
+  "extendable": false,
+  "infrastructures": [
+
+  ]
+}

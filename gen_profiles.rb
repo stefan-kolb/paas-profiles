@@ -2,7 +2,7 @@ require 'roo'
 require 'json'
 require 'date'
 
-klass = Struct.new(:name, :revision, :vendor_verified, :url, :status, :status_since, :type, :hosting, :pricing, :scaling, :compliance, :runtimes, :middleware, :frameworks, :services, :addons, :extendable, :infrastructures)
+klass = Struct.new(:name, :revision, :vendor_verified, :url, :status, :status_since, :type, :hosting, :pricing, :scaling, :compliance, :runtimes, :middleware, :frameworks, :services, :extendable, :infrastructures)
 
 class Profile < klass
   def to_map
@@ -105,7 +105,7 @@ entries = Hash.new
 id = 1
 
 4.upto(85) do |line|
-	unless file.cell(line,'Q') == DevStatus::EOL	
+	unless file.cell(line,'Q') == false	
 		# name
 		name = ""
 		
@@ -122,7 +122,7 @@ id = 1
 		# Existing profile?
 		profile = Profile.new
 		
-		if File.exist? "profiles/#{name.downcase.gsub(/\s/,'_')}.json"
+		if File.exist? "profiles/#{name.downcase.gsub(/[\s\.]/,'_')}.json"
 			profile = JSON.parse( IO.read("profiles/#{name.downcase.gsub(/\s/,'_')}.json"))
 		end
 		
@@ -265,8 +265,15 @@ id = 1
 		puts JSON.pretty_generate profile
 
 		# write json profile
-		pname = profile["name"].downcase.gsub(/\s/,'_')
-		File.open("profiles/#{pname}.json","w") do |f|
+		pname = profile["name"].downcase.gsub(/[\s\.]/,'_')
+		
+		path = "profiles/#{pname}.json"
+		
+		if profile["status"] == DevStatus::EOL.downcase
+			path = "profiles/eol/#{pname}.json"
+		end
+		
+		File.open(path,"w") do |f|
 			f.write(JSON.pretty_generate profile)
 		end
 

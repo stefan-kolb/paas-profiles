@@ -1,44 +1,44 @@
 {
-  "name": "Force.com",
+  "name": "Paas.io",
   "revision": "2013-07-02",
   "vendor_verified": false,
-  "url": "http://www.force.com/",
-  "status": "production",
-  "status_since": "2008-01-01",
-  "type": "apaas",
+  "url": "paas.io",
+  "status": "eol",
+  "status_since": null,
+  "type": "polyglot",
   "hosting": [
     "public"
   ],
-  "pricing": "Monthly",
+  "pricing": "Metered",
   "scaling": {
-    "vertical": false,
-    "horizontal": false,
-    "auto": true
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
   },
   "compliance": [
 
   ],
   "runtimes": [
     {
-      "language": "apex",
+      "language": "php",
       "version": ""
     },
     {
-      "language": "apex",
+      "language": "ruby",
       "version": ""
     },
     {
-      "language": "apex",
+      "language": "node",
       "version": ""
     },
     {
-      "language": "apex",
+      "language": "haskell",
       "version": ""
     }
   ],
+  "middleware": null,
   "frameworks": null,
   "services": null,
-  "addons": null,
   "extendable": false,
   "infrastructures": [
 

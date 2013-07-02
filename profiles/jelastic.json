@@ -38,7 +38,6 @@
   ],
   "frameworks": null,
   "services": null,
-  "addons": null,
   "extendable": false,
   "infrastructures": [
     {
@@ -51,67 +50,67 @@
       "continent": "SA",
       "country": "BR",
       "region": "",
-	  "provider": "Websolute"
+      "provider": "Websolute"
     },
     {
       "continent": "AS",
       "country": "RU",
       "region": "",
-	  "provider": "Rusonyx"
+      "provider": "Rusonyx"
     },
     {
       "continent": "AS",
       "country": "JP",
       "region": "",
-	  "provider": "Tsukaeru"
-    },	
+      "provider": "Tsukaeru"
+    },
     {
       "continent": "EU",
       "country": "DE",
       "region": "Cologne",
-	  "provider": "Host Europe"
+      "provider": "Host Europe"
     },
     {
       "continent": "EU",
       "country": "RU",
       "region": "",
-	  "provider": "reg.ru"
+      "provider": "reg.ru"
     },
-	{
+    {
       "continent": "EU",
       "country": "UA",
       "region": "",
-	  "provider": "Neohost"
-    },	
+      "provider": "Neohost"
+    },
     {
       "continent": "EU",
       "country": "SW",
       "region": "",
-	  "provider": "Elastx"
+      "provider": "Elastx"
     },
-	{
+    {
       "continent": "EU",
       "country": "NL",
       "region": "",
-	  "provider": "Info.nl"
+      "provider": "Info.nl"
     },
-	{
+    {
       "continent": "EU",
       "country": "CH",
       "region": "",
-	  "provider": "innofield GmbH"
-    },	
+      "provider": "innofield GmbH"
+    },
     {
       "continent": "EU",
       "country": "FI",
       "region": "",
-	  "provider": "Planetta Internet"
-    },	
+      "provider": "Planetta Internet"
+    },
     {
       "continent": "EU",
       "country": "UK",
       "region": "",
-	  "provider": "Layershift"
-    }	
+      "provider": "Layershift"
+    }
   ]
 }
