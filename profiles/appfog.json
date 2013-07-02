@@ -1,6 +1,6 @@
 {
   "name": "AppFog",
-  "revision": "2013-07-01",
+  "revision": "2013-07-02",
   "vendor_verified": false,
   "url": "http://appfog.com",
   "status": "production",
@@ -10,7 +10,7 @@
     "public",
     "private"
   ],
-  "pricing": "Monthly Fee",
+  "pricing": "Monthly",
   "scaling": {
     "vertical": true,
     "horizontal": true,
@@ -22,23 +22,39 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "version": "1.7.0"
     },
     {
       "language": "python",
-      "version": ""
+      "version": "2.7.3"
     },
     {
       "language": "php",
-      "version": ""
+      "version": "5.3.10"
     },
     {
       "language": "ruby",
-      "version": ""
+      "version": "1.8.7"
+    },
+    {
+      "language": "ruby",
+      "version": "1.9.2"
+    },
+    {
+      "language": "ruby",
+      "version": "1.9.3"
     },
     {
       "language": "node",
-      "version": ""
+      "version": "0.4.12"
+    },
+    {
+      "language": "node",
+      "version": "0.6.17"
+    },
+    {
+      "language": "node",
+      "version": "0.8.14"
     }
   ],
   "frameworks": null,
@@ -48,18 +64,23 @@
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "Virginia"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Las Vegas"
     },
     {
       "continent": "AS",
-      "country": "",
-      "region": ""
+      "country": "SG",
+      "region": "Singapore"
     },
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "IE",
+      "region": "Dublin"
     }
   ]
 }

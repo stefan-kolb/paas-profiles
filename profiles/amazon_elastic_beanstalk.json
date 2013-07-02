@@ -1,6 +1,6 @@
 {
   "name": "Amazon Elastic Beanstalk",
-  "revision": "2013-07-01",
+  "revision": "2013-07-02",
   "vendor_verified": false,
   "url": "http://aws.amazon.com/elasticbeanstalk/",
   "status": "beta",

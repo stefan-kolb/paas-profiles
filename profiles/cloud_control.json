@@ -1,6 +1,6 @@
 {
   "name": "Cloud Control",
-  "revision": "2013-07-01",
+  "revision": "2013-07-02",
   "vendor_verified": false,
   "url": "http://cloudcontrol.com/",
   "status": "production",
@@ -21,7 +21,15 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "version": "1.6"
+    },
+    {
+      "language": "java",
+      "version": "1.7"
+    },
+    {
+      "language": "java",
+      "version": "1.8"
     },
     {
       "language": "python",
@@ -43,8 +51,8 @@
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "IE",
+      "region": "Ireland"
     }
   ]
 }

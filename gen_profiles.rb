@@ -2,7 +2,7 @@ require 'roo'
 require 'json'
 require 'date'
 
-klass = Struct.new(:name, :revision, :vendor_verified, :url, :status, :status_since, :type, :hosting, :pricing, :scaling, :compliance, :runtimes, :frameworks, :services, :addons, :extendable, :infrastructures)
+klass = Struct.new(:name, :revision, :vendor_verified, :url, :status, :status_since, :type, :hosting, :pricing, :scaling, :compliance, :runtimes, :middleware, :frameworks, :services, :addons, :extendable, :infrastructures)
 
 class Profile < klass
   def to_map
@@ -24,7 +24,7 @@ end
 
 class Helper
 
-	def self.rename_lng k
+	def self.rename_lng k, profile
 		names = [ "java", "dotnet", "python", "php", "ruby", "node" ]
 		arr = []
 		
@@ -35,12 +35,31 @@ class Helper
 		runtimes = []
 		
 		arr.each do |a|
-			runtimes << { :language => a, :version => "" }
+			has = false
+			unless profile["runtimes"].nil?
+				# delete removed
+				profile["runtimes"].each do |r|
+					unless arr.include? r["language"]
+						profile["runtimes"].delete r
+					end
+				end
+		
+				profile["runtimes"].each do |l|
+					if l["language"] == a
+						has = true
+					end
+				end
+			end
+			
+			unless has
+				runtimes << { :language => a, :version => "" }
+			end
 		end
+		
 		runtimes
 	end
 
-	def self.rename_geo k
+	def self.rename_geo k, profile
 		names = [ "NA", "SA", "AS", "EU", "AF", "OC" ]
 		arr = []
 		
@@ -51,8 +70,29 @@ class Helper
 		infras = []
 		
 		arr.each do |a|
-			infras << { :continent => a, :country => "", :region => ""}
+			has = false
+			
+			unless profile["infrastructures"].nil?
+				# delete removed
+				profile["infrastructures"].each do |r|
+					unless arr.include? r["continent"]
+						profile["infrastructures"].delete r
+					end
+				end
+		
+				profile["infrastructures"].each do |l|
+					if l["continent"] == a
+						has = true
+					end
+				end
+			end
+			
+			unless has
+				infras << { :continent => a, :country => "", :region => ""}
+			end
+			
 		end
+		
 		infras
 	end
 
@@ -65,34 +105,43 @@ entries = Hash.new
 id = 1
 
 4.upto(85) do |line|
-	unless file.cell(line,'Q') == DevStatus::EOL
-		profile = Profile.new
-		
+	unless file.cell(line,'Q') == DevStatus::EOL	
 		# name
+		name = ""
+		
 		if file.cell(line,'B').nil?
 			if file.cell(line,'C').nil?
-				profile.name = file.cell(line,'D')
+				name = file.cell(line,'D')
 			else
-				profile.name = file.cell(line, 'C')
+				name = file.cell(line, 'C')
 			end
 		else
-			profile.name = file.cell(line, 'B')
+			name = file.cell(line, 'B')
 		end
 		
+		# Existing profile?
+		profile = Profile.new
+		
+		if File.exist? "profiles/#{name.downcase.gsub(/\s/,'_')}.json"
+			profile = JSON.parse( IO.read("profiles/#{name.downcase.gsub(/\s/,'_')}.json"))
+		end
+		
+		profile["name"] = name
+		
 		# revision
-		profile.revision = Date.today
+		profile["revision"] = Date.today
 		# status
-		profile.status = file.cell(line,'Q').downcase
+		profile["status"] = file.cell(line,'Q').downcase
 		# status since
-		if profile.status == DevStatus::BETA.downcase
-			profile.status_since = file.cell(line,'W')
+		if profile["status"] == DevStatus::BETA.downcase
+			profile["status_since"] = file.cell(line,'W')
 		else
-			profile.status_since = file.cell(line,'X')
+			profile["status_since"] = file.cell(line,'X')
 		end
 		# url
-		profile.url = file.cell(line,'R')
+		profile["url"] = file.cell(line,'R')
 		# type
-		profile.type = file.cell(line,'F').downcase
+		profile["type"] = file.cell(line,'F').downcase
 		# hosting
 		h = []
 		unless file.cell(line, 'AK').nil?
@@ -106,7 +155,7 @@ id = 1
 			end
 		end
 		
-		profile.hosting = h
+		profile["hosting"] = h
 		# runtimes
 		runtimes = []
 		unless file.cell(line,'G').nil? 
@@ -128,7 +177,7 @@ id = 1
 			runtimes << 5
 		end
 		# rename
-		runtimes = Helper::rename_lng runtimes
+		runtimes = Helper::rename_lng runtimes, profile
 		# other
 		unless file.cell(line,'M').nil?
 			e = file.cell(line,'M').split ','
@@ -137,12 +186,16 @@ id = 1
 		
 		# extendable
 		if file.cell(line, 'N').nil?
-				profile.extendable = false
+				profile["extendable"] = false
 		else
-				profile.extendable = true
+				profile["extendable"] = true
 		end
 		
-		profile.runtimes = runtimes
+		if profile["runtimes"].nil?
+			profile["runtimes"] = runtimes
+		else
+			profile["runtimes"].concat runtimes
+		end
 		
 		# infras
 		infras = []
@@ -166,9 +219,13 @@ id = 1
 			infras << 5
 		end
 		# rename
-		infras = Helper::rename_geo infras
+		infras = Helper::rename_geo infras, profile
 		
-		profile.infrastructures = infras
+		if profile["infrastructures"].nil?
+			profile["infrastructures"] = infras
+		else
+			profile["infrastructures"].concat infras
+		end
 		
 		# scaling
 		scaling = Hash.new
@@ -188,13 +245,13 @@ id = 1
 			scaling[:auto] = true
 		end
 		
-		profile.scaling = scaling
+		profile["scaling"] = scaling
 		
 		# verified
-		profile.vendor_verified = false
+		profile["vendor_verified"] = false
 		
 		# pricing
-		profile.pricing = file.cell(line,'AA')
+		profile["pricing"] = file.cell(line,'AA')
 
 		# compliance
 		compliance = []
@@ -203,12 +260,12 @@ id = 1
 			compliance.concat e.map!{|e| e.downcase.strip }
 		end
 		
-		profile.compliance = compliance
+		profile["compliance"] = compliance
 		
 		puts JSON.pretty_generate profile
 
 		# write json profile
-		pname = profile.name.downcase.gsub(/\s/,'_')
+		pname = profile["name"].downcase.gsub(/\s/,'_')
 		File.open("profiles/#{pname}.json","w") do |f|
 			f.write(JSON.pretty_generate profile)
 		end

@@ -1,6 +1,6 @@
 {
   "name": "Jelastic",
-  "revision": "2013-07-01",
+  "revision": "2013-07-02",
   "vendor_verified": false,
   "url": "http://jelastic.com",
   "status": "production",
@@ -21,11 +21,19 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "version": "1.6"
+    },
+    {
+      "language": "java",
+      "version": "1.7"
     },
     {
       "language": "php",
-      "version": ""
+      "version": "5.3.23"
+    },
+    {
+      "language": "php",
+      "version": "5.4.13"
     }
   ],
   "frameworks": null,
@@ -35,23 +43,75 @@
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "",
+      "provider": "ServInt"
     },
     {
       "continent": "SA",
-      "country": "",
-      "region": ""
+      "country": "BR",
+      "region": "",
+	  "provider": "Websolute"
     },
     {
       "continent": "AS",
-      "country": "",
-      "region": ""
+      "country": "RU",
+      "region": "",
+	  "provider": "Rusonyx"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "",
+	  "provider": "Tsukaeru"
+    },	
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Cologne",
+	  "provider": "Host Europe"
     },
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
-    }
+      "country": "RU",
+      "region": "",
+	  "provider": "reg.ru"
+    },
+	{
+      "continent": "EU",
+      "country": "UA",
+      "region": "",
+	  "provider": "Neohost"
+    },	
+    {
+      "continent": "EU",
+      "country": "SW",
+      "region": "",
+	  "provider": "Elastx"
+    },
+	{
+      "continent": "EU",
+      "country": "NL",
+      "region": "",
+	  "provider": "Info.nl"
+    },
+	{
+      "continent": "EU",
+      "country": "CH",
+      "region": "",
+	  "provider": "innofield GmbH"
+    },	
+    {
+      "continent": "EU",
+      "country": "FI",
+      "region": "",
+	  "provider": "Planetta Internet"
+    },	
+    {
+      "continent": "EU",
+      "country": "UK",
+      "region": "",
+	  "provider": "Layershift"
+    }	
   ]
 }
