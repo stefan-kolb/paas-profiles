@@ -1,6 +1,6 @@
 {
   "name": "Phenona",
-  "revision": "2013-07-02",
+  "revision": "2013-07-03",
   "vendor_verified": false,
   "url": "http://www.phenona.com/",
   "status": "eol",
@@ -19,10 +19,7 @@
 
   ],
   "runtimes": [
-    {
-      "language": "perl",
-      "version": ""
-    }
+
   ],
   "middleware": null,
   "frameworks": null,

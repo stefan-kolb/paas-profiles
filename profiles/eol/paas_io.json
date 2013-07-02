@@ -1,6 +1,6 @@
 {
   "name": "Paas.io",
-  "revision": "2013-07-02",
+  "revision": "2013-07-03",
   "vendor_verified": false,
   "url": "paas.io",
   "status": "eol",
@@ -29,10 +29,6 @@
     },
     {
       "language": "node",
-      "version": ""
-    },
-    {
-      "language": "haskell",
       "version": ""
     }
   ],

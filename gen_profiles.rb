@@ -123,7 +123,7 @@ id = 1
 		profile = Profile.new
 		
 		if File.exist? "profiles/#{name.downcase.gsub(/[\s\.]/,'_')}.json"
-			profile = JSON.parse( IO.read("profiles/#{name.downcase.gsub(/\s/,'_')}.json"))
+			profile = JSON.parse( IO.read("profiles/#{name.downcase.gsub(/[\s\.]/,'_')}.json"))
 		end
 		
 		profile["name"] = name
@@ -181,7 +181,15 @@ id = 1
 		# other
 		unless file.cell(line,'M').nil?
 			e = file.cell(line,'M').split ','
-			runtimes.concat e.map!{|e| { :language => e.downcase.strip, "version" => "" } }
+			
+			e.each do |rt|
+				unless profile["runtimes"].nil?
+					unless profile["runtimes"].any? { |b| b["language"] == rt.downcase.strip }
+						lng = { :language => rt.downcase.strip, "version" => "" }
+						runtimes << lng
+					end
+				end
+			end
 		end
 		
 		# extendable
@@ -248,7 +256,9 @@ id = 1
 		profile["scaling"] = scaling
 		
 		# verified
-		profile["vendor_verified"] = false
+		if profile["vendor_verified"].nil?
+			profile["vendor_verified"] = false
+		end
 		
 		# pricing
 		profile["pricing"] = file.cell(line,'AA')

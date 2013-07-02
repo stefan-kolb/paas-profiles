@@ -1,6 +1,6 @@
 {
   "name": "Anynines",
-  "revision": "2013-07-02",
+  "revision": "2013-07-03",
   "vendor_verified": false,
   "url": "http://www.anynines.com/",
   "status": "beta",
@@ -11,8 +11,8 @@
   ],
   "pricing": null,
   "scaling": {
-    "vertical": false,
-    "horizontal": false,
+    "vertical": true,
+    "horizontal": true,
     "auto": false
   },
   "compliance": [
