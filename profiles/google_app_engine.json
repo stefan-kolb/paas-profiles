@@ -43,7 +43,10 @@
   ],
   "middleware": [],
   "frameworks": [],
-  "services": [],
+  "services": {
+	"native": [],
+	"addon": []
+	},
   "extendable": false,
   "infrastructures": [
     {
