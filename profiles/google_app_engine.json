@@ -22,29 +22,33 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "version": "1.7"
     },
     {
       "language": "python",
-      "version": ""
+      "version": "2.7"
     },
     {
+      "language": "python",
+      "version": "2.5"
+    },	
+    {
       "language": "php",
-      "version": ""
+      "version": "5.4"
     },
     {
       "language": "go",
-      "version": ""
+      "version": "1.1"
     }
   ],
-  "middleware": null,
-  "frameworks": null,
-  "services": null,
+  "middleware": [],
+  "frameworks": [],
+  "services": [],
   "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
+      "country": "US",
       "region": ""
     },
     {
