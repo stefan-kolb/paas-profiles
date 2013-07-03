@@ -66,133 +66,627 @@
   ],
   "frameworks": null,
   "services": {
-	"native": [],
-	"addon": [
-		{ "id": "adept scale", "desc": "", "type": "" },
-		{ "id": "adminium", "desc": "", "type": "" },
-		{ "id": "airbrake", "desc": "", "type": "" },
-		{ "id": "amazon rds", "desc": "", "type": "" },
-		{ "id": "blitline", "desc": "", "type": "" },
-		{ "id": "blitz", "desc": "", "type": "" },
-		{ "id": "bomberman", "desc": "", "type": "" },
-		{ "id": "bonsai", "desc": "", "type": "" },
-		{ "id": "cachely", "desc": "", "type": "" },
-		{ "id": "cassandraio", "desc": "", "type": "" },
-		{ "id": "chargify", "desc": "", "type": "" },
-		{ "id": "cleardb", "desc": "", "type": "" },
-		{ "id": "cloudamqp", "desc": "", "type": "" },
-		{ "id": "cloudant", "desc": "", "type": "" },
-		{ "id": "cloudinary", "desc": "", "type": "" },
-		{ "id": "cloudmailin", "desc": "", "type": "" },
-		{ "id": "cloudvertical", "desc": "", "type": "" },
-		{ "id": "codeship", "desc": "", "type": "" },
-		{ "id": "dbinsights", "desc": "", "type": "" },
-		{ "id": "deployhooks", "desc": "", "type": "" },
-		{ "id": "docraptor", "desc": "", "type": "" },
-		{ "id": "dyn", "desc": "", "type": "" },
-		{ "id": "eshq", "desc": "", "type": "" },
-		{ "id": "exceptional", "desc": "", "type": "" },
-		{ "id": "filepicker", "desc": "", "type": "" },
-		{ "id": "flydata", "desc": "", "type": "" },
-		{ "id": "flying sphinx", "desc": "", "type": "" },
-		{ "id": "found search", "desc": "", "type": "" },
-		{ "id": "gemfury", "desc": "", "type": "" },
-		{ "id": "heroku postgressql", "desc": "", "type": "" },
-		{ "id": "honeybadger", "desc": "", "type": "" },
-		{ "id": "hostedgraphite", "desc": "", "type": "" },
-		{ "id": "houndsleuth", "desc": "", "type": "" },
-		{ "id": "hyperpdf", "desc": "", "type": "" },
-		{ "id": "indexden", "desc": "", "type": "" },
-		{ "id": "intercom", "desc": "", "type": "" },
-		{ "id": "iron cache", "desc": "", "type": "" },
-		{ "id": "iron worker", "desc": "", "type": "" },
-		{ "id": "iron mq", "desc": "", "type": "" },
-		{ "id": "justonedb", "desc": "", "type": "" },
-		{ "id": "librato", "desc": "", "type": "" },
-		{ "id": "loaderio", "desc": "", "type": "" },
-		{ "id": "localeapp", "desc": "", "type": "" },
-		{ "id": "logentries", "desc": "", "type": "" },
-		{ "id": "loggly", "desc": "", "type": "" },
-		{ "id": "mailgun", "desc": "", "type": "" },
-		{ "id": "mailtrap", "desc": "", "type": "" },
-		{ "id": "mandrill", "desc": "", "type": "" },
-		{ "id": "memcache", "desc": "", "type": "" },
-		{ "id": "memcachier", "desc": "", "type": "" },
-		{ "id": "mongohq", "desc": "", "type": "" },
-		{ "id": "mongolab", "desc": "", "type": "" },
-		{ "id": "mwiki", "desc": "", "type": "" },
-		{ "id": "myredis", "desc": "", "type": "" },
-		{ "id": "neo4j", "desc": "", "type": "" },
-		{ "id": "new relic", "desc": "", "type": "" },
-		{ "id": "nodefly", "desc": "", "type": "" },
-		{ "id": "nodetime", "desc": "", "type": "" },
-		{ "id": "openredis", "desc": "", "type": "" },
-		{ "id": "pandastream", "desc": "", "type": "" },
-		{ "id": "papertrail", "desc": "", "type": "" },
-		{ "id": "pgbackups", "desc": "", "type": "" },
-		{ "id": "phrase", "desc": "", "type": "" },
-		{ "id": "postmark", "desc": "", "type": "" },
-		{ "id": "process-scheduler", "desc": "", "type": "" },
-		{ "id": "proximo", "desc": "", "type": "" },
-		{ "id": "pubnub", "desc": "", "type": "" },
-		{ "id": "pusher", "desc": "", "type": "" },
-		{ "id": "ranger", "desc": "", "type": "" },
-		{ "id": "rcmmder", "desc": "", "type": "" },
-		{ "id": "rediscloud", "desc": "", "type": "" },
-		{ "id": "redisgreen", "desc": "", "type": "" },
-		{ "id": "redistogo", "desc": "", "type": "" },
-		{ "id": "restful metrics", "desc": "", "type": "" },
-		{ "id": "rhoconnect", "desc": "", "type": "" },
-		{ "id": "scheduler", "desc": "", "type": "" },
-		{ "id": "searchbox", "desc": "", "type": "" },
-		{ "id": "searchify", "desc": "", "type": "" },
-		{ "id": "semaphore", "desc": "", "type": "" },
-		{ "id": "sendgrid", "desc": "", "type": "" },
-		{ "id": "sentry", "desc": "", "type": "" },
-		{ "id": "sharedworkforce", "desc": "", "type": "" },
-		{ "id": "sourceninja", "desc": "", "type": "" },
-		{ "id": "spreedlycore", "desc": "", "type": "" },
-		{ "id": "ssl", "desc": "", "type": "" },
-		{ "id": "statsmix", "desc": "", "type": "" },
-		{ "id": "stillalive", "desc": "", "type": "" },
-		{ "id": "superfeedr", "desc": "", "type": "" },
-		{ "id": "swiftype", "desc": "", "type": "" },
-		{ "id": "tddium", "desc": "", "type": "" },
-		{ "id": "tempodb", "desc": "", "type": "" },
-		{ "id": "temporize", "desc": "", "type": "" },
-		{ "id": "tinfoilsecurity", "desc": "", "type": "" },
-		{ "id": "trackman", "desc": "", "type": "" },
-		{ "id": "treasure data", "desc": "", "type": "" },
-		{ "id": "tronprint", "desc": "", "type": "" },
-		{ "id": "urbanairship", "desc": "", "type": "" },
-		{ "id": "websolr", "desc": "", "type": "" },
-		{ "id": "wwwhisper", "desc": "", "type": "" },
-		{ "id": "zencoder", "desc": "", "type": "" },
-		{ "id": "zerigo dns", "desc": "", "type": "" },
-		{ "id": "bablic", "desc": "", "type": "" },
-		{ "id": "blowerio", "desc": "", "type": "" },
-		{ "id": "boxcar", "desc": "", "type": "" },
-		{ "id": "cdn sumo", "desc": "", "type": "" },
-		{ "id": "circleci", "desc": "", "type": "" },
-		{ "id": "cloudassault", "desc": "", "type": "" },
-		{ "id": "dashmin", "desc": "", "type": "" },
-		{ "id": "database.com", "desc": "", "type": "" },
-		{ "id": "downloader", "desc": "", "type": "" },
-		{ "id": "eltanin", "desc": "", "type": "" },
-		{ "id": "errorapp", "desc": "", "type": "" },
-		{ "id": "framey", "desc": "", "type": "" },
-		{ "id": "groupdocs", "desc": "", "type": "" },
-		{ "id": "rabbitmq-bigwig", "desc": "", "type": "" },
-		{ "id": "robowhois", "desc": "", "type": "" },
-		{ "id": "saaspose", "desc": "", "type": "" },
-		{ "id": "securekey", "desc": "", "type": "" },
-		{ "id": "signature", "desc": "", "type": "" },
-		{ "id": "ticketly", "desc": "", "type": "" },
-		{ "id": "tripwire", "desc": "", "type": "" },
-		{ "id": "twist", "desc": "", "type": "" },
-		{ "id": "wercker", "desc": "", "type": "" }
-	]
-	},
+    "native": [
+
+    ],
+    "addon": [
+      {
+        "id": "adept scale",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "adminium",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "airbrake",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "amazon rds",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "blitline",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "blitz",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "bomberman",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "bonsai",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cachely",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cassandraio",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "chargify",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cleardb",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cloudamqp",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cloudant",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cloudinary",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cloudmailin",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cloudvertical",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "codeship",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "dbinsights",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "deployhooks",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "docraptor",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "dyn",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "eshq",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "exceptional",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "filepicker",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "flydata",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "flying sphinx",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "found search",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "gemfury",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "heroku postgressql",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "honeybadger",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "hostedgraphite",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "houndsleuth",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "hyperpdf",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "indexden",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "intercom",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "iron cache",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "iron worker",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "iron mq",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "justonedb",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "librato",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "loaderio",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "localeapp",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "logentries",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "loggly",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "mailgun",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "mailtrap",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "mandrill",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "memcache",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "memcachier",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "mongohq",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "mongolab",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "mwiki",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "myredis",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "neo4j",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "new relic",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "nodefly",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "nodetime",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "openredis",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "pandastream",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "papertrail",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "pgbackups",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "phrase",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "postmark",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "process-scheduler",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "proximo",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "pubnub",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "pusher",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "ranger",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "rcmmder",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "rediscloud",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "redisgreen",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "redistogo",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "restful metrics",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "rhoconnect",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "scheduler",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "searchbox",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "searchify",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "semaphore",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "sendgrid",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "sentry",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "sharedworkforce",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "sourceninja",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "spreedlycore",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "ssl",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "statsmix",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "stillalive",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "superfeedr",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "swiftype",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "tddium",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "tempodb",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "temporize",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "tinfoilsecurity",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "trackman",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "treasure data",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "tronprint",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "urbanairship",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "websolr",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "wwwhisper",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "zencoder",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "zerigo dns",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "bablic",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "blowerio",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "boxcar",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cdn sumo",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "circleci",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cloudassault",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "dashmin",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "database.com",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "downloader",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "eltanin",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "errorapp",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "framey",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "groupdocs",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "rabbitmq-bigwig",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "robowhois",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "saaspose",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "securekey",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "signature",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "ticketly",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "tripwire",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "twist",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "wercker",
+        "desc": "",
+        "type": ""
+      }
+    ]
+  },
   "extendable": true,
   "infrastructures": [
     {

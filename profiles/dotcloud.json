@@ -84,7 +84,7 @@
       "continent": "NA",
       "country": "US",
       "region": "Virginia",
-	  "provider": "AWS"
+      "provider": "AWS"
     }
   ]
 }

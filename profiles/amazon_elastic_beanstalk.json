@@ -45,10 +45,22 @@
     }
   ],
   "middleware": [
-	{ "name": "tomcat", "version": "" },
-	{ "name": "passenger", "version": "" },
-	{ "name": "iis", "version": "7.5" },
-	{ "name": "httpd", "version": "" }
+    {
+      "name": "tomcat",
+      "version": ""
+    },
+    {
+      "name": "passenger",
+      "version": ""
+    },
+    {
+      "name": "iis",
+      "version": "7.5"
+    },
+    {
+      "name": "httpd",
+      "version": ""
+    }
   ],
   "frameworks": null,
   "services": null,
@@ -68,7 +80,7 @@
       "continent": "NA",
       "country": "US",
       "region": "Northern California"
-    },	
+    },
     {
       "continent": "SA",
       "country": "BR",
@@ -78,7 +90,7 @@
       "continent": "AS",
       "country": "JP",
       "region": "Tokio"
-    },	
+    },
     {
       "continent": "EU",
       "country": "IE",
@@ -93,6 +105,6 @@
       "continent": "AS",
       "country": "SG",
       "region": "Singapur"
-    }	
+    }
   ]
 }

@@ -45,7 +45,7 @@
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
-	  "provider": "AWS"
+      "provider": "AWS"
     }
   ]
 }
