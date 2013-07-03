@@ -83,7 +83,8 @@
     {
       "continent": "NA",
       "country": "US",
-      "region": "Virginia"
+      "region": "Virginia",
+	  "provider": "AWS"
     }
   ]
 }

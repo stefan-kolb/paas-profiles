@@ -43,8 +43,9 @@
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "IE",
+      "region": "Dublin",
+	  "provider": "AWS"
     }
   ]
 }

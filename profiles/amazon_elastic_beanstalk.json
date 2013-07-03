@@ -44,35 +44,55 @@
       "version": ""
     }
   ],
-  "middleware": null,
+  "middleware": [
+	{ "name": "tomcat", "version": "" },
+	{ "name": "passenger", "version": "" },
+	{ "name": "iis", "version": "7.5" },
+	{ "name": "httpd", "version": "" }
+  ],
   "frameworks": null,
   "services": null,
   "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "Virginia"
     },
     {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California"
+    },	
+    {
       "continent": "SA",
-      "country": "",
-      "region": ""
+      "country": "BR",
+      "region": "Sao Paulo"
     },
     {
       "continent": "AS",
-      "country": "",
-      "region": ""
-    },
+      "country": "JP",
+      "region": "Tokio"
+    },	
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "IE",
+      "region": "Dublin"
     },
     {
       "continent": "OC",
-      "country": "",
-      "region": ""
-    }
+      "country": "AU",
+      "region": "Sydney"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapur"
+    }	
   ]
 }

@@ -39,10 +39,10 @@ The code below shows a sample profile. The profile specification is beta and the
   ],
   "services": {
     "native": [
-      { "name": "mongodb", "version": "1.8" } // tbd
+      { "name": "mongodb", type="", "version": "1.8" } // tbd
     ],
     "addon": [
-      { "name": "mongolab" } // tbd
+      { "name": "mongolab", url="", desc="", type="" } // tbd
     ]
   },
   "extendable": false, // buildpack-like support

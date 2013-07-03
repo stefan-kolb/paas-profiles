@@ -3,26 +3,234 @@
 	
 	profile = JSON.parse(File.read("profiles/#{params[:name]}.json"));
 %>
-<html>
-<body>
-<a href="<%= profile["url"] %>" target="_blank"><%= profile["name"] %></a>
-<%= profile["vendor_verified"] %>
-<%= profile["status"] %>
-<%= profile["status_since"] %>
-<%= profile["revision"] %>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title><%= profile["name"] %> Profile</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="PaaS Profiles">
+		<meta name="author" content="Stefan Kolb">
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">		
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="span8">
+					<h1>
+						<a href="<%= profile["url"] %>" target="_blank">
+						<%= profile["name"] %>
+						</a>
+						<% if profile["vendor_verified"] %>
+						<span class="icon-ok-sign" title="Vendor Profile"></span>
+						<% end %>
+					</h1>
+				</div>
+				<div class="span4 text-right">
+				<small><em>Last updated <span class="date" title="<%= profile["revision"] %>"></span> ago.</em></small>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="span12"><h3>Facts</h3></div>
+				<div class="span12"><p>
+					Is in
+					<% if profile["status"] == "beta" %>
+					<span class="label label-warning">Beta</span>
+					<% else %>
+					<span class="label label-success">Production</span>
+					<% end %>
+					since <span class="date" title="<%= profile["status_since"] %>"></span>.</p>
+					<p>You can deploy apps written in <span class="label label-inverse"><%= profile["runtimes"].uniq { |h| h["language"] }.size %></span> languages to <span class="label label-inverse"><%= profile["infrastructures"].size %></span> different infrastructures.</p>
+					<p>You can automatically bind <span class="label label-inverse">?</span> services and <span class="label label-inverse">?</span> integrated addons to your applications.</p>
+					<p>You can scale 
+					<% if profile["scaling"]["vertical"] %>
+					up <span class="icon-resize-vertical" title="vertical"></span>, 
+					<% end %>
+					<% if profile["scaling"]["horizontal"] %>
+					down <span class="icon-resize-horizontal" title="horizontal"></span>
+					<% end %>
+					<% if profile["scaling"]["auto"] %> 
+					or let <%= profile["name"] %> automatically <span class="icon-refresh" title="auto"></span> scale your instances.
+					<% end %></p>	
+				</div>
+			</div>
 
-<ul>
-<% 
-	profile["runtimes"].each do |rt|
-%>
-	<li><img src="/images/lng.png" title="<%= rt["language"] %>"/></li>
-<% 
-	end
-	
-	if profile["extendable"]
-%>
-	<li><img src="/images/extendable.png" title="extendable"/></li>
-<% 	end  %>
-</ul>
-</body>
+			<hr/>
+			
+			<div class="row">
+				<div class="span12"><h3>Runtimes</h3></div>
+				<div class="span12">
+				<table class="table table-bordered table-hover">
+				<thead>
+					<tr><th>Language</th><th>Version</th></tr>
+				</thead>
+				<tbody>
+					<% 
+						profile["runtimes"].each do |rt|
+					%>
+					<tr>
+						<td>
+							<%= rt["language"].capitalize %>
+						</td>
+						<td><em><%= rt["version"] %></em></td>
+					</tr>
+					<% end %>
+				</tbody>
+				</table>
+				<% if profile["extendable"] %>
+				<%= profile["name"] %> is <span class="label label-success">extendable</span>, so you can add more languages via buildpacks or similar mechanisms.
+				<% 	end  %>
+				</div>
+			</div>
+			
+			<hr/>
+			
+			<div class="row-fluid">
+				<div class="span12"><h3>Infrastructures</h3></div>			
+				<div class="span5">
+					<% 
+						profile["infrastructures"].each do |rt|
+						
+						title = ""
+						
+						case rt["continent"]
+							when "EU"
+								title = "Europe"
+							when "SA"
+								title = "South America"
+							when "NA"
+								title = "North America"
+							when "AS"
+								title = "Asia"
+							when "OC"
+								title = "Oceania"
+							else
+								title = "Africa"
+						end
+					%>
+						<div class="text-left">
+						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
+						<span><%= rt["country"] + ", <em>" + rt["region"] + "</em>" %></span>
+						<% unless rt["provider"].nil? %>
+							<small class="muted">&mdash; provided by <%= rt["provider"] %></small>
+						<% end %>
+						</div>
+					<% 
+						end
+					%>
+				</div>
+				<div class="span7 thumbnail" id="map" style="width: 640px; height: 300px"></div>
+			</div>
+			
+			<hr/>
+
+			<div class="row">
+				<div class="span12"><h3>Services</h3></div>
+				
+				<div class="span12"><h3>Native</h3></div>
+				<div class="span12">
+				<table class="table table-bordered table-hover">
+				<thead>
+					<tr><th>Name</th><th>Description</th><th>Type</th></tr>
+				</thead>
+				<tbody>
+					<% 
+						services = profile["services"].nil?
+						
+						unless services
+						unless profile["services"]["native"].nil?
+						profile["services"]["native"].each do |rt|
+					%>
+					<tr>
+						<td>
+							<%= rt["id"].capitalize %>
+						</td>
+						<td><em><%= rt["desc"] %></em></td>
+						<td><em><%= rt["type"] %></em></td>
+					</tr>
+					<% end
+						end
+					%>
+				</tbody>
+				</table>
+				</div>
+				
+				<div class="span12"><h3>Addons</h3></div>
+				<div class="span12">
+				<table class="table table-bordered table-hover">
+				<thead>
+					<tr><th>Name</th><th>Description</th><th>Type</th></tr>
+				</thead>
+				<tbody>
+					<% 
+						unless profile["services"]["addon"].nil?
+						profile["services"]["addon"].each do |rt|
+					%>
+					<tr>
+						<td>
+							<a href="#"><%= rt["id"].capitalize %></a>
+						</td>
+						<td><em><%= rt["desc"] %></em></td>
+						<td><em><%= rt["type"] %></em></td>
+					</tr>
+					<% end
+						end
+						end
+					%>
+				</tbody>
+				</table>
+				</div>		
+			</div>
+			
+			<hr/>
+			
+		</div>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/jquery.prettydate.js"></script>
+		<script src="../js/jquery-jvectormap-1.2.2.min.js"></script>		
+		<script src="../js/jquery-jvectormap-world-mill-en.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+				$(".date").prettyDate();
+				
+				$('#map').vectorMap({
+					map: 'world_mill_en',
+					regionStyle: {
+						initial: {
+							fill: '#0088cc'
+						},
+						hover: {
+							'fill-opacity': 0.6
+						},
+						selected: {
+							fill: '#f89406'
+						}
+					},
+					<% if profile["infrastructures"].size == 1 %> 
+					<%= "focusOn: \'" << profile["infrastructures"][0]["country"] << "\'," %>
+					<% end %>
+					scaleColors: ['#C8EEFF', '#0071A4'],
+					normalizeFunction: 'polynomial',
+					hoverOpacity: 0.7,
+					hoverColor: false,
+					backgroundColor: '#ffffff',
+					selectedRegions: 
+					<% 
+								arr = []
+								profile["infrastructures"].each do |i| 
+									arr << i["country"]
+								end
+					%>
+					<%= arr.to_s %>
+					
+			  });
+			});
+		</script>
+
+	</body>
 </html>

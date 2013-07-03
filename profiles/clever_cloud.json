@@ -47,8 +47,8 @@
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "FR",
+      "region": "Paris"
     }
   ]
 }

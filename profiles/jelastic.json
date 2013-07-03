@@ -84,7 +84,7 @@
     },
     {
       "continent": "EU",
-      "country": "SW",
+      "country": "SE",
       "region": "",
       "provider": "Elastx"
     },
@@ -108,7 +108,7 @@
     },
     {
       "continent": "EU",
-      "country": "UK",
+      "country": "GB",
       "region": "",
       "provider": "Layershift"
     }

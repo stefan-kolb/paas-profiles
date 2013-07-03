@@ -72,14 +72,14 @@
       "region": "Las Vegas"
     },
     {
-      "continent": "AS",
-      "country": "SG",
-      "region": "Singapore"
-    },
-    {
       "continent": "EU",
       "country": "IE",
       "region": "Dublin"
+    },	
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore"
     }
   ]
 }
