@@ -43,28 +43,45 @@
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "Virginia",
+	  "provider": "AWS"
     },
     {
+      "continent": "NA",
+      "country": "US",
+      "region": "",
+	  "provider": "AWS"
+    },
+	{
       "continent": "SA",
-      "country": "",
-      "region": ""
+      "country": "BR",
+      "region": "Sao Paulo",
+	  "provider": "AWS"
     },
     {
       "continent": "AS",
-      "country": "",
-      "region": ""
+      "country": "JP",
+      "region": "Tokio",
+	  "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapur",
+	  "provider": "AWS"
     },
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "IE",
+      "region": "Dublin",
+	  "provider": "AWS"
     },
     {
       "continent": "OC",
-      "country": "",
-      "region": ""
+      "country": "AU",
+      "region": "Sydney",
+	  "provider": "AWS"
     }
   ]
 }
