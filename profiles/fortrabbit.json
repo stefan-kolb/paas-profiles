@@ -21,7 +21,7 @@
   "runtimes": [
     {
       "language": "php",
-      "version": ""
+      "version": "5.4"
     }
   ],
   "frameworks": null,
@@ -30,8 +30,9 @@
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "IE",
+      "region": "Dublin",
+	  "provider": "AWS"
     }
   ]
 }
