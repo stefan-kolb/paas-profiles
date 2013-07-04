@@ -52,7 +52,7 @@ class Helper
 			end
 			
 			unless has
-				runtimes << { :language => a, :version => "" }
+				runtimes << { :language => a, :versions => [] }
 			end
 		end
 		
@@ -124,6 +124,10 @@ id = 1
 		
 		if File.exist? "profiles/#{name.downcase.gsub(/[\s\.]/,'_')}.json"
 			profile = JSON.parse( IO.read("profiles/#{name.downcase.gsub(/[\s\.]/,'_')}.json"))
+			
+			profile["runtimes"].each do |r|
+				r["versions"] = r["version"]
+			end
 		end
 		
 		profile["name"] = name
@@ -185,7 +189,7 @@ id = 1
 			e.each do |rt|
 				unless profile["runtimes"].nil?
 					unless profile["runtimes"].any? { |b| b["language"] == rt.downcase.strip }
-						lng = { :language => rt.downcase.strip, "version" => "" }
+						lng = { :language => rt.downcase.strip, "versions" => [] }
 						runtimes << lng
 					end
 				end

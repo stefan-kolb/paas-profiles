@@ -30,16 +30,16 @@ The code below shows a sample profile. The profile specification is beta and the
     "SSAE 16 Type II", "ISAE 3402 Type II"
   ],
   "runtimes": [
-    { "language": "java", "version": "1.7" } // [java, php, python, ruby, dotnet, node, go, ...]
+    { "language": "java", "versions": [ "1.7", "1.6" ] } // [java, php, python, ruby, dotnet, node, go, ...]
   ],
   "middleware" [
-    { "name": "tomcat", "version": "6.0.35" }
+    { "name": "tomcat", "versions": [ "6.0.35" ] }
   ],
   "frameworks": [
   ],
   "services": {
     "native": [
-      { "name": "mongodb", type="", "version": "1.8" } // tbd
+      { "name": "mongodb", type="", "versions": [ "1.8" ] } // tbd
     ],
     "addon": [
       { "name": "mongolab", url="", desc="", type="" } // tbd

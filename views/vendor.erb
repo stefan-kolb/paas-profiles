@@ -74,13 +74,13 @@
 						<td>
 							<%= rt["language"].capitalize %>
 						</td>
-						<td><em><%= rt["version"] %></em></td>
+						<td><em><%= rt["versions"].join(", ") %></em></td>
 					</tr>
 					<% end %>
 				</tbody>
 				</table>
 				<% if profile["extendable"] %>
-				<%= profile["name"] %> is <span class="label label-success">extendable</span>, so you can add more languages via buildpacks or similar mechanisms.
+				<%= profile["name"] %> is <span class="label label-success">extendable</span>, so you can add more functionality via buildpacks or similar mechanisms.
 				<% 	end  %>
 				</div>
 			</div>
