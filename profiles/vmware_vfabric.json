@@ -1,6 +1,6 @@
 {
   "name": "VMWARE vFabric",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://www.vmware.com/de/products/application-platform/vfabric/overview.html",
   "status": "production",
@@ -21,7 +21,9 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "middleware": null,

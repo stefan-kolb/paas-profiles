@@ -1,6 +1,6 @@
 {
   "name": "dotCloud",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://www.dotcloud.com/",
   "status": "production",
@@ -21,59 +21,47 @@
   "runtimes": [
     {
       "language": "java",
-      "version": "1.6"
-    },
-    {
-      "language": "java",
-      "version": "1.7"
-    },
-    {
-      "language": "python",
-      "version": "2.6.5"
+      "versions": [
+        "1.6",
+        "1.7"
+      ]
     },
     {
       "language": "python",
-      "version": "2.7.2"
-    },
-    {
-      "language": "python",
-      "version": "3.1.2"
-    },
-    {
-      "language": "python",
-      "version": "3.2.2"
+      "versions": [
+        "2.6.5",
+        "2.7.2",
+        "3.1.2",
+        "3.2.2"
+      ]
     },
     {
       "language": "php",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "ruby",
-      "version": "1.8"
-    },
-    {
-      "language": "ruby",
-      "version": "1.9.2"
-    },
-    {
-      "language": "ruby",
-      "version": "1.9.3"
+      "versions": [
+        "1.8",
+        "1.9.2",
+        "1.9.3"
+      ]
     },
     {
       "language": "node",
-      "version": "0.4.12"
-    },
-    {
-      "language": "node",
-      "version": "0.6.20"
-    },
-    {
-      "language": "node",
-      "version": "0.8.3"
+      "versions": [
+        "0.4.12",
+        "0.6.20",
+        "0.8.3"
+      ]
     },
     {
       "language": "perl",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "frameworks": null,

@@ -1,6 +1,6 @@
 {
   "name": "Djangy",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "https://github.com/dpaola2/djangy",
   "status": "eol",
@@ -21,7 +21,9 @@
   "runtimes": [
     {
       "language": "python",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "middleware": null,

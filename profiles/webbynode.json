@@ -1,6 +1,6 @@
 {
   "name": "Webbynode",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://webbynode.com/",
   "status": "production",
@@ -21,19 +21,27 @@
   "runtimes": [
     {
       "language": "python",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "php",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "ruby",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "node",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "frameworks": null,

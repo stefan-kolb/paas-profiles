@@ -1,6 +1,6 @@
 {
   "name": "Heroku",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://www.heroku.com/",
   "status": "production",
@@ -21,47 +21,49 @@
   "runtimes": [
     {
       "language": "java",
-      "version": "1.7.0"
+      "versions": [
+        "1.7.0"
+      ]
     },
     {
       "language": "python",
-      "version": "2.7.3"
+      "versions": [
+        "2.7.3"
+      ]
     },
     {
       "language": "php",
-      "version": "5.3.10"
+      "versions": [
+        "5.3.10"
+      ]
     },
     {
       "language": "ruby",
-      "version": "1.8.7"
-    },
-    {
-      "language": "ruby",
-      "version": "1.9.2"
-    },
-    {
-      "language": "ruby",
-      "version": "1.9.3"
+      "versions": [
+        "1.8.7",
+        "1.9.2",
+        "1.9.3"
+      ]
     },
     {
       "language": "node",
-      "version": "0.4.12"
-    },
-    {
-      "language": "node",
-      "version": "0.6.17"
-    },
-    {
-      "language": "node",
-      "version": "0.8.14"
+      "versions": [
+        "0.4.12",
+        "0.6.17",
+        "0.8.14"
+      ]
     },
     {
       "language": "scala",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "clojure",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "frameworks": null,

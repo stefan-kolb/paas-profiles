@@ -1,6 +1,6 @@
 {
   "name": "Oracle Cloud PaaS",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://cloud.oracle.com",
   "status": "production",
@@ -22,7 +22,9 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "middleware": null,

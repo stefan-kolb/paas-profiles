@@ -1,6 +1,6 @@
 {
   "name": "SAP HANA Cloud",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://scn.sap.com/docs/DOC-39315",
   "status": "production",
@@ -21,7 +21,9 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "middleware": null,

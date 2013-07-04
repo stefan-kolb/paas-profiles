@@ -1,6 +1,6 @@
 {
   "name": "ELPaaS",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "https://www.elpaas.com/",
   "status": "production",
@@ -21,11 +21,15 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "cobol",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "frameworks": null,

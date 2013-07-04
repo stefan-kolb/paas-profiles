@@ -1,6 +1,6 @@
 {
   "name": "Uhuru AppCloud",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://www.uhurusoftware.com/",
   "status": "beta",
@@ -22,23 +22,33 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "dotnet",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "php",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "ruby",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "node",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "middleware": null,

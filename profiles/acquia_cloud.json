@@ -1,6 +1,6 @@
 {
   "name": "Acquia Cloud",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://www.acquia.com/acquia-cloud",
   "status": "production",
@@ -21,7 +21,9 @@
   "runtimes": [
     {
       "language": "php",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "middleware": null,

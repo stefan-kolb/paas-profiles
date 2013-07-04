@@ -1,6 +1,6 @@
 {
   "name": "Snapp",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://www.snapphq.com/",
   "status": "beta",
@@ -21,7 +21,9 @@
   "runtimes": [
     {
       "language": "dotnet",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "frameworks": null,

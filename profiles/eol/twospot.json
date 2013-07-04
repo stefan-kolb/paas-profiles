@@ -1,6 +1,6 @@
 {
   "name": "TwoSpot",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "https://code.google.com/p/twospot/",
   "status": "eol",
@@ -21,11 +21,15 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "python",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "middleware": null,

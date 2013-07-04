@@ -1,6 +1,6 @@
 {
   "name": "Clever Cloud",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://www.clever-cloud.com/",
   "status": "production",
@@ -21,23 +21,33 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "python",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "php",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "node",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "scala",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "middleware": null,

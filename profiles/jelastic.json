@@ -1,6 +1,6 @@
 {
   "name": "Jelastic",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://jelastic.com",
   "status": "production",
@@ -21,19 +21,17 @@
   "runtimes": [
     {
       "language": "java",
-      "version": "1.6"
-    },
-    {
-      "language": "java",
-      "version": "1.7"
-    },
-    {
-      "language": "php",
-      "version": "5.3.23"
+      "versions": [
+        "1.6",
+        "1.7"
+      ]
     },
     {
       "language": "php",
-      "version": "5.4.13"
+      "versions": [
+        "5.3.23",
+        "5.4.13"
+      ]
     }
   ],
   "frameworks": null,

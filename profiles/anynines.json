@@ -1,6 +1,6 @@
 {
   "name": "Anynines",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://www.anynines.com/",
   "status": "beta",
@@ -21,11 +21,15 @@
   "runtimes": [
     {
       "language": "ruby",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "node",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "frameworks": null,

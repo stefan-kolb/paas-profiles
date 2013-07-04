@@ -1,6 +1,6 @@
 {
   "name": "ActiveState Stackato",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "www.activestate.com/stackato",
   "status": "production",
@@ -21,31 +21,45 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "dotnet",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "python",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "php",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "ruby",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "node",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "perl",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "middleware": null,

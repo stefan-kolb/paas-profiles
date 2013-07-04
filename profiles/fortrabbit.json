@@ -1,6 +1,6 @@
 {
   "name": "fortrabbit",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://fortrabbit.com/",
   "status": "production",
@@ -21,7 +21,9 @@
   "runtimes": [
     {
       "language": "php",
-      "version": "5.4"
+      "versions": [
+        "5.4"
+      ]
     }
   ],
   "frameworks": null,
@@ -32,7 +34,7 @@
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
-	  "provider": "AWS"
+      "provider": "AWS"
     }
   ]
 }

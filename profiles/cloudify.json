@@ -1,6 +1,6 @@
 {
   "name": "Cloudify",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "www.gigaspaces.com/cloudify",
   "status": "production",
@@ -21,15 +21,21 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "php",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "ruby",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "frameworks": null,

@@ -1,6 +1,6 @@
 {
   "name": "Google App Engine",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "https://developers.google.com/appengine/",
   "status": "production",
@@ -22,31 +22,44 @@
   "runtimes": [
     {
       "language": "java",
-      "version": "1.7"
+      "versions": [
+        "1.7"
+      ]
     },
     {
       "language": "python",
-      "version": "2.7"
+      "versions": [
+        "2.7",
+        "2.5"
+      ]
     },
-    {
-      "language": "python",
-      "version": "2.5"
-    },	
     {
       "language": "php",
-      "version": "5.4"
+      "versions": [
+        "5.4"
+      ]
     },
     {
       "language": "go",
-      "version": "1.1"
+      "versions": [
+
+      ]
     }
   ],
-  "middleware": [],
-  "frameworks": [],
+  "middleware": [
+
+  ],
+  "frameworks": [
+
+  ],
   "services": {
-	"native": [],
-	"addon": []
-	},
+    "native": [
+
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {

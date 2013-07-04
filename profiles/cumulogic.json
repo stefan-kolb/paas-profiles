@@ -1,6 +1,6 @@
 {
   "name": "Cumulogic",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://www.cumulogic.com/",
   "status": "beta",
@@ -21,11 +21,15 @@
   "runtimes": [
     {
       "language": "java",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "php",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "frameworks": null,

@@ -1,6 +1,6 @@
 {
   "name": "Railscloud",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "https://www.railscloud.de/",
   "status": "beta",
@@ -21,7 +21,9 @@
   "runtimes": [
     {
       "language": "ruby",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "frameworks": null,

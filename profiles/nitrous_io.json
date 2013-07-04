@@ -1,6 +1,6 @@
 {
   "name": "Nitrous.io",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "https://www.nitrous.io",
   "status": "beta",
@@ -21,19 +21,27 @@
   "runtimes": [
     {
       "language": "python",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "ruby",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "node",
-      "version": ""
+      "versions": [
+
+      ]
     },
     {
       "language": "go",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "middleware": null,
@@ -45,43 +53,43 @@
       "continent": "NA",
       "country": "US",
       "region": "Virginia",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
       "region": "",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
-	{
+    {
       "continent": "SA",
       "country": "BR",
       "region": "Sao Paulo",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "AS",
       "country": "JP",
       "region": "Tokio",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "AS",
       "country": "SG",
       "region": "Singapur",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "OC",
       "country": "AU",
       "region": "Sydney",
-	  "provider": "AWS"
+      "provider": "AWS"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "AppHosted",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://apphosted.com/",
   "status": "eol",
@@ -21,7 +21,9 @@
   "runtimes": [
     {
       "language": "python",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "middleware": null,

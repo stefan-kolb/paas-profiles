@@ -1,6 +1,6 @@
 {
   "name": "PHPCloud",
-  "revision": "2013-07-03",
+  "revision": "2013-07-04",
   "vendor_verified": false,
   "url": "http://www.phpcloud.com/",
   "status": "beta",
@@ -22,7 +22,9 @@
   "runtimes": [
     {
       "language": "php",
-      "version": ""
+      "versions": [
+
+      ]
     }
   ],
   "frameworks": null,
