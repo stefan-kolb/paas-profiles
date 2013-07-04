@@ -19,5 +19,5 @@ _yardoc
 doc/
 
 helper
-public
 manifest.yml
+public/images

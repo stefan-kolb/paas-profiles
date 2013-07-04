@@ -64,22 +64,26 @@
     {
       "continent": "NA",
       "country": "US",
-      "region": "Virginia"
+      "region": "Virginia",
+	  "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": "Las Vegas"
+      "region": "Las Vegas",
+	  "provider": "AWS"
     },
     {
       "continent": "EU",
       "country": "IE",
-      "region": "Dublin"
+      "region": "Dublin",
+	  "provider": "AWS"
     },
     {
       "continent": "AS",
       "country": "SG",
-      "region": "Singapore"
+      "region": "Singapore",
+	  "provider": "AWS"
     }
   ]
 }
