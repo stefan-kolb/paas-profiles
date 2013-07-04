@@ -58,6 +58,11 @@ The code below shows a sample profile. The profile specification is beta and the
   ]
 }
 ```
+
+### Hosting
+
+### Scaling
+
 ### Runtimes
 
 The runtimes an application can be written in. Defined as an array of objects.
