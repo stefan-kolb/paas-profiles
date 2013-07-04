@@ -32,7 +32,7 @@ The code below shows a sample profile. The profile specification is beta and the
     "SSAE 16 Type II", "ISAE 3402 Type II"
   ],
   "runtimes": [
-    { "language": "java", "versions": [ "1.7", "1.6" ] } // [java, php, python, ruby, dotnet, node, go, ...]
+    { "language": "java", "versions": [ "1.7", "1.6" ] }
   ],
   "middleware" [
     { "name": "tomcat", "versions": [ "6.0.35" ] }
@@ -50,14 +50,74 @@ The code below shows a sample profile. The profile specification is beta and the
   "extendable": false, // buildpack-like support
   "infrastructures": [
     { 
-      "continent": "NA", // [NA, SA, EU, AS, AF, OC]
-      "country": "US", // ISO 3166-1 alpha-2 codes
-      "region": "Virginia", // region or city
-      "provider": "AWS" // optional external IaaS provider
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
+      "provider": "AWS"
     }
   ]
 }
 ```
+### Runtimes
+
+The runtimes an application can be written in. Defined as an array of objects.
+
+```json
+"runtimes": [
+    { "language": "java", "versions": [ "1.7", "1.6" ] },
+    { "language": "ruby", "versions": [ "1.9.3", "2.0.0" ] }
+]
+```
+
+#### Language
+
+In order to allow exact matching, the language keys are restricted. Currently allowed keys are:
+
+```
+apex, clojure, cobol, dotnet, erlang, go, groovy, haskell, java, lua, node, perl, php, python, ruby, scala
+```
+
+
+#### Versions
+
+A string array containing the supported runtime versions.
+
+### Services
+
+### Infrastructures
+
+The infrastructures an application can be deployed to. Defined as an array of objects.
+
+```json
+"infrastructures": [
+    { 
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
+    }
+]
+```
+
+#### Continent
+
+The continent must be encoded with the following continent codes:
+
+```
+AF = Africa, AS = Asia, EU = Europe, NA = North America, OC = Oceania, SA = South America
+```
+
+#### Country
+
+The country codes must confrom to the country codes defined in [ISO 3166-2](http://en.wikipedia.org/wiki/ISO_3166-2).
+
+#### Region
+
+The property region can be used to further specify the location of the datacenter. This field is freeform and may specify a region or even the city the datacenter is located in.
+
+#### Provider
+
+This optional field may specify the name of the external IaaS provider used by the PaaS vendor, e.g. *Amazon Web Services*.
 
 ## Authors
 
