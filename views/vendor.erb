@@ -15,7 +15,7 @@
 		<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">		
 	</head>
 	<body>
-		<div class="container">
+		<div id="top" class="container">
 			<div class="row">
 				<div class="span8">
 					<h1>
@@ -101,57 +101,12 @@
 			
 			<hr/>
 			
-			<div class="row">
-				<div class="span12"><h3>Infrastructures</h3></div>			
-				<div class="span5">
-					<% 
-						profile["infrastructures"].each do |rt|
-						
-						title = ""
-						
-						case rt["continent"]
-							when "EU"
-								title = "Europe"
-							when "SA"
-								title = "South America"
-							when "NA"
-								title = "North America"
-							when "AS"
-								title = "Asia"
-							when "OC"
-								title = "Oceania"
-							else
-								title = "Africa"
-						end
-					%>
-						<div class="text-left">
-						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
-						<span>
-							<% iso = JSON.parse( IO.read("public/js/iso-3166-2.json")) %>
-							<%= iso.detect{ |c| c["alpha-2"] == rt["country"]}["name"] %>
-							<% unless rt["region"].empty? %>
-							, <em><%= rt["region"] %></em>
-							<% end %>
-						</span>
-						<% unless rt["provider"].nil? %>
-							<small class="muted">&mdash; provided by <%= rt["provider"] %></small>
-						<% end %>
-						</div>
-					<% 
-						end
-					%>
-				</div>
-				<div class="span7 thumbnail" id="map" style="width: 640px; height: 300px"></div>
-			</div>
-			
-			<hr/>
-
 			<%
 				services = profile["services"].nil?
 				
 				unless services
 			%>
-			<div class="row">
+			<div id="services" class="row">
 			<div class="span12"><h3>Services</h3></div>
 			<div class="accordion span12" id="accordion2">
 			  <div class="accordion-group">
@@ -223,7 +178,6 @@
 						</tr>
 						<% end
 							end
-							end
 						%>
 					</tbody>
 					</table>
@@ -231,10 +185,58 @@
 				</div>
 			  </div>
 			</div>
+			<a href="#services" title="Back to services" class="pull-right icon-chevron-up"></a>
+			</div>
+			<% end %>
+			
+			<hr/>
+			
+			<div class="row">
+				<div class="span12"><h3>Infrastructures</h3></div>			
+				<div class="span5">
+					<% 
+						profile["infrastructures"].each do |rt|
+						
+						title = ""
+						
+						case rt["continent"]
+							when "EU"
+								title = "Europe"
+							when "SA"
+								title = "South America"
+							when "NA"
+								title = "North America"
+							when "AS"
+								title = "Asia"
+							when "OC"
+								title = "Oceania"
+							else
+								title = "Africa"
+						end
+					%>
+						<div class="text-left">
+						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
+						<span>
+							<% iso = JSON.parse( IO.read("public/js/iso-3166-2.json")) %>
+							<%= iso.detect{ |c| c["alpha-2"] == rt["country"]}["name"] %>
+							<% unless rt["region"].empty? %>
+							, <em><%= rt["region"] %></em>
+							<% end %>
+						</span>
+						<% unless rt["provider"].nil? %>
+							<small class="muted">&mdash; provided by <%= rt["provider"] %></small>
+						<% end %>
+						</div>
+					<% 
+						end
+					%>
+				</div>
+				<div class="span7 thumbnail" id="map" style="width: 640px; height: 300px"></div>
 			</div>
 			
 			<hr/>
 			
+			<a href="#top" title="Back to top" class="pull-right icon-chevron-up"></a>
 		</div>
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
