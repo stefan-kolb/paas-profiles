@@ -78,7 +78,7 @@
 				<div class="span12">
 				<table class="table table-bordered table-hover">
 				<thead>
-					<tr><th>Language</th><th>Version</th></tr>
+					<tr><th>Language</th><th>Versions</th></tr>
 				</thead>
 				<tbody>
 					<% 
@@ -101,7 +101,7 @@
 			
 			<hr/>
 			
-			<div class="row-fluid">
+			<div class="row">
 				<div class="span12"><h3>Infrastructures</h3></div>			
 				<div class="span5">
 					<% 
@@ -126,7 +126,13 @@
 					%>
 						<div class="text-left">
 						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
-						<span><%= rt["country"] + ", <em>" + rt["region"] + "</em>" %></span>
+						<span>
+							<% iso = JSON.parse( IO.read("public/js/iso-3166-2.json")) %>
+							<%= iso.detect{ |c| c["alpha-2"] == rt["country"]}["name"] %>
+							<% unless rt["region"].empty? %>
+							, <em><%= rt["region"] %></em>
+							<% end %>
+						</span>
 						<% unless rt["provider"].nil? %>
 							<small class="muted">&mdash; provided by <%= rt["provider"] %></small>
 						<% end %>
