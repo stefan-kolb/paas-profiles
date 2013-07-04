@@ -7,7 +7,7 @@
   "status_since": "2011-01-31",
   "type": "language-specific",
   "hosting": [
-    "public"
+    "public", "private"
   ],
   "pricing": "Monthly",
   "scaling": {
@@ -22,23 +22,30 @@
     {
       "language": "java",
       "versions": [
-
+		"1.6", "1.7", "1.8"
       ]
     }
   ],
+  "middleware": [
+	{ "name": "tomcat", "version": "6.0.32" },
+	{ "name": "jboss", "version": "7.02" },
+	{ "name": "jboss", "version": "7.1" }
+	],
   "frameworks": null,
   "services": null,
-  "extendable": false,
+  "extendable": true,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "Virginia",
+	  "provider": "AWS"
     },
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "IE",
+      "region": "Dublin",
+	  "provider": "AWS"
     }
   ]
 }

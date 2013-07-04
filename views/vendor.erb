@@ -218,7 +218,11 @@
 						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
 						<span>
 							<% iso = JSON.parse( IO.read("public/js/iso-3166-2.json")) %>
-							<%= iso.detect{ |c| c["alpha-2"] == rt["country"]}["name"] %>
+							<%= 
+								unless rt["country"].empty?
+								iso.detect{ |c| c["alpha-2"] == rt["country"]}["name"]
+								end
+							%>
 							<% unless rt["region"].empty? %>
 							, <em><%= rt["region"] %></em>
 							<% end %>
