@@ -54,6 +54,20 @@
 					<% if profile["scaling"]["auto"] %> 
 					or let <%= profile["name"] %> automatically <span class="icon-refresh" title="auto"></span> scale your instances.
 					<% end %></p>	
+					<p>
+					<%= profile["name"] %> is available as 
+					<% if profile["hosting"].include? "public" %>
+					public <span class="icon-eye-open" title="public"></span>
+					<% end %>
+					<% if profile["hosting"].include?("private") && profile["hosting"].include?("public") %>
+					and as 
+					<%	end				
+						if profile["hosting"].include? "private"
+					%>
+					private <span class="icon-lock" title="private"></span>
+					<% end %>
+					Platform-as-a-Service.
+					</p>
 				</div>
 			</div>
 
@@ -126,62 +140,91 @@
 			
 			<hr/>
 
-			<div class="row">
-				<div class="span12"><h3>Services</h3></div>
+			<%
+				services = profile["services"].nil?
 				
-				<div class="span12"><h3>Native</h3></div>
-				<div class="span12">
-				<table class="table table-bordered table-hover">
-				<thead>
-					<tr><th>Name</th><th>Description</th><th>Type</th></tr>
-				</thead>
-				<tbody>
+				unless services
+			%>
+			<div class="row">
+			<div class="span12"><h3>Services</h3></div>
+			<div class="accordion span12" id="accordion2">
+			  <div class="accordion-group">
+				<div class="accordion-heading">
+				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
 					<% 
-						services = profile["services"].nil?
-						
-						unless services
+						size = 0
+						unless profile["services"]["native"].nil?
+							size = profile["services"]["native"].size
+						end
+					%>
+					<h4>Native (<%= size %>)</h4>
+				  </a>
+				</div>
+				<div id="collapseOne" class="accordion-body collapse">
+				  <div class="accordion-inner">
+				  	<% 
 						unless profile["services"]["native"].nil?
 						profile["services"]["native"].each do |rt|
 					%>
-					<tr>
-						<td>
-							<%= rt["id"].capitalize %>
-						</td>
-						<td><em><%= rt["desc"] %></em></td>
-						<td><em><%= rt["type"] %></em></td>
-					</tr>
-					<% end
-						end
-					%>
-				</tbody>
-				</table>
+					<table class="table table-bordered table-hover">
+					<thead>
+						<tr><th>Name</th><th>Description</th><th>Type</th></tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<%= rt["id"].capitalize %>
+							</td>
+							<td><em><%= rt["desc"] %></em></td>
+							<td><em><%= rt["type"] %></em></td>
+						</tr>
+						<% end
+							end
+						%>
+					</tbody>
+					</table>
+				  </div>
 				</div>
-				
-				<div class="span12"><h3>Addons</h3></div>
-				<div class="span12">
-				<table class="table table-bordered table-hover">
-				<thead>
-					<tr><th>Name</th><th>Description</th><th>Type</th></tr>
-				</thead>
-				<tbody>
-					<% 
+			  </div>
+			  <div class="accordion-group">
+				<div class="accordion-heading">
+				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+				  	<% 
 						unless profile["services"]["addon"].nil?
-						profile["services"]["addon"].each do |rt|
-					%>
-					<tr>
-						<td>
-							<a href="#"><%= rt["id"].capitalize %></a>
-						</td>
-						<td><em><%= rt["desc"] %></em></td>
-						<td><em><%= rt["type"] %></em></td>
-					</tr>
-					<% end
-						end
+							size = profile["services"]["addon"].size
 						end
 					%>
-				</tbody>
-				</table>
-				</div>		
+					<h4>Addons (<%= size %>)</h4>
+				  </a>
+				</div>
+				<div id="collapseTwo" class="accordion-body collapse">
+				  <div class="accordion-inner">
+					<table class="table table-bordered table-hover">
+					<thead>
+						<tr><th>Name</th><th>Description</th><th>Type</th></tr>
+					</thead>
+					<tbody>
+						<% 
+							unless profile["services"]["addon"].nil?
+							profile["services"]["addon"].each do |rt|
+						%>
+						<tr>
+							<td>
+								<a href="#"><%= rt["id"].capitalize %></a>
+							</td>
+							<td><em><%= rt["desc"] %></em></td>
+							<td><em><%= rt["type"] %></em></td>
+						</tr>
+						<% end
+							end
+							end
+						%>
+					</tbody>
+					</table>
+				  </div>
+				</div>
+			  </div>
+			</div>
 			</div>
 			
 			<hr/>
