@@ -71,6 +71,8 @@ The runtimes an application can be written in. Defined as an array of objects.
 
 #### Language
 
+This section must only include languages that are officially supported by the vendors.
+Languages added via community buildpacks must not be added. Extensibility is modeled by the property *extenable*. 
 In order to allow exact matching, the language keys are restricted. Currently allowed keys are:
 
 ```
