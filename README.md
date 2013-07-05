@@ -116,7 +116,7 @@ AF = Africa, AS = Asia, EU = Europe, NA = North America, OC = Oceania, SA = Sout
 
 #### Country
 
-The country codes must confrom to the country codes defined in [ISO 3166-2](http://en.wikipedia.org/wiki/ISO_3166-2).
+The country codes must conform to the country codes defined in [ISO 3166-2](http://en.wikipedia.org/wiki/ISO_3166-2).
 
 #### Region
 

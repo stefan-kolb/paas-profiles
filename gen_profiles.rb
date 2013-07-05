@@ -129,7 +129,7 @@ id = 1
 		profile["name"] = name
 		
 		# revision
-		profile["revision"] = Date.today
+		profile["revision"] = DateTime.now
 		# status
 		profile["status"] = file.cell(line,'Q').downcase
 		# status since

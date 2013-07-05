@@ -1,6 +1,6 @@
 {
   "name": "EngineYard",
-  "revision": "2013-07-05",
+  "revision": "2013-07-05T12:59:53+02:00",
   "vendor_verified": false,
   "url": "http://www.engineyard.com/",
   "status": "production",
@@ -48,11 +48,17 @@
     "native": [
       {
         "id": "postgres",
-        "versions": [ "9.1", "9.2" ]
+        "versions": [
+          "9.1",
+          "9.2"
+        ]
       },
       {
         "id": "mysql",
-        "versions": [ "5.0", "5.5" ]
+        "versions": [
+          "5.0",
+          "5.5"
+        ]
       }
     ],
     "addon": [
@@ -81,7 +87,8 @@
         "id": "appfirst"
       },
       {
-        "id": "mongolab", "url": "https://mongolab.com/"
+        "id": "mongolab",
+        "url": "https://mongolab.com/"
       },
       {
         "id": "mongohq"
@@ -112,49 +119,49 @@
       "continent": "NA",
       "country": "US",
       "region": "Virginia",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
       "region": "Northern California",
-	  "provider": "AWS"	  
+      "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
       "region": "Oregon",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "SA",
       "country": "BR",
       "region": "Sao Paulo",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "AS",
       "country": "SG",
       "region": "Singapore",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "AS",
       "country": "JP",
       "region": "Tokyo",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "OC",
       "country": "AU",
       "region": "Sydney",
-	  "provider": "AWS"
+      "provider": "AWS"
     }
   ]
 }
