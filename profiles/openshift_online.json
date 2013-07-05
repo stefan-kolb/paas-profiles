@@ -1,17 +1,18 @@
 {
-  "name": "Clever Cloud",
+  "name": "OpenShift Online",
   "revision": "2013-07-05T17:47:54+02:00",
   "vendor_verified": false,
-  "url": "http://www.clever-cloud.com/",
+  "url": "https://www.openshift.com",
   "status": "production",
-  "status_since": "2013-01-30",
+  "status_since": "2013-06-10",
   "type": "polyglot",
   "hosting": [
-    "public"
+    "public",
+    "private"
   ],
-  "pricing": "Metered",
+  "pricing": "Monthly + Metered",
   "scaling": {
-    "vertical": true,
+    "vertical": false,
     "horizontal": true,
     "auto": true
   },
@@ -29,68 +30,54 @@
     {
       "language": "python",
       "versions": [
-        "2.7.3"
+        "2.6"
       ]
     },
     {
       "language": "php",
       "versions": [
-        "5.3.23"
+        "5.3"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.8",
+        "1.9"
       ]
     },
     {
       "language": "node",
       "versions": [
-        "0.10.3",
-        "0.9.3",
-        "0.8.16",
-        "0.7.12",
-        "0.6.21"
+        "0.6"
       ]
     },
     {
-      "language": "scala",
+      "language": "perl",
       "versions": [
-
+"5.10"
       ]
     }
   ],
   "middleware": [
     {
-      "name": "tomcat",
-      "versions": [
-        "4.1",
-        "5.5",
-        "6.0",
-        "7.0"
-      ]
-    },
-    {
-      "name": "jetty",
-      "versions": [
-        "6.1",
-        "7.6",
-        "8.1",
-        "9.0"
-      ]
-    },
-    {
-      "name": "jboss",
+      "id": "jboss",
       "versions": [
         "6.1",
         "7.1"
       ]
     },
     {
-      "name": "glassfish",
+      "id": "tomcat",
       "versions": [
-        "3.1"
+        "6",
+        "7"
       ]
     },
     {
-      "name": "resin",
+      "id": "zend",
       "versions": [
-        "3.1"
+        "5.6"
       ]
     }
   ],
@@ -98,27 +85,33 @@
   "services": {
     "native": [
       {
+        "id": "mongodb",
+        "versions": [
+          "2.2"
+        ]
+      },
+      {
         "id": "mysql",
         "versions": [
-
+          "5.1"
         ]
       },
       {
         "id": "postgresql",
         "versions": [
-
+          "8.4"
         ]
       },
       {
-        "id": "filesystem buckets",
+        "id": "switchyard",
         "versions": [
-
+          "0.6"
         ]
       },
       {
-        "id": "couchbase",
+        "id": "jenkins",
         "versions": [
-
+          "1.4"
         ]
       }
     ],
@@ -126,12 +119,12 @@
 
     ]
   },
-  "extendable": false,
+  "extendable": true,
   "infrastructures": [
     {
-      "continent": "EU",
-      "country": "FR",
-      "region": "Paris"
+      "continent": "NA",
+      "country": "",
+      "region": ""
     }
   ]
 }
