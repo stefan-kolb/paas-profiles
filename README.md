@@ -58,8 +58,42 @@ The code below shows a sample profile. The profile specification is beta and the
   ]
 }
 ```
+### Name
+
+The official name of the PaaS offering.
+
+### Revision
+
+```ruby
+DateTime
+```  
+
+`Date` or `DateTime` of the profile's last update.
+ 
+### Vendor Verification
+
+This may be set to `true` if the profile was officially created or audited by the vendor.
+
+### URL
+
+The URL leading to the Paas' webpage.
+
+### Status
+
+The current status of the offering. This may be one of the following lifecycle stages:
+
+`beta` = In private or public beta testing  
+`production` = Live and generally available  
+`eol` = Discontinued or integrated into another offering (End of life).  
+
+### Status Since
+
+`Date` of the last status transition.
 
 ### Hosting
+
+An array that describes the different provided hosting styles of the PaaS.
+Values can be `public` for a publicly hosted service and `private`for a service that can be deployed on premise, too.
 
 ### Scaling
 
