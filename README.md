@@ -8,6 +8,7 @@ For convenience, the profiles can be viewed via executing the [sinatra app](sina
 
 **The current web interface can be viewed [online](http://paas-profiles.aws.af.cm/vendors).**
 
+** Any errors? Important missing properties? Suggestions? [Contribute](#contribute)
 ## Profile
 
 The code below shows a sample profile. The profile specification is beta and the properties are subject to change.
@@ -58,15 +59,11 @@ The code below shows a sample profile. The profile specification is beta and the
   ]
 }
 ```
-### Name
+### Name  
 
 The official name of the PaaS offering.
 
 ### Revision
-
-```ruby
-string: DateTime
-```  
 
 `Date` or `DateTime` of the profile's last update.
  
@@ -90,12 +87,34 @@ The current status of the offering. This may be one of the following lifecycle s
 
 `Date` of the last status transition.
 
+### Type
+
+Type of the PaaS. Currently allowed categories:
+
+```
+language-specific, polyglot, apaas
+```
+
+### Pricing
+
+The pricing model of the PaaS. Values tbd
+
+### Scaling
+
+An object including three boolean properties for characterizing the scaling capabilities:
+
+`vertical` = Can you scale the instance sizes, e.g. ram?  
+`horizontal` = Can you scale the number of instances?  
+`auto` = Is the PaaS capable of scaling any of the above properties automatically?    
+
 ### Hosting
 
 An array that describes the different provided hosting styles of the PaaS.
 Values can be `public` for a publicly hosted service and `private`for a service that can be deployed on premise, too.
 
-### Scaling
+### Compliance
+
+Currently a simple array of compliance standard strings that are fulfilled by the PaaS.
 
 ### Runtimes
 
@@ -118,12 +137,53 @@ In order to allow exact matching, the language keys are restricted. Currently al
 apex, clojure, cobol, dotnet, erlang, go, groovy, haskell, java, lua, node, perl, php, python, ruby, scala
 ```
 
-
 #### Versions
 
 A string array containing the supported runtime versions.
 
+### Middleware
+
+An array of preconfigured middleware stacks.
+
+```json
+"middleware": [
+    { "name": "tomcat", "versions": [ "6", "7" ] },
+    { "name": "glassfish", "versions": [ "3.1" ] }
+]
+```
+
+#### Name
+
+Should be the official name in lowercase. Currently not restricted.
+
+#### Versions
+
+A string array containing the supported middleware versions.
+
+### Frameworks
+
+*tbd*
+
 ### Services
+
+```json
+"services": {
+  "native": [
+    { "name": "mongodb", type="", "versions": [ "1.8" ] } // tbd
+  ],
+  "addon": [
+    { "name": "mongolab", url="https://mongolab.com/", desc="", type="" } // tbd
+  ]
+}
+```
+
+#### Native
+
+#### Addon
+
+##### Type
+
+*tbd*
 
 ### Infrastructures
 
