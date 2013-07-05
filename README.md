@@ -65,7 +65,7 @@ The official name of the PaaS offering.
 ### Revision
 
 ```ruby
-DateTime
+string: DateTime
 ```  
 
 `Date` or `DateTime` of the profile's last update.
