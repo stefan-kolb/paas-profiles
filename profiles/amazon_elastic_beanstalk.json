@@ -1,6 +1,6 @@
 {
   "name": "Amazon Elastic Beanstalk",
-  "revision": "2013-07-05T12:59:53+02:00",
+  "revision": "2013-07-05T14:27:46+02:00",
   "vendor_verified": false,
   "url": "http://aws.amazon.com/elasticbeanstalk/",
   "status": "beta",
@@ -59,19 +59,28 @@
   "middleware": [
     {
       "name": "tomcat",
-      "version": ""
+      "versions": [
+        "6",
+        "7"
+      ]
     },
     {
       "name": "passenger",
-      "version": ""
+      "versions": [
+        ""
+      ]
     },
     {
       "name": "iis",
-      "version": "7.5"
+      "versions": [
+        "7.5"
+      ]
     },
     {
       "name": "httpd",
-      "version": ""
+      "versions": [
+        ""
+      ]
     }
   ],
   "frameworks": null,

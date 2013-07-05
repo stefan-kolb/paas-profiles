@@ -1,6 +1,6 @@
 {
   "name": "AppHarbor",
-  "revision": "2013-07-05T12:59:53+02:00",
+  "revision": "2013-07-05T14:27:46+02:00",
   "vendor_verified": false,
   "url": "https://appharbor.com/",
   "status": "production",
@@ -22,23 +22,209 @@
     {
       "language": "dotnet",
       "versions": [
-
+        "3.5",
+        "4.0",
+        "4.5"
       ]
     }
   ],
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "id": "mysql",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "microsoft sql server",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+      {
+        "id": "airbrake",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "appfail",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "blitline",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "blitz",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cloudamqp",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cloudant",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cloudbird",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cloudinary",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "cloudmailin",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "elephantsql",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "found elasticsearch",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "hosted graphite",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "ironmq",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "justonedb",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "loader.io",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "logentries",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "mailgun",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "memcacher",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "memcachier",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "mongohq",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "mongolab",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "myredis",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "new relic",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "ravenhq",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "rediscloud",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "redis to go",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "searchbox elasticsearch",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "searchify hosted search",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "sendgrid",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "spreedly",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "statsmix",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "stillalive",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "id": "svnsailor",
+        "desc": "",
+        "type": ""
+      }
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "Virginia",
+      "provider": "AWS"
     },
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
     }
   ]
 }

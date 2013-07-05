@@ -44,8 +44,10 @@
 					<% end %>
 					since <span class="date" title="<%= profile["status_since"] %>"></span>.</p>
 					<p>You can deploy apps written in <span class="label label-inverse"><%= profile["runtimes"].uniq { |h| h["language"] }.size %></span> languages to <span class="label label-inverse"><%= profile["infrastructures"].size %></span> different infrastructures.</p>
-					<p>You can automatically bind <span class="label label-inverse">?</span> services and <span class="label label-inverse">?</span> integrated addons to your applications.</p>
-					<p>You can scale 
+					<% unless profile["services"].nil? %>
+					<p>You can automatically bind <span class="label label-inverse"><%= profile["services"]["native"].size %></span> services and <span class="label label-inverse"><%= profile["services"]["addon"].size %></span> integrated addons to your applications.</p>
+					<% end %>
+					<p>You can scale your applications
 					<% if profile["scaling"]["vertical"] %>
 					up <span class="icon-resize-vertical" title="vertical"></span>, 
 					<% end %>
@@ -53,8 +55,8 @@
 					down <span class="icon-resize-horizontal" title="horizontal"></span>
 					<% end %>
 					<% if profile["scaling"]["auto"] %> 
-					or let <%= profile["name"] %> automatically <span class="icon-refresh" title="auto"></span> scale your instances.
-					<% end %></p>	
+					or let <%= profile["name"] %> automatically <span class="icon-refresh" title="auto"></span> scale your instances
+					<% end %>.</p>
 					<p>
 					<%= profile["name"] %> is available as 
 					<% if profile["hosting"].include? "public" %>
@@ -135,7 +137,7 @@
 					<% profile["services"]["native"].each do |rt| %>
 						<tr>
 							<td>
-								<%= rt["id"].capitalize %>
+								<%= rt["id"].split(" ").map(&:capitalize).join(" ") %>
 							</td>
 							<td><em><%= rt["desc"] %></em></td>
 							<td><em><%= rt["type"] %></em></td>
