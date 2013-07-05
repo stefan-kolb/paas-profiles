@@ -1,15 +1,15 @@
 {
   "name": "CloudBees",
-  "revision": "2013-07-04",
+  "revision": "2013-07-05",
   "vendor_verified": false,
   "url": "http://www.cloudbees.com/",
   "status": "production",
   "status_since": "2011-01-31",
   "type": "language-specific",
   "hosting": [
-    "public", "private"
+    "public"
   ],
-  "pricing": "Monthly",
+  "pricing": "Metered",
   "scaling": {
     "vertical": true,
     "horizontal": true,
@@ -22,15 +22,26 @@
     {
       "language": "java",
       "versions": [
-		"1.6", "1.7", "1.8"
+        "1.6",
+        "1.7",
+        "1.8"
       ]
     }
   ],
   "middleware": [
-	{ "name": "tomcat", "version": "6.0.32" },
-	{ "name": "jboss", "version": "7.02" },
-	{ "name": "jboss", "version": "7.1" }
-	],
+    {
+      "name": "tomcat",
+      "version": "6.0.32"
+    },
+    {
+      "name": "jboss",
+      "version": "7.02"
+    },
+    {
+      "name": "jboss",
+      "version": "7.1"
+    }
+  ],
   "frameworks": null,
   "services": null,
   "extendable": true,
@@ -39,13 +50,13 @@
       "continent": "NA",
       "country": "US",
       "region": "Virginia",
-	  "provider": "AWS"
+      "provider": "AWS"
     },
     {
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
-	  "provider": "AWS"
+      "provider": "AWS"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "EngineYard",
-  "revision": "2013-07-04",
+  "revision": "2013-07-05",
   "vendor_verified": false,
   "url": "http://www.engineyard.com/",
   "status": "production",
@@ -22,50 +22,139 @@
     {
       "language": "php",
       "versions": [
-
+        "5.3",
+        "5.4"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-
+        "1.8.7",
+        "1.9.3",
+        "2.0.0"
       ]
     },
     {
       "language": "node",
       "versions": [
-
+        "0.8.11",
+        "0.8.16",
+        "0.6.21"
       ]
     }
   ],
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "id": "postgres",
+        "versions": [ "9.1", "9.2" ]
+      },
+      {
+        "id": "mysql",
+        "versions": [ "5.0", "5.5" ]
+      }
+    ],
+    "addon": [
+      {
+        "id": "cloudinary"
+      },
+      {
+        "id": "mailgun"
+      },
+      {
+        "id": "sendgrid"
+      },
+      {
+        "id": "new relic"
+      },
+      {
+        "id": "solano labs"
+      },
+      {
+        "id": "blitz"
+      },
+      {
+        "id": "logentries"
+      },
+      {
+        "id": "appfirst"
+      },
+      {
+        "id": "mongolab", "url": "https://mongolab.com/"
+      },
+      {
+        "id": "mongohq"
+      },
+      {
+        "id": "librato metrics"
+      },
+      {
+        "id": "ironworker"
+      },
+      {
+        "id": "treasure data hadoop"
+      },
+      {
+        "id": "justonedb"
+      },
+      {
+        "id": "ironmq"
+      },
+      {
+        "id": "statsmix"
+      }
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "Virginia",
+	  "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California",
+	  "provider": "AWS"	  
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+	  "provider": "AWS"
     },
     {
       "continent": "SA",
-      "country": "",
-      "region": ""
+      "country": "BR",
+      "region": "Sao Paulo",
+	  "provider": "AWS"
     },
     {
       "continent": "AS",
-      "country": "",
-      "region": ""
+      "country": "SG",
+      "region": "Singapore",
+	  "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Tokyo",
+	  "provider": "AWS"
     },
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "IE",
+      "region": "Dublin",
+	  "provider": "AWS"
     },
     {
       "continent": "OC",
-      "country": "",
-      "region": ""
+      "country": "AU",
+      "region": "Sydney",
+	  "provider": "AWS"
     }
   ]
 }

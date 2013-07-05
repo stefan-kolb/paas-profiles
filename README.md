@@ -44,7 +44,7 @@ The code below shows a sample profile. The profile specification is beta and the
       { "name": "mongodb", type="", "versions": [ "1.8" ] } // tbd
     ],
     "addon": [
-      { "name": "mongolab", url="", desc="", type="" } // tbd
+      { "name": "mongolab", url="https://mongolab.com/", desc="", type="" } // tbd
     ]
   },
   "extendable": false, // buildpack-like support

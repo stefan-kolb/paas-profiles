@@ -12,7 +12,8 @@
 		<meta name="description" content="PaaS Profiles">
 		<meta name="author" content="Stefan Kolb">
 		<link href="../css/bootstrap.css" rel="stylesheet">
-		<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">		
+		<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">	
+		<link rel="icon" ../favicon.ico" type="image/png">		
 	</head>
 	<body>
 		<div id="top" class="container">
@@ -125,25 +126,25 @@
 				  <div class="accordion-inner">
 				  	<% 
 						unless profile["services"]["native"].nil?
-						profile["services"]["native"].each do |rt|
 					%>
 					<table class="table table-bordered table-hover">
 					<thead>
-						<tr><th>Name</th><th>Description</th><th>Type</th></tr>
+						<tr><th>Name</th><th>Description</th><th>Type</th><th>Versions</th></tr>
 					</thead>
 					<tbody>
+					<% profile["services"]["native"].each do |rt| %>
 						<tr>
 							<td>
 								<%= rt["id"].capitalize %>
 							</td>
 							<td><em><%= rt["desc"] %></em></td>
 							<td><em><%= rt["type"] %></em></td>
+							<td><em><%= rt["versions"].join(", ") %></em></td>
 						</tr>
-						<% end
-							end
-						%>
+						<% end %>
 					</tbody>
 					</table>
+					<% end %>
 				  </div>
 				</div>
 			  </div>
@@ -171,7 +172,11 @@
 						%>
 						<tr>
 							<td>
-								<a href="#"><%= rt["id"].capitalize %></a>
+							<% unless rt["url"].nil? || rt["url"].empty? %>
+								<a href="<%= rt["url"] %>">
+							<% end %>
+							<%= rt["id"].split(" ").map(&:capitalize).join(" ") %>
+							</a>
 							</td>
 							<td><em><%= rt["desc"] %></em></td>
 							<td><em><%= rt["type"] %></em></td>
@@ -187,9 +192,8 @@
 			</div>
 			<a href="#services" title="Back to services" class="pull-right icon-chevron-up"></a>
 			</div>
-			<% end %>
-			
 			<hr/>
+			<% end %>
 			
 			<div class="row">
 				<div class="span12"><h3>Infrastructures</h3></div>			
@@ -223,8 +227,7 @@
 								iso.detect{ |c| c["alpha-2"] == rt["country"]}["name"]
 								end
 							%>
-							<% unless rt["region"].empty? %>
-							, <em><%= rt["region"] %></em>
+							<% unless rt["region"].empty? %>, <em><%= rt["region"] %></em>
 							<% end %>
 						</span>
 						<% unless rt["provider"].nil? %>
