@@ -8,7 +8,7 @@ For convenience, the profiles can be viewed via executing the [sinatra app](sina
 
 **The current web interface can be viewed [online](http://paas-profiles.aws.af.cm/vendors).**
 
-** Any errors? Important missing properties? Suggestions? [Contribute](#contribute)
+**Any errors? Important missing properties? Suggestions? [Contribute](#contribution)**
 ## Profile
 
 The code below shows a sample profile. The profile specification is beta and the properties are subject to change.
