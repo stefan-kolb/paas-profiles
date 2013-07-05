@@ -1,6 +1,6 @@
 {
   "name": "Clever Cloud",
-  "revision": "2013-07-05T14:27:46+02:00",
+  "revision": "2013-07-05T14:43:09+02:00",
   "vendor_verified": false,
   "url": "http://www.clever-cloud.com/",
   "status": "production",
@@ -22,25 +22,30 @@
     {
       "language": "java",
       "versions": [
-
+        "1.6",
+        "1.7"
       ]
     },
     {
       "language": "python",
       "versions": [
-
+        "2.7.3"
       ]
     },
     {
       "language": "php",
       "versions": [
-
+        "5.3.23"
       ]
     },
     {
       "language": "node",
       "versions": [
-
+        "0.10.3",
+        "0.9.3",
+        "0.8.16",
+        "0.7.12",
+        "0.6.21"
       ]
     },
     {
@@ -50,9 +55,77 @@
       ]
     }
   ],
-  "middleware": null,
+  "middleware": [
+    {
+      "name": "tomcat",
+      "versions": [
+        "4.1",
+        "5.5",
+        "6.0",
+        "7.0"
+      ]
+    },
+    {
+      "name": "jetty",
+      "versions": [
+        "6.1",
+        "7.6",
+        "8.1",
+        "9.0"
+      ]
+    },
+    {
+      "name": "jboss",
+      "versions": [
+        "6.1",
+        "7.1"
+      ]
+    },
+    {
+      "name": "glassfish",
+      "versions": [
+        "3.1"
+      ]
+    },
+    {
+      "name": "resin",
+      "versions": [
+        "3.1"
+      ]
+    }
+  ],
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "id": "mysql",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "postgresql",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "filesystem buckets",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "couchbase",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {

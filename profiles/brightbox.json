@@ -1,6 +1,6 @@
 {
   "name": "brightbox",
-  "revision": "2013-07-05T14:27:46+02:00",
+  "revision": "2013-07-05T14:43:09+02:00",
   "vendor_verified": false,
   "url": "http://www.brightbox.co.uk/",
   "status": "production",
@@ -22,7 +22,8 @@
     {
       "language": "ruby",
       "versions": [
-
+        "1.8.7",
+        "1.9.3"
       ]
     }
   ],
