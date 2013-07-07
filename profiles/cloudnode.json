@@ -1,10 +1,10 @@
 {
   "name": "CloudNode",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-07T17:47:54+02:00",
   "vendor_verified": false,
   "url": "http://cloudno.de/",
   "status": "beta",
-  "status_since": "2011-01-20",
+  "status_since": "2011-09-04",
   "type": "language-specific",
   "hosting": [
     "public"
@@ -22,12 +22,18 @@
     {
       "language": "node",
       "versions": [
-
+		"0.4.12", "0.6.12"
       ]
     }
   ],
   "frameworks": null,
-  "services": null,
+  "services": {
+	"native": [
+	{"id": "redis", "versions": []},
+	{"id": "couchdb", "versions": []}
+	],
+	"addon": []
+  },
   "extendable": false,
   "infrastructures": [
     {
