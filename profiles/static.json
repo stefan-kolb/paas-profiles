@@ -23,60 +23,134 @@
     {
       "language": "java",
       "versions": [
-		"1.6", "1.7"
+        "1.6",
+        "1.7"
       ]
     },
     {
       "language": "python",
       "versions": [
-		"2.6.5"
+        "2.6.5"
       ]
     },
     {
       "language": "php",
       "versions": [
-		"5.3"
+        "5.3"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-		"1.8.7", "1.9.2", "1.9.3", "2.0.0"
+        "1.8.7",
+        "1.9.2",
+        "1.9.3",
+        "2.0.0"
       ]
     },
     {
       "language": "erlang",
       "versions": [
-		"R14B01"
+        "R14B01"
       ]
     },
     {
       "language": "node",
       "versions": [
-		"0.4.12", "0.6.8", "0.8.2", "0.10.9"
+        "0.4.12",
+        "0.6.8",
+        "0.8.2",
+        "0.10.9"
       ]
     }
   ],
   "middleware": [
-  { "id": "tomcat", "versions": [ "6.0" ] }
+    {
+      "id": "tomcat",
+      "versions": [
+        "6.0"
+      ]
+    }
   ],
   "frameworks": null,
   "services": {
-	"native": [
-		{ "id": "cassandra", "versions": ["1.1.7"] },
-		{ "id": "couchdb", "versions": ["1.2"] },
-		{ "id": "elasticsearch", "versions": ["0.19"] },
-		{ "id": "filesystem", "versions": ["1.0"] },
-		{ "id": "hadoop", "versions": ["1.1.2"] },
-		{ "id": "memcached", "versions": ["1.4"] },
-		{ "id": "mongodb", "versions": ["2.0"] },
-		{ "id": "mysql", "versions": ["5.1"] },
-		{ "id": "neo4j", "versions": ["1.4"] },
-		{ "id": "postgresql", "versions": ["9.0"] },
-		{ "id": "rabbitmq", "versions": ["2.4"] },
-		{ "id": "redis", "versions": ["2.6"] }
-	],
-	"addon": []
+    "native": [
+      {
+        "id": "cassandra",
+        "versions": [
+          "1.1.7"
+        ]
+      },
+      {
+        "id": "couchdb",
+        "versions": [
+          "1.2"
+        ]
+      },
+      {
+        "id": "elasticsearch",
+        "versions": [
+          "0.19"
+        ]
+      },
+      {
+        "id": "filesystem",
+        "versions": [
+          "1.0"
+        ]
+      },
+      {
+        "id": "hadoop",
+        "versions": [
+          "1.1.2"
+        ]
+      },
+      {
+        "id": "memcached",
+        "versions": [
+          "1.4"
+        ]
+      },
+      {
+        "id": "mongodb",
+        "versions": [
+          "2.0"
+        ]
+      },
+      {
+        "id": "mysql",
+        "versions": [
+          "5.1"
+        ]
+      },
+      {
+        "id": "neo4j",
+        "versions": [
+          "1.4"
+        ]
+      },
+      {
+        "id": "postgresql",
+        "versions": [
+          "9.0"
+        ]
+      },
+      {
+        "id": "rabbitmq",
+        "versions": [
+          "2.4"
+        ]
+      },
+      {
+        "id": "redis",
+        "versions": [
+          "2.6"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
   },
   "extendable": false,
   "infrastructures": [

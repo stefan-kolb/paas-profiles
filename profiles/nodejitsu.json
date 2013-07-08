@@ -22,19 +22,34 @@
     {
       "language": "node",
       "versions": [
-		"0.6", "0.8"
+        "0.6",
+        "0.8"
       ]
     }
   ],
   "frameworks": null,
   "services": {
-  "native": [],
-  "addon": [
-	{"id": "iriscouch", "url": "http://www.iriscouch.com/"},
-	{"id": "mongolab", "url": "https://mongolab.com/"},
-	{"id": "mongohq", "url": "https://www.mongohq.com/"},
-	{"id": "redis to go", "url": "http://redistogo.com/"}
-	]
+    "native": [
+
+    ],
+    "addon": [
+      {
+        "id": "iriscouch",
+        "url": "http://www.iriscouch.com/"
+      },
+      {
+        "id": "mongolab",
+        "url": "https://mongolab.com/"
+      },
+      {
+        "id": "mongohq",
+        "url": "https://www.mongohq.com/"
+      },
+      {
+        "id": "redis to go",
+        "url": "http://redistogo.com/"
+      }
+    ]
   },
   "extendable": false,
   "infrastructures": [
@@ -47,17 +62,17 @@
       "continent": "NA",
       "country": "US",
       "region": "Virginia"
-    },	
+    },
     {
       "continent": "EU",
       "country": "GB",
       "region": "London",
-	  "provider": "Telefonica"
+      "provider": "Telefonica"
     },
     {
       "continent": "EU",
       "country": "NL",
       "region": "Amsterdam"
-    }	
+    }
   ]
 }

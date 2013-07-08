@@ -22,19 +22,42 @@
     {
       "language": "php",
       "versions": [
-		"5.2.17", "5.3.5", "5.3.6", "5.3.8", "5.3.10", "5.3.23", "5.4.14"
+        "5.2.17",
+        "5.3.5",
+        "5.3.6",
+        "5.3.8",
+        "5.3.10",
+        "5.3.23",
+        "5.4.14"
       ]
     }
   ],
   "middleware": null,
   "frameworks": null,
   "services": {
-  "native": [
-  { "id": "redis", "versions": [] },
-  { "id": "memcached", "versions": [] },
-  { "id": "mysql", "versions": [] }
-  ],
-  "addon": []
+    "native": [
+      {
+        "id": "redis",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "memcached",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "mysql",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
   },
   "extendable": false,
   "infrastructures": [

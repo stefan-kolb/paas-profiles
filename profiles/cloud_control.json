@@ -47,39 +47,181 @@
   "middleware": null,
   "frameworks": null,
   "services": {
-  "native": [
-		{ "id": "mysql", "desc": "", "type": "datastore", "versions": [] }
-	],
-	"addon": [
-		{ "id": "46elks", "url": "http://www.46elks.com/", "desc": "", "type": "messaging" },
-		{ "id": "blitz", "url": "https://www.blitz.io/", "desc": "", "type": "analytics" },
-		{ "id": "cloudamqp", "url": "http://www.cloudamqp.com/", "desc": "", "type": "worker" },
-		{ "id": "cloudant", "url": "https://cloudant.com/", "desc": "", "type": "datastore" },
-		{ "id": "cloudinary", "url": "http://cloudinary.com/", "desc": "", "type": "media" },
-		{ "id": "cloudmailin", "url": "http://www.cloudmailin.com/", "desc": "", "type": "messaging" },
-		{ "id": "codeship", "url": "https://www.codeship.io/", "desc": "", "type": "devops" },
-		{ "id": "dbinsights", "url": "https://dbinsights.herokuapp.com/", "desc": "", "type": "analytics" },
-		{ "id": "elephantsql", "url": "http://www.elephantsql.com/", "desc": "", "type": "datastore" },
-		{ "id": "found elasticsearch", "url": "http://www.found.no/", "desc": "", "type": "search" },
-		{ "id": "hosted graphite", "url": "https://www.hostedgraphite.com/", "desc": "", "type": "analytics" },
-		{ "id": "indexdepot", "url": "https://www.indexdepot.com/", "desc": "", "type": "search" },
-		{ "id": "ironmq", "url": "http://www.iron.io/mq", "desc": "", "type": "worker" },
-		{ "id": "ironworker", "url": "http://www.iron.io/worker", "desc": "", "type": "worker" },
-		{ "id": "loader.io", "url": "http://loader.io/", "desc": "", "type": "analytics" },
-		{ "id": "logentries", "url": "https://logentries.com/", "desc": "", "type": "analytics" },
-		{ "id": "mailgun", "url": "http://www.mailgun.com/", "desc": "", "type": "messaging" },
-		{ "id": "memcachier", "url": "https://www.memcachier.com/", "desc": "", "type": "datastore" },
-		{ "id": "mongolab", "url": "https://mongolab.com/", "desc": "", "type": "datastore" },
-		{ "id": "mongosoup", "url": "http://www.mongosoup.de/", "desc": "", "type": "datastore" },
-		{ "id": "new relic", "url": "http://newrelic.com/", "desc": "", "type": "analytics" },
-		{ "id": "openredis", "url": "https://openredis.com/", "desc": "", "type": "datastore" },
-		{ "id": "phraseapp", "url": "https://phraseapp.com/", "desc": "", "type": "other" },
-		{ "id": "searchify", "url": "https://www.searchify.com/", "desc": "", "type": "search" },
-		{ "id": "sendgrid", "url": "http://sendgrid.com/", "desc": "", "type": "messaging" },
-		{ "id": "stillalive", "url": "https://stillalive.com/", "desc": "", "type": "analytics" },
-		{ "id": "treasure data", "url": "http://www.treasure-data.com/", "desc": "", "type": "analytics" }
-	]
-	},
+    "native": [
+      {
+        "id": "mysql",
+        "desc": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+      {
+        "id": "46elks",
+        "url": "http://www.46elks.com/",
+        "desc": "",
+        "type": "messaging"
+      },
+      {
+        "id": "blitz",
+        "url": "https://www.blitz.io/",
+        "desc": "",
+        "type": "analytics"
+      },
+      {
+        "id": "cloudamqp",
+        "url": "http://www.cloudamqp.com/",
+        "desc": "",
+        "type": "worker"
+      },
+      {
+        "id": "cloudant",
+        "url": "https://cloudant.com/",
+        "desc": "",
+        "type": "datastore"
+      },
+      {
+        "id": "cloudinary",
+        "url": "http://cloudinary.com/",
+        "desc": "",
+        "type": "media"
+      },
+      {
+        "id": "cloudmailin",
+        "url": "http://www.cloudmailin.com/",
+        "desc": "",
+        "type": "messaging"
+      },
+      {
+        "id": "codeship",
+        "url": "https://www.codeship.io/",
+        "desc": "",
+        "type": "devops"
+      },
+      {
+        "id": "dbinsights",
+        "url": "https://dbinsights.herokuapp.com/",
+        "desc": "",
+        "type": "analytics"
+      },
+      {
+        "id": "elephantsql",
+        "url": "http://www.elephantsql.com/",
+        "desc": "",
+        "type": "datastore"
+      },
+      {
+        "id": "found elasticsearch",
+        "url": "http://www.found.no/",
+        "desc": "",
+        "type": "search"
+      },
+      {
+        "id": "hosted graphite",
+        "url": "https://www.hostedgraphite.com/",
+        "desc": "",
+        "type": "analytics"
+      },
+      {
+        "id": "indexdepot",
+        "url": "https://www.indexdepot.com/",
+        "desc": "",
+        "type": "search"
+      },
+      {
+        "id": "ironmq",
+        "url": "http://www.iron.io/mq",
+        "desc": "",
+        "type": "worker"
+      },
+      {
+        "id": "ironworker",
+        "url": "http://www.iron.io/worker",
+        "desc": "",
+        "type": "worker"
+      },
+      {
+        "id": "loader.io",
+        "url": "http://loader.io/",
+        "desc": "",
+        "type": "analytics"
+      },
+      {
+        "id": "logentries",
+        "url": "https://logentries.com/",
+        "desc": "",
+        "type": "analytics"
+      },
+      {
+        "id": "mailgun",
+        "url": "http://www.mailgun.com/",
+        "desc": "",
+        "type": "messaging"
+      },
+      {
+        "id": "memcachier",
+        "url": "https://www.memcachier.com/",
+        "desc": "",
+        "type": "datastore"
+      },
+      {
+        "id": "mongolab",
+        "url": "https://mongolab.com/",
+        "desc": "",
+        "type": "datastore"
+      },
+      {
+        "id": "mongosoup",
+        "url": "http://www.mongosoup.de/",
+        "desc": "",
+        "type": "datastore"
+      },
+      {
+        "id": "new relic",
+        "url": "http://newrelic.com/",
+        "desc": "",
+        "type": "analytics"
+      },
+      {
+        "id": "openredis",
+        "url": "https://openredis.com/",
+        "desc": "",
+        "type": "datastore"
+      },
+      {
+        "id": "phraseapp",
+        "url": "https://phraseapp.com/",
+        "desc": "",
+        "type": "other"
+      },
+      {
+        "id": "searchify",
+        "url": "https://www.searchify.com/",
+        "desc": "",
+        "type": "search"
+      },
+      {
+        "id": "sendgrid",
+        "url": "http://sendgrid.com/",
+        "desc": "",
+        "type": "messaging"
+      },
+      {
+        "id": "stillalive",
+        "url": "https://stillalive.com/",
+        "desc": "",
+        "type": "analytics"
+      },
+      {
+        "id": "treasure data",
+        "url": "http://www.treasure-data.com/",
+        "desc": "",
+        "type": "analytics"
+      }
+    ]
+  },
   "extendable": true,
   "infrastructures": [
     {

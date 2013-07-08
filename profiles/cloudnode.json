@@ -22,17 +22,30 @@
     {
       "language": "node",
       "versions": [
-		"0.4.12", "0.6.12"
+        "0.4.12",
+        "0.6.12"
       ]
     }
   ],
   "frameworks": null,
   "services": {
-	"native": [
-	{"id": "redis", "versions": []},
-	{"id": "couchdb", "versions": []}
-	],
-	"addon": []
+    "native": [
+      {
+        "id": "redis",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "couchdb",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
   },
   "extendable": false,
   "infrastructures": [
