@@ -10,7 +10,6 @@ For convenience, the profiles can be viewed via executing the [sinatra app](sina
 
 **Any errors? Important missing properties? Suggestions? [Contribute](#contribution)**
 
-**Are you a vendor and 
 ## Profile
 
 The code below shows a sample profile. The profile specification is beta and the properties are subject to change.
@@ -110,14 +109,12 @@ An array of all available billing options. If the PaaS is Open Source or no pric
 The pricing model of the PaaS. Currently allowed values:
 ```
 fixed, metered, threshold
-
 ```
 #### Period
 
 The billing period. Currently allowed values:
 ```
 monthly, annually
-
 ```
 
 ### Scaling
@@ -271,7 +268,9 @@ This optional field may specify the name of the external IaaS provider used by t
 
 ## Contribution
 
-I encourage everyone to submit corrections or additions in order to keep the profiles accurate and up-to-date.
+I encourage **everyone** to submit corrections or additions in order to keep the profiles accurate and up-to-date.
 In any case, please add evidence for the information so I can verify your changes.
+
+I am also interested in direct **cooperation with vendors** in order to keep the profiles at first hand and spot-on. Contact me if you are interested to supply a [vendor verified profile](#vendor-verification).
 
 Contribute either via [pull request](https://help.github.com/articles/using-pull-requests), create an [issue](https://github.com/stefan-kolb/paas-profiles/issues) or send me an [email](mailto:stefan.kolb@uni-bamberg.de).
