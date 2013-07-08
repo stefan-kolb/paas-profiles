@@ -46,7 +46,40 @@
   ],
   "middleware": null,
   "frameworks": null,
-  "services": null,
+  "services": {
+  "native": [
+		{ "id": "mysql", "desc": "", "type": "", "versions": [] }
+	],
+	"addon": [
+		{ "id": "46elks", "desc": "", "type": "" },
+		{ "id": "blitz", "desc": "", "type": "" },
+		{ "id": "cloudamqp", "desc": "", "type": "" },
+		{ "id": "cloudant", "desc": "", "type": "" },
+		{ "id": "cloudinary", "desc": "", "type": "" },
+		{ "id": "cloudmailin", "desc": "", "type": "" },
+		{ "id": "codeship", "desc": "", "type": "" },
+		{ "id": "dbinsights", "desc": "", "type": "" },
+		{ "id": "elephantsql", "desc": "", "type": "" },
+		{ "id": "found elasticsearch", "desc": "", "type": "" },
+		{ "id": "hosted graphite", "desc": "", "type": "" },
+		{ "id": "indexdepot", "desc": "", "type": "" },
+		{ "id": "ironmq", "desc": "", "type": "" },
+		{ "id": "ironworker", "desc": "", "type": "" },
+		{ "id": "loader.io", "desc": "", "type": "" },
+		{ "id": "logentries", "desc": "", "type": "" },
+		{ "id": "mailgun", "desc": "", "type": "" },
+		{ "id": "memcachier", "desc": "", "type": "" },
+		{ "id": "mongolab", "desc": "", "type": "" },
+		{ "id": "mongosoup", "desc": "", "type": "" },
+		{ "id": "new relic", "desc": "", "type": "" },
+		{ "id": "openredis", "desc": "", "type": "" },
+		{ "id": "phraseapp", "desc": "", "type": "" },
+		{ "id": "searchify", "desc": "", "type": "" },
+		{ "id": "sendgrid", "desc": "", "type": "" },
+		{ "id": "stillalive", "desc": "", "type": "" },
+		{ "id": "treasure data", "desc": "", "type": "" }
+	]
+	},
   "extendable": true,
   "infrastructures": [
     {
