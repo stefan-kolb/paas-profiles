@@ -48,7 +48,7 @@ The code below shows a sample profile. The profile specification is beta and the
   ],
   "services": {
     "native": [
-      { "name": "mongodb", "description": "", type="datastore", "versions": [ "1.8" ] }
+      { "name": "mongodb", "description": "", "type": "datastore", "versions": [ "1.8" ] }
     ],
     "addon": [
       { "name": "mongolab", "url": "https://mongolab.com/", "description": "", "type": "datastore" }
