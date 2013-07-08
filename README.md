@@ -143,6 +143,8 @@ A string array containing the supported runtime versions.
 
 ### Middleware
 
+*tbd*
+
 An array of preconfigured middleware stacks.
 
 ```json
@@ -163,6 +165,23 @@ A string array containing the supported middleware versions.
 ### Frameworks
 
 *tbd*
+
+An array of preinstalled frameworks.
+
+```json
+"frameworks": [
+    { "name": "rails", "versions": [ "4.0.0" ] },
+    { "name": "django", "versions": [ "1.5.1" ] }
+]
+```
+
+#### Name
+
+Should be the official name in lowercase. Currently not restricted.
+
+#### Versions
+
+A string array containing the supported framework versions.
 
 ### Services
 
