@@ -177,21 +177,18 @@ A string array containing the supported middleware versions.
 }
 ```
 
-#### Type
-
-A category the service does fit in. Currently allowed keys are:
-
-```
-datastore, search, logging, workers, analytics, payment, media, other
-```
-
 #### Native
 
 #### Addon
 
-##### Type
+#### Type
 
-*tbd*
+A category the service does fit in. Currently allowed keys are:
+*tbd* Maybe make it an array of types. 
+
+```
+datastore, search, worker, analytics, payment, media, messaging, other, devops
+```
 
 ### Infrastructures
 
