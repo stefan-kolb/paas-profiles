@@ -28,8 +28,9 @@
 						<% end %>
 					</h1>
 				</div>
-				<div class="span4 text-right">
-				<small><em>Last updated <span class="date" title="<%= profile["revision"] %>"></span> ago.</em></small>
+				<div class="span4" style="height:60px; float: none; display: table-cell; vertical-align: bottom;">
+					<span class="icon-tag" title="PaaS type"></span><small><strong>&nbsp;<%= profile["type"] %></strong></small>
+					<p class="pull-right"><small><em>Last updated <span class="date" title="<%= profile["revision"] %>"></span> ago.</em></small></p>
 				</div>
 			</div>
 			<hr />
@@ -43,6 +44,20 @@
 					<span class="label label-success">Production</span>
 					<% end %>
 					since <span class="date" title="<%= profile["status_since"] %>"></span>.</p>
+					<p>
+					<%= profile["name"] %> is available as 
+					<% if profile["hosting"].include? "public" %>
+					public <span class="icon-eye-open" title="public"></span>
+					<% end %>
+					<% if profile["hosting"].include?("private") && profile["hosting"].include?("public") %>
+					and as 
+					<%	end				
+						if profile["hosting"].include? "private"
+					%>
+					private <span class="icon-lock" title="private"></span>
+					<% end %>
+					Platform-as-a-Service.
+					</p>					
 					<p>You can deploy apps written in <span class="label label-inverse"><%= profile["runtimes"].uniq { |h| h["language"] }.size %></span> languages to <span class="label label-inverse"><%= profile["infrastructures"].size %></span> different infrastructures.</p>
 					<% unless profile["services"].nil? %>
 					<p>You can automatically bind <span class="label label-inverse"><%= profile["services"]["native"].size %></span> services and <span class="label label-inverse"><%= profile["services"]["addon"].size %></span> integrated addons to your applications.</p>
@@ -58,18 +73,10 @@
 					or let <%= profile["name"] %> automatically <span class="icon-refresh" title="auto"></span> scale your instances
 					<% end %>.</p>
 					<p>
-					<%= profile["name"] %> is available as 
-					<% if profile["hosting"].include? "public" %>
-					public <span class="icon-eye-open" title="public"></span>
+					<% unless profile["compliance"].nil? || profile["compliance"].empty? %>
+					<%= profile["name"] + " is <em>" + profile["compliance"].join(", ").upcase + " </em> certified" %>
+					<span class="icon-certificate" title="compliance"></span>.
 					<% end %>
-					<% if profile["hosting"].include?("private") && profile["hosting"].include?("public") %>
-					and as 
-					<%	end				
-						if profile["hosting"].include? "private"
-					%>
-					private <span class="icon-lock" title="private"></span>
-					<% end %>
-					Platform-as-a-Service.
 					</p>
 				</div>
 			</div>
