@@ -9,7 +9,9 @@
   "hosting": [
 
   ],
-  "pricing": null,
+  "pricing": [
+
+  ],
   "scaling": {
     "vertical": false,
     "horizontal": false,

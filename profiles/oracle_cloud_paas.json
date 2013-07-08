@@ -10,7 +10,12 @@
     "public",
     "private"
   ],
-  "pricing": "Monthly ",
+  "pricing": [
+    {
+      "model": "monthly ",
+      "period": ""
+    }
+  ],
   "scaling": {
     "vertical": false,
     "horizontal": false,

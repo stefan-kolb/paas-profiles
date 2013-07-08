@@ -10,7 +10,12 @@
     "public",
     "private"
   ],
-  "pricing": "Metered",
+  "pricing": [
+    {
+      "model": "metered",
+      "period": ""
+    }
+  ],
   "scaling": {
     "vertical": false,
     "horizontal": true,

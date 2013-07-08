@@ -9,7 +9,12 @@
   "hosting": [
     "private"
   ],
-  "pricing": "Annually",
+  "pricing": [
+    {
+      "model": "annually",
+      "period": ""
+    }
+  ],
   "scaling": {
     "vertical": false,
     "horizontal": true,

@@ -9,7 +9,12 @@
   "hosting": [
     "public"
   ],
-  "pricing": "Monthly + Metered AWS costs",
+  "pricing": [
+    {
+      "model": "monthly + metered aws costs",
+      "period": ""
+    }
+  ],
   "scaling": {
     "vertical": true,
     "horizontal": false,

@@ -9,6 +9,8 @@ For convenience, the profiles can be viewed via executing the [sinatra app](sina
 **The current web interface can be viewed [online](http://paas-profiles.aws.af.cm/vendors).**
 
 **Any errors? Important missing properties? Suggestions? [Contribute](#contribution)**
+
+**Are you a vendor and 
 ## Profile
 
 The code below shows a sample profile. The profile specification is beta and the properties are subject to change.
@@ -16,16 +18,18 @@ The code below shows a sample profile. The profile specification is beta and the
 ```javascript
 {
   "name": "SomePaas",
-  "revision": "2013-07-02", // last profile update
-  "vendor_verified": false, // profile verified by vendor
+  "revision": "2013-07-02",
+  "vendor_verified": false,
   "url": "http://someurl.com",
-  "status": "production", // [beta, production, eol]
+  "status": "production",
   "status_since": "2012-07-15",
-  "type": "polyglot", // [language-specific, polyglot, apaas]
+  "type": "polyglot",
   "hosting": [
-    "public" // [public, private]
+    "public"
   ],
-  "pricing": "Monthly", // tbd
+  "pricing": [
+		{ "model": "fixed", "period": "monthly" }
+	],
   "scaling": {
     "vertical": true, "horizontal": true, "auto": false
   },
@@ -36,19 +40,21 @@ The code below shows a sample profile. The profile specification is beta and the
     { "language": "java", "versions": [ "1.7", "1.6" ] }
   ],
   "middleware" [
-    { "name": "tomcat", "versions": [ "6.0.35" ] }
+    { "name": "tomcat", "runtime": "java", "versions": [ "6.0.35" ] }
   ],
   "frameworks": [
+	{ "name": "rails", "runtime": "ruby", "versions": [ "4.0.0" ] },
+	{ "name": "django", "runtime": "python", "versions": [ "1.5.1" ] }
   ],
   "services": {
     "native": [
-      { "name": "mongodb", type="", "versions": [ "1.8" ] } // tbd
+      { "name": "mongodb", "description": "", type="datastore", "versions": [ "1.8" ] }
     ],
     "addon": [
-      { "name": "mongolab", url="https://mongolab.com/", desc="", type="" } // tbd
+      { "name": "mongolab", "url": "https://mongolab.com/", "description": "", "type": "datastore" }
     ]
   },
-  "extendable": false, // buildpack-like support
+  "extendable": false,
   "infrastructures": [
     { 
       "continent": "NA",
@@ -97,7 +103,22 @@ language-specific, polyglot, apaas
 
 ### Pricing
 
-The pricing model of the PaaS. Values tbd
+An array of all available billing options. If the PaaS is Open Source or no pricing is announced yet, the array should be empty.
+
+#### Model
+
+The pricing model of the PaaS. Currently allowed values:
+```
+fixed, metered, threshold
+
+```
+#### Period
+
+The billing period. Currently allowed values:
+```
+monthly, annually
+
+```
 
 ### Scaling
 
@@ -234,7 +255,7 @@ AF = Africa, AS = Asia, EU = Europe, NA = North America, OC = Oceania, SA = Sout
 
 #### Country
 
-The country codes must conform to the country codes defined in [ISO 3166-2](http://en.wikipedia.org/wiki/ISO_3166-2).
+The country codes must conform to the codes defined in [ISO 3166-2](http://en.wikipedia.org/wiki/ISO_3166-2).
 
 #### Region
 

@@ -9,7 +9,12 @@
   "hosting": [
     "private"
   ],
-  "pricing": "Free",
+  "pricing": [
+    {
+      "model": "free",
+      "period": ""
+    }
+  ],
   "scaling": {
     "vertical": false,
     "horizontal": true,

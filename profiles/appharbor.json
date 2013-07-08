@@ -9,7 +9,12 @@
   "hosting": [
     "public"
   ],
-  "pricing": "Monthly",
+  "pricing": [
+    {
+      "model": "monthly",
+      "period": ""
+    }
+  ],
   "scaling": {
     "vertical": true,
     "horizontal": true,

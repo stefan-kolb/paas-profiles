@@ -9,7 +9,12 @@
   "hosting": [
     "public"
   ],
-  "pricing": "Monthly + IaaS Fees",
+  "pricing": [
+    {
+      "model": "monthly + iaas fees",
+      "period": ""
+    }
+  ],
   "scaling": {
     "vertical": false,
     "horizontal": false,

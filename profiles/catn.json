@@ -9,7 +9,12 @@
   "hosting": [
     "public"
   ],
-  "pricing": "Monthly Threshold",
+  "pricing": [
+    {
+      "model": "monthly threshold",
+      "period": ""
+    }
+  ],
   "scaling": {
     "vertical": false,
     "horizontal": false,

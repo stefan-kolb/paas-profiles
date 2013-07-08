@@ -10,7 +10,9 @@
     "public",
     "private"
   ],
-  "pricing": null,
+  "pricing": [
+
+  ],
   "scaling": {
     "vertical": true,
     "horizontal": true,
