@@ -169,12 +169,20 @@ A string array containing the supported middleware versions.
 ```json
 "services": {
   "native": [
-    { "name": "mongodb", type="", "versions": [ "1.8" ] } // tbd
+    { "name": "mongodb", type="", "description": "", "versions": [ "1.8" ] } // tbd
   ],
   "addon": [
-    { "name": "mongolab", url="https://mongolab.com/", desc="", type="" } // tbd
+    { "name": "mongolab", url="https://mongolab.com/", description="", type="" } // tbd
   ]
 }
+```
+
+#### Type
+
+A category the service does fit in. Currently allowed keys are:
+
+```
+datastore, search, logging, workers, analytics, payment, media, other
 ```
 
 #### Native
