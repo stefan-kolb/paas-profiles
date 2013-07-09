@@ -13,7 +13,7 @@
     {
       "model": "fixed",
       "period": "daily"
-    },  
+    },
     {
       "model": "fixed",
       "period": "monthly"
@@ -38,11 +38,25 @@
   "frameworks": null,
   "services": {
     "native": [
-      { "id": "memcache", "description": "", "type": "datastore", "versions": [ ] },
-	  { "id": "mysql", "description": "", "type": "datastore", "versions": [ ] }
+      {
+        "id": "memcache",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
     ],
     "addon": [
-	
+
     ]
   },
   "extendable": false,
