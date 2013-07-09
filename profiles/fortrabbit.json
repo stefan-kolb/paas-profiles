@@ -1,6 +1,6 @@
 {
   "name": "fortrabbit",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-09T23:58:54+02:00",
   "vendor_verified": false,
   "url": "http://fortrabbit.com/",
   "status": "production",
@@ -11,8 +11,12 @@
   ],
   "pricing": [
     {
-      "model": "monthly",
-      "period": ""
+      "model": "fixed",
+      "period": "daily"
+    },  
+    {
+      "model": "fixed",
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -32,7 +36,15 @@
     }
   ],
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      { "name": "memcache", "description": "", "type": "datastore", "versions": [ ] },
+	  { "name": "mysql", "description": "", "type": "datastore", "versions": [ ] }
+    ],
+    "addon": [
+	
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {

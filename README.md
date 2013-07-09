@@ -115,7 +115,7 @@ fixed, metered, threshold
 
 The billing period. Currently allowed values:
 ```
-monthly, annually
+daily, monthly, annually
 ```
 
 ### Scaling

@@ -175,7 +175,7 @@
 						<tr>
 							<td>
 							<% unless rt["url"].nil? || rt["url"].empty? %>
-								<a href="<%= rt["url"] %>">
+								<a href="<%= rt["url"] %>" target="_blank">
 							<% end %>
 							<%= rt["id"].split(" ").map(&:capitalize).join(" ") %>
 							</a>
