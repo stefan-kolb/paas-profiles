@@ -39,7 +39,7 @@ The code below shows a sample profile. The profile specification is beta and the
   "runtimes": [
     { "language": "java", "versions": [ "1.7", "1.6" ] }
   ],
-  "middleware" [
+  "middleware": [
     { "name": "tomcat", "runtime": "java", "versions": [ "6.0.35" ] }
   ],
   "frameworks": [

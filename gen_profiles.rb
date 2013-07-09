@@ -178,8 +178,7 @@ id = 1
 		end
 		# rename
 		runtimes = Helper::rename_lng runtimes, profile
-		# other
-=begin		
+		# other	
 		unless file.cell(line,'M').nil?
 			e = file.cell(line,'M').split ','
 			
@@ -192,7 +191,6 @@ id = 1
 				end
 			end
 		end
-=end
 		
 		# extendable
 		if file.cell(line, 'N').nil?

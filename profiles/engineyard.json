@@ -12,7 +12,7 @@
   "pricing": [
     {
       "model": "metered",
-      "period": ""
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -48,11 +48,13 @@
       ]
     }
   ],
+  "middleware": null,
   "frameworks": null,
   "services": {
     "native": [
       {
         "id": "postgres",
+        "type": "datastore",
         "versions": [
           "9.1",
           "9.2"
@@ -60,6 +62,7 @@
       },
       {
         "id": "mysql",
+        "type": "datastore",
         "versions": [
           "5.0",
           "5.5"
@@ -68,53 +71,69 @@
     ],
     "addon": [
       {
-        "id": "cloudinary"
+        "id": "blitz",
+        "type": "analytics"
       },
       {
-        "id": "mailgun"
+        "id": "cloudinary",
+        "type": "media"
       },
       {
-        "id": "sendgrid"
+        "id": "mailgun",
+        "type": "messaging"
       },
       {
-        "id": "new relic"
+        "id": "sendgrid",
+        "type": "messaging"
       },
       {
-        "id": "solano labs"
+        "id": "new relic",
+        "type": "analytics"
       },
       {
-        "id": "blitz"
+        "id": "solano labs",
+        "type": "devops"
       },
       {
-        "id": "logentries"
+        "id": "logentries",
+        "type": "analytics"
       },
       {
-        "id": "appfirst"
+        "id": "appfirst",
+        "type": "analytics"
       },
       {
         "id": "mongolab",
-        "url": "https://mongolab.com/"
+        "url": "https://mongolab.com/",
+        "type": "datastore"
       },
       {
-        "id": "mongohq"
+        "id": "mongohq",
+        "type": "datastore"
       },
       {
-        "id": "librato metrics"
+        "id": "librato metrics",
+        "type": "analytics"
       },
       {
-        "id": "ironworker"
+        "id": "ironworker",
+        "type": "worker"
       },
       {
-        "id": "treasure data hadoop"
+        "id": "treasure data hadoop",
+        "type": "analytics"
       },
       {
-        "id": "justonedb"
+        "id": "justonedb",
+        "type": "datastore"
       },
       {
-        "id": "ironmq"
+        "id": "ironmq",
+        "type": "worker"
       },
       {
-        "id": "statsmix"
+        "id": "statsmix",
+        "type": "analytics"
       }
     ]
   },

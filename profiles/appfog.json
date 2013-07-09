@@ -1,6 +1,6 @@
 {
   "name": "AppFog",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-09T17:15:00+02:00",
   "vendor_verified": false,
   "url": "http://appfog.com",
   "status": "production",
@@ -12,8 +12,8 @@
   ],
   "pricing": [
     {
-      "model": "monthly",
-      "period": ""
+      "model": "fixed",
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -60,8 +60,176 @@
       ]
     }
   ],
-  "frameworks": null,
-  "services": null,
+  "middleware": [
+    {
+      "id": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6"
+      ]
+    },
+    {
+      "id": "gunicorn",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "id": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "3.0",
+        "3.1"
+      ]
+    },
+    {
+      "id": "django",
+      "runtime": "python",
+      "versions": [
+        "1.3",
+        "1.4"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "id": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.1"
+        ]
+      },
+      {
+        "id": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "1.8"
+        ]
+      },
+      {
+        "id": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.1"
+        ]
+      },
+      {
+        "id": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.2"
+        ]
+      },
+      {
+        "id": "rabbitmq",
+        "description": "",
+        "type": "worker",
+        "versions": [
+          "2.4"
+        ]
+      }
+    ],
+    "addon": [
+      {
+        "id": "searchify",
+        "url": "http://www.searchify.com/",
+        "description": "",
+        "type": "search"
+      },
+      {
+        "id": "mongolab",
+        "url": "https://mongolab.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "id": "mongohq",
+        "url": "https://www.mongohq.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "id": "mailgun",
+        "url": "http://www.mailgun.com/",
+        "description": "",
+        "type": "messaging"
+      },
+      {
+        "id": "blitz",
+        "url": "https://www.blitz.io/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "id": "ironworker",
+        "url": "http://www.iron.io/worker",
+        "description": "",
+        "type": "worker"
+      },
+      {
+        "id": "ironmq",
+        "url": "http://www.iron.io/mq",
+        "description": "",
+        "type": "worker"
+      },
+      {
+        "id": "cloudmailin",
+        "url": "http://www.cloudmailin.com/",
+        "description": "",
+        "type": "messaging"
+      },
+      {
+        "id": "cleardb",
+        "url": "http://www.cleardb.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "id": "nexmo",
+        "url": "http://nexmo.com/",
+        "description": "",
+        "type": "messaging"
+      },
+      {
+        "id": "memcachier",
+        "url": "http://www.memcachier.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "id": "cloudinary",
+        "url": "http://cloudinary.com/",
+        "description": "",
+        "type": "media"
+      },
+      {
+        "id": "logentries",
+        "url": "https://logentries.com/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "id": "hosted graphite",
+        "url": "https://www.hostedgraphite.com/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "id": "redis cloud",
+        "url": "http://redis-cloud.com/",
+        "description": "",
+        "type": "datastore"
+      }
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {
