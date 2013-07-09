@@ -3,19 +3,8 @@
 	
 	profile = JSON.parse(File.read("profiles/#{params[:name]}.json"));
 %>
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title><%= profile["name"] %> Profile</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="PaaS Profiles">
-		<meta name="author" content="Stefan Kolb">
-		<link href="../css/bootstrap.css" rel="stylesheet">
-		<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">	
-		<link rel="icon" ../favicon.ico" type="image/png">		
-	</head>
-	<body>
+	<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">	
+
 		<div id="top" class="container">
 			<div class="row">
 				<div class="span8">
@@ -147,7 +136,11 @@
 								<%= rt["id"].split(" ").map(&:capitalize).join(" ") %>
 							</td>
 							<td><em><%= rt["desc"] %></em></td>
-							<td><em><%= rt["type"].upcase %></em></td>
+							<td>
+								<% unless rt["type"].nil? %>
+								<em><%= rt["type"].upcase %></em>
+								<% end %>
+							</td>
 							<td><em><%= rt["versions"].join(", ") %></em></td>
 						</tr>
 						<% end %>
@@ -188,7 +181,11 @@
 							</a>
 							</td>
 							<td><em><%= rt["desc"] %></em></td>
-							<td><em><%= rt["type"].upcase %></em></td>
+							<td>
+								<% unless rt["type"].nil? %>
+								<em><%= rt["type"].upcase %></em>
+								<% end %>
+							</td>
 						</tr>
 						<% end
 							end
@@ -249,20 +246,19 @@
 				</div>
 				<div class="span7 thumbnail" id="map" style="width: 640px; height: 300px"></div>
 			</div>
-			
-			<hr/>
-			
-			<a href="#top" title="Back to top" class="pull-right icon-chevron-up"></a>
 		</div>
 		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="../js/bootstrap.min.js"></script>
 		<script src="../js/jquery.prettydate.js"></script>
 		<script src="../js/jquery-jvectormap-1.2.2.min.js"></script>		
 		<script src="../js/jquery-jvectormap-world-mill-en.js"></script>
 		
 		<script>
 			$(document).ready(function() {
+				$('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
+				$('ul.breadcrumb > li').append('<span class="divider">/</span>');
+				$('ul.breadcrumb > li').after('<li class="active"><%= profile["name"] %></li>');
+				
+				
 				$(".date").prettyDate();
 				
 				$('#map').vectorMap({
@@ -298,6 +294,3 @@
 			  });
 			});
 		</script>
-
-	</body>
-</html>
