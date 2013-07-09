@@ -38,8 +38,8 @@
   "frameworks": null,
   "services": {
     "native": [
-      { "name": "memcache", "description": "", "type": "datastore", "versions": [ ] },
-	  { "name": "mysql", "description": "", "type": "datastore", "versions": [ ] }
+      { "id": "memcache", "description": "", "type": "datastore", "versions": [ ] },
+	  { "id": "mysql", "description": "", "type": "datastore", "versions": [ ] }
     ],
     "addon": [
 	
