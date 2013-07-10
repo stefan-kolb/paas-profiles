@@ -16,7 +16,7 @@
     }
   ],
   "scaling": {
-    "vertical": false,
+    "vertical": true,
     "horizontal": true,
     "auto": false
   },
