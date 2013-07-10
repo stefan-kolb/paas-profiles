@@ -1,6 +1,6 @@
 {
   "name": "Cloud Foundry",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-10T16:00:54+02:00",
   "vendor_verified": false,
   "url": "http://www.cloudfoundry.com/",
   "status": "beta",
@@ -25,7 +25,9 @@
     {
       "language": "java",
       "versions": [
-
+        "1.6",
+        "1.7",
+        "1.8"
       ]
     },
     {
@@ -37,7 +39,7 @@
     {
       "language": "node",
       "versions": [
-
+        "0.10"
       ]
     },
     {
@@ -53,15 +55,79 @@
       ]
     }
   ],
-  "middleware": null,
+  "middleware": [
+    {
+      "id": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6",
+        "7"
+      ]
+    }
+  ],
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+
+    ],
+    "addon": [
+      {
+        "id": "blazemeter",
+        "url": "http://blazemeter.com/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "id": "treasure data",
+        "url": "http://www.treasure-data.com/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "id": "sendgrid",
+        "url": "http://sendgrid.com/",
+        "description": "",
+        "type": "messaging"
+      },
+      {
+        "id": "cleardb",
+        "url": "http://www.cleardb.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "id": "cloudamqp",
+        "url": "http://www.cloudamqp.com/",
+        "description": "",
+        "type": "worker"
+      },
+      {
+        "id": "elephantsql",
+        "url": "http://www.elephantsql.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "id": "rediscloud",
+        "url": "http://redis-cloud.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "id": "mongolab",
+        "url": "https://mongolab.com/welcome/",
+        "description": "",
+        "type": "datastore"
+      }
+    ]
+  },
   "extendable": true,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "Virginia",
+      "provider": "AWS"
     }
   ]
 }

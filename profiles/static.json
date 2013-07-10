@@ -1,6 +1,6 @@
 {
   "name": "Static",
-  "revision": "2013-07-08T17:47:54+02:00",
+  "revision": "2013-07-10T16:00:54+02:00",
   "vendor_verified": false,
   "url": "http://static.com/",
   "status": "production",
@@ -12,8 +12,8 @@
   ],
   "pricing": [
     {
-      "model": "monthly",
-      "period": ""
+      "model": "fixed",
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -82,72 +82,85 @@
     "native": [
       {
         "id": "cassandra",
+        "type": "datastore",
         "versions": [
           "1.1.7"
         ]
       },
       {
         "id": "couchdb",
+        "type": "datastore",
         "versions": [
           "1.2"
         ]
       },
       {
         "id": "elasticsearch",
+        "type": "search",
         "versions": [
           "0.19"
         ]
       },
       {
         "id": "filesystem",
+        "type": "datastore",
+        "description": "Persistent file system",
         "versions": [
           "1.0"
         ]
       },
       {
         "id": "hadoop",
+        "type": "analytics",
         "versions": [
           "1.1.2"
         ]
       },
       {
         "id": "memcached",
+        "type": "datastore",
         "versions": [
           "1.4"
         ]
       },
       {
         "id": "mongodb",
+        "type": "datastore",
         "versions": [
           "2.0"
         ]
       },
       {
         "id": "mysql",
+        "type": "datastore",
         "versions": [
           "5.1"
         ]
       },
       {
         "id": "neo4j",
+        "type": "datastore",
         "versions": [
           "1.4"
         ]
       },
       {
         "id": "postgresql",
+        "type": "datastore",
         "versions": [
           "9.0"
         ]
       },
       {
         "id": "rabbitmq",
+        "type": "worker",
         "versions": [
           "2.4"
         ]
       },
       {
         "id": "redis",
+        "type": "datastore",
         "versions": [
           "2.6"
         ]

@@ -1,6 +1,6 @@
 {
   "name": "Uhuru AppCloud",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-10T16:00:54+02:00",
   "vendor_verified": false,
   "url": "http://www.uhurusoftware.com/",
   "status": "beta",
@@ -25,43 +25,118 @@
     {
       "language": "java",
       "versions": [
-
+        "1.6",
+        "1.7"
       ]
     },
     {
       "language": "dotnet",
       "versions": [
-
+        "4.0"
       ]
     },
     {
       "language": "php",
       "versions": [
-
+        "5.3"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-
+        "1.8.7",
+        "1.9.2"
       ]
     },
     {
       "language": "node",
       "versions": [
-
+        "0.4.12",
+        "0.6.8",
+        "0.8.2"
       ]
     }
   ],
-  "middleware": null,
+  "middleware": [
+    {
+      "id": "iis",
+      "runtime": "dotnet",
+      "versions": [
+        "7.5",
+        "8"
+      ]
+    }
+  ],
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "id": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.2"
+        ]
+      },
+      {
+        "id": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.0"
+        ]
+      },
+      {
+        "id": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.1"
+        ]
+      },
+      {
+        "id": "microsoft sql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "10"
+        ]
+      },
+      {
+        "id": "rabbitmq",
+        "description": "",
+        "type": "worker",
+        "versions": [
+          "2.4"
+        ]
+      },
+      {
+        "id": "uhurufs",
+        "description": "Persistent file system",
+        "type": "datastore",
+        "versions": [
+          "0.9"
+        ]
+      },
+      {
+        "id": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.0"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "Western United States"
     }
   ]
 }
