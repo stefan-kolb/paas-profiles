@@ -3,6 +3,7 @@
 	
 	profile = JSON.parse(File.read("profiles/#{params[:name]}.json"));
 %>
+	<link href="../css/glyphicons.css" rel="stylesheet" />
 	<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">	
 
 		<div id="top" class="container">
@@ -18,7 +19,7 @@
 					</h1>
 				</div>
 				<div class="span4" style="height:60px; float: none; display: table-cell; vertical-align: bottom;">
-					<span class="icon-tag" title="PaaS type"></span><small><strong>&nbsp;<%= profile["type"] %></strong></small>
+					<span class="icon-tags" title="PaaS type"></span><small><strong>&nbsp;<%= profile["type"] %></strong></small>
 					<p class="pull-right"><small><em>Last updated <span class="date" title="<%= profile["revision"] %>"></span> ago.</em></small></p>
 				</div>
 			</div>
@@ -51,6 +52,7 @@
 					<% unless profile["services"].nil? %>
 					<p>You can automatically bind <span class="label label-inverse"><%= profile["services"]["native"].size %></span> services and <span class="label label-inverse"><%= profile["services"]["addon"].size %></span> integrated addons to your applications.</p>
 					<% end %>
+					<!-- TODO if no scaling -->
 					<p>You can scale your applications
 					<% if profile["scaling"]["vertical"] %>
 					up <span class="icon-resize-vertical" title="vertical"></span>, 
@@ -61,6 +63,16 @@
 					<% if profile["scaling"]["auto"] %> 
 					or let <%= profile["name"] %> automatically <span class="icon-refresh" title="auto"></span> scale your instances
 					<% end %>.</p>
+					
+					<p><% unless profile["pricing"].nil? || profile["pricing"].empty? %>
+					Usage and pricing options available are 
+					<% profile["pricing"].each_with_index do |p, i|
+							if i > 0 %>
+							 or 
+							<% end %>
+					<span class="icon-g-credit" title="pricing"></span> <%= p["model"] + " usage, " + p["period"] + " bills" %><% end %>.<% end %>
+					</p>
+					
 					<p>
 					<% unless profile["compliance"].nil? || profile["compliance"].empty? %>
 					<%= profile["name"] + " is <em>" + profile["compliance"].join(", ").upcase + " </em> certified" %>
@@ -135,7 +147,7 @@
 							<td>
 								<%= rt["id"].split(" ").map(&:capitalize).join(" ") %>
 							</td>
-							<td><em><%= rt["desc"] %></em></td>
+							<td><em><%= rt["description"] %></em></td>
 							<td>
 								<% unless rt["type"].nil? %>
 								<em><%= rt["type"].upcase %></em>
@@ -180,7 +192,7 @@
 							<%= rt["id"].split(" ").map(&:capitalize).join(" ") %>
 							</a>
 							</td>
-							<td><em><%= rt["desc"] %></em></td>
+							<td><em><%= rt["description"] %></em></td>
 							<td>
 								<% unless rt["type"].nil? %>
 								<em><%= rt["type"].upcase %></em>
@@ -228,12 +240,9 @@
 						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
 						<span>
 							<% iso = JSON.parse( IO.read("public/js/iso-3166-2.json")) %>
-							<%= 
-								unless rt["country"].empty?
-								iso.detect{ |c| c["alpha-2"] == rt["country"]}["name"]
-								end
-							%>
-							<% unless rt["region"].empty? %>, <em><%= rt["region"] %></em>
+							<% unless rt["country"].empty? %>
+							<%= iso.detect{ |c| c["alpha-2"] == rt["country"]}["name"].strip %><% end
+							   unless rt["region"].empty? %>, <em><%= rt["region"] %></em>
 							<% end %>
 						</span>
 						<% unless rt["provider"].nil? %>

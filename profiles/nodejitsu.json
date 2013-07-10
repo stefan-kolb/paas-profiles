@@ -11,8 +11,8 @@
   ],
   "pricing": [
     {
-      "model": "monthly",
-      "period": ""
+      "model": "fixed",
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -32,6 +32,7 @@
       ]
     }
   ],
+  "middleware": null,
   "frameworks": null,
   "services": {
     "native": [
@@ -40,19 +41,23 @@
     "addon": [
       {
         "id": "iriscouch",
-        "url": "http://www.iriscouch.com/"
+        "url": "http://www.iriscouch.com/",
+		"type": "datastore"
       },
       {
         "id": "mongolab",
-        "url": "https://mongolab.com/"
+        "url": "https://mongolab.com/",
+		"type": "datastore"
       },
       {
         "id": "mongohq",
-        "url": "https://www.mongohq.com/"
+        "url": "https://www.mongohq.com/",
+		"type": "datastore"
       },
       {
         "id": "redis to go",
-        "url": "http://redistogo.com/"
+        "url": "http://redistogo.com/",
+		"type": "datastore"
       }
     ]
   },

@@ -1,6 +1,6 @@
 {
   "name": "Clever Cloud",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-10T11:00:54+02:00",
   "vendor_verified": false,
   "url": "http://www.clever-cloud.com/",
   "status": "production",
@@ -12,7 +12,7 @@
   "pricing": [
     {
       "model": "metered",
-      "period": ""
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -99,31 +99,45 @@
       ]
     }
   ],
-  "frameworks": null,
+  "frameworks": [
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+        "1.2",
+        "2"
+      ]
+    }
+  ],
   "services": {
     "native": [
       {
         "id": "mysql",
+        "type": "datastore",
         "versions": [
-
+          "5.5"
         ]
       },
       {
         "id": "postgresql",
+        "type": "datastore",
         "versions": [
-
+          "9.2"
         ]
       },
       {
         "id": "filesystem buckets",
+        "type": "datastore",
+        "description": "Persistent file system",
         "versions": [
-
+          "1"
         ]
       },
       {
         "id": "couchbase",
+        "type": "datastore",
         "versions": [
-
+          "2.0"
         ]
       }
     ],

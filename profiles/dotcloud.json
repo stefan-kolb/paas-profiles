@@ -1,6 +1,6 @@
 {
   "name": "dotCloud",
-  "revision": "2013-07-09T23:47:54+02:00",
+  "revision": "2013-07-10T11:20:54+02:00",
   "vendor_verified": false,
   "url": "http://www.dotcloud.com/",
   "status": "production",
@@ -12,7 +12,7 @@
   "pricing": [
     {
       "model": "metered",
-      "period": ""
+      "period": "monthly"
     }
   ],
   "scaling": {
