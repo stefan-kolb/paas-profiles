@@ -42,22 +42,22 @@
       {
         "id": "iriscouch",
         "url": "http://www.iriscouch.com/",
-		"type": "datastore"
+        "type": "datastore"
       },
       {
         "id": "mongolab",
         "url": "https://mongolab.com/",
-		"type": "datastore"
+        "type": "datastore"
       },
       {
         "id": "mongohq",
         "url": "https://www.mongohq.com/",
-		"type": "datastore"
+        "type": "datastore"
       },
       {
         "id": "redis to go",
         "url": "http://redistogo.com/",
-		"type": "datastore"
+        "type": "datastore"
       }
     ]
   },
