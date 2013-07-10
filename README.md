@@ -40,18 +40,18 @@ The code below shows a sample profile. The profile specification is beta and the
     { "language": "java", "versions": [ "1.7", "1.6" ] }
   ],
   "middleware": [
-    { "name": "tomcat", "runtime": "java", "versions": [ "6.0.35" ] }
+    { "id": "tomcat", "runtime": "java", "versions": [ "6.0.35" ] }
   ],
   "frameworks": [
-	{ "name": "rails", "runtime": "ruby", "versions": [ "4.0.0" ] },
-	{ "name": "django", "runtime": "python", "versions": [ "1.5.1" ] }
+	{ "id": "rails", "runtime": "ruby", "versions": [ "4.0.0" ] },
+	{ "id": "django", "runtime": "python", "versions": [ "1.5.1" ] }
   ],
   "services": {
     "native": [
-      { "name": "mongodb", "description": "", "type": "datastore", "versions": [ "1.8" ] }
+      { "id": "mongodb", "description": "", "type": "datastore", "versions": [ "1.8" ] }
     ],
     "addon": [
-      { "name": "mongolab", "url": "https://mongolab.com/", "description": "", "type": "datastore" }
+      { "id": "mongolab", "url": "https://mongolab.com/", "description": "", "type": "datastore" }
     ]
   },
   "extendable": false,
