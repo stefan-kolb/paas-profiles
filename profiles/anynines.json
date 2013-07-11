@@ -59,7 +59,7 @@
 	{ "id": "lift", "runtime": "scala", "versions": [ ] },
 	{ "id": "grails", "runtime": "groovy", "versions": [ ] },
 	{ "id": "rails", "runtime": "ruby", "versions": [ ] },
-	{ "id": "sinatra", "runtime": "ruby", "versions": [ ] },
+	{ "id": "sinatra", "runtime": "ruby", "versions": [ ] }
   ],
   "services": {
     "native": [
