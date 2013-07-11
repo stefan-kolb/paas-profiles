@@ -1,23 +1,22 @@
 {
   "name": "OpenShift Online",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-11T17:47:54+02:00",
   "vendor_verified": false,
   "url": "https://www.openshift.com",
   "status": "production",
   "status_since": "2013-06-10",
   "type": "polyglot",
   "hosting": [
-    "public",
-    "private"
+    "public"
   ],
   "pricing": [
     {
-      "model": "monthly + metered",
-      "period": ""
+      "model": "fixed + metered",
+      "period": "monthly"
     }
   ],
   "scaling": {
-    "vertical": false,
+    "vertical": true,
     "horizontal": true,
     "auto": true
   },
@@ -35,12 +34,15 @@
     {
       "language": "python",
       "versions": [
-        "2.6"
+        "2.6",
+        "2.7",
+        "3.3"
       ]
     },
     {
       "language": "php",
       "versions": [
+        "5.2",
         "5.3"
       ]
     },
@@ -86,7 +88,22 @@
       ]
     }
   ],
-  "frameworks": null,
+  "frameworks": [
+    {
+      "id": "rails",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "id": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    }
+  ],
   "services": {
     "native": [
       {
@@ -128,8 +145,9 @@
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "Virginia",
+      "provider": "AWS"
     }
   ]
 }
