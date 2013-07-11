@@ -1,6 +1,6 @@
 {
-  "name": "CloudNode",
-  "revision": "2013-07-07T17:47:54+02:00",
+  "name": "Cloudnode",
+  "revision": "2013-07-11T11:15:54+02:00",
   "vendor_verified": false,
   "url": "http://cloudno.de/",
   "status": "beta",
@@ -25,24 +25,27 @@
       "language": "node",
       "versions": [
         "0.4.12",
-        "0.6.12",
-        "0.8.16"
+        "0.6.17",
+        "0.8.25"
       ]
     }
   ],
+  "middleware": null,
   "frameworks": null,
   "services": {
     "native": [
       {
         "id": "redis",
+        "type": "datastore",
         "versions": [
-
+          "2.4.4"
         ]
       },
       {
         "id": "couchdb",
+        "type": "datastore",
         "versions": [
-
+          "1.2.0"
         ]
       }
     ],
@@ -54,8 +57,9 @@
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
     }
   ]
 }
