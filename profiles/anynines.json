@@ -34,13 +34,68 @@
       ]
     }
   ],
+  "middleware": null,
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "id": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.0"
+        ]
+      },
+      {
+        "id": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.5"
+        ]
+      },
+      {
+        "id": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.0"
+        ]
+      },
+      {
+        "id": "rabbitmq",
+        "description": "",
+        "type": "worker",
+        "versions": [
+          "2.8"
+        ]
+      },
+      {
+        "id": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.2"
+        ]
+      },
+      {
+        "id": "swift",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "1.0"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": true,
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "",
+      "country": "DE",
       "region": ""
     }
   ]

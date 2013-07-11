@@ -26,7 +26,8 @@
 			<hr />
 			<div class="row">
 				<div class="span12"><h3>Facts</h3></div>
-				<div class="span12"><p>
+				<div class="span12">
+					<p>
 					Is in
 					<% if profile["status"] == "beta" %>
 					<span class="label label-warning">Beta</span>
@@ -49,10 +50,11 @@
 					Platform-as-a-Service.
 					</p>					
 					<p>You can deploy apps written in <span class="label label-inverse"><%= profile["runtimes"].uniq { |h| h["language"] }.size %></span> languages to <span class="label label-inverse"><%= profile["infrastructures"].size %></span> different infrastructures.</p>
+					
 					<% unless profile["services"].nil? %>
 					<p>You can automatically bind <span class="label label-inverse"><%= profile["services"]["native"].size %></span> services and <span class="label label-inverse"><%= profile["services"]["addon"].size %></span> integrated addons to your applications.</p>
 					<% end %>
-					<!-- TODO if no scaling -->
+					<% unless profile["scaling"]["vertical"] == false && profile["scaling"]["horizontal"] ==false && profile["scaling"]["auto"] == false %>
 					<p>You can scale your applications
 					<% if profile["scaling"]["vertical"] %>
 					up <span class="icon-resize-vertical" title="vertical"></span>, 
@@ -63,6 +65,7 @@
 					<% if profile["scaling"]["auto"] %> 
 					or let <%= profile["name"] %> automatically <span class="icon-refresh" title="auto"></span> scale your instances
 					<% end %>.</p>
+					<% end %>
 					
 					<p><% unless profile["pricing"].nil? || profile["pricing"].empty? %>
 					Usage and pricing options available are 
