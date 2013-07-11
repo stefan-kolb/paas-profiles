@@ -1,13 +1,14 @@
 {
   "name": "Durga",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-11T17:47:54+02:00",
   "vendor_verified": false,
-  "url": "https://durga.onesme.com/",
+  "url": "https://durgacloud.com/",
   "status": "beta",
   "status_since": "2012-06-01",
   "type": "language-specific",
   "hosting": [
-    "public"
+    "public",
+    "private"
   ],
   "pricing": [
 
@@ -15,7 +16,7 @@
   "scaling": {
     "vertical": false,
     "horizontal": false,
-    "auto": false
+    "auto": true
   },
   "compliance": [
 
@@ -24,12 +25,35 @@
     {
       "language": "php",
       "versions": [
-
+        "5.3.10"
       ]
     }
   ],
+  "middleware": null,
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "id": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.5"
+        ]
+      },
+      {
+        "id": "oracle db",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "11"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
 

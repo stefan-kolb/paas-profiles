@@ -38,7 +38,7 @@
       "versions": [
 
       ]
-    },	
+    },
     {
       "language": "ruby",
       "versions": [
@@ -54,12 +54,48 @@
   ],
   "middleware": null,
   "frameworks": [
-    { "id": "spring", "runtime": "java", "versions": [ ] },
-    { "id": "play", "runtime": "java", "versions": [ ] },
-	{ "id": "lift", "runtime": "scala", "versions": [ ] },
-	{ "id": "grails", "runtime": "groovy", "versions": [ ] },
-	{ "id": "rails", "runtime": "ruby", "versions": [ ] },
-	{ "id": "sinatra", "runtime": "ruby", "versions": [ ] }
+    {
+      "id": "spring",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "id": "play",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "id": "lift",
+      "runtime": "scala",
+      "versions": [
+
+      ]
+    },
+    {
+      "id": "grails",
+      "runtime": "groovy",
+      "versions": [
+
+      ]
+    },
+    {
+      "id": "rails",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "id": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    }
   ],
   "services": {
     "native": [
