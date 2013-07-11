@@ -27,13 +27,13 @@
     {
       "language": "python",
       "versions": [
-
+        "2.7"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-
+        "2.0"
       ]
     },
     {
@@ -50,8 +50,37 @@
     }
   ],
   "middleware": null,
-  "frameworks": null,
-  "services": null,
+  "frameworks": [
+    {
+      "id": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "4"
+      ]
+    },
+    {
+      "id": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "id": "sqlite",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {
