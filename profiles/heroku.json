@@ -1,6 +1,6 @@
 {
   "name": "Heroku",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-12",
   "vendor_verified": false,
   "url": "http://www.heroku.com/",
   "status": "production",
@@ -71,6 +71,7 @@
       ]
     }
   ],
+  "middleware": null,
   "frameworks": null,
   "services": {
     "native": [
@@ -87,151 +88,174 @@
     "addon": [
       {
         "id": "adept scale",
-        "desc": "",
-        "type": ""
+		"url": "http://www.adeptscale.com/",
+        "desc": "Automated scaling of Heroku dynos",
+        "type": "devops"
       },
       {
         "id": "adminium",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "airbrake",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "amazon rds",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "blitline",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "blitz",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "bomberman",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "bonsai",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "cachely",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "cassandraio",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "chargify",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "cleardb",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "cloudamqp",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "cloudant",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "cloudinary",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "cloudmailin",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "cloudvertical",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "codeship",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "dbinsights",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "deployhooks",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "docraptor",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "dyn",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "eshq",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "exceptional",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "filepicker",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "flydata",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "flying sphinx",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "found search",
+		"url": "",
         "desc": "",
         "type": ""
       },
       {
         "id": "gemfury",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "id": "heroku postgressql",
         "desc": "",
         "type": ""
       },
