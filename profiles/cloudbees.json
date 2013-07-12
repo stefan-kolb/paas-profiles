@@ -1,6 +1,6 @@
 {
   "name": "CloudBees",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-12T13:00:54+02:00",
   "vendor_verified": false,
   "url": "http://www.cloudbees.com/",
   "status": "production",
@@ -12,7 +12,7 @@
   "pricing": [
     {
       "model": "metered",
-      "period": ""
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -35,20 +35,132 @@
   ],
   "middleware": [
     {
-      "name": "tomcat",
-      "version": "6.0.32"
+      "id": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6.0.32"
+      ]
     },
     {
       "name": "jboss",
-      "version": "7.02"
-    },
-    {
-      "name": "jboss",
-      "version": "7.1"
+      "runtime": "java",
+      "versions": [
+        "7.02",
+        "7.1"
+      ]
     }
   ],
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "id": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "jenkins",
+        "description": "",
+        "type": "devops",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "xwiki",
+        "description": "",
+        "type": "other",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "sonar",
+        "description": "",
+        "type": "devops",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+      {
+        "id": "new relic",
+        "url": "http://newrelic.com/",
+        "description": "",
+        "type": "analysis"
+      },
+      {
+        "id": "papertrail",
+        "url": "https://papertrailapp.com/",
+        "description": "",
+        "type": "analysis"
+      },
+      {
+        "id": "sendgrid",
+        "url": "http://sendgrid.com/",
+        "description": "",
+        "type": "messaging"
+      },
+      {
+        "id": "websolr",
+        "url": "http://www.websolr.com/",
+        "description": "",
+        "type": "search"
+      },
+      {
+        "id": "appdynamics",
+        "url": "http://www.appdynamics.com/",
+        "description": "",
+        "type": "analysis"
+      },
+      {
+        "id": "cloudant",
+        "url": "https://cloudant.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "id": "mongohq",
+        "url": "https://www.mongohq.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "id": "cloudamqp",
+        "url": "http://www.cloudamqp.com/",
+        "description": "",
+        "type": "worker"
+      },
+      {
+        "id": "blazemeter",
+        "url": "http://blazemeter.com/",
+        "description": "",
+        "type": "analysis"
+      },
+      {
+        "id": "cloudforge",
+        "url": "http://www.cloudforge.com/",
+        "description": "",
+        "type": "devops"
+      },
+      {
+        "id": "jfrog",
+        "url": "http://www.jfrog.com/",
+        "description": "",
+        "type": "devops"
+      },
+      {
+        "id": "sauce labs",
+        "url": "http://saucelabs.com/",
+        "description": "",
+        "type": "analysis"
+      }
+    ]
+  },
   "extendable": true,
   "infrastructures": [
     {
