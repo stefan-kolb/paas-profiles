@@ -135,6 +135,12 @@
         "versions": [
           "1.4"
         ]
+      },
+      {
+        "id": "openshift metrics",
+        "versions": [
+          "0.1"
+        ]
       }
     ],
     "addon": [
