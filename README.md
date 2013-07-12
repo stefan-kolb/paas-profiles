@@ -109,7 +109,7 @@ An array of all available billing options. If the PaaS is Open Source or no pric
 
 The pricing model of the PaaS. Currently allowed values:
 ```
-fixed, metered, threshold
+fixed, metered, hybrid
 ```
 #### Period
 

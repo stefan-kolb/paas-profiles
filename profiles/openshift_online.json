@@ -11,7 +11,7 @@
   ],
   "pricing": [
     {
-      "model": "fixed + metered",
+      "model": "hybrid",
       "period": "monthly"
     }
   ],

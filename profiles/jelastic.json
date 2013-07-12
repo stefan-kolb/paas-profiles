@@ -11,8 +11,16 @@
   ],
   "pricing": [
     {
-      "model": "monthly, metered",
-      "period": ""
+      "model": "fixed",
+      "period": "monthly"
+    },
+    {
+      "model": "metered",
+      "period": "monthly"
+    },
+    {
+      "model": "hybrid",
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -34,13 +42,115 @@
     {
       "language": "php",
       "versions": [
-        "5.3.23",
-        "5.4.13"
+        "5.3",
+        "5.4"
       ]
     }
   ],
-  "frameworks": null,
-  "services": null,
+  "middleware": [
+    {
+      "id": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6.0.36"
+      ]
+    },
+    {
+      "id": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "7.0.37"
+      ]
+    },
+    {
+      "id": "tomee",
+      "runtime": "java",
+      "versions": [
+        "1.5.1"
+      ]
+    },
+    {
+      "id": "jetty",
+      "runtime": "java",
+      "versions": [
+        "6.1.26"
+      ]
+    },
+    {
+      "id": "glassfish",
+      "runtime": "java",
+      "versions": [
+        "3.1.2.2"
+      ]
+    },
+    {
+      "id": "nginx",
+      "description": "",
+      "type": "",
+      "versions": [
+        "1.2.7"
+      ]
+    }
+  ],
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+      {
+        "id": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.2.2"
+        ]
+      },
+      {
+        "id": "mariadb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.5"
+        ]
+      },
+      {
+        "id": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.5"
+        ]
+      },
+      {
+        "id": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "8.4",
+          "9.2"
+        ]
+      },
+      {
+        "id": "couchdb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "1.2.1"
+        ]
+      },
+      {
+        "id": "memcached",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "1.4.15"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {

@@ -70,14 +70,6 @@
         ]
       },
       {
-        "id": "xwiki",
-        "description": "",
-        "type": "other",
-        "versions": [
-
-        ]
-      },
-      {
         "id": "sonar",
         "description": "",
         "type": "devops",
