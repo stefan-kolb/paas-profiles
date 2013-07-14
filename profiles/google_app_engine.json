@@ -47,7 +47,7 @@
     {
       "language": "go",
       "versions": [
-
+        "1.1"
       ]
     }
   ],

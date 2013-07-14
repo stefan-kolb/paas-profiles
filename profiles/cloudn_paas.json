@@ -1,6 +1,6 @@
 {
   "name": "Cloudn PaaS",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-14",
   "vendor_verified": false,
   "url": "http://www.ntt.com/cloudn/",
   "status": "production",
@@ -12,7 +12,7 @@
   "pricing": [
     {
       "model": "metered",
-      "period": ""
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -27,48 +27,107 @@
     {
       "language": "java",
       "versions": [
-
+        "1.6",
+        "1.7"
       ]
     },
     {
       "language": "python",
       "versions": [
-
+        "2.6.5"
       ]
     },
     {
       "language": "php",
       "versions": [
-
+        "5.3"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-
+        "1.8.7",
+        "1.9.2",
+        "1.9.3"
       ]
     },
     {
       "language": "node",
       "versions": [
-
+        "0.8.2",
+        "0.4.12",
+        "0.6.8"
       ]
     }
   ],
   "middleware": null,
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "id": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.0"
+        ]
+      },
+      {
+        "id": "rabbitmq",
+        "description": "",
+        "type": "worker",
+        "versions": [
+          "2.4"
+        ]
+      },
+      {
+        "id": "memcached",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "1.4"
+        ]
+      },
+      {
+        "id": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.5"
+        ]
+      },
+      {
+        "id": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.1"
+        ]
+      },
+      {
+        "id": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.2"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
+      "country": "US",
       "region": ""
     },
     {
       "continent": "AS",
-      "country": "",
-      "region": ""
+      "country": "JP",
+      "region": "Tokyo"
     }
   ]
 }
