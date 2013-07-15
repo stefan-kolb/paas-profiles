@@ -286,7 +286,7 @@
 							fill: '#f89406'
 						}
 					},
-					<% if profile["infrastructures"].size == 1 %> 
+					<% if profile["infrastructures"].uniq { |h| h["continent"] }.size == 1 %> 
 					<%= "focusOn: \'" << profile["infrastructures"][0]["country"] << "\'," %>
 					<% end %>
 					scaleColors: ['#C8EEFF', '#0071A4'],
