@@ -7,13 +7,13 @@ Currently 82 PaaS vendor profiles. Profiles are encoded as [JSON files](/profile
 
 For convenience, the profiles can be viewed via executing the [sinatra app](sinatra_profiles.rb).
 
-**The current web interface can be viewed [online](http://paasify.it).**
+**The current web interface can be viewed at [PaaSify.it](http://paasify.it)**
 
 **Any errors? Important missing properties? Suggestions? [Contribute](#contribution)**
 
 ## Profile
 
-The code below shows a sample profile. The profile specification is beta and the properties are subject to change.
+The code below shows a sample profile. The profile specification is *beta* and the properties are subject to change.
 
 ```javascript
 {
@@ -133,7 +133,7 @@ Values can be `public` for a publicly hosted service and `private`for a service 
 
 ### Compliance
 
-Currently a simple array of compliance standard strings that are fulfilled by the PaaS.
+Currently a simple string array of compliance standards that are fulfilled by the PaaS.
 
 ### Runtimes
 
@@ -185,7 +185,7 @@ A string array containing the supported middleware versions.
 
 *tbd*
 
-An array of preinstalled frameworks.
+An array of *preinstalled* frameworks.
 
 ```json
 "frameworks": [
@@ -207,17 +207,21 @@ A string array containing the supported framework versions.
 ```json
 "services": {
   "native": [
-    { "name": "mongodb", type="", "description": "", "versions": [ "1.8" ] } // tbd
+    { "name": "mongodb", type="datastore", "description": "", "versions": [ "1.8" ] }
   ],
   "addon": [
-    { "name": "mongolab", url="https://mongolab.com/", description="", type="" } // tbd
+    { "name": "mongolab", url="https://mongolab.com/", description="", type="datastore" }
   ]
 }
 ```
 
 #### Native
 
+Native services or core services are provided and hosted by the PaaS vendor as integral part of the offering. Most often this will be performance critical core services like datastores.
+
 #### Addon
+
+Addon services are provided by external vendors and may or may not be hosted in the same infrastructure as the PaaS. However, we only categorize services as addons if they can be provisioned directly from the PaaS and will be billed as additional part of the platform fee.
 
 #### Type
 
