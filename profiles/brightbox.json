@@ -1,6 +1,6 @@
 {
   "name": "brightbox",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-15",
   "vendor_verified": false,
   "url": "http://www.brightbox.co.uk/",
   "status": "production",
@@ -11,8 +11,8 @@
   ],
   "pricing": [
     {
-      "model": "monthly",
-      "period": ""
+      "model": "fixed",
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -33,12 +33,31 @@
     }
   ],
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "id": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.0"
+        ]
+      }
+    ],
+    "addon": [
+      {
+        "id": "new relic",
+        "url": "http://newrelic.com/",
+        "description": "",
+        "type": "analytics"
+      }
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "",
+      "country": "GB",
       "region": ""
     }
   ]

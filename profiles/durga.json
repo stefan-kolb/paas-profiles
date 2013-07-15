@@ -14,7 +14,7 @@
 
   ],
   "scaling": {
-    "vertical": false,
+    "vertical": true,
     "horizontal": false,
     "auto": true
   },
@@ -56,6 +56,17 @@
   },
   "extendable": false,
   "infrastructures": [
-
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "OrionVM"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "Ninefold"
+    }
   ]
 }

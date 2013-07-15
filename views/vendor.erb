@@ -57,10 +57,10 @@
 					<% unless profile["scaling"]["vertical"] == false && profile["scaling"]["horizontal"] ==false && profile["scaling"]["auto"] == false %>
 					<p>You can scale your applications
 					<% if profile["scaling"]["vertical"] %>
-					up <span class="icon-resize-vertical" title="vertical"></span>, 
+					vertically <span class="icon-resize-vertical" title="vertical"></span>, 
 					<% end %>
 					<% if profile["scaling"]["horizontal"] %>
-					down <span class="icon-resize-horizontal" title="horizontal"></span>
+					horizontally <span class="icon-resize-horizontal" title="horizontal"></span>
 					<% end %>
 					<% if profile["scaling"]["auto"] %> 
 					or let <%= profile["name"] %> automatically <span class="icon-refresh" title="auto"></span> scale your instances
