@@ -30,7 +30,7 @@
 				<td>
 					<div class="row-fluid">
 					<% 
-						profile["runtimes"].uniq { |h| h["language"] }.each do |rt|
+						profile["runtimes"].uniq { |h| h["language"] }.sort { |a,b| a["language"] <=> b["language"] }.each do |rt|
 					%>
 						<span class="label label-info"><%= rt["language"] %></span>
 					<% 
@@ -68,7 +68,7 @@
 				<td>
 					<div class="row-fluid">
 					<% 
-						profile["infrastructures"].uniq { |h| h["continent"] }.each do |rt|
+						profile["infrastructures"].uniq { |h| h["continent"] }.sort { |a,b| a["continent"] <=> b["continent"] }.each do |rt|
 						
 						title = ""
 						

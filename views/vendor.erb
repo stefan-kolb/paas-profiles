@@ -96,7 +96,7 @@
 				</thead>
 				<tbody>
 					<% 
-						profile["runtimes"].each do |rt|
+						profile["runtimes"].sort { |a,b| a["language"] <=> b["language"] }.each do |rt|
 					%>
 					<tr>
 						<td>
@@ -145,7 +145,7 @@
 						<tr><th>Name</th><th>Description</th><th>Type</th><th>Versions</th></tr>
 					</thead>
 					<tbody>
-					<% profile["services"]["native"].each do |rt| %>
+					<% profile["services"]["native"].sort { |a,b| a["id"] <=> b["id"] }.each do |rt| %>
 						<tr>
 							<td>
 								<%= rt["id"].split(" ").map(&:capitalize).join(" ") %>
@@ -185,7 +185,7 @@
 					<tbody>
 						<% 
 							unless profile["services"]["addon"].nil?
-							profile["services"]["addon"].each do |rt|
+							profile["services"]["addon"].sort { |a,b| a["id"] <=> b["id"] }.each do |rt|
 						%>
 						<tr>
 							<td>
@@ -220,7 +220,7 @@
 				<div class="span12"><h3>Infrastructures</h3></div>			
 				<div class="span5">
 					<% 
-						profile["infrastructures"].each do |rt|
+						profile["infrastructures"].sort { |a,b| a["continent"] <=> b["continent"] }.each do |rt|
 						
 						title = ""
 						
