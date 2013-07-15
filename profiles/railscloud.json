@@ -1,21 +1,24 @@
 {
   "name": "Railscloud",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-15",
   "vendor_verified": false,
-  "url": "https://www.railscloud.de/",
-  "status": "beta",
-  "status_since": "2011-01-18",
+  "url": "https://railscloud.de/",
+  "status": "production",
+  "status_since": "2013-06-01",
   "type": "language-specific",
   "hosting": [
     "public"
   ],
   "pricing": [
-
+    {
+      "model": "fixed",
+      "period": "monthly"
+    }
   ],
   "scaling": {
     "vertical": false,
-    "horizontal": true,
-    "auto": true
+    "horizontal": false,
+    "auto": false
   },
   "compliance": [
 
@@ -24,18 +27,57 @@
     {
       "language": "ruby",
       "versions": [
-
+        "1.9.3",
+        "2.0.0"
       ]
     }
   ],
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "id": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "sqlite",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "DE",
+      "region": "Bremen"
     }
   ]
 }

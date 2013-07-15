@@ -1,6 +1,6 @@
 {
   "name": "Durga",
-  "revision": "2013-07-11T17:47:54+02:00",
+  "revision": "2013-07-15",
   "vendor_verified": false,
   "url": "https://durgacloud.com/",
   "status": "beta",
@@ -15,7 +15,7 @@
   ],
   "scaling": {
     "vertical": true,
-    "horizontal": false,
+    "horizontal": true,
     "auto": true
   },
   "compliance": [

@@ -1,6 +1,6 @@
 {
   "name": "Nitrous.io",
-  "revision": "2013-07-10T16:00:54+02:00",
+  "revision": "2013-07-15",
   "vendor_verified": false,
   "url": "https://www.nitrous.io",
   "status": "beta",
@@ -39,7 +39,7 @@
     {
       "language": "node",
       "versions": [
-
+        "0.10.11"
       ]
     },
     {

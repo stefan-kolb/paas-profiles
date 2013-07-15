@@ -12,7 +12,7 @@
   "pricing": [
     {
       "model": "metered",
-      "period": ""
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -55,11 +55,40 @@
 
   ],
   "frameworks": [
+    {
+      "id": "webapp2",
+      "runtime": "python",
+      "versions": [
 
+      ]
+    }
   ],
   "services": {
     "native": [
+      {
+        "id": "google cloud datastore",
+        "description": "",
+        "type": "datastore",
+        "versions": [
 
+        ]
+      },
+      {
+        "id": "google cloud sql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "google cloud storage",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
     ],
     "addon": [
 
