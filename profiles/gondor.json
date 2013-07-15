@@ -1,6 +1,6 @@
 {
   "name": "Gondor",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-07-15",
   "vendor_verified": false,
   "url": "https://gondor.io/",
   "status": "production",
@@ -11,8 +11,8 @@
   ],
   "pricing": [
     {
-      "model": "monthly",
-      "period": ""
+      "model": "fixed",
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -27,18 +27,73 @@
     {
       "language": "python",
       "versions": [
-
+        "2.7.3",
+        "3.3"
       ]
     }
   ],
-  "frameworks": null,
-  "services": null,
+  "frameworks": [
+    {
+      "id": "wsgi",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "id": "django",
+      "runtime": "python",
+      "versions": [
+        "1.4"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "id": "solr",
+        "description": "",
+        "type": "search",
+        "versions": [
+
+        ]
+      },
+      {
+        "id": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.0"
+        ]
+      },
+      {
+        "id": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.4"
+        ]
+      },
+      {
+        "id": "celery",
+        "description": "",
+        "type": "worker",
+        "versions": [
+          "2.3.3"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "",
+      "provider": "Rackspace"
     }
   ]
 }
