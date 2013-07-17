@@ -219,9 +219,9 @@ A string array containing the supported framework versions.
 
 Native services or core services are provided and hosted by the PaaS vendor as integral part of the offering. Most often this will be performance critical core services like datastores.
 
-#### Addon
+#### Add-on
 
-Addon services are provided by external vendors and may or may not be hosted in the same infrastructure as the PaaS. However, we only categorize services as addons if they can be provisioned directly from the PaaS and will be billed as additional part of the platform fee.
+Add-on services are provided by external vendors and may or may not be hosted in the same infrastructure as the PaaS. However, we only categorize services as add-ons if they can be provisioned directly from the PaaS and will be billed as additional part of the platform fee.
 
 #### Type
 

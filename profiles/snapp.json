@@ -14,7 +14,7 @@
   ],
   "scaling": {
     "vertical": false,
-    "horizontal": false,
+    "horizontal": true,
     "auto": false
   },
   "compliance": [
@@ -24,18 +24,32 @@
     {
       "language": "dotnet",
       "versions": [
-
+        "4.0"
       ]
     }
   ],
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "id": "microsoft sql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "California"
     }
   ]
 }
