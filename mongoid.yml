@@ -1,0 +1,6 @@
+development:
+  sessions:
+    default:
+      database: paas
+      hosts:
+        - localhost:27017
