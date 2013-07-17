@@ -13,3 +13,8 @@ get '/vendor/:name' do
   @title = "#{params[:name].gsub("_", " ").split(" ").map(&:capitalize).join(" ")} | PaaS Profiles"
 	erb :vendor
 end
+
+get '/filter' do
+	@title = "Find your PaaS | PaaS Profiles"
+	erb :filter
+end
