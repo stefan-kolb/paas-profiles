@@ -1,5 +1,3 @@
-require_relative 'Rakefile'
-
 require 'sinatra'
 require 'mongoid'
 

@@ -1,1 +1,1 @@
-web: bundle exec ruby sinatra_profiles.rb -p $PORT
+worker:  bundle exec rake mongo:import

@@ -19,6 +19,5 @@ _yardoc
 doc/
 
 helper
-manifest.yml
 public/images
 test

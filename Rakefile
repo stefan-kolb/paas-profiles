@@ -9,7 +9,6 @@ mongo = {
 	"port" => 27017,
 	"username" => "",
 	"password" => "",
-	"name" => "",
 	"db" => "paas"
 }
 
@@ -22,18 +21,27 @@ namespace :mongo do
 		
     desc "Imports all or the specified JSON file to the Mongo collection(s)"
     task :import do
-			Dir.glob("profiles#{File::SEPARATOR}*.json").each do |file_name|
-			puts file_name
-				client = MongoClient.new(mongo["hostname"], mongo["port"])
-				db = client.db(mongo['db'])
+		
+			client = MongoClient.new(mongo["hostname"], mongo["port"])
+			db = client.db(mongo['db'])
+			unless mongo["hostname"] == "localhost"
 				db.authenticate(mongo["username"], mongo["password"])
-				col = db["vendors"]
+			end
+			col = db["vendors"]
+			
+			Dir.glob("profiles#{File::SEPARATOR}*.json").each do |file_name|
+
 				data = JSON.parse(File.read(file_name))
 				
-				col.save(data)
+				if col.stats()["count"] > 0
+					if col.find({ name: data["name"] }).limit(1).count() > 0
+						col.update({"name" => data["name"]}, data)
+					else
+						col.save(data)
+					end
+				else
+					col.save(data)
 				end
+			end
 		end
 end
-
-Rake::Task["mongo:import"].reenable
-Rake::Task["mongo:import"].invoke
