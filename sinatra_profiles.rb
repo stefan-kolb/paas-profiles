@@ -23,5 +23,5 @@ end
 
 get '/search' do
 	@title = "Search | PaaS Profiles"
-	erb :search
+	erb :search, :layout => false
 end
