@@ -1,0 +1,185 @@
+<% 
+	require 'json'
+	require 'mongo'
+
+mongo = {
+	"hostname" => "localhost",
+	"port" => 27017,
+	"username" => "",
+	"password" => "",
+	"db" => "paas"
+}
+
+unless ENV['VCAP_SERVICES'].nil?
+    env = JSON.parse(ENV['VCAP_SERVICES'])
+    mongo = env['mongodb-1.8'][0]['credentials']
+end
+
+client = Mongo::MongoClient.new(mongo["hostname"], mongo["port"])
+db = client.db(mongo['db'])
+
+unless mongo["hostname"] == "localhost"
+	db.authenticate(mongo["username"], mongo["password"])
+end
+
+col = db["vendors"]
+%>
+	<link href="../css/glyphicons.css" rel="stylesheet" />
+	<link href="../css/bootstrap-select.min.css" rel="stylesheet" />
+	<style>
+      /* Main marketing message and sign up button */
+      .jumbotron {
+	  /*height: 400px;*/
+        margin: 20px 0;
+        text-align: center;
+		/*background: url("img/sub.png") no-repeat;*/
+		background-size: 100%;
+      }
+      .jumbotron h1 {
+        font-size: 60px;
+        line-height: 1;
+		background: rgba(255, 255, 255, 0.6);
+      }
+      .jumbotron .lead {
+        font-size: 20px;
+        line-height: 1.25;
+		background: rgba(255, 255, 255, 0.6);
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+	    .extendable {
+			font-style: italic;
+			color: #fff;
+			background:#468847;
+		}
+    </style>
+
+		<div id="top" class="container">
+			<div class="jumbotron">
+			<h1>Find your PaaS!</h1>
+
+        <p class="lead">What's best on your PaaS? Define your needs and get a list of candidates that claim to be your best fit.</p>
+      </div>
+			
+			<hr />
+			<div class="row">
+			
+	<form class="form-horizontal" id="filter" >
+		<div class="control-group">
+			<label class="control-label" for="selectStatus">Status</label>
+			<div class="controls">
+				<select name="status" class="selectpicker show-tick" id="selectStatus">
+					<option value="">Any</option>
+					<% 
+					col.distinct( 'status' ).each do |s| 
+					%>
+					<option value="<%= s %>"><%= s.capitalize %></option>
+					<% end %>
+				</select>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label">Hosting</label>
+			<div class="controls">
+				<select name="hosting[]" class="selectpicker" multiple>
+					<option data-icon="icon-eye-open"" value="public">Public</option>
+					<option data-icon="icon-lock" value="private">Private</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">Scaling</label>
+			<div class="controls">
+				<select name="scaling[]" class="selectpicker" multiple>
+					<option data-subtext="(Ram, CPU, ...)" value="vertical">Vertical</option>
+					<option data-subtext="(Instances)" value="horizontal">Horizontal</option>
+					<option data-subtext="(Automatic scaling of one or both directions)" value="auto">Auto</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="control-group">
+		  <label class="control-label">Runtimes</label>
+			<div class="controls">
+				<select name="runtimes[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
+					<% 
+					col.distinct( 'runtimes.language' ).sort.each do |r| 
+					%>
+					<option value="<%= r %>"><%= r.capitalize %></option>
+					<% end %>
+				</select>
+			</div>
+		</div>
+  
+    <div class="control-group">
+	<label class="control-label">Geolocations</label>
+		<div class="controls">
+	<select name="infras[]" class="selectpicker" data-width="500px" multiple data-selected-text-format="count > 4" multiple>
+	  <option data-icon="icon-globe" value="na">North America</option>
+	  <option data-icon="icon-globe" value="sa">South America</option>
+	  <option data-icon="icon-globe" value="eu">Europe</option>
+	  <option data-icon="icon-globe" value="as">Asia</option>
+	  <option data-icon="icon-globe" value="oc">Oceania</option>
+	</select>
+	  </div>
+  </div>
+  
+  <!--
+      <div class="control-group">
+		<div class="controls">
+	<select name="infras[]" class="selectpicker" data-width="500px" multiple data-selected-text-format="count > 3" multiple>
+	  <option data-subtext="Datastore" value="na">MongoHQ</option>
+	  <option data-subtext="Datastore" value="sa">MongoLab</option>
+	  <option data-subtext="Datastore" value="eu">MyRedis</option>
+	  <option data-divider="true"></option>
+	  <option data-subtext="Analytics" value="as">New Relic</option>
+	  <option data-subtext="Analytics" value="oc">StillAlive</option>
+	</select>
+	  </div> 
+	  	  Time, pricing, hosting, scaling, middleware, framework, extendable
+		  -->
+	  
+  </div>
+  
+  <div class="form-actions text-center">
+	<button id="submit" type="submit" class="btn btn-primary btn-large">Find your PaaS</button>
+	</div>
+</form>
+
+<div id="result"></div>
+
+		</div>
+		
+		<script src="../js/bootstrap-select.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
+				$('ul.breadcrumb > li').append('<span class="divider">/</span>');
+				$('ul.breadcrumb > li').after('<li class="active">Find your PaaS</li>');
+				
+				$('.selectpicker').selectpicker();
+				
+				$.get( 'search', function(response) {
+					$('#result').html(response);
+				   },
+				   'html'
+				);
+				
+			$('form#filter').on('submit', function(e) {
+			data = $('#filter').serialize();
+			console.log(data);
+			
+				$.get( 'search', data, function(response) {
+					$('#result').html(response);
+				   },
+				   'html'
+				);
+				e.preventDefault();
+			});
+			
+		});
+		</script>		
