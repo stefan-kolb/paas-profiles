@@ -158,8 +158,8 @@ col = db["vendors"]
 		<script>
 			$(document).ready(function() {
 				$('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
-				$('ul.breadcrumb > li').append('<span class="divider">/</span>');
-				$('ul.breadcrumb > li').after('<li class="active">Find your PaaS</li>');
+				$('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
+				$('ul.breadcrumb > li:first').after('<li class="active">Find your PaaS</li>');
 				
 				$('.selectpicker').selectpicker();
 				

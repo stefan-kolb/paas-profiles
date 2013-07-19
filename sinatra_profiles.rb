@@ -1,9 +1,6 @@
 require_relative 'Rakefile'
 
 require 'sinatra'
-require 'mongoid'
-
-Mongoid.load!("mongoid.yml", :development)
 
 get '/vendors' do
 	@title = "Overview | PaaS Profiles"

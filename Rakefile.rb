@@ -33,12 +33,8 @@ namespace :mongo do
 
 				data = JSON.parse(File.read(file_name))
 				
-				if col.stats()["count"] > 0
-					if col.find({ name: data["name"] }).limit(1).count() > 0
-						col.update({"name" => data["name"]}, data)
-					else
-						col.save(data)
-					end
+				if col.find({ name: data["name"] }).limit(1).count() > 0
+					col.update({"name" => data["name"]}, data)
 				else
 					col.save(data)
 				end
