@@ -54,6 +54,10 @@ unless params[:runtimes].nil?
 	obj["runtimes.language"] = { '$all' => params[:runtimes] }
 end
 
+# infras
+unless params[:infras].nil?
+	obj["infrastructures.continent"] = { '$all' => params[:infras] }
+end
 
 	rows = col.find( obj )
 	
