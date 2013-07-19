@@ -1,3 +1,5 @@
+require_relative 'Rakefile'
+
 require 'sinatra'
 require 'mongoid'
 
@@ -17,4 +19,9 @@ end
 get '/filter' do
 	@title = "Find your PaaS | PaaS Profiles"
 	erb :filter
+end
+
+get '/search' do
+	@title = "Search | PaaS Profiles"
+	erb :search
 end

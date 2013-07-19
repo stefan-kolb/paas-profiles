@@ -1,16 +1,38 @@
 <% 
 	require 'json'
-	
-	profile = JSON.parse(File.read("profiles/appfog.json"));
+	require 'mongo'
+
+mongo = {
+	"hostname" => "localhost",
+	"port" => 27017,
+	"username" => "",
+	"password" => "",
+	"db" => "paas"
+}
+
+unless ENV['VCAP_SERVICES'].nil?
+    env = JSON.parse(ENV['VCAP_SERVICES'])
+    mongo = env['mongodb-1.8'][0]['credentials']
+end
+
+client = Mongo::MongoClient.new(mongo["hostname"], mongo["port"])
+db = client.db(mongo['db'])
+
+unless mongo["hostname"] == "localhost"
+	db.authenticate(mongo["username"], mongo["password"])
+end
+
+col = db["vendors"]
 %>
 	<link href="../css/glyphicons.css" rel="stylesheet" />
+	<link href="../css/bootstrap-select.min.css" rel="stylesheet" />
 	<style>
       /* Main marketing message and sign up button */
       .jumbotron {
-	  height: 400px;
+	  /*height: 400px;*/
         margin: 20px 0;
         text-align: center;
-		background: url("img/sub.png") no-repeat;
+		/*background: url("img/sub.png") no-repeat;*/
 		background-size: 100%;
       }
       .jumbotron h1 {
@@ -27,6 +49,11 @@
         font-size: 21px;
         padding: 14px 24px;
       }
+	    .extendable {
+			font-style: italic;
+			color: #fff;
+			background:#468847;
+		}
     </style>
 
 		<div id="top" class="container">
@@ -39,311 +66,139 @@
 			<hr />
 			<div class="row">
 			
-			<form class="form-horizontal">
-  <div class="control-group">
-    <label class="control-label" for="inputEmail">Only show PaaS that are in </label>
-    <div class="controls">
-      <select id="inputEmail">
-  <option>All</option>
-  <option>Production</option>
-  <option>Beta</option>
-</select>
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="inputPassword">Password</label>
-    <div class="controls">
-      <input type="password" id="inputPassword" placeholder="Password">
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-<select multiple="multiple">
-  <option>Java</option>
-  <option>Ruby</option>
-  <option>Node</option>
-  <option>Perl</option>
-  <option>Dotnet</option>
-</select>
-      <button type="submit" class="btn">Sign in</button>
-	  					<% 
-						profile["infrastructures"].each do |rt|
-						
-						title = ""
-						
-						case rt["continent"]
-							when "EU"
-								title = "Europe"
-							when "SA"
-								title = "South America"
-							when "NA"
-								title = "North America"
-							when "AS"
-								title = "Asia"
-							when "OC"
-								title = "Oceania"
-							else
-								title = "Africa"
-						end
+	<form class="form-horizontal">
+		<div class="control-group">
+			<label class="control-label" for="selectStatus">Status</label>
+			<div class="controls">
+				<select name="status" class="selectpicker show-tick" id="selectStatus">
+					<option value="">Any</option>
+					<% 
+					col.distinct( 'status' ).each do |s| 
 					%>
-						<div class="text-left">
-						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
-						<% end %>
-    </div>
+					<option value="<%= s %>"><%= s.capitalize %></option>
+					<% end %>
+				</select>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label">Hosting</label>
+			<div class="controls">
+				<select name="hosting[]" class="selectpicker" multiple>
+					<option data-icon="icon-eye-open"" value="public">Public</option>
+					<option data-icon="icon-lock" value="private">Private</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">Scaling</label>
+			<div class="controls">
+				<select name="scaling[]" class="selectpicker" multiple>
+					<option data-subtext="(Ram, CPU, ...)" value="vertical">Vertical</option>
+					<option data-subtext="(Instances)" value="horizontal">Horizontal</option>
+					<option data-subtext="(Automatic scaling of one or both directions)" value="auto">Auto</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="control-group">
+		  <label class="control-label">Runtimes</label>
+			<div class="controls">
+				<select name="runtimes[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
+					<% 
+					col.distinct( 'runtimes.language' ).sort.each do |r| 
+					%>
+					<option value="<%= r %>"><%= r.capitalize %></option>
+					<% end %>
+				</select>
+			</div>
+		</div>
+  
+    <div class="control-group">
+	<label class="control-label">Geolocations</label>
+		<div class="controls">
+	<select name="infras[]" class="selectpicker" data-width="500px" multiple data-selected-text-format="count > 4" multiple>
+	  <option data-icon="icon-globe" value="na">North America</option>
+	  <option data-icon="icon-globe" value="sa">South America</option>
+	  <option data-icon="icon-globe" value="eu">Europe</option>
+	  <option data-icon="icon-globe" value="as">Asia</option>
+	  <option data-icon="icon-globe" value="oc">Oceania</option>
+	</select>
+	  </div>
   </div>
-  <div class="form-actions">
-  <button type="submit" class="btn btn-primary">Save changes</button>
-  <button type="button" class="btn">Cancel</button>
-</div>
+  
+  <!--
+      <div class="control-group">
+		<div class="controls">
+	<select name="infras[]" class="selectpicker" data-width="500px" multiple data-selected-text-format="count > 3" multiple>
+	  <option data-subtext="Datastore" value="na">MongoHQ</option>
+	  <option data-subtext="Datastore" value="sa">MongoLab</option>
+	  <option data-subtext="Datastore" value="eu">MyRedis</option>
+	  <option data-divider="true"></option>
+	  <option data-subtext="Analytics" value="as">New Relic</option>
+	  <option data-subtext="Analytics" value="oc">StillAlive</option>
+	</select>
+	  </div> 
+	  	  Time, pricing, hosting, scaling, middleware, framework, extendable
+		  -->
+	  
+  </div>
+  
+  <div class="form-actions text-center">
+	<button type="submit" onClick="" class="btn btn-primary btn-large">Find your PaaS</button>
+	</div>
 </form>
 
-				<div class="span12"><h3>Facts</h3></div>
-				<div class="span12">
-					<p>
-					Is in
-					<% if profile["status"] == "beta" %>
-					<span class="label label-warning">Beta</span>
-					<% else %>
-					<span class="label label-success">Production</span>
-					<% end %>
-					since <span class="date" title="<%= profile["status_since"] %>"></span>.</p>
-					<p>
-					<%= profile["name"] %> is available as 
-					<% if profile["hosting"].include? "public" %>
-					public <span class="icon-eye-open" title="public"></span>
-					<% end %>
-					<% if profile["hosting"].include?("private") && profile["hosting"].include?("public") %>
-					and as 
-					<%	end				
-						if profile["hosting"].include? "private"
-					%>
-					private <span class="icon-lock" title="private"></span>
-					<% end %>
-					Platform-as-a-Service.
-					</p>					
-					<p>You can deploy apps written in <span class="label label-inverse"><%= profile["runtimes"].uniq { |h| h["language"] }.size %></span> languages to <span class="label label-inverse"><%= profile["infrastructures"].size %></span> different infrastructures.</p>
-					
-					<% unless profile["services"].nil? %>
-					<p>You can automatically bind <span class="label label-inverse"><%= profile["services"]["native"].size %></span> services and <span class="label label-inverse"><%= profile["services"]["addon"].size %></span> integrated addons to your applications.</p>
-					<% end %>
-					<% unless profile["scaling"]["vertical"] == false && profile["scaling"]["horizontal"] ==false && profile["scaling"]["auto"] == false %>
-					<p>You can scale your applications
-					<% if profile["scaling"]["vertical"] %>
-					up <span class="icon-resize-vertical" title="vertical"></span>, 
-					<% end %>
-					<% if profile["scaling"]["horizontal"] %>
-					down <span class="icon-resize-horizontal" title="horizontal"></span>
-					<% end %>
-					<% if profile["scaling"]["auto"] %> 
-					or let <%= profile["name"] %> automatically <span class="icon-refresh" title="auto"></span> scale your instances
-					<% end %>.</p>
-					<% end %>
-					
-					<p><% unless profile["pricing"].nil? || profile["pricing"].empty? %>
-					Usage and pricing options available are 
-					<% profile["pricing"].each_with_index do |p, i|
-							if i > 0 %>
-							 or 
-							<% end %>
-					<span class="icon-g-credit" title="pricing"></span> <%= p["model"] + " usage, " + p["period"] + " bills" %><% end %>.<% end %>
-					</p>
-					
-					<p>
-					<% unless profile["compliance"].nil? || profile["compliance"].empty? %>
-					<%= profile["name"] + " is <em>" + profile["compliance"].join(", ").upcase + " </em> certified" %>
-					<span class="icon-certificate" title="compliance"></span>.
-					<% end %>
-					</p>
-				</div>
-			</div>
+<%
+obj = {}
 
-			<hr/>
-			
-			<div class="row">
-				<div class="span12"><h3>Runtimes</h3></div>
-				<div class="span12">
-				<table class="table table-bordered table-hover">
-				<thead>
-					<tr><th>Language</th><th>Versions</th></tr>
-				</thead>
-				<tbody>
-					<% 
-						profile["runtimes"].each do |rt|
-					%>
-					<tr>
-						<td>
-							<%= rt["language"].capitalize %>
-						</td>
-						<td><em><%= rt["versions"].join(", ") %></em></td>
-					</tr>
-					<% end %>
-				</tbody>
-				</table>
-				<% if profile["extendable"] %>
-				<%= profile["name"] %> is <span class="label label-success">extendable</span>, so you can add more functionality via buildpacks or similar mechanisms.
-				<% 	end  %>
-				</div>
-			</div>
-			
-			<hr/>
-			
-			<%
-				services = profile["services"].nil?
-				
-				unless services
-			%>
-			<div id="services" class="row">
-			<div class="span12"><h3>Services</h3></div>
-			<div class="accordion span12" id="accordion2">
-			  <div class="accordion-group">
-				<div class="accordion-heading">
-				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-					<% 
-						size = 0
-						unless profile["services"]["native"].nil?
-							size = profile["services"]["native"].size
-						end
-					%>
-					<h4>Native (<%= size %>)</h4>
-				  </a>
-				</div>
-				<div id="collapseOne" class="accordion-body collapse">
-				  <div class="accordion-inner">
-				  	<% 
-						unless profile["services"]["native"].nil?
-					%>
-					<table class="table table-bordered table-hover">
-					<thead>
-						<tr><th>Name</th><th>Description</th><th>Type</th><th>Versions</th></tr>
-					</thead>
-					<tbody>
-					<% profile["services"]["native"].each do |rt| %>
-						<tr>
-							<td>
-								<%= rt["id"].split(" ").map(&:capitalize).join(" ") %>
-							</td>
-							<td><em><%= rt["description"] %></em></td>
-							<td>
-								<% unless rt["type"].nil? %>
-								<em><%= rt["type"].upcase %></em>
-								<% end %>
-							</td>
-							<td><em><%= rt["versions"].join(", ") %></em></td>
-						</tr>
-						<% end %>
-					</tbody>
-					</table>
-					<% end %>
-				  </div>
-				</div>
-			  </div>
-			  <div class="accordion-group">
-				<div class="accordion-heading">
-				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-				  	<% 
-						unless profile["services"]["addon"].nil?
-							size = profile["services"]["addon"].size
-						end
-					%>
-					<h4>Addons (<%= size %>)</h4>
-				  </a>
-				</div>
-				<div id="collapseTwo" class="accordion-body collapse">
-				  <div class="accordion-inner">
-					<table class="table table-bordered table-hover">
-					<thead>
-						<tr><th>Name</th><th>Description</th><th>Type</th></tr>
-					</thead>
-					<tbody>
-						<% 
-							unless profile["services"]["addon"].nil?
-							profile["services"]["addon"].each do |rt|
-						%>
-						<tr>
-							<td>
-							<% unless rt["url"].nil? || rt["url"].empty? %>
-								<a href="<%= rt["url"] %>" target="_blank">
-							<% end %>
-							<%= rt["id"].split(" ").map(&:capitalize).join(" ") %>
-							</a>
-							</td>
-							<td><em><%= rt["description"] %></em></td>
-							<td>
-								<% unless rt["type"].nil? %>
-								<em><%= rt["type"].upcase %></em>
-								<% end %>
-							</td>
-						</tr>
-						<% end
-							end
-						%>
-					</tbody>
-					</table>
-				  </div>
-				</div>
-			  </div>
-			</div>
-			<a href="#services" title="Back to services" class="pull-right icon-chevron-up"></a>
-			</div>
-			<hr/>
-			<% end %>
-			
-			<div class="row">
-				<div class="span12"><h3>Infrastructures</h3></div>			
-				<div class="span5">
-					<% 
-						profile["infrastructures"].each do |rt|
-						
-						title = ""
-						
-						case rt["continent"]
-							when "EU"
-								title = "Europe"
-							when "SA"
-								title = "South America"
-							when "NA"
-								title = "North America"
-							when "AS"
-								title = "Asia"
-							when "OC"
-								title = "Oceania"
-							else
-								title = "Africa"
-						end
-					%>
-						<div class="text-left">
-						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
-						<span>
-							<% iso = JSON.parse( IO.read("public/js/iso-3166-2.json")) %>
-							<% unless rt["country"].empty? %>
-							<%= iso.detect{ |c| c["alpha-2"] == rt["country"]}["name"].strip %><% end
-							   unless rt["region"].empty? %>, <em><%= rt["region"] %></em>
-							<% end %>
-						</span>
-						<% unless rt["provider"].nil? %>
-							<small class="muted"><em>&mdash; provided by <%= rt["provider"] %></em></small>
-						<% end %>
-						</div>
-					<% 
-						end
-					%>
-				</div>
-				<div class="span7 thumbnail" id="map" style="width: 640px; height: 300px"></div>
-			</div>
-			
-					<table class="table table-bordered table-hover">
+# status
+unless params[:status].nil? || params[:status].empty?
+	obj["status"] = params[:status]
+end
+
+# hosting
+unless params[:hosting].nil?
+	obj["hosting"] = { '$all' => params[:hosting] }
+end
+
+# scaling
+unless params[:scaling].nil?
+	if params[:scaling].include? "vertical"
+		obj["scaling.vertical"] = true
+	end
+	if params[:scaling].include? "horizontal"
+		obj["scaling.horizontal"] = true
+	end
+	if params[:scaling].include? "auto"
+		obj["scaling.auto"] = true
+	end
+end
+
+# runtimes
+unless params[:runtimes].nil?
+	obj["runtimes.language"] = { '$all' => params[:runtimes] }
+end
+
+
+	rows = col.find( obj )
+	
+	unless rows.has_next?
+ %>	
+<div class="alert alert-error">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  We're sorry, but we could not find any PaaS that matches your ideas!
+</div> 
+<% else %>
+<!--<%= obj.to_s %>-->
+	<table class="table table-bordered table-hover">
 			<thead>
 				<tr><th>Name</th><th>Status</th><th>Runtimes</th><th>Scaling</th><th>Hosting</th><th>Infrastructures</th><th></th></tr>
 			</thead>
 			<tbody>
 			<%
-				require 'json' 
-				
-				files = Dir.glob('profiles/*.json').sort
-				
-				files.each do |file|
-					# profile
-					profile = JSON.parse(File.read(file));
+				rows.each do |profile| 
 			%>
 			<tr>
 				<td>
@@ -428,7 +283,7 @@
 				</td>
 				
 				<td>
-					<a href="/vendor/<%= File.basename(file, ".json") %>" class="btn btn-success btn-small">Details</a>
+					<a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/,'_') %>" class="btn btn-success btn-small">Details</a>
 				</td>
 			</tr>
 			</tbody>
@@ -436,12 +291,16 @@
 				end
 			%>
 		</table>
+		<% end %>
 		</div>
 		
+		<script src="../js/bootstrap-select.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
 				$('ul.breadcrumb > li').append('<span class="divider">/</span>');
 				$('ul.breadcrumb > li').after('<li class="active">Find your PaaS</li>');
+				
+				$('.selectpicker').selectpicker();
 			});
 		</script>		

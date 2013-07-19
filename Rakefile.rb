@@ -45,3 +45,5 @@ namespace :mongo do
 			end
 		end
 end
+
+Rake::Task["mongo:import"].invoke
