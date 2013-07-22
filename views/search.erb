@@ -54,6 +54,21 @@ unless params[:runtimes].nil?
 	obj["runtimes.language"] = { '$all' => params[:runtimes] }
 end
 
+# services
+unless params[:services].nil?
+	obj["services.native.id"] = { '$all' => params[:services] }
+end
+
+# addons
+unless params[:addons].nil?
+	obj["services.addon.id"] = { '$all' => params[:addons] }
+end
+
+# extendable
+unless params[:extendable].nil?
+	obj["extendable"] = true
+end
+
 # infras
 unless params[:infras].nil?
 	obj["infrastructures.continent"] = { '$all' => params[:infras] }

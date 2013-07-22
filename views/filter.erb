@@ -95,9 +95,9 @@ col = db["vendors"]
 			<label class="control-label">Scaling</label>
 			<div class="controls">
 				<select name="scaling[]" class="selectpicker" multiple>
-					<option data-subtext="(Ram, CPU, ...)" value="vertical">Vertical</option>
-					<option data-subtext="(Instances)" value="horizontal">Horizontal</option>
-					<option data-subtext="(Automatic scaling of one or both directions)" value="auto">Auto</option>
+					<option data-icon="icon-resize-vertical" data-subtext="(Ram, CPU, ...)" value="vertical">Vertical</option>
+					<option data-icon="icon-resize-horizontal" data-subtext="(Instances)" value="horizontal">Horizontal</option>
+					<option data-icon="icon-refresh" data-subtext="(Automatic scaling of one or both directions)" value="auto">Auto</option>
 				</select>
 			</div>
 		</div>
@@ -112,6 +112,39 @@ col = db["vendors"]
 					<option value="<%= r %>"><%= r.capitalize %></option>
 					<% end %>
 				</select>
+			</div>
+		</div>
+		
+		<div class="control-group">
+		  <label class="control-label">Services</label>
+			<div class="controls">
+				<select name="services[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 5" multiple>
+					<% 
+					col.distinct( 'services.native.id' ).sort.each do |s| 
+					%>
+					<option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
+					<% end %>
+				</select>
+			</div>
+		</div>
+		
+		<div class="control-group">
+		  <label class="control-label">Addons</label>
+			<div class="controls">
+				<select name="addons[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 5" multiple>
+					<% 
+					col.distinct( 'services.addon.id' ).sort.each do |s| 
+					%>
+					<option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
+					<% end %>
+				</select>
+			</div>
+		</div>
+		
+				<div class="control-group">
+		  <label class="control-label">Extendable</label>
+			<div class="controls">
+				<input name="extendable" type="checkbox"></input>
 			</div>
 		</div>
   
@@ -140,7 +173,7 @@ col = db["vendors"]
 	  <option data-subtext="Analytics" value="oc">StillAlive</option>
 	</select>
 	  </div> 
-	  	  Time, pricing, hosting, scaling, middleware, framework, extendable
+	  	  Time, pricing, middleware, framework
 		  -->
 	  
   </div>

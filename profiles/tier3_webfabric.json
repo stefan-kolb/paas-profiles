@@ -85,7 +85,7 @@
         ]
       },
       {
-        "id": "microsoft sql",
+        "id": "microsoft sql server",
         "description": "",
         "type": "datastore",
         "versions": [

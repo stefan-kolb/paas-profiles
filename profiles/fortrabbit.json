@@ -39,7 +39,7 @@
   "services": {
     "native": [
       {
-        "id": "memcache",
+        "id": "memcached",
         "description": "",
         "type": "datastore",
         "versions": [
