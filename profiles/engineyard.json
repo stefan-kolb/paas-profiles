@@ -52,7 +52,7 @@
   "services": {
     "native": [
       {
-        "id": "postgres",
+        "id": "postgresql",
         "type": "datastore",
         "versions": [
           "9.1",
