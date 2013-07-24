@@ -1,19 +1,16 @@
 {
-  "name": "OpenShift Online",
-  "revision": "2013-07-19",
+  "name": "HP Cloud Application Platform as a Service",
+  "revision": "2013-07-24",
   "vendor_verified": false,
-  "url": "https://www.openshift.com",
-  "status": "production",
-  "status_since": "2013-06-10",
+  "url": "https://www.hpcloud.com/products/PaaSApp",
+  "status": "beta",
+  "status_since": "2012-12-5",
   "type": "polyglot",
   "hosting": [
     "public"
   ],
   "pricing": [
-    {
-      "model": "hybrid",
-      "period": "monthly"
-    }
+
   ],
   "scaling": {
     "vertical": true,
@@ -27,120 +24,118 @@
     {
       "language": "java",
       "versions": [
-        "1.6",
-        "1.7"
-      ]
-    },
-    {
-      "language": "python",
-      "versions": [
-        "2.6",
-        "2.7",
-        "3.3"
+
       ]
     },
     {
       "language": "php",
       "versions": [
-        "5.2",
-        "5.3"
+
       ]
     },
     {
-      "language": "ruby",
+      "language": "clojure",
       "versions": [
-        "1.8",
-        "1.9"
+
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+
       ]
     },
     {
       "language": "node",
       "versions": [
-        "0.6"
+
       ]
     },
     {
       "language": "perl",
       "versions": [
-        "5.10"
+
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.8.8",
+        "1.9.3"
       ]
     }
   ],
   "middleware": [
     {
+      "id": "tomee",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+    {
       "id": "jboss",
-      "versions": [
-        "6.1",
-        "7.1"
-      ]
-    },
-    {
-      "id": "tomcat",
-      "versions": [
-        "6",
-        "7"
-      ]
-    },
-    {
-      "id": "zend",
-      "versions": [
-        "5.6"
-      ]
-    }
-  ],
-  "frameworks": [
-    {
-      "id": "rails",
-      "runtime": "ruby",
-      "versions": [
-
-      ]
-    },
-    {
-      "id": "django",
-      "runtime": "python",
+      "runtime": "java",
       "versions": [
 
       ]
     }
   ],
+  "frameworks": null,
   "services": {
     "native": [
       {
-        "id": "mongodb",
+        "id": "filesystem",
+        "description": "Persistent file system",
+        "type": "datastore",
         "versions": [
-          "2.2"
+
+        ]
+      },
+      {
+        "id": "memcached",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
         ]
       },
       {
         "id": "mysql",
+        "description": "",
+        "type": "datastore",
         "versions": [
-          "5.1"
+
         ]
       },
       {
         "id": "postgresql",
+        "description": "",
+        "type": "datastore",
         "versions": [
-          "8.4",
-          "9.2"
+
         ]
       },
       {
-        "id": "switchyard",
+        "id": "rabbitmq",
+        "description": "",
+        "type": "worker",
         "versions": [
-          "0.6"
+
         ]
       },
       {
-        "id": "jenkins",
+        "id": "redis",
+        "description": "",
+        "type": "datastore",
         "versions": [
-          "1.4"
-        ]
-      },
-      {
-        "id": "openshift metrics",
-        "versions": [
-          "0.1"
+
         ]
       }
     ],
@@ -153,8 +148,7 @@
     {
       "continent": "NA",
       "country": "US",
-      "region": "Virginia",
-      "provider": "AWS"
+      "region": "California"
     }
   ]
 }
