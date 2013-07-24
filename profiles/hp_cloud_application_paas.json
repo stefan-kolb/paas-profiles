@@ -4,7 +4,7 @@
   "vendor_verified": false,
   "url": "https://www.hpcloud.com/products/PaaSApp",
   "status": "beta",
-  "status_since": "2012-12-5",
+  "status_since": "2012-12-05",
   "type": "polyglot",
   "hosting": [
     "public"
@@ -66,7 +66,7 @@
     {
       "language": "ruby",
       "versions": [
-        "1.8.8",
+        "1.8.7",
         "1.9.3"
       ]
     }
