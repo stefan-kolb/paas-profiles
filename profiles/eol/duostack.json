@@ -1,0 +1,44 @@
+{
+  "name": "Duostack",
+  "revision": "2013-07-24",
+  "vendor_verified": false,
+  "url": "http://duostack.com",
+  "status": "eol",
+  "status_since": "2011-05-24",
+  "type": "polyglot",
+  "hosting": [
+    "public"
+  ],
+  "pricing": [
+
+  ],
+  "scaling": {
+    "vertical": false,
+    "horizontal": false,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+
+      ]
+    }	
+  ],
+  "middleware": null,
+  "frameworks": null,
+  "services": null,
+  "extendable": false,
+  "infrastructures": [
+
+  ]
+}
