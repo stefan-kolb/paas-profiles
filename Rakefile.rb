@@ -19,7 +19,7 @@ end
 
 namespace :mongo do
 		
-    desc "Imports all or the specified JSON file to the Mongo collection(s)"
+    desc "Imports all of the specified JSON files to the Mongo collection"
     task :import do
 		
 			client = MongoClient.new(mongo["hostname"], mongo["port"])
@@ -28,16 +28,14 @@ namespace :mongo do
 				db.authenticate(mongo["username"], mongo["password"])
 			end
 			col = db["vendors"]
+			# delete collection
+			col.remove()
 			
 			Dir.glob("profiles#{File::SEPARATOR}*.json").each do |file_name|
 
 				data = JSON.parse(File.read(file_name))
 				
-				if col.find({ name: data["name"] }).limit(1).count() > 0
-					col.update({"name" => data["name"]}, data)
-				else
-					col.save(data)
-				end
+				col.save(data)
 			end
 		end
 end

@@ -74,7 +74,7 @@ unless params[:infras].nil?
 	obj["infrastructures.continent"] = { '$all' => params[:infras] }
 end
 
-	rows = col.find( obj )
+	rows = col.find( obj ).sort ( { name: 1 } )
 	
 	unless rows.has_next?
  %>	
