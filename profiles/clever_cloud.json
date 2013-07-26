@@ -56,7 +56,7 @@
     {
       "language": "scala",
       "versions": [
-
+        "All versions"
       ]
     }
   ],
@@ -138,6 +138,13 @@
         "type": "datastore",
         "versions": [
           "2.0"
+        ]
+      },
+            {
+        "id": "mongodb",
+        "type": "datastore",
+        "versions": [
+          "2.4.5"
         ]
       }
     ],
