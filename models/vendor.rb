@@ -1,3 +1,5 @@
+require 'mongoid'
+
 class Vendor
 	include Mongoid::Document
 	
@@ -13,13 +15,13 @@ class Vendor
 	field :hosting, type: Array
 	field :compliance, type: Array
 	# objects
-	embeds_one :pricing,
-	embeds_one :scaling,
-	embeds_many :runtimes,
-	embeds_many :middleware,
-	embeds_many :frameworks,
-	embeds_many :services,
-	embeds_many :infrastructures,
+	embeds_one :pricing
+	embeds_one :scaling
+	embeds_many :runtimes
+	embeds_many :middlewares, store_as: "middleware"
+	embeds_many :frameworks
+	embeds_one :service, store_as: "services"
+	embeds_many :infrastructures
 	
 end
 
@@ -45,30 +47,70 @@ end
 class Runtime
 	include Mongoid::Document
 	
+	field :language, type: String
+	field :versions, type: Array
 	
+	embedded_in :vendor
 end
 
 class Middleware
 	include Mongoid::Document
 	
+	field :id, type: String
+	field :runtime, type: String
+	field :versions, type: Array
 	
+	embedded_in :vendor
 end
 
 class Framework
 	include Mongoid::Document
 	
+	field :id, type: String
+	field :runtime, type: String
+	field :versions, type: Array
 	
+	embedded_in :vendor
 end
 
 class Service
 	include Mongoid::Document
 	
+	embeds_many :natives, store_as: "native"
+	embeds_many :addons, store_as: "addon"
 	
+	embedded_in :vendor
+end
+
+class Native
+	include Mongoid::Document
+	
+	field :id, type: String
+	field :description, type: String
+	field :type, type: String
+	field :versions, type: Array
+	
+	embedded_in :service
+end
+
+class Addon
+	include Mongoid::Document
+	
+	field :id, type: String
+	field :url, type: String
+	field :description, type: String
+	field :type, type: String
+	
+	embedded_in :service
 end
 
 class Infrastructure
 	include Mongoid::Document
 	
+	field :continent, type: String
+	field :country, type: String
+	field :region, type: String
+	field :provider, type: String
 	
+	embedded_in :vendor
 end
-

@@ -1,4 +1,4 @@
-			<style>
+	<style>
       /* Main marketing message and sign up button */
       .jumbotron {
 	  /*height: 400px;*/
@@ -28,12 +28,11 @@
 		}
     </style>
 	
-				<div class="jumbotron">
-			<h1>Find your PaaS!</h1>
-
+	<div class="jumbotron">
+		<h1>Find your PaaS!</h1>
         <p class="lead">What's best on your PaaS? Define your needs and get a list of candidates that claim to be your best fit.</p>
 		<div class="text-center"><a href="filter" class="btn btn-warning btn-large">Find your PaaS</a></div>
-      </div>
+	</div>
 		
 		<table class="table table-bordered table-hover">
 			<thead>
@@ -41,13 +40,10 @@
 			</thead>
 			<tbody>
 			<%
-				require 'json' 
+				require 'json'
+				require 'mongoid'
 				
-				files = Dir.glob('profiles/*.json').sort
-				
-				files.each do |file|
-					# profile
-					profile = JSON.parse(File.read(file));
+				Vendor.all.asc(:name).each do |profile|
 			%>
 			<tr>
 				<td>
@@ -132,7 +128,7 @@
 				</td>
 				
 				<td>
-					<a href="/vendor/<%= File.basename(file, ".json") %>" class="btn btn-success btn-small">Details</a>
+					<a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/,'_') %>" class="btn btn-success btn-small">Details</a>
 				</td>
 			</tr>
 			</tbody>

@@ -1,6 +1,6 @@
 # [Paas Profiles](http://paasify.it)
 
-*Making PaaS offerings comparable - Ecosystem profiles for PaaS vendors.*
+*Making Platform as a Service offerings comparable - Ecosystem profiles for PaaS vendors.*
 
 <br/>
 Currently 83 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
