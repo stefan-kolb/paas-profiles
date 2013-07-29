@@ -5,9 +5,7 @@ development:
        hosts:
           - localhost:27017
 
-<% unless ENV['MONGOHQ_URL'].nil? %>	
 production:
   sessions:
     default:
       uri: <%= ENV['MONGOHQ_URL'] %>
-<% end %>
