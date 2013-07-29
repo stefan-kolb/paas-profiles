@@ -158,7 +158,7 @@ apex, clojure, cobol, dotnet, erlang, go, groovy, haskell, java, lua, node, perl
 
 #### Versions
 
-A string array containing the supported runtime versions.
+A string array containing the supported runtime versions. Wildcards `*` may be used for branches or even marking all major versions as supported (e.g. `*.*`).
 
 ### Middleware
 

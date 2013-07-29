@@ -56,7 +56,7 @@
     {
       "language": "scala",
       "versions": [
-        "All versions"
+        "*.*"
       ]
     }
   ],
