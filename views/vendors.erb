@@ -40,7 +40,7 @@
 			</thead>
 			<tbody>
 			<%
-				Vendor.all.asc(:name).each do |profile|
+				Vendor.all.sort { |x,y| x.name.downcase <=> y.name.downcase}.each do |profile|
 			%>
 			<tr>
 				<td>

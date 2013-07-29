@@ -49,8 +49,6 @@ unless params[:infras].nil?
 	query = query.all("infrastructures.continent" => params[:infras])
 end
 	
-	query.asc(:name)
-	
 	unless query.exists?
 	
  %>	
@@ -65,7 +63,7 @@ end
 			</thead>
 			<tbody>
 			<%
-				query.each do |profile| 
+				query.sort { |x,y| x.name.downcase <=> y.name.downcase}.each do |profile| 
 			%>
 			<tr>
 				<td>
