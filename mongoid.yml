@@ -2,12 +2,12 @@ development:
   sessions:
     default:
       database: paas
-      hosts:
-        - localhost:27017
+       hosts:
+          - localhost:27017
 
 <% unless ENV['MONGOHQ_URL'].nil? %>	
 production:
-	sessions:
-		default:
-			uri: <%= ENV['MONGOHQ_URL'] %>
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
 <% end %>
