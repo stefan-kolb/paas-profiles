@@ -1,7 +1,7 @@
 <% 
-	require 'json'
-	
-	profile = JSON.parse(File.read("profiles/#{params[:name]}.json"));
+	regex  = params[:name].gsub('_', '[\s\.]')
+	regex = Regexp.new(regex, "i")
+	profile = Vendor.where(name: regex).first
 %>
 	<link href="../css/glyphicons.css" rel="stylesheet" />
 	<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">	

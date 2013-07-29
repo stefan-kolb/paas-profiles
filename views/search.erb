@@ -1,96 +1,71 @@
 <%
-	require 'json'
-	require 'mongo'
-
-mongo = {
-	"hostname" => "localhost",
-	"port" => 27017,
-	"username" => "",
-	"password" => "",
-	"db" => "paas"
-}
-
-unless ENV['VCAP_SERVICES'].nil?
-    env = JSON.parse(ENV['VCAP_SERVICES'])
-    mongo = env['mongodb-1.8'][0]['credentials']
-end
-
-client = Mongo::MongoClient.new(mongo["hostname"], mongo["port"])
-db = client.db(mongo['db'])
-
-unless mongo["hostname"] == "localhost"
-	db.authenticate(mongo["username"], mongo["password"])
-end
-
-col = db["vendors"]
-
-obj = {}
+query = Vendor.all
 
 # status
 unless params[:status].nil? || params[:status].empty?
-	obj["status"] = params[:status]
+	query = query.where( status: params[:status])
 end
 
 # hosting
 unless params[:hosting].nil?
-	obj["hosting"] = { '$all' => params[:hosting] }
+	query = query.all(hosting: params[:hosting])
 end
 
 # scaling
 unless params[:scaling].nil?
 	if params[:scaling].include? "vertical"
-		obj["scaling.vertical"] = true
+		query = query.where( "scaling.vertical" => true)
 	end
 	if params[:scaling].include? "horizontal"
-		obj["scaling.horizontal"] = true
+		query = query.where( "scaling.horizontal" => true)
 	end
 	if params[:scaling].include? "auto"
-		obj["scaling.auto"] = true
+		query = query.where( "scaling.auto" => true)
 	end
 end
 
 # runtimes
 unless params[:runtimes].nil?
-	obj["runtimes.language"] = { '$all' => params[:runtimes] }
+	query = query.all("runtimes.language" => params[:runtimes])
 end
 
 # services
 unless params[:services].nil?
-	obj["services.native.id"] = { '$all' => params[:services] }
+	query = query.all("services.native.id" => params[:services])
 end
 
 # addons
 unless params[:addons].nil?
-	obj["services.addon.id"] = { '$all' => params[:addons] }
+	query = query.all("services.addon.id" => params[:addons])
 end
 
 # extendable
 unless params[:extendable].nil?
-	obj["extendable"] = true
+	query = query.where(extendable: true)
 end
 
 # infras
 unless params[:infras].nil?
-	obj["infrastructures.continent"] = { '$all' => params[:infras] }
+	query = query.all("infrastructures.continent" => params[:infras])
 end
-
-	rows = col.find( obj ).sort ( { name: 1 } )
 	
-	unless rows.has_next?
+	query.asc(:name)
+	
+	unless query.exists?
+	
  %>	
 <div class="alert alert-error">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   We're sorry, but we could not find any PaaS that matches your ideas!
 </div> 
 <% else %>
-<!--<%= obj.to_s %>-->
 	<table class="table table-bordered table-hover">
 			<thead>
 				<tr><th>Name</th><th>Status</th><th>Runtimes</th><th>Scaling</th><th>Hosting</th><th>Infrastructures</th><th></th></tr>
 			</thead>
 			<tbody>
 			<%
-				rows.each do |profile| 
+				query.each do |profile| 
 			%>
 			<tr>
 				<td>

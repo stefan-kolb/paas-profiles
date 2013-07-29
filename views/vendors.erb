@@ -40,9 +40,6 @@
 			</thead>
 			<tbody>
 			<%
-				require 'json'
-				require 'mongoid'
-				
 				Vendor.all.asc(:name).each do |profile|
 			%>
 			<tr>
