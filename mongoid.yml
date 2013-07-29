@@ -5,14 +5,9 @@ development:
       hosts:
         - localhost:27017
 
-<% unless ENV['VCAP_SERVICES'].nil? %>	
+<% unless ENV['MONGOHQ_URL'].nil? %>	
 production:
-	<% mongo = ENV['VCAP_SERVICES']['mongodb-1.8'][0]['credentials'] %>
 	sessions:
 		default:
-			host: <%= mongo['hostname'] %>
-			port: <%= mongo['port'] %>
-			username: <%= mongo['username'] %>
-			password: <%= mongo['password'] %>
-			database: <%= mongo['db'] %>
+			uri: <%= ENV['MONGOHQ_URL'] %>
 <% end %>

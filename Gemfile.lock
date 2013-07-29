@@ -29,5 +29,5 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  mongoid (~> 2.2.0)
+  mongoid
   sinatra
