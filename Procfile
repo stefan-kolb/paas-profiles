@@ -1,1 +1,0 @@
-worker:  bundle exec rake mongo:import
