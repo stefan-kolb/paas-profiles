@@ -6,6 +6,10 @@ require 'sinatra'
 
 Mongoid.load!("mongoid.yml", :development)
 
+get '/' do
+	redirect '/vendors'
+end
+
 get '/vendors' do
 	@title = "Overview | PaaS Profiles"
 	erb :vendors
