@@ -1,11 +1,20 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (3.0.20)
+      activesupport (= 3.0.20)
+      builder (~> 2.1.2)
+      i18n (~> 0.5.0)
+    activesupport (3.0.20)
     bson (1.9.1)
-    bson_ext (1.9.1)
-      bson (~> 1.9.1)
+    builder (2.1.2)
+    i18n (0.5.0)
     mongo (1.9.1)
       bson (~> 1.9.1)
+    mongoid (2.2.6)
+      activemodel (~> 3.0.0)
+      mongo (~> 1.3)
+      tzinfo (~> 0.3.22)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -14,11 +23,11 @@ GEM
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
     tilt (1.4.1)
+    tzinfo (0.3.37)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  bson_ext
-  mongo
+  mongoid (~> 2.2.0)
   sinatra
