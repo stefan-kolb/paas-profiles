@@ -4,7 +4,7 @@ require_relative 'models/vendor'
 require 'mongoid'
 require 'sinatra'
 
-Mongoid.load!("mongoid.yml", :development)
+Mongoid.load!("mongoid.yml", :production)
 
 get '/vendors' do
 	@title = "Overview | PaaS Profiles"

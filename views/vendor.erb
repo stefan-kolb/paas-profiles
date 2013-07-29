@@ -103,7 +103,7 @@
 							<%= rt["language"].capitalize %>
 						</td>
 						<% rt["versions"].each do |v|
-							v.gsub! /\*\.\*/, 'All versions supported'
+							v.gsub! /\*\.\*/, 'All versions'
 						end %>
 						<td><em><%= rt["versions"].join(", ") %></em></td>
 					</tr>
