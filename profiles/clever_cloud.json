@@ -140,7 +140,7 @@
           "2.0"
         ]
       },
-            {
+      {
         "id": "mongodb",
         "type": "datastore",
         "versions": [

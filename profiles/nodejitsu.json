@@ -21,7 +21,7 @@
     "auto": false
   },
   "compliance": [
-
+    "SSAE 16"
   ],
   "runtimes": [
     {
@@ -66,12 +66,14 @@
     {
       "continent": "NA",
       "country": "US",
-      "region": "Las Vegas"
+      "region": "Las Vegas",
+      "provider": "Joyent"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": "Virginia"
+      "region": "Virginia",
+      "provider": "Joyent"
     },
     {
       "continent": "EU",
@@ -82,7 +84,8 @@
     {
       "continent": "EU",
       "country": "NL",
-      "region": "Amsterdam"
+      "region": "Amsterdam",
+      "provider": "Joyent"
     }
   ]
 }
