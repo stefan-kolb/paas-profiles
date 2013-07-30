@@ -42,19 +42,19 @@
   "services": {
     "native": [
       {
-        "id": "redis",
+        "name": "redis",
         "versions": [
 
         ]
       },
       {
-        "id": "memcached",
+        "name": "memcached",
         "versions": [
 
         ]
       },
       {
-        "id": "mysql",
+        "name": "mysql",
         "versions": [
 
         ]

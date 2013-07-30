@@ -59,7 +59,7 @@
   ],
   "middleware": [
     {
-      "id": "iis",
+      "name": "iis",
       "runtime": "dotnet",
       "versions": [
         "7.5",
@@ -71,7 +71,7 @@
   "services": {
     "native": [
       {
-        "id": "redis",
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -79,7 +79,7 @@
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -87,7 +87,7 @@
         ]
       },
       {
-        "id": "mysql",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -95,7 +95,7 @@
         ]
       },
       {
-        "id": "microsoft sql server",
+        "name": "microsoft sql server",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -103,7 +103,7 @@
         ]
       },
       {
-        "id": "rabbitmq",
+        "name": "rabbitmq",
         "description": "",
         "type": "worker",
         "versions": [
@@ -111,7 +111,7 @@
         ]
       },
       {
-        "id": "uhurufs",
+        "name": "uhurufs",
         "description": "Persistent file system",
         "type": "datastore",
         "versions": [
@@ -119,7 +119,7 @@
         ]
       },
       {
-        "id": "mongodb",
+        "name": "mongodb",
         "description": "",
         "type": "datastore",
         "versions": [

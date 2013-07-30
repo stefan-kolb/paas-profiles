@@ -37,13 +37,13 @@
   "services": {
     "native": [
       {
-        "id": "mysql",
+        "name": "mysql",
         "versions": [
 
         ]
       },
       {
-        "id": "microsoft sql server",
+        "name": "microsoft sql server",
         "versions": [
 
         ]
@@ -51,167 +51,167 @@
     ],
     "addon": [
       {
-        "id": "airbrake",
+        "name": "airbrake",
         "desc": "",
         "type": ""
       },
       {
-        "id": "appfail",
+        "name": "appfail",
         "desc": "",
         "type": ""
       },
       {
-        "id": "blitline",
+        "name": "blitline",
         "desc": "",
         "type": ""
       },
       {
-        "id": "blitz",
+        "name": "blitz",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cloudamqp",
+        "name": "cloudamqp",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cloudant",
+        "name": "cloudant",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cloudbird",
+        "name": "cloudbird",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cloudinary",
+        "name": "cloudinary",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cloudmailin",
+        "name": "cloudmailin",
         "desc": "",
         "type": ""
       },
       {
-        "id": "elephantsql",
+        "name": "elephantsql",
         "desc": "",
         "type": ""
       },
       {
-        "id": "found elasticsearch",
+        "name": "found elasticsearch",
         "desc": "",
         "type": ""
       },
       {
-        "id": "hosted graphite",
+        "name": "hosted graphite",
         "desc": "",
         "type": ""
       },
       {
-        "id": "ironmq",
+        "name": "ironmq",
         "desc": "",
         "type": ""
       },
       {
-        "id": "justonedb",
+        "name": "justonedb",
         "desc": "",
         "type": ""
       },
       {
-        "id": "loader.io",
+        "name": "loader.io",
         "desc": "",
         "type": ""
       },
       {
-        "id": "logentries",
+        "name": "logentries",
         "desc": "",
         "type": ""
       },
       {
-        "id": "mailgun",
+        "name": "mailgun",
         "desc": "",
         "type": ""
       },
       {
-        "id": "memcacher",
+        "name": "memcacher",
         "desc": "",
         "type": ""
       },
       {
-        "id": "memcachier",
+        "name": "memcachier",
         "desc": "",
         "type": ""
       },
       {
-        "id": "mongohq",
+        "name": "mongohq",
         "desc": "",
         "type": ""
       },
       {
-        "id": "mongolab",
+        "name": "mongolab",
         "desc": "",
         "type": ""
       },
       {
-        "id": "myredis",
+        "name": "myredis",
         "desc": "",
         "type": ""
       },
       {
-        "id": "new relic",
+        "name": "new relic",
         "desc": "",
         "type": ""
       },
       {
-        "id": "ravenhq",
+        "name": "ravenhq",
         "desc": "",
         "type": ""
       },
       {
-        "id": "rediscloud",
+        "name": "rediscloud",
         "desc": "",
         "type": ""
       },
       {
-        "id": "redis to go",
+        "name": "redis to go",
         "desc": "",
         "type": ""
       },
       {
-        "id": "searchbox elasticsearch",
+        "name": "searchbox elasticsearch",
         "desc": "",
         "type": ""
       },
       {
-        "id": "searchify hosted search",
+        "name": "searchify hosted search",
         "desc": "",
         "type": ""
       },
       {
-        "id": "sendgrid",
+        "name": "sendgrid",
         "desc": "",
         "type": ""
       },
       {
-        "id": "spreedly",
+        "name": "spreedly",
         "desc": "",
         "type": ""
       },
       {
-        "id": "statsmix",
+        "name": "statsmix",
         "desc": "",
         "type": ""
       },
       {
-        "id": "stillalive",
+        "name": "stillalive",
         "desc": "",
         "type": ""
       },
       {
-        "id": "svnsailor",
+        "name": "svnsailor",
         "desc": "",
         "type": ""
       }

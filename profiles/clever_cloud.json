@@ -112,21 +112,21 @@
   "services": {
     "native": [
       {
-        "id": "mysql",
+        "name": "mysql",
         "type": "datastore",
         "versions": [
           "5.5"
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "type": "datastore",
         "versions": [
           "9.2"
         ]
       },
       {
-        "id": "filesystem buckets",
+        "name": "filesystem",
         "type": "datastore",
         "description": "Persistent file system",
         "versions": [
@@ -134,14 +134,14 @@
         ]
       },
       {
-        "id": "couchbase",
+        "name": "couchbase",
         "type": "datastore",
         "versions": [
           "2.0"
         ]
       },
       {
-        "id": "mongodb",
+        "name": "mongodb",
         "type": "datastore",
         "versions": [
           "2.4.5"

@@ -35,7 +35,7 @@
   ],
   "middleware": [
     {
-      "id": "tomcat",
+      "name": "tomcat",
       "runtime": "java",
       "versions": [
         "6.0.32"
@@ -54,7 +54,7 @@
   "services": {
     "native": [
       {
-        "id": "mysql",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -62,7 +62,7 @@
         ]
       },
       {
-        "id": "jenkins",
+        "name": "jenkins",
         "description": "",
         "type": "devops",
         "versions": [
@@ -70,7 +70,7 @@
         ]
       },
       {
-        "id": "sonar",
+        "name": "sonar",
         "description": "",
         "type": "devops",
         "versions": [
@@ -80,73 +80,73 @@
     ],
     "addon": [
       {
-        "id": "new relic",
+        "name": "new relic",
         "url": "http://newrelic.com/",
         "description": "",
         "type": "analysis"
       },
       {
-        "id": "papertrail",
+        "name": "papertrail",
         "url": "https://papertrailapp.com/",
         "description": "",
         "type": "analysis"
       },
       {
-        "id": "sendgrid",
+        "name": "sendgrid",
         "url": "http://sendgrid.com/",
         "description": "",
         "type": "messaging"
       },
       {
-        "id": "websolr",
+        "name": "websolr",
         "url": "http://www.websolr.com/",
         "description": "",
         "type": "search"
       },
       {
-        "id": "appdynamics",
+        "name": "appdynamics",
         "url": "http://www.appdynamics.com/",
         "description": "",
         "type": "analysis"
       },
       {
-        "id": "cloudant",
+        "name": "cloudant",
         "url": "https://cloudant.com/",
         "description": "",
         "type": "datastore"
       },
       {
-        "id": "mongohq",
+        "name": "mongohq",
         "url": "https://www.mongohq.com/",
         "description": "",
         "type": "datastore"
       },
       {
-        "id": "cloudamqp",
+        "name": "cloudamqp",
         "url": "http://www.cloudamqp.com/",
         "description": "",
         "type": "worker"
       },
       {
-        "id": "blazemeter",
+        "name": "blazemeter",
         "url": "http://blazemeter.com/",
         "description": "",
         "type": "analysis"
       },
       {
-        "id": "cloudforge",
+        "name": "cloudforge",
         "url": "http://www.cloudforge.com/",
         "description": "",
         "type": "devops"
       },
       {
-        "id": "jfrog",
+        "name": "jfrog",
         "url": "http://www.jfrog.com/",
         "description": "",
         "type": "devops"
       },
       {
-        "id": "sauce labs",
+        "name": "sauce labs",
         "url": "http://saucelabs.com/",
         "description": "",
         "type": "analysis"

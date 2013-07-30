@@ -36,7 +36,7 @@
   "services": {
     "native": [
       {
-        "id": "mysql",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -46,7 +46,7 @@
     ],
     "addon": [
       {
-        "id": "new relic",
+        "name": "new relic",
         "url": "http://newrelic.com/",
         "description": "",
         "type": "analytics"

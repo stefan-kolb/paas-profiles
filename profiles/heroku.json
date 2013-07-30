@@ -76,7 +76,7 @@
   "services": {
     "native": [
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "type": "datastore",
         "versions": [
           "9.2",
@@ -87,640 +87,640 @@
     ],
     "addon": [
       {
-        "id": "adept scale",
+        "name": "adept scale",
         "url": "http://www.adeptscale.com/",
         "desc": "Automated scaling of Heroku dynos",
         "type": "devops"
       },
       {
-        "id": "adminium",
+        "name": "adminium",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "airbrake",
+        "name": "airbrake",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "amazon rds",
+        "name": "amazon rds",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "blitline",
+        "name": "blitline",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "blitz",
+        "name": "blitz",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "bomberman",
+        "name": "bomberman",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "bonsai",
+        "name": "bonsai",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cachely",
+        "name": "cachely",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cassandraio",
+        "name": "cassandraio",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "chargify",
+        "name": "chargify",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cleardb",
+        "name": "cleardb",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cloudamqp",
+        "name": "cloudamqp",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cloudant",
+        "name": "cloudant",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cloudinary",
+        "name": "cloudinary",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cloudmailin",
+        "name": "cloudmailin",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cloudvertical",
+        "name": "cloudvertical",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "codeship",
+        "name": "codeship",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "dbinsights",
+        "name": "dbinsights",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "deployhooks",
+        "name": "deployhooks",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "docraptor",
+        "name": "docraptor",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "dyn",
+        "name": "dyn",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "eshq",
+        "name": "eshq",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "exceptional",
+        "name": "exceptional",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "filepicker",
+        "name": "filepicker",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "flydata",
+        "name": "flydata",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "flying sphinx",
+        "name": "flying sphinx",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "found search",
+        "name": "found search",
         "url": "",
         "desc": "",
         "type": ""
       },
       {
-        "id": "gemfury",
+        "name": "gemfury",
         "desc": "",
         "type": ""
       },
       {
-        "id": "honeybadger",
+        "name": "honeybadger",
         "desc": "",
         "type": ""
       },
       {
-        "id": "hostedgraphite",
+        "name": "hostedgraphite",
         "desc": "",
         "type": ""
       },
       {
-        "id": "houndsleuth",
+        "name": "houndsleuth",
         "desc": "",
         "type": ""
       },
       {
-        "id": "hyperpdf",
+        "name": "hyperpdf",
         "desc": "",
         "type": ""
       },
       {
-        "id": "indexden",
+        "name": "indexden",
         "desc": "",
         "type": ""
       },
       {
-        "id": "intercom",
+        "name": "intercom",
         "desc": "",
         "type": ""
       },
       {
-        "id": "iron cache",
+        "name": "iron cache",
         "desc": "",
         "type": ""
       },
       {
-        "id": "iron worker",
+        "name": "iron worker",
         "desc": "",
         "type": ""
       },
       {
-        "id": "iron mq",
+        "name": "iron mq",
         "desc": "",
         "type": ""
       },
       {
-        "id": "justonedb",
+        "name": "justonedb",
         "desc": "",
         "type": ""
       },
       {
-        "id": "librato",
+        "name": "librato",
         "desc": "",
         "type": ""
       },
       {
-        "id": "loaderio",
+        "name": "loaderio",
         "desc": "",
         "type": ""
       },
       {
-        "id": "localeapp",
+        "name": "localeapp",
         "desc": "",
         "type": ""
       },
       {
-        "id": "logentries",
+        "name": "logentries",
         "desc": "",
         "type": ""
       },
       {
-        "id": "loggly",
+        "name": "loggly",
         "desc": "",
         "type": ""
       },
       {
-        "id": "mailgun",
+        "name": "mailgun",
         "desc": "",
         "type": ""
       },
       {
-        "id": "mailtrap",
+        "name": "mailtrap",
         "desc": "",
         "type": ""
       },
       {
-        "id": "mandrill",
+        "name": "mandrill",
         "desc": "",
         "type": ""
       },
       {
-        "id": "memcache",
+        "name": "memcache",
         "desc": "",
         "type": ""
       },
       {
-        "id": "memcachier",
+        "name": "memcachier",
         "desc": "",
         "type": ""
       },
       {
-        "id": "mongohq",
+        "name": "mongohq",
         "desc": "",
         "type": ""
       },
       {
-        "id": "mongolab",
+        "name": "mongolab",
         "desc": "",
         "type": ""
       },
       {
-        "id": "mwiki",
+        "name": "mwiki",
         "desc": "",
         "type": ""
       },
       {
-        "id": "myredis",
+        "name": "myredis",
         "desc": "",
         "type": ""
       },
       {
-        "id": "neo4j",
+        "name": "neo4j",
         "desc": "",
         "type": ""
       },
       {
-        "id": "new relic",
+        "name": "new relic",
         "desc": "",
         "type": ""
       },
       {
-        "id": "nodefly",
+        "name": "nodefly",
         "desc": "",
         "type": ""
       },
       {
-        "id": "nodetime",
+        "name": "nodetime",
         "desc": "",
         "type": ""
       },
       {
-        "id": "openredis",
+        "name": "openredis",
         "desc": "",
         "type": ""
       },
       {
-        "id": "pandastream",
+        "name": "pandastream",
         "desc": "",
         "type": ""
       },
       {
-        "id": "papertrail",
+        "name": "papertrail",
         "desc": "",
         "type": ""
       },
       {
-        "id": "pgbackups",
+        "name": "pgbackups",
         "desc": "",
         "type": ""
       },
       {
-        "id": "phrase",
+        "name": "phrase",
         "desc": "",
         "type": ""
       },
       {
-        "id": "postmark",
+        "name": "postmark",
         "desc": "",
         "type": ""
       },
       {
-        "id": "process-scheduler",
+        "name": "process-scheduler",
         "desc": "",
         "type": ""
       },
       {
-        "id": "proximo",
+        "name": "proximo",
         "desc": "",
         "type": ""
       },
       {
-        "id": "pubnub",
+        "name": "pubnub",
         "desc": "",
         "type": ""
       },
       {
-        "id": "pusher",
+        "name": "pusher",
         "desc": "",
         "type": ""
       },
       {
-        "id": "ranger",
+        "name": "ranger",
         "desc": "",
         "type": ""
       },
       {
-        "id": "rcmmder",
+        "name": "rcmmder",
         "desc": "",
         "type": ""
       },
       {
-        "id": "rediscloud",
+        "name": "rediscloud",
         "desc": "",
         "type": ""
       },
       {
-        "id": "redisgreen",
+        "name": "redisgreen",
         "desc": "",
         "type": ""
       },
       {
-        "id": "redistogo",
+        "name": "redistogo",
         "desc": "",
         "type": ""
       },
       {
-        "id": "restful metrics",
+        "name": "restful metrics",
         "desc": "",
         "type": ""
       },
       {
-        "id": "rhoconnect",
+        "name": "rhoconnect",
         "desc": "",
         "type": ""
       },
       {
-        "id": "scheduler",
+        "name": "scheduler",
         "desc": "",
         "type": ""
       },
       {
-        "id": "searchbox",
+        "name": "searchbox",
         "desc": "",
         "type": ""
       },
       {
-        "id": "searchify",
+        "name": "searchify",
         "desc": "",
         "type": ""
       },
       {
-        "id": "semaphore",
+        "name": "semaphore",
         "desc": "",
         "type": ""
       },
       {
-        "id": "sendgrid",
+        "name": "sendgrid",
         "desc": "",
         "type": ""
       },
       {
-        "id": "sentry",
+        "name": "sentry",
         "desc": "",
         "type": ""
       },
       {
-        "id": "sharedworkforce",
+        "name": "sharedworkforce",
         "desc": "",
         "type": ""
       },
       {
-        "id": "sourceninja",
+        "name": "sourceninja",
         "desc": "",
         "type": ""
       },
       {
-        "id": "spreedlycore",
+        "name": "spreedlycore",
         "desc": "",
         "type": ""
       },
       {
-        "id": "ssl",
+        "name": "ssl",
         "desc": "",
         "type": ""
       },
       {
-        "id": "statsmix",
+        "name": "statsmix",
         "desc": "",
         "type": ""
       },
       {
-        "id": "stillalive",
+        "name": "stillalive",
         "desc": "",
         "type": ""
       },
       {
-        "id": "superfeedr",
+        "name": "superfeedr",
         "desc": "",
         "type": ""
       },
       {
-        "id": "swiftype",
+        "name": "swiftype",
         "desc": "",
         "type": ""
       },
       {
-        "id": "tddium",
+        "name": "tddium",
         "desc": "",
         "type": ""
       },
       {
-        "id": "tempodb",
+        "name": "tempodb",
         "desc": "",
         "type": ""
       },
       {
-        "id": "temporize",
+        "name": "temporize",
         "desc": "",
         "type": ""
       },
       {
-        "id": "tinfoilsecurity",
+        "name": "tinfoilsecurity",
         "desc": "",
         "type": ""
       },
       {
-        "id": "trackman",
+        "name": "trackman",
         "desc": "",
         "type": ""
       },
       {
-        "id": "treasure data",
+        "name": "treasure data",
         "desc": "",
         "type": ""
       },
       {
-        "id": "tronprint",
+        "name": "tronprint",
         "desc": "",
         "type": ""
       },
       {
-        "id": "urbanairship",
+        "name": "urbanairship",
         "desc": "",
         "type": ""
       },
       {
-        "id": "websolr",
+        "name": "websolr",
         "desc": "",
         "type": ""
       },
       {
-        "id": "wwwhisper",
+        "name": "wwwhisper",
         "desc": "",
         "type": ""
       },
       {
-        "id": "zencoder",
+        "name": "zencoder",
         "desc": "",
         "type": ""
       },
       {
-        "id": "zerigo dns",
+        "name": "zerigo dns",
         "desc": "",
         "type": ""
       },
       {
-        "id": "bablic",
+        "name": "bablic",
         "desc": "",
         "type": ""
       },
       {
-        "id": "blowerio",
+        "name": "blowerio",
         "desc": "",
         "type": ""
       },
       {
-        "id": "boxcar",
+        "name": "boxcar",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cdn sumo",
+        "name": "cdn sumo",
         "desc": "",
         "type": ""
       },
       {
-        "id": "circleci",
+        "name": "circleci",
         "desc": "",
         "type": ""
       },
       {
-        "id": "cloudassault",
+        "name": "cloudassault",
         "desc": "",
         "type": ""
       },
       {
-        "id": "dashmin",
+        "name": "dashmin",
         "desc": "",
         "type": ""
       },
       {
-        "id": "database.com",
+        "name": "database.com",
         "desc": "",
         "type": ""
       },
       {
-        "id": "downloader",
+        "name": "downloader",
         "desc": "",
         "type": ""
       },
       {
-        "id": "eltanin",
+        "name": "eltanin",
         "desc": "",
         "type": ""
       },
       {
-        "id": "errorapp",
+        "name": "errorapp",
         "desc": "",
         "type": ""
       },
       {
-        "id": "framey",
+        "name": "framey",
         "desc": "",
         "type": ""
       },
       {
-        "id": "groupdocs",
+        "name": "groupdocs",
         "desc": "",
         "type": ""
       },
       {
-        "id": "rabbitmq-bigwig",
+        "name": "rabbitmq-bigwig",
         "desc": "",
         "type": ""
       },
       {
-        "id": "robowhois",
+        "name": "robowhois",
         "desc": "",
         "type": ""
       },
       {
-        "id": "saaspose",
+        "name": "saaspose",
         "desc": "",
         "type": ""
       },
       {
-        "id": "securekey",
+        "name": "securekey",
         "desc": "",
         "type": ""
       },
       {
-        "id": "signature",
+        "name": "signature",
         "desc": "",
         "type": ""
       },
       {
-        "id": "ticketly",
+        "name": "ticketly",
         "desc": "",
         "type": ""
       },
       {
-        "id": "tripwire",
+        "name": "tripwire",
         "desc": "",
         "type": ""
       },
       {
-        "id": "twist",
+        "name": "twist",
         "desc": "",
         "type": ""
       },
       {
-        "id": "wercker",
+        "name": "wercker",
         "desc": "",
         "type": ""
       }

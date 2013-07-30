@@ -36,7 +36,7 @@
   "services": {
     "native": [
       {
-        "id": "mysql",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -44,7 +44,7 @@
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -52,7 +52,7 @@
         ]
       },
       {
-        "id": "sqlite",
+        "name": "sqlite",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -60,7 +60,7 @@
         ]
       },
       {
-        "id": "redis",
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [

@@ -49,7 +49,7 @@
 					<% end %>
 					Platform-as-a-Service.
 					</p>					
-					<p>You can deploy apps written in <span class="label label-inverse"><%= profile["runtimes"].uniq { |h| h["language"] }.size %></span> languages to <span class="label label-inverse"><%= profile["infrastructures"].size %></span> different infrastructures.</p>
+					<p>You can deploy apps written in <span class="label label-inverse"><%= profile["runtimes"].uniq { |h| h["language"] }.size %></span> languages to <span class="label label-inverse"><%= profile["infrastructures"].nil? ? 0 : profile["infrastructures"].size %></span> different infrastructures.</p>
 					
 					<% unless profile["services"].nil? %>
 					<p>You can automatically bind <span class="label label-inverse"><%= profile["services"]["native"].size %></span> services and <span class="label label-inverse"><%= profile["services"]["addon"].size %></span> integrated addons to your applications.</p>
@@ -148,10 +148,10 @@
 						<tr><th>Name</th><th>Description</th><th>Type</th><th>Versions</th></tr>
 					</thead>
 					<tbody>
-					<% profile["services"]["native"].sort { |a,b| a["id"] <=> b["id"] }.each do |rt| %>
+					<% profile["services"]["native"].sort { |a,b| a["name"] <=> b["name"] }.each do |rt| %>
 						<tr>
 							<td>
-								<%= rt["id"].split(" ").map(&:capitalize).join(" ") %>
+								<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>
 							</td>
 							<td><em><%= rt["description"] %></em></td>
 							<td>
@@ -188,14 +188,14 @@
 					<tbody>
 						<% 
 							unless profile["services"]["addon"].nil?
-							profile["services"]["addon"].sort { |a,b| a["id"] <=> b["id"] }.each do |rt|
+							profile["services"]["addon"].sort { |a,b| a["name"] <=> b["name"] }.each do |rt|
 						%>
 						<tr>
 							<td>
 							<% unless rt["url"].nil? || rt["url"].empty? %>
 								<a href="<%= rt["url"] %>" target="_blank">
 							<% end %>
-							<%= rt["id"].split(" ").map(&:capitalize).join(" ") %>
+							<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>
 							</a>
 							</td>
 							<td><em><%= rt["description"] %></em></td>
@@ -223,6 +223,7 @@
 				<div class="span12"><h3>Infrastructures</h3></div>			
 				<div class="span5">
 					<% 
+						unless profile["infrastructures"].nil?
 						profile["infrastructures"].sort { |a,b| a["continent"] <=> b["continent"] }.each do |rt|
 						
 						title = ""
@@ -257,6 +258,7 @@
 						</div>
 					<% 
 						end
+						end
 					%>
 				</div>
 				<div class="span7 thumbnail" id="map" style="width: 640px; height: 300px"></div>
@@ -289,7 +291,7 @@
 							fill: '#f89406'
 						}
 					},
-					<% if profile["infrastructures"].uniq { |h| h["continent"] }.size == 1 %> 
+					<% if !profile["infrastructures"].nil? && profile["infrastructures"].uniq { |h| h["continent"] }.size == 1 %> 
 					<%= "focusOn: \'" << profile["infrastructures"][0]["country"] << "\'," %>
 					<% end %>
 					scaleColors: ['#C8EEFF', '#0071A4'],
@@ -300,8 +302,10 @@
 					selectedRegions: 
 					<% 
 								arr = []
-								profile["infrastructures"].each do |i| 
-									arr << i["country"]
+								unless profile["infrastructures"].nil?
+									profile["infrastructures"].each do |i| 
+										arr << i["country"]
+									end
 								end
 					%>
 					<%= arr.to_s %>

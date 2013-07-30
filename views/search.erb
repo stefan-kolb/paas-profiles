@@ -31,12 +31,12 @@ end
 
 # services
 unless params[:services].nil?
-	query = query.all("services.native.id" => params[:services])
+	query = query.all("services.native.name" => params[:services])
 end
 
 # addons
 unless params[:addons].nil?
-	query = query.all("services.addon.id" => params[:addons])
+	query = query.all("services.addon.name" => params[:addons])
 end
 
 # extendable
@@ -121,6 +121,7 @@ end
 				<td>
 					<div class="row-fluid">
 					<% 
+						unless profile["infrastructures"].nil?
 						profile["infrastructures"].uniq { |h| h["continent"] }.each do |rt|
 						
 						title = ""
@@ -142,6 +143,7 @@ end
 					%>
 						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
 					<% 
+						end
 						end
 					%>
 					</div>

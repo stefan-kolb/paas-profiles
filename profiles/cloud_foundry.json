@@ -57,7 +57,7 @@
   ],
   "middleware": [
     {
-      "id": "tomcat",
+      "name": "tomcat",
       "runtime": "java",
       "versions": [
         "6",
@@ -72,49 +72,49 @@
     ],
     "addon": [
       {
-        "id": "blazemeter",
+        "name": "blazemeter",
         "url": "http://blazemeter.com/",
         "description": "",
         "type": "analytics"
       },
       {
-        "id": "treasure data",
+        "name": "treasure data",
         "url": "http://www.treasure-data.com/",
         "description": "",
         "type": "analytics"
       },
       {
-        "id": "sendgrid",
+        "name": "sendgrid",
         "url": "http://sendgrid.com/",
         "description": "",
         "type": "messaging"
       },
       {
-        "id": "cleardb",
+        "name": "cleardb",
         "url": "http://www.cleardb.com/",
         "description": "",
         "type": "datastore"
       },
       {
-        "id": "cloudamqp",
+        "name": "cloudamqp",
         "url": "http://www.cloudamqp.com/",
         "description": "",
         "type": "worker"
       },
       {
-        "id": "elephantsql",
+        "name": "elephantsql",
         "url": "http://www.elephantsql.com/",
         "description": "",
         "type": "datastore"
       },
       {
-        "id": "rediscloud",
+        "name": "rediscloud",
         "url": "http://redis-cloud.com/",
         "description": "",
         "type": "datastore"
       },
       {
-        "id": "mongolab",
+        "name": "mongolab",
         "url": "https://mongolab.com/welcome/",
         "description": "",
         "type": "datastore"

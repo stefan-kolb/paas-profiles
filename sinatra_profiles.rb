@@ -11,7 +11,7 @@ get '/' do
 end
 
 get '/vendors' do
-	@title = "Overview | PaaS Profiles"
+	@title = "Platform as a Service Profiles"
 	erb :vendors
 end
 

@@ -34,14 +34,14 @@
   ],
   "frameworks": [
     {
-      "id": "wsgi",
+      "name": "wsgi",
       "runtime": "python",
       "versions": [
 
       ]
     },
     {
-      "id": "django",
+      "name": "django",
       "runtime": "python",
       "versions": [
         "1.4"
@@ -51,7 +51,7 @@
   "services": {
     "native": [
       {
-        "id": "solr",
+        "name": "solr",
         "description": "",
         "type": "search",
         "versions": [
@@ -59,7 +59,7 @@
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -67,7 +67,7 @@
         ]
       },
       {
-        "id": "redis",
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -75,7 +75,7 @@
         ]
       },
       {
-        "id": "celery",
+        "name": "celery",
         "description": "",
         "type": "worker",
         "versions": [

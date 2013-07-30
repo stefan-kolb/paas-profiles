@@ -52,14 +52,14 @@
   "middleware": null,
   "frameworks": [
     {
-      "id": "rails",
+      "name": "rails",
       "runtime": "ruby",
       "versions": [
         "4"
       ]
     },
     {
-      "id": "django",
+      "name": "django",
       "runtime": "python",
       "versions": [
 
@@ -69,7 +69,7 @@
   "services": {
     "native": [
       {
-        "id": "sqlite",
+        "name": "sqlite",
         "description": "",
         "type": "datastore",
         "versions": [

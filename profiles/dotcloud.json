@@ -86,7 +86,7 @@
   "services": {
     "native": [
       {
-        "id": "smtp",
+        "name": "smtp",
         "description": "",
         "type": "messaging",
         "versions": [
@@ -94,7 +94,7 @@
         ]
       },
       {
-        "id": "mongodb",
+        "name": "mongodb",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -102,7 +102,7 @@
         ]
       },
       {
-        "id": "mysql",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "redis",
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -118,7 +118,7 @@
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -126,7 +126,7 @@
         ]
       },
       {
-        "id": "solr",
+        "name": "solr",
         "description": "",
         "type": "search",
         "versions": [

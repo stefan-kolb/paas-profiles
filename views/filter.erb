@@ -94,7 +94,7 @@
 			<div class="controls">
 				<select name="services[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 5" multiple>
 					<% 
-					Vendor.distinct( 'services.native.id' ).sort.each do |s| 
+					Vendor.distinct( 'services.native.name' ).sort.each do |s| 
 					%>
 					<option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
 					<% end %>
@@ -107,7 +107,7 @@
 			<div class="controls">
 				<select name="addons[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 5" multiple>
 					<% 
-					Vendor.distinct( 'services.addon.id' ).sort.each do |s| 
+					Vendor.distinct( 'services.addon.name' ).sort.each do |s| 
 					%>
 					<option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
 					<% end %>

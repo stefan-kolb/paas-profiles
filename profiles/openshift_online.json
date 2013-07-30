@@ -68,21 +68,21 @@
   ],
   "middleware": [
     {
-      "id": "jboss",
+      "name": "jboss",
       "versions": [
         "6.1",
         "7.1"
       ]
     },
     {
-      "id": "tomcat",
+      "name": "tomcat",
       "versions": [
         "6",
         "7"
       ]
     },
     {
-      "id": "zend",
+      "name": "zend",
       "versions": [
         "5.6"
       ]
@@ -90,14 +90,14 @@
   ],
   "frameworks": [
     {
-      "id": "rails",
+      "name": "rails",
       "runtime": "ruby",
       "versions": [
 
       ]
     },
     {
-      "id": "django",
+      "name": "django",
       "runtime": "python",
       "versions": [
 
@@ -107,38 +107,38 @@
   "services": {
     "native": [
       {
-        "id": "mongodb",
+        "name": "mongodb",
         "versions": [
           "2.2"
         ]
       },
       {
-        "id": "mysql",
+        "name": "mysql",
         "versions": [
           "5.1"
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "versions": [
           "8.4",
           "9.2"
         ]
       },
       {
-        "id": "switchyard",
+        "name": "switchyard",
         "versions": [
           "0.6"
         ]
       },
       {
-        "id": "jenkins",
+        "name": "jenkins",
         "versions": [
           "1.4"
         ]
       },
       {
-        "id": "openshift metrics",
+        "name": "openshift metrics",
         "versions": [
           "0.1"
         ]

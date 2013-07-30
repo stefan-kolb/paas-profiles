@@ -52,7 +52,7 @@
   "services": {
     "native": [
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "type": "datastore",
         "versions": [
           "9.1",
@@ -60,7 +60,7 @@
         ]
       },
       {
-        "id": "mysql",
+        "name": "mysql",
         "type": "datastore",
         "versions": [
           "5.0",
@@ -68,14 +68,14 @@
         ]
       },
       {
-        "id": "redis",
+        "name": "redis",
         "type": "datastore",
         "versions": [
           "2.4"
         ]
       },
       {
-        "id": "memcached",
+        "name": "memcached",
         "type": "datastore",
         "versions": [
           "1.4",
@@ -83,7 +83,7 @@
         ]
       },
       {
-        "id": "riak",
+        "name": "riak",
         "type": "datastore",
         "versions": [
           "1.3.1"
@@ -92,82 +92,82 @@
     ],
     "addon": [
       {
-        "id": "blitz",
+        "name": "blitz",
         "url": "https://www.blitz.io/",
         "type": "analytics"
       },
       {
-        "id": "cloudinary",
+        "name": "cloudinary",
         "url": "http://cloudinary.com/",
         "type": "media"
       },
       {
-        "id": "mailgun",
+        "name": "mailgun",
         "url": "http://www.mailgun.com/",
         "type": "messaging"
       },
       {
-        "id": "sendgrid",
+        "name": "sendgrid",
         "url": "http://sendgrid.com/",
         "type": "messaging"
       },
       {
-        "id": "new relic",
+        "name": "new relic",
         "url": "http://newrelic.com/",
         "type": "analytics"
       },
       {
-        "id": "solano labs",
+        "name": "solano labs",
         "url": "https://www.solanolabs.com/",
         "type": "devops"
       },
       {
-        "id": "logentries",
+        "name": "logentries",
         "url": "https://logentries.com/",
         "type": "analytics"
       },
       {
-        "id": "appfirst",
+        "name": "appfirst",
         "url": "http://www.appfirst.com/index.php",
         "type": "analytics"
       },
       {
-        "id": "mongolab",
+        "name": "mongolab",
         "url": "https://mongolab.com/",
         "type": "datastore"
       },
       {
-        "id": "mongohq",
+        "name": "mongohq",
         "url": "https://www.mongohq.com/home",
         "type": "datastore"
       },
       {
-        "id": "librato metrics",
+        "name": "librato metrics",
         "url": "https://metrics.librato.com/",
         "type": "analytics"
       },
       {
-        "id": "ironworker",
+        "name": "ironworker",
         "url": "http://www.iron.io/worker",
         "type": "worker"
       },
       {
-        "id": "treasure data hadoop",
+        "name": "treasure data hadoop",
         "url": "http://www.treasure-data.com/",
         "type": "analytics"
       },
       {
-        "id": "justonedb",
+        "name": "justonedb",
         "url": "http://www.justonedb.com/",
         "type": "datastore"
       },
       {
-        "id": "ironmq",
+        "name": "ironmq",
         "url": "http://www.iron.io/mq",
         "type": "worker"
       },
       {
-        "id": "statsmix",
+        "name": "statsmix",
         "url": "http://www.statsmix.com/",
         "type": "analytics"
       }

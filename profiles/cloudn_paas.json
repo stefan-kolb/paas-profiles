@@ -65,7 +65,7 @@
   "services": {
     "native": [
       {
-        "id": "mongodb",
+        "name": "mongodb",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -73,7 +73,7 @@
         ]
       },
       {
-        "id": "rabbitmq",
+        "name": "rabbitmq",
         "description": "",
         "type": "worker",
         "versions": [
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "memcached",
+        "name": "memcached",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -89,7 +89,7 @@
         ]
       },
       {
-        "id": "mysql",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -97,7 +97,7 @@
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "redis",
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [

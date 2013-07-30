@@ -71,7 +71,7 @@
   ],
   "middleware": [
     {
-      "id": "tomcat",
+      "name": "tomcat",
       "versions": [
         "6.0"
       ]
@@ -81,28 +81,28 @@
   "services": {
     "native": [
       {
-        "id": "cassandra",
+        "name": "cassandra",
         "type": "datastore",
         "versions": [
           "1.1.7"
         ]
       },
       {
-        "id": "couchdb",
+        "name": "couchdb",
         "type": "datastore",
         "versions": [
           "1.2"
         ]
       },
       {
-        "id": "elasticsearch",
+        "name": "elasticsearch",
         "type": "search",
         "versions": [
           "0.19"
         ]
       },
       {
-        "id": "filesystem",
+        "name": "filesystem",
         "type": "datastore",
         "description": "Persistent file system",
         "versions": [
@@ -110,56 +110,56 @@
         ]
       },
       {
-        "id": "hadoop",
+        "name": "hadoop",
         "type": "analytics",
         "versions": [
           "1.1.2"
         ]
       },
       {
-        "id": "memcached",
+        "name": "memcached",
         "type": "datastore",
         "versions": [
           "1.4"
         ]
       },
       {
-        "id": "mongodb",
+        "name": "mongodb",
         "type": "datastore",
         "versions": [
           "2.0"
         ]
       },
       {
-        "id": "mysql",
+        "name": "mysql",
         "type": "datastore",
         "versions": [
           "5.1"
         ]
       },
       {
-        "id": "neo4j",
+        "name": "neo4j",
         "type": "datastore",
         "versions": [
           "1.4"
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "type": "datastore",
         "versions": [
           "9.0"
         ]
       },
       {
-        "id": "rabbitmq",
+        "name": "rabbitmq",
         "type": "worker",
         "versions": [
           "2.4"
         ]
       },
       {
-        "id": "redis",
+        "name": "redis",
         "type": "datastore",
         "versions": [
           "2.6"

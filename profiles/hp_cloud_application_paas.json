@@ -73,14 +73,14 @@
   ],
   "middleware": [
     {
-      "id": "tomee",
+      "name": "tomee",
       "runtime": "java",
       "versions": [
 
       ]
     },
     {
-      "id": "jboss",
+      "name": "jboss",
       "runtime": "java",
       "versions": [
 
@@ -91,7 +91,7 @@
   "services": {
     "native": [
       {
-        "id": "filesystem",
+        "name": "filesystem",
         "description": "Persistent file system",
         "type": "datastore",
         "versions": [
@@ -99,7 +99,7 @@
         ]
       },
       {
-        "id": "memcached",
+        "name": "memcached",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -107,7 +107,7 @@
         ]
       },
       {
-        "id": "mysql",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -115,7 +115,7 @@
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -123,7 +123,7 @@
         ]
       },
       {
-        "id": "rabbitmq",
+        "name": "rabbitmq",
         "description": "",
         "type": "worker",
         "versions": [
@@ -131,7 +131,7 @@
         ]
       },
       {
-        "id": "redis",
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [

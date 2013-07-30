@@ -62,14 +62,14 @@
   ],
   "middleware": [
     {
-      "id": "tomcat",
+      "name": "tomcat",
       "runtime": "java",
       "versions": [
         "6"
       ]
     },
     {
-      "id": "gunicorn",
+      "name": "gunicorn",
       "runtime": "python",
       "versions": [
 
@@ -78,7 +78,7 @@
   ],
   "frameworks": [
     {
-      "id": "rails",
+      "name": "rails",
       "runtime": "ruby",
       "versions": [
         "3.0",
@@ -86,7 +86,7 @@
       ]
     },
     {
-      "id": "django",
+      "name": "django",
       "runtime": "python",
       "versions": [
         "1.3",
@@ -97,7 +97,7 @@
   "services": {
     "native": [
       {
-        "id": "mysql",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "mongodb",
+        "name": "mongodb",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -113,7 +113,7 @@
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -121,7 +121,7 @@
         ]
       },
       {
-        "id": "redis",
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -129,7 +129,7 @@
         ]
       },
       {
-        "id": "rabbitmq",
+        "name": "rabbitmq",
         "description": "",
         "type": "worker",
         "versions": [
@@ -139,91 +139,91 @@
     ],
     "addon": [
       {
-        "id": "searchify",
+        "name": "searchify",
         "url": "http://www.searchify.com/",
         "description": "",
         "type": "search"
       },
       {
-        "id": "mongolab",
+        "name": "mongolab",
         "url": "https://mongolab.com/",
         "description": "",
         "type": "datastore"
       },
       {
-        "id": "mongohq",
+        "name": "mongohq",
         "url": "https://www.mongohq.com/",
         "description": "",
         "type": "datastore"
       },
       {
-        "id": "mailgun",
+        "name": "mailgun",
         "url": "http://www.mailgun.com/",
         "description": "",
         "type": "messaging"
       },
       {
-        "id": "blitz",
+        "name": "blitz",
         "url": "https://www.blitz.io/",
         "description": "",
         "type": "analytics"
       },
       {
-        "id": "ironworker",
+        "name": "ironworker",
         "url": "http://www.iron.io/worker",
         "description": "",
         "type": "worker"
       },
       {
-        "id": "ironmq",
+        "name": "ironmq",
         "url": "http://www.iron.io/mq",
         "description": "",
         "type": "worker"
       },
       {
-        "id": "cloudmailin",
+        "name": "cloudmailin",
         "url": "http://www.cloudmailin.com/",
         "description": "",
         "type": "messaging"
       },
       {
-        "id": "cleardb",
+        "name": "cleardb",
         "url": "http://www.cleardb.com/",
         "description": "",
         "type": "datastore"
       },
       {
-        "id": "nexmo",
+        "name": "nexmo",
         "url": "http://nexmo.com/",
         "description": "",
         "type": "messaging"
       },
       {
-        "id": "memcachier",
+        "name": "memcachier",
         "url": "http://www.memcachier.com/",
         "description": "",
         "type": "datastore"
       },
       {
-        "id": "cloudinary",
+        "name": "cloudinary",
         "url": "http://cloudinary.com/",
         "description": "",
         "type": "media"
       },
       {
-        "id": "logentries",
+        "name": "logentries",
         "url": "https://logentries.com/",
         "description": "",
         "type": "analytics"
       },
       {
-        "id": "hosted graphite",
+        "name": "hosted graphite",
         "url": "https://www.hostedgraphite.com/",
         "description": "",
         "type": "analytics"
       },
       {
-        "id": "redis cloud",
+        "name": "redis cloud",
         "url": "http://redis-cloud.com/",
         "description": "",
         "type": "datastore"

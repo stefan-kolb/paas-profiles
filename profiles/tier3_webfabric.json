@@ -77,7 +77,7 @@
   "services": {
     "native": [
       {
-        "id": "neo4j",
+        "name": "neo4j",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -85,7 +85,7 @@
         ]
       },
       {
-        "id": "microsoft sql server",
+        "name": "microsoft sql server",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -93,7 +93,7 @@
         ]
       },
       {
-        "id": "blob",
+        "name": "blob",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -101,7 +101,7 @@
         ]
       },
       {
-        "id": "rabbitmq",
+        "name": "rabbitmq",
         "description": "",
         "type": "worker",
         "versions": [
@@ -109,7 +109,7 @@
         ]
       },
       {
-        "id": "redis",
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -117,7 +117,7 @@
         ]
       },
       {
-        "id": "mysql",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -125,7 +125,7 @@
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -133,7 +133,7 @@
         ]
       },
       {
-        "id": "mongodb",
+        "name": "mongodb",
         "description": "",
         "type": "datastore",
         "versions": [

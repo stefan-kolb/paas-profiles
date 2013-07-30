@@ -55,42 +55,42 @@
   "middleware": null,
   "frameworks": [
     {
-      "id": "spring",
+      "name": "spring",
       "runtime": "java",
       "versions": [
 
       ]
     },
     {
-      "id": "play",
+      "name": "play",
       "runtime": "java",
       "versions": [
 
       ]
     },
     {
-      "id": "lift",
+      "name": "lift",
       "runtime": "scala",
       "versions": [
 
       ]
     },
     {
-      "id": "grails",
+      "name": "grails",
       "runtime": "groovy",
       "versions": [
 
       ]
     },
     {
-      "id": "rails",
+      "name": "rails",
       "runtime": "ruby",
       "versions": [
 
       ]
     },
     {
-      "id": "sinatra",
+      "name": "sinatra",
       "runtime": "ruby",
       "versions": [
 
@@ -100,7 +100,7 @@
   "services": {
     "native": [
       {
-        "id": "mongodb",
+        "name": "mongodb",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -108,7 +108,7 @@
         ]
       },
       {
-        "id": "mysql",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -116,7 +116,7 @@
         ]
       },
       {
-        "id": "postgresql",
+        "name": "postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -124,7 +124,7 @@
         ]
       },
       {
-        "id": "rabbitmq",
+        "name": "rabbitmq",
         "description": "",
         "type": "worker",
         "versions": [
@@ -132,7 +132,7 @@
         ]
       },
       {
-        "id": "redis",
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -140,7 +140,7 @@
         ]
       },
       {
-        "id": "swift",
+        "name": "swift",
         "description": "",
         "type": "datastore",
         "versions": [

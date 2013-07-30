@@ -98,6 +98,7 @@
 				<td>
 					<div class="row-fluid">
 					<% 
+					unless profile["infrastructures"].nil?
 						profile["infrastructures"].uniq { |h| h["continent"] }.sort { |a,b| a["continent"] <=> b["continent"] }.each do |rt|
 						
 						title = ""
@@ -119,6 +120,7 @@
 					%>
 						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
 					<% 
+						end
 						end
 					%>
 					</div>

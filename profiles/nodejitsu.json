@@ -40,22 +40,22 @@
     ],
     "addon": [
       {
-        "id": "iriscouch",
+        "name": "iriscouch",
         "url": "http://www.iriscouch.com/",
         "type": "datastore"
       },
       {
-        "id": "mongolab",
+        "name": "mongolab",
         "url": "https://mongolab.com/",
         "type": "datastore"
       },
       {
-        "id": "mongohq",
+        "name": "mongohq",
         "url": "https://www.mongohq.com/",
         "type": "datastore"
       },
       {
-        "id": "redis to go",
+        "name": "redis to go",
         "url": "http://redistogo.com/",
         "type": "datastore"
       }

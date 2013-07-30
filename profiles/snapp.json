@@ -32,7 +32,7 @@
   "services": {
     "native": [
       {
-        "id": "microsoft sql server",
+        "name": "microsoft sql server",
         "description": "",
         "type": "datastore",
         "versions": [

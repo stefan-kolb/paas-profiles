@@ -34,7 +34,7 @@
   "services": {
     "native": [
       {
-        "id": "mysql",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -42,7 +42,7 @@
         ]
       },
       {
-        "id": "oracle db",
+        "name": "oracle db",
         "description": "",
         "type": "datastore",
         "versions": [

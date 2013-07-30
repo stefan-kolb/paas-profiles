@@ -23,7 +23,7 @@ class Vendor
 	field :hosting, type: Array
 	field :compliance, type: Array
 	# objects
-	embeds_one :pricing
+	embeds_many :pricing, store_as: "pricing"
 	embeds_one :scaling
 	embeds_many :runtimes
 	embeds_many :middlewares, store_as: "middleware"
