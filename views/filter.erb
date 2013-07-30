@@ -162,9 +162,8 @@
 				);
 				
 			$('form#filter').on('submit', function(e) {
-			data = $('#filter').serialize();
-			console.log(data);
-			
+				data = $('#filter').serialize();
+				
 				$.get( 'search', data, function(response) {
 					$('#result').html(response);
 				   },
