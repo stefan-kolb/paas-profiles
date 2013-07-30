@@ -4,7 +4,7 @@ require 'mongoid'
 
 require_relative 'models/vendor'
 
-Mongoid.load!("mongoid.yml", :development)
+Mongoid.load!("mongoid.yml", :production)
 
 namespace :mongo do
 		
