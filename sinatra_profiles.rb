@@ -3,6 +3,7 @@ require_relative 'models/vendor'
 
 require 'mongoid'
 require 'sinatra'
+require 'newrelic_rpm'
 
 Mongoid.load!("mongoid.yml", :production)
 
