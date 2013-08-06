@@ -1,6 +1,6 @@
 {
   "name": "Heroku",
-  "revision": "2013-07-12",
+  "revision": "2013-08-06",
   "vendor_verified": false,
   "url": "http://www.heroku.com/",
   "status": "production",
@@ -147,6 +147,12 @@
         "type": ""
       },
       {
+        "name": "cdn sumo",
+        "url": "",
+        "desc": "",
+        "type": ""
+      },	  
+      {
         "name": "chargify",
         "url": "",
         "desc": "",
@@ -260,6 +266,11 @@
         "type": ""
       },
       {
+        "name": "groupdocs",
+        "desc": "",
+        "type": ""
+      },	  
+      {
         "name": "honeybadger",
         "desc": "",
         "type": ""
@@ -309,6 +320,11 @@
         "desc": "",
         "type": ""
       },
+      {
+        "name": "keen io",
+        "desc": "",
+        "type": "analytics"
+      },	  
       {
         "name": "librato",
         "desc": "",
@@ -371,11 +387,6 @@
       },
       {
         "name": "mwiki",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "myredis",
         "desc": "",
         "type": ""
       },
@@ -485,6 +496,11 @@
         "type": ""
       },
       {
+        "name": "runscope",
+        "desc": "",
+        "type": ""
+      },	  
+      {
         "name": "scheduler",
         "desc": "",
         "type": ""
@@ -520,6 +536,11 @@
         "type": ""
       },
       {
+        "name": "signature",
+        "desc": "",
+        "type": ""
+      },	  
+      {
         "name": "sourceninja",
         "desc": "",
         "type": ""
@@ -544,6 +565,11 @@
         "desc": "",
         "type": ""
       },
+      {
+        "name": "stormpath",
+        "desc": "",
+        "type": ""
+      },	  
       {
         "name": "superfeedr",
         "desc": "",
@@ -595,6 +621,11 @@
         "type": ""
       },
       {
+        "name": "wercker",
+        "desc": "",
+        "type": ""
+      },	  
+      {
         "name": "websolr",
         "desc": "",
         "type": ""
@@ -615,6 +646,16 @@
         "type": ""
       },
       {
+        "name": "alphamail",
+        "desc": "",
+        "type": ""
+      },
+	  {
+        "name": "appsignal",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "bablic",
         "desc": "",
         "type": ""
@@ -625,25 +666,35 @@
         "type": ""
       },
       {
+        "name": "bounscale",
+        "desc": "",
+        "type": ""
+      },	  
+      {
         "name": "boxcar",
         "desc": "",
         "type": ""
       },
       {
-        "name": "cdn sumo",
+        "name": "cameratag",
         "desc": "",
         "type": ""
       },
-      {
-        "name": "circleci",
+	  {
+        "name": "circle ci",
         "desc": "",
         "type": ""
       },
-      {
+	  {
         "name": "cloudassault",
         "desc": "",
         "type": ""
       },
+	  {
+        "name": "cloudmqtt",
+        "desc": "",
+        "type": ""
+      },	  
       {
         "name": "dashmin",
         "desc": "",
@@ -665,6 +716,11 @@
         "type": ""
       },
       {
+        "name": "ebookglue",
+        "desc": "",
+        "type": ""
+      },	  
+      {
         "name": "errorapp",
         "desc": "",
         "type": ""
@@ -675,20 +731,35 @@
         "type": ""
       },
       {
-        "name": "groupdocs",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "rabbitmq-bigwig",
         "desc": "",
         "type": ""
       },
       {
+        "name": "rethinkdb-cloud",
+        "desc": "",
+        "type": ""
+      },	
+	  {
+        "name": "rollbar",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "runtimeerror",
+        "desc": "",
+        "type": ""
+      },	  
+      {
         "name": "robowhois",
         "desc": "",
         "type": ""
       },
+      {
+        "name": "s3search",
+        "desc": "",
+        "type": ""
+      },	  
       {
         "name": "saaspose",
         "desc": "",
@@ -700,10 +771,10 @@
         "type": ""
       },
       {
-        "name": "signature",
+        "name": "telapi",
         "desc": "",
         "type": ""
-      },
+      },	  
       {
         "name": "ticketly",
         "desc": "",
@@ -720,7 +791,7 @@
         "type": ""
       },
       {
-        "name": "wercker",
+        "name": "zeropush",
         "desc": "",
         "type": ""
       }
