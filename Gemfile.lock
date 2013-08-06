@@ -16,6 +16,7 @@ GEM
       tzinfo (~> 0.3.22)
     moped (1.5.0)
     multi_json (1.7.7)
+    newrelic_rpm (3.6.6.147)
     origin (1.1.0)
     rack (1.5.2)
     rack-protection (1.5.0)
@@ -32,4 +33,5 @@ PLATFORMS
 
 DEPENDENCIES
   mongoid
+  newrelic_rpm
   sinatra
