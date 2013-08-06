@@ -20,7 +20,7 @@
 				</div>
 				<div class="span4" style="height:60px; float: none; display: table-cell; vertical-align: bottom;">
 					<span class="icon-tags" title="PaaS type"></span><small><strong>&nbsp;<%= profile["type"] %></strong></small>
-					<p class="pull-right"><small><em>Last updated <span class="date" title="<%= profile["revision"] %>"></span> ago.</em></small></p>
+					<p class="pull-right"><small><em>Last updated <span class="date" title="<%= profile["revision"].to_datetime %>"></span> ago.</em></small></p>
 				</div>
 			</div>
 			<hr />
@@ -34,7 +34,7 @@
 					<% else %>
 					<span class="label label-success">Production</span>
 					<% end %>
-					since <span class="date" title="<%= profile["status_since"] %>"></span>.</p>
+					since <span class="date" title="<%= profile["status_since"].to_date %>"></span>.</p>
 					<p>
 					<%= profile["name"] %> is available as 
 					<% if profile["hosting"].include? "public" %>
