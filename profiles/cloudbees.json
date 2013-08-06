@@ -76,6 +76,14 @@
         "versions": [
 
         ]
+      },
+	  {
+        "name": "foxweave",
+        "description": "",
+        "type": "devops",
+        "versions": [
+
+        ]
       }
     ],
     "addon": [
@@ -126,7 +134,7 @@
         "url": "http://www.cloudamqp.com/",
         "description": "",
         "type": "worker"
-      },
+      },	  
       {
         "name": "blazemeter",
         "url": "http://blazemeter.com/",
