@@ -34,7 +34,7 @@
 					<% else %>
 					<span class="label label-success">Production</span>
 					<% end %>
-					since <span class="date" title="<%= profile["status_since"].to_date %>"></span>.</p>
+					since <span class="date" title="<% unless profile["status_since"].nil? %><%= profile["status_since"].to_date %><% end %>"></span>.</p>
 					<p>
 					<%= profile["name"] %> is available as 
 					<% if profile["hosting"].include? "public" %>
