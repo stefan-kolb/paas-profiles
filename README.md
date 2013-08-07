@@ -3,7 +3,7 @@
 *Making Platform as a Service offerings comparable - Ecosystem profiles for PaaS vendors.*
 
 <br/>
-Currently 83 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
+Currently 84 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
 
 For convenience, the profiles can be viewed via executing the [sinatra app](sinatra_profiles.rb).
 
