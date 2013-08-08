@@ -10,3 +10,4 @@ deploy:
   app: paas-profiles
   on:
     repo: stefan-kolb/paas-profiles
+  run: "rake mongo:import"

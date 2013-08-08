@@ -1,4 +1,3 @@
-require_relative 'Rakefile'
 require_relative 'models/vendor'
 
 require 'mongoid'
