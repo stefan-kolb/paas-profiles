@@ -10,7 +10,7 @@
     "private"
   ],
   "pricing": [
-  
+
   ],
   "scaling": {
     "vertical": false,
@@ -63,7 +63,7 @@
 
       ]
     },
-	{
+    {
       "language": "dart",
       "versions": [
 
@@ -75,7 +75,7 @@
 
       ]
     },
-	    {
+    {
       "language": "go",
       "versions": [
 

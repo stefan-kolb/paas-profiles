@@ -72,7 +72,17 @@
     }
   ],
   "middleware": null,
-  "frameworks": null,
+  "frameworks": [
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+        "1.2.*",
+        "2.0.*",
+        "2.1.*"
+      ]
+    }
+  ],
   "services": {
     "native": [
       {
@@ -151,7 +161,7 @@
         "url": "",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "chargify",
         "url": "",
@@ -269,7 +279,7 @@
         "name": "groupdocs",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "honeybadger",
         "desc": "",
@@ -324,7 +334,7 @@
         "name": "keen io",
         "desc": "",
         "type": "analytics"
-      },	  
+      },
       {
         "name": "librato",
         "desc": "",
@@ -499,7 +509,7 @@
         "name": "runscope",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "scheduler",
         "desc": "",
@@ -539,7 +549,7 @@
         "name": "signature",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "sourceninja",
         "desc": "",
@@ -569,7 +579,7 @@
         "name": "stormpath",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "superfeedr",
         "desc": "",
@@ -624,7 +634,7 @@
         "name": "wercker",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "websolr",
         "desc": "",
@@ -650,7 +660,7 @@
         "desc": "",
         "type": ""
       },
-	  {
+      {
         "name": "appsignal",
         "desc": "",
         "type": ""
@@ -669,7 +679,7 @@
         "name": "bounscale",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "boxcar",
         "desc": "",
@@ -680,21 +690,21 @@
         "desc": "",
         "type": ""
       },
-	  {
+      {
         "name": "circle ci",
         "desc": "",
         "type": ""
       },
-	  {
+      {
         "name": "cloudassault",
         "desc": "",
         "type": ""
       },
-	  {
+      {
         "name": "cloudmqtt",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "dashmin",
         "desc": "",
@@ -719,7 +729,7 @@
         "name": "ebookglue",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "errorapp",
         "desc": "",
@@ -739,8 +749,8 @@
         "name": "rethinkdb-cloud",
         "desc": "",
         "type": ""
-      },	
-	  {
+      },
+      {
         "name": "rollbar",
         "desc": "",
         "type": ""
@@ -749,7 +759,7 @@
         "name": "runtimeerror",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "robowhois",
         "desc": "",
@@ -759,7 +769,7 @@
         "name": "s3search",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "saaspose",
         "desc": "",
@@ -774,7 +784,7 @@
         "name": "telapi",
         "desc": "",
         "type": ""
-      },	  
+      },
       {
         "name": "ticketly",
         "desc": "",
