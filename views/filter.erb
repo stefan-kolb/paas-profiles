@@ -90,6 +90,32 @@
 		</div>
 		
 		<div class="control-group">
+		  <label class="control-label">Middleware</label>
+			<div class="controls">
+				<select name="middleware[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
+					<% 
+					Vendor.distinct( 'middleware.name' ).sort.each do |r| 
+					%>
+					<option value="<%= r %>"><%= r.capitalize %></option>
+					<% end %>
+				</select>
+			</div>
+		</div>
+		
+		<div class="control-group">
+		  <label class="control-label">Frameworks</label>
+			<div class="controls">
+				<select name="frameworks[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
+					<% 
+					Vendor.distinct( 'frameworks.name' ).sort.each do |r| 
+					%>
+					<option value="<%= r %>"><%= r.capitalize %></option>
+					<% end %>
+				</select>
+			</div>
+		</div>
+		
+		<div class="control-group">
 		  <label class="control-label">Services</label>
 			<div class="controls">
 				<select name="services[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 5" multiple>

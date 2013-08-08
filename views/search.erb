@@ -29,6 +29,16 @@ unless params[:runtimes].nil?
 	query = query.all("runtimes.language" => params[:runtimes])
 end
 
+# middleware
+unless params[:middleware].nil?
+	query = query.all("middleware.name" => params[:middleware])
+end
+
+# frameworks
+unless params[:frameworks].nil?
+	query = query.all("frameworks.name" => params[:frameworks])
+end
+
 # services
 unless params[:services].nil?
 	query = query.all("services.native.name" => params[:services])
