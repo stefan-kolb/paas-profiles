@@ -117,6 +117,74 @@
 			</div>
 			
 			<hr/>
+
+			<%
+				unless profile["middleware"].nil? || profile["middleware"].empty?
+			%>	
+			<div class="row">
+				<div class="span12"><h3>Middleware</h3></div>
+				<div class="span12">
+				<table class="table table-bordered table-hover">
+				<thead>
+					<tr><th>Name</th><th>Runtime</th><th>Versions</th></tr>
+				</thead>
+				<tbody>
+					<% 
+						profile["middleware"].sort_by { |a| [ a["name"], a["runtime"] ] }.each do |rt|
+					%>
+					<tr>
+						<td>
+							<%= rt["name"].capitalize %>
+						</td>
+						<td>
+							<%= rt["runtime"].capitalize %>
+						</td>
+						<% rt["versions"].each do |v|
+							v.gsub! /\*\.\*/, 'All versions'
+						end %>
+						<td><em><%= rt["versions"].join(", ") %></em></td>
+					</tr>
+					<% end %>
+				</tbody>
+				</table>
+				</div>
+			</div>
+			<hr/>
+			<% end %>
+			
+			<%
+				unless profile["frameworks"].nil? || profile["frameworks"].empty?
+			%>	
+			<div class="row">
+				<div class="span12"><h3>Frameworks</h3></div>
+				<div class="span12">
+				<table class="table table-bordered table-hover">
+				<thead>
+					<tr><th>Name</th><th>Runtime</th><th>Versions</th></tr>
+				</thead>
+				<tbody>
+					<% 
+						profile["frameworks"].sort_by { |a| [ a["name"], a["runtime"] ] }.each do |rt|
+					%>
+					<tr>
+						<td>
+							<%= rt["name"].capitalize %>
+						</td>
+						<td>
+							<%= rt["runtime"].capitalize %>
+						</td>
+						<% rt["versions"].each do |v|
+							v.gsub! /\*\.\*/, 'All versions'
+						end %>
+						<td><em><%= rt["versions"].join(", ") %></em></td>
+					</tr>
+					<% end %>
+				</tbody>
+				</table>
+				</div>
+			</div>
+			<hr/>
+			<% end %>
 			
 			<%
 				services = profile["services"].nil?

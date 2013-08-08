@@ -3,7 +3,7 @@
 *Making Platform as a Service offerings comparable - Ecosystem profiles for PaaS vendors.*
 
 <br/>
-Currently 84 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
+Currently 85 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
 
 For convenience, the profiles can be viewed via executing the [sinatra app](sinatra_profiles.rb).
 
@@ -155,6 +155,8 @@ In order to allow exact matching, the language keys are restricted. Currently al
 ```
 apex, clojure, cobol, dotnet, erlang, go, groovy, haskell, java, lua, node, perl, php, python, ruby, scala
 ```
+
+*Note: Due to common parlance the Node framework is listed as language being the de facto standard for server-side scripting with JavaScript.*
 
 #### Versions
 

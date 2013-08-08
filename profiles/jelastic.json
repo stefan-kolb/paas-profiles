@@ -85,8 +85,7 @@
     },
     {
       "name": "nginx",
-      "description": "",
-      "type": "",
+      "runtime": "",
       "versions": [
         "1.2.7"
       ]

@@ -72,6 +72,7 @@
   "middleware": [
     {
       "name": "tomcat",
+      "runtime": "java",
       "versions": [
         "6.0"
       ]

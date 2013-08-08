@@ -64,6 +64,7 @@
   "middleware": [
     {
       "name": "tomcat",
+      "runtime": "java",
       "versions": [
         "6",
         "7"
@@ -71,18 +72,21 @@
     },
     {
       "name": "passenger",
+      "runtime": "ruby",
       "versions": [
         ""
       ]
     },
     {
       "name": "iis",
+      "runtime": "dotnet",
       "versions": [
         "7.5"
       ]
     },
     {
       "name": "httpd",
+      "runtime": "php",
       "versions": [
         ""
       ]

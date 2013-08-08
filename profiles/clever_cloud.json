@@ -63,6 +63,7 @@
   "middleware": [
     {
       "name": "tomcat",
+      "runtime": "java",
       "versions": [
         "4.1",
         "5.5",
@@ -72,6 +73,7 @@
     },
     {
       "name": "jetty",
+      "runtime": "java",
       "versions": [
         "6.1",
         "7.6",
@@ -81,6 +83,7 @@
     },
     {
       "name": "jboss",
+      "runtime": "java",
       "versions": [
         "6.1",
         "7.1"
@@ -88,12 +91,14 @@
     },
     {
       "name": "glassfish",
+      "runtime": "java",
       "versions": [
         "3.1"
       ]
     },
     {
       "name": "resin",
+      "runtime": "java",
       "versions": [
         "3.1"
       ]
@@ -104,8 +109,8 @@
       "name": "play",
       "runtime": "java",
       "versions": [
-        "1.2",
-        "2"
+        "1.*",
+        "2.*"
       ]
     }
   ],
