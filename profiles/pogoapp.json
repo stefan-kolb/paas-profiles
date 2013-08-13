@@ -11,8 +11,8 @@
   ],
   "pricing": [
     {
-      "model": "monthly",
-      "period": ""
+      "model": "fixed",
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -61,7 +61,7 @@
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
+      "country": "US",
       "region": ""
     }
   ]
