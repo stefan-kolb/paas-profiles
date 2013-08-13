@@ -35,6 +35,9 @@
       ]
     }
   ],
+  "middleware": [
+
+  ],
   "frameworks": null,
   "services": {
     "native": [

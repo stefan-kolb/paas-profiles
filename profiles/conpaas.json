@@ -37,6 +37,9 @@
       ]
     }
   ],
+  "middleware": [
+
+  ],
   "frameworks": null,
   "services": null,
   "extendable": true,

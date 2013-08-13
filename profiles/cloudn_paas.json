@@ -60,8 +60,12 @@
       ]
     }
   ],
-  "middleware": null,
-  "frameworks": null,
+  "middleware": [
+
+  ],
+  "frameworks": [
+
+  ],
   "services": {
     "native": [
       {

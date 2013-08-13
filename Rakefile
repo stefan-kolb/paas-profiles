@@ -1,5 +1,6 @@
 require 'json'
 require 'mongoid'
+require 'rake/testtask'
 
 require_relative 'models/vendor'
 
@@ -18,3 +19,11 @@ namespace :mongo do
 			end
 		end
 end
+
+Rake::TestTask.new do |t|
+		t.warning = true
+    t.verbose = true
+    t.test_files = FileList['test/test*.rb']
+end
+
+task :default => [:test]
