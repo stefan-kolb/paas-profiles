@@ -13,7 +13,7 @@ namespace :mongo do
 			# delete collection
 			Vendor.delete_all
 				
-			Dir.glob("profiles#{File::SEPARATOR}*.json").each do |file_name|
+			Dir.glob("./profiles#{File::SEPARATOR}*.json").each do |file_name|
 				data = JSON.parse(File.read(file_name))
 				Vendor.create(data)
 			end
