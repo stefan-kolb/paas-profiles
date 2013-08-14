@@ -22,7 +22,7 @@ class Vendor
 	field :extendable, type: Boolean
 	field :hosting, type: Array
 	field :compliance, type: Array
-	# objects
+	# relations
 	embeds_many :pricing, store_as: "pricing"
 	embeds_one :scaling
 	embeds_many :runtimes
@@ -30,4 +30,20 @@ class Vendor
 	embeds_many :frameworks
 	embeds_one :service, store_as: "services"
 	embeds_many :infrastructures
+	# validations
+	validates :name, presence: true
+	validates :revision, presence: true # todo format
+	validates :vendor_verified, presence: true # todo optional?
+	validates :url, presence: true, format: { with: /http[s]?:\/\/.*/ }
+	validates :status, presence: true, inclusion: { in: [ "beta", "production" ] } # todo values
+	# validates :status_since, presence: true # todo format, optional?
+	validates :type, presence: true # todo optional?
+	validates :extendable, presence: true
+	# todo custom validator validates :hosting, presence: true, inclusion: { in: [ "public", "private" ] } # todo values
+	# validates :pricing, presence: true
+	validates :scaling, presence: true
+	validates :runtimes, presence: true
+	# middleware?, frameworks?, services?
+	# validates :infrastructures, presence: true
+	# validates :services, presence: true
 end

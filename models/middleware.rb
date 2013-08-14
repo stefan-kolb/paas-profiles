@@ -3,9 +3,10 @@ require 'mongoid'
 class Middleware
 	include Mongoid::Document
 	
-	field :id, type: String
+	embedded_in :vendor
+	
+	field :name, type: String
 	field :runtime, type: String
 	field :versions, type: Array
-	
-	embedded_in :vendor
+	# validations
 end

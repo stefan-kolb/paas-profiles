@@ -12,10 +12,14 @@ namespace :mongo do
     task :import do
 			# delete collection
 			Vendor.delete_all
-				
+			# import files
 			Dir.glob("./profiles#{File::SEPARATOR}*.json").each do |file_name|
 				data = JSON.parse(File.read(file_name))
-				Vendor.create(data)
+				Vendor.create!(data)
+			end
+			# be sure everything was imported
+			unless Dir["./profiles#{File::SEPARATOR}*.json"].length == Vendor.count
+				raise "Not all profiles were imported into MongoDB"
 			end
 		end
 end

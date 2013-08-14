@@ -281,3 +281,7 @@ In any case, please add evidence for the information so I can verify your change
 I am also interested in direct **cooperation with vendors** in order to keep the profiles at first hand and spot-on. Contact me if you are interested to supply a [vendor verified profile](#vendor-verification).
 
 Contribute either via [pull request](https://help.github.com/articles/using-pull-requests), create an [issue](https://github.com/stefan-kolb/paas-profiles/issues) or send me an [email](mailto:stefan.kolb@uni-bamberg.de).
+
+---
+[![Build Status](https://travis-ci.org/stefan-kolb/paas-profiles.png)](https://travis-ci.org/stefan-kolb/paas-profiles])
+[![Dependency Status](https://gemnasium.com/stefan-kolb/paas-profiles.png)](https://gemnasium.com/stefan-kolb/paas-profiles)
