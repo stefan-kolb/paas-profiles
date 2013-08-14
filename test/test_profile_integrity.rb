@@ -11,7 +11,7 @@ class TestProfileIntegrity < Minitest::Test
 		testname = File.basename(file, ".json")
 		
 		define_method("test_#{testname}_profile") do
-			profile = {}
+			profile = nil
 			# wellformedness
 			begin
 				profile = JSON.parse(File.read(file))
