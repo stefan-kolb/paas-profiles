@@ -4,7 +4,7 @@ require 'rake/testtask'
 
 require_relative 'models/vendor'
 
-Mongoid.load!("mongoid.yml", :production)
+Mongoid.load!("./config/mongoid.yml", :production)
 
 namespace :mongo do
 		
@@ -22,8 +22,8 @@ end
 
 Rake::TestTask.new do |t|
 		t.warning = true
-    t.verbose = true
-    t.test_files = FileList['test/test*.rb']
+		t.verbose = true
+		t.test_files = FileList['test/test*.rb']
 end
 
 task :default => [:test]
