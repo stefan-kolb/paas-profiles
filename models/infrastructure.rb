@@ -1,5 +1,5 @@
-require 'iso_country_codes'
 require 'mongoid'
+require 'iso_country_codes'
 
 class Infrastructure
 	include Mongoid::Document
