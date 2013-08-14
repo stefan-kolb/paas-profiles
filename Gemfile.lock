@@ -9,7 +9,6 @@ GEM
       multi_json (~> 1.0)
     builder (3.0.4)
     i18n (0.6.4)
-    iso_country_codes (0.4.1)
     minitest (5.0.6)
     mongoid (3.1.4)
       activemodel (~> 3.2)
@@ -35,7 +34,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  iso_country_codes
   minitest
   mongoid
   newrelic_rpm
