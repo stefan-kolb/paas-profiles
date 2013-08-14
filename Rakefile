@@ -4,7 +4,7 @@ require 'rake/testtask'
 
 require_relative 'models/vendor'
 
-Mongoid.load!("./config/mongoid.yml", :production)
+Mongoid.load!("./config/mongoid.yml")
 
 namespace :mongo do
 		

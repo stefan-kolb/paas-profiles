@@ -4,7 +4,7 @@ require 'mongoid'
 require 'sinatra'
 require 'newrelic_rpm'
 
-Mongoid.load!("./config/mongoid.yml", :production)
+Mongoid.load!("./config/mongoid.yml")
 
 get '/' do
 	redirect '/vendors'

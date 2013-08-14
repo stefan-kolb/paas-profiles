@@ -776,6 +776,11 @@
         "type": ""
       },
       {
+        "name": "statuspage",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "securekey",
         "desc": "",
         "type": ""
