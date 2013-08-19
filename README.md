@@ -5,8 +5,6 @@
 <br/>
 Currently 85 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
 
-For convenience, the profiles can be viewed via executing the [sinatra app](sinatra_profiles.rb).
-
 **The current web interface can be viewed at [PaaSify.it](http://paasify.it)**
 
 **Any errors? Important missing properties? Suggestions? [Contribute](#contribution)**

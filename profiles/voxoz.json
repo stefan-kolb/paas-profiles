@@ -1,0 +1,52 @@
+{
+  "name": "Voxoz",
+  "revision": "2013-08-19",
+  "vendor_verified": false,
+  "url": "http://voxoz.com",
+  "status": "beta",
+  "status_since": "",
+  "type": "language-specific",
+  "hosting": [
+    "public"
+  ],
+  "pricing": [
+    {
+      "model": "fixed",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "erlang",
+      "versions": [
+
+      ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+
+    ],
+    "addon": [
+
+    ]
+  },
+  "extendable": false,
+  "infrastructures": [
+
+  ]
+}
