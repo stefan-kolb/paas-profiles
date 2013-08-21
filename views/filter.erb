@@ -181,13 +181,6 @@
 				
 				$('.selectpicker').selectpicker();
 				
-				$.get( 'search', function(response) {
-					$('#result').html(response);
-				   },
-				   'html'
-				);
-				
-			$('form#filter').on('submit', function(e) {
 				data = $('#filter').serialize();
 				
 				$.get( 'search', data, function(response) {
@@ -195,8 +188,17 @@
 				   },
 				   'html'
 				);
-				e.preventDefault();
-			});
+				
+				$('form#filter').on('submit', function(e) {
+					data = $('#filter').serialize();
+				
+					$.get( 'search', data, function(response) {
+						$('#result').html(response);
+						},
+						'html'
+					);
+					e.preventDefault();
+				});
 			
 		});
 		</script>		
