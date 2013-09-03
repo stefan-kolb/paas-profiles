@@ -42,7 +42,6 @@
     {
       "language": "php",
       "versions": [
-        "5.2",
         "5.3"
       ]
     },
