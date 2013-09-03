@@ -1,3 +1,6 @@
+	<script src="/js/jquery.tablesorter.min.js"></script>
+	<script src="/js/jquery.tablesorter.widgets.min.js"></script>
+	<link rel="stylesheet" href="/css/theme.bootstrap.css">
 	<style>
       /* Main marketing message and sign up button */
       .jumbotron {
@@ -34,13 +37,21 @@
 		<div class="text-center"><a href="filter" class="btn btn-warning btn-large">Find your PaaS</a></div>
 	</div>
 		
-		<table class="table table-bordered table-hover">
+		<table id="main" class="table table-bordered table-hover tablesorter">
 			<thead>
-				<tr><th>Name</th><th>Status</th><th>Runtimes</th><th>Scaling</th><th>Hosting</th><th>Infrastructures</th><th></th></tr>
+				<tr>
+					<th>Name</th>
+					<th data-sorter="false">Status</th>
+					<th data-sorter="false">Runtimes</th>
+					<th data-sorter="false">Scaling</th>
+					<th data-sorter="false">Hosting</th>
+					<th data-sorter="false">Infrastructures</th>
+					<th data-sorter="false"></th>
+				</tr>
 			</thead>
 			<tbody>
 			<%
-				Vendor.all.sort { |x,y| x.name.downcase <=> y.name.downcase}.each do |profile|
+				Vendor.all.shuffle.each do |profile|
 			%>
 			<tr>
 				<td>
@@ -130,8 +141,19 @@
 					<a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/,'_') %>" class="btn btn-success btn-small">Details</a>
 				</td>
 			</tr>
-			</tbody>
 			<% 	
 				end
 			%>
+			</tbody>
 		</table>
+<script>
+$(document).ready(function() 
+    { 
+        $("#main").tablesorter({
+			theme : 'bootstrap',
+			headerTemplate : '{icon}{content}',
+			widgets: ['uitheme']
+		}); 
+    } 
+);
+</script>
