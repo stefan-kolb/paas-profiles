@@ -1,7 +1,6 @@
 {
   "name": "IBM SmartCloud Application Services",
   "revision": "2013-07-05T17:47:54+02:00",
-  "vendor_verified": false,
   "url": "http://www.ibm.com/cloud-computing/us/en/paas.html",
   "status": "production",
   "status_since": "2012-12-21",

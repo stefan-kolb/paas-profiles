@@ -1,7 +1,6 @@
 {
   "name": "SAP HANA Cloud",
   "revision": "2013-07-24",
-  "vendor_verified": false,
   "url": "https://www54.sap.com/pc/tech/cloud/software/hana-cloud-platform-as-a-service/index.html",
   "status": "production",
   "status_since": "2012-05-01",

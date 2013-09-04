@@ -1,7 +1,6 @@
 {
   "name": "Stackato",
   "revision": "2013-07-25",
-  "vendor_verified": false,
   "url": "http://www.activestate.com/stackato",
   "status": "production",
   "status_since": "2012-02-29",

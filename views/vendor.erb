@@ -13,8 +13,8 @@
 						<a href="<%= profile["url"] %>" target="_blank">
 						<%= profile["name"] %>
 						</a>
-						<% if profile["vendor_verified"] %>
-						<span class="icon-ok-sign" title="Vendor Profile"></span>
+						<% unless profile["vendor_verified"].nil? %>
+						<span class="icon-ok-sign" title="Verified by Vendor on <%= profile["vendor_verified"].to_date %>"></span>
 						<% end %>
 					</h1>
 				</div>

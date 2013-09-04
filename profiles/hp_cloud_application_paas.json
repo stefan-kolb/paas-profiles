@@ -1,7 +1,6 @@
 {
   "name": "HP Cloud Application PaaS",
   "revision": "2013-07-24",
-  "vendor_verified": false,
   "url": "https://www.hpcloud.com/products/PaaSApp",
   "status": "beta",
   "status_since": "2012-12-05",

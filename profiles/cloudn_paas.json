@@ -1,7 +1,6 @@
 {
   "name": "Cloudn PaaS",
   "revision": "2013-07-14",
-  "vendor_verified": false,
   "url": "http://www.ntt.com/cloudn/",
   "status": "production",
   "status_since": "2013-03-28",

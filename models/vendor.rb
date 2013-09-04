@@ -14,7 +14,7 @@ class Vendor
 	# fields
 	field :name, type: String
 	field :revision, type: DateTime
-	field :vendor_verified, type: Boolean
+	field :vendor_verified, type: Date
 	field :url, type: String
 	field :status, type: String
 	field :status_since, type: Date
@@ -33,7 +33,7 @@ class Vendor
 	# validations
 	validates :name, presence: true
 	validates :revision, presence: true # todo format
-	validates :vendor_verified, presence: true # todo optional?
+	# validates :vendor_verified, presence: true # todo optional?
 	validates :url, presence: true, format: { with: /http[s]?:\/\/.*/ }
 	validates :status, presence: true, inclusion: { in: [ "beta", "production", "eol" ] } # todo values
 	# validates :status_since, presence: true # todo format, optional?

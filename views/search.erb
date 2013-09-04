@@ -78,8 +78,8 @@ end
 			<tr>
 				<td>
 					<a href="<%= profile["url"] %>" target="_blank"><%= profile["name"] %></a>
-					<% if profile["vendor_verified"] %>
-					&nbsp;<span class="icon-ok-sign" title="Vendor Profile"></span>
+					<% unless profile["vendor_verified"].nil? %>
+					&nbsp;<span class="icon-ok-sign" title="Verified by Vendor"></span>
 					<% end %>
 				</td>
 				<td>

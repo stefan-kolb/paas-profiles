@@ -1,7 +1,6 @@
 {
   "name": "CloudBees",
   "revision": "2013-07-12T13:00:54+02:00",
-  "vendor_verified": false,
   "url": "http://www.cloudbees.com/",
   "status": "production",
   "status_since": "2011-01-31",

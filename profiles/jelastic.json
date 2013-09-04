@@ -1,7 +1,6 @@
 {
   "name": "Jelastic",
   "revision": "2013-08-14",
-  "vendor_verified": false,
   "url": "http://jelastic.com",
   "status": "production",
   "status_since": "2012-03-01",

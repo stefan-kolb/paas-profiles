@@ -1,7 +1,6 @@
 {
   "name": "cloudControl",
   "revision": "2013-07-10T13:00:54+02:00",
-  "vendor_verified": false,
   "url": "http://cloudcontrol.com/",
   "status": "production",
   "status_since": "2010-12-01",

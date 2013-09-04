@@ -1,7 +1,6 @@
 {
   "name": "Windows Azure",
   "revision": "2013-07-05T17:47:54+02:00",
-  "vendor_verified": false,
   "url": "http://www.microsoft.com/windowsazure/",
   "status": "production",
   "status_since": "2010-02-01",
