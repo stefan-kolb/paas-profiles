@@ -114,10 +114,22 @@
       },
       {
         "name": "mongolab",
-        "url": "https://mongolab.com/welcome/",
+        "url": "https://mongolab.com/",
         "description": "",
         "type": "datastore"
-      }
+      },
+      {
+        "name": "newrelic",
+        "url": "http://newrelic.com/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "name": "loadimpact",
+        "url": "http://loadimpact.com/",
+        "description": "",
+        "type": "analytics"
+      }	  
     ]
   },
   "extendable": true,
