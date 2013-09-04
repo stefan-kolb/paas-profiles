@@ -3,7 +3,7 @@
 *Making Platform as a Service offerings comparable - Ecosystem profiles for PaaS vendors.*
 
 <br/>
-Currently 85 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
+Currently 86 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
 
 **The current web interface can be viewed at [PaaSify.it](http://paasify.it)**
 
@@ -17,7 +17,7 @@ The code below shows a sample profile. The profile specification is *beta* and t
 {
   "name": "SomePaas",
   "revision": "2013-07-02",
-  "vendor_verified": false,
+  "vendor_verified": "2013-07-02",
   "url": "http://someurl.com",
   "status": "production",
   "status_since": "2012-07-15",
@@ -73,7 +73,7 @@ The official name of the PaaS offering.
  
 ### Vendor Verification
 
-This may be set to `true` if the profile was officially created or audited by the vendor.
+This may be set to the date when the profile was officially created or audited by the vendor.
 
 ### URL
 
