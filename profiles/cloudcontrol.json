@@ -6,7 +6,8 @@
   "status_since": "2010-12-01",
   "type": "polyglot",
   "hosting": [
-    "public"
+    "public",
+    "private"
   ],
   "pricing": [
     {
@@ -26,13 +27,15 @@
     {
       "language": "java",
       "versions": [
-
+        "1.6",
+        "1.7"
       ]
     },
     {
       "language": "python",
       "versions": [
-
+        "2.7.*",
+        "3.*"
       ]
     },
     {
@@ -45,17 +48,88 @@
     {
       "language": "ruby",
       "versions": [
+        "1.8.7",
+        "1.9.2",
+        "1.9.3",
+        "2.0.0"
+      ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+    {
+      "name": "symfony",
+      "runtime": "php",
+      "versions": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "zend",
+      "runtime": "php",
+      "versions": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "yii",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "kohana",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "cakephp",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
 
       ]
     }
   ],
-  "middleware": null,
-  "frameworks": null,
   "services": {
     "native": [
       {
         "name": "mysql",
-        "desc": "",
         "type": "datastore",
         "versions": [
 
@@ -202,6 +276,12 @@
         "type": "other"
       },
       {
+        "name": "searchbox",
+        "url": "https://searchbox.io/",
+        "desc": "",
+        "type": "search"
+      },
+      {
         "name": "searchify",
         "url": "https://www.searchify.com/",
         "desc": "",
@@ -218,6 +298,12 @@
         "url": "https://stillalive.com/",
         "desc": "",
         "type": "analytics"
+      },
+      {
+        "name": "usersnap",
+        "url": "http://usersnap.com/",
+        "desc": "",
+        "type": "devops"
       },
       {
         "name": "treasure data",
