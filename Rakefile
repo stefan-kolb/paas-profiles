@@ -14,8 +14,12 @@ namespace :mongo do
 			Vendor.delete_all
 			# import files
 			Dir.glob("./profiles#{File::SEPARATOR}*.json").each do |file_name|
-				data = JSON.parse(File.read(file_name))
-				Vendor.create!(data)
+				begin
+					data = JSON.parse(File.read(file_name))
+					Vendor.create!(data)
+				rescue
+					raise "An error occurred while parsing " + file_name + ".json"
+				end
 			end
 			# be sure everything was imported
 			unless Dir["./profiles#{File::SEPARATOR}*.json"].length == Vendor.count
