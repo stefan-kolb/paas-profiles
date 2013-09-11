@@ -55,7 +55,7 @@
 			%>
 			<tr>
 				<td>
-					<a href="<%= profile["url"] %>" target="_blank"><%= profile["name"] %></a>
+					<a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/,'_') %>"><%= profile["name"] %></a>
 					<% unless profile["vendor_verified"].nil? %>
 					&nbsp;<span class="icon-ok-sign" title="Verified by Vendor"></span>
 					<% end %>
