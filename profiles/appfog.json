@@ -144,6 +144,12 @@
         "type": "search"
       },
       {
+        "name": "statsmix",
+        "url": "https://www.statsmix.com/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
         "name": "mongolab",
         "url": "https://mongolab.com/",
         "description": "",
@@ -212,12 +218,6 @@
       {
         "name": "logentries",
         "url": "https://logentries.com/",
-        "description": "",
-        "type": "analytics"
-      },
-      {
-        "name": "hosted graphite",
-        "url": "https://www.hostedgraphite.com/",
         "description": "",
         "type": "analytics"
       },
