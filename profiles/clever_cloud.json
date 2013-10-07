@@ -58,6 +58,12 @@
       "versions": [
         "*.*"
       ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        ""
+      ]
     }
   ],
   "middleware": [
