@@ -1,2 +1,2 @@
-require './sinatra_profiles'
+require './app'
 run Sinatra::Application

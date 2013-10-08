@@ -1,9 +1,9 @@
-require_relative 'models/vendor'
-
 require 'json'
 require 'mongoid'
 require 'sinatra'
 require 'newrelic_rpm'
+
+require_relative 'models/vendor'
 
 Mongoid.load!("./config/mongoid.yml")
 
