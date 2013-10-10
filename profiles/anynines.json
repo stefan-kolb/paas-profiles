@@ -1,6 +1,6 @@
 {
   "name": "Anynines",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2013-10-10",
   "url": "http://www.anynines.com/",
   "vendor_verified": "2013-07-11",
   "status": "beta",
@@ -120,7 +120,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "9.0"
+          "9.1"
         ]
       },
       {
@@ -146,7 +146,15 @@
         "versions": [
           "1.0"
         ]
-      }
+      },
+      {
+        "name": "elasticsearch",
+        "description": "",
+        "type": "search",
+        "versions": [
+          "0.20"
+        ]
+      }	  
     ],
     "addon": [
 
