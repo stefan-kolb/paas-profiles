@@ -24,33 +24,33 @@
     {
       "language": "python",
       "versions": [
-		""
+        ""
       ]
     },
     {
       "language": "ruby",
       "versions": [
-		""
+        ""
       ]
     },
-	    {
+    {
       "language": "php",
       "versions": [
-		""
+        ""
       ]
     },
     {
       "language": "node",
       "versions": [
-		""
+        ""
       ]
-    }	
+    }
   ],
   "middleware": [
 
   ],
   "frameworks": [
-  
+
   ],
   "services": {
     "native": [
@@ -67,11 +67,12 @@
         "versions": [
 
         ]
-      }	  
+      }
     ],
     "addon": [
 
-    ],
+    ]
+  },
   "extendable": true,
   "infrastructures": [
 
