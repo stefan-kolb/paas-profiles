@@ -14,7 +14,7 @@
   ],
   "scaling": {
     "vertical": false,
-    "horizontal": false,
+    "horizontal": true,
     "auto": false
   },
   "compliance": [
@@ -24,15 +24,54 @@
     {
       "language": "python",
       "versions": [
-
+		""
       ]
-    }
+    },
+    {
+      "language": "ruby",
+      "versions": [
+		""
+      ]
+    },
+	    {
+      "language": "php",
+      "versions": [
+		""
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+		""
+      ]
+    }	
   ],
   "middleware": [
 
   ],
-  "frameworks": null,
-  "services": null,
+  "frameworks": [
+  
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mongodb",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }	  
+    ],
+    "addon": [
+
+    ],
   "extendable": true,
   "infrastructures": [
 
