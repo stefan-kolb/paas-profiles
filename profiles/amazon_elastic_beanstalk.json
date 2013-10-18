@@ -11,7 +11,7 @@
   "pricing": [
     {
       "model": "metered",
-      "period": ""
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -20,43 +20,61 @@
     "auto": true
   },
   "compliance": [
-
+    "HIPAA",
+    "SOC 1/SSAE 16/ISAE 3402",
+    "SOC 2",
+    "SOC 3",
+    "PCI DSS Level 1",
+    "DIN ISO/IEC 27001",
+    "FedRAMP",
+    "DIACAP",
+    "FISMA",
+    "ITAR",
+    "FIPS 140-2",
+    "CSA",
+    "MPAA"
   ],
   "runtimes": [
     {
       "language": "java",
       "versions": [
-
+        "1.5",
+        "1.6"
       ]
     },
     {
       "language": "dotnet",
       "versions": [
-
+        "2.*",
+        "3.*",
+        "4.*"
       ]
     },
     {
       "language": "python",
       "versions": [
-
+        "2.6"
       ]
     },
     {
       "language": "php",
       "versions": [
-
+        "5.3",
+        "5.4"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-
+        "1.8.7",
+        "1.9.3"
       ]
     },
     {
       "language": "node",
       "versions": [
-
+        "0.8.*",
+        "0.10.*"
       ]
     }
   ],
@@ -80,7 +98,8 @@
       "name": "iis",
       "runtime": "dotnet",
       "versions": [
-        "7.5"
+        "7.5",
+        "8"
       ]
     },
     {
@@ -91,8 +110,12 @@
       ]
     }
   ],
-  "frameworks": null,
-  "services": null,
+  "frameworks": [
+
+  ],
+  "services": [
+
+  ],
   "extendable": false,
   "infrastructures": [
     {
