@@ -1,6 +1,6 @@
 # [Paas Profiles](http://paasify.it)
 
-*Making Platform as a Service offerings comparable - Ecosystem profiles for PaaS vendors.*
+*Making Platform as a Service offerings comparable - Ecosystem profiles for portability matching.*
 
 <br/>
 Currently 86 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
@@ -73,7 +73,7 @@ The official name of the PaaS offering.
  
 ### Vendor Verification
 
-This may be set to the date when the profile was officially created or audited by the vendor.
+This may be set to the `Date` when the profile was officially created or audited by the vendor.
 
 ### URL
 
@@ -127,7 +127,7 @@ An object including three boolean properties for characterizing the scaling capa
 ### Hosting
 
 An array that describes the different provided hosting styles of the PaaS.
-Values can be `public` for a publicly hosted service and `private`for a service that can be deployed on premise, too.
+Values can be `public` for a publicly hosted service and `private` for a service that can be deployed on premise, too.
 
 ### Compliance
 
@@ -147,7 +147,7 @@ The runtimes an application can be written in. Defined as an array of objects.
 #### Language
 
 This section must only include languages that are officially supported by the vendors.
-Languages added via community buildpacks must not be added. Extensibility is modeled by the property *extenable*. 
+Languages added via community buildpacks must not be added. Extensibility is modeled by the property *extendable*. 
 In order to allow exact matching, the language keys are restricted. Currently allowed keys are:
 
 ```
@@ -161,8 +161,6 @@ apex, clojure, cobol, dotnet, erlang, go, groovy, haskell, java, lua, node, perl
 A string array containing the supported runtime versions. Wildcards `*` may be used for branches or even marking all major versions as supported (e.g. `*.*`).
 
 ### Middleware
-
-*tbd*
 
 An array of preconfigured middleware stacks.
 
@@ -183,20 +181,22 @@ A string array containing the supported middleware versions.
 
 ### Frameworks
 
-*tbd*
-
 An array of *preinstalled* frameworks.
 
 ```json
 "frameworks": [
-    { "name": "rails", "versions": [ "4.0.0" ] },
-    { "name": "django", "versions": [ "1.5.1" ] }
+    { "name": "rails", "runtime": "ruby", "versions": [ "4.0.0" ] },
+    { "name": "django", "runtime": "python", "versions": [ "1.5.1" ] }
 ]
 ```
 
 #### Name
 
 Should be the official name in lowercase. Currently not restricted.
+
+#### Runtime
+
+The associated runtime of the framework.
 
 #### Versions
 
