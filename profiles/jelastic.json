@@ -221,6 +221,24 @@
       "country": "GB",
       "region": "",
       "provider": "Layershift"
+    },
+    {
+      "continent": "EU",
+      "country": "RU",
+      "region": "",
+      "provider": "Infobox"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "",
+      "provider": "Locaweb"
+    },
+    {
+      "continent": "EU",
+      "country": "FR",
+      "region": "",
+      "provider": "Lunacloud"
     }
   ]
 }
