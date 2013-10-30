@@ -30,3 +30,8 @@ end
 get '/search' do
 	erb :search, :layout => false
 end
+
+get '/statistics' do
+	@title = "Platform as a Service Statistics"
+	erb :statistics
+end
