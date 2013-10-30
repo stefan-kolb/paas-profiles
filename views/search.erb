@@ -31,22 +31,22 @@ end
 
 # middleware
 unless params[:middleware].nil?
-	query = query.all("middleware.name" => /#{params[:middleware]}/)
+	query = query.all("middleware.name" => /#{params[:middleware]}/i)
 end
 
 # frameworks
 unless params[:frameworks].nil?
-	query = query.all("frameworks.name" => /#{params[:frameworks]}/)
+	query = query.all("frameworks.name" => /#{params[:frameworks]}/i)
 end
 
 # services
 unless params[:services].nil?
-	query = query.all("services.native.name" => /#{params[:services]}/)
+	query = query.all("services.native.name" => /#{params[:services]}/i)
 end
 
 # addons
 unless params[:addons].nil?
-	query = query.all("services.addon.name" => /#{params[:addons]}/)
+	query = query.all("services.addon.name" => /#{params[:addons]}/i)
 end
 
 # extendable
@@ -77,7 +77,7 @@ end
 			%>
 			<tr>
 				<td>
-					<a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/,'_') %>" target="_blank"><%= profile["name"] %></a>
+					<a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/,'_') %>"><%= profile["name"] %></a>
 					<% unless profile["vendor_verified"].nil? %>
 					&nbsp;<span class="icon-ok-sign" title="Verified by Vendor"></span>
 					<% end %>
