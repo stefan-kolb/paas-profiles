@@ -1,6 +1,6 @@
 {
   "name": "Jelastic",
-  "revision": "2013-08-14",
+  "revision": "2013-10-30",
   "url": "http://jelastic.com",
   "status": "production",
   "status_since": "2012-03-01",
@@ -52,14 +52,7 @@
       "name": "tomcat",
       "runtime": "java",
       "versions": [
-        "6.0.37"
-      ]
-    },
-    {
-      "name": "tomcat",
-      "runtime": "java",
-      "versions": [
-        "7.0.39"
+        "6.0.37", "7.0.39"
       ]
     },
     {
