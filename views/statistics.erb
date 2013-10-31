@@ -29,7 +29,7 @@
 			background:#468847;
 		}
 		
-		body {
+		#graph {
   font: 10px sans-serif;
 }
 
@@ -40,7 +40,7 @@
 	
 	<div class="jumbotron">
 		<h1>Platform as a Service Statistics</h1>
-        <p class="lead">What's best on your PaaS? Define your needs and get a list of candidates that claim to be your best fit.</p>
+        <p class="lead">Live statistics of the current PaaS vendor landscape.</p>
 	</div>
 	<div id="graph" class="text-center"></div>
 <script>
@@ -86,4 +86,10 @@ d3.csv("/js/data.csv", function(error, data) {
       .text(function(d) { return d.data.language; });
 
 });
+
+	$(document).ready(function() {
+		$('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
+		$('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
+		$('ul.breadcrumb > li:first').after('<li class="active">Statistics</li>');
+	});
 </script>
