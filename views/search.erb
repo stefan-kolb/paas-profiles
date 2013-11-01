@@ -31,22 +31,26 @@ end
 
 # middleware
 unless params[:middleware].nil?
-	query = query.all("middleware.name" => /#{params[:middleware]}/i)
+	params[:middleware].map { |e| /#{e}/i }
+	query = query.all("middleware.name" => params[:middleware])
 end
 
 # frameworks
 unless params[:frameworks].nil?
-	query = query.all("frameworks.name" => /#{params[:frameworks]}/i)
+	params[:frameworks].map { |e| /#{e}/i }
+	query = query.all("frameworks.name" => params[:frameworks])
 end
 
 # services
 unless params[:services].nil?
-	query = query.all("services.native.name" => /#{params[:services]}/i)
+	params[:services].map { |e| /#{e}/i }
+	query = query.all("services.native.name" => params[:services])
 end
 
 # addons
 unless params[:addons].nil?
-	query = query.all("services.addon.name" => /#{params[:addons]}/i)
+	params[:addons].map { |e| /#{e}/i }
+	query = query.all("services.addon.name" => params[:addons])
 end
 
 # extendable
