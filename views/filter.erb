@@ -169,6 +169,7 @@
 </form>
 
 <div id="result"></div>
+<a href="#top" title="Back to top" class="pull-right icon-chevron-up"></a>
 
 		</div>
 		
@@ -193,7 +194,10 @@
 					data = $('#filter').serialize();
 				
 					$.get( 'search', data, function(response) {
-						$('#result').html(response);
+							$('#result').html(response);
+							$('body').animate({
+								scrollTop: $("#result").offset().top
+							}, 500);
 						},
 						'html'
 					);
