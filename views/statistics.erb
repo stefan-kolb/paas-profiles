@@ -55,7 +55,7 @@
 				y: 0
 			},
 			tooltip: {
-				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
 			},
 			plotOptions: {
 				pie: {
@@ -115,7 +115,7 @@
 				enabled: false
 			},
 			tooltip: {
-				valueSuffix: '%'
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
 			},
 			legend: {
 				layout: 'vertical',
