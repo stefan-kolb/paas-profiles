@@ -3,11 +3,22 @@
 *Making Platform as a Service offerings comparable - Ecosystem profiles for portability matching.*
 
 <br/>
+A no-standards approach for application portability.
+
 Currently 86 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
 
 **The current web interface can be viewed at [PaaSify.it](http://paasify.it)**
 
 **Any errors? Important missing properties? Suggestions? [Contribute](#contribution)**
+
+## Contribution
+
+I encourage **everyone** to submit corrections or additions in order to keep the profiles accurate and up-to-date.
+In any case, please add evidence for the information so I can verify your changes.
+
+I am also interested in direct **cooperation with vendors** in order to keep the profiles at first hand and spot-on. Contact me if you are interested to supply a [vendor verified profile](#vendor-verification).
+
+Contribute either via [pull request](https://help.github.com/articles/using-pull-requests), create an [issue](https://github.com/stefan-kolb/paas-profiles/issues) or send me an [email](mailto:stefan.kolb@uni-bamberg.de).
 
 ## Profile
 
@@ -267,19 +278,7 @@ The property region can be used to further specify the location of the datacente
 
 This optional field may specify the name of the external IaaS provider used by the PaaS vendor, e.g. *Amazon Web Services*.
 
-## Authors
-
-[Stefan Kolb](https://github.com/stefan-kolb)
-
-## Contribution
-
-I encourage **everyone** to submit corrections or additions in order to keep the profiles accurate and up-to-date.
-In any case, please add evidence for the information so I can verify your changes.
-
-I am also interested in direct **cooperation with vendors** in order to keep the profiles at first hand and spot-on. Contact me if you are interested to supply a [vendor verified profile](#vendor-verification).
-
-Contribute either via [pull request](https://help.github.com/articles/using-pull-requests), create an [issue](https://github.com/stefan-kolb/paas-profiles/issues) or send me an [email](mailto:stefan.kolb@uni-bamberg.de).
-
 ---
 [![Build Status](https://travis-ci.org/stefan-kolb/paas-profiles.png)](https://travis-ci.org/stefan-kolb/paas-profiles)
 [![Dependency Status](https://gemnasium.com/stefan-kolb/paas-profiles.png)](https://gemnasium.com/stefan-kolb/paas-profiles)
+[![Code Climate](https://codeclimate.com/github/stefan-kolb/paas-profiles.png)](https://codeclimate.com/github/stefan-kolb/paas-profiles)
