@@ -179,11 +179,11 @@
           </select>
         </div>
       </div>
-
-      <div class="form-actions text-center">
-        <button id="submit" type="submit" class="btn btn-primary btn-large">Find your PaaS</button>
-      </div>
     </form>
+
+    <div class="form-actions text-center">
+      <button id="submit" type="submit" class="btn btn-primary btn-large">Find your PaaS</button>
+    </div>
 
     <div id="result"></div>
     <a href="#top" title="Back to top" class="pull-right icon-chevron-up"></a>
@@ -207,7 +207,7 @@
                 'html'
         );
 
-        $('form#filter').on('submit', function (e) {
+        $('#submit').on('click', function (e) {
             data = $('#filter').serialize();
 
             $.get('search', data, function (response) {
