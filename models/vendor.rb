@@ -37,7 +37,6 @@ class Vendor
 	validates :url, presence: true, format: { with: /http[s]?:\/\/.*/ }
 	validates :status, presence: true, inclusion: { in: [ "beta", "production", "eol" ] } # todo values
 	# validates :status_since, presence: true # todo format, optional?
-	validates :type, presence: true # todo optional?
 	validates :extendable, presence: true
 	# todo custom validator validates :hosting, presence: true, inclusion: { in: [ "public", "private" ] } # todo values
 	# validates :pricing, presence: true

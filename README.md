@@ -1,4 +1,4 @@
-# [Paas Profiles](http://paasify.it)
+# [PaaS Profiles](http://paasify.it)
 
 *Making Platform as a Service offerings comparable - Ecosystem profiles for portability matching.*
 

@@ -1,208 +1,225 @@
-	<link href="../css/glyphicons.css" rel="stylesheet" />
-	<link href="../css/bootstrap-select.min.css" rel="stylesheet" />
-	<style>
-      /* Main marketing message and sign up button */
-      .jumbotron {
-	  /*height: 400px;*/
+<link href="../css/glyphicons.css" rel="stylesheet"/>
+<link href="../css/bootstrap-select.min.css" rel="stylesheet"/>
+<style>
+        /* Main marketing message and sign up button */
+    .jumbotron {
+        /*height: 400px;*/
         margin: 20px 0;
         text-align: center;
-		/*background: url("img/sub.png") no-repeat;*/
-		background-size: 100%;
-      }
-      .jumbotron h1 {
+        /*background: url("img/sub.png") no-repeat;*/
+        background-size: 100%;
+    }
+
+    .jumbotron h1 {
         font-size: 60px;
         line-height: 1;
-		background: rgba(255, 255, 255, 0.6);
-      }
-      .jumbotron .lead {
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .jumbotron .lead {
         font-size: 18px;
         line-height: 1.25;
-		background: rgba(255, 255, 255, 0.6);
-      }
-      .jumbotron .btn {
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .jumbotron .btn {
         font-size: 21px;
         padding: 14px 24px;
-      }
-	    .extendable {
-			font-style: italic;
-			color: #fff;
-			background:#468847;
-		}
-    </style>
+    }
 
-		<div id="top" class="container">
-			<div class="jumbotron">
-			<h1>Find your Platform as a Service!</h1>
+    .extendable {
+        font-style: italic;
+        color: #fff;
+        background: #468847;
+    }
 
-        <p class="lead">What's best on your PaaS? Define your needs and get a list of candidates that claim to be your best fit.</p>
+    #result {
+        padding-top: 20px;
+    }
+</style>
+
+<div id="top" class="container">
+  <div class="jumbotron">
+    <h1>Find your Platform as a Service!</h1>
+
+    <p class="lead">What's best on your PaaS? Define your needs and get a list of candidates that claim to be your best
+      fit.</p>
+  </div>
+
+  <hr/>
+  <div class="row">
+
+    <form class="form-horizontal" id="filter">
+      <div class="control-group">
+        <label class="control-label" for="selectStatus">Status</label>
+
+        <div class="controls">
+          <select name="status" class="selectpicker show-tick" id="selectStatus">
+            <option value="">Any</option>
+            <%
+               Vendor.distinct(:status).each do |s|
+            %>
+                <option value="<%= s %>"><%= s.capitalize %></option>
+            <% end %>
+          </select>
+        </div>
       </div>
-			
-			<hr />
-			<div class="row">
-			
-	<form class="form-horizontal" id="filter" >
-		<div class="control-group">
-			<label class="control-label" for="selectStatus">Status</label>
-			<div class="controls">
-				<select name="status" class="selectpicker show-tick" id="selectStatus">
-					<option value="">Any</option>
-					<% 
-					Vendor.distinct( :status ).each do |s| 
-					%>
-					<option value="<%= s %>"><%= s.capitalize %></option>
-					<% end %>
-				</select>
-			</div>
-		</div>
 
-		<div class="control-group">
-			<label class="control-label">Hosting</label>
-			<div class="controls">
-				<select name="hosting[]" class="selectpicker" multiple>
-					<option data-icon="icon-eye-open"" value="public">Public</option>
-					<option data-icon="icon-lock" value="private">Private</option>
-				</select>
-			</div>
-		</div>
-		
-		<div class="control-group">
-			<label class="control-label">Scaling</label>
-			<div class="controls">
-				<select name="scaling[]" class="selectpicker" multiple>
-					<option data-icon="icon-resize-vertical" data-subtext="(Size of RAM, CPU, ...)" value="vertical">Vertical</option>
-					<option data-icon="icon-resize-horizontal" data-subtext="(Number of instances)" value="horizontal">Horizontal</option>
-					<option data-icon="icon-refresh" data-subtext="(Automatic scaling of one or both directions)" value="auto">Auto</option>
-				</select>
-			</div>
-		</div>
-		
-		<div class="control-group">
-		  <label class="control-label">Runtimes</label>
-			<div class="controls">
-				<select name="runtimes[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
-					<% 
-					Vendor.distinct( 'runtimes.language' ).sort.each do |r| 
-					%>
-					<option value="<%= r %>"><%= r.capitalize %></option>
-					<% end %>
-				</select>
-			</div>
-		</div>
-		
-		<div class="control-group">
-		  <label class="control-label">Middleware</label>
-			<div class="controls">
-				<select name="middleware[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
-					<% 
-					Vendor.distinct( 'middleware.name' ).sort.each do |r| 
-					%>
-					<option value="<%= r %>"><%= r.capitalize %></option>
-					<% end %>
-				</select>
-			</div>
-		</div>
-		
-		<div class="control-group">
-		  <label class="control-label">Frameworks</label>
-			<div class="controls">
-				<select name="frameworks[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
-					<% 
-					Vendor.distinct( 'frameworks.name' ).sort.each do |r| 
-					%>
-					<option value="<%= r %>"><%= r.capitalize %></option>
-					<% end %>
-				</select>
-			</div>
-		</div>
-		
-		<div class="control-group">
-		  <label title="Operated by the PaaS vendor" class="control-label">Services</label>
-			<div class="controls">
-				<select name="services[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 5" multiple>
-					<% 
-					Vendor.distinct( 'services.native.name' ).sort.each do |s| 
-					%>
-					<option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
-					<% end %>
-				</select>
-			</div>
-		</div>
+      <div class="control-group">
+        <label class="control-label">Hosting</label>
 
-		<div class="control-group">
-		  <label title="Operated by a 3rd party vendor" class="control-label">Addons</label>
-			<div class="controls">
-				<select name="addons[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 5" multiple>
-					<% 
-					Vendor.distinct( 'services.addon.name' ).sort.each do |s| 
-					%>
-					<option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
-					<% end %>
-				</select>
-			</div>
-		</div>
-		
-				<div class="control-group">
-		  <label title="Possibility to add custom runtimes, services, ..." class="control-label">Extendable</label>
-			<div class="controls">
-				<input name="extendable" type="checkbox"></input>
-			</div>
-		</div>
-  
-    <div class="control-group">
-	<label title="Available deployment regions" class="control-label">Geolocations</label>
-		<div class="controls">
-	<select name="infras[]" class="selectpicker" data-width="500px" multiple data-selected-text-format="count > 4" multiple>
-	  <option data-icon="icon-globe" value="NA">North America</option>
-	  <option data-icon="icon-globe" value="SA">South America</option>
-	  <option data-icon="icon-globe" value="EU">Europe</option>
-	  <option data-icon="icon-globe" value="AS">Asia</option>
-	  <option data-icon="icon-globe" value="OC">Oceania</option>
-	</select>
-	  </div>
+        <div class="controls">
+          <select name="hosting[]" class="selectpicker" multiple>
+            <option data-icon="icon-eye-open" value="public">Public</option>
+            <option data-icon="icon-lock" value="private">Private</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Scaling</label>
+
+        <div class="controls">
+          <select name="scaling[]" class="selectpicker" multiple>
+            <option data-icon="icon-resize-vertical" data-subtext="(Size of RAM, CPU, ...)" value="vertical">Vertical</option>
+            <option data-icon="icon-resize-horizontal" data-subtext="(Number of instances)" value="horizontal">Horizontal</option>
+            <option data-icon="icon-refresh" data-subtext="(Automatic scaling of one or both directions)" value="auto">Auto</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Runtimes</label>
+
+        <div class="controls">
+          <select name="runtimes[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
+            <%
+               Vendor.distinct('runtimes.language').sort.each do |r|
+            %>
+                <option value="<%= r %>"><%= r.capitalize %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Middleware</label>
+
+        <div class="controls">
+          <select name="middleware[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
+            <%
+               Vendor.distinct('middleware.name').sort.each do |r|
+            %>
+                <option value="<%= r %>"><%= r.capitalize %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Frameworks</label>
+
+        <div class="controls">
+          <select name="frameworks[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
+            <%
+               Vendor.distinct('frameworks.name').sort.each do |r|
+            %>
+                <option value="<%= r %>"><%= r.capitalize %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label title="Operated by the PaaS vendor" class="control-label">Services</label>
+
+        <div class="controls">
+          <select name="services[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 5" multiple>
+            <%
+               Vendor.distinct('services.native.name').sort.each do |s|
+            %>
+                <option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label title="Operated by a 3rd party vendor" class="control-label">Addons</label>
+
+        <div class="controls">
+          <select name="addons[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 5" multiple>
+            <%
+               Vendor.distinct('services.addon.name').sort.each do |s|
+            %>
+                <option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label title="Possibility to add custom runtimes, services, ..." class="control-label">Extendable</label>
+
+        <div class="controls">
+          <input name="extendable" type="checkbox">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label title="Available deployment regions" class="control-label">Geolocations</label>
+
+        <div class="controls">
+          <select name="infras[]" class="selectpicker" data-width="500px" multiple data-selected-text-format="count > 4" multiple>
+            <option data-icon="icon-globe" value="NA">North America</option>
+            <option data-icon="icon-globe" value="SA">South America</option>
+            <option data-icon="icon-globe" value="EU">Europe</option>
+            <option data-icon="icon-globe" value="AS">Asia</option>
+            <option data-icon="icon-globe" value="OC">Oceania</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-actions text-center">
+        <button id="submit" type="submit" class="btn btn-primary btn-large">Find your PaaS</button>
+      </div>
+    </form>
+
+    <div id="result"></div>
+    <a href="#top" title="Back to top" class="pull-right icon-chevron-up"></a>
   </div>
-	  
-  </div>
-  
-  <div class="form-actions text-center">
-	<button id="submit" type="submit" class="btn btn-primary btn-large">Find your PaaS</button>
-	</div>
-</form>
+</div>
 
-<div id="result"></div>
-<a href="#top" title="Back to top" class="pull-right icon-chevron-up"></a>
+<script src="../js/bootstrap-select.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
+        $('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
+        $('ul.breadcrumb > li:first').after('<li class="active">Find your PaaS</li>');
 
-		</div>
-		
-		<script src="../js/bootstrap-select.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
-				$('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
-				$('ul.breadcrumb > li:first').after('<li class="active">Find your PaaS</li>');
-				
-				$('.selectpicker').selectpicker();
-				
-				data = $('#filter').serialize();
-				
-				$.get( 'search', data, function(response) {
-					$('#result').html(response);
-				   },
-				   'html'
-				);
-				
-				$('form#filter').on('submit', function(e) {
-					data = $('#filter').serialize();
-				
-					$.get( 'search', data, function(response) {
-							$('#result').html(response);
-							$('body').animate({
-								scrollTop: $("#result").offset().top
-							}, 500);
-						},
-						'html'
-					);
-					e.preventDefault();
-				});
-			
-		});
-		</script>		
+        $('.selectpicker').selectpicker();
+
+        var data = $('#filter').serialize();
+
+        $.get('search', data, function (response) {
+                    $('#result').html(response);
+                },
+                'html'
+        );
+
+        $('form#filter').on('submit', function (e) {
+            data = $('#filter').serialize();
+
+            $.get('search', data, function (response) {
+                        $('#result').html(response);
+                        $('body,html').animate({
+                            scrollTop: $("#result").offset().top
+                        }, 500);
+                    },
+                    'html'
+            );
+            e.preventDefault();
+        });
+
+    });
+</script>
