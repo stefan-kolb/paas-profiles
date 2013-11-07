@@ -11,7 +11,7 @@ class Infrastructure
 	field :region, type: String
 	field :provider, type: String
 	# validations
-	validates :continent, inclusion: { in: [ "AF", "AS", "EU", "NA", "OC", "SA" ] }
+	validates :continent, inclusion: { in: %w(AF AS EU NA OC SA)}
 
 	validate :country_codes, :if => Proc.new { !country.nil? && !country.empty? }
 	
