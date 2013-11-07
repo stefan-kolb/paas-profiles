@@ -60,7 +60,11 @@ end
 
 # infras
 unless params[:infras].nil?
-	query = query.all("infrastructures.continent" => params[:infras])
+    if params[:hosting].nil?
+	    query = query.or({ "infrastructures.continent" => { "$all" => params[:infras]}}, { "hosting" => "private" })
+    elsif params[:hosting].length == 1 && params[:hosting].include?('public')
+        query = query.all( "infrastructures.continent" => params[:infras])
+    end
 end
 	
 	unless query.exists?
