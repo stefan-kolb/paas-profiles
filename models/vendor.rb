@@ -32,17 +32,16 @@ class Vendor
 	embeds_many :infrastructures
 	# validations
 	validates :name, presence: true
-	validates :revision, presence: true # todo format
-	# validates :vendor_verified, presence: true # todo optional?
+	validates :revision, presence: true
 	validates :url, presence: true, format: { with: /http[s]?:\/\/.*/ }
-	validates :status, presence: true, inclusion: { in: [ "beta", "production", "eol" ] } # todo values
-	# validates :status_since, presence: true # todo format, optional?
+	validates :status, presence: true, inclusion: { in: %w(beta production eol) }
 	validates :extendable, presence: true
-	# todo custom validator validates :hosting, presence: true, inclusion: { in: [ "public", "private" ] } # todo values
-	# validates :pricing, presence: true
+	# todo custom validator validates :hosting, presence: true, inclusion: { in: [ "public", "private" ] }
+	validates :pricing, presence: true, :allow_blank => true
 	validates :scaling, presence: true
 	validates :runtimes, presence: true
-	# middleware?, frameworks?, services?
-	# validates :infrastructures, presence: true
-	# validates :services, presence: true
+  validates :middleware, presence: true, :allow_blank => true
+  validates :frameworks, presence: true, :allow_blank => true
+  validates :services, presence: true, :allow_blank => true
+	validates :infrastructures, presence: true, :allow_blank => true
 end

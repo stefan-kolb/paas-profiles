@@ -7,7 +7,6 @@ class Service
 	
 	embeds_many :natives, store_as: "native"
 	embeds_many :addons, store_as: "addon"
-	# validations
 end
 
 class Native
@@ -15,11 +14,10 @@ class Native
 	
 	embedded_in :service
 	
-	field :id, type: String
+	field :name, type: String
 	field :description, type: String
 	field :type, type: String
 	field :versions, type: Array
-	# validations
 end
 
 class Addon
@@ -27,9 +25,10 @@ class Addon
 	
 	embedded_in :service
 	
-	field :id, type: String
+	field :name, type: String
 	field :url, type: String
 	field :description, type: String
 	field :type, type: String
 	# validations
+  validates :url, :allow_blank => true, format: { with: /http[s]?:\/\/.*/ }
 end

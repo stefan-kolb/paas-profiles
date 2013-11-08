@@ -9,10 +9,6 @@
     "private"
   ],
   "pricing": [
-    {
-      "model": "free",
-      "period": ""
-    }
   ],
   "scaling": {
     "vertical": false,

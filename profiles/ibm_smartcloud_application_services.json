@@ -12,7 +12,7 @@
   "pricing": [
     {
       "model": "metered",
-      "period": ""
+      "period": "monthly"
     }
   ],
   "scaling": {

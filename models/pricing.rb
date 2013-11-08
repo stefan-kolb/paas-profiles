@@ -8,4 +8,6 @@ class Pricing
 	field :model, type: String
 	field :period, type: String
 	# validations
+  validates :model, inclusion: { in: %w(fixed metered hybrid) }, :allow_blank => true
+  validates :period, inclusion: { in: %w(daily monthly annually) }
 end

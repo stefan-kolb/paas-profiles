@@ -10,8 +10,8 @@
   ],
   "pricing": [
     {
-      "model": "monthly",
-      "period": ""
+      "model": "",
+      "period": "monthly"
     }
   ],
   "scaling": {

@@ -8,5 +8,4 @@ class Middleware
 	field :name, type: String
 	field :runtime, type: String
 	field :versions, type: Array
-	# validations
 end

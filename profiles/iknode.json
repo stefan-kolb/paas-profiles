@@ -10,8 +10,8 @@
   ],
   "pricing": [
     {
-      "model": "monthly threshold",
-      "period": ""
+      "model": "fixed",
+      "period": "monthly"
     }
   ],
   "scaling": {

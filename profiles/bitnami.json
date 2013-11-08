@@ -10,8 +10,8 @@
   ],
   "pricing": [
     {
-      "model": "monthly + metered aws costs",
-      "period": ""
+      "model": "hybrid",
+      "period": "monthly"
     }
   ],
   "scaling": {

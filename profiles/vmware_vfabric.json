@@ -10,8 +10,8 @@
   ],
   "pricing": [
     {
-      "model": "annually",
-      "period": ""
+      "model": "",
+      "period": "annually"
     }
   ],
   "scaling": {
