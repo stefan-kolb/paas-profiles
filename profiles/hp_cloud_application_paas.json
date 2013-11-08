@@ -21,18 +21,6 @@
   ],
   "runtimes": [
     {
-      "language": "java",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "php",
-      "versions": [
-
-      ]
-    },
-    {
       "language": "clojure",
       "versions": [
 
@@ -45,6 +33,12 @@
       ]
     },
     {
+      "language": "java",
+      "versions": [
+
+      ]
+    },
+    {
       "language": "node",
       "versions": [
 
@@ -52,6 +46,12 @@
     },
     {
       "language": "perl",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "php",
       "versions": [
 
       ]
@@ -72,14 +72,14 @@
   ],
   "middleware": [
     {
-      "name": "tomee",
+      "name": "jboss",
       "runtime": "java",
       "versions": [
 
       ]
     },
     {
-      "name": "jboss",
+      "name": "tomee",
       "runtime": "java",
       "versions": [
 

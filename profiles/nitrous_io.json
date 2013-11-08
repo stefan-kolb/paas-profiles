@@ -24,6 +24,18 @@
   ],
   "runtimes": [
     {
+      "language": "go",
+      "versions": [
+        "1.1"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "0.10.11"
+      ]
+    },
+    {
       "language": "python",
       "versions": [
         "2.7"
@@ -34,34 +46,22 @@
       "versions": [
         "2.0"
       ]
-    },
-    {
-      "language": "node",
-      "versions": [
-        "0.10.11"
-      ]
-    },
-    {
-      "language": "go",
-      "versions": [
-        "1.1"
-      ]
     }
   ],
   "middleware": null,
   "frameworks": [
     {
-      "name": "rails",
-      "runtime": "ruby",
-      "versions": [
-        "4"
-      ]
-    },
-    {
       "name": "django",
       "runtime": "python",
       "versions": [
 
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "4"
       ]
     }
   ],
@@ -83,24 +83,6 @@
   "extendable": false,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Virginia",
-      "provider": "AWS"
-    },
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "Northern California",
-      "provider": "AWS"
-    },
-    {
-      "continent": "SA",
-      "country": "BR",
-      "region": "Sao Paulo",
-      "provider": "AWS"
-    },
-    {
       "continent": "AS",
       "country": "JP",
       "region": "Tokyo",
@@ -119,9 +101,27 @@
       "provider": "AWS"
     },
     {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
+      "provider": "AWS"
+    },
+    {
       "continent": "OC",
       "country": "AU",
       "region": "Sydney",
+      "provider": "AWS"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo",
       "provider": "AWS"
     }
   ]

@@ -24,13 +24,13 @@
   ],
   "runtimes": [
     {
-      "language": "java",
+      "language": "cobol",
       "versions": [
 
       ]
     },
     {
-      "language": "cobol",
+      "language": "java",
       "versions": [
 
       ]

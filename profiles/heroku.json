@@ -24,6 +24,12 @@
   ],
   "runtimes": [
     {
+      "language": "clojure",
+      "versions": [
+
+      ]
+    },
+    {
       "language": "java",
       "versions": [
         "1.7.*",
@@ -31,15 +37,24 @@
       ]
     },
     {
-      "language": "python",
+      "language": "node",
       "versions": [
-        "2.7.3"
+        "0.4.*",
+        "0.6.*",
+        "0.8.*",
+        "0.10.*"
       ]
     },
     {
       "language": "php",
       "versions": [
         "5.3.10"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7.3"
       ]
     },
     {
@@ -53,28 +68,15 @@
       ]
     },
     {
-      "language": "node",
-      "versions": [
-        "0.4.*",
-        "0.6.*",
-        "0.8.*",
-        "0.10.*"
-      ]
-    },
-    {
       "language": "scala",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "clojure",
       "versions": [
 
       ]
     }
   ],
-  "middleware": null,
+  "middleware": [
+
+  ],
   "frameworks": [
     {
       "name": "play",
@@ -120,8 +122,23 @@
         "type": ""
       },
       {
+        "name": "alphamail",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "amazon rds",
         "url": "",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "appsignal",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "bablic",
         "desc": "",
         "type": ""
       },
@@ -138,6 +155,11 @@
         "type": ""
       },
       {
+        "name": "blowerio",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "bomberman",
         "url": "",
         "desc": "",
@@ -150,8 +172,23 @@
         "type": ""
       },
       {
+        "name": "bounscale",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "boxcar",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "cachely",
         "url": "",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "cameratag",
         "desc": "",
         "type": ""
       },
@@ -174,6 +211,11 @@
         "type": ""
       },
       {
+        "name": "circle ci",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "cleardb",
         "url": "",
         "desc": "",
@@ -192,6 +234,11 @@
         "type": ""
       },
       {
+        "name": "cloudassault",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "cloudinary",
         "url": "",
         "desc": "",
@@ -204,6 +251,11 @@
         "type": ""
       },
       {
+        "name": "cloudmqtt",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "cloudvertical",
         "url": "",
         "desc": "",
@@ -212,6 +264,16 @@
       {
         "name": "codeship",
         "url": "",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "dashmin",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "database.com",
         "desc": "",
         "type": ""
       },
@@ -234,8 +296,28 @@
         "type": ""
       },
       {
+        "name": "downloader",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "dyn",
         "url": "",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "ebookglue",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "eltanin",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "errorapp",
         "desc": "",
         "type": ""
       },
@@ -272,6 +354,11 @@
       {
         "name": "found search",
         "url": "",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "framey",
         "desc": "",
         "type": ""
       },
@@ -321,12 +408,12 @@
         "type": ""
       },
       {
-        "name": "iron worker",
+        "name": "iron mq",
         "desc": "",
         "type": ""
       },
       {
-        "name": "iron mq",
+        "name": "iron worker",
         "desc": "",
         "type": ""
       },
@@ -476,6 +563,11 @@
         "type": ""
       },
       {
+        "name": "rabbitmq-bigwig",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "ranger",
         "desc": "",
         "type": ""
@@ -506,12 +598,42 @@
         "type": ""
       },
       {
+        "name": "rethinkdb-cloud",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "rhoconnect",
         "desc": "",
         "type": ""
       },
       {
+        "name": "robowhois",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "rollbar",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "runscope",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "runtimeerror",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "s3search",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "saaspose",
         "desc": "",
         "type": ""
       },
@@ -527,6 +649,11 @@
       },
       {
         "name": "searchify",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "securekey",
         "desc": "",
         "type": ""
       },
@@ -576,6 +703,11 @@
         "type": ""
       },
       {
+        "name": "statuspage",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "stillalive",
         "desc": "",
         "type": ""
@@ -601,12 +733,22 @@
         "type": ""
       },
       {
+        "name": "telapi",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "tempodb",
         "desc": "",
         "type": ""
       },
       {
         "name": "temporize",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "ticketly",
         "desc": "",
         "type": ""
       },
@@ -626,7 +768,17 @@
         "type": ""
       },
       {
+        "name": "tripwire",
+        "desc": "",
+        "type": ""
+      },
+      {
         "name": "tronprint",
+        "desc": "",
+        "type": ""
+      },
+      {
+        "name": "twist",
         "desc": "",
         "type": ""
       },
@@ -636,12 +788,12 @@
         "type": ""
       },
       {
-        "name": "wercker",
+        "name": "websolr",
         "desc": "",
         "type": ""
       },
       {
-        "name": "websolr",
+        "name": "wercker",
         "desc": "",
         "type": ""
       },
@@ -661,156 +813,6 @@
         "type": ""
       },
       {
-        "name": "alphamail",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "appsignal",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "bablic",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "blowerio",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "bounscale",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "boxcar",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "cameratag",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "circle ci",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "cloudassault",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "cloudmqtt",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "dashmin",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "database.com",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "downloader",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "eltanin",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "ebookglue",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "errorapp",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "framey",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "rabbitmq-bigwig",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "rethinkdb-cloud",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "rollbar",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "runtimeerror",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "robowhois",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "s3search",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "saaspose",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "statuspage",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "securekey",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "telapi",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "ticketly",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "tripwire",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "twist",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "zeropush",
         "desc": "",
         "type": ""
@@ -820,15 +822,15 @@
   "extendable": true,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Virginia",
-      "provider": "AWS"
-    },
-    {
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
       "provider": "AWS"
     }
   ]

@@ -36,13 +36,6 @@
   ],
   "runtimes": [
     {
-      "language": "java",
-      "versions": [
-        "1.5",
-        "1.6"
-      ]
-    },
-    {
       "language": "dotnet",
       "versions": [
         "2.*",
@@ -51,9 +44,17 @@
       ]
     },
     {
-      "language": "python",
+      "language": "java",
       "versions": [
-        "2.6"
+        "1.5",
+        "1.6"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "0.8.*",
+        "0.10.*"
       ]
     },
     {
@@ -64,32 +65,23 @@
       ]
     },
     {
+      "language": "python",
+      "versions": [
+        "2.6"
+      ]
+    },
+    {
       "language": "ruby",
       "versions": [
         "1.8.7",
         "1.9.3"
       ]
-    },
-    {
-      "language": "node",
-      "versions": [
-        "0.8.*",
-        "0.10.*"
-      ]
     }
   ],
   "middleware": [
     {
-      "name": "tomcat",
-      "runtime": "java",
-      "versions": [
-        "6",
-        "7"
-      ]
-    },
-    {
-      "name": "passenger",
-      "runtime": "ruby",
+      "name": "httpd",
+      "runtime": "php",
       "versions": [
         ""
       ]
@@ -103,10 +95,18 @@
       ]
     },
     {
-      "name": "httpd",
-      "runtime": "php",
+      "name": "passenger",
+      "runtime": "ruby",
       "versions": [
         ""
+      ]
+    },
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6",
+        "7"
       ]
     }
   ],
@@ -124,24 +124,9 @@
   "extendable": false,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Virginia"
-    },
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "Oregon"
-    },
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "Northern California"
-    },
-    {
-      "continent": "SA",
-      "country": "BR",
-      "region": "Sao Paulo"
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore"
     },
     {
       "continent": "AS",
@@ -154,14 +139,29 @@
       "region": "Dublin"
     },
     {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia"
+    },
+    {
       "continent": "OC",
       "country": "AU",
       "region": "Sydney"
     },
     {
-      "continent": "AS",
-      "country": "SG",
-      "region": "Singapore"
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo"
     }
   ]
 }

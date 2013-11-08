@@ -24,6 +24,14 @@
   ],
   "runtimes": [
     {
+      "language": "node",
+      "versions": [
+        "0.8.11",
+        "0.8.16",
+        "0.6.21"
+      ]
+    },
+    {
       "language": "php",
       "versions": [
         "5.4"
@@ -36,14 +44,6 @@
         "1.9.3",
         "2.0.0"
       ]
-    },
-    {
-      "language": "node",
-      "versions": [
-        "0.8.11",
-        "0.8.16",
-        "0.6.21"
-      ]
     }
   ],
   "middleware": null,
@@ -51,11 +51,11 @@
   "services": {
     "native": [
       {
-        "name": "postgresql",
+        "name": "memcached",
         "type": "datastore",
         "versions": [
-          "9.1",
-          "9.2"
+          "1.4",
+          "1.2"
         ]
       },
       {
@@ -67,18 +67,18 @@
         ]
       },
       {
+        "name": "postgresql",
+        "type": "datastore",
+        "versions": [
+          "9.1",
+          "9.2"
+        ]
+      },
+      {
         "name": "redis",
         "type": "datastore",
         "versions": [
           "2.4"
-        ]
-      },
-      {
-        "name": "memcached",
-        "type": "datastore",
-        "versions": [
-          "1.4",
-          "1.2"
         ]
       },
       {
@@ -91,6 +91,11 @@
     ],
     "addon": [
       {
+        "name": "appfirst",
+        "url": "http://www.appfirst.com/index.php",
+        "type": "analytics"
+      },
+      {
         "name": "blitz",
         "url": "https://www.blitz.io/",
         "type": "analytics"
@@ -101,43 +106,18 @@
         "type": "media"
       },
       {
-        "name": "mailgun",
-        "url": "http://www.mailgun.com/",
-        "type": "messaging"
+        "name": "ironmq",
+        "url": "http://www.iron.io/mq",
+        "type": "worker"
       },
       {
-        "name": "sendgrid",
-        "url": "http://sendgrid.com/",
-        "type": "messaging"
+        "name": "ironworker",
+        "url": "http://www.iron.io/worker",
+        "type": "worker"
       },
       {
-        "name": "new relic",
-        "url": "http://newrelic.com/",
-        "type": "analytics"
-      },
-      {
-        "name": "solano labs",
-        "url": "https://www.solanolabs.com/",
-        "type": "devops"
-      },
-      {
-        "name": "logentries",
-        "url": "https://logentries.com/",
-        "type": "analytics"
-      },
-      {
-        "name": "appfirst",
-        "url": "http://www.appfirst.com/index.php",
-        "type": "analytics"
-      },
-      {
-        "name": "mongolab",
-        "url": "https://mongolab.com/",
-        "type": "datastore"
-      },
-      {
-        "name": "mongohq",
-        "url": "https://www.mongohq.com/home",
+        "name": "justonedb",
+        "url": "http://www.justonedb.com/",
         "type": "datastore"
       },
       {
@@ -146,58 +126,54 @@
         "type": "analytics"
       },
       {
-        "name": "ironworker",
-        "url": "http://www.iron.io/worker",
-        "type": "worker"
-      },
-      {
-        "name": "treasure data hadoop",
-        "url": "http://www.treasure-data.com/",
+        "name": "logentries",
+        "url": "https://logentries.com/",
         "type": "analytics"
       },
       {
-        "name": "justonedb",
-        "url": "http://www.justonedb.com/",
+        "name": "mailgun",
+        "url": "http://www.mailgun.com/",
+        "type": "messaging"
+      },
+      {
+        "name": "mongohq",
+        "url": "https://www.mongohq.com/home",
         "type": "datastore"
       },
       {
-        "name": "ironmq",
-        "url": "http://www.iron.io/mq",
-        "type": "worker"
+        "name": "mongolab",
+        "url": "https://mongolab.com/",
+        "type": "datastore"
+      },
+      {
+        "name": "new relic",
+        "url": "http://newrelic.com/",
+        "type": "analytics"
+      },
+      {
+        "name": "sendgrid",
+        "url": "http://sendgrid.com/",
+        "type": "messaging"
+      },
+      {
+        "name": "solano labs",
+        "url": "https://www.solanolabs.com/",
+        "type": "devops"
       },
       {
         "name": "statsmix",
         "url": "http://www.statsmix.com/",
+        "type": "analytics"
+      },
+      {
+        "name": "treasure data hadoop",
+        "url": "http://www.treasure-data.com/",
         "type": "analytics"
       }
     ]
   },
   "extendable": false,
   "infrastructures": [
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "Virginia",
-      "provider": "AWS"
-    },
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "Northern California",
-      "provider": "AWS"
-    },
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "Oregon",
-      "provider": "AWS"
-    },
-    {
-      "continent": "SA",
-      "country": "BR",
-      "region": "Sao Paulo",
-      "provider": "AWS"
-    },
     {
       "continent": "AS",
       "country": "SG",
@@ -217,9 +193,33 @@
       "provider": "AWS"
     },
     {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California",
+      "provider": "AWS"
+    },
+    {
       "continent": "OC",
       "country": "AU",
       "region": "Sydney",
+      "provider": "AWS"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo",
       "provider": "AWS"
     }
   ]

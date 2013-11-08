@@ -24,25 +24,13 @@
   ],
   "runtimes": [
     {
+      "language": "erlang",
+      "versions": [
+
+      ]
+    },
+    {
       "language": "java",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "python",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "php",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "ruby",
       "versions": [
 
       ]
@@ -54,7 +42,19 @@
       ]
     },
     {
-      "language": "erlang",
+      "language": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "ruby",
       "versions": [
 
       ]

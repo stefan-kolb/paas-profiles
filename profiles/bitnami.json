@@ -30,7 +30,7 @@
       ]
     },
     {
-      "language": "python",
+      "language": "node",
       "versions": [
 
       ]
@@ -42,13 +42,13 @@
       ]
     },
     {
-      "language": "ruby",
+      "language": "python",
       "versions": [
 
       ]
     },
     {
-      "language": "node",
+      "language": "ruby",
       "versions": [
 
       ]
@@ -57,20 +57,19 @@
   "middleware": [
 
   ],
-  "frameworks": null,
-  "services": null,
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
-    {
-      "continent": "NA",
-      "country": "",
-      "region": ""
-    },
-    {
-      "continent": "SA",
-      "country": "",
-      "region": ""
-    },
     {
       "continent": "AS",
       "country": "",
@@ -82,7 +81,17 @@
       "region": ""
     },
     {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
       "continent": "OC",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
       "country": "",
       "region": ""
     }

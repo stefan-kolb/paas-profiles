@@ -24,7 +24,7 @@
   ],
   "runtimes": [
     {
-      "language": "java",
+      "language": "clojure",
       "versions": [
 
       ]
@@ -36,19 +36,13 @@
       ]
     },
     {
-      "language": "python",
+      "language": "go",
       "versions": [
 
       ]
     },
     {
-      "language": "php",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "ruby",
+      "language": "java",
       "versions": [
 
       ]
@@ -66,13 +60,19 @@
       ]
     },
     {
-      "language": "go",
+      "language": "php",
       "versions": [
 
       ]
     },
     {
-      "language": "clojure",
+      "language": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "ruby",
       "versions": [
 
       ]
@@ -82,46 +82,6 @@
   "frameworks": null,
   "services": {
     "native": [
-      {
-        "name": "postgresql",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "mysql",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "mongodb",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "redis",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "rabbitmq",
-        "description": "",
-        "type": "worker",
-        "versions": [
-
-        ]
-      },
       {
         "name": "filesystem",
         "description": "Persistent file system",
@@ -140,6 +100,46 @@
       },
       {
         "name": "microsoft sql server",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "rabbitmq",
+        "description": "",
+        "type": "worker",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [

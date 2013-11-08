@@ -31,9 +31,11 @@
       ]
     },
     {
-      "language": "python",
+      "language": "node",
       "versions": [
-        "2.7.3"
+        "0.4.12",
+        "0.6.17",
+        "0.8.14"
       ]
     },
     {
@@ -43,47 +45,37 @@
       ]
     },
     {
+      "language": "python",
+      "versions": [
+        "2.7.3"
+      ]
+    },
+    {
       "language": "ruby",
       "versions": [
         "1.8.7",
         "1.9.2",
         "1.9.3"
       ]
-    },
-    {
-      "language": "node",
-      "versions": [
-        "0.4.12",
-        "0.6.17",
-        "0.8.14"
-      ]
     }
   ],
   "middleware": [
-    {
-      "name": "tomcat",
-      "runtime": "java",
-      "versions": [
-        "6"
-      ]
-    },
     {
       "name": "gunicorn",
       "runtime": "python",
       "versions": [
 
       ]
+    },
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6"
+      ]
     }
   ],
   "frameworks": [
-    {
-      "name": "rails",
-      "runtime": "ruby",
-      "versions": [
-        "3.0",
-        "3.1"
-      ]
-    },
     {
       "name": "django",
       "runtime": "python",
@@ -91,24 +83,32 @@
         "1.3",
         "1.4"
       ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "3.0",
+        "3.1"
+      ]
     }
   ],
   "services": {
     "native": [
-      {
-        "name": "mysql",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "5.1"
-        ]
-      },
       {
         "name": "mongodb",
         "description": "",
         "type": "datastore",
         "versions": [
           "1.8"
+        ]
+      },
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.1"
         ]
       },
       {
@@ -120,23 +120,101 @@
         ]
       },
       {
-        "name": "redis",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "2.2"
-        ]
-      },
-      {
         "name": "rabbitmq",
         "description": "",
         "type": "worker",
         "versions": [
           "2.4"
         ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.2"
+        ]
       }
     ],
     "addon": [
+      {
+        "name": "blitz",
+        "url": "https://www.blitz.io/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "name": "cleardb",
+        "url": "http://www.cleardb.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "name": "cloudinary",
+        "url": "http://cloudinary.com/",
+        "description": "",
+        "type": "media"
+      },
+      {
+        "name": "cloudmailin",
+        "url": "http://www.cloudmailin.com/",
+        "description": "",
+        "type": "messaging"
+      },
+      {
+        "name": "ironmq",
+        "url": "http://www.iron.io/mq",
+        "description": "",
+        "type": "worker"
+      },
+      {
+        "name": "ironworker",
+        "url": "http://www.iron.io/worker",
+        "description": "",
+        "type": "worker"
+      },
+      {
+        "name": "logentries",
+        "url": "https://logentries.com/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "name": "mailgun",
+        "url": "http://www.mailgun.com/",
+        "description": "",
+        "type": "messaging"
+      },
+      {
+        "name": "memcachier",
+        "url": "http://www.memcachier.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "name": "mongohq",
+        "url": "https://www.mongohq.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "name": "mongolab",
+        "url": "https://mongolab.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "name": "nexmo",
+        "url": "http://nexmo.com/",
+        "description": "",
+        "type": "messaging"
+      },
+      {
+        "name": "redis cloud",
+        "url": "http://redis-cloud.com/",
+        "description": "",
+        "type": "datastore"
+      },
       {
         "name": "searchify",
         "url": "http://www.searchify.com/",
@@ -148,93 +226,21 @@
         "url": "https://www.statsmix.com/",
         "description": "",
         "type": "analytics"
-      },
-      {
-        "name": "mongolab",
-        "url": "https://mongolab.com/",
-        "description": "",
-        "type": "datastore"
-      },
-      {
-        "name": "mongohq",
-        "url": "https://www.mongohq.com/",
-        "description": "",
-        "type": "datastore"
-      },
-      {
-        "name": "mailgun",
-        "url": "http://www.mailgun.com/",
-        "description": "",
-        "type": "messaging"
-      },
-      {
-        "name": "blitz",
-        "url": "https://www.blitz.io/",
-        "description": "",
-        "type": "analytics"
-      },
-      {
-        "name": "ironworker",
-        "url": "http://www.iron.io/worker",
-        "description": "",
-        "type": "worker"
-      },
-      {
-        "name": "ironmq",
-        "url": "http://www.iron.io/mq",
-        "description": "",
-        "type": "worker"
-      },
-      {
-        "name": "cloudmailin",
-        "url": "http://www.cloudmailin.com/",
-        "description": "",
-        "type": "messaging"
-      },
-      {
-        "name": "cleardb",
-        "url": "http://www.cleardb.com/",
-        "description": "",
-        "type": "datastore"
-      },
-      {
-        "name": "nexmo",
-        "url": "http://nexmo.com/",
-        "description": "",
-        "type": "messaging"
-      },
-      {
-        "name": "memcachier",
-        "url": "http://www.memcachier.com/",
-        "description": "",
-        "type": "datastore"
-      },
-      {
-        "name": "cloudinary",
-        "url": "http://cloudinary.com/",
-        "description": "",
-        "type": "media"
-      },
-      {
-        "name": "logentries",
-        "url": "https://logentries.com/",
-        "description": "",
-        "type": "analytics"
-      },
-      {
-        "name": "redis cloud",
-        "url": "http://redis-cloud.com/",
-        "description": "",
-        "type": "datastore"
       }
     ]
   },
   "extendable": false,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Virginia",
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin",
       "provider": "AWS"
     },
     {
@@ -244,15 +250,9 @@
       "provider": "HP"
     },
     {
-      "continent": "EU",
-      "country": "IE",
-      "region": "Dublin",
-      "provider": "AWS"
-    },
-    {
-      "continent": "AS",
-      "country": "SG",
-      "region": "Singapore",
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
       "provider": "AWS"
     }
   ]

@@ -24,19 +24,19 @@
   ],
   "runtimes": [
     {
-      "language": "java",
-      "versions": [
-
-      ]
-    },
-    {
       "language": "dotnet",
       "versions": [
 
       ]
     },
     {
-      "language": "python",
+      "language": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "node",
       "versions": [
 
       ]
@@ -48,13 +48,13 @@
       ]
     },
     {
-      "language": "ruby",
+      "language": "python",
       "versions": [
 
       ]
     },
     {
-      "language": "node",
+      "language": "ruby",
       "versions": [
 
       ]
@@ -66,17 +66,17 @@
   "extendable": true,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "",
-      "region": ""
-    },
-    {
       "continent": "AS",
       "country": "",
       "region": ""
     },
     {
       "continent": "EU",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "NA",
       "country": "",
       "region": ""
     }

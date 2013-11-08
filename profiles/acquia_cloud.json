@@ -30,21 +30,22 @@
       ]
     }
   ],
-  "middleware": null,
-  "frameworks": null,
-  "services": null,
+  "middleware": [
+
+  ],
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
-    {
-      "continent": "NA",
-      "country": "",
-      "region": ""
-    },
-    {
-      "continent": "SA",
-      "country": "",
-      "region": ""
-    },
     {
       "continent": "AS",
       "country": "",
@@ -56,7 +57,17 @@
       "region": ""
     },
     {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
       "continent": "OC",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
       "country": "",
       "region": ""
     }

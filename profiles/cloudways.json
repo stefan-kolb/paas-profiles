@@ -30,13 +30,13 @@
       ]
     },
     {
-      "language": "python",
+      "language": "php",
       "versions": [
 
       ]
     },
     {
-      "language": "php",
+      "language": "python",
       "versions": [
 
       ]
@@ -56,12 +56,12 @@
   "extendable": false,
   "infrastructures": [
     {
-      "continent": "NA",
+      "continent": "EU",
       "country": "",
       "region": ""
     },
     {
-      "continent": "EU",
+      "continent": "NA",
       "country": "",
       "region": ""
     },

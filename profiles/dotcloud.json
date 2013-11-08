@@ -31,29 +31,6 @@
       ]
     },
     {
-      "language": "python",
-      "versions": [
-        "2.6.5",
-        "2.7.2",
-        "3.1.2",
-        "3.2.2"
-      ]
-    },
-    {
-      "language": "php",
-      "versions": [
-        "5.4.6"
-      ]
-    },
-    {
-      "language": "ruby",
-      "versions": [
-        "1.8",
-        "1.9.2",
-        "1.9.3"
-      ]
-    },
-    {
       "language": "node",
       "versions": [
         "0.4.12",
@@ -67,6 +44,29 @@
         "5.12.4",
         "5.14.2",
         "5.16.0"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.4.6"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.6.5",
+        "2.7.2",
+        "3.1.2",
+        "3.2.2"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.8",
+        "1.9.2",
+        "1.9.3"
       ]
     }
   ],
@@ -85,14 +85,6 @@
   "services": {
     "native": [
       {
-        "name": "smtp",
-        "description": "",
-        "type": "messaging",
-        "versions": [
-
-        ]
-      },
-      {
         "name": "mongodb",
         "description": "",
         "type": "datastore",
@@ -109,6 +101,14 @@
         ]
       },
       {
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.0"
+        ]
+      },
+      {
         "name": "redis",
         "description": "",
         "type": "datastore",
@@ -117,11 +117,11 @@
         ]
       },
       {
-        "name": "postgresql",
+        "name": "smtp",
         "description": "",
-        "type": "datastore",
+        "type": "messaging",
         "versions": [
-          "9.0"
+
         ]
       },
       {

@@ -10,8 +10,8 @@
   ],
   "pricing": [
     {
-      "model": "annually",
-      "period": ""
+      "model": "fixed",
+      "period": "annually"
     }
   ],
   "scaling": {
@@ -24,13 +24,13 @@
   ],
   "runtimes": [
     {
-      "language": "java",
+      "language": "dotnet",
       "versions": [
 
       ]
     },
     {
-      "language": "dotnet",
+      "language": "java",
       "versions": [
 
       ]
@@ -39,8 +39,17 @@
   "middleware": [
 
   ],
-  "frameworks": null,
-  "services": null,
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
 

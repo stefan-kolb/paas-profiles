@@ -33,8 +33,17 @@
   "middleware": [
 
   ],
-  "frameworks": null,
-  "services": null,
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {

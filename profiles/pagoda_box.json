@@ -41,12 +41,6 @@
   "services": {
     "native": [
       {
-        "name": "redis",
-        "versions": [
-
-        ]
-      },
-      {
         "name": "memcached",
         "versions": [
 
@@ -54,6 +48,12 @@
       },
       {
         "name": "mysql",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "redis",
         "versions": [
 
         ]

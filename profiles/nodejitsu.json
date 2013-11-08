@@ -50,13 +50,13 @@
         "type": "datastore"
       },
       {
-        "name": "mongolab",
-        "url": "https://mongolab.com/",
+        "name": "mongohq",
+        "url": "https://www.mongohq.com/",
         "type": "datastore"
       },
       {
-        "name": "mongohq",
-        "url": "https://www.mongohq.com/",
+        "name": "mongolab",
+        "url": "https://mongolab.com/",
         "type": "datastore"
       },
       {
@@ -69,9 +69,9 @@
   "extendable": false,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Las Vegas",
+      "continent": "EU",
+      "country": "NL",
+      "region": "Amsterdam",
       "provider": "Joyent"
     },
     {
@@ -81,9 +81,9 @@
       "provider": "Joyent"
     },
     {
-      "continent": "EU",
-      "country": "NL",
-      "region": "Amsterdam",
+      "continent": "NA",
+      "country": "US",
+      "region": "Las Vegas",
       "provider": "Joyent"
     }
   ]

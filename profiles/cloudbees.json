@@ -34,18 +34,18 @@
   ],
   "middleware": [
     {
-      "name": "tomcat",
-      "runtime": "java",
-      "versions": [
-        "6.0.32"
-      ]
-    },
-    {
       "name": "jboss",
       "runtime": "java",
       "versions": [
         "7.02",
         "7.1"
+      ]
+    },
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6.0.32"
       ]
     }
   ],
@@ -53,9 +53,9 @@
   "services": {
     "native": [
       {
-        "name": "mysql",
+        "name": "foxweave",
         "description": "",
-        "type": "datastore",
+        "type": "devops",
         "versions": [
 
         ]
@@ -69,15 +69,15 @@
         ]
       },
       {
-        "name": "sonar",
+        "name": "mysql",
         "description": "",
-        "type": "devops",
+        "type": "datastore",
         "versions": [
 
         ]
       },
       {
-        "name": "foxweave",
+        "name": "sonar",
         "description": "",
         "type": "devops",
         "versions": [
@@ -87,46 +87,16 @@
     ],
     "addon": [
       {
-        "name": "new relic",
-        "url": "http://newrelic.com/",
-        "description": "",
-        "type": "analysis"
-      },
-      {
-        "name": "papertrail",
-        "url": "https://papertrailapp.com/",
-        "description": "",
-        "type": "analysis"
-      },
-      {
-        "name": "sendgrid",
-        "url": "http://sendgrid.com/",
-        "description": "",
-        "type": "messaging"
-      },
-      {
-        "name": "websolr",
-        "url": "http://www.websolr.com/",
-        "description": "",
-        "type": "search"
-      },
-      {
         "name": "appdynamics",
         "url": "http://www.appdynamics.com/",
         "description": "",
         "type": "analysis"
       },
       {
-        "name": "cloudant",
-        "url": "https://cloudant.com/",
+        "name": "blazemeter",
+        "url": "http://blazemeter.com/",
         "description": "",
-        "type": "datastore"
-      },
-      {
-        "name": "mongohq",
-        "url": "https://www.mongohq.com/",
-        "description": "",
-        "type": "datastore"
+        "type": "analysis"
       },
       {
         "name": "cloudamqp",
@@ -135,10 +105,10 @@
         "type": "worker"
       },
       {
-        "name": "blazemeter",
-        "url": "http://blazemeter.com/",
+        "name": "cloudant",
+        "url": "https://cloudant.com/",
         "description": "",
-        "type": "analysis"
+        "type": "datastore"
       },
       {
         "name": "cloudforge",
@@ -153,25 +123,55 @@
         "type": "devops"
       },
       {
+        "name": "mongohq",
+        "url": "https://www.mongohq.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "name": "new relic",
+        "url": "http://newrelic.com/",
+        "description": "",
+        "type": "analysis"
+      },
+      {
+        "name": "papertrail",
+        "url": "https://papertrailapp.com/",
+        "description": "",
+        "type": "analysis"
+      },
+      {
         "name": "sauce labs",
         "url": "http://saucelabs.com/",
         "description": "",
         "type": "analysis"
+      },
+      {
+        "name": "sendgrid",
+        "url": "http://sendgrid.com/",
+        "description": "",
+        "type": "messaging"
+      },
+      {
+        "name": "websolr",
+        "url": "http://www.websolr.com/",
+        "description": "",
+        "type": "search"
       }
     ]
   },
   "extendable": true,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Virginia",
-      "provider": "AWS"
-    },
-    {
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
       "provider": "AWS"
     }
   ]

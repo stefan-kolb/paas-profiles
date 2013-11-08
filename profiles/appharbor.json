@@ -35,17 +35,19 @@
   "middleware": [
 
   ],
-  "frameworks": null,
+  "frameworks": [
+
+  ],
   "services": {
     "native": [
       {
-        "name": "mysql",
+        "name": "microsoft sql server",
         "versions": [
 
         ]
       },
       {
-        "name": "microsoft sql server",
+        "name": "mysql",
         "versions": [
 
         ]
@@ -173,12 +175,12 @@
         "type": ""
       },
       {
-        "name": "rediscloud",
+        "name": "redis to go",
         "desc": "",
         "type": ""
       },
       {
-        "name": "redis to go",
+        "name": "rediscloud",
         "desc": "",
         "type": ""
       },
@@ -222,15 +224,15 @@
   "extendable": false,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Virginia",
-      "provider": "AWS"
-    },
-    {
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
       "provider": "AWS"
     }
   ]

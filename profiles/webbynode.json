@@ -24,7 +24,7 @@
   ],
   "runtimes": [
     {
-      "language": "python",
+      "language": "node",
       "versions": [
 
       ]
@@ -36,13 +36,13 @@
       ]
     },
     {
-      "language": "ruby",
+      "language": "python",
       "versions": [
 
       ]
     },
     {
-      "language": "node",
+      "language": "ruby",
       "versions": [
 
       ]

@@ -34,17 +34,17 @@
   "services": {
     "native": [
       {
-        "name": "redis",
-        "type": "datastore",
-        "versions": [
-          "2.4.4"
-        ]
-      },
-      {
         "name": "couchdb",
         "type": "datastore",
         "versions": [
           "1.2.0"
+        ]
+      },
+      {
+        "name": "redis",
+        "type": "datastore",
+        "versions": [
+          "2.4.4"
         ]
       }
     ],

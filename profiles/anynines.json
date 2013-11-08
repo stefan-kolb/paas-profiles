@@ -22,19 +22,19 @@
   ],
   "runtimes": [
     {
+      "language": "groovy",
+      "versions": [
+
+      ]
+    },
+    {
       "language": "java",
       "versions": [
 
       ]
     },
     {
-      "language": "scala",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "groovy",
+      "language": "node",
       "versions": [
 
       ]
@@ -46,24 +46,19 @@
       ]
     },
     {
-      "language": "node",
+      "language": "scala",
       "versions": [
 
       ]
     }
   ],
-  "middleware": null,
+  "middleware": [
+
+  ],
   "frameworks": [
     {
-      "name": "spring",
-      "runtime": "java",
-      "versions": [
-
-      ]
-    },
-    {
-      "name": "play",
-      "runtime": "java",
+      "name": "grails",
+      "runtime": "groovy",
       "versions": [
 
       ]
@@ -76,8 +71,8 @@
       ]
     },
     {
-      "name": "grails",
-      "runtime": "groovy",
+      "name": "play",
+      "runtime": "java",
       "versions": [
 
       ]
@@ -95,10 +90,25 @@
       "versions": [
 
       ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+
+      ]
     }
   ],
   "services": {
     "native": [
+      {
+        "name": "elasticsearch",
+        "description": "",
+        "type": "search",
+        "versions": [
+          "0.20"
+        ]
+      },
       {
         "name": "mongodb",
         "description": "",
@@ -145,14 +155,6 @@
         "type": "datastore",
         "versions": [
           "1.0"
-        ]
-      },
-      {
-        "name": "elasticsearch",
-        "description": "",
-        "type": "search",
-        "versions": [
-          "0.20"
         ]
       }
     ],

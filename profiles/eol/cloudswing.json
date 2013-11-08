@@ -30,6 +30,12 @@
       ]
     },
     {
+      "language": "node",
+      "versions": [
+
+      ]
+    },
+    {
       "language": "php",
       "versions": [
 
@@ -37,12 +43,6 @@
     },
     {
       "language": "ruby",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "node",
       "versions": [
 
       ]
@@ -54,16 +54,6 @@
   "extendable": false,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "",
-      "region": ""
-    },
-    {
-      "continent": "SA",
-      "country": "",
-      "region": ""
-    },
-    {
       "continent": "AS",
       "country": "",
       "region": ""
@@ -74,7 +64,17 @@
       "region": ""
     },
     {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
       "continent": "OC",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
       "country": "",
       "region": ""
     }

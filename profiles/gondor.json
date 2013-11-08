@@ -36,28 +36,28 @@
   ],
   "frameworks": [
     {
-      "name": "wsgi",
-      "runtime": "python",
-      "versions": [
-
-      ]
-    },
-    {
       "name": "django",
       "runtime": "python",
       "versions": [
         "1.4"
+      ]
+    },
+    {
+      "name": "wsgi",
+      "runtime": "python",
+      "versions": [
+
       ]
     }
   ],
   "services": {
     "native": [
       {
-        "name": "solr",
+        "name": "celery",
         "description": "",
-        "type": "search",
+        "type": "worker",
         "versions": [
-
+          "2.3.3"
         ]
       },
       {
@@ -77,11 +77,11 @@
         ]
       },
       {
-        "name": "celery",
+        "name": "solr",
         "description": "",
-        "type": "worker",
+        "type": "search",
         "versions": [
-          "2.3.3"
+
         ]
       }
     ],

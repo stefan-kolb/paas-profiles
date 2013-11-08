@@ -22,25 +22,13 @@
   ],
   "runtimes": [
     {
-      "language": "java",
-      "versions": [
-
-      ]
-    },
-    {
       "language": "dotnet",
       "versions": [
 
       ]
     },
     {
-      "language": "python",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "php",
+      "language": "java",
       "versions": [
 
       ]
@@ -56,6 +44,18 @@
       "versions": [
 
       ]
+    },
+    {
+      "language": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+
+      ]
     }
   ],
   "middleware": [
@@ -65,16 +65,6 @@
   "services": null,
   "extendable": true,
   "infrastructures": [
-    {
-      "continent": "NA",
-      "country": "",
-      "region": ""
-    },
-    {
-      "continent": "SA",
-      "country": "",
-      "region": ""
-    },
     {
       "continent": "AS",
       "country": "",
@@ -86,7 +76,17 @@
       "region": ""
     },
     {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
       "continent": "OC",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
       "country": "",
       "region": ""
     }

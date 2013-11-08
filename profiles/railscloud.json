@@ -54,7 +54,7 @@
         ]
       },
       {
-        "name": "sqlite",
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -62,7 +62,7 @@
         ]
       },
       {
-        "name": "redis",
+        "name": "sqlite",
         "description": "",
         "type": "datastore",
         "versions": [

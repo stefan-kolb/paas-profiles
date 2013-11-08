@@ -24,19 +24,7 @@
   ],
   "runtimes": [
     {
-      "language": "python",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "php",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "ruby",
+      "language": "lua",
       "versions": [
 
       ]
@@ -48,7 +36,19 @@
       ]
     },
     {
-      "language": "lua",
+      "language": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "ruby",
       "versions": [
 
       ]

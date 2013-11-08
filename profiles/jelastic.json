@@ -49,17 +49,10 @@
   ],
   "middleware": [
     {
-      "name": "tomcat",
+      "name": "glassfish",
       "runtime": "java",
       "versions": [
-        "6.0.37", "7.0.39"
-      ]
-    },
-    {
-      "name": "tomee",
-      "runtime": "java",
-      "versions": [
-        "1.5.2"
+        "3.1.2.2"
       ]
     },
     {
@@ -70,17 +63,25 @@
       ]
     },
     {
-      "name": "glassfish",
-      "runtime": "java",
-      "versions": [
-        "3.1.2.2"
-      ]
-    },
-    {
       "name": "nginx",
       "runtime": "",
       "versions": [
         "1.4.1"
+      ]
+    },
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6.0.37",
+        "7.0.39"
+      ]
+    },
+    {
+      "name": "tomee",
+      "runtime": "java",
+      "versions": [
+        "1.5.2"
       ]
     }
   ],
@@ -90,10 +91,11 @@
   "services": {
     "native": [
       {
-        "name": "mongodb",
+        "name": "couchdb",
+        "description": "",
         "type": "datastore",
         "versions": [
-          "2.4.5"
+          "1.3.1"
         ]
       },
       {
@@ -102,6 +104,21 @@
         "versions": [
           "5.5.31",
           "10.0.3"
+        ]
+      },
+      {
+        "name": "memcached",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "1.4.15"
+        ]
+      },
+      {
+        "name": "mongodb",
+        "type": "datastore",
+        "versions": [
+          "2.4.5"
         ]
       },
       {
@@ -119,22 +136,6 @@
           "8.4.17",
           "9.2.4"
         ]
-      },
-      {
-        "name": "couchdb",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "1.3.1"
-        ]
-      },
-      {
-        "name": "memcached",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "1.4.15"
-        ]
       }
     ],
     "addon": [
@@ -143,18 +144,6 @@
   },
   "extendable": false,
   "infrastructures": [
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "",
-      "provider": "ServInt"
-    },
-    {
-      "continent": "SA",
-      "country": "BR",
-      "region": "",
-      "provider": "Websolute"
-    },
     {
       "continent": "AS",
       "country": "RU",
@@ -166,6 +155,18 @@
       "country": "JP",
       "region": "",
       "provider": "Tsukaeru"
+    },
+    {
+      "continent": "EU",
+      "country": "FR",
+      "region": "",
+      "provider": "Lunacloud"
+    },
+    {
+      "continent": "EU",
+      "country": "RU",
+      "region": "",
+      "provider": "Infobox"
     },
     {
       "continent": "EU",
@@ -216,10 +217,10 @@
       "provider": "Layershift"
     },
     {
-      "continent": "EU",
-      "country": "RU",
+      "continent": "NA",
+      "country": "US",
       "region": "",
-      "provider": "Infobox"
+      "provider": "ServInt"
     },
     {
       "continent": "SA",
@@ -228,10 +229,10 @@
       "provider": "Locaweb"
     },
     {
-      "continent": "EU",
-      "country": "FR",
+      "continent": "SA",
+      "country": "BR",
       "region": "",
-      "provider": "Lunacloud"
+      "provider": "Websolute"
     }
   ]
 }

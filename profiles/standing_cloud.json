@@ -30,13 +30,13 @@
       ]
     },
     {
-      "language": "python",
+      "language": "php",
       "versions": [
 
       ]
     },
     {
-      "language": "php",
+      "language": "python",
       "versions": [
 
       ]
@@ -54,16 +54,6 @@
   "extendable": false,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "",
-      "region": ""
-    },
-    {
-      "continent": "SA",
-      "country": "",
-      "region": ""
-    },
-    {
       "continent": "AS",
       "country": "",
       "region": ""
@@ -74,7 +64,17 @@
       "region": ""
     },
     {
+      "continent": "NA",
+      "country": "",
+      "region": ""
+    },
+    {
       "continent": "OC",
+      "country": "",
+      "region": ""
+    },
+    {
+      "continent": "SA",
       "country": "",
       "region": ""
     }

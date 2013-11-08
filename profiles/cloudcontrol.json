@@ -32,17 +32,17 @@
       ]
     },
     {
-      "language": "python",
-      "versions": [
-        "2.7.*",
-        "3.*"
-      ]
-    },
-    {
       "language": "php",
       "versions": [
         "5.3",
         "5.4"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7.*",
+        "3.*"
       ]
     },
     {
@@ -60,37 +60,28 @@
   ],
   "frameworks": [
     {
-      "name": "symfony",
+      "name": "cakephp",
       "runtime": "php",
       "versions": [
-        "1",
-        "2"
+
       ]
     },
     {
-      "name": "zend",
-      "runtime": "php",
+      "name": "django",
+      "runtime": "python",
       "versions": [
-        "1",
-        "2"
+
       ]
     },
     {
-      "name": "yii",
-      "runtime": "php",
+      "name": "flask",
+      "runtime": "python",
       "versions": [
 
       ]
     },
     {
       "name": "kohana",
-      "runtime": "php",
-      "versions": [
-
-      ]
-    },
-    {
-      "name": "cakephp",
       "runtime": "php",
       "versions": [
 
@@ -105,13 +96,6 @@
       ]
     },
     {
-      "name": "django",
-      "runtime": "python",
-      "versions": [
-
-      ]
-    },
-    {
       "name": "sinatra",
       "runtime": "ruby",
       "versions": [
@@ -119,10 +103,26 @@
       ]
     },
     {
-      "name": "flask",
-      "runtime": "python",
+      "name": "symfony",
+      "runtime": "php",
+      "versions": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "yii",
+      "runtime": "php",
       "versions": [
 
+      ]
+    },
+    {
+      "name": "zend",
+      "runtime": "php",
+      "versions": [
+        "1",
+        "2"
       ]
     }
   ],
@@ -300,16 +300,16 @@
         "type": "analytics"
       },
       {
-        "name": "usersnap",
-        "url": "http://usersnap.com/",
-        "desc": "",
-        "type": "devops"
-      },
-      {
         "name": "treasure data",
         "url": "http://www.treasure-data.com/",
         "desc": "",
         "type": "analytics"
+      },
+      {
+        "name": "usersnap",
+        "url": "http://usersnap.com/",
+        "desc": "",
+        "type": "devops"
       }
     ]
   },

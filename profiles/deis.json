@@ -21,43 +21,7 @@
   ],
   "runtimes": [
     {
-      "language": "java",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "python",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "php",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "node",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "scala",
-      "versions": [
-
-      ]
-    },
-    {
       "language": "clojure",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "ruby",
       "versions": [
 
       ]
@@ -69,13 +33,49 @@
       ]
     },
     {
+      "language": "go",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+
+      ]
+    },
+    {
       "language": "perl",
       "versions": [
 
       ]
     },
     {
-      "language": "go",
+      "language": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "scala",
       "versions": [
 
       ]

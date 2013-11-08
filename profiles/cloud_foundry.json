@@ -22,17 +22,17 @@
   ],
   "runtimes": [
     {
+      "language": "groovy",
+      "versions": [
+
+      ]
+    },
+    {
       "language": "java",
       "versions": [
         "1.6",
         "1.7",
         "1.8"
-      ]
-    },
-    {
-      "language": "ruby",
-      "versions": [
-
       ]
     },
     {
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "language": "groovy",
+      "language": "ruby",
       "versions": [
 
       ]
@@ -77,18 +77,6 @@
         "type": "analytics"
       },
       {
-        "name": "treasure data",
-        "url": "http://www.treasure-data.com/",
-        "description": "",
-        "type": "analytics"
-      },
-      {
-        "name": "sendgrid",
-        "url": "http://sendgrid.com/",
-        "description": "",
-        "type": "messaging"
-      },
-      {
         "name": "cleardb",
         "url": "http://www.cleardb.com/",
         "description": "",
@@ -107,10 +95,10 @@
         "type": "datastore"
       },
       {
-        "name": "rediscloud",
-        "url": "http://redis-cloud.com/",
+        "name": "loadimpact",
+        "url": "http://loadimpact.com/",
         "description": "",
-        "type": "datastore"
+        "type": "analytics"
       },
       {
         "name": "mongolab",
@@ -125,8 +113,20 @@
         "type": "analytics"
       },
       {
-        "name": "loadimpact",
-        "url": "http://loadimpact.com/",
+        "name": "rediscloud",
+        "url": "http://redis-cloud.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "name": "sendgrid",
+        "url": "http://sendgrid.com/",
+        "description": "",
+        "type": "messaging"
+      },
+      {
+        "name": "treasure data",
+        "url": "http://www.treasure-data.com/",
         "description": "",
         "type": "analytics"
       }

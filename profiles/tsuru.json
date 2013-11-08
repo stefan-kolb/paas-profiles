@@ -22,13 +22,7 @@
   ],
   "runtimes": [
     {
-      "language": "python",
-      "versions": [
-        ""
-      ]
-    },
-    {
-      "language": "ruby",
+      "language": "node",
       "versions": [
         ""
       ]
@@ -40,7 +34,13 @@
       ]
     },
     {
-      "language": "node",
+      "language": "python",
+      "versions": [
+        ""
+      ]
+    },
+    {
+      "language": "ruby",
       "versions": [
         ""
       ]
@@ -55,14 +55,14 @@
   "services": {
     "native": [
       {
-        "name": "mysql",
+        "name": "mongodb",
         "type": "datastore",
         "versions": [
 
         ]
       },
       {
-        "name": "mongodb",
+        "name": "mysql",
         "type": "datastore",
         "versions": [
 

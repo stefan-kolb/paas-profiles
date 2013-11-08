@@ -24,13 +24,13 @@
   ],
   "runtimes": [
     {
-      "language": "java",
+      "language": "go",
       "versions": [
 
       ]
     },
     {
-      "language": "python",
+      "language": "java",
       "versions": [
 
       ]
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "language": "go",
+      "language": "python",
       "versions": [
 
       ]
@@ -51,8 +51,17 @@
   "middleware": [
 
   ],
-  "frameworks": null,
-  "services": null,
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
 

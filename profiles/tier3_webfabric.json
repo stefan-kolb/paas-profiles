@@ -24,13 +24,6 @@
   ],
   "runtimes": [
     {
-      "language": "java",
-      "versions": [
-        "1.6",
-        "1.7"
-      ]
-    },
-    {
       "language": "dotnet",
       "versions": [
         "2.0",
@@ -38,22 +31,16 @@
       ]
     },
     {
-      "language": "python",
+      "language": "erlang",
       "versions": [
-        "2.6.5"
+        "R14B01"
       ]
     },
     {
-      "language": "php",
+      "language": "java",
       "versions": [
-        "5.3"
-      ]
-    },
-    {
-      "language": "ruby",
-      "versions": [
-        "1.8.7",
-        "1.9.2"
+        "1.6",
+        "1.7"
       ]
     },
     {
@@ -65,9 +52,22 @@
       ]
     },
     {
-      "language": "erlang",
+      "language": "php",
       "versions": [
-        "R14B01"
+        "5.3"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.6.5"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.8.7",
+        "1.9.2"
       ]
     }
   ],
@@ -76,11 +76,11 @@
   "services": {
     "native": [
       {
-        "name": "neo4j",
+        "name": "blob",
         "description": "",
         "type": "datastore",
         "versions": [
-
+          "0.51"
         ]
       },
       {
@@ -92,11 +92,35 @@
         ]
       },
       {
-        "name": "blob",
+        "name": "mongodb",
         "description": "",
         "type": "datastore",
         "versions": [
-          "0.51"
+          "2.0"
+        ]
+      },
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.1"
+        ]
+      },
+      {
+        "name": "neo4j",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.0"
         ]
       },
       {
@@ -114,30 +138,6 @@
         "versions": [
           "2.2"
         ]
-      },
-      {
-        "name": "mysql",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "5.1"
-        ]
-      },
-      {
-        "name": "postgresql",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "9.0"
-        ]
-      },
-      {
-        "name": "mongodb",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "2.0"
-        ]
       }
     ],
     "addon": [
@@ -147,9 +147,9 @@
   "extendable": false,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "New York"
+      "continent": "EU",
+      "country": "GB",
+      "region": ""
     },
     {
       "continent": "NA",
@@ -167,9 +167,9 @@
       "region": "Illinois"
     },
     {
-      "continent": "EU",
-      "country": "GB",
-      "region": ""
+      "continent": "NA",
+      "country": "US",
+      "region": "New York"
     }
   ]
 }

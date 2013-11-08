@@ -45,7 +45,9 @@
   "middleware": [
 
   ],
-  "frameworks": null,
+  "frameworks": [
+
+  ],
   "services": null,
   "extendable": true,
   "infrastructures": [

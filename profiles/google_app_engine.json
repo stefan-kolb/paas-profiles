@@ -25,16 +25,15 @@
   ],
   "runtimes": [
     {
-      "language": "java",
+      "language": "go",
       "versions": [
-        "1.7"
+        "1.1"
       ]
     },
     {
-      "language": "python",
+      "language": "java",
       "versions": [
-        "2.7.5",
-        "2.5"
+        "1.7"
       ]
     },
     {
@@ -44,9 +43,10 @@
       ]
     },
     {
-      "language": "go",
+      "language": "python",
       "versions": [
-        "1.1"
+        "2.7.5",
+        "2.5"
       ]
     }
   ],
@@ -55,17 +55,17 @@
   ],
   "frameworks": [
     {
-      "name": "webapp2",
-      "runtime": "python",
-      "versions": [
-
-      ]
-    },
-    {
       "name": "django",
       "runtime": "python",
       "versions": [
         "1.5.4"
+      ]
+    },
+    {
+      "name": "webapp2",
+      "runtime": "python",
+      "versions": [
+
       ]
     }
   ],
@@ -103,13 +103,13 @@
   "extendable": false,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "US",
+      "continent": "EU",
+      "country": "",
       "region": ""
     },
     {
-      "continent": "EU",
-      "country": "",
+      "continent": "NA",
+      "country": "US",
       "region": ""
     }
   ]

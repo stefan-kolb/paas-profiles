@@ -21,31 +21,13 @@
   ],
   "runtimes": [
     {
-      "language": "java",
-      "versions": [
-
-      ]
-    },
-    {
       "language": "dotnet",
       "versions": [
 
       ]
     },
     {
-      "language": "python",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "php",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "ruby",
+      "language": "java",
       "versions": [
 
       ]
@@ -61,13 +43,40 @@
       "versions": [
 
       ]
+    },
+    {
+      "language": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+
+      ]
     }
   ],
   "middleware": [
 
   ],
-  "frameworks": null,
-  "services": null,
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+
+    ],
+    "addon": [
+
+    ]
+  },
   "extendable": false,
   "infrastructures": [
     {
