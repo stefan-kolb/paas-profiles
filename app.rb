@@ -33,5 +33,36 @@ end
 # api
 get '/api/vendor/:vendor' do
   content_type :json
-  Vendor.where(name: /#{params[:vendor]}/i).without(:id).first.as_document.to_s
+  json = Vendor.find_by(name: /#{params[:vendor].gsub('_', '.')}/i).as_document.to_json(:except => '_id')
+end
+
+post '/api/match' do
+  data = JSON.parse(request.body.read)
+  query = Vendor.all
+
+  if data["hosting"]
+    query = query.all(hosting: data["hosting"])
+  end
+
+  if data["runtimes"]
+    data["runtimes"].each do |r|
+        query = query.all("runtimes.language" => r["language"])
+        query = query.in("runtimes.versions" => r["versions"])
+    end
+  end
+
+  if data['services']
+    if data['services']['native']
+
+    end
+    if data['services']['addon'].each do |a|
+        query = query.elem_match('services.addon' => a)
+      end
+    end
+  end
+
+  query.each do |n|
+    puts n["name"]
+  end
+  puts query.count
 end
