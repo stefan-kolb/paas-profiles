@@ -17,7 +17,6 @@ get '/vendors' do
 end
 
 get '/vendor/:name' do
-	vendor = :name
   @title = "#{params[:name].gsub("_", " ").split(" ").map(&:capitalize).join(" ")} | PaaS Comparison"
 	erb :vendor
 end
