@@ -39,38 +39,77 @@ end
 
 post '/api/match' do
   data = JSON.parse(request.body.read)
-  # match this vendor TODO validation
+  # match this vendor
+  # TODO validation
   lookup = Vendor.new(data)
 
+  # initial query
   query = Vendor.all
-
-  query = query.all(hosting: lookup.hosting)
+  # matching
+  # name
+  #query = query.all(name: lookup.name)
+  # revision
+  # vendor verified
+  # url
+  # status
   query = query.all(status: lookup.status)
-
-  if data["runtimes"]
-    data["runtimes"].each do |r|
-        query = query.all("runtimes.language" => r["language"])
+  # status since
+  # hosting
+  query = query.all(hosting: lookup.hosting)
+  # pricing
+  lookup.pricings.each do |p|
+    query = query.and({ 'pricing.model' => p.model }, { 'pricing.period' => p.period })
+  end
+  # scaling
+  if lookup.scaling
+    query = query.all('scaling.vertical' => lookup.scaling.vertical)
+    query = query.all('scaling.horizontal' => lookup.scaling.horizontal)
+    query = query.all('scaling.auto' => lookup.scaling.auto)
+  end
+  # compliance
+  query = query.all(compliance: lookup.compliance)
+  # runtimes
+  lookup.runtimes.each do |r|
+    query = query.all('runtimes.language' => r.language)
+  end
+  # middleware
+  lookup.middlewares.each do |m|
+    query = query.all('middleware.name' => m.name)
+  end
+  # frameworks
+  lookup.frameworks.each do |f|
+    query = query.all('frameworks.name' => f.name)
+  end
+  # services
+  if lookup.service
+    lookup.service.addons.each do |a|
+      query = query.all('services.addon.name' => a.name)
+    end
+    lookup.service.natives.each do |n|
+      query = query.all('services.native.name' => n.name)
+    end
+  end
+  # extensibility
+  query = query.where(extendable: lookup.extendable) if lookup.extendable
+  # infrastructures
+  if lookup.infrastructures
+    lookup.infrastructures.each do |i|
+      query = query.all('infrastructures.continent' => i.continent)
+      query = query.all('infrastructures.country' => i.country)
     end
   end
 
-  if data['services']
-    if data['services']['native']
-
-    end
-    if data['services']['addon'].each do |a|
-        query = query.elem_match('services.addon' => a)
-      end
-    end
+  result = []
+  query.each do |d|
+    result << d.as_document.as_json
   end
 
-  query.each do |n|
-    puts n["name"]
-  end
+  result.to_json(:except => '_id')
 
-  # check versions on result
-  query.each do |r|
+  # TODO check versions on result
+  result.each do |r|
     vsupport = false
-    if r["runtimes"].each do |rt|
+    r["runtimes"].each do |rt|
       rt["versions"].each do |v|
         v.gsub! "*", "99"
         if Versionomy.parse(v) >= "1.9.3"
@@ -78,9 +117,9 @@ post '/api/match' do
         end
       end
     end
-    end
-    query.to_a.delete r unless vsupport
+    result.delete(r) unless vsupport
   end
 
-  puts query.count
+  result.to_json
+
 end
