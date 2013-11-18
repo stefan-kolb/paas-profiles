@@ -17,7 +17,6 @@ get '/vendors' do
 end
 
 get '/vendor/:name' do
-	vendor = :name
   @title = "#{params[:name].gsub("_", " ").split(" ").map(&:capitalize).join(" ")} | PaaS Comparison"
 	erb :vendor
 end
@@ -29,4 +28,10 @@ end
 
 get '/search' do
 	erb :search, :layout => false
+end
+
+# api
+get '/api/vendor/:vendor' do
+  content_type :json
+  Vendor.where(name: /#{params[:vendor]}/i).without(:id).first.as_document.to_s
 end
