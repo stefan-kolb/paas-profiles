@@ -1,6 +1,7 @@
 require 'json'
 require 'mongoid'
 require 'sinatra'
+require 'versionomy'
 require 'newrelic_rpm'
 
 require_relative 'models/vendor'
@@ -38,16 +39,17 @@ end
 
 post '/api/match' do
   data = JSON.parse(request.body.read)
+  # match this vendor TODO validation
+  lookup = Vendor.new(data)
+
   query = Vendor.all
 
-  if data["hosting"]
-    query = query.all(hosting: data["hosting"])
-  end
+  query = query.all(hosting: lookup.hosting)
+  query = query.all(status: lookup.status)
 
   if data["runtimes"]
     data["runtimes"].each do |r|
         query = query.all("runtimes.language" => r["language"])
-        query = query.in("runtimes.versions" => r["versions"])
     end
   end
 
@@ -64,5 +66,21 @@ post '/api/match' do
   query.each do |n|
     puts n["name"]
   end
+
+  # check versions on result
+  query.each do |r|
+    vsupport = false
+    if r["runtimes"].each do |rt|
+      rt["versions"].each do |v|
+        v.gsub! "*", "99"
+        if Versionomy.parse(v) >= "1.9.3"
+          vsupport = true
+        end
+      end
+    end
+    end
+    query.to_a.delete r unless vsupport
+  end
+
   puts query.count
 end
