@@ -19,7 +19,7 @@ class Vendor
 	field :status, type: String
 	field :status_since, type: Date
 	field :type, type: String
-	field :extendable, type: Boolean
+	field :extensible, type: Boolean
 	field :hosting, type: Array
 	field :compliance, type: Array
 	# relations
@@ -35,7 +35,7 @@ class Vendor
 	validates :revision, presence: true
 	validates :url, presence: true, format: { with: /http[s]?:\/\/.*/ }
 	validates :status, presence: true, inclusion: { in: %w(beta production eol) }
-	validates :extendable, presence: true
+	validates :extensible, presence: true
 	# todo custom validator validates :hosting, presence: true, inclusion: { in: [ "public", "private" ] }
 	validates :pricing, presence: true, :allow_blank => true
 	validates :scaling, presence: true

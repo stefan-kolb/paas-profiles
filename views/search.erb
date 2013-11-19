@@ -53,9 +53,9 @@ unless params[:addons].nil?
 	query = query.all("services.addon.name" => params[:addons])
 end
 
-# extendable
-unless params[:extendable].nil?
-	query = query.where(extendable: true)
+# extensible
+unless params[:extensible].nil?
+	query = query.where(extensible: true)
 end
 
 # infras
@@ -107,9 +107,9 @@ end
 					<% 
 						end
 						
-						if profile["extendable"]
+						if profile["extensible"]
 					%>
-						<span class="label label-success">extendable</span>
+						<span class="label label-success">extensible</span>
 					<% 	end  %>
 					</div>
 				</td>
