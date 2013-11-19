@@ -1,4 +1,4 @@
-	<script src="http://code.highcharts.com/3.0/highcharts.js"></script>
+    <script src="http://code.highcharts.com/3.0/highcharts.js"></script>
 	<script src="http://code.highcharts.com/modules/exporting.js"></script>
 	<link rel="stylesheet" href="/css/theme.bootstrap.css">
 	<style>
@@ -24,11 +24,6 @@
         font-size: 21px;
         padding: 14px 24px;
       }
-	    .extendable {
-			font-style: italic;
-			color: #fff;
-			background:#468847;
-		}
     </style>
 	
 	<div class="jumbotron">
@@ -50,7 +45,7 @@
 				plotShadow: false
 			},
 			title: {
-				text: 'Runtimes',
+				text: 'Languages',
 				align: 'center',
 				verticalAlign: 'middle',
 				y: 0
@@ -78,14 +73,7 @@
 				type: 'pie',
 				name: 'Supported by',
 				innerSize: '60%',
-				data: [
-					<%
-					Vendor.distinct("runtimes.language").each do |l|
-						c = Vendor.where("runtimes.language" => l).count
-					%>
-					['<%= l %>',   <%= c %>],
-					<% end %>
-				]
+				data: <%= LanguageCharts.new.language_support_piedata %>
 			}]
 		});
 		

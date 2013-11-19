@@ -32,6 +32,7 @@ get '/search' do
 end
 
 get '/statistics' do
-	@title = "Platform as a Service Statistics"
+  require_relative 'lib/statistics/language_charts'
+	@title = "Platform as a Service | Live Statistics"
 	erb :statistics
 end
