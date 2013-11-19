@@ -34,15 +34,23 @@ end
 # api
 get '/api/vendor/:vendor' do
   content_type :json
-  json = Vendor.find_by(name: /#{params[:vendor].gsub('_', '.')}/i).as_document.to_json(:except => '_id')
+
+  begin
+    json = Vendor.find_by(name: /#{params[:vendor].gsub('_', '.')}/i).as_document.to_json(:except => '_id')
+  rescue
+    halt 404, 'No vendor found!'
+  end
 end
 
 post '/api/match' do
-  data = JSON.parse(request.body.read)
-  # match this vendor
-  # TODO validation
-  lookup = Vendor.new(data)
-
+  begin
+    data = JSON.parse(request.body.read)
+    # match this vendor
+    # TODO validation
+    lookup = Vendor.new(data)
+  rescue
+    halt 400, 'JSON request has a bad format!'
+  end
   # initial query
   query = Vendor.all
   # matching
@@ -90,7 +98,7 @@ post '/api/match' do
     end
   end
   # extensibility
-  query = query.where(extendable: lookup.extendable) if lookup.extendable
+  query = query.where(extensible: lookup.extensible) if lookup['extensible']
   # infrastructures
   if lookup.infrastructures
     lookup.infrastructures.each do |i|
@@ -104,22 +112,33 @@ post '/api/match' do
     result << d.as_document.as_json
   end
 
-  result.to_json(:except => '_id')
-
   # TODO check versions on result
-  result.each do |r|
-    vsupport = false
-    r["runtimes"].each do |rt|
-      rt["versions"].each do |v|
-        v.gsub! "*", "99"
-        if Versionomy.parse(v) >= "1.9.3"
-          vsupport = true
+  res = result.dup
+  lookup.runtimes.each do |runtime|
+    runtime.versions.map! {|v| v.gsub! '*', '99' } unless runtime.versions
+    runtime.versions.map! {|v| Versionomy.parse(v) } unless runtime.versions
+    version_support = false
+
+    result.each do |provider|
+      provider['runtimes'].each do |r|
+        if r['language'] == runtime['language']
+          r['versions'].map! {|v| v.gsub! '*', '99' } unless r['versions']
+          r['versions'].map! {|v| Versionomy.parse(v) } unless r['versions']
+
+          runtime.versions.each do |v1|
+            r['versions'].each do |v2|
+              # TODO >= ==?
+              if v2 >= v1
+                version_support = true
+              end
+            end
+          end
         end
       end
+      res.delete(provider) unless version_support
     end
-    result.delete(r) unless vsupport
   end
 
-  result.to_json
-
+  puts res.length
+  res.to_json(:except => '_id')
 end
