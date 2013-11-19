@@ -46,7 +46,7 @@
 
   ],
   "services": null,
-  "extendable": true,
+  "extensible": true,
   "infrastructures": [
 
   ]

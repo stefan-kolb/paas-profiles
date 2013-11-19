@@ -50,7 +50,7 @@
 
     ]
   },
-  "extendable": false,
+  "extensible": false,
   "infrastructures": [
 
   ]

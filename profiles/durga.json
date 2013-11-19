@@ -53,7 +53,7 @@
 
     ]
   },
-  "extendable": false,
+  "extensible": false,
   "infrastructures": [
     {
       "continent": "OC",

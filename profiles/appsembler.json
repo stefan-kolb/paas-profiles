@@ -77,7 +77,7 @@
 
     ]
   },
-  "extendable": false,
+  "extensible": false,
   "infrastructures": [
     {
       "continent": "NA",

@@ -169,7 +169,7 @@
 
     ]
   },
-  "extendable": false,
+  "extensible": false,
   "infrastructures": [
     {
       "continent": "EU",

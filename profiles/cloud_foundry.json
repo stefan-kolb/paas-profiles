@@ -145,7 +145,7 @@
       }
     ]
   },
-  "extendable": true,
+  "extensible": true,
   "infrastructures": [
     {
       "continent": "NA",

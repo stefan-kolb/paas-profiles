@@ -63,7 +63,7 @@
   ],
   "frameworks": null,
   "services": null,
-  "extendable": true,
+  "extensible": true,
   "infrastructures": [
     {
       "continent": "AS",

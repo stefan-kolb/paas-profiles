@@ -33,7 +33,7 @@
   ],
   "frameworks": null,
   "services": null,
-  "extendable": false,
+  "extensible": false,
   "infrastructures": [
 
   ]
