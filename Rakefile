@@ -19,7 +19,7 @@ namespace :mongo do
 					data = JSON.parse(File.read(file_name))
 					Vendor.create!(data)
 				rescue
-					raise "An error occurred while parsing " + file_name + ".json"
+					raise "An error occurred while parsing " + file_name
 				end
 			end
 			# be sure everything was imported
