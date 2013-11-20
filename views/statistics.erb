@@ -57,11 +57,13 @@
 				pie: {
 					dataLabels: {
 						enabled: true,
-						distance: -35,
+                        distance: 15,
+                        connectorColor: '#000000',
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
 						style: {
 							fontFamily: '\"Helvetica Neue\", Helvetica, Arial, sans-serif',
 							fontWeight: 'bold',
-							color: 'white'
+							color: 'black'
 						}
 					}				
 				}
@@ -73,7 +75,7 @@
 				type: 'pie',
 				name: 'Supported by',
 				innerSize: '60%',
-				data: <%= LanguageCharts.new.language_support_piedata %>
+				data: <%= Charts.new.support_piedata 'runtimes.language' %>
 			}]
 		});
 		
