@@ -1,11 +1,13 @@
 require_relative '../../models/vendor'
 
 class Charts
-  def support_piedata( type, threshold = true )
+  def support_piedata( type, threshold = 0.05 )
     data = []
 
     distinct_values(type).each do |l|
       count = Vendor.where(type => l).count
+      # TODO if property is not mandatory this will lead to false % distribution, e.g. middleware
+      # Wrong chart type because values don't add up to a 100 %
       data << [l, count]
     end
 
@@ -20,7 +22,7 @@ class Charts
       others = ['Others', 0]
 
       data.delete_if do |e|
-        if (e[1].to_f / sum) < 0.05
+        if (e[1].to_f / sum) < threshold
           others[1] += e[1]
           true
         end

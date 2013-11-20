@@ -29,17 +29,69 @@
 	
 	<div class="jumbotron">
 		<h1>Platform as a Service Statistics</h1>
-        <p class="lead">Live statistics of the current PaaS vendor landscape.</p>
+        <p class="lead">Live statistics of the current PaaS vendor landscape<sup class="muted"><small><a href="#footnotes">1</a></small></sup>.</p>
 	</div>
-	<div id="graph1" style="height: 350px;" class="text-center"></div>
+    <div id="scaling_support" style="height: 350px;" class="text-center"></div>
+    <div id="language_support" style="height: 350px;" class="text-center"></div>
+    <div id="infra_support" style="height: 350px;" class="text-center"></div>
+    <div id="middleware_support" style="height: 350px;" class="text-center"></div>
+    <div id="service_support" style="height: 350px;" class="text-center"></div>
+    <div id="addon_support" style="height: 350px;" class="text-center"></div>
 	<div id="graph2" style="height: 350px;" class="text-center"></div>
+    <div id="footnotes"><small><sup class="muted">1</sup> The data source is the most recent collection of <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.</small></div>
 <script>
 	$(document).ready(function() {
 		$('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
 		$('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
 		$('ul.breadcrumb > li:first').after('<li class="active">Statistics</li>');
-		
-		$('#graph1').highcharts({
+
+        $('#scaling_support').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Scaling',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: 0
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: 15,
+                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
+                    },
+                    startAngle: -90,
+                    endAngle: 90,
+                    center: ['50%', '75%']
+                }
+            },
+            series: [{
+                name: 'Supported by',
+                innerSize: '40%',
+                stacking: 'percentage',
+                data: <%= ScalingCharts.new.vertical_piedata %>
+            },
+            {
+                name: 'Supported by',
+                innerSize: '60%',
+                stacking: 'percentage',
+                data: <%= ScalingCharts.new.horizontal_piedata %>
+            },
+            {
+                name: 'Supported by',
+                innerSize: '80%',
+                stacking: 'percentage',
+                data: <%= ScalingCharts.new.auto_piedata %>
+            }
+            ]
+        });
+
+        $('#language_support').highcharts({
 			chart: {
                 type: 'pie'
 			},
@@ -67,6 +119,122 @@
 				data: <%= Charts.new.support_piedata 'runtimes.language' %>
 			}]
 		});
+
+        $('#middleware_support').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Middleware<br>Products',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: -10
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: 15,
+                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
+                    }
+                }
+            },
+            series: [{
+                name: 'Supported by',
+                innerSize: '60%',
+                data: <%= Charts.new.support_piedata 'middleware.name', 0.02 %>
+            }]
+        });
+
+        $('#service_support').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Native<br>Services',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: -10
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: 15,
+                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
+                    }
+                }
+            },
+            series: [{
+                name: 'Supported by',
+                innerSize: '60%',
+                data: <%= Charts.new.support_piedata 'services.native.name', 0.01 %>
+            }]
+        });
+
+        $('#addon_support').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Add-ons',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: -10
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: 15,
+                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
+                    }
+                }
+            },
+            series: [{
+                name: 'Supported by',
+                innerSize: '60%',
+                data: <%= Charts.new.support_piedata 'services.addon.name', 0.01 %>
+            }]
+        });
+
+        $('#infra_support').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Infrastructures',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: 10
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: 15,
+                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
+                    }
+                }
+            },
+            series: [{
+                name: 'Supported by',
+                innerSize: '60%',
+                data: <%= InfrastructureCharts.new.support_piedata %>
+            }]
+        });
 		
 		$('#graph2').highcharts({
 			title: {
@@ -90,9 +258,6 @@
 					width: 1,
 					color: '#808080'
 				}]
-			},
-			credits: {
-				enabled: false
 			},
 			tooltip: {
 				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
