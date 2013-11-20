@@ -1,4 +1,5 @@
     <script src="http://code.highcharts.com/3.0/highcharts.js"></script>
+    <script src="/js/themes/paasify.js"></script>
 	<script src="http://code.highcharts.com/modules/exporting.js"></script>
 	<link rel="stylesheet" href="/css/theme.bootstrap.css">
 	<style>
@@ -40,15 +41,13 @@
 		
 		$('#graph1').highcharts({
 			chart: {
-				plotBackgroundColor: null,
-				plotBorderWidth: 0,
-				plotShadow: false
+                type: 'pie'
 			},
 			title: {
-				text: 'Languages',
+				text: 'Runtime<br>Languages',
 				align: 'center',
 				verticalAlign: 'middle',
-				y: 0
+				y: -10
 			},
 			tooltip: {
 				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
@@ -58,21 +57,11 @@
 					dataLabels: {
 						enabled: true,
                         distance: 15,
-                        connectorColor: '#000000',
-                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-						style: {
-							fontFamily: '\"Helvetica Neue\", Helvetica, Arial, sans-serif',
-							fontWeight: 'bold',
-							color: 'black'
-						}
+                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
 					}				
 				}
 			},
-			credits: {
-				enabled: false
-			},			
 			series: [{
-				type: 'pie',
 				name: 'Supported by',
 				innerSize: '60%',
 				data: <%= Charts.new.support_piedata 'runtimes.language' %>
