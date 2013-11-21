@@ -65,14 +65,14 @@ Highcharts.theme = {
                 inside: false,
                 distance: 0,
                 zIndex: 99,
-                format: '<span style="color:{series.color}">{point.y}</span>',
+                format: '<span style="color:{point.color}">{point.y} %</span>',
                 connectorColor: '#000000',
                 useHTML: true,
                 style: {
                     fontFamily: '\"Helvetica Neue\", Helvetica, Arial, sans-serif',
                     fontWeight: 'bold',
                     fontSize: '12px',
-                    color: 'white'
+                    color: 'black'
                 }
             }
         }

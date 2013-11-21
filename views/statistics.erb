@@ -35,7 +35,6 @@
     <div id="languages" style="height: 350px;" class="text-center"></div>
     <div id="status" style="height: 350px;" class="text-center"></div>
     <div id="scaling_support" style="height: 350px;" class="text-center"></div>
-    <div id="language_support" style="height: 350px;" class="text-center"></div>
     <div id="infra_support" style="height: 350px;" class="text-center"></div>
     <div id="middleware_support" style="height: 350px;" class="text-center"></div>
     <div id="service_support" style="height: 350px;" class="text-center"></div>
@@ -78,10 +77,15 @@
             },
             yAxis: [{
                 min: 0,
-                max: <%= Charts.new.max_count %>,
+                max: 100,
                 title: {
                     text: 'Support (%)'
                 },
+                labels:{
+                    formatter:function(){
+                        return this.value + ' %';
+                    }
+                }/*,
                 plotLines: [{
                     color: '#3a87ad',
                     dashStyle: 'ShortDash',
@@ -91,18 +95,18 @@
                     label: {
                         text: '100 %'
                     }
-                }]
+                }]*/
             },
                 {
                     title: {
-                        text: 'Support (%)'
+                        text: 'Count'
                     },
                     labels:{
                         formatter:function(){
                             var max=67,
                                 min=0,
                                     range=max-min;
-                            return ((this.value-min)/(range)*100).toFixed(1) + ' %';
+                            return (this.value * 0.67).toFixed(0);
                         }
                     },
                     linkedTo:0,
@@ -112,7 +116,7 @@
             tooltip: {
                 formatter: function() {
                     var point = this.point,
-                            s = this.x +':<b>'+ this.y +'% market share</b><br/>';
+                            s = '<b>' + this.x +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
                     if (point.drilldown) {
                         s += 'Click to view '+ point.category +' versions';
                     } else {
@@ -131,6 +135,7 @@
                             click: function() {
                                 var drilldown = this.drilldown;
                                 if (drilldown) { // drill down
+                                    // TODO axis must be redrawn too
                                     setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
                                 } else { // restore
                                     setChart(name, categories, data);
@@ -221,35 +226,6 @@
             }
             ]
         });
-
-        $('#language_support').highcharts({
-			chart: {
-                type: 'pie'
-			},
-			title: {
-				text: 'Runtime<br>Languages',
-				align: 'center',
-				verticalAlign: 'middle',
-				y: -10
-			},
-			tooltip: {
-				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
-			},
-			plotOptions: {
-				pie: {
-					dataLabels: {
-						enabled: true,
-                        distance: 15,
-                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
-					}				
-				}
-			},
-			series: [{
-				name: 'Supported by',
-				innerSize: '60%',
-				data: <%= Charts.new.support_piedata 'runtimes.language' %>
-			}]
-		});
 
         $('#middleware_support').highcharts({
             chart: {

@@ -1,6 +1,12 @@
 require_relative '../../models/vendor'
 
 class Charts
+  attr_reader :vendor_count
+
+  def initialize
+    @vendor_count = Vendor.count
+  end
+
   def support_piedata( type, threshold = 0.05 )
     data = []
 
@@ -38,13 +44,10 @@ class Charts
 
     distinct_values(type).each_with_index do |l, i|
       count = Vendor.where(type => l).count
-      # TODO get unique versions from all documents
-      versions = [ 'Java 1.5', 'Java 1.6', 'Java 1.7', 'Java 1.8']
-
-      data << { name: l, y: count, drilldown: {
+      data << { name: l, y: (count / vendor_count.to_f * 100).to_i, drilldown: {
           name: 'Versions',
-          categories: versions,
-          data: [0.20, 0.83, 1.58, 13.12, 5.43],
+          categories: distinct_versions(l),
+          data: distinct_versions_data(l),
           color: '#2f7ed8'
       } }
     end
@@ -71,11 +74,73 @@ class Charts
     return data.to_json
   end
 
-  def distinct_values type
-    Vendor.distinct type
+  def distinct_versions language
+    versions = []
+    vendors = Vendor.where('runtimes.language' => language)
+
+    vendors.each do |vendor|
+      vendor['runtimes'].each do |rt|
+        if rt['language'] == language
+          rt['versions'].each do |v|
+            # TODO uniform version format, filter empty versions
+            unless versions.include? v
+              versions << v
+            end
+          end
+        end
+      end
+    end
+
+    # TODO replace '' with unknown
+    if versions.find_index('')
+      versions[versions.find_index('')] = 'Unknown'
+    end
+
+    return versions
   end
 
-  def max_count
-    Vendor.count
+  def distinct_versions_data language
+    versions = []
+    vendors = Vendor.where('runtimes.language' => language)
+    data = []
+
+    vendors.each do |vendor|
+      vendor['runtimes'].each do |rt|
+        if rt['language'] == language
+          if rt['versions'].empty?
+            # TODO bug will not work will always return first element
+            if versions.include? ''
+              data[versions.find_index('')] += 1
+            else
+              versions << ''
+              data << 1
+            end
+          else
+            rt['versions'].each do |v|
+              # TODO uniform version format, filter empty versions
+              if versions.include? v
+                data[versions.find_index(v)] += 1
+              else
+                versions << v
+                data << 1
+              end
+            end
+          end
+        end
+      end
+    end
+
+    # TODO EMPTY is also unknown!!! -> BUG cannot get back
+    if versions.find_index('')
+      versions[versions.find_index('')] = 'Unknown'
+    end
+
+    data = data.collect { |v| (v / vendors.length.to_f * 100).to_i }
+
+    return data
+  end
+
+  def distinct_values type
+    Vendor.distinct type
   end
 end
