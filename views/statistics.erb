@@ -29,8 +29,11 @@
 	
 	<div class="jumbotron">
 		<h1>Platform as a Service Statistics</h1>
-        <p class="lead">Live statistics of the current PaaS vendor landscape<sup class="muted"><small><a href="#footnotes">1</a></small></sup>.</p>
+        <p class="lead text-info">Live statistics of the current PaaS vendor landscape<sup class="muted"><small><a href="#footnotes">1</a></small></sup>.</p>
 	</div>
+
+    <div id="languages" style="height: 350px;" class="text-center"></div>
+    <div id="status" style="height: 350px;" class="text-center"></div>
     <div id="scaling_support" style="height: 350px;" class="text-center"></div>
     <div id="language_support" style="height: 350px;" class="text-center"></div>
     <div id="infra_support" style="height: 350px;" class="text-center"></div>
@@ -44,6 +47,91 @@
 		$('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
 		$('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
 		$('ul.breadcrumb > li:first').after('<li class="active">Statistics</li>');
+
+        $('#languages').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Runtime Languages'
+            },
+            yAxis: [{
+                min: 0,
+                max: <%= Charts.new.max_count %>,
+                title: {
+                    text: 'Support (%)'
+                },
+                plotLines: [{
+                    color: '#3a87ad',
+                    dashStyle: 'ShortDash',
+                    width: 2,
+                    value: 67,
+                    zIndex: 0,
+                    label: {
+                        text: 'max'
+                    }
+                }]
+            },
+                {
+                    title: {
+                        text: 'Support (%)'
+                    },
+                    labels:{
+                        formatter:function(){
+                            var max=67,
+                                min=0,
+                                    range=max-min;
+                            return ((this.value-min)/(range)*100).toFixed(1) + ' %';
+                        }
+                    },
+                    linkedTo:0,
+                    opposite:true
+                }
+            ],
+            tooltip: {
+                headerFormat: '',
+                pointFormat: '<span style="color:{series.color};padding:0">{series.name}: </span>' +
+                        '<span style="padding:0"><b>{point.y:.1f}</b></span>',
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.1,
+                    borderWidth: 0
+                }
+            },
+            series: <%= Charts.new.support_columndata 'runtimes.language' %>
+        });
+
+        $('#status').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Status',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: 0
+            },
+            tooltip: {
+                pointFormat: '<b>{point.percentage:.1f}%</b> ({point.y} Total)',
+                useHTML: true
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: 15,
+                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
+                    }
+                }
+            },
+            series: [{
+                name: 'Supported by',
+                innerSize: '60%',
+                data: <%= Charts.new.support_piedata 'status', false %>
+            }]
+        });
 
         $('#scaling_support').highcharts({
             chart: {
