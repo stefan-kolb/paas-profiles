@@ -26,18 +26,21 @@ Highcharts.theme = {
             font: 'bold 12px "Trebuchet MS", Verdana, sans-serif'
         }
     },
-    xAxis: {
-        labels: {
-            enabled: false
-        }
-    },
     legend: {
+        enabled: false,
         itemStyle: {
             font: '9pt Trebuchet MS, Verdana, sans-serif',
             color: 'black'
         },
         itemHoverStyle:{
             color: 'gray'
+        }
+    },
+    xAxis: {
+        labels: {
+            style: {
+                fontSize: '12px'
+            }
         }
     },
     plotOptions: {
@@ -56,17 +59,20 @@ Highcharts.theme = {
             }
         },
         column: {
+            colorByPoint: true,
             dataLabels: {
                 enabled: true,
+                inside: false,
                 distance: 0,
-                format: '{series.name}',
+                zIndex: 99,
+                format: '<span style="color:{series.color}">{point.y}</span>',
                 connectorColor: '#000000',
                 useHTML: true,
                 style: {
                     fontFamily: '\"Helvetica Neue\", Helvetica, Arial, sans-serif',
                     fontWeight: 'bold',
                     fontSize: '12px',
-                    color: 'black'
+                    color: 'white'
                 }
             }
         }

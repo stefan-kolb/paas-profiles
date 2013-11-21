@@ -48,12 +48,33 @@
 		$('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
 		$('ul.breadcrumb > li:first').after('<li class="active">Statistics</li>');
 
-        $('#languages').highcharts({
+        function setChart(name, categories, data, color) {
+            chart.xAxis[0].setCategories(categories, false);
+            chart.series[0].remove(false);
+            chart.addSeries({
+                name: name,
+                data: data,
+                color: color || 'white'
+            }, false);
+            chart.redraw();
+        }
+
+        var name = 'Language Support';
+        var categories = <%= LanguageCharts.new.support_categories %>;
+        var data = <%= Charts.new.support_columndata 'runtimes.language', false %>;
+
+        var chart = $('#languages').highcharts({
             chart: {
                 type: 'column'
             },
             title: {
                 text: 'Runtime Languages'
+            },
+            subtitle: {
+                text: 'Click the columns to view versions. Click again to view languages.'
+            },
+            xAxis: {
+                categories: categories
             },
             yAxis: [{
                 min: 0,
@@ -64,11 +85,11 @@
                 plotLines: [{
                     color: '#3a87ad',
                     dashStyle: 'ShortDash',
-                    width: 2,
+                    width: 1,
                     value: 67,
                     zIndex: 0,
                     label: {
-                        text: 'max'
+                        text: '100 %'
                     }
                 }]
             },
@@ -89,19 +110,41 @@
                 }
             ],
             tooltip: {
-                headerFormat: '',
-                pointFormat: '<span style="color:{series.color};padding:0">{series.name}: </span>' +
-                        '<span style="padding:0"><b>{point.y:.1f}</b></span>',
-                useHTML: true
+                formatter: function() {
+                    var point = this.point,
+                            s = this.x +':<b>'+ this.y +'% market share</b><br/>';
+                    if (point.drilldown) {
+                        s += 'Click to view '+ point.category +' versions';
+                    } else {
+                        s += 'Click to return to languages';
+                    }
+                    return s;
+                }
             },
             plotOptions: {
                 column: {
                     pointPadding: 0.1,
-                    borderWidth: 0
+                    borderWidth: 0,
+                    cursor: 'pointer',
+                    point: {
+                        events: {
+                            click: function() {
+                                var drilldown = this.drilldown;
+                                if (drilldown) { // drill down
+                                    setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
+                                } else { // restore
+                                    setChart(name, categories, data);
+                                }
+                            }
+                        }
+                    }
                 }
             },
-            series: <%= Charts.new.support_columndata 'runtimes.language' %>
-        });
+            series: [{
+                name: name,
+                data: data
+            }]
+        }).highcharts();
 
         $('#status').highcharts({
             chart: {

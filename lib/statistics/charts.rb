@@ -36,24 +36,32 @@ class Charts
   def support_columndata( type, threshold = 0.05 )
     data = []
 
-    distinct_values(type).each do |l|
+    distinct_values(type).each_with_index do |l, i|
       count = Vendor.where(type => l).count
-      data << { name: l, data: [] << count }
+      # TODO get unique versions from all documents
+      versions = [ 'Java 1.5', 'Java 1.6', 'Java 1.7', 'Java 1.8']
+
+      data << { name: l, y: count, drilldown: {
+          name: 'Versions',
+          categories: versions,
+          data: [0.20, 0.83, 1.58, 13.12, 5.43],
+          color: '#2f7ed8'
+      } }
     end
 
     # capitalize
     data.each { |e| e[:name].capitalize! }
     # sort by count ascending
-    data.sort! { |x,y| y[:data][0] <=> x[:data][0] }
+    data.sort! { |x,y| y[:y] <=> x[:y] }
     # 5 % threshold
     if threshold
       sum = 0
-      data.each { |e| sum += e[:data][0] }
-      others = { name: 'Others', data: [] << 0 }
+      data.each { |e| sum += e[:y] }
+      others = { name: 'Others', y: 0 }
 
       data.delete_if do |e|
-        if (e[:data][0].to_f / sum) < threshold
-          others[:data][0] += e[:data][0]
+        if (e[:y].to_f / sum) < threshold
+          others[:y] += e[:y]
           true
         end
       end
