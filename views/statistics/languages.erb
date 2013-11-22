@@ -33,6 +33,7 @@
 	</div>
 
     <div id="languages" style="height: 350px;" class="text-center"></div>
+    <div id="polyglot" style="height: 350px;" class="text-center"></div>
     <div id="footnotes"><small><sup class="muted">1</sup> The data source is the most recent collection of <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.</small></div>
 <script>
 	$(document).ready(function() {
@@ -144,5 +145,34 @@
             }]
         }).highcharts();
 
+        $('#polyglot').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Language Count',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: 0
+            },
+            tooltip: {
+                pointFormat: '<b>{point.percentage:.1f}%</b> ({point.y} Total)',
+                useHTML: true
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: 15,
+                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
+                    }
+                }
+            },
+            series: [{
+                name: 'Supported by',
+                innerSize: '60%',
+                data: <%= LanguageCharts.new.count_piedata %>
+            }]
+        });
 	});
 </script>
