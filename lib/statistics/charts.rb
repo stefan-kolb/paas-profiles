@@ -52,7 +52,7 @@ class Charts
       } }
     end
 
-    # capitalize
+    # capitalize each word
     data.each { |e| e[:name].capitalize! }
     # sort by count ascending
     data.sort! { |x,y| y[:y] <=> x[:y] }
@@ -64,6 +64,7 @@ class Charts
 
       data.delete_if do |e|
         if (e[:y].to_f / sum) < threshold
+          # aggregate those below the threshold TODO + value or only +1 for others?
           others[:y] += e[:y]
           true
         end

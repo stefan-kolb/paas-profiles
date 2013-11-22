@@ -1,8 +1,8 @@
 require_relative 'charts'
 
-class LanguageCharts
+class ServiceCharts
   def support_columndata
-    data = Charts.new.support_columndata 'runtimes.language', 0.05
+    data = Charts.new.support_columndata 'services.native.name', 0.02
 
     return data
   end

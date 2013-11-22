@@ -33,11 +33,11 @@
 	</div>
 
     <div id="languages" style="height: 350px;" class="text-center"></div>
+    <div id="service_support" style="height: 350px;" class="text-center"></div>
     <div id="status" style="height: 350px;" class="text-center"></div>
     <div id="scaling_support" style="height: 350px;" class="text-center"></div>
     <div id="infra_support" style="height: 350px;" class="text-center"></div>
     <div id="middleware_support" style="height: 350px;" class="text-center"></div>
-    <div id="service_support" style="height: 350px;" class="text-center"></div>
     <div id="addon_support" style="height: 350px;" class="text-center"></div>
 	<div id="graph2" style="height: 350px;" class="text-center"></div>
     <div id="footnotes"><small><sup class="muted">1</sup> The data source is the most recent collection of <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.</small></div>
@@ -60,7 +60,7 @@
 
         var name = 'Language Support';
         var categories = <%= LanguageCharts.new.support_categories %>;
-        var data = <%= Charts.new.support_columndata 'runtimes.language', false %>;
+        var data = <%= LanguageCharts.new.support_columndata %>;
 
         var chart = $('#languages').highcharts({
             chart: {
@@ -151,6 +151,168 @@
             }]
         }).highcharts();
 
+        var name2 = 'Services Support';
+        var categories2 = <%= ServiceCharts.new.support_categories %>;
+        var data2 = <%= ServiceCharts.new.support_columndata %>;
+
+        var chart2 = $('#service_support').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Native Services'
+            },
+            subtitle: {
+                text: 'Click the columns to view versions. Click again to view languages.'
+            },
+            xAxis: {
+                categories: categories2
+            },
+            yAxis: [{
+                min: 0,
+                max: 100,
+                title: {
+                    text: 'Support (%)'
+                },
+                labels:{
+                    formatter:function(){
+                        return this.value + ' %';
+                    }
+                }/*,
+                 plotLines: [{
+                 color: '#3a87ad',
+                 dashStyle: 'ShortDash',
+                 width: 1,
+                 value: 67,
+                 zIndex: 0,
+                 label: {
+                 text: '100 %'
+                 }
+                 }]*/
+            },
+                {
+                    title: {
+                        text: 'Count'
+                    },
+                    labels:{
+                        formatter:function(){
+                            var max=67,
+                                    min=0,
+                                    range=max-min;
+                            return (this.value * 0.67).toFixed(0);
+                        }
+                    },
+                    linkedTo:0,
+                    opposite:true
+                }
+            ],
+            tooltip: {
+                formatter: function() {
+                    var point = this.point,
+                            s = '<b>' + this.x +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
+                    if (point.drilldown) {
+                        s += 'Click to view '+ point.category +' versions';
+                    } else {
+                        s += 'Click to return to services';
+                    }
+                    return s;
+                }
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.1,
+                    borderWidth: 0,
+                    cursor: 'pointer',
+                    point: {
+                        events: {
+                            click: function() {
+                                var drilldown = this.drilldown;
+                                if (drilldown) { // drill down
+                                    // TODO axis must be redrawn too
+                                    setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
+                                } else { // restore
+                                    setChart(name2, categories2, data2);
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: name2,
+                data: data2
+            }]
+        }).highcharts();
+
+        var categories3 = <%= ScalingCharts.new.support_categories %>;
+        var data3 = <%= ScalingCharts.new.support_columndata %>;
+
+        $('#scaling_support').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Scaling'
+            },
+            xAxis: {
+                categories: categories3
+            },
+            yAxis: [{
+                min: 0,
+                max: 100,
+                title: {
+                    text: 'Support (%)'
+                },
+                labels:{
+                    formatter:function(){
+                        return this.value + ' %';
+                    }
+                }/*,
+                 plotLines: [{
+                 color: '#3a87ad',
+                 dashStyle: 'ShortDash',
+                 width: 1,
+                 value: 67,
+                 zIndex: 0,
+                 label: {
+                 text: '100 %'
+                 }
+                 }]*/
+            },
+                {
+                    title: {
+                        text: 'Count'
+                    },
+                    labels:{
+                        formatter:function(){
+                            var max=67,
+                                    min=0,
+                                    range=max-min;
+                            return (this.value * 0.67).toFixed(0);
+                        }
+                    },
+                    linkedTo:0,
+                    opposite:true
+                }
+            ],
+            tooltip: {
+                formatter: function() {
+                    var s = '<b>' + this.x +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
+                    return s;
+                }
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.1,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Scaling',
+                data: data3
+            }]
+        });
+
         $('#status').highcharts({
             chart: {
                 type: 'pie'
@@ -181,52 +343,6 @@
             }]
         });
 
-        $('#scaling_support').highcharts({
-            chart: {
-                type: 'pie'
-            },
-            title: {
-                text: 'Scaling',
-                align: 'center',
-                verticalAlign: 'middle',
-                y: 0
-            },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
-            },
-            plotOptions: {
-                pie: {
-                    dataLabels: {
-                        enabled: true,
-                        distance: 15,
-                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
-                    },
-                    startAngle: -90,
-                    endAngle: 90,
-                    center: ['50%', '75%']
-                }
-            },
-            series: [{
-                name: 'Supported by',
-                innerSize: '40%',
-                stacking: 'percentage',
-                data: <%= ScalingCharts.new.vertical_piedata %>
-            },
-            {
-                name: 'Supported by',
-                innerSize: '60%',
-                stacking: 'percentage',
-                data: <%= ScalingCharts.new.horizontal_piedata %>
-            },
-            {
-                name: 'Supported by',
-                innerSize: '80%',
-                stacking: 'percentage',
-                data: <%= ScalingCharts.new.auto_piedata %>
-            }
-            ]
-        });
-
         $('#middleware_support').highcharts({
             chart: {
                 type: 'pie'
@@ -253,35 +369,6 @@
                 name: 'Supported by',
                 innerSize: '60%',
                 data: <%= Charts.new.support_piedata 'middleware.name', 0.02 %>
-            }]
-        });
-
-        $('#service_support').highcharts({
-            chart: {
-                type: 'pie'
-            },
-            title: {
-                text: 'Native<br>Services',
-                align: 'center',
-                verticalAlign: 'middle',
-                y: -10
-            },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
-            },
-            plotOptions: {
-                pie: {
-                    dataLabels: {
-                        enabled: true,
-                        distance: 15,
-                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
-                    }
-                }
-            },
-            series: [{
-                name: 'Supported by',
-                innerSize: '60%',
-                data: <%= Charts.new.support_piedata 'services.native.name', 0.01 %>
             }]
         });
 
