@@ -16,7 +16,7 @@ class LanguageCharts
   def count_piedata
     data = []
     one = Vendor.where(:runtimes.with_size => 1)
-    data << ['Langauge-specific', one.length]
+    data << ['Language-specific', one.length]
     data << ['Polyglot', Vendor.count - one.length]
 
     return data
