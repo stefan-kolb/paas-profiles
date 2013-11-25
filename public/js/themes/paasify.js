@@ -28,9 +28,6 @@ Highcharts.theme = {
     },
     legend: {
         enabled: true,
-        itemHoverStyle:{
-            color: 'gray'
-        },
         borderWidth: '0px'
     },
     xAxis: {
@@ -70,6 +67,13 @@ Highcharts.theme = {
                     fontWeight: 'bold',
                     fontSize: '12px',
                     color: 'black'
+                }
+            }
+        },
+        series: {
+            events: {
+                legendItemClick: function(event) {
+                    return false;
                 }
             }
         }
