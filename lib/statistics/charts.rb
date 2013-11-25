@@ -2,10 +2,22 @@ require_relative '../../models/vendor'
 require_relative '../version'
 
 class Charts
-  attr_reader :vendor_count
+  attr_reader :vendor_count, :colors
 
   def initialize
     @vendor_count = Vendor.count
+    @colors = [
+        '#2f7ed8',
+        '#0d233a',
+        '#8bbc21',
+        '#910000',
+        '#1aadce',
+        '#492970',
+        '#f28f43',
+        '#77a1e5',
+        '#c42525',
+        '#a6c96a'
+    ]
   end
 
   def support_piedata( type, threshold = 0.05 )
@@ -45,12 +57,13 @@ class Charts
 
     distinct_values(type).each_with_index do |l, i|
       count = Vendor.where(type => l).count
+      # TODO bars in versions all the same color, best color of toplevel language
       data << { name: l, y: (count / vendor_count.to_f * 100).to_i, drilldown: {
-          name: 'Versions',
+          name: "#{l.capitalize} Versions",
           categories: distinct_versions(l),
-          data: distinct_versions_data(l),
-          color: '#2f7ed8'
-      } }
+          data: distinct_versions_data(l)
+        }
+      }
     end
 
     # capitalize each word
@@ -73,9 +86,18 @@ class Charts
       data << others
     end
 
+    # colors
+    data.each_with_index do |l,i|
+      l[:color] = @colors[i]
+      if l[:name] != 'Others'
+        l[:drilldown][:color] = @colors[i]
+      end
+    end
+
     return data.to_json
   end
 
+  # sort from newest to oldest version + unknown?
   def distinct_versions language
     versions = []
     vendors = Vendor.where('runtimes.language' => language)

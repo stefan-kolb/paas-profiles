@@ -27,14 +27,11 @@ Highcharts.theme = {
         }
     },
     legend: {
-        enabled: false,
-        itemStyle: {
-            font: '9pt Trebuchet MS, Verdana, sans-serif',
-            color: 'black'
-        },
+        enabled: true,
         itemHoverStyle:{
             color: 'gray'
-        }
+        },
+        borderWidth: '0px'
     },
     xAxis: {
         labels: {
@@ -59,7 +56,7 @@ Highcharts.theme = {
             }
         },
         column: {
-            colorByPoint: true,
+            //colorByPoint: true,
             dataLabels: {
                 enabled: true,
                 inside: false,

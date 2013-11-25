@@ -29,7 +29,7 @@
 	
 	<div class="jumbotron">
 		<h1>Platform as a Service Statistics</h1>
-        <p class="lead text-info">Live statistics of the current PaaS vendor landscape<sup class="muted"><small><a href="#footnotes">1</a></small></sup>.</p>
+        <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted"><small><a href="#footnotes">1</a></small></sup>.</p>
 	</div>
 
     <div id="languages" style="height: 350px;" class="text-center"></div>
@@ -53,6 +53,7 @@
             chart.addSeries({
                 name: name,
                 data: data,
+                // TODO will take first data color on initial rendering
                 color: color || 'white'
             }, false);
             chart.redraw();
@@ -136,6 +137,7 @@
                             click: function() {
                                 var drilldown = this.drilldown;
                                 if (drilldown) { // drill down
+                                    // TODO show series name zB java version
                                     setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
                                 } else { // restore
                                     setChart(name, categories, data);
