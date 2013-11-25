@@ -79,7 +79,7 @@
                 min: 0,
                 max: 100,
                 title: {
-                    text: 'Support (%)'
+                    text: 'Support'
                 },
                 labels:{
                     formatter:function(){
@@ -103,7 +103,8 @@
                     },
                     labels:{
                         formatter:function(){
-                            var max=67,
+                            // TODO redraw axis
+                            var max=<%= Charts.new.vendor_count %>,
                                 min=0,
                                     range=max-min;
                             return (this.value * 0.67).toFixed(0);
@@ -135,7 +136,6 @@
                             click: function() {
                                 var drilldown = this.drilldown;
                                 if (drilldown) { // drill down
-                                    // TODO axis must be redrawn too
                                     setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
                                 } else { // restore
                                     setChart(name, categories, data);

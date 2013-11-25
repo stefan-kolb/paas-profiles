@@ -1,4 +1,5 @@
 require_relative '../../models/vendor'
+require_relative '../version'
 
 class Charts
   attr_reader :vendor_count
@@ -82,19 +83,21 @@ class Charts
     vendors.each do |vendor|
       vendor['runtimes'].each do |rt|
         if rt['language'] == language
+          if rt['versions'].nil? || rt['versions'].empty?
+            unless versions.include? 'Unknown'
+              versions << 'Unknown'
+            end
+          end
           rt['versions'].each do |v|
             # TODO uniform version format, filter empty versions
+            v = Version.new(v).unify
+
             unless versions.include? v
               versions << v
             end
           end
         end
       end
-    end
-
-    # TODO replace '' with unknown
-    if versions.find_index('')
-      versions[versions.find_index('')] = 'Unknown'
     end
 
     return versions
@@ -110,15 +113,17 @@ class Charts
         if rt['language'] == language
           if rt['versions'].empty?
             # TODO bug will not work will always return first element
-            if versions.include? ''
-              data[versions.find_index('')] += 1
+            if versions.include? 'Unknown'
+              data[versions.find_index('Unknown')] += 1
             else
-              versions << ''
+              versions << 'Unknown'
               data << 1
             end
           else
             rt['versions'].each do |v|
               # TODO uniform version format, filter empty versions
+              v = Version.new(v).unify
+
               if versions.include? v
                 data[versions.find_index(v)] += 1
               else
@@ -129,11 +134,6 @@ class Charts
           end
         end
       end
-    end
-
-    # TODO EMPTY is also unknown!!! -> BUG cannot get back
-    if versions.find_index('')
-      versions[versions.find_index('')] = 'Unknown'
     end
 
     data = data.collect { |v| (v / vendors.length.to_f * 100).to_i }
