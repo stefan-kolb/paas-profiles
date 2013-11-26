@@ -8,6 +8,8 @@ require_relative 'models/vendor'
 
 Mongoid.load!("./config/mongoid.yml")
 
+set :protection, :except => :frame_options
+
 get '/' do
 	redirect '/vendors'
 end
