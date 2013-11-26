@@ -88,9 +88,10 @@ class Charts
 
     # colors
     data.each_with_index do |l,i|
-      l[:color] = @colors[i]
+      puts i%colors.length
+      l[:color] = @colors[i%colors.length]
       if l[:name] != 'Others'
-        l[:drilldown][:color] = @colors[i]
+        l[:drilldown][:color] = @colors[i%colors.length]
       end
     end
 
