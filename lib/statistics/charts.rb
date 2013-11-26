@@ -98,42 +98,18 @@ class Charts
   end
 
   def distinct_versions language
-    versions = []
-    vendors = Vendor.where('runtimes.language' => language)
-
-    vendors.each do |vendor|
-      vendor['runtimes'].each do |rt|
-        if rt['language'] == language
-          if rt['versions'].nil? || rt['versions'].empty?
-            unless versions.include? 'Unknown'
-              versions << 'Unknown'
-            end
-          end
-          rt['versions'].each do |v|
-            # TODO uniform version format, filter empty versions
-            v = Version.new(v).unify
-
-            unless versions.include? v
-              versions << v
-            end
-          end
-        end
-      end
-    end
-
-    return versions.sort
+    puts distinct_versions_data(language).inspect
+    return distinct_versions_data(language).collect { |x| x[0] }
   end
 
   def distinct_versions_data language
-    versions = []
     vendors = Vendor.where('runtimes.language' => language)
-    data = {}
+    data = Hash.new
 
     vendors.each do |vendor|
       vendor['runtimes'].each do |rt|
         if rt['language'] == language
           if rt['versions'].empty?
-            # TODO bug will not work will always return first element
             if data.has_key? 'Unknown'
               data['Unknown'] += 1
             else
@@ -155,7 +131,7 @@ class Charts
       end
     end
 
-    data = data.collect { |v| (v[1] / vendors.length.to_f * 100).to_i }
+    data = data.each { |v| (v[1] / vendors.length.to_f * 100).to_i }
 
     return data.sort { |x,y| x <=> y}
   end
