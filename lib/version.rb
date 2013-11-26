@@ -33,7 +33,7 @@ class Version
     # define language and only use this schema
     # define wildcard
     @str = str
-    arr = /\d+\.\d+(\.\d+)?/.match(@str)[0].split('.')
+    arr = /^((\*|\d+)\.)?((\*|\d+)\.)?(\*|\d+)$/.match(@str)[0].split('.')
     @major = arr[0]
     @minor = arr[1]
 
