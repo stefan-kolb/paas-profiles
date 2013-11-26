@@ -97,12 +97,16 @@ class Charts
     return data.to_json
   end
 
+  def language_count language
+    Vendor.where('runtimes.language' => language).length
+  end
+
   def distinct_versions language
-    puts distinct_versions_data(language).inspect
     return distinct_versions_data(language).collect { |x| x[0] }
   end
 
   def distinct_versions_data language
+    # TODO duplicate languages in profile will cause false results
     vendors = Vendor.where('runtimes.language' => language)
     data = Hash.new
 
@@ -131,9 +135,13 @@ class Charts
       end
     end
 
-    data = data.each { |v| (v[1] / vendors.length.to_f * 100).to_i }
+    data = data.sort { |x,y| x <=> y}
+    # rundungsfehler bug?!
+    data.each do |v|
+      v[1] = (v[1] / language_count(language).to_f * 100).to_i
+    end
 
-    return data.sort { |x,y| x <=> y}
+    return data
   end
 
   def distinct_values type
