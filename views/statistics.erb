@@ -120,7 +120,7 @@
                             s = '<b>' + this.x +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
                     if (point.drilldown) {
                         s += 'Click to view '+ point.category +' versions';
-                    } else {
+                    } else if (point.category != 'Others') {
                         s += 'Click to return to languages';
                     }
                     return s;
