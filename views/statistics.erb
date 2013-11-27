@@ -117,7 +117,7 @@
             tooltip: {
                 formatter: function() {
                     var point = this.point,
-                            s = '<b>' + this.x +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
+                            s = '<b>' + point.category +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
                     if (point.drilldown) {
                         s += 'Click to view '+ point.category +' versions';
                     } else if (point.category != 'Others') {

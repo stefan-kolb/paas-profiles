@@ -96,7 +96,7 @@
                 text: 'Click the columns to view versions. Click again to view languages.'
             },
             xAxis: {
-                categories: []
+                categories: categories
             },
             yAxis: [{
                 min: 0,
@@ -140,7 +140,7 @@
             tooltip: {
                 formatter: function() {
                     var point = this.point,
-                            s = '<b>' + this.x +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
+                            s = '<b>' + point.name +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
                     if (point.drilldown) {
                         s += 'Click to view '+ point.category +' versions';
                     } else if (point.category != 'Others') {
