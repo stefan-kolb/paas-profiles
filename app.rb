@@ -35,7 +35,7 @@ get '/statistics' do
   require_relative 'lib/statistics/charts'
   require_relative 'lib/statistics/infrastructure_charts'
   require_relative 'lib/statistics/scaling_charts'
-  require_relative 'lib/statistics/language_charts'
+  require_relative 'lib/statistics/language_chart'
   require_relative 'lib/statistics/service_charts'
 
 	@title = "Platform as a Service | Statistics Dashboard"
@@ -44,7 +44,7 @@ end
 
 get '/statistics/languages' do
   require_relative 'lib/statistics/charts'
-  require_relative 'lib/statistics/language_charts'
+  require_relative 'lib/statistics/language_chart'
 
   @title = "Platform as a Service | Language Statistics"
   erb :'statistics/languages'

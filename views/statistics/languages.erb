@@ -1,3 +1,4 @@
+<% chart = LanguageChart.new %>
 <script src="http://code.highcharts.com/3.0/highcharts.js"></script>
 <script src="/js/themes/paasify.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
@@ -25,6 +26,10 @@
         font-size: 21px;
         padding: 14px 24px;
       }
+    .chart {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
     </style>
 	
 	<div class="jumbotron">
@@ -32,12 +37,33 @@
         <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted"><small><a href="#footnotes">1</a></small></sup>.</p>
 	</div>
 
-    <div>When PaaS first started a lot of the offerings did only support one specific language. Over time this changed dramatically. Most of today's PaaS support way more than one language. While a specialization on one language may result in better and more specialized support of that language, more languages attract a greater customer mass and allow more flexibility in using languages. Trend icon and change!</div>
-    <div id="languages" style="height: 350px;" class="text-center"></div>
-    <div class="row-fluid"><div id="polyglot" class="span8" style="height: 350px;">
-    </div>
-    <div class="span4">When PaaS first started a lot of the offerings did only support one specific language. Over time this changed dramatically. Most of today's PaaS support way more than one language. While a specialization on one language may result in better and more specialized support of that language, more languages attract a greater customer mass and allow more flexibility in using languages. Trend icon and change! </div></div>
+    <div class="row">
+        <div class="span12">
+          <strong>Runtime Language and Version Support.</strong>
+          Today's PaaS support a variety of different runtime languages as basis for customer applications.
+          Currently, PaaS offerings support a total of <span class="label label-inverse"><%= chart.language_count %></span> different languages.
+          The Top 5 languages based on support percentage are
+          <% chart.support_categories.slice(0..4).each_with_index do |r,i| %>
+              <span class="label" style="background-color: <%= Charts::COLORS[i] %>;"><%= r %></span>
+          <% end %>.
+          The following chart shows the support percentage of all available languages. When clicking on the language bars, a drilldown on the different available language versions will be made.
+        </div>
+        <div id="languages" style="height: 350px;" class="span12 chart text-center"></div>
+        <div class="span12">
+        <div class="row">
+            <div class="span5">
+              When PaaS first started, a lot of the offerings did only support one specific language. This changed dramatically over time.
+              Most of today's PaaS support way more than one language. While a specialization on one language may result in better and more specialized support of that language,
+              more languages attract a greater customer mass and allow more flexibility when developing in different languages.
+              The average amount of supported languages is <i class="icon-arrow-up"></i> <span class="label label-inverse"><%= chart.avg_language_count %></span>.
+              <!--TODO Trend icon and change! -->
+            </div>
+            <div id="polyglot" class="span7" style="height: 300px;"></div>
+        </div>
+        </div>
+        </div>
     <div id="footnotes"><small><sup class="muted">1</sup> The data source is the most recent collection of <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.</small></div>
+
 <script>
 	$(document).ready(function() {
 		$('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
@@ -56,8 +82,8 @@
         }
 
         var name = 'Language Support';
-        var categories = <%= LanguageCharts.new.support_categories false %>;
-        var data = <%= LanguageCharts.new.support_columndata false %>;
+        var categories = <%= LanguageChart.new.support_categories false %>;
+        var data = <%= LanguageChart.new.support_columndata false %>;
 
         var chart = $('#languages').highcharts({
             chart: {
@@ -155,7 +181,7 @@
                 type: 'pie'
             },
             title: {
-                text: 'Language Count',
+                text: 'Language<br>Count',
                 align: 'center',
                 verticalAlign: 'middle',
                 y: 0
@@ -175,8 +201,8 @@
             },
             series: [{
                 name: 'Supported by',
-                innerSize: '60%',
-                data: <%= LanguageCharts.new.count_piedata %>
+                innerSize: '70%',
+                data: <%= LanguageChart.new.count_piedata %>
             }]
         });
 	});

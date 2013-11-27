@@ -25,6 +25,7 @@ class TestProfileIntegrity < Minitest::Test
 			# name must match filename removing spaces dashes etc
 			exp_name = obj["name"].downcase.gsub(/[^a-z0-9]/, '_')
 			assert_equal(exp_name, filename, "Filename must match lowercase vendor name without all characters except a-z0-9 replaced by _")
+			# TODO no duplicate languages,...,versions
 		end
 	end
 end

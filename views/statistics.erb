@@ -60,8 +60,8 @@
         }
 
         var name = 'Language Support';
-        var categories = <%= LanguageCharts.new.support_categories %>;
-        var data = <%= LanguageCharts.new.support_columndata %>;
+        var categories = <%= LanguageChart.new.support_categories %>;
+        var data = <%= LanguageChart.new.support_columndata %>;
 
         var chart = $('#languages').highcharts({
             chart: {

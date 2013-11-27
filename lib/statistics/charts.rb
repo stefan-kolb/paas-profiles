@@ -2,11 +2,12 @@ require_relative '../../models/vendor'
 require_relative '../version'
 
 class Charts
-  attr_reader :vendor_count, :colors
+  COLORS = %w( #2f7ed8 #0d233a #8bbc21 #910000 #1aadce #492970 #f28f43 #77a1e5 #c42525 #a6c96a )
+
+  attr_reader :vendor_count
 
   def initialize
     @vendor_count = Vendor.count
-    @colors = %w( #2f7ed8 #0d233a #8bbc21 #910000 #1aadce #492970 #f28f43 #77a1e5 #c42525 #a6c96a )
   end
 
   def get_piedata( type, threshold = 0.05 )
@@ -77,9 +78,9 @@ class Charts
 
     # colors
     data.each_with_index do |l,i|
-      l[:color] = @colors[i%colors.length]
+      l[:color] = COLORS[i%COLORS.length]
       if l[:name] != 'Others'
-        l[:drilldown][:color] = @colors[i%colors.length]
+        l[:drilldown][:color] = COLORS[i%COLORS.length]
       end
     end
 
