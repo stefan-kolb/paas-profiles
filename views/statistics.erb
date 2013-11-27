@@ -155,8 +155,8 @@
         }).highcharts();
 
         var name2 = 'Services Support';
-        var categories2 = <%= ServiceCharts.new.support_categories %>;
-        var data2 = <%= ServiceCharts.new.support_columndata %>;
+        var categories2 = <%= ServiceChart.new.support_categories %>;
+        var data2 = <%= ServiceChart.new.support_columndata %>;
 
         var chart2 = $('#service_support').highcharts({
             chart: {

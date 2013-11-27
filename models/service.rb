@@ -15,7 +15,7 @@ class Native
 	
 	embedded_in :service
 	
-	field :id, type: String
+	field :name, type: String
 	field :description, type: String
 	field :type, type: String
 	field :versions, type: Array
@@ -27,7 +27,7 @@ class Addon
 	
 	embedded_in :service
 	
-	field :id, type: String
+	field :name, type: String
 	field :url, type: String
 	field :description, type: String
 	field :type, type: String

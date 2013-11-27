@@ -60,14 +60,14 @@ class Charts
     data.each { |e| e[:name].capitalize! }
     # sort by count ascending
     data.sort! { |x,y| y[:y] <=> x[:y] }
-    # 5 % threshold
+    # % threshold
     if threshold
       sum = 0
       data.each { |e| sum += e[:y] }
       others = { name: 'Others', y: 0 }
 
       data.delete_if do |e|
-        if (e[:y].to_f / sum) < threshold
+        if (e[:y].to_f < (threshold * 100.0))
           # aggregate those below the threshold TODO + value or only +1 for others?
           others[:y] += e[:y]
           true
