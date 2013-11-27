@@ -28,10 +28,11 @@
     </style>
 	
 	<div class="jumbotron">
-		<h1>Platform as a Service Statistics</h1>
+		<h1>Runtime Languages</h1>
         <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted"><small><a href="#footnotes">1</a></small></sup>.</p>
 	</div>
 
+    <div>When PaaS first started a lot of the offerings did only support one specific language. Over time this changed dramatically. Most of today's PaaS support way more than one language. While a specialization on one language may result in better and more specialized support of that language, more languages attract a greater customer mass and allow more flexibility in using languages. Trend icon and change!</div>
     <div id="languages" style="height: 350px;" class="text-center"></div>
     <div class="row-fluid"><div id="polyglot" class="span8" style="height: 350px;">
     </div>
@@ -55,8 +56,8 @@
         }
 
         var name = 'Language Support';
-        var categories = [];
-        var data = <%= Charts.new.support_columndata 'runtimes.language', false %>;
+        var categories = <%= LanguageCharts.new.support_categories false %>;
+        var data = <%= LanguageCharts.new.support_columndata false %>;
 
         var chart = $('#languages').highcharts({
             chart: {
@@ -99,10 +100,11 @@
                     },
                     labels:{
                         formatter:function(){
-                            var max=67,
-                                min=0,
+                            // TODO redraw axis for drilldown!
+                            max=<%= Charts.new.vendor_count %>,
+                                    min=0,
                                     range=max-min;
-                            return (this.value * 0.67).toFixed(0);
+                            return (this.value * max / 100.0).toFixed(0);
                         }
                     },
                     linkedTo:0,
@@ -115,7 +117,7 @@
                             s = '<b>' + this.x +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
                     if (point.drilldown) {
                         s += 'Click to view '+ point.category +' versions';
-                    } else {
+                    } else if (point.category != 'Others') {
                         s += 'Click to return to languages';
                     }
                     return s;
@@ -143,7 +145,8 @@
             },
             series: [{
                 name: name,
-                data: data
+                data: data,
+                color: 'white'
             }]
         }).highcharts();
 

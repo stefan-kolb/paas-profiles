@@ -1,15 +1,15 @@
 require_relative 'charts'
 
 class LanguageCharts
-  def support_columndata
-    data = Charts.new.support_columndata 'runtimes.language', 0.05
+  def support_columndata threshold=0.05
+    data = Charts.new.support_columndata 'runtimes.language', threshold
 
     return data
   end
 
-  def support_categories
+  def support_categories threshold=0.05
     arr = []
-    JSON.parse(support_columndata).each { |e| arr << e['name'] }
+    JSON.parse(support_columndata threshold).each { |e| arr << e['name'] }
     arr
   end
 
