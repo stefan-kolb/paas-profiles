@@ -38,7 +38,7 @@ get '/statistics' do
   require_relative 'lib/statistics/language_charts'
   require_relative 'lib/statistics/service_charts'
 
-	@title = "Platform as a Service | Live Statistics"
+	@title = "Platform as a Service | Statistics Dashboard"
 	erb :statistics
 end
 

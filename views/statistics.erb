@@ -98,23 +98,22 @@
                     }
                 }]*/
             },
-                {
-                    title: {
-                        text: 'Count'
-                    },
-                    labels:{
-                        formatter:function(){
-                            // TODO redraw axis for drilldown!
-                            var max=<%= Charts.new.vendor_count %>,
-                                min=0,
-                                    range=max-min;
-                            return (this.value * 0.67).toFixed(0);
-                        }
-                    },
-                    linkedTo:0,
-                    opposite:true
-                }
-            ],
+            {
+                title: {
+                    text: 'Count'
+                },
+                labels:{
+                    formatter:function(){
+                        // TODO redraw axis for drilldown!
+                        max=<%= Charts.new.vendor_count %>,
+                        min=0,
+                        range=max-min;
+                        return (this.value * max / 100.0).toFixed(0);
+                    }
+                },
+                linkedTo:0,
+                opposite:true
+            }],
             tooltip: {
                 formatter: function() {
                     var point = this.point,
@@ -343,7 +342,7 @@
             series: [{
                 name: 'Supported by',
                 innerSize: '60%',
-                data: <%= Charts.new.support_piedata 'status', false %>
+                data: <%= Charts.new.get_piedata 'status', false %>
             }]
         });
 
@@ -372,7 +371,7 @@
             series: [{
                 name: 'Supported by',
                 innerSize: '60%',
-                data: <%= Charts.new.support_piedata 'middleware.name', 0.02 %>
+                data: <%= Charts.new.get_piedata 'middleware.name', 0.02 %>
             }]
         });
 
@@ -401,7 +400,7 @@
             series: [{
                 name: 'Supported by',
                 innerSize: '60%',
-                data: <%= Charts.new.support_piedata 'services.addon.name', 0.01 %>
+                data: <%= Charts.new.get_piedata 'services.addon.name', 0.01 %>
             }]
         });
 

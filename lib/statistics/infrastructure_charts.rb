@@ -2,7 +2,7 @@ require_relative 'charts'
 
 class InfrastructureCharts
   def support_piedata
-    data = Charts.new.support_piedata 'infrastructures.continent', false
+    data = Charts.new.get_piedata 'infrastructures.continent', false
 
     data.each do |e|
       case e[0].upcase!

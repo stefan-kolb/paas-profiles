@@ -6,21 +6,10 @@ class Charts
 
   def initialize
     @vendor_count = Vendor.count
-    @colors = [
-        '#2f7ed8',
-        '#0d233a',
-        '#8bbc21',
-        '#910000',
-        '#1aadce',
-        '#492970',
-        '#f28f43',
-        '#77a1e5',
-        '#c42525',
-        '#a6c96a'
-    ]
+    @colors = %w( #2f7ed8 #0d233a #8bbc21 #910000 #1aadce #492970 #f28f43 #77a1e5 #c42525 #a6c96a )
   end
 
-  def support_piedata( type, threshold = 0.05 )
+  def get_piedata( type, threshold = 0.05 )
     data = []
 
     distinct_values(type).each do |l|
@@ -88,7 +77,6 @@ class Charts
 
     # colors
     data.each_with_index do |l,i|
-      puts i%colors.length
       l[:color] = @colors[i%colors.length]
       if l[:name] != 'Others'
         l[:drilldown][:color] = @colors[i%colors.length]
