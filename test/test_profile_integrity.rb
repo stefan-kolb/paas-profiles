@@ -1,25 +1,30 @@
-﻿gem 'minitest', '>= 5.0'
-
+﻿gem 'minitest', '~> 4.7'
 require 'json'
 require 'minitest/autorun'
 require 'active_support/core_ext'
 
 require_relative '../models/vendor'
 
-class TestProfileIntegrity < Minitest::Test
-  attr_accessor :profile
+module PaasProfiles
+# create a test for every profile
+Dir.glob(File.dirname(__FILE__) + '/../profiles/*.json') do |file|
+  filename = File.basename(file, ".json")
 
+  new_class = Class.new(MiniTest::Unit::TestCase) do
+  attr_accessor :profile
+=begin
   before do
-    @profile = Person.new
+    begin
+      @profile = JSON.parse(File.read(file))
+    rescue JSON::ParserError
+      assert(profile != nil, "JSON structure is not wellformed")
+    end
   end
 
   after do
     @profile = nil
   end
-	# create a test for every profile
-	Dir.glob(File.dirname(__FILE__) + '/../profiles/*.json') do |file|
-		filename = File.basename(file, ".json")
-		
+=end
 		define_method("test_#{filename}_profile") do
 			profile = nil
 			# wellformedness
@@ -38,7 +43,7 @@ class TestProfileIntegrity < Minitest::Test
     end
 
     # no duplicates
-    define_method("test_#{filename}_runtime_duplicates") do
+    define_method("test_runtime_duplicates") do
       profile = nil
       # wellformedness
       begin
@@ -55,7 +60,7 @@ class TestProfileIntegrity < Minitest::Test
       assert_equal(uniq_runtimes.length, obj.runtimes.length, "There must be no duplicate runtime entries in one profile. Merge them into one entity")
     end
 
-    define_method("test_#{filename}_middleware_duplicates") do
+    define_method("test_middleware_duplicates") do
       profile = nil
       # wellformedness
       begin
@@ -72,7 +77,7 @@ class TestProfileIntegrity < Minitest::Test
       assert_equal(uniq_middleware.length, obj.middlewares.length, "There must be no duplicate middleware entries in one profile. Merge them into one entity")
     end
 
-    define_method("test_#{filename}_frameworks_duplicates") do
+    define_method("test_frameworks_duplicates") do
       profile = nil
       # wellformedness
       begin
@@ -89,7 +94,7 @@ class TestProfileIntegrity < Minitest::Test
       assert_equal(uniq_frameworks.length, obj.frameworks.length, "There must be no duplicate framework entries in one profile. Merge them into one entity")
     end
 
-    define_method("test_#{filename}_native_services_duplicates") do
+    define_method("test_native_services_duplicates") do
       profile = nil
       # wellformedness
       begin
@@ -108,7 +113,7 @@ class TestProfileIntegrity < Minitest::Test
       end
     end
 
-    define_method("test_#{filename}_addon_services_duplicates") do
+    define_method("test_addon_services_duplicates") do
       profile = nil
       # wellformedness
       begin
@@ -127,7 +132,7 @@ class TestProfileIntegrity < Minitest::Test
       end
     end
 
-    define_method("test_#{filename}_compliance_duplicates") do
+    define_method("test_compliance_duplicates") do
       profile = nil
       # wellformedness
       begin
@@ -144,7 +149,7 @@ class TestProfileIntegrity < Minitest::Test
       assert_equal(uniq_compliance.length, obj.compliance.length, "There must be no duplicate compliance entries in one profile. Remove duplicate values")
     end
 
-    define_method("test_#{filename}_hosting_duplicates") do
+    define_method("test_hosting_duplicates") do
       profile = nil
       # wellformedness
       begin
@@ -162,5 +167,10 @@ class TestProfileIntegrity < Minitest::Test
     end
 
     # TODO duplicate versions
-	end
+  end # classdef
+
+  self.const_set("Test#{filename.capitalize}", new_class)
+
+end # dir glob
+
 end
