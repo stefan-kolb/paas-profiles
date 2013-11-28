@@ -1,8 +1,8 @@
 require 'json'
 require 'mongoid'
 require 'rake/testtask'
+require 'active_support/core_ext'
 
-require_relative 'lib/core_ext'
 require_relative 'models/vendor'
 
 Mongoid.load!("./config/mongoid.yml")
