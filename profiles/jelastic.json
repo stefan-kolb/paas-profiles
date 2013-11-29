@@ -64,7 +64,6 @@
     },
     {
       "name": "nginx",
-      "runtime": "",
       "versions": [
         "1.4.1"
       ]
