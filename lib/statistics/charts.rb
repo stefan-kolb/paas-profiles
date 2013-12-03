@@ -60,7 +60,7 @@ class Charts
 
     # capitalize each word
     data.each { |e| e[:name].capitalize! }
-    # sort by count ascending
+    # sort by count descending
     data.sort! { |x,y| y[:y] <=> x[:y] }
     # % threshold
     if threshold

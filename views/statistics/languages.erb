@@ -67,11 +67,12 @@
         more languages (<i>Polyglot PaaS</i>) attract a greater customer mass and allow more flexibility for developing
         in different languages while sticking to one particular PaaS provider.
         The average amount of supported languages is <i class="icon-arrow-up" title="(+0.01)"></i>
-        <span class="label label-inverse"><%= chart.avg_language_count %></span>.
-        <!--TODO Trend icon and change! -->
+        <span class="label label-inverse" title="<%= chart.mean_count %> (mean)&#013;<%= chart.median_count %> (median)&#013;<%= chart.mode_count %> (mode)"><%= chart.mean_count %></span>.
+        <!--TODO Trend icon and change! Other averages median, ... -->
       </div>
       <div id="polyglot" class="span7" style="height: 300px;"></div>
     </div>
+    <div id="count" style="height: 250px;" class="span12 chart text-center"></div>
   </div>
   <div class="span12">
     <strong>Runtime Language Trend.</strong>
@@ -247,6 +248,42 @@
                 borderWidth: 0
             },
             series: <%= chart.get_trend %>
+        });
+
+        $('#count').highcharts({
+            title: {
+                text: 'Language Trend'
+            },
+            subtitle: {
+                text: 'Language support over time'
+            },
+            xAxis: {
+                categories: <%= chart.trend_categories %>
+            },
+            yAxis: {
+                title: {
+                    text: 'Count'
+                },
+                min: 0
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: true
+                    }//,
+                    //enableMouseTracking: false
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: <%= chart.get_count_trend %>
         });
     });
 </script>
