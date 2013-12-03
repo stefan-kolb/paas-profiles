@@ -31,4 +31,31 @@ class LanguageChart
 
     return data
   end
+
+  def get_trend threshold=0.05
+    data = []
+
+    languages = RuntimeTrend.distinct(:language)
+
+    languages.each do |l|
+      RuntimeTrend.where(language: l).order_by(:revision.asc).each do |d|
+        entry = data.find { |e| e[:name].downcase == d.language }
+
+        if entry
+          entry[:data] << d.count
+        else
+          data << { name: d.language, data: [ d.count ] }
+        end
+      end
+    end
+
+    # todo percentage threshold
+    data.reject! { |i| i[:data].last <= 8 }
+
+    return data.to_json
+  end
+
+  def trend_categories
+    Snapshot.all().only(:revision).collect { |e| e.revision.strftime("%m-%Y") }
+  end
 end

@@ -63,11 +63,11 @@ Highcharts.theme = {
             }
         },
         series: {
-            events: {
+            /*events: {
                 legendItemClick: function(event) {
                     return false;
                 }
-            }
+            }*/
         }
     },
     credits: {
