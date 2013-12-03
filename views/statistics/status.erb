@@ -1,0 +1,120 @@
+<% chart = StatusChart.new %>
+<script src="http://code.highcharts.com/3.0/highcharts.js"></script>
+<script src="/js/themes/paasify.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<link rel="stylesheet" href="/css/theme.bootstrap.css">
+<style>
+    /* Main marketing message and sign up button */
+    .jumbotron {
+        /*height: 400px;*/
+        margin: 50px 0;
+        text-align: center;
+        background-size: 100%;
+    }
+
+    .jumbotron h1 {
+        font-size: 60px;
+        line-height: 1;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .jumbotron .lead {
+        font-size: 18px;
+        line-height: 1.25;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+    }
+
+    .chart {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+</style>
+
+<div class="jumbotron">
+  <h1>Maturity</h1>
+
+  <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted">
+    <small><a href="#footnotes">1</a></small>
+  </sup>.
+  </p>
+</div>
+
+<div class="row">
+  <div class="span12">
+    <strong>PaaS Status.</strong>
+    Currently, <span class="label label-warning"><%= chart.status_count 'beta' %></span> offerings are in <span class="label label-warning">Beta</span>,
+    while <span class="label label-success"><%= chart.status_count 'production' %></span> are in <span class="label label-success">Production</span>.
+    <span class="label label-inverse"><%= chart.status_count 'eol' %></span> are discontinued or consolidated into other PaaS.
+  </div>
+  <div id="status" style="height: 350px;" class="span12 chart text-center"></div>
+  <div class="span12">
+    <div class="row">
+      <div class="span5">
+        <strong>Language-specific vs Polyglot PaaS.</strong> When PaaS first started, a lot of the offerings did only
+        support one specific language. This changed dramatically over time.
+        Most of today's PaaS support way more than one language. While a specialization on one language (<i>Language-specific
+        PaaS</i>) may result in better and more specialized support of that language,
+        more languages (<i>Polyglot PaaS</i>) attract a greater customer mass and allow more flexibility for developing
+        in different languages while sticking to one particular PaaS provider.
+        The average amount of supported languages is <i class="icon-arrow-up" title="(+0.01)"></i>
+        <span class="label label-inverse" title="<%= chart.mean_count %> (mean)&#013;<%= chart.median_count %> (median)&#013;<%= chart.mode_count %> (mode)"><%= chart.mean_count %></span>.
+        <!--TODO Trend icon and change! Other averages median, ... -->
+      </div>
+      <div id="polyglot" class="span7" style="height: 300px;"></div>
+    </div>
+    <div id="count" style="height: 250px;" class="span12 chart text-center"></div>
+  </div>
+  <div class="span12">
+    <strong>Runtime Language Trend.</strong>
+  </div>
+  <div id="overtime" style="height: 350px;" class="span12 chart text-center"></div>
+</div>
+<div id="footnotes">
+  <small><sup class="muted">1</sup> The data source is the most recent collection of
+    <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
+  </small>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
+        $('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
+        $('ul.breadcrumb > li:first').after('<li class="active">Statistics</li>');
+
+        $('#status').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Status',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: 0
+            },
+            tooltip: {
+                pointFormat: '<b>{point.percentage:.1f}%</b> ({point.y} Total)',
+                useHTML: true
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: 15,
+                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
+                    }
+                }
+            },
+            series: [{
+                name: 'Supported by',
+                innerSize: '60%',
+                data: <%= chart.status_piedata %>
+            }]
+        });
+
+    });
+</script>

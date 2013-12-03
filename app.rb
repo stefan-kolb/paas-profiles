@@ -57,3 +57,11 @@ get '/statistics/services' do
   @title = "Platform as a Service | Native Services Statistics"
   erb :'statistics/services'
 end
+
+get '/statistics/status' do
+  require_relative 'lib/statistics/charts'
+  require_relative 'lib/statistics/status_chart'
+
+  @title = "Platform as a Service | Maturity Statistics"
+  erb :'statistics/status'
+end
