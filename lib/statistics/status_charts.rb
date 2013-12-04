@@ -23,7 +23,7 @@ class StatusCharts
       vendors.each do |v|
         sum += Date.today.to_time.to_i - v.status_since.to_time.to_i
       end
-      result = (sum / vendors.length.to_f / 2592000).round(2)
+      result = (sum / vendors.length.to_f / 2592000).to_i
     else
       sum = 0
       vendors = Vendor.all.only(:status_since)
@@ -33,7 +33,7 @@ class StatusCharts
         sum += Date.today.to_time.to_i - v.status_since.to_time.to_i unless v.status_since.nil?
       end
       puts sum
-      result = (sum / vendors.length.to_f / 2592000).round(2)
+      result = (sum / vendors.length.to_f / 2592000).to_i
     end
   end
 
