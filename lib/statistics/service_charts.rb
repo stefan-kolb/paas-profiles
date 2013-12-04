@@ -1,6 +1,6 @@
 require_relative 'charts'
 
-class ServiceChart
+class ServiceCharts
   attr_reader :service_count, :avg_service_count
 
   def initialize

@@ -1,10 +1,60 @@
 require_relative 'charts'
 
-class LanguageChart
-  attr_reader :language_count, :mean_count, :mode_count, :median_count
-
+class StatusCharts
   def initialize
-    @language_count = Vendor.distinct('runtimes.language').length
+
+  end
+
+  def status_count status
+    Vendor.where(status: status).count
+  end
+
+  def status_piedata
+    Charts.new.get_piedata 'status', false
+  end
+
+  def mean_maturity( status=nil )
+    if status
+      sum = 0
+      vendors = Vendor.where(status: status).only(:status_since)
+      # remove nil status_since
+      vendors = vendors.delete_if {|x| x.status_since.nil? }
+
+      vendors.each do |v|
+        sum += Date.today.to_time.to_i - v.status_since.to_time.to_i
+      end
+      result = (sum / vendors.length.to_f / 2592000).round(2)
+    else
+      sum = 0
+      vendors = Vendor.all.only(:status_since)
+      # remove nil status_since
+      vendors = vendors.delete_if {|x| x.status_since.nil? }
+      vendors.each do |v|
+        sum += Date.today.to_time.to_i - v.status_since.to_time.to_i unless v.status_since.nil?
+      end
+      puts sum
+      result = (sum / vendors.length.to_f / 2592000).round(2)
+    end
+  end
+
+  def status_maturity( type='production' )
+    data = [{ name: 'production', data: [] }]
+    # vendor
+    vendor = Vendor.where(status: type).only(:status_since).desc(:status_since)
+    # remove nil status_since
+    vendor = vendor.delete_if {|x| x.status_since.nil? }
+    #vendor = vendor.sort { |x,y| x.status_since <=> y.status_since }
+    # aggreagate from 0 to oldest
+    vendor.each do |v|
+      months = (Date.today.to_time.to_i - v.status_since.to_time.to_i) / 2592000
+      if data[0][:data][months]
+        data[0][:data][months] += 1
+      else
+        data[0][:data][months] = 1
+      end
+    end
+
+    data.to_json
   end
 
   def support_columndata threshold=0.05

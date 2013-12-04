@@ -1,4 +1,3 @@
-<% chart = LanguageChart.new %>
 <script src="http://code.highcharts.com/3.0/highcharts.js"></script>
 <script src="/js/themes/paasify.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
@@ -36,7 +35,7 @@
 </style>
 
 <div class="jumbotron">
-  <h1>Runtime Languages</h1>
+  <h1>Runtime Languages<sup><span class="badge badge-warning">&beta;eta</span></sup></h1>
 
   <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted">
     <small><a href="#footnotes">1</a></small>
@@ -48,13 +47,15 @@
   <div class="span12">
     <strong>Runtime Language and Version Support.</strong>
     Today's PaaS support a variety of different runtime languages as basis for customer applications.
-    Currently, PaaS offerings support a total of <span class="label label-inverse"><%= chart.language_count %></span>
+    Currently, PaaS offerings officially support a total of <span class="label label-inverse"><%= @chart.language_count %></span>
     different languages.
     The <i>Top</i> 5 languages based on support percentage are
-    <% chart.support_categories.slice(0..4).each_with_index do |r, i| %>
+    <% @chart.support_categories.slice(0..4).each_with_index do |r, i| %>
         <span class="label" style="background-color: <%= Charts::COLORS[i] %>;"><%= r %></span><% end %>.
     The following chart shows the support percentage of all available languages. When clicking on the language bars, a
     drilldown on the different available language versions will be made.
+    Moreover, <span class="label label-inverse"><%= (@chart.extensible_count / @chart.vendor_count.to_f * 100).round %> %</span> of the vendors are
+    <span class="label label-success">extensible</span> which means that more languages can be added via extensibility mechanisms like buildpacks.
   </div>
   <div id="languages" style="height: 350px;" class="span12 chart text-center"></div>
   <div class="span12">
@@ -66,8 +67,8 @@
         PaaS</i>) may result in better and more specialized support of that language,
         more languages (<i>Polyglot PaaS</i>) attract a greater customer mass and allow more flexibility for developing
         in different languages while sticking to one particular PaaS provider.
-        The average amount of supported languages is <i class="icon-arrow-up" title="(+0.01)"></i>
-        <span class="label label-inverse" title="<%= chart.mean_count %> (mean)&#013;<%= chart.median_count %> (median)&#013;<%= chart.mode_count %> (mode)"><%= chart.mean_count %></span>.
+        The mean amount of supported languages is <i class="icon-arrow-up" title="<%= (@chart.mean_count - Statistics.last.mean_lang_count).round(1) %>"></i>
+        <span class="label label-inverse" title="<%= @chart.mean_count %> (mean)&#013;<%= @chart.median_count %> (median)&#013;<%= @chart.mode_count %> (mode)"><%= @chart.mean_count %></span>.
         <!--TODO Trend icon and change! Other averages median, ... -->
       </div>
       <div id="polyglot" class="span7" style="height: 300px;"></div>
@@ -76,6 +77,7 @@
   </div>
   <div class="span12">
     <strong>Runtime Language Trend.</strong>
+    The succeeding graph shows the runtime language trend over time.
   </div>
   <div id="overtime" style="height: 350px;" class="span12 chart text-center"></div>
 </div>
@@ -103,8 +105,8 @@
         }
 
         var name = 'Language Support';
-        var categories = <%= chart.support_categories false %>;
-        var data = <%= chart.support_columndata false %>;
+        var categories = <%= @chart.support_categories false %>;
+        var data = <%= @chart.support_columndata false %>;
 
         var chart = $('#languages').highcharts({
             chart: {
@@ -139,7 +141,7 @@
                     labels: {
                         formatter: function () {
                             // TODO redraw axis for drilldown!
-                            max =<%= Charts.new.vendor_count %>,
+                            max =<%= @chart.vendor_count %>,
                                     min = 0,
                                     range = max - min;
                             return (this.value * max / 100.0).toFixed(0);
@@ -217,48 +219,20 @@
                 {
                     name: 'Supported by',
                     innerSize: '70%',
-                    data: <%= chart.count_piedata %>
+                    data: <%= @chart.count_piedata %>
                 }
             ]
         });
 
-        $('#overtime').highcharts({
-            title: {
-                text: 'Language Trend'
-            },
-            subtitle: {
-                text: 'Language support over time'
-            },
-            xAxis: {
-                categories: <%= chart.trend_categories %>
-            },
-            yAxis: {
-                title: {
-                    text: 'Support'
-                },
-                min: 0
-            },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'middle',
-                borderWidth: 0
-            },
-            series: <%= chart.get_trend %>
-        });
-
         $('#count').highcharts({
             title: {
-                text: 'Language Trend'
+                text: 'Language-specific vs Polyglot Trend'
             },
             subtitle: {
-                text: 'Language support over time'
+                text: 'Runtime support over time'
             },
             xAxis: {
-                categories: <%= chart.trend_categories %>
+                categories: <%= @chart.trend_categories %>
             },
             yAxis: {
                 title: {
@@ -283,7 +257,36 @@
                 verticalAlign: 'middle',
                 borderWidth: 0
             },
-            series: <%= chart.get_count_trend %>
+            series: <%= @chart.get_count_trend %>
         });
+
+        $('#overtime').highcharts({
+            title: {
+                text: 'Language Trend'
+            },
+            subtitle: {
+                text: 'Language support over time'
+            },
+            xAxis: {
+                categories: <%= @chart.trend_categories %>
+            },
+            yAxis: {
+                title: {
+                    text: 'Support'
+                },
+                min: 0
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: <%= @chart.get_trend %>
+        });
+
     });
 </script>

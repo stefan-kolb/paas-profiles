@@ -28,7 +28,7 @@
     </style>
 	
 	<div class="jumbotron">
-		<h1>Platform as a Service Statistics</h1>
+		<h1>Platform as a Service Statistics<sup><span class="badge badge-warning">&beta;eta</span></sup></h1>
         <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted"><small><a href="#footnotes">1</a></small></sup>.</p>
 	</div>
 
@@ -59,8 +59,8 @@
         }
 
         var name = 'Language Support';
-        var categories = <%= LanguageChart.new.support_categories 0.15 %>;
-        var data = <%= LanguageChart.new.support_columndata 0.15 %>;
+        var categories = <%= LanguageCharts.new.support_categories 0.15 %>;
+        var data = <%= LanguageCharts.new.support_columndata 0.15 %>;
 
         var chart = $('#languages').highcharts({
             chart: {
@@ -154,8 +154,8 @@
         }).highcharts();
 
         var name2 = 'Services Support';
-        var categories2 = <%= ServiceChart.new.support_categories %>;
-        var data2 = <%= ServiceChart.new.support_columndata %>;
+        var categories2 = <%= ServiceCharts.new.support_categories %>;
+        var data2 = <%= ServiceCharts.new.support_columndata %>;
 
         var chart2 = $('#service_support').highcharts({
             chart: {

@@ -19,7 +19,7 @@ class Vendor
 	field :status, type: String
 	field :status_since, type: Date
 	field :type, type: String
-	field :extendable, type: Boolean
+	field :extensible, type: Boolean
 	field :hosting, type: Array
 	field :compliance, type: Array
 	# relations

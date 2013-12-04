@@ -6,10 +6,14 @@ require_relative '../version'
 class Charts
   COLORS = %w( #2f7ed8 #0d233a #8bbc21 #910000 #1aadce #492970 #f28f43 #77a1e5 #c42525 #a6c96a )
 
-  attr_reader :vendor_count
+  attr_reader :vendor_count, :extensible_count
 
-  def initialize
-    @vendor_count = Vendor.count
+  def vendor_count
+    @vendor_count ||= Vendor.count
+  end
+
+  def extensible_count
+    @extensible_count ||= Vendor.where(extendable: true).count
   end
 
   def get_piedata( type, threshold = 0.05 )
