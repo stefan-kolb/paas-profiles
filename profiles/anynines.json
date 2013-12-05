@@ -10,7 +10,10 @@
     "public"
   ],
   "pricing": [
-
+    {
+      "model": "fixed",
+      "period": "monthly"
+    }
   ],
   "scaling": {
     "vertical": true,
