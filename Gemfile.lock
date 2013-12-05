@@ -25,10 +25,14 @@ GEM
     rack-protection (1.5.1)
       rack
     rake (10.1.0)
+    simple-navigation (3.11.0)
+      activesupport (>= 2.3.2)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    sinatra-simple-navigation (3.6.0)
+      simple-navigation (>= 3.10.1)
     tilt (1.4.1)
     tzinfo (0.3.38)
     versionomy (0.4.4)
@@ -45,4 +49,5 @@ DEPENDENCIES
   newrelic_rpm
   rake
   sinatra
+  sinatra-simple-navigation
   versionomy

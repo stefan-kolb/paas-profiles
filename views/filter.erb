@@ -192,10 +192,6 @@
 <script src="../js/bootstrap-select.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
-        $('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
-        $('ul.breadcrumb > li:first').after('<li class="active">Find your PaaS</li>');
-
         $('.selectpicker').selectpicker();
 
         var data = $('#filter').serialize();

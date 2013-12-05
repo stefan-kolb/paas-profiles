@@ -1,390 +1,419 @@
-<% 
-	regex  = params[:name].gsub('_', '[\s\.]')
-	regex = Regexp.new(regex, "i")
-	profile = Vendor.where(name: regex).first
+<link href="../css/glyphicons.css" rel="stylesheet"/>
+<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+
+<div id="top" class="container">
+<div class="row">
+  <div class="span8">
+    <h1>
+      <a href="<%= @profile["url"] %>" target="_blank">
+        <%= @profile["name"] %>
+      </a>
+      <% unless @profile["vendor_verified"].nil? %>
+          <span class="icon-ok-sign" title="Verified by Vendor on <%= @profile["vendor_verified"].to_date %>"></span>
+      <% end %>
+    </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="span4">
+    <a href="<%= @profile["url"] %>" target="_blank" class="btn btn-success btn-mini">Visit Vendor Page</a>
+  </div>
+  <div class="span4">
+    <span class="icon-tags" title="PaaS type"></span>
+    <small><strong>&nbsp;<%= @profile["type"] %></strong></small>
+  </div>
+  <div class="span4">
+    <p class="pull-right">
+      <small><em>Last updated <span class="date" title="<%= @profile["revision"].to_datetime %>"></span> ago.</em>
+      </small>
+    </p>
+  </div>
+</div>
+<hr/>
+<div class="row">
+  <div class="span12"><h3>Facts</h3></div>
+  <div class="span12">
+    <p>
+      Is in
+      <% if @profile["status"] == "beta" %>
+          <span class="label label-warning">Beta</span>
+      <% else %>
+          <span class="label label-success">Production</span>
+      <% end %>
+      since <span class="date" title="
+      <% unless @profile["status_since"].nil? %><%= @profile["status_since"].to_date %>
+      <% end %>"></span>.</p>
+
+    <p>
+      <%= @profile["name"] %> is available as
+      <% if @profile["hosting"].include? "public" %>
+          public <span class="icon-eye-open" title="public"></span>
+      <% end %>
+      <% if @profile["hosting"].include?("private") && @profile["hosting"].include?("public") %>
+          and as
+      <% end
+         if @profile["hosting"].include? "private"
+      %>
+          private <span class="icon-lock" title="private"></span>
+      <% end %>
+      Platform-as-a-Service.
+    </p>
+
+    <p>You can deploy apps written in
+      <span class="label label-inverse"><%= @profile["runtimes"].uniq { |h| h["language"] }.size %></span> languages to
+      <span class="label label-inverse"><%= @profile["infrastructures"].nil? ? 0 : @profile["infrastructures"].size %></span>
+      different infrastructures.</p>
+
+    <% unless @profile["services"].nil? %>
+        <p>You can automatically bind
+          <span class="label label-inverse"><%= @profile["services"]["native"].size %></span> services and
+          <span class="label label-inverse"><%= @profile["services"]["addon"].size %></span> integrated addons to your
+          applications.</p>
+    <% end %>
+    <% unless @profile["scaling"]["vertical"] == false && @profile["scaling"]["horizontal"] ==false && @profile["scaling"]["auto"] == false %>
+        <p>You can scale your applications
+          <% if @profile["scaling"]["vertical"] %>
+              vertically <span class="icon-resize-vertical" title="vertical"></span>,
+          <% end %>
+          <% if @profile["scaling"]["horizontal"] %>
+              horizontally <span class="icon-resize-horizontal" title="horizontal"></span>
+          <% end %>
+          <% if @profile["scaling"]["auto"] %>
+              or let <%= @profile["name"] %> automatically <span class="icon-refresh" title="auto"></span> scale your
+              instances
+          <% end %>.</p>
+    <% end %>
+
+    <p>
+      <% unless @profile["pricing"].nil? || @profile["pricing"].empty? %>
+          Usage and pricing options available are
+          <% @profile["pricing"].each_with_index do |p, i|
+            if i > 0 %>
+                  or
+              <% end %>
+              <span class="icon-g-credit" title="pricing"></span> <%= p["model"] + " usage, " + p["period"] + " bills" %>
+          <% end %>.
+      <% end %>
+    </p>
+
+    <p>
+      <% unless @profile["compliance"].nil? || @profile["compliance"].empty? %>
+          <%= @profile["name"] + " is <em>" + @profile["compliance"].join(", ").upcase + " </em> certified" %>
+          <span class="icon-certificate" title="compliance"></span>.
+      <% end %>
+    </p>
+  </div>
+</div>
+
+<hr/>
+
+<div class="row">
+  <div class="span12"><h3>Runtimes</h3></div>
+  <div class="span12">
+    <table class="table table-bordered table-hover">
+      <thead>
+      <tr>
+        <th>Language</th>
+        <th>Versions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <%
+         @profile["runtimes"].sort { |a, b| a["language"] <=> b["language"] }.each do |rt|
+      %>
+          <tr>
+            <td>
+              <%= rt["language"].capitalize %>
+            </td>
+            <% rt["versions"].each do |v|
+              v.gsub! /\*\.\*/, 'All versions'
+            end %>
+            <td><em><%= rt["versions"].join(", ") %></em></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <% if @profile["extensible"] %>
+        <%= @profile["name"] %> is <span class="label label-success">extensible</span>, so you can add more
+        functionality via buildpacks or similar mechanisms.
+    <% end %>
+  </div>
+</div>
+
+<hr/>
+
+<%
+   unless @profile["middleware"].nil? || @profile["middleware"].empty?
 %>
-	<link href="../css/glyphicons.css" rel="stylesheet" />
-	<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">	
+    <div class="row">
+      <div class="span12"><h3>Middleware</h3></div>
+      <div class="span12">
+        <table class="table table-bordered table-hover">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Runtime</th>
+            <th>Versions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <%
+             @profile["middleware"].sort_by { |a| [a["name"], a["runtime"]] }.each do |rt|
+          %>
+              <tr>
+                <td>
+                  <%= rt["name"].capitalize %>
+                </td>
+                <td>
+                  <%= rt["runtime"].capitalize %>
+                </td>
+                <% rt["versions"].each do |v|
+                  v.gsub! /\*\.\*/, 'All versions'
+                end %>
+                <td><em><%= rt["versions"].join(", ") %></em></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <hr/>
+<% end %>
 
-		<div id="top" class="container">
-			<div class="row">
-				<div class="span8">
-					<h1>
-						<a href="<%= profile["url"] %>" target="_blank">
-						<%= profile["name"] %>
-						</a>
-						<% unless profile["vendor_verified"].nil? %>
-						<span class="icon-ok-sign" title="Verified by Vendor on <%= profile["vendor_verified"].to_date %>"></span>
-						<% end %>
-					</h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span4" >
-					<a href="<%= profile["url"] %>" target="_blank" class="btn btn-success btn-mini">Visit Vendor Page</a>
-				</div>
-				<div class="span4" >
-					<span class="icon-tags" title="PaaS type"></span><small><strong>&nbsp;<%= profile["type"] %></strong></small>
-				</div>
-				<div class="span4" >
-					<p class="pull-right"><small><em>Last updated <span class="date" title="<%= profile["revision"].to_datetime %>"></span> ago.</em></small></p>
-				</div>
-			</div>
-			<hr />
-			<div class="row">
-				<div class="span12"><h3>Facts</h3></div>
-				<div class="span12">
-					<p>
-					Is in
-					<% if profile["status"] == "beta" %>
-					<span class="label label-warning">Beta</span>
-					<% else %>
-					<span class="label label-success">Production</span>
-					<% end %>
-					since <span class="date" title="<% unless profile["status_since"].nil? %><%= profile["status_since"].to_date %><% end %>"></span>.</p>
-					<p>
-					<%= profile["name"] %> is available as 
-					<% if profile["hosting"].include? "public" %>
-					public <span class="icon-eye-open" title="public"></span>
-					<% end %>
-					<% if profile["hosting"].include?("private") && profile["hosting"].include?("public") %>
-					and as 
-					<%	end				
-						if profile["hosting"].include? "private"
-					%>
-					private <span class="icon-lock" title="private"></span>
-					<% end %>
-					Platform-as-a-Service.
-					</p>					
-					<p>You can deploy apps written in <span class="label label-inverse"><%= profile["runtimes"].uniq { |h| h["language"] }.size %></span> languages to <span class="label label-inverse"><%= profile["infrastructures"].nil? ? 0 : profile["infrastructures"].size %></span> different infrastructures.</p>
-					
-					<% unless profile["services"].nil? %>
-					<p>You can automatically bind <span class="label label-inverse"><%= profile["services"]["native"].size %></span> services and <span class="label label-inverse"><%= profile["services"]["addon"].size %></span> integrated addons to your applications.</p>
-					<% end %>
-					<% unless profile["scaling"]["vertical"] == false && profile["scaling"]["horizontal"] ==false && profile["scaling"]["auto"] == false %>
-					<p>You can scale your applications
-					<% if profile["scaling"]["vertical"] %>
-					vertically <span class="icon-resize-vertical" title="vertical"></span>, 
-					<% end %>
-					<% if profile["scaling"]["horizontal"] %>
-					horizontally <span class="icon-resize-horizontal" title="horizontal"></span>
-					<% end %>
-					<% if profile["scaling"]["auto"] %> 
-					or let <%= profile["name"] %> automatically <span class="icon-refresh" title="auto"></span> scale your instances
-					<% end %>.</p>
-					<% end %>
-					
-					<p><% unless profile["pricing"].nil? || profile["pricing"].empty? %>
-					Usage and pricing options available are 
-					<% profile["pricing"].each_with_index do |p, i|
-							if i > 0 %>
-							 or 
-							<% end %>
-					<span class="icon-g-credit" title="pricing"></span> <%= p["model"] + " usage, " + p["period"] + " bills" %><% end %>.<% end %>
-					</p>
-					
-					<p>
-					<% unless profile["compliance"].nil? || profile["compliance"].empty? %>
-					<%= profile["name"] + " is <em>" + profile["compliance"].join(", ").upcase + " </em> certified" %>
-					<span class="icon-certificate" title="compliance"></span>.
-					<% end %>
-					</p>
-				</div>
-			</div>
+<%
+   unless @profile["frameworks"].nil? || @profile["frameworks"].empty?
+%>
+    <div class="row">
+      <div class="span12"><h3>Frameworks</h3></div>
+      <div class="span12">
+        <table class="table table-bordered table-hover">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Runtime</th>
+            <th>Versions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <%
+             @profile["frameworks"].sort_by { |a| [a["name"], a["runtime"]] }.each do |rt|
+          %>
+              <tr>
+                <td>
+                  <%= rt["name"].capitalize %>
+                </td>
+                <td>
+                  <%= rt["runtime"].capitalize %>
+                </td>
+                <% rt["versions"].each do |v|
+                  v.gsub! /\*\.\*/, 'All versions'
+                end %>
+                <td><em><%= rt["versions"].join(", ") %></em></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <hr/>
+<% end %>
 
-			<hr/>
-			
-			<div class="row">
-				<div class="span12"><h3>Runtimes</h3></div>
-				<div class="span12">
-				<table class="table table-bordered table-hover">
-				<thead>
-					<tr><th>Language</th><th>Versions</th></tr>
-				</thead>
-				<tbody>
-					<% 
-						profile["runtimes"].sort { |a,b| a["language"] <=> b["language"] }.each do |rt|
-					%>
-					<tr>
-						<td>
-							<%= rt["language"].capitalize %>
-						</td>
-						<% rt["versions"].each do |v|
-							v.gsub! /\*\.\*/, 'All versions'
-						end %>
-						<td><em><%= rt["versions"].join(", ") %></em></td>
-					</tr>
-					<% end %>
-				</tbody>
-				</table>
-				<% if profile["extensible"] %>
-				<%= profile["name"] %> is <span class="label label-success">extensible</span>, so you can add more functionality via buildpacks or similar mechanisms.
-				<% 	end  %>
-				</div>
-			</div>
-			
-			<hr/>
+<%
+   services = @profile["services"].nil?
 
-			<%
-				unless profile["middleware"].nil? || profile["middleware"].empty?
-			%>	
-			<div class="row">
-				<div class="span12"><h3>Middleware</h3></div>
-				<div class="span12">
-				<table class="table table-bordered table-hover">
-				<thead>
-					<tr><th>Name</th><th>Runtime</th><th>Versions</th></tr>
-				</thead>
-				<tbody>
-					<% 
-						profile["middleware"].sort_by { |a| [ a["name"], a["runtime"] ] }.each do |rt|
-					%>
-					<tr>
-						<td>
-							<%= rt["name"].capitalize %>
-						</td>
-						<td>
-							<%= rt["runtime"].capitalize %>
-						</td>
-						<% rt["versions"].each do |v|
-							v.gsub! /\*\.\*/, 'All versions'
-						end %>
-						<td><em><%= rt["versions"].join(", ") %></em></td>
-					</tr>
-					<% end %>
-				</tbody>
-				</table>
-				</div>
-			</div>
-			<hr/>
-			<% end %>
-			
-			<%
-				unless profile["frameworks"].nil? || profile["frameworks"].empty?
-			%>	
-			<div class="row">
-				<div class="span12"><h3>Frameworks</h3></div>
-				<div class="span12">
-				<table class="table table-bordered table-hover">
-				<thead>
-					<tr><th>Name</th><th>Runtime</th><th>Versions</th></tr>
-				</thead>
-				<tbody>
-					<% 
-						profile["frameworks"].sort_by { |a| [ a["name"], a["runtime"] ] }.each do |rt|
-					%>
-					<tr>
-						<td>
-							<%= rt["name"].capitalize %>
-						</td>
-						<td>
-							<%= rt["runtime"].capitalize %>
-						</td>
-						<% rt["versions"].each do |v|
-							v.gsub! /\*\.\*/, 'All versions'
-						end %>
-						<td><em><%= rt["versions"].join(", ") %></em></td>
-					</tr>
-					<% end %>
-				</tbody>
-				</table>
-				</div>
-			</div>
-			<hr/>
-			<% end %>
-			
-			<%
-				services = profile["services"].nil?
-				
-				unless services
-			%>
-			<div id="services" class="row">
-			<div class="span12"><h3>Services</h3></div>
-			<div class="accordion span12" id="accordion2">
-			  <div class="accordion-group">
-				<div class="accordion-heading">
-				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-					<% 
-						size = 0
-						unless profile["services"]["native"].nil?
-							size = profile["services"]["native"].size
-						end
-					%>
-					<h4 title="Operated by the PaaS vendor">Native (<%= size %>)</h4>
-				  </a>
-				</div>
-				<div id="collapseOne" class="accordion-body collapse">
-				  <div class="accordion-inner">
-				  	<% 
-						unless profile["services"]["native"].nil?
-					%>
-					<table class="table table-bordered table-hover">
-					<thead>
-						<tr><th>Name</th><th>Description</th><th>Type</th><th>Versions</th></tr>
-					</thead>
-					<tbody>
-					<% profile["services"]["native"].sort { |a,b| a["name"] <=> b["name"] }.each do |rt| %>
-						<tr>
-							<td>
-								<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>
-							</td>
-							<td><em><%= rt["description"] %></em></td>
-							<td>
-								<% unless rt["type"].nil? %>
-								<em><%= rt["type"].upcase %></em>
-								<% end %>
-							</td>
-							<td><em><%= rt["versions"].join(", ") %></em></td>
-						</tr>
-						<% end %>
-					</tbody>
-					</table>
-					<% end %>
-				  </div>
-				</div>
-			  </div>
-			  <div class="accordion-group">
-				<div class="accordion-heading">
-				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-				  	<% 
-						unless profile["services"]["addon"].nil?
-							size = profile["services"]["addon"].size
-						end
-					%>
-					<h4 title="Operated by a 3rd party vendor">Addons (<%= size %>)</h4>
-				  </a>
-				</div>
-				<div id="collapseTwo" class="accordion-body collapse">
-				  <div class="accordion-inner">
-					<table class="table table-bordered table-hover">
-					<thead>
-						<tr><th>Name</th><th>Description</th><th>Type</th></tr>
-					</thead>
-					<tbody>
-						<% 
-							unless profile["services"]["addon"].nil?
-							profile["services"]["addon"].sort { |a,b| a["name"] <=> b["name"] }.each do |rt|
-						%>
-						<tr>
-							<td>
-							<% unless rt["url"].nil? || rt["url"].empty? %>
-								<a href="<%= rt["url"] %>" target="_blank">
-							<% end %>
-							<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>
-							</a>
-							</td>
-							<td><em><%= rt["description"] %></em></td>
-							<td>
-								<% unless rt["type"].nil? %>
-								<em><%= rt["type"].upcase %></em>
-								<% end %>
-							</td>
-						</tr>
-						<% end
-							end
-						%>
-					</tbody>
-					</table>
-				  </div>
-				</div>
-			  </div>
-			</div>
-			<a href="#services" title="Back to services" class="pull-right icon-chevron-up"></a>
-			</div>
-			<hr/>
-			<% end %>
-			
-			<div class="row">
-				<div class="span12"><h3>Infrastructures</h3></div>			
-				<div class="span5" style="margin-bottom: 20px;">
-					<% 
-						unless profile["infrastructures"].nil?
-						profile["infrastructures"].sort { |a,b| a["continent"] <=> b["continent"] }.each do |rt|
-						
-						title = ""
-						
-						case rt["continent"]
-							when "EU"
-								title = "Europe"
-							when "SA"
-								title = "South America"
-							when "NA"
-								title = "North America"
-							when "AS"
-								title = "Asia"
-							when "OC"
-								title = "Oceania"
-							else
-								title = "Africa"
-						end
-					%>
-						<div class="text-left">
-						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
+   unless services
+%>
+    <div id="services" class="row">
+      <div class="span12"><h3>Services</h3></div>
+      <div class="accordion span12" id="accordion2">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+              <%
+                 size = 0
+                 unless @profile["services"]["native"].nil?
+                   size = @profile["services"]["native"].size
+                 end
+              %>
+              <h4 title="Operated by the PaaS vendor">Native (<%= size %>)</h4>
+            </a>
+          </div>
+          <div id="collapseOne" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <%
+                 unless @profile["services"]["native"].nil?
+              %>
+                  <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Description</th>
+                      <th>Type</th>
+                      <th>Versions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% @profile["services"]["native"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
+                        <tr>
+                          <td>
+                            <%= rt["name"].split(" ").map(&:capitalize).join(" ") %>
+                          </td>
+                          <td><em><%= rt["description"] %></em></td>
+                          <td>
+                            <% unless rt["type"].nil? %>
+                                <em><%= rt["type"].upcase %></em>
+                            <% end %>
+                          </td>
+                          <td><em><%= rt["versions"].join(", ") %></em></td>
+                        </tr>
+                    <% end %>
+                    </tbody>
+                  </table>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+              <%
+                 unless @profile["services"]["addon"].nil?
+                   size = @profile["services"]["addon"].size
+                 end
+              %>
+              <h4 title="Operated by a 3rd party vendor">Addons (<%= size %>)</h4>
+            </a>
+          </div>
+          <div id="collapseTwo" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                </tr>
+                </thead>
+                <tbody>
+                <%
+                   unless @profile["services"]["addon"].nil?
+                     @profile["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt|
+                %>
+                        <tr>
+                          <td>
+                            <% unless rt["url"].nil? || rt["url"].empty? %>
+                                <a href="<%= rt["url"] %>" target="_blank">
+                            <% end %>
+                            <%= rt["name"].split(" ").map(&:capitalize).join(" ") %>
+                            </a>
+                          </td>
+                          <td><em><%= rt["description"] %></em></td>
+                          <td>
+                            <% unless rt["type"].nil? %>
+                                <em><%= rt["type"].upcase %></em>
+                            <% end %>
+                          </td>
+                        </tr>
+                    <% end
+                       end
+                    %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#services" title="Back to services" class="pull-right icon-chevron-up"></a>
+    </div>
+    <hr/>
+<% end %>
+
+<div class="row">
+  <div class="span12"><h3>Infrastructures</h3></div>
+  <div class="span5" style="margin-bottom: 20px;">
+    <%
+       unless @profile["infrastructures"].nil?
+         @profile["infrastructures"].sort { |a, b| a["continent"] <=> b["continent"] }.each do |rt|
+
+           title = ""
+
+           case rt["continent"]
+             when "EU"
+               title = "Europe"
+             when "SA"
+               title = "South America"
+             when "NA"
+               title = "North America"
+             when "AS"
+               title = "Asia"
+             when "OC"
+               title = "Oceania"
+             else
+               title = "Africa"
+           end
+    %>
+            <div class="text-left">
+              <span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
 						<span>
-							<% iso = JSON.parse( IO.read("public/js/iso-3166-2.json")) %>
-							<% unless rt["country"].empty? %>
-							<%= iso.detect{ |c| c["alpha-2"] == rt["country"]}["name"].strip %><% end
-							   unless rt["region"].empty? %>, <em><%= rt["region"] %></em>
+							<% iso = JSON.parse(IO.read("public/js/iso-3166-2.json")) %>
+                          <% unless rt["country"].empty? %>
+							<%= iso.detect { |c| c["alpha-2"] == rt["country"] }["name"].strip %><% end
+                                                                                                    unless rt["region"].empty? %>, <em><%= rt["region"] %></em>
 							<% end %>
 						</span>
-						<% unless rt["provider"].nil? %>
-							<small class="muted"><em>&mdash; provided by <%= rt["provider"] %></em></small>
-						<% end %>
-						</div>
-					<% 
-						end
-						end
-					%>
-				</div>
-				<div class="span7 thumbnail" id="map" style="width: 640px; height: 300px"></div>
-			</div>
-		</div>
-		
-		<script src="../js/jquery.prettydate.js"></script>
-		<script src="../js/jquery-jvectormap-1.2.2.min.js"></script>		
-		<script src="../js/jquery-jvectormap-world-mill-en.js"></script>
-		
-		<script>
-			$(document).ready(function() {
-				$('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
-				$('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
-				$('ul.breadcrumb > li:first').after('<li class="active"><%= profile["name"] %></li>');
-				
-				
-				$(".date").prettyDate();
-				
-				$('#map').vectorMap({
-					map: 'world_mill_en',
-					regionStyle: {
-						initial: {
-							fill: '#0088cc'
-						},
-						hover: {
-							'fill-opacity': 0.6
-						},
-						selected: {
-							fill: '#f89406'
-						}
-					},
-					<% if !profile["infrastructures"].nil? && profile["infrastructures"].uniq { |h| h["continent"] }.size == 1 %> 
-					<%= "focusOn: \'" << profile["infrastructures"][0]["country"] << "\'," %>
-					<% end %>
-					scaleColors: ['#C8EEFF', '#0071A4'],
-					normalizeFunction: 'polynomial',
-					hoverOpacity: 0.7,
-					hoverColor: false,
-					backgroundColor: '#ffffff',
-					selectedRegions: 
-					<% 
-								arr = []
-								unless profile["infrastructures"].nil?
-									profile["infrastructures"].each do |i| 
-										arr << i["country"]
-									end
-								end
-					%>
-					<%= arr.to_s %>
-					
-			  });
-			});
-		</script>
+              <% unless rt["provider"].nil? %>
+                  <small class="muted"><em>&mdash; provided by <%= rt["provider"] %></em></small>
+              <% end %>
+            </div>
+        <%
+           end
+           end
+        %>
+  </div>
+  <div class="span7 thumbnail" id="map" style="width: 640px; height: 300px"></div>
+</div>
+</div>
+
+<script src="../js/jquery.prettydate.js"></script>
+<script src="../js/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="../js/jquery-jvectormap-world-mill-en.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".date").prettyDate();
+
+        $('#map').vectorMap({
+            map: 'world_mill_en',
+            regionStyle: {
+                initial: {
+                    fill: '#0088cc'
+                },
+                hover: {
+                    'fill-opacity': 0.6
+                },
+                selected: {
+                    fill: '#f89406'
+                }
+            },
+            <% if !@profile["infrastructures"].nil? && @profile["infrastructures"].uniq { |h| h["continent"] }.size == 1 %>
+            <%= "focusOn: \'" << @profile["infrastructures"][0]["country"] << "\'," %>
+            <% end %>
+            scaleColors: ['#C8EEFF', '#0071A4'],
+            normalizeFunction: 'polynomial',
+            hoverOpacity: 0.7,
+            hoverColor: false,
+            backgroundColor: '#ffffff',
+            selectedRegions:
+            <%
+                        arr = []
+                        unless @profile["infrastructures"].nil?
+                            @profile["infrastructures"].each do |i|
+                                arr << i["country"]
+                            end
+                        end
+            %>
+            <%= arr.to_s %>
+
+        });
+    });
+</script>

@@ -3,8 +3,10 @@ require 'mongoid'
 require 'sinatra'
 require 'versionomy'
 require 'newrelic_rpm'
+require 'sinatra/simple-navigation'
 
 require_relative 'models/vendor'
+require_relative "lib/paasify_breadcrumbs"
 
 Mongoid.load!("./config/mongoid.yml")
 
@@ -20,7 +22,13 @@ get '/vendors' do
 end
 
 get '/vendor/:name' do
-  @title = "#{params[:name].gsub("_", " ").split(" ").map(&:capitalize).join(" ")} | PaaS Comparison"
+  @route = request.fullpath
+  regex  = params[:name].gsub('_', '[\s\.]')
+  regex = Regexp.new(regex, "i")
+  @profile = Vendor.where(name: regex).first
+  @paas = @profile['name']
+  @title = "#{@paas} | PaaS Comparison"
+
 	erb :vendor
 end
 
