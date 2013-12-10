@@ -11,6 +11,8 @@
 		<link rel="icon" href="<%= url('/favicon.png') %>" type="image/png">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="<%= url('/js/bootstrap.min.js') %>"></script>
+        <script src="<%= url('/js/nprogress.js') %>"></script>
+        <link rel="stylesheet" href="<%= url('/css/nprogress.css') %>">
 		<style>
 			hr.soften {
 			  height: 1px;
@@ -22,6 +24,9 @@
 			  border: 0;
 			}
 		</style>
+        <script>
+
+        </script>
 	</head>
 	<body>
 		<div id="top" class="container" style="padding-top: 40px; padding-bottom: 30px;">
@@ -59,6 +64,15 @@
 						</div>            
 					</div>
 				</div>
-			</footer>		
+			</footer>
+        <script>
+            $(document).ready(function () {
+                NProgress.start();
+            });
+
+            $( window ).load(function() {
+                NProgress.done();
+            });
+        </script>
 	</body>
 </html>

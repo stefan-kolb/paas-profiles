@@ -1,44 +1,55 @@
-    <script src="http://code.highcharts.com/3.0/highcharts.js"></script>
-    <script src="/js/themes/paasify.js"></script>
-	<script src="http://code.highcharts.com/modules/exporting.js"></script>
-	<link rel="stylesheet" href="/css/theme.bootstrap.css">
-	<style>
-      /* Main marketing message and sign up button */
-      .jumbotron {
-	  /*height: 400px;*/
+<script src="http://code.highcharts.com/3.0/highcharts.js"></script>
+<script src="/js/themes/paasify.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<link rel="stylesheet" href="/css/theme.bootstrap.css">
+<style>
+        /* Main marketing message and sign up button */
+    .jumbotron {
+        /*height: 400px;*/
         margin: 50px 0;
         text-align: center;
-		/*background: url("img/sub.png") no-repeat;*/
-		background-size: 100%;
-      }
-      .jumbotron h1 {
+        /*background: url("img/sub.png") no-repeat;*/
+        background-size: 100%;
+    }
+
+    .jumbotron h1 {
         font-size: 60px;
         line-height: 1;
-		background: rgba(255, 255, 255, 0.6);
-      }
-      .jumbotron .lead {
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .jumbotron .lead {
         font-size: 18px;
         line-height: 1.25;
-		background: rgba(255, 255, 255, 0.6);
-      }
-      .jumbotron .btn {
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .jumbotron .btn {
         font-size: 21px;
         padding: 14px 24px;
-      }
-    </style>
-	
-	<div class="jumbotron">
-		<h1>Platform as a Service Statistics<sup><span class="badge badge-warning">&beta;eta</span></sup></h1>
-        <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted"><small><a href="#footnotes">1</a></small></sup>.</p>
-	</div>
+    }
+</style>
 
-    <div id="languages" style="height: 350px;" class="text-center"></div>
-    <div id="service_support" style="height: 350px;" class="text-center"></div>
-    <div id="status" style="height: 350px;" class="text-center"></div>
-    <div id="scaling_support" style="height: 350px;" class="text-center"></div>
-    <div id="footnotes"><small><sup class="muted">1</sup> The data source is the most recent collection of <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.</small></div>
+<div class="jumbotron">
+  <h1>Platform as a Service Statistics<sup><span class="badge badge-warning">&beta;eta</span></sup></h1>
+
+  <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted">
+    <small><a href="#footnotes">1</a></small>
+  </sup>.
+  </p>
+</div>
+
+<div id="languages" style="height: 350px;" class="text-center"></div>
+<div id="service_support" style="height: 350px;" class="text-center"></div>
+<div id="status" style="height: 350px;" class="text-center"></div>
+<div id="scaling_support" style="height: 350px;" class="text-center"></div>
+<div id="footnotes">
+  <small><sup class="muted">1</sup> The data source is the most recent collection of
+    <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
+  </small>
+</div>
 <script>
-	$(document).ready(function() {
+    $(document).ready(function () {
         function setChart(name, categories, data, color) {
             chart.xAxis[0].setCategories(categories, false);
             chart.series[0].remove(false);
@@ -68,50 +79,52 @@
             xAxis: {
                 categories: categories
             },
-            yAxis: [{
-                min: 0,
-                max: 100,
-                title: {
-                    text: 'Support'
+            yAxis: [
+                {
+                    min: 0,
+                    max: 100,
+                    title: {
+                        text: 'Support'
+                    },
+                    labels: {
+                        formatter: function () {
+                            return this.value + ' %';
+                        }
+                    }/*,
+                 plotLines: [{
+                 color: '#3a87ad',
+                 dashStyle: 'ShortDash',
+                 width: 1,
+                 value: 67,
+                 zIndex: 0,
+                 label: {
+                 text: '100 %'
+                 }
+                 }]*/
                 },
-                labels:{
-                    formatter:function(){
-                        return this.value + ' %';
-                    }
-                }/*,
-                plotLines: [{
-                    color: '#3a87ad',
-                    dashStyle: 'ShortDash',
-                    width: 1,
-                    value: 67,
-                    zIndex: 0,
-                    label: {
-                        text: '100 %'
-                    }
-                }]*/
-            },
-            {
-                title: {
-                    text: 'Count'
-                },
-                labels:{
-                    formatter:function(){
-                        // TODO redraw axis for drilldown!
-                        max=<%= Charts.new.vendor_count %>,
-                        min=0,
-                        range=max-min;
-                        return (this.value * max / 100.0).toFixed(0);
-                    }
-                },
-                linkedTo:0,
-                opposite:true
-            }],
+                {
+                    title: {
+                        text: 'Count'
+                    },
+                    labels: {
+                        formatter: function () {
+                            // TODO redraw axis for drilldown!
+                            max =<%= Charts.new.vendor_count %>,
+                                    min = 0,
+                                    range = max - min;
+                            return (this.value * max / 100.0).toFixed(0);
+                        }
+                    },
+                    linkedTo: 0,
+                    opposite: true
+                }
+            ],
             tooltip: {
-                formatter: function() {
+                formatter: function () {
                     var point = this.point,
-                            s = '<b>' + point.category +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
+                            s = '<b>' + point.category + '</b>: Supported by <b>' + this.y + '%</b><br/>';
                     if (point.drilldown) {
-                        s += 'Click to view '+ point.category +' versions';
+                        s += 'Click to view ' + point.category + ' versions';
                     } else if (point.category != 'Others') {
                         s += 'Click to return to languages';
                     }
@@ -125,7 +138,7 @@
                     cursor: 'pointer',
                     point: {
                         events: {
-                            click: function() {
+                            click: function () {
                                 var drilldown = this.drilldown;
                                 if (drilldown) {
                                     // TODO show series name zB java version
@@ -138,12 +151,14 @@
                     }
                 }
             },
-            series: [{
-                name: name,
-                data: data,
-                color: 'white'
-                //showInLegend: false
-            }]
+            series: [
+                {
+                    name: name,
+                    data: data,
+                    color: 'white'
+                    //showInLegend: false
+                }
+            ]
         }).highcharts();
 
         var name2 = 'Services Support';
@@ -163,17 +178,18 @@
             xAxis: {
                 categories: categories2
             },
-            yAxis: [{
-                min: 0,
-                max: 100,
-                title: {
-                    text: 'Support (%)'
-                },
-                labels:{
-                    formatter:function(){
-                        return this.value + ' %';
-                    }
-                }/*,
+            yAxis: [
+                {
+                    min: 0,
+                    max: 100,
+                    title: {
+                        text: 'Support (%)'
+                    },
+                    labels: {
+                        formatter: function () {
+                            return this.value + ' %';
+                        }
+                    }/*,
                  plotLines: [{
                  color: '#3a87ad',
                  dashStyle: 'ShortDash',
@@ -184,29 +200,29 @@
                  text: '100 %'
                  }
                  }]*/
-            },
+                },
                 {
                     title: {
                         text: 'Count'
                     },
-                    labels:{
-                        formatter:function(){
-                            var max=67,
-                                    min=0,
-                                    range=max-min;
+                    labels: {
+                        formatter: function () {
+                            var max = 67,
+                                    min = 0,
+                                    range = max - min;
                             return (this.value * 0.67).toFixed(0);
                         }
                     },
-                    linkedTo:0,
-                    opposite:true
+                    linkedTo: 0,
+                    opposite: true
                 }
             ],
             tooltip: {
-                formatter: function() {
+                formatter: function () {
                     var point = this.point,
-                            s = '<b>' + this.x +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
+                            s = '<b>' + this.x + '</b>: Supported by <b>' + this.y + '%</b><br/>';
                     if (point.drilldown) {
-                        s += 'Click to view '+ point.category +' versions';
+                        s += 'Click to view ' + point.category + ' versions';
                     } else {
                         s += 'Click to return to services';
                     }
@@ -220,7 +236,7 @@
                     cursor: 'pointer',
                     point: {
                         events: {
-                            click: function() {
+                            click: function () {
                                 var drilldown = this.drilldown;
                                 if (drilldown) { // drill down
                                     // TODO axis must be redrawn too
@@ -233,10 +249,12 @@
                     }
                 }
             },
-            series: [{
-                name: name2,
-                data: data2
-            }]
+            series: [
+                {
+                    name: name2,
+                    data: data2
+                }
+            ]
         }).highcharts();
 
         var categories3 = <%= ScalingCharts.new.support_categories %>;
@@ -252,17 +270,18 @@
             xAxis: {
                 categories: categories3
             },
-            yAxis: [{
-                min: 0,
-                max: 100,
-                title: {
-                    text: 'Support (%)'
-                },
-                labels:{
-                    formatter:function(){
-                        return this.value + ' %';
-                    }
-                }/*,
+            yAxis: [
+                {
+                    min: 0,
+                    max: 100,
+                    title: {
+                        text: 'Support (%)'
+                    },
+                    labels: {
+                        formatter: function () {
+                            return this.value + ' %';
+                        }
+                    }/*,
                  plotLines: [{
                  color: '#3a87ad',
                  dashStyle: 'ShortDash',
@@ -273,26 +292,26 @@
                  text: '100 %'
                  }
                  }]*/
-            },
+                },
                 {
                     title: {
                         text: 'Count'
                     },
-                    labels:{
-                        formatter:function(){
-                            var max=67,
-                                    min=0,
-                                    range=max-min;
+                    labels: {
+                        formatter: function () {
+                            var max = 67,
+                                    min = 0,
+                                    range = max - min;
                             return (this.value * 0.67).toFixed(0);
                         }
                     },
-                    linkedTo:0,
-                    opposite:true
+                    linkedTo: 0,
+                    opposite: true
                 }
             ],
             tooltip: {
-                formatter: function() {
-                    var s = '<b>' + this.x +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
+                formatter: function () {
+                    var s = '<b>' + this.x + '</b>: Supported by <b>' + this.y + '%</b><br/>';
                     return s;
                 }
             },
@@ -302,10 +321,12 @@
                     borderWidth: 0
                 }
             },
-            series: [{
-                name: 'Scaling',
-                data: data3
-            }]
+            series: [
+                {
+                    name: 'Scaling',
+                    data: data3
+                }
+            ]
         });
 
         $('#status').highcharts({
@@ -331,12 +352,14 @@
                     }
                 }
             },
-            series: [{
-                name: 'Supported by',
-                innerSize: '60%',
-                data: <%= Charts.new.get_piedata 'status', false %>
-            }]
+            series: [
+                {
+                    name: 'Supported by',
+                    innerSize: '60%',
+                    data: <%= Charts.new.get_piedata 'status', false %>
+                }
+            ]
         });
 
-	});
+    });
 </script>
