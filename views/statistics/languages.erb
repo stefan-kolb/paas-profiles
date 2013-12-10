@@ -55,14 +55,14 @@
     The following chart shows the support percentage of all available languages. When clicking on the language bars, a
     drilldown on the different available language versions will be made.
     Moreover, <span class="label label-inverse"><%= (@chart.extensible_count / @chart.vendor_count.to_f * 100).round %> %</span> of the vendors are
-    <span class="label label-success">extensible</span> which means that more languages can be added via extensibility mechanisms like buildpacks.
+    <span class="label label-success">extensible</span> which means that more languages can be added via extensibility mechanisms like <a href="https://devcenter.heroku.com/articles/buildpack-api" target="_blank">buildpacks</a>.
   </div>
   <div id="languages" style="height: 350px;" class="span12 chart text-center"></div>
   <div class="span12">
     <div class="row">
       <div class="span5">
         <strong>Language-specific vs Polyglot PaaS.</strong> When PaaS first started, a lot of the offerings did only
-        support one specific language. This changed dramatically over time.
+        support one specific language. This has changed dramatically over time.
         Most of today's PaaS support way more than one language. While a specialization on one language (<i>Language-specific
         PaaS</i>) may result in better and more specialized support of that language,
         more languages (<i>Polyglot PaaS</i>) attract a greater customer mass and allow more flexibility for developing
