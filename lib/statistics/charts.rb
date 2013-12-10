@@ -13,7 +13,7 @@ class Charts
   end
 
   def extensible_count
-    @extensible_count ||= Vendor.where(extendable: true).count
+    @extensible_count ||= Vendor.where(extensible: true).count
   end
 
   def get_piedata( type, threshold = 0.05 )
