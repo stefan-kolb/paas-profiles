@@ -37,11 +37,11 @@ class Vendor
 	validates :status, presence: true, inclusion: { in: %w(beta production eol) }
 	validates :extensible, presence: true
 	# todo custom validator validates :hosting, presence: true, inclusion: { in: [ "public", "private" ] }
-	validates :pricing, presence: true, :allow_blank => true
+	validates :pricings, presence: true, :allow_blank => true
 	validates :scaling, presence: true
 	validates :runtimes, presence: true
   validates :middleware, presence: true, :allow_blank => true
   validates :frameworks, presence: true, :allow_blank => true
-  validates :services, presence: true, :allow_blank => true
+  validates :service, presence: true, :allow_blank => true
 	validates :infrastructures, presence: true, :allow_blank => true
 end
