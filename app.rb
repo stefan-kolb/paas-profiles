@@ -6,14 +6,14 @@ require 'newrelic_rpm'
 require 'sinatra/simple-navigation'
 
 require_relative 'models/vendor'
-require_relative "lib/paasify_breadcrumbs"
+require_relative 'lib/breadcrumbs'
 
 Mongoid.load!("./config/mongoid.yml")
 
 set :protection, :except => :frame_options
 
 get '/' do
-	redirect '/vendors'
+	redirect to('/vendors')
 end
 
 get '/vendors' do

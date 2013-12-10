@@ -1,7 +1,7 @@
-<link href="../css/glyphicons.css" rel="stylesheet"/>
+<link href="../css/glyphicons.css" rel="stylesheet">
 <link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
 
-<div id="top" class="container">
+<div class="container">
 <div class="row">
   <div class="span8">
     <h1>
@@ -396,14 +396,13 @@
                 }
             },
             <% if !@profile["infrastructures"].nil? && @profile["infrastructures"].uniq { |h| h["continent"] }.size == 1 %>
-            <%= "focusOn: \'" << @profile["infrastructures"][0]["country"] << "\'," %>
+            <%= "focusOn: '" << @profile["infrastructures"][0]["country"] << "'," %>
             <% end %>
             scaleColors: ['#C8EEFF', '#0071A4'],
             normalizeFunction: 'polynomial',
             hoverOpacity: 0.7,
             hoverColor: false,
             backgroundColor: '#ffffff',
-            selectedRegions:
             <%
                         arr = []
                         unless @profile["infrastructures"].nil?
@@ -412,8 +411,7 @@
                             end
                         end
             %>
-            <%= arr.to_s %>
-
+            <%= 'selectedRegions: ' << arr.to_s %>
         });
     });
 </script>

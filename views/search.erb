@@ -1,183 +1,191 @@
 <%
-query = Vendor.all
+   query = Vendor.all
 
-# status
-unless params[:status].nil? || params[:status].empty?
-	query = query.where( status: params[:status])
-end
+   # status
+   unless params[:status].nil? || params[:status].empty?
+     query = query.where(status: params[:status])
+   end
 
-# hosting
-unless params[:hosting].nil?
-	query = query.all(hosting: params[:hosting])
-end
+   # hosting
+   unless params[:hosting].nil?
+     query = query.all(hosting: params[:hosting])
+   end
 
-# scaling
-unless params[:scaling].nil?
-	if params[:scaling].include? "vertical"
-		query = query.where( "scaling.vertical" => true)
-	end
-	if params[:scaling].include? "horizontal"
-		query = query.where( "scaling.horizontal" => true)
-	end
-	if params[:scaling].include? "auto"
-		query = query.where( "scaling.auto" => true)
-	end
-end
+   # scaling
+   unless params[:scaling].nil?
+     if params[:scaling].include? "vertical"
+       query = query.where("scaling.vertical" => true)
+     end
+     if params[:scaling].include? "horizontal"
+       query = query.where("scaling.horizontal" => true)
+     end
+     if params[:scaling].include? "auto"
+       query = query.where("scaling.auto" => true)
+     end
+   end
 
-# runtimes
-unless params[:runtimes].nil?
-	query = query.all("runtimes.language" => params[:runtimes])
-end
+   # runtimes
+   unless params[:runtimes].nil?
+     query = query.all("runtimes.language" => params[:runtimes])
+   end
 
-# middleware
-unless params[:middleware].nil?
-	params[:middleware].map { |e| /#{e}/i }
-	query = query.all("middleware.name" => params[:middleware])
-end
+   # middleware
+   unless params[:middleware].nil?
+     params[:middleware].map { |e| /#{e}/i }
+     query = query.all("middleware.name" => params[:middleware])
+   end
 
-# frameworks
-unless params[:frameworks].nil?
-	params[:frameworks].map { |e| /#{e}/i }
-	query = query.all("frameworks.name" => params[:frameworks])
-end
+   # frameworks
+   unless params[:frameworks].nil?
+     params[:frameworks].map { |e| /#{e}/i }
+     query = query.all("frameworks.name" => params[:frameworks])
+   end
 
-# services
-unless params[:services].nil?
-	params[:services].map { |e| /#{e}/i }
-	query = query.all("services.native.name" => params[:services])
-end
+   # services
+   unless params[:services].nil?
+     params[:services].map { |e| /#{e}/i }
+     query = query.all("services.native.name" => params[:services])
+   end
 
-# addons
-unless params[:addons].nil?
-	params[:addons].map { |e| /#{e}/i }
-	query = query.all("services.addon.name" => params[:addons])
-end
+   # addons
+   unless params[:addons].nil?
+     params[:addons].map { |e| /#{e}/i }
+     query = query.all("services.addon.name" => params[:addons])
+   end
 
-# extensible
-unless params[:extensible].nil?
-	query = query.where(extensible: true)
-end
+   # extensible
+   unless params[:extensible].nil?
+     query = query.where(extensible: true)
+   end
 
-# infras
-unless params[:infras].nil?
-    if params[:hosting].nil?
-	    query = query.or({ "infrastructures.continent" => { "$all" => params[:infras]}}, { "hosting" => "private" })
-    elsif params[:hosting].length == 1 && params[:hosting].include?('public')
-        query = query.all( "infrastructures.continent" => params[:infras])
-    end
-end
-	
-	unless query.exists?
-	
- %>	
-<div class="alert alert-error">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  We're sorry, but we could not find any PaaS that matches your requirements!
-</div> 
+   # infras
+   unless params[:infras].nil?
+     if params[:hosting].nil?
+       query = query.or({"infrastructures.continent" => {"$all" => params[:infras]}}, {"hosting" => "private"})
+     elsif params[:hosting].length == 1 && params[:hosting].include?('public')
+       query = query.all("infrastructures.continent" => params[:infras])
+     end
+   end
+
+   unless query.exists?
+
+%>
+    <div class="alert alert-error">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      We're sorry, but we could not find any PaaS that matches your requirements!
+    </div>
 <% else %>
-	<table class="table table-bordered table-hover">
-			<thead>
-				<tr><th>Name</th><th>Status</th><th>Runtimes</th><th>Scaling</th><th>Hosting</th><th>Infrastructures</th><th></th></tr>
-			</thead>
-			<tbody>
-			<%
-				query.sort { |x,y| x.name.downcase <=> y.name.downcase}.each do |profile| 
-			%>
-			<tr>
-				<td>
-					<a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/,'_') %>"><%= profile["name"] %></a>
-					<% unless profile["vendor_verified"].nil? %>
-					&nbsp;<span class="icon-ok-sign" title="Verified by Vendor"></span>
-					<% end %>
-				</td>
-				<td>
-					<% if profile["status"] == "beta" %>
-					<span class="label label-warning">Beta</span>
-					<% else %>
-					<span class="label label-success">Production</span>
-					<% end %>
-				</td>
+    <table class="table table-bordered table-hover">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Runtimes</th>
+        <th>Scaling</th>
+        <th>Hosting</th>
+        <th>Infrastructures</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%
+         query.sort { |x, y| x.name.downcase <=> y.name.downcase }.each do |profile|
+      %>
+          <tr>
+            <td>
+              <a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/, '_') %>"><%= profile["name"] %></a>
+              <% unless profile["vendor_verified"].nil? %>
+                  &nbsp;<span class="icon-ok-sign" title="Verified by Vendor"></span>
+              <% end %>
+            </td>
+            <td>
+              <% if profile["status"] == "beta" %>
+                  <span class="label label-warning">Beta</span>
+              <% else %>
+                  <span class="label label-success">Production</span>
+              <% end %>
+            </td>
 
-				<td>
-					<div class="row-fluid">
-					<% 
-						profile["runtimes"].uniq { |h| h["language"] }.each do |rt|
-					%>
-						<span class="label label-info"><%= rt["language"] %></span>
-					<% 
-						end
-						
-						if profile["extensible"]
-					%>
-						<span class="label label-success">extensible</span>
-					<% 	end  %>
-					</div>
-				</td>
+            <td>
+              <div class="row-fluid">
+                <%
+                   profile["runtimes"].uniq { |h| h["language"] }.each do |rt|
+                %>
+                    <span class="label label-info"><%= rt["language"] %></span>
+                <%
+                   end
 
-				<td>
-					<% if profile["scaling"]["vertical"] %>
-					<span class="icon-resize-vertical" title="vertical"></span>
-					<% end %>
-					<% if profile["scaling"]["horizontal"] %>
-					<span class="icon-resize-horizontal" title="horizontal"></span>
-					<% end %>
-					<% if profile["scaling"]["auto"] %>
-					<span class="icon-refresh" title="auto"></span>
-					<% end %>
-				</td>
-				
-				<td>
-					<% if profile["hosting"].include? "public" %>
-					<span class="icon-eye-open" title="public"></span>
-					<% end
-						if profile["hosting"].include? "private"
-					%>
-					<span class="icon-lock" title="private"></span>
-					<% end %>
-				</td>
+                   if profile["extensible"]
+                %>
+                    <span class="label label-success">extensible</span>
+                <% end %>
+              </div>
+            </td>
 
-				<td>
-					<div class="row-fluid">
-					<% 
-						unless profile["infrastructures"].nil?
-						profile["infrastructures"].uniq { |h| h["continent"] }.each do |rt|
-						
-						title = ""
-						
-						case rt["continent"]
-							when "EU"
-								title = "Europe"
-							when "SA"
-								title = "South America"
-							when "NA"
-								title = "North America"
-							when "AS"
-								title = "Asia"
-							when "OC"
-								title = "Oceania"
-							else
-								title = "Africa"
-						end
-					%>
-						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
-					<% 
-						end
-						end
-					%>
-					</div>
-				</td>
-				
-				<td>
-					<a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/,'_') %>" class="btn btn-success btn-small">Details</a>
-				</td>
-			</tr>
-			</tbody>
-			<% 	
-				end
-			%>
-		</table>
-        <div>
-          <small><em>Showing <%= query.length %> out of <%= Vendor.count %> vendors.</em></small>
-          <a href="#top" title="Back to top" class="pull-right icon-chevron-up"></a>
-        </div>
-		<% end %>
+            <td>
+              <% if profile["scaling"]["vertical"] %>
+                  <span class="icon-resize-vertical" title="vertical"></span>
+              <% end %>
+              <% if profile["scaling"]["horizontal"] %>
+                  <span class="icon-resize-horizontal" title="horizontal"></span>
+              <% end %>
+              <% if profile["scaling"]["auto"] %>
+                  <span class="icon-refresh" title="auto"></span>
+              <% end %>
+            </td>
+
+            <td>
+              <% if profile["hosting"].include? "public" %>
+                  <span class="icon-eye-open" title="public"></span>
+              <% end
+                 if profile["hosting"].include? "private"
+              %>
+                  <span class="icon-lock" title="private"></span>
+              <% end %>
+            </td>
+
+            <td>
+              <div class="row-fluid">
+                <%
+                   unless profile["infrastructures"].nil?
+                     profile["infrastructures"].uniq { |h| h["continent"] }.each do |rt|
+
+                       title = ""
+
+                       case rt["continent"]
+                         when "EU"
+                           title = "Europe"
+                         when "SA"
+                           title = "South America"
+                         when "NA"
+                           title = "North America"
+                         when "AS"
+                           title = "Asia"
+                         when "OC"
+                           title = "Oceania"
+                         else
+                           title = "Africa"
+                       end
+                %>
+                        <span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
+                    <%
+                       end
+                       end
+                    %>
+              </div>
+            </td>
+
+            <td>
+              <a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/, '_') %>" class="btn btn-success btn-small">Details</a>
+            </td>
+          </tr>
+          </tbody>
+      <%
+         end
+      %>
+      </table>
+    <div>
+      <small><em>Showing <%= query.length %> out of <%= Vendor.count %> vendors.</em></small>
+      <a href="#top" title="Back to top" class="pull-right icon-chevron-up"></a>
+    </div>
+<% end %>

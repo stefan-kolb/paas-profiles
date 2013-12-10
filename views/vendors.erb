@@ -1,182 +1,194 @@
-	<script src="/js/jquery.tablesorter.min.js"></script>
-	<script src="/js/jquery.tablesorter.widgets.min.js"></script>
-	<link rel="stylesheet" href="/css/theme.bootstrap.css">
-	<style>
-      /* Main marketing message and sign up button */
-      .jumbotron {
-	  /*height: 400px;*/
+<script src="/js/jquery.tablesorter.min.js"></script>
+<script src="/js/jquery.tablesorter.widgets.min.js"></script>
+<link rel="stylesheet" href="/css/theme.bootstrap.css">
+<style>
+        /* Main marketing message and sign up button */
+    .jumbotron {
+        /*height: 400px;*/
         margin: 50px 0;
         text-align: center;
-		/*background: url("img/sub.png") no-repeat;*/
-		background-size: 100%;
-      }
-      .jumbotron h1 {
+        /*background: url("img/sub.png") no-repeat;*/
+        background-size: 100%;
+    }
+
+    .jumbotron h1 {
         font-size: 60px;
         line-height: 1;
-		background: rgba(255, 255, 255, 0.6);
-      }
-      .jumbotron .lead {
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .jumbotron .lead {
         font-size: 18px;
         line-height: 1.25;
-		background: rgba(255, 255, 255, 0.6);
-      }
-      .jumbotron .btn {
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .jumbotron .btn {
         font-size: 21px;
         padding: 14px 24px;
-      }
+    }
 
-        .extensible {
-			font-style: italic;
-			color: #fff;
-			background:#468847;
-		}
-    </style>
-	
-	<div class="jumbotron">
-		<h1>Find your Platform as a Service!</h1>
-        <p class="lead">What's best on your PaaS? Define your needs and get a list of candidates that claim to be your best fit.</p>
-		<div class="text-center"><a href="filter" class="btn btn-warning btn-large">Find your PaaS</a></div>
-	</div>
-	
-	<div class="row-fluid text-center" style="margin-bottom: 50px;">
-		<div class="span4">
-          <h2>Comprehensive</h2>
-		  <h4><em>More than 65 vendors</em></h4>
-          <p>...and counting.</p>
-        </div>
-		<div class="span4">
-          <h2>Comparable</h2>
-		  <h4><em>Distinctive PaaS features</em></h4>
-          <p>A set of distinctive and intersecting properties to enable comparison and matching of different PaaS offerings.</p>
-        </div>
-		<div class="span4">
-          <h2>Current</h2>
-			<h4><em>Continuously  updated</em></h4>
-          <p>Data structures are <a href="https://github.com/stefan-kolb/paas-profiles" target="_blank">publicly available</a> and editable by the community. We also aim at vendors to <a href="https://github.com/stefan-kolb/paas-profiles#contribution" target="_blank">verify</a> <span class="icon-ok-sign"></span> their profiles.</p>
-        </div>
-    </div>
-	
-	<div class="row">
-		<div class="span12">
-		<table id="main" class="table table-bordered table-hover tablesorter">
-			<thead>
-				<tr>
-					<th title="Order by Name">Name</th>
-					<th data-sorter="false">Status</th>
-					<th data-sorter="false">Runtimes</th>
-					<th data-sorter="false">Scaling</th>
-					<th data-sorter="false">Hosting</th>
-					<th data-sorter="false">Infrastructures</th>
-					<th data-sorter="false"></th>
-				</tr>
-			</thead>
-			<tbody>
-			<%
-				Vendor.all.shuffle.each do |profile|
-			%>
-			<tr>
-				<td>
-					<a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/,'_') %>"><%= profile["name"] %></a>
-					<% unless profile["vendor_verified"].nil? %>
-					&nbsp;<span class="icon-ok-sign" title="Verified by Vendor"></span>
-					<% end %>
-				</td>
-				<td>
-					<% if profile["status"] == "beta" %>
-					<span class="label label-warning">Beta</span>
-					<% else %>
-					<span class="label label-success">Production</span>
-					<% end %>
-				</td>
+    .extensible {
+        font-style: italic;
+        color: #fff;
+        background: #468847;
+    }
+</style>
 
-				<td>
-					<div class="row-fluid">
-					<% 
-						profile["runtimes"].uniq { |h| h["language"] }.sort { |a,b| a["language"] <=> b["language"] }.each do |rt|
-					%>
-						<span class="label label-info"><%= rt["language"] %></span>
-					<% 
-						end
-						
-						if profile["extensible"]
-					%>
-						<span class="label label-success">extensible</span>
-					<% 	end  %>
-					</div>
-				</td>
+<div class="jumbotron">
+  <h1>Find your Platform as a Service!</h1>
 
-				<td>
-					<% if profile["scaling"]["vertical"] %>
-					<span class="icon-resize-vertical" title="vertical"></span>
-					<% end %>
-					<% if profile["scaling"]["horizontal"] %>
-					<span class="icon-resize-horizontal" title="horizontal"></span>
-					<% end %>
-					<% if profile["scaling"]["auto"] %>
-					<span class="icon-refresh" title="auto"></span>
-					<% end %>
-				</td>
-				
-				<td>
-					<% if profile["hosting"].include? "public" %>
-					<span class="icon-eye-open" title="public"></span>
-					<% end
-						if profile["hosting"].include? "private"
-					%>
-					<span class="icon-lock" title="private"></span>
-					<% end %>
-				</td>
+  <p class="lead">What's best on your PaaS? Define your needs and get a list of candidates that claim to be your best
+    fit.</p>
 
-				<td>
-					<div class="row-fluid">
-					<% 
-					unless profile["infrastructures"].nil?
-						profile["infrastructures"].uniq { |h| h["continent"] }.sort { |a,b| a["continent"] <=> b["continent"] }.each do |rt|
-						
-						title = ""
-						
-						case rt["continent"]
-							when "EU"
-								title = "Europe"
-							when "SA"
-								title = "South America"
-							when "NA"
-								title = "North America"
-							when "AS"
-								title = "Asia"
-							when "OC"
-								title = "Oceania"
-							else
-								title = "Africa"
-						end
-					%>
-						<span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
-					<% 
-						end
-						end
-					%>
-					</div>
-				</td>
-				
-				<td>
-					<a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/,'_') %>" class="btn btn-success btn-small">Details</a>
-				</td>
-			</tr>
-			<% 	
-				end
-			%>
-			</tbody>
-		</table>
-		</div>
-	</div>
+  <div class="text-center"><a href="filter" class="btn btn-warning btn-large">Find your PaaS</a></div>
+</div>
+
+<div class="row-fluid text-center" style="margin-bottom: 50px;">
+  <div class="span4">
+    <h2>Comprehensive</h2>
+    <h4><em>More than 65 vendors</em></h4>
+
+    <p>...and counting.</p>
+  </div>
+  <div class="span4">
+    <h2>Comparable</h2>
+    <h4><em>Distinctive PaaS features</em></h4>
+
+    <p>A set of distinctive and intersecting properties to enable comparison and matching of different PaaS
+      offerings.</p>
+  </div>
+  <div class="span4">
+    <h2>Current</h2>
+    <h4><em>Continuously updated</em></h4>
+
+    <p>Data structures are <a href="https://github.com/stefan-kolb/paas-profiles" target="_blank">publicly available</a>
+      and editable by the community. We also aim at vendors to
+      <a href="https://github.com/stefan-kolb/paas-profiles#contribution" target="_blank">verify</a>
+      <span class="icon-ok-sign"></span> their profiles.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span12">
+    <table id="main" class="table table-bordered table-hover tablesorter">
+      <thead>
+      <tr>
+        <th title="Order by Name">Name</th>
+        <th data-sorter="false">Status</th>
+        <th data-sorter="false">Runtimes</th>
+        <th data-sorter="false">Scaling</th>
+        <th data-sorter="false">Hosting</th>
+        <th data-sorter="false">Infrastructures</th>
+        <th data-sorter="false"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%
+         Vendor.all.shuffle.each do |profile|
+      %>
+          <tr>
+            <td>
+              <a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/, '_') %>"><%= profile["name"] %></a>
+              <% unless profile["vendor_verified"].nil? %>
+                  &nbsp;<span class="icon-ok-sign" title="Verified by Vendor"></span>
+              <% end %>
+            </td>
+            <td>
+              <% if profile["status"] == "beta" %>
+                  <span class="label label-warning">Beta</span>
+              <% else %>
+                  <span class="label label-success">Production</span>
+              <% end %>
+            </td>
+
+            <td>
+              <div class="row-fluid">
+                <%
+                   profile["runtimes"].uniq { |h| h["language"] }.sort { |a, b| a["language"] <=> b["language"] }.each do |rt|
+                %>
+                    <span class="label label-info"><%= rt["language"] %></span>
+                <%
+                   end
+
+                   if profile["extensible"]
+                %>
+                    <span class="label label-success">extensible</span>
+                <% end %>
+              </div>
+            </td>
+
+            <td>
+              <% if profile["scaling"]["vertical"] %>
+                  <span class="icon-resize-vertical" title="vertical"></span>
+              <% end %>
+              <% if profile["scaling"]["horizontal"] %>
+                  <span class="icon-resize-horizontal" title="horizontal"></span>
+              <% end %>
+              <% if profile["scaling"]["auto"] %>
+                  <span class="icon-refresh" title="auto"></span>
+              <% end %>
+            </td>
+
+            <td>
+              <% if profile["hosting"].include? "public" %>
+                  <span class="icon-eye-open" title="public"></span>
+              <% end
+                 if profile["hosting"].include? "private"
+              %>
+                  <span class="icon-lock" title="private"></span>
+              <% end %>
+            </td>
+
+            <td>
+              <div class="row-fluid">
+                <%
+                   unless profile["infrastructures"].nil?
+                     profile["infrastructures"].uniq { |h| h["continent"] }.sort { |a, b| a["continent"] <=> b["continent"] }.each do |rt|
+
+                       title = ""
+
+                       case rt["continent"]
+                         when "EU"
+                           title = "Europe"
+                         when "SA"
+                           title = "South America"
+                         when "NA"
+                           title = "North America"
+                         when "AS"
+                           title = "Asia"
+                         when "OC"
+                           title = "Oceania"
+                         else
+                           title = "Africa"
+                       end
+                %>
+                        <span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
+                    <%
+                       end
+                       end
+                    %>
+              </div>
+            </td>
+
+            <td>
+              <a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/, '_') %>" class="btn btn-success btn-small">Details</a>
+            </td>
+          </tr>
+      <%
+         end
+      %>
+      </tbody>
+    </table>
+  </div>
+</div>
 <script>
-$(document).ready(function() 
-    { 
-        $("#main").tablesorter({
-			theme : 'bootstrap',
-			headerTemplate : '{icon}{content}',
-			widgets: ['uitheme']
-		}); 
-    } 
-);
+    $(document).ready(function () {
+                $("#main").tablesorter({
+                    theme: 'bootstrap',
+                    headerTemplate: '{icon}{content}',
+                    widgets: ['uitheme']
+                });
+            }
+    );
 </script>

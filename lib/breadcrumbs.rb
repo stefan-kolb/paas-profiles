@@ -2,7 +2,7 @@ require 'simple-navigation'
 
 module SimpleNavigation
   module Renderer
-    class PaasifyBreadcrumbs < SimpleNavigation::Renderer::Base
+    class Breadcrumbs < SimpleNavigation::Renderer::Base
 
       def render(item_container)
         content_tag(:ul, (li_tags(item_container) << github).join(''), { id: item_container.dom_id, class: "breadcrumb" })
@@ -32,12 +32,13 @@ module SimpleNavigation
         '<li class="pull-right">
           <small><em>We\'re Open Source!</em></small>
 					<a href="https://github.com/stefan-kolb/paas-profiles" target="_blank" style="text-decoration: none; padding: 5px;">
-						<img src="/img/github.png" style="width: 20px;">
+						<img src="/img/github.png" style="width: 20px;" alt="github">
 					</a>
-				</li>'
+				</li>'.html_safe
       end
 
     end
   end
 end
-SimpleNavigation.register_renderer :breadcrumbs => SimpleNavigation::Renderer::PaasifyBreadcrumbs
+
+SimpleNavigation.register_renderer :breadcrumbs => SimpleNavigation::Renderer::Breadcrumbs
