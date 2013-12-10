@@ -42,10 +42,6 @@
     <div id="footnotes"><small><sup class="muted">1</sup> The data source is the most recent collection of <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.</small></div>
 <script>
 	$(document).ready(function() {
-		$('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
-		$('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
-		$('ul.breadcrumb > li:first').after('<li class="active">Statistics</li>');
-
         function setChart(name, categories, data, color) {
             chart.xAxis[0].setCategories(categories, false);
             chart.series[0].remove(false);

@@ -85,10 +85,6 @@
 
 <script>
     $(document).ready(function () {
-        $('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
-        $('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
-        $('ul.breadcrumb > li:first').after('<li class="active">Statistics</li>');
-
         $('#status').highcharts({
             chart: {
                 type: 'pie'

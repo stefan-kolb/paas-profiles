@@ -89,10 +89,6 @@
 
 <script>
     $(document).ready(function () {
-        $('ul.breadcrumb > li:first').wrapInner('<a href="/vendors" />');
-        $('ul.breadcrumb > li:first').append('<span class="divider">/</span>');
-        $('ul.breadcrumb > li:first').after('<li class="active">Statistics</li>');
-
         function setChart(name, categories, data, color) {
             chart.xAxis[0].setCategories(categories, false);
             chart.series[0].remove(false);
