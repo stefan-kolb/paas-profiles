@@ -12,21 +12,27 @@ class LanguageCharts < Charts
     unless @mean_count
       sum_languages = 0
       Vendor.all.each { |v| sum_languages += v.runtimes.count }
-      @mean_count = (sum_languages / Charts.new.vendor_count.to_f).round(1)
+      @mean_count = (sum_languages / vendor_count.to_f).round(1)
     end
     @mean_count
   end
 
   def mode_count
-    arr = Vendor.all.collect { |v| v.runtimes.count }
-    arr.group_by { |n| n }.values.max_by(&:size).first
+    unless @mode_count
+      arr = Vendor.all.collect { |v| v.runtimes.count }
+      @mode_count = arr.group_by { |n| n }.values.max_by(&:size).first
+    end
+    @mode_count
   end
 
   def median_count
-    arr = Vendor.all.collect { |v| v.runtimes.count }
-    sorted = arr.sort
-    len = sorted.length
-    return (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
+    unless @median_count
+      arr = Vendor.all.collect { |v| v.runtimes.count }
+      sorted = arr.sort
+      len = sorted.length
+      @median_count = (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
+    end
+    @median_count
   end
 
   def support_columndata threshold=0.05

@@ -63,8 +63,8 @@
         }
 
         var name = 'Language Support';
-        var categories = <%= LanguageCharts.new.support_categories 0.15 %>;
-        var data = <%= LanguageCharts.new.support_columndata 0.15 %>;
+        var categories = <%= @lang_chart.support_categories 0.15 %>;
+        var data = <%= @lang_chart.support_columndata 0.15 %>;
 
         var chart = $('#languages').highcharts({
             chart: {
@@ -162,8 +162,8 @@
         }).highcharts();
 
         var name2 = 'Services Support';
-        var categories2 = <%= ServiceCharts.new.support_categories %>;
-        var data2 = <%= ServiceCharts.new.support_columndata %>;
+        var categories2 = <%= @service_chart.support_categories %>;
+        var data2 = <%= @service_chart.support_columndata %>;
 
         var chart2 = $('#service_support').highcharts({
             chart: {
@@ -257,8 +257,8 @@
             ]
         }).highcharts();
 
-        var categories3 = <%= ScalingCharts.new.support_categories %>;
-        var data3 = <%= ScalingCharts.new.support_columndata %>;
+        var categories3 = <%= @scaling_chart.support_categories %>;
+        var data3 = <%= @scaling_chart.support_columndata %>;
 
         $('#scaling_support').highcharts({
             chart: {
