@@ -2,8 +2,8 @@
   "name": "Relbit",
   "revision": "2013-07-05T17:47:54+02:00",
   "url": "http://relbit.com/",
-  "status": "beta",
-  "status_since": "2011-03-01",
+  "status": "eol",
+  "status_since": "2013-12-10",
   "type": "language-specific",
   "hosting": [
     "public"
