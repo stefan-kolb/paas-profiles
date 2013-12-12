@@ -6,7 +6,7 @@ require_relative '../version'
 class Charts
   COLORS = %w( #2f7ed8 #0d233a #8bbc21 #910000 #1aadce #492970 #f28f43 #77a1e5 #c42525 #a6c96a )
 
-  attr_reader :vendor_count, :extensible_count
+  attr_reader :vendor_count, :extensible_count, :versions_data
 
   def vendor_count
     @vendor_count ||= Vendor.count
@@ -53,7 +53,7 @@ class Charts
 
     distinct_values(type).each_with_index do |l, i|
       count = Vendor.where(type => l).count
-      # TODO bars in versions all the same color, best color of toplevel language
+
       data << { name: l, y: (count / vendor_count.to_f * 100).to_i, drilldown: {
           name: "#{l.capitalize} Versions",
           categories: distinct_versions(l),
@@ -102,42 +102,44 @@ class Charts
   end
 
   def distinct_versions_data language
-    # TODO duplicate languages in profile will cause false results
-    vendors = Vendor.where('runtimes.language' => language)
-    data = Hash.new
+    unless @versions_data
+      # TODO duplicate languages in profile will cause false results
+      vendors = Vendor.where('runtimes.language' => language)
+      data = Hash.new
 
-    vendors.each do |vendor|
-      vendor['runtimes'].each do |rt|
-        if rt['language'] == language
-          if rt['versions'].empty?
-            if data.has_key? 'Unknown'
-              data['Unknown'] += 1
-            else
-              data['Unknown'] = 1
-            end
-          else
-            rt['versions'].each do |v|
-              # TODO uniform version format, filter empty versions
-              v = Version.new(v).unify
-
-              if data.has_key? v
-                data[v] += 1
+      vendors.each do |vendor|
+        vendor['runtimes'].each do |rt|
+          if rt['language'] == language
+            if rt['versions'].empty?
+              if data.has_key? 'Unknown'
+                data['Unknown'] += 1
               else
-                data[v] = 1
+                data['Unknown'] = 1
+              end
+            else
+              rt['versions'].each do |v|
+                # TODO uniform version format, filter empty versions
+                v = Version.new(v).unify
+
+                if data.has_key? v
+                  data[v] += 1
+                else
+                  data[v] = 1
+                end
               end
             end
           end
         end
       end
-    end
 
-    data = data.sort { |x,y| x <=> y}
-    # rundungsfehler bug?!
-    data.each do |v|
-      v[1] = (v[1] / language_count(language).to_f * 100).to_i
+      data = data.sort { |x,y| x <=> y}
+      # rundungsfehler bug?!
+      data.each do |v|
+        v[1] = (v[1] / language_count(language).to_f * 100).to_i
+      end
+      @versions_data = data
     end
-
-    return data
+    @versions_data
   end
 
   def distinct_values type
