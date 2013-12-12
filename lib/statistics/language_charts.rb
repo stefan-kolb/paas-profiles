@@ -2,7 +2,7 @@ require_relative 'charts'
 require_relative '../../models/statistics'
 
 class LanguageCharts < Charts
-  attr_reader :language_count, :mean_count, :mode_count, :median_count
+  attr_reader :language_count, :mean_count, :mode_count, :median_count, :support_data, :support_categories
 
   def language_count
     @language_count ||= Vendor.distinct('runtimes.language').length
@@ -36,15 +36,16 @@ class LanguageCharts < Charts
   end
 
   def support_columndata threshold=0.05
-    data = Charts.new.support_columndata 'runtimes.language', threshold
-
-    return data
+    @support_data ||= Charts.new.support_columndata 'runtimes.language', false
   end
 
   def support_categories threshold=0.05
-    arr = []
-    JSON.parse(support_columndata threshold).each { |e| arr << e['name'] }
-    arr
+    unless @support_categories
+      arr = []
+      JSON.parse(support_columndata threshold).each { |e| arr << e['name'] }
+      @support_categories = arr
+    end
+    @support_categories
   end
 
   def count_piedata

@@ -53,7 +53,7 @@
     <% @chart.support_categories.slice(0..4).each_with_index do |r, i| %>
         <span class="label" style="background-color: <%= Charts::COLORS[i] %>;"><%= r %></span><% end %>.
     The following chart shows the support percentage of all available languages. When clicking on the language bars, a
-    drilldown on the different available language versions will be made.
+    drill down on the different available language versions will be made.
     Moreover, <span class="label label-inverse"><%= (@chart.extensible_count / @chart.vendor_count.to_f * 100).round %> %</span> of the vendors are
     <span class="label label-success">extensible</span> which means that more languages can be added via extensibility mechanisms like <a href="https://devcenter.heroku.com/articles/buildpack-api" target="_blank">buildpacks</a>.
   </div>
