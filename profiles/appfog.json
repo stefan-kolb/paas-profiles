@@ -100,7 +100,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "1.8"
+          "1.8", "2.4.8"
         ]
       },
       {
@@ -144,11 +144,23 @@
         "type": "analytics"
       },
       {
+        "name": "cedexis",
+        "url": "http://www.cedexis.com/",
+        "description": "",
+        "type": "other"
+      },
+      {
         "name": "cleardb",
         "url": "http://www.cleardb.com/",
         "description": "",
         "type": "datastore"
       },
+      {
+        "name": "cloudamqp",
+        "url": "http://cloudamqp.com/",
+        "description": "",
+        "type": "worker"
+      },      
       {
         "name": "cloudinary",
         "url": "http://cloudinary.com/",
@@ -161,6 +173,12 @@
         "description": "",
         "type": "messaging"
       },
+      {
+        "name": "elephantsql",
+        "url": "http://www.elephantsql.com/",
+        "description": "",
+        "type": "datastore"
+      },      
       {
         "name": "ironmq",
         "url": "http://www.iron.io/mq",
@@ -185,6 +203,12 @@
         "description": "",
         "type": "messaging"
       },
+      {
+        "name": "memcached cloud",
+        "url": "http://garantiadata.com/memcached",
+        "description": "",
+        "type": "datastore"
+      },      
       {
         "name": "memcachier",
         "url": "http://www.memcachier.com/",
@@ -222,11 +246,23 @@
         "type": "search"
       },
       {
+        "name": "sendgrid",
+        "url": "http://sendgrid.com/",
+        "description": "",
+        "type": "messaging"
+      },      
+      {
         "name": "statsmix",
         "url": "https://www.statsmix.com/",
         "description": "",
         "type": "analytics"
-      }
+      },
+      {
+        "name": "tempodb",
+        "url": "http://tempo-db.com/",
+        "description": "",
+        "type": "datastore"
+      }      
     ]
   },
   "extensible": false,
