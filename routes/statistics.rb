@@ -41,7 +41,10 @@ end
 
 get '/statistics/data' do
   require_relative '../lib/statistics/charts'
+  require_relative '../lib/statistics/data_charts'
 
   @title = "Platform as a Service | Data Statistics"
+  @chart = DataCharts.new
+
   erb :'statistics/data'
 end

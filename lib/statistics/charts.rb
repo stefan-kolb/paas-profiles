@@ -3,13 +3,22 @@ require_relative '../../models/snapshot'
 require_relative '../../models/statistics/runtime_trend'
 require_relative '../version'
 
+# Base class that contains shared attributes and methods for specific chart implementations
 class Charts
+  # Standard color array for Highcharts
   COLORS = %w( #2f7ed8 #0d233a #8bbc21 #910000 #1aadce #492970 #f28f43 #77a1e5 #c42525 #a6c96a )
 
-  attr_reader :vendor_count, :extensible_count, :versions_data
+  attr_reader :vendor_count, :extensible_count, :versions_data, :verified_count
 
+  # Returns the total amount of vendors in the database
   def vendor_count
     @vendor_count ||= Vendor.count
+  end
+
+  # Returns the total amount of vendors that verified their profile
+  # TODO not working yet
+  def verified_vendors
+    @verified_count ||= Vendor.where(:vendor_verified.nin => ['', nil]).count
   end
 
   def extensible_count

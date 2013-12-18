@@ -1,9 +1,9 @@
 require 'json'
 require 'mongoid'
 require 'sinatra'
+require 'sinatra/simple-navigation'
 require 'versionomy'
 require 'newrelic_rpm'
-require 'sinatra/simple-navigation'
 
 require_relative 'models/vendor'
 require_relative 'lib/breadcrumbs'
