@@ -25,12 +25,7 @@ module SimpleNavigation
       end
 
       def last_item?(item_container)
-        item_container.items.each do |item|
-          if item.selected?
-            return false
-          end
-        end
-        return true
+        !item_container.items.any? { |item| item.selected? }
       end
 
       def divider
