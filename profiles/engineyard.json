@@ -1,6 +1,6 @@
 {
   "name": "EngineYard",
-  "revision": "2013-07-10T11:20:54+02:00",
+  "revision": "2013-12-19",
   "url": "http://www.engineyard.com/",
   "status": "production",
   "status_since": "2006-09-01",
@@ -68,7 +68,9 @@
       ]
     }
   ],
-  "frameworks": null,
+  "frameworks": [
+
+  ],
   "services": {
     "native": [
       {

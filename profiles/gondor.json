@@ -1,6 +1,6 @@
 {
   "name": "Gondor",
-  "revision": "2013-07-15",
+  "revision": "2013-12-19",
   "url": "https://gondor.io/",
   "status": "production",
   "status_since": "2011-09-02",
@@ -94,7 +94,13 @@
     {
       "continent": "NA",
       "country": "US",
-      "region": "",
+      "region": "Chicago",
+      "provider": "Rackspace"
+    },
+    {
+      "continent": "EU",
+      "country": "UK",
+      "region": "London",
       "provider": "Rackspace"
     }
   ]
