@@ -24,6 +24,12 @@
   ],
   "runtimes": [
     {
+      "language": "java",
+      "versions": [
+        "1.7.*"
+      ]
+    },
+    {
       "language": "node",
       "versions": [
         "0.8.11",
@@ -46,7 +52,22 @@
       ]
     }
   ],
-  "middleware": null,
+  "middleware": [
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "7"
+      ]
+    },
+    {
+      "name": "jetty",
+      "runtime": "java",
+      "versions": [
+        "9"
+      ]
+    }
+  ],
   "frameworks": null,
   "services": {
     "native": [

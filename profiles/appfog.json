@@ -100,7 +100,8 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "1.8", "2.4.8"
+          "1.8",
+          "2.4.8"
         ]
       },
       {
@@ -160,7 +161,7 @@
         "url": "http://cloudamqp.com/",
         "description": "",
         "type": "worker"
-      },      
+      },
       {
         "name": "cloudinary",
         "url": "http://cloudinary.com/",
@@ -178,7 +179,7 @@
         "url": "http://www.elephantsql.com/",
         "description": "",
         "type": "datastore"
-      },      
+      },
       {
         "name": "ironmq",
         "url": "http://www.iron.io/mq",
@@ -208,7 +209,7 @@
         "url": "http://garantiadata.com/memcached",
         "description": "",
         "type": "datastore"
-      },      
+      },
       {
         "name": "memcachier",
         "url": "http://www.memcachier.com/",
@@ -250,7 +251,7 @@
         "url": "http://sendgrid.com/",
         "description": "",
         "type": "messaging"
-      },      
+      },
       {
         "name": "statsmix",
         "url": "https://www.statsmix.com/",
@@ -262,7 +263,7 @@
         "url": "http://tempo-db.com/",
         "description": "",
         "type": "datastore"
-      }      
+      }
     ]
   },
   "extensible": false,
