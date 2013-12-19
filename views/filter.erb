@@ -183,6 +183,7 @@
 
     <div class="form-actions text-center">
       <button id="submit" type="submit" class="btn btn-primary btn-large">Find your PaaS</button>
+      <button type="reset" class="close" title="Reset">&times;</button>
     </div>
 
     <div id="result"></div>
@@ -191,9 +192,7 @@
 
 <script src="../js/bootstrap-select.min.js"></script>
 <script>
-    $(document).ready(function () {
-        $('.selectpicker').selectpicker();
-
+    function loadData() {
         var data = $('#filter').serialize();
 
         $.get('search', data, function (response) {
@@ -201,6 +200,18 @@
                 },
                 'html'
         );
+    }
+
+    $(document).ready(function () {
+        $('.selectpicker').selectpicker();
+        loadData();
+
+        $(':reset').on('click', function(e) {
+            e.preventDefault();
+            $('#filter')[0].reset();
+            $('.selectpicker').selectpicker('render');
+            loadData();
+        });
 
         $('#submit').on('click', function (e) {
             data = $('#filter').serialize();

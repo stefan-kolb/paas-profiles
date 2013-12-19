@@ -92,9 +92,9 @@ class LanguageCharts < Charts
     runtime_count.each { |v| sum_languages += v }
     @mean_count = (sum_languages / vendor_count.to_f).round(1)
     # median
-    sorted = runtime_count.sort
-    len = sorted.length
-    @median_count = (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
+    runtime_count.sort!
+    len = runtime_count.length
+    @median_count = (runtime_count[(len - 1) / 2] + runtime_count[len / 2]) / 2.0
     # mode
     @mode_count = runtime_count.group_by { |n| n }.values.max_by(&:size).first
   end
