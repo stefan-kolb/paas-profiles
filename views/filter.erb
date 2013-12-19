@@ -27,12 +27,6 @@
         padding: 14px 24px;
     }
 
-    .extensible {
-        font-style: italic;
-        color: #fff;
-        background: #468847;
-    }
-
     #result {
         padding-top: 20px;
     }
@@ -208,12 +202,15 @@
 
         $(':reset').on('click', function(e) {
             e.preventDefault();
+
             $('#filter')[0].reset();
             $('.selectpicker').selectpicker('render');
             loadData();
         });
 
         $('#submit').on('click', function (e) {
+            e.preventDefault();
+
             data = $('#filter').serialize();
 
             $.get('search', data, function (response) {
@@ -224,7 +221,6 @@
                     },
                     'html'
             );
-            e.preventDefault();
         });
 
     });

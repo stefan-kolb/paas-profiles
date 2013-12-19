@@ -1,0 +1,121 @@
+<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+<script src="http://code.highcharts.com/3.0/highcharts.js"></script>
+<script src="/js/themes/paasify.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<link rel="stylesheet" href="/css/theme.bootstrap.css">
+<style>
+    /* Main marketing message and sign up button */
+    .jumbotron {
+        /*height: 400px;*/
+        margin: 50px 0;
+        text-align: center;
+        background-size: 100%;
+    }
+
+    .jumbotron h1 {
+        font-size: 60px;
+        line-height: 1;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .jumbotron .lead {
+        font-size: 18px;
+        line-height: 1.25;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+    }
+
+    .chart {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+</style>
+
+<div class="jumbotron">
+  <h1>Infrastructures</h1>
+
+  <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted">
+    <small><a href="#footnotes">1</a></small>
+  </sup>.
+  </p>
+</div>
+
+<div class="row">
+  <div class="span12">
+    <strong>Runtime Language and Version Support.</strong>
+    Today's PaaS support a variety of different runtime languages as basis for customer applications.
+    Currently, PaaS offerings officially support a total of <span class="label label-inverse"></span>
+    different languages.
+    The <i>Top</i> 3 continents based on support percentage are
+
+    The following chart shows the support percentage of all available languages. When clicking on the language bars, a
+    drill down on the different available language versions will be made.
+  </div>
+  <div id="map" style="height: 400px;" class="span12 chart"></div>
+  <div class="span12">
+    <div class="row">
+      <div class="span5">
+        <strong>Language-specific vs Polyglot PaaS.</strong> When PaaS first started, a lot of the offerings did only
+        support one specific language. This has changed dramatically over time.
+        Most of today's PaaS support way more than one language. While a specialization on one language (<i>Language-specific
+        PaaS</i>) may result in better and more specialized support of that language,
+        more languages (<i>Polyglot PaaS</i>) attract a greater customer mass and allow more flexibility for developing
+        in different languages while sticking to one particular PaaS provider.
+        The mean amount of supported languages is <i class="icon-arrow-up" title="<%= @chart.mean_count %>"></i>
+        <span class="label label-inverse" title="<%= @chart.mean_count %> (mean)&#013;<%= @chart.median_count %> (median)&#013;<%= @chart.mode_count %> (mode)"><%= @chart.mean_count %></span>.
+        <!--TODO Trend icon and change! Other averages median, ... -->
+      </div>
+      <div id="polyglot" class="span7" style="height: 300px;"></div>
+    </div>
+    <div id="count" style="height: 250px;" class="span12 chart text-center"></div>
+  </div>
+  <div class="span12">
+    <strong>Runtime Language Trend.</strong>
+    The succeeding graph shows the runtime language trend over time.
+  </div>
+</div>
+<div id="footnotes">
+  <small><sup class="muted">1</sup> The data source is the most recent collection of
+    <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
+  </small>
+</div>
+
+<script src="../js/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="../js/jquery-jvectormap-world-mill-en.js"></script>
+<script>
+    $(document).ready(function () {
+        var data = <%= @chart.infras %>;
+
+        $('#map').vectorMap({
+            map: 'world_mill_en',
+            regionStyle: {
+                initial: {
+                    fill: '#0088cc'
+                },
+                hover: {
+                    'fill-opacity': 0.6
+                }
+            },
+            backgroundColor: '#ffffff',
+            series: {
+                regions: [{
+                    values: data,
+                    scale: ['#fcc578', '#f89406'],
+                    normalizeFunction: 'polynomial'
+                }]
+            },
+            onRegionLabelShow: function(e, el, code){
+                if (!data.hasOwnProperty(code)) {
+                    // the hovered region is not part of the regionResults, don't show the label
+                    e.preventDefault();
+                    return false;
+                }
+                el.html(el.html()+' ('+data[code]+' times)');
+            }
+        });
+    });
+</script>

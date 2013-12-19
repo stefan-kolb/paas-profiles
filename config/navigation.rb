@@ -7,6 +7,7 @@ SimpleNavigation::Configuration.run do |navigation|
         statistics.item :languages, 'Runtime Languages', '/statistics/languages'
         statistics.item :services, 'Native Services', '/statistics/services'
         statistics.item :status, 'Status', '/statistics/status'
+        statistics.item :infrastructures, 'Infrastructures', '/statistics/infrastructures'
         statistics.item :data, 'Data Quality', '/statistics/data'
       end
     end

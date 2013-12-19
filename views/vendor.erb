@@ -398,10 +398,6 @@
             <% if !@profile["infrastructures"].nil? && @profile["infrastructures"].uniq { |h| h["continent"] }.size == 1 %>
             <%= "focusOn: '" << @profile["infrastructures"][0]["country"] << "'," %>
             <% end %>
-            scaleColors: ['#C8EEFF', '#0071A4'],
-            normalizeFunction: 'polynomial',
-            hoverOpacity: 0.7,
-            hoverColor: false,
             backgroundColor: '#ffffff',
             <%
                         arr = []

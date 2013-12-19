@@ -48,3 +48,13 @@ get '/statistics/data' do
 
   erb :'statistics/data'
 end
+
+get '/statistics/infrastructures' do
+  require_relative '../lib/statistics/charts'
+  require_relative '../lib/statistics/infrastructure_charts'
+
+  @title = "Platform as a Service | Infrastructure Statistics"
+  @chart = InfrastructureCharts.new
+
+  erb :'statistics/infrastructures'
+end
