@@ -20,6 +20,7 @@ module SimpleNavigation
               list << content_tag(:li, item.name, { class: 'active' })
             end
           end
+
           list
         end
       end
@@ -29,7 +30,7 @@ module SimpleNavigation
       end
 
       def divider
-        '<span class="divider">/</span>'.html_safe
+        '<span class="divider">/</span>'
       end
 
       def github
@@ -38,7 +39,7 @@ module SimpleNavigation
 					<a href="https://github.com/stefan-kolb/paas-profiles" target="_blank" style="text-decoration: none; padding: 5px;">
 						<img src="/img/github.png" style="width: 20px;" alt="github">
 					</a>
-				</li>'.html_safe
+				</li>'
       end
 
     end
