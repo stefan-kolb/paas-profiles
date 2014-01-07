@@ -33,6 +33,7 @@
     {
       "language": "node",
       "versions": [
+        "0.10",
         "0.6"
       ]
     },
@@ -45,7 +46,8 @@
     {
       "language": "php",
       "versions": [
-        "5.3"
+        "5.3",
+        "5.4"
       ]
     },
     {
@@ -98,6 +100,20 @@
       ]
     },
     {
+      "name": "drupal",
+      "runtime": "PHP",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
       "name": "rails",
       "runtime": "ruby",
       "versions": [
@@ -116,7 +132,7 @@
       {
         "name": "mongodb",
         "versions": [
-          "2.2"
+          "2.4"
         ]
       },
       {
@@ -136,6 +152,18 @@
         "versions": [
           "8.4",
           "9.2"
+        ]
+      },
+      {
+        "name": "postgis",
+        "versions": [
+          "2.1"
+        ]
+      },
+      {
+        "name": "pgrouting",
+        "versions": [
+          "2.0"
         ]
       },
       {
