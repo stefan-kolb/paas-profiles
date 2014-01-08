@@ -16,9 +16,8 @@ class Charts
   end
 
   # Returns the total amount of vendors that verified their profile
-  # TODO not working yet
-  def verified_vendors
-    @verified_count ||= Vendor.where(:vendor_verified.nin => ['', nil]).count
+  def verified_count
+    @verified_count ||= Vendor.where(:vendor_verified.exists => true).count
   end
 
   def extensible_count

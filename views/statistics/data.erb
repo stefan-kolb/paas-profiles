@@ -3,7 +3,7 @@
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 <link rel="stylesheet" href="/css/theme.bootstrap.css">
 <style>
-    /* Main marketing message and sign up button */
+        /* Main marketing message and sign up button */
     .jumbotron {
         /*height: 400px;*/
         margin: 50px 0;
@@ -45,16 +45,106 @@
 
 <div class="row">
   <div class="span12">
-    <strong>How many vendors <%= @chart.vendor_count %>, vendors over time, missing values, values over time, verified vendors <%= @chart.verified_count %>, verified over time, last update, update intervall, updates per profile</strong>
+    <h2><span class="text-info">Overall</span></h2>
+    In total, <span class="label label-inverse"><%= @chart.vendor_count %></span> vendor profiles are available at the moment.
+    The following graph shows the profile trend split into overall, active and discontinued vendors.
   </div>
-<div id="footnotes">
-  <small><sup class="muted">1</sup> The data source is the most recent collection of
-    <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
-  </small>
+  <div id="overtime" style="height: 350px;" class="span12 chart text-center"></div>
+  <div class="span12">
+    <h2><span class="text-info">Participation</span></h2>
+    All profiles are open for community validation. Currently, <span class="label label-inverse"><%= @chart.verified_count %></span> profiles were additionally verified by vendor participation.
+    Verified over time. how many commits forks stars seitenaufrufe?
+  </div>
+  <div id="status" style="height: 350px;" class="span12 chart text-center"></div>
+  <div class="span12">
+    <h2><span class="text-info">Updates</span></h2>
+    The last profile update was <i>3 hours ago</i>.
+    Oldest profile. Update intervall. Updates per profile.
+    Count commits on profiles.
+  </div>
+  <div class="span12">
+    <h2><span class="text-info">Quality</span></h2>
+    <strong>missing values, values over time</strong>
+  </div>
+
+  <div id="footnotes">
+    <small><sup class="muted">1</sup> The data source is the most recent collection of
+      <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
+    </small>
+  </div>
 </div>
 
 <script>
     $(document).ready(function () {
+        $('#overtime').highcharts({
+            title: {
+                text: 'Profile Trend'
+            },
+            subtitle: {
+                text: 'Language support over time'
+            },
+            xAxis: {
+                categories: null
+            },
+            yAxis: {
+                title: {
+                    text: 'Support'
+                },
+                min: 0
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [
+                {
+                    name: "Overall",
+                    data: [ 75, 80, 87 ]
+                },
+                {
+                    name: "Active",
+                    data: [ 60, 66, 67 ]
+                },
+                {
+                    name: "EOL",
+                    data: [ 32, 34, 55 ]
+                }
+            ]
+        });
 
+        $('#status').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Verification',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: 0
+            },
+            tooltip: {
+                pointFormat: '<b>{point.percentage:.1f}%</b> ({point.y} Total)',
+                useHTML: true
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: 15,
+                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
+                    }
+                }
+            },
+            series: [{
+                name: 'Supported by',
+                innerSize: '60%',
+                data: <%= @chart.verification_chart 'pie' %>
+            }]
+        });
     });
 </script>
