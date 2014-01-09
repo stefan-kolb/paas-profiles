@@ -11,3 +11,4 @@ gem 'versionomy'
 gem 'activesupport'
 gem 'minitest', '~> 4.7'
 gem 'sinatra-simple-navigation'
+gem "geocoder"

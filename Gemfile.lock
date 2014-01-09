@@ -9,6 +9,7 @@ GEM
       multi_json (~> 1.0)
     blockenspiel (0.4.5)
     builder (3.0.4)
+    geocoder (1.1.9)
     i18n (0.6.9)
     iso_country_codes (0.4.2)
     minitest (4.7.5)
@@ -43,6 +44,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  geocoder
   iso_country_codes
   minitest (~> 4.7)
   mongoid (>= 3.0)

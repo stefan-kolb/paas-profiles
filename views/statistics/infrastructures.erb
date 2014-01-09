@@ -1,3 +1,4 @@
+<% require 'geocoder' %>
 <link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
 <script src="http://code.highcharts.com/3.0/highcharts.js"></script>
 <script src="/js/themes/paasify.js"></script>
@@ -104,7 +105,7 @@
             series: {
                 regions: [{
                     values: data,
-                    scale: ['#fcc578', '#f89406'],
+                    scale: ['#fde9cd', '#f89406'],
                     normalizeFunction: 'polynomial'
                 }]
             },
@@ -115,7 +116,28 @@
                     return false;
                 }
                 el.html(el.html()+' ('+data[code]+' times)');
-            }
+            },
+            markerStyle: {
+                initial: {
+                    fill: '#ffffff',
+                    stroke: '#0088cc'
+                }
+            },
+            markers: [
+                <% Vendor.distinct('infrastructures.region').each_with_index do |e, i|
+
+                    coord = Geocoder.coordinates(e)
+                    unless coord.blank?
+                %>
+                {latLng: <%= coord %>, name: <%= "'#{e}'" %>}
+
+                <%=
+                    if i <= Vendor.distinct('infrastructures.region').size
+                    ','
+                    end %>
+                  <% end %>
+                <% end %>
+            ]
         });
     });
 </script>

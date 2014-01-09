@@ -5,11 +5,16 @@ class Infrastructure
 	include Mongoid::Document
 	
 	embedded_in :vendor
-	
+
+	# profile properties
 	field :continent, type: String
 	field :country, type: String
 	field :region, type: String
 	field :provider, type: String
+
+  # additional properties
+  field :coordinates, :type => Array
+
 	# validations
 	validates :continent, inclusion: { in: %w(AF AS EU NA OC SA)}
   validate :country_codes, :if => Proc.new { !country.nil? && !country.empty? }
