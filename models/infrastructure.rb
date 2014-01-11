@@ -2,27 +2,23 @@ require 'mongoid'
 require 'iso_country_codes'
 
 class Infrastructure
-	include Mongoid::Document
-	
-	embedded_in :vendor
+  include Mongoid::Document
 
-	# profile properties
-	field :continent, type: String
-	field :country, type: String
-	field :region, type: String
-	field :provider, type: String
+  # profile properties
+  field :continent, type: String
+  field :country, type: String
+  field :region, type: String
+  field :provider, type: String
 
-  # additional properties
-  field :coordinates, :type => Array
+  # validations
+  validates :continent, inclusion: {in: %w(AF AS EU NA OC SA)}
+  validates :country, presence: true, :if => Proc.new { !region.blank? }
+  validate :country_codes, :if => Proc.new { !country.blank? }
 
-	# validations
-	validates :continent, inclusion: { in: %w(AF AS EU NA OC SA)}
-  validate :country_codes, :if => Proc.new { !country.nil? && !country.empty? }
-	
-	def country_codes
-		if IsoCountryCodes.find(country).nil?
-			errors[:country] = '#{country} is not a valid ISO 3166-1 code'
-		end
-	end
+  def country_codes
+    if IsoCountryCodes.find(country).nil?
+      errors[:country] = '#{country} is not a valid ISO 3166-1 code'
+    end
+  end
 
 end

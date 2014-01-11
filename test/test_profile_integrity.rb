@@ -23,14 +23,17 @@ module PaasProfiles
 
       # loads and validates profile
       def setup
+        @profile
+
         begin
           json = JSON.parse(File.read(self.class.filepath))
           @profile = Vendor.new(json)
-          # profile validation
-          assert(@profile.valid?, @profile.errors.full_messages)
         rescue JSON::ParserError
           assert(@profile != nil, 'JSON structure is not wellformed')
         end
+
+        # profile validation
+        assert(@profile.valid?, @profile.errors.full_messages)
       end
 
       def teardown
