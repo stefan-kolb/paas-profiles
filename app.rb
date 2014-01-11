@@ -6,6 +6,7 @@ require 'versionomy'
 require 'newrelic_rpm'
 
 require_relative 'models/vendor'
+require_relative 'models/datacenter'
 require_relative 'lib/breadcrumbs'
 
 Mongoid.load!("./config/mongoid.yml")

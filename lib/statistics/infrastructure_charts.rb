@@ -1,7 +1,12 @@
 require_relative 'charts'
 
 class InfrastructureCharts < Charts
-  attr_reader :mean_count, :mode_count, :median_count
+  attr_reader :mean_count, :mode_count, :median_count, :external_providers
+
+  def initialize
+    # TODO run all computation once?
+    compute_averages
+  end
 
   def support_piedata
     data = Charts.new.get_piedata 'infrastructures.continent', false
@@ -29,24 +34,12 @@ class InfrastructureCharts < Charts
     return data
   end
 
-  def mean_count
-
-  end
-
-  def median_count
-
-  end
-
-  def mode_count
-
-  end
-
   def infras
     data = Hash.new
-
-    Vendor.where(:infrastructures.exists => true).only(:infrastructures).each do |infra|
-      if !infra.infrastructures.blank?
-        infra.infrastructures.each do |i|
+    # todo vendors that allow multiple deployments in one country are counted double
+    Vendor.where(:infrastructures.exists => true).only(:infrastructures).each do |vendor|
+      if !vendor.infrastructures.blank?
+        vendor.infrastructures.each do |i|
           if !i.country.empty?
             unless data[i.country].nil?
               data[i.country] += 1
@@ -61,5 +54,44 @@ class InfrastructureCharts < Charts
     data.to_json
   end
 
+  def external_providers
+    @external_providers ||= Vendor.where(:'infrastructures.provider'.exists => true).count
+  end
+
+  def top_continents
+    continents = %w( EU NA SA AS AF OC )
+    data = []
+
+    continents.each do |c|
+      count = Vendor.where('infrastructures.continent' => c).count
+      public = Vendor.in(hosting: %w( public )).count
+      data << [ c, (count / public.to_f * 100).round(0) ]
+    end
+
+    data.sort! { |x,y| y[1] <=> x[1] }
+  end
+
+  def top_countries( amount=5 )
+    h = JSON.parse(infras)
+    h.keys.sort {|a, b| h[b] <=> h[a]}
+  end
+
+  private
+
+  def compute_averages
+    # only public offerings
+    # TODO what about possibly missing null infras
+    infra_count = Vendor.in(hosting: %w( public )).collect { |v| v.infrastructures.count }
+    # mean
+    sum_infras = 0
+    infra_count.each { |v| sum_infras += v }
+    @mean_count = (sum_infras / infra_count.size.to_f).round(1)
+    # median
+    infra_count.sort!
+    len = infra_count.size
+    @median_count = (infra_count[(len - 1) / 2] + infra_count[len / 2]) / 2.0
+    # mode
+    @mode_count = infra_count.group_by { |n| n }.values.max_by(&:size).first
+  end
 
 end

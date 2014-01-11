@@ -395,6 +395,27 @@
                     fill: '#f89406'
                 }
             },
+            markerStyle: {
+                initial: {
+                    fill: '#ffffff',
+                    stroke: '#000000'
+                }
+            },
+            markers:
+                <%
+                    markers = []
+
+                    unless @profile['infrastructures'].blank?
+                        @profile['infrastructures'].each do |infra|
+                            unless infra['region'].blank?
+                                dc = Datacenter.where(region: infra['region'], country: infra['country']).first
+                                markers << { latLng: dc.coordinates, name: "#{dc}" } unless dc.nil?
+                            end
+                        end
+                    end
+                %>
+                <%= markers.to_json %>
+            ,
             <% if !@profile["infrastructures"].nil? && @profile["infrastructures"].uniq { |h| h["continent"] }.size == 1 %>
             <%= "focusOn: '" << @profile["infrastructures"][0]["country"] << "'," %>
             <% end %>

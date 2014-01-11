@@ -1,6 +1,5 @@
 Highcharts.theme = {
     chart: {
-        plotBackgroundColor: null,
         plotBorderWidth: 0,
         plotShadow: false,
         style: {
