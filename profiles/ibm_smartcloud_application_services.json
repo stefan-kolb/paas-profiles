@@ -5,10 +5,10 @@
   "status": "production",
   "status_since": "2012-12-21",
   "type": "language-specific",
-  "hosting": [
-    "public",
-    "private"
-  ],
+  "hosting": {
+    "public": true,
+    "private": true
+  },
   "pricing": [
     {
       "model": "metered",

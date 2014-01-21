@@ -131,10 +131,10 @@
             </td>
 
             <td>
-              <% if profile["hosting"].include? "public" %>
+              <% if profile['hosting']['public'] %>
                   <span class="icon-eye-open" title="public"></span>
               <% end
-                 if profile["hosting"].include? "private"
+                 if profile['hosting']['private']
               %>
                   <span class="icon-lock" title="private"></span>
               <% end %>

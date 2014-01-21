@@ -29,7 +29,11 @@ post '/api/match' do
   query = query.all(status: lookup.status)
   # status since
   # hosting
-  query = query.all(hosting: lookup.hosting)
+  # scaling
+  if lookup.hosting
+    query = query.all('hosting.public' => lookup.hosting.public)
+    query = query.all('hosting.private' => lookup.hosting.private)
+  end
   # pricing
   lookup.pricings.each do |p|
     query = query.and({ 'pricing.model' => p.model }, { 'pricing.period' => p.period })

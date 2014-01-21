@@ -5,9 +5,10 @@
   "status": "eol",
   "status_since": null,
   "type": "polyglot",
-  "hosting": [
-    "private"
-  ],
+  "hosting": {
+    "public": false,
+    "private": true
+  },
   "pricing": [
 
   ],

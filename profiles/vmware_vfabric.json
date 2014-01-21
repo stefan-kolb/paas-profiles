@@ -5,9 +5,10 @@
   "status": "production",
   "status_since": null,
   "type": "language-specific",
-  "hosting": [
-    "private"
-  ],
+  "hosting": {
+    "public": false,
+    "private": true
+  },
   "pricing": [
     {
       "model": "",

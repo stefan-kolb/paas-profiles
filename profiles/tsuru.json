@@ -5,10 +5,10 @@
   "status": "beta",
   "status_since": "2013-08-28",
   "type": "polyglot",
-  "hosting": [
-    "public",
-    "private"
-  ],
+  "hosting": {
+    "public": true,
+    "private": true
+  },
   "pricing": [
 
   ],

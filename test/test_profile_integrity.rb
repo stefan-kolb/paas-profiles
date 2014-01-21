@@ -92,13 +92,6 @@ module PaasProfiles
         assert_equal(uniq_compliance.length, @profile.compliance.length, 'There must be no duplicate compliance entries in one profile. Remove duplicate values')
       end
 
-      # no hosting duplicates
-      define_method('test_hosting_duplicates') do
-        uniq_hosting = @profile.hosting.uniq
-
-        assert_equal(uniq_hosting.length, @profile.hosting.length, 'There must be no duplicate hosting entries in one profile. Remove duplicate values')
-      end
-
       # middleware runtime must be present
       define_method('test_middleware_runtime_existence') do
         @profile.middlewares.each do |m|

@@ -5,9 +5,10 @@
   "status": "beta",
   "status_since": "",
   "type": "language-specific",
-  "hosting": [
-    "public"
-  ],
+  "hosting": {
+    "public": true,
+    "private": false
+  },
   "pricing": [
     {
       "model": "fixed",

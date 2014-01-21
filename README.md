@@ -33,9 +33,10 @@ The code below shows a sample profile. The profile specification is *beta* and t
   "status": "production",
   "status_since": "2012-07-15",
   "type": "polyglot",
-  "hosting": [
-    "public"
-  ],
+  "hosting": {
+    "public": true,
+    "private": false
+  },
   "pricing": [
 		{ "model": "fixed", "period": "monthly" }
 	],
@@ -137,7 +138,7 @@ An object including three boolean properties for characterizing the scaling capa
 
 ### Hosting
 
-An array that describes the different provided hosting styles of the PaaS.
+An object that describes the different provided hosting styles of the PaaS.
 Values can be `public` for a publicly hosted service and `private` for a service that can be deployed on premise, too.
 
 ### Compliance

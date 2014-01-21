@@ -5,9 +5,10 @@
   "status": "beta",
   "status_since": null,
   "type": "polyglot",
-  "hosting": [
-    "public"
-  ],
+  "hosting": {
+    "public": true,
+    "private": false
+  },
   "pricing": [
     {
       "model": "fixed",

@@ -5,9 +5,10 @@
   "status": "production",
   "status_since": "2012-02-14",
   "type": "polyglot",
-  "hosting": [
-    "private"
-  ],
+  "hosting": {
+    "public": false,
+    "private": true
+  },
   "pricing": [
 
   ],

@@ -8,7 +8,12 @@
 
    # hosting
    unless params[:hosting].nil?
-     query = query.all(hosting: params[:hosting])
+     if params[:hosting].include? "public"
+       query = query.where("hosting.public" => true)
+     end
+     if params[:hosting].include? "private"
+       query = query.where("hosting.private" => true)
+     end
    end
 
    # scaling
@@ -60,11 +65,14 @@
 
    # infras
    unless params[:infras].nil?
+     # private paas can be deployed everywhere
      if params[:hosting].nil?
-       query = query.or({"infrastructures.continent" => {"$all" => params[:infras]}}, {"hosting" => "private"})
-     elsif params[:hosting].length == 1 && params[:hosting].include?('public')
+       query = query.or({"infrastructures.continent" => {"$all" => params[:infras]}}, {"hosting.private" => true})
+     # if hosting = public match infras
+     elsif params[:hosting].length == 1 && params[:hosting].include?("public")
        query = query.all("infrastructures.continent" => params[:infras])
      end
+     # ignore infras if hosting == private
    end
 
    unless query.exists?
@@ -135,10 +143,10 @@
             </td>
 
             <td>
-              <% if profile["hosting"].include? "public" %>
+              <% if profile["hosting"]["public"] %>
                   <span class="icon-eye-open" title="public"></span>
               <% end
-                 if profile["hosting"].include? "private"
+                 if profile["hosting"]["private"]
               %>
                   <span class="icon-lock" title="private"></span>
               <% end %>
