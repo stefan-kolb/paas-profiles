@@ -5,7 +5,7 @@
 <br/>
 A no-standards approach for application portability.
 
-Currently 86 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
+Currently 88 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
 
 **The current web interface can be viewed at [PaaSify.it](http://paasify.it)**
 
@@ -34,8 +34,7 @@ The code below shows a sample profile. The profile specification is *beta* and t
   "status_since": "2012-07-15",
   "type": "polyglot",
   "hosting": {
-    "public": true,
-    "private": false
+    "public": true, "private": false
   },
   "pricing": [
 		{ "model": "fixed", "period": "monthly" }
