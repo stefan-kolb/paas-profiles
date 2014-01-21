@@ -37,7 +37,7 @@
         "name": "couchdb",
         "type": "datastore",
         "versions": [
-          "1.2.0"
+          "1.5"
         ]
       },
       {
