@@ -64,7 +64,7 @@ class InfrastructureCharts < Charts
 
     continents.each do |c|
       count = Vendor.where('infrastructures.continent' => c).count
-      public = Vendor.in(hosting: %w( public )).count
+      public = Vendor.where('hosting.public' => true).count
       data << [ c, (count / public.to_f * 100).round(0) ]
     end
 
@@ -81,7 +81,7 @@ class InfrastructureCharts < Charts
   def compute_averages
     # only public offerings
     # TODO what about possibly missing null infras
-    infra_count = Vendor.in(hosting: %w( public )).collect { |v| v.infrastructures.count }
+    infra_count = Vendor.where('hosting.public' => true).collect { |v| v.infrastructures.count }
     # mean
     sum_infras = 0
     infra_count.each { |v| sum_infras += v }
