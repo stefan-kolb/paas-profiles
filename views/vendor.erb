@@ -165,7 +165,7 @@
                   <%= rt["name"].capitalize %>
                 </td>
                 <td>
-                  <%= rt["runtime"].capitalize %>
+                  <%= rt["runtime"].capitalize unless rt["runtime"].blank? %>
                 </td>
                 <% rt["versions"].each do |v|
                   v.gsub! /\*\.\*/, 'All versions'
