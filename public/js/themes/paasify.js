@@ -23,7 +23,7 @@ Highcharts.theme = {
     },
     legend: {
         enabled: true,
-        borderWidth: '0px'
+        borderWidth: 0
     },
     xAxis: {
         labels: {
