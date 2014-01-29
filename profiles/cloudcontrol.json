@@ -53,6 +53,15 @@
         "1.9.3",
         "2.0.0"
       ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "0.4.*",
+        "0.6.*",
+        "0.8.*",
+        "0.10.*"
+      ]
     }
   ],
   "middleware": [
@@ -130,6 +139,13 @@
     "native": [
       {
         "name": "mysql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "postgresql",
         "type": "datastore",
         "versions": [
 
