@@ -8,7 +8,7 @@ class Charts
   # Standard color array for Highcharts
   COLORS = %w( #2f7ed8 #0d233a #8bbc21 #910000 #1aadce #492970 #f28f43 #77a1e5 #c42525 #a6c96a )
 
-  attr_reader :vendor_count, :extensible_count, :versions_data, :verified_count
+  attr_reader :vendor_count, :extensible_count, :verified_count
 
   # Returns the total amount of vendors in the database
   def vendor_count
@@ -24,7 +24,7 @@ class Charts
     @extensible_count ||= Vendor.where(extensible: true).count
   end
 
-  def get_piedata( type, threshold = 0.05 )
+  def get_piedata(type, threshold = 0.05)
     data = []
 
     distinct_values(type).each do |l|
@@ -37,7 +37,7 @@ class Charts
     # capitalize
     data.each { |e| e[0].capitalize! }
     # sort by count ascending
-    data.sort! { |x,y| y[1] <=> x[1] }
+    data.sort! { |x, y| y[1] <=> x[1] }
     # 5 % threshold
     if threshold
       sum = 0
@@ -56,29 +56,29 @@ class Charts
     return data
   end
 
-  def support_columndata( type, threshold = 0.05 )
+  def support_columndata(type, threshold = 0.05)
     data = []
 
     distinct_values(type).each_with_index do |l, i|
       count = Vendor.where(type => l).count
 
-      data << { name: l, y: (count / vendor_count.to_f * 100).to_i, drilldown: {
+      data << {name: l, y: (count / vendor_count.to_f * 100).to_i, drilldown: {
           name: "#{l.capitalize} Versions",
           categories: distinct_versions(l),
           data: distinct_versions_data(l)
-        }
+      }
       }
     end
 
     # capitalize each word
     data.each { |e| e[:name].capitalize! }
     # sort by count descending
-    data.sort! { |x,y| y[:y] <=> x[:y] }
+    data.sort! { |x, y| y[:y] <=> x[:y] }
     # % threshold
     if threshold
       sum = 0
       data.each { |e| sum += e[:y] }
-      others = { name: 'Others', y: 0 }
+      others = {name: 'Others', y: 0}
 
       data.delete_if do |e|
         if (e[:y].to_f < (threshold * 100.0))
@@ -87,11 +87,12 @@ class Charts
           true
         end
       end
-      data << others
+
+      data << others unless others[:y] == 0
     end
 
     # colors
-    data.each_with_index do |l,i|
+    data.each_with_index do |l, i|
       l[:color] = COLORS[i%COLORS.length]
       if l[:name] != 'Others'
         l[:drilldown][:color] = COLORS[i%COLORS.length]
@@ -110,44 +111,41 @@ class Charts
   end
 
   def distinct_versions_data language
-    unless @versions_data
-      # TODO duplicate languages in profile will cause false results
-      vendors = Vendor.where('runtimes.language' => language)
-      data = Hash.new
+    # TODO duplicate languages in profile will cause false results
+    vendors = Vendor.where('runtimes.language' => language)
+    data = Hash.new
 
-      vendors.each do |vendor|
-        vendor['runtimes'].each do |rt|
-          if rt['language'] == language
-            if rt['versions'].empty?
-              if data.has_key? 'Unknown'
-                data['Unknown'] += 1
-              else
-                data['Unknown'] = 1
-              end
+    vendors.each do |vendor|
+      vendor['runtimes'].each do |rt|
+        if rt['language'] == language
+          if rt['versions'].blank?
+            if data.has_key? 'Unknown'
+              data['Unknown'] += 1
             else
-              rt['versions'].each do |v|
-                # TODO uniform version format, filter empty versions
-                v = Version.new(v).unify
+              data['Unknown'] = 1
+            end
+          else
+            rt['versions'].each do |v|
+              # TODO uniform version format, filter empty versions
+              v = Version.new(v).unify
 
-                if data.has_key? v
-                  data[v] += 1
-                else
-                  data[v] = 1
-                end
+              if data.has_key? v
+                data[v] += 1
+              else
+                data[v] = 1
               end
             end
           end
         end
       end
-
-      data = data.sort { |x,y| x <=> y}
-      # rundungsfehler bug?!
-      data.each do |v|
-        v[1] = (v[1] / language_count(language).to_f * 100).to_i
-      end
-      @versions_data = data
     end
-    @versions_data
+
+    data = data.sort { |x, y| x <=> y }
+    # TODO rundungsfehler bug?!
+    data.each do |v|
+      v[1] = (v[1] / language_count(language).to_f * 100).to_i
+    end
+    data
   end
 
   def distinct_values type
