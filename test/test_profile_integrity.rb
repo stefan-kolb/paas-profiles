@@ -23,8 +23,6 @@ module PaasProfiles
 
       # loads and validates profile
       def setup
-        @profile
-
         begin
           json = JSON.parse(File.read(self.class.filepath))
           @profile = Vendor.new(json)
@@ -96,7 +94,7 @@ module PaasProfiles
       define_method('test_middleware_runtime_existence') do
         @profile.middlewares.each do |m|
           unless m['runtime'].blank?
-            assert(@profile.runtimes.any? { |r| r['language'] == m['runtime'] }, 'Referenced middleware runtime must be defined under runtimes')
+            assert(@profile.runtimes.any? { |r| r['language'] == m['runtime'] }, "Referenced middleware runtime '#{m['runtime']}' of '#{m['name']}' must be defined under runtimes")
           end
         end
       end
@@ -104,7 +102,7 @@ module PaasProfiles
       # framework runtime must be present
       define_method('test_frameworks_runtime_existence') do
         @profile.frameworks.each do |f|
-          assert(@profile.runtimes.any? { |r| r['language'] == f['runtime'] }, 'Referenced framework runtime must be defined under runtimes')
+          assert(@profile.runtimes.any? { |r| r['language'] == f['runtime'] }, "Referenced framework runtime '#{f['runtime']}' of '#{f['name']}' must be defined under runtimes")
         end
       end
 
