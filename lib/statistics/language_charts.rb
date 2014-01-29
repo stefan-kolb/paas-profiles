@@ -15,7 +15,7 @@ class LanguageCharts < Charts
   end
 
   def support_columndata threshold=0.05
-    @support_data ||= Charts.new.support_columndata 'runtimes.language', false
+    @support_data ||= Charts.new.support_columndata 'runtimes.language', threshold
   end
 
   def support_categories threshold=0.05
