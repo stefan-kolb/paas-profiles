@@ -8,9 +8,7 @@ development:
 test:
   sessions:
     default:
-      database: paas_test
-      hosts:
-          - localhost:27017
+      uri: <%= ENV['MONGOLAB_URL'] %>
 
 production:
   sessions:
