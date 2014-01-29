@@ -3,7 +3,7 @@
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 <link rel="stylesheet" href="/css/theme.bootstrap.css">
 <style>
-    /* Main marketing message and sign up button */
+        /* Main marketing message and sign up button */
     .jumbotron {
         /*height: 400px;*/
         margin: 50px 0;
@@ -45,29 +45,36 @@
 
 <div class="row">
   <div class="span12">
-    <strong>Runtime Language and Version Support.</strong>
+    <h3><span class="text-info">Language and Version Support</span></h3>
     Today's PaaS support a variety of different runtime languages as basis for customer applications.
-    Currently, PaaS offerings officially support a total of <span class="label label-inverse"><%= @chart.language_count %></span>
+    Currently, PaaS offerings officially support a total of
+    <span class="label label-inverse"><%= @chart.language_count %></span>
     different languages.
     The <i>Top</i> 5 languages based on support percentage are
     <% @chart.support_categories.slice(0..4).each_with_index do |r, i| %>
-        <span class="label" style="background-color: <%= Charts::COLORS[i] %>;"><%= r %></span><% end %>.
-    The following chart shows the support percentage of all available languages. When clicking on the language bars, a
-    drill down on the different available language versions will be made.
-    Moreover, <span class="label label-inverse"><%= (@chart.extensible_count / @chart.vendor_count.to_f * 100).round %> %</span> of the vendors are
-    <span class="label label-success">extensible</span> which means that more languages can be added via extensibility mechanisms like <a href="https://devcenter.heroku.com/articles/buildpack-api" target="_blank">buildpacks</a>.
+        <span class="label" style="background-color: <%= Charts::COLORS[i] %>;"><%= r %></span>
+    <% end %>.
+    The following chart shows the support percentage of all available languages. A click on the language bars drills
+    down on the different available language versions.
+    Moreover,
+    <span class="label label-inverse"><%= (@chart.extensible_count / @chart.vendor_count.to_f * 100).round %> %</span>
+    of the vendors are
+    <span class="label label-success">extensible</span> which means that more languages can be added via extensibility
+    mechanisms like <a href="https://devcenter.heroku.com/articles/buildpack-api" target="_blank">buildpacks</a>.
   </div>
   <div id="languages" style="height: 350px;" class="span12 chart text-center"></div>
   <div class="span12">
     <div class="row">
       <div class="span5">
-        <strong>Language-specific vs Polyglot PaaS.</strong> When PaaS first started, a lot of the offerings did only
+        <h3><span class="text-info">Language-specific vs Polyglot PaaS</span></h3>
+        When PaaS first started, a lot of the offerings did only
         support one specific language. This has changed dramatically over time.
         Most of today's PaaS support way more than one language. While a specialization on one language (<i>Language-specific
         PaaS</i>) may result in better and more specialized support of that language,
         more languages (<i>Polyglot PaaS</i>) attract a greater customer mass and allow more flexibility for developing
         in different languages while sticking to one particular PaaS provider.
-        The mean amount of supported languages is <i class="icon-arrow-up" title="<%= (@chart.mean_count - Statistics.last.mean_lang_count).round(1) %>"></i>
+        The mean amount of supported languages is
+        <i class="icon-arrow-up" title="<%= (@chart.mean_count - Statistics.last.mean_lang_count).round(1) %>"></i>
         <span class="label label-inverse" title="<%= @chart.mean_count %> (mean)&#013;<%= @chart.median_count %> (median)&#013;<%= @chart.mode_count %> (mode)"><%= @chart.mean_count %></span>.
         <!--TODO Trend icon and change! Other averages median, ... -->
       </div>
@@ -81,7 +88,8 @@
   </div>
   <div id="overtime" style="height: 350px;" class="span12 chart text-center"></div>
 </div>
-<div id="footnotes">
+
+<div id="footnotes" style="margin-top: 50px; border-top: 1px #eee solid;">
   <small><sup class="muted">1</sup> The data source is the most recent collection of
     <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
   </small>
@@ -131,21 +139,21 @@
                     }
                 },
                 /*{
-                    title: {
-                        text: 'Count'
-                    },
-                    labels: {
-                        formatter: function () {
-                            // TODO redraw axis for drilldown!
-                            max =<%= @chart.vendor_count %>,
-                                    min = 0,
-                                    range = max - min;
-                            return (this.value * max / 100.0).toFixed(0);
-                        }
-                    },
-                    linkedTo: 0,
-                    opposite: true
-                }*/
+                 title: {
+                 text: 'Count'
+                 },
+                 labels: {
+                 formatter: function () {
+                 // TODO redraw axis for drilldown!
+                 max =<%= @chart.vendor_count %>,
+                 min = 0,
+                 range = max - min;
+                 return (this.value * max / 100.0).toFixed(0);
+                 }
+                 },
+                 linkedTo: 0,
+                 opposite: true
+                 }*/
             ],
             tooltip: {
                 formatter: function () {
