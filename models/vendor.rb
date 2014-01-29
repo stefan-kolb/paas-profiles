@@ -41,7 +41,7 @@ class Vendor
   validates :pricings, presence: true, :allow_blank => true
   validates :scaling, presence: true
   validates :runtimes, presence: true
-  validates :middleware, presence: true, :allow_blank => true
+  validates :middlewares, presence: true, :allow_blank => true
   validates :frameworks, presence: true, :allow_blank => true
   validates :service, presence: true, :allow_blank => true
   validates :infrastructures, presence: true, :allow_blank => true
