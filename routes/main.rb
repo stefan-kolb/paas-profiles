@@ -12,6 +12,11 @@ get '/vendor/:name' do
   regex  = params[:name].gsub('_', '[\s\.]')
   regex = Regexp.new(regex, "i")
   @profile = Vendor.where(name: regex).first
+
+  if @profile.nil?
+    halt 404, 'This PaaS does not exist anymore.'
+  end
+
   @paas = @profile['name']
   @title = "#{@paas} | PaaS Comparison"
 
