@@ -44,6 +44,11 @@ module PaasProfiles
         assert_equal(exp_name, filename, 'Filename must match lowercase vendor name without all characters except a-z0-9 replaced by "_"')
       end
 
+      # must be available either as public or private service
+      define_method('test_hosting_existence') do
+        assert(@profile.hosting.public || @profile.hosting.private, 'A PaaS must be available either as public or private service')
+      end
+
       # no runtime (language) duplicates
       define_method('test_runtime_duplicates') do
         uniq_runtimes = @profile.runtimes.uniq { |item| item['language'] }
