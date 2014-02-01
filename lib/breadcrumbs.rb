@@ -5,7 +5,7 @@ module SimpleNavigation
     class Breadcrumbs < SimpleNavigation::Renderer::Base
 
       def render(item_container)
-        content_tag(:ul, (li_tags(item_container) << github).join(''), { id: item_container.dom_id, class: 'breadcrumb' })
+        content_tag(:ul, (li_tags(item_container) << github).join(''), {id: item_container.dom_id, class: 'breadcrumb'})
       end
 
       protected
@@ -14,10 +14,10 @@ module SimpleNavigation
         item_container.items.inject([]) do |list, item|
           if item.selected?
             if include_sub_navigation?(item) && !last_item?(item.sub_navigation)
-              list << content_tag(:li, link_to(item.name, item.url, {method: item.method}.merge(item.html_options.except(:class,:id))) + divider)
+              list << content_tag(:li, link_to(item.name, item.url, {method: item.method}.merge(item.html_options.except(:class, :id))) + divider)
               list.concat li_tags(item.sub_navigation)
             else
-              list << content_tag(:li, item.name, { class: 'active' })
+              list << content_tag(:li, item.name, {class: 'active'})
             end
           end
 

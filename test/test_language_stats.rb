@@ -19,34 +19,51 @@ class TestLanguageStats < MiniTest::Unit::TestCase
       end
 
       def test_language_count
-        # single vendor
-        create(:vendor)
+        # test aggregation
+        create_list(:vendor, 10, language: 'ruby')
+        # test counting
+        create_list(:vendor_with_distinct_runtimes, 10, runtime_count: 2)
         chart = LanguageCharts.new
-        assert_equal(1, chart.language_count, 'Unexpected amount of distinct runtime languages')
-        # multiple vendors
-        create_list(:vendor, 10)
-        chart = LanguageCharts.new
-        assert_equal(1, chart.language_count, 'Unexpected amount of distinct runtime languages')
+        assert_equal(21, chart.language_count, 'Unexpected amount of distinct runtime languages')
       end
 
       def test_mean_count
-        create_list(:vendor, 10)
-        assert(Vendor.count == 10, 'Vendor.count should be 10. Database was not set up correctly.')
-
+        create_list(:vendor_with_distinct_runtimes, 5, runtime_count: 5)
+        create_list(:vendor_with_distinct_runtimes, 5, runtime_count: 10)
+        chart = LanguageCharts.new
+        # (5*5+5*10)/10
+        assert_equal(7.5, chart.mean_count, 'Unexpected mean language count')
       end
 
       def test_mode_count
-        create_list(:vendor, 10)
-        assert(Vendor.count == 10, 'Vendor.count should be 10. Database was not set up correctly.')
-
+        # unimodal
+        create_list(:vendor, 5, language: 'ruby')
+        chart = LanguageCharts.new
+        # 1,1,1,1,1
+        assert_equal(1, chart.mode_count, 'Unexpected mode language count')
+        # multimodal
+        create_list(:vendor_with_distinct_runtimes, 5, runtime_count: 3)
+        chart = LanguageCharts.new
+        # 1,1,1,1,1,3,3,3,3,3
+        assert_equal([1,3], chart.mode_count, 'Unexpected mode language count')
       end
 
       def test_median_count
-        create_list(:vendor, 10)
-        assert(Vendor.count == 10, 'Vendor.count should be 10. Database was not set up correctly.')
-
+        # odd number
+        create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 1)
+        create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 2)
+        create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 3)
+        chart = LanguageCharts.new
+        # 1,2,3
+        assert_equal(2, chart.median_count, 'Unexpected median language count')
+        # even number
+        create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 4)
+        chart = LanguageCharts.new
+        # 1,2,3,4
+        assert_equal(2.5, chart.median_count, 'Unexpected median language count')
       end
-
+=begin
+      # TODO ab hier
       def test_support_data
         create_list(:vendor, 10)
         assert(Vendor.count == 10, 'Vendor.count should be 10. Database was not set up correctly.')
@@ -58,11 +75,11 @@ class TestLanguageStats < MiniTest::Unit::TestCase
       end
 
       #
-      def test_language_support
+      def test_language_support_no_threshold
         # 100% ruby support
         create_list(:vendor_with_runtimes, 10, runtime: 'ruby')
         chart = LanguageCharts.new
-        data = JSON.parse(chart.support_columndata)
+        data = JSON.parse(chart.support_columndata 0)
 
         assert_equal(1, data.size, 'Unexpected amount of distinct runtime languages')
         assert_equal('ruby', data.first['name'].downcase, 'Unexpected runtime language name')
@@ -114,5 +131,5 @@ class TestLanguageStats < MiniTest::Unit::TestCase
         assert_equal('others', data[1]['name'].downcase, 'Unexpected runtime language name')
         assert_equal(9, data[1]['y'], 'Unexpected language support percentage')
       end
-
+=end
 end

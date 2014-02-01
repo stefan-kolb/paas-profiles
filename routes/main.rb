@@ -14,7 +14,7 @@ get '/vendor/:name' do
   @profile = Vendor.where(name: regex).first
 
   if @profile.nil?
-    halt 404, 'This PaaS does not exist anymore.'
+    halt 404, 'This one PaaSed away!'
   end
 
   @paas = @profile['name']

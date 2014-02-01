@@ -14,20 +14,20 @@ FactoryGirl.define do
 
     # runtimes
     ignore do
-      runtimes_count 1
+      language 'ruby'
     end
 
     after(:build) do |vendor, evaluator|
-      vendor.runtimes = build_list(:runtime, 1)
+      vendor.runtimes = build_list(:runtime, 1, language: evaluator.language)
     end
 
-    factory :vendor_with_runtimes do
+    factory :vendor_with_distinct_runtimes do
       ignore do
-        runtime 'ruby'
+        runtime_count 2
       end
 
       after(:build) do |vendor, evaluator|
-        vendor.runtimes = build_list(:runtime, 1, language: evaluator.runtime)
+        vendor.runtimes = build_list(:runtime, evaluator.runtime_count)
       end
     end
 

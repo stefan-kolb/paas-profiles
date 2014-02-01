@@ -2,6 +2,6 @@ require_relative '../../models/runtime'
 
 FactoryGirl.define do
   factory :runtime do
-    language 'ruby'
+    sequence(:language) { |n| "language#{n}" }
   end
 end

@@ -2,9 +2,12 @@ require_relative '../../models/vendor'
 require_relative '../../models/snapshot'
 require_relative '../../models/statistics/runtime_trend'
 require_relative '../version'
+require_relative '../helper/statistics_helper'
 
 # Base class that contains shared attributes and methods for specific chart implementations
 class Charts
+  extend StatisticsHelper
+
   # Standard color array for Highcharts
   COLORS = %w( #2f7ed8 #0d233a #8bbc21 #910000 #1aadce #492970 #f28f43 #77a1e5 #c42525 #a6c96a )
 
@@ -56,6 +59,7 @@ class Charts
     return data
   end
 
+  # todo define no threshold = false or 0? -> tests
   def support_columndata(type, threshold = 0.05)
     data = []
 
