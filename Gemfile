@@ -9,8 +9,11 @@ gem 'rake'
 gem 'iso_country_codes'
 gem 'versionomy'
 gem 'activesupport'
-gem 'minitest'
 gem 'sinatra-simple-navigation'
 gem 'geocoder'
-gem 'factory_girl'
-gem 'coveralls', require: false
+
+group :test do
+  gem 'minitest'
+  gem 'factory_girl'
+  gem 'coveralls', require: false
+end
