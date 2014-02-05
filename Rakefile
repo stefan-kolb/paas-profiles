@@ -74,7 +74,7 @@ namespace :mongo do
             puts e
             sleep(2)
             retry
-            # todo test if all are her = count distinct regions, country
+            # todo test if all are here = count distinct regions, country
           end
         end
       end

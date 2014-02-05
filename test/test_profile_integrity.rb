@@ -11,7 +11,7 @@ module PaasProfiles
     filename = File.basename(file, '.json')
 
     # test class
-    test_class = Class.new(MiniTest::Unit::TestCase) do
+    test_class = Class.new(MiniTest::Test) do
       # set file path
       @filepath = file
       # profile
