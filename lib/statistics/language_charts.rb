@@ -6,7 +6,6 @@ class LanguageCharts < Charts
   attr_reader :language_count, :mean_count, :mode_count, :median_count, :support_data, :support_categories
 
   def initialize
-    # TODO run all computation once?
     compute_averages
   end
 
@@ -87,16 +86,9 @@ class LanguageCharts < Charts
   def compute_averages
     runtime_count = Vendor.all.collect { |v| v.runtimes.count }
 
-    # mean
-    sum_languages = 0
-    runtime_count.each { |v| sum_languages += v }
-    @mean_count = (sum_languages / vendor_count.to_f).round(1)
-    # median
-    runtime_count.sort!
-    len = runtime_count.length
-    @median_count = (runtime_count[(len - 1) / 2] + runtime_count[len / 2]) / 2.0
-    # mode
-    @mode_count = runtime_count.group_by { |n| n }.values.max_by(&:size).first
+    @mean_count = Charts.mean(runtime_count)
+    @median_count = Charts.median(runtime_count)
+    @mode_count = Charts.mode(runtime_count)
   end
 
 end
