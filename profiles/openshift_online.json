@@ -89,7 +89,8 @@
       "name": "zend",
       "runtime": "php",
       "versions": [
-        "5.6"
+        "5.6",
+        "6.1"
       ]
     }
   ],
