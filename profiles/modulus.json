@@ -7,7 +7,7 @@
   "type": "language-specific",
   "hosting": {
     "public": true,
-    "private": false
+    "private": true
   },
   "pricing": [
     {
