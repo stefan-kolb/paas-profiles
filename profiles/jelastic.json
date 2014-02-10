@@ -158,9 +158,9 @@
     },
     {
       "continent": "EU",
-      "country": "FR",
+      "country": "RU",
       "region": "",
-      "provider": "Lunacloud"
+      "provider": "reg.ru"
     },
     {
       "continent": "EU",
@@ -176,9 +176,9 @@
     },
     {
       "continent": "EU",
-      "country": "RU",
+      "country": "FR",
       "region": "",
-      "provider": "reg.ru"
+      "provider": "Lunacloud"
     },
     {
       "continent": "EU",
@@ -188,9 +188,9 @@
     },
     {
       "continent": "EU",
-      "country": "SE",
+      "country": "GB",
       "region": "",
-      "provider": "Elastx"
+      "provider": "Layershift"
     },
     {
       "continent": "EU",
@@ -212,9 +212,9 @@
     },
     {
       "continent": "EU",
-      "country": "GB",
+      "country": "SE",
       "region": "",
-      "provider": "Layershift"
+      "provider": "Elastx"
     },
     {
       "continent": "NA",

@@ -93,15 +93,15 @@
   "extensible": false,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Chicago",
-      "provider": "Rackspace"
-    },
-    {
       "continent": "EU",
       "country": "GB",
       "region": "London",
+      "provider": "Rackspace"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Chicago",
       "provider": "Rackspace"
     }
   ]

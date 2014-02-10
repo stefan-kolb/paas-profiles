@@ -152,10 +152,9 @@
         ]
       },
       {
-        "name": "postgresql",
+        "name": "pgrouting",
         "versions": [
-          "8.4",
-          "9.2"
+          "2.0"
         ]
       },
       {
@@ -165,9 +164,10 @@
         ]
       },
       {
-        "name": "pgrouting",
+        "name": "postgresql",
         "versions": [
-          "2.0"
+          "8.4",
+          "9.2"
         ]
       },
       {

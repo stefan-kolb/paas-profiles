@@ -55,17 +55,17 @@
   ],
   "middleware": [
     {
-      "name": "tomcat",
-      "runtime": "java",
-      "versions": [
-        "7"
-      ]
-    },
-    {
       "name": "jetty",
       "runtime": "java",
       "versions": [
         "9"
+      ]
+    },
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "7"
       ]
     }
   ],
@@ -225,13 +225,13 @@
     {
       "continent": "NA",
       "country": "US",
-      "region": "Oregon",
+      "region": "Northern California",
       "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": "Northern California",
+      "region": "Oregon",
       "provider": "AWS"
     },
     {
