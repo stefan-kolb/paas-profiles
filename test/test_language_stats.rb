@@ -40,7 +40,7 @@ class TestLanguageStats < MiniTest::Test
         create_list(:vendor, 5, language: 'ruby')
         chart = LanguageCharts.new
         # 1,1,1,1,1
-        assert_equal(1, chart.mode_count, 'Unexpected mode language count')
+        assert_equal([1], chart.mode_count, 'Unexpected mode language count')
         # multimodal
         create_list(:vendor_with_distinct_runtimes, 5, runtime_count: 3)
         chart = LanguageCharts.new
