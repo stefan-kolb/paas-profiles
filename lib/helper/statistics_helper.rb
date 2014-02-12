@@ -19,7 +19,7 @@ module StatisticsHelper
     uniq = set.uniq
     uniq.delete_if { |e| freq[e] < freq.values.max }
 
-    uniq.size == 1 ? uniq.first : uniq
+    uniq
   end
 
   def mean(set)
@@ -29,4 +29,15 @@ module StatisticsHelper
 
     (set.reduce(:+) / set.length.to_f).round(1)
   end
+
+  def variance(set)
+    m = mean(set)
+    set.map{ |sample| (m - sample) ** 2 }.inject(:+) / set.size.to_f
+  end
+
+  def standard_deviation(set)
+    Math.sqrt(variance(set))
+  end
+
+  # TODO zusammenhangsmaße?
 end

@@ -46,7 +46,51 @@
 
 <div class="row">
   <div class="span12">
-    <h2><span class="text-info">Distribution and Density</span></h2>
+    <h3><span class="text-info">Overall</span></h3>
+
+    <div class="row">
+      <p class="span12">
+        The mean number of available infrastructure options in public offerings is
+        <span class="label label-inverse"><%= @chart.mean_count %></span>.
+      </p>
+      <table class="table table-bordered table-condensed span12">
+        <thead>
+        <tr>
+          <th>mean</th>
+          <th>median</th>
+          <th>mode</th>
+          <th>variance</th>
+          <th>sd</th>
+          <th>min</th>
+          <th>max</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><%= @chart.mean_count %></td>
+          <td><%= @chart.median_count %></td>
+          <td><%= @chart.mode_count.join(',') %></td>
+          <td><%= @chart.variance.round(1) %></td>
+          <td><%= @chart.sd.round(1) %></td>
+          <td><%= @chart.min %></td>
+          <td><%= @chart.max %></td>
+        </tr>
+        </tbody>
+      </table>
+      <div id="averages" style="height: 200px;" class="span12 chart"></div>
+    </div>
+    <p>
+      A lot of PaaS providers use established IaaS offerings for their infrastructure management.
+      At least
+    <span class="label label-inverse"><%= (@chart.external_providers / @chart.vendor_count.to_f * 100).round(0) %>
+      %</span> use external IaaS providers for their infrastructure management.<br>
+      <a href="http://aws.amazon.com/" target="_blank">Amazon Web Services</a> is by far the most often used IaaS
+      provider of PaaS vendors.
+    </p>
+  </div>
+
+  <div class="span12">
+    <h3><span class="text-info">Distribution and Density</span></h3>
     Below is a heat map of the world showing the geographical distribution and density of public PaaS infrastructures.
     The more saturated the orange countries are, the more offerings support an application deployment in that
     geographical region.
@@ -54,23 +98,28 @@
   </div>
   <div id="map" style="height: 400px;" class="span12 chart"></div>
   <div class="span12">
-    <h2><span class="text-info">Distribution</span></h2>
-    Continental distribution:
-    <% @chart.top_continents.each do |c| %>
-        <span class="label label-inverse"><%= c[0] %></span> (<%= c[1] %> %)
+    <h3><span class="text-info">Continental Distribution</span></h3>
+
+    <p>Infrastructure support on particular continents is different between PaaS.
+      Below, the graph shows the percentage of infrastructure support on a particular continent by public PaaS.
+      For example, deployment in <%= JSON.parse(@chart.top_continents)[0]['name'] %> is supported
+      by <i><%= JSON.parse(@chart.top_continents)[0]['y'] %> %</i> of the vendors.</p>
+  </div>
+
+  <div id="continents" style="height: 250px;" class="span12 chart"></div>
+
+  <!-- TODO Unique possible locations on continent: ? -->
+
+  <div class="span12">
+    <h3><span class="text-info">Country Distribution</span></h3>
+    Top 5 countries are:<br>
+    <% @chart.top_countries.each_with_index do |c, i| %>
+    <span class="label label-inverse"><%= IsoCountryCodes.find(c[:name]).name %></span> (<%= c[:value] %> times)<br>
     <% end %>
-    Top countries are: <%= @chart.top_countries.join(',') %> (31 times)
-    The mean number of available infrastructure options in public offerings is
-    <span class="label label-inverse"><%= @chart.mean_count %></span>.
-    Median <span class="label label-inverse"><%= @chart.median_count %></span>.
-    Modus <span class="label label-inverse"><%= @chart.mode_count %></span>.
-    At least
-    <span class="label label-inverse"><%= (@chart.external_providers / @chart.vendor_count.to_f * 100).round(0) %>
-      %</span> use external IaaS providers for their infrastructure management.
   </div>
 </div>
 
-<div id="footnotes">
+<div id="footnotes" style="margin-top: 50px; border-top: 1px #eee solid;">
   <small><sup class="muted">1</sup> The data source is the most recent collection of
     <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
   </small>
@@ -80,7 +129,17 @@
 <script src="../js/jquery-jvectormap-world-mill-en.js"></script>
 <script>
     $(document).ready(function () {
-        var data = <%= @chart.infras %>;
+        var continental_distribution = <%= @chart.top_continents %>;
+        // heat map
+        var data = <%= @chart.heatmap %>;
+        <%
+            markers = []
+
+            Datacenter.all.each do |center|
+                markers << { latLng: center.coordinates, name: "#{center}" }
+            end
+        %>
+        var markers = <%= markers.to_json %>;
 
         $('#map').vectorMap({
             map: 'world_mill_en',
@@ -103,10 +162,9 @@
                 ]
             },
             onRegionLabelShow: function (e, el, code) {
+                // the hovered region is not part of the regionResults, don't show the label
                 if (!data.hasOwnProperty(code)) {
-                    // the hovered region is not part of the regionResults, don't show the label
                     e.preventDefault();
-                    return false;
                 }
                 el.html(el.html() + ' (' + data[code] + ' times)');
             },
@@ -116,16 +174,91 @@
                     stroke: '#000000'
                 }
             },
-            markers:
-            <%
-                markers = []
-
-                Datacenter.all.each do |center|
-                    markers << { latLng: center.coordinates, name: "#{center}" }
-                end
-            %>
-            <%= markers.to_json %>
+            markers: markers
         });
-    })
-    ;
+
+        $('#averages').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Infrastructure Options Distribution'
+            },
+            xAxis: {
+
+            },
+            yAxis: {
+                min: 0,
+                tickInterval: 1,
+                title: {
+                    text: 'Count'
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            plotOptions: {
+                column: {
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            series: [
+                {
+                    data: <%= @chart.averages_data %>
+                }
+            ]
+        });
+
+        $('#continents').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Infrastructure Support by Continent'
+            },
+            xAxis: {
+                categories: []
+            },
+            yAxis: [
+                {
+                    min: 0,
+                    max: 100,
+                    title: {
+                        text: 'Support (%)'
+                    },
+                    labels: {
+                        formatter: function () {
+                            return this.value + ' %';
+                        }
+                    }
+                }
+            ],
+            tooltip: {
+                formatter: function () {
+                    var s = '<b>' + this.name + '</b>: Supported by <b>' + this.y + '%</b><br/>';
+                    return s;
+                }
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.1,
+                    borderWidth: 0
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            series: [
+                {
+                    data: continental_distribution,
+                    color: '#f89406'
+                }
+            ]
+        });
+    });
 </script>

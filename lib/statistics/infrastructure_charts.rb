@@ -1,31 +1,32 @@
 require_relative 'charts'
 
 class InfrastructureCharts < Charts
-  attr_reader :mean_count, :mode_count, :median_count, :external_providers
+  attr_reader :continent_codes, :mean_count, :mode_count, :median_count, :variance, :sd, :min, :max, :external_providers
 
   def initialize
-    # TODO run all computation once?
     compute_averages
+  end
+
+  def continent_codes
+    {
+        'AF' => 'Africa',
+        'AS' => 'Asia',
+        'EU' => 'Europe',
+        'NA' => 'North America',
+        'OC' => 'Oceania',
+        'SA' => 'South America'
+    }
+  end
+
+  def continent_by_code code
+    continent_codes[code]
   end
 
   def support_piedata
     data = Charts.new.get_piedata 'infrastructures.continent', false
 
     data.each do |e|
-      case e[0].upcase!
-        when "EU"
-          e[0] = "Europe"
-        when "SA"
-          e[0] = "South America"
-        when "NA"
-          e[0] = "North America"
-        when "AS"
-          e[0] = "Asia"
-        when "OC"
-          e[0] = "Oceania"
-        else
-          e[0] = "Africa"
-      end
+      e[0] = @continent_codes[e[0]]
     end
 
     # missing continents
@@ -34,7 +35,7 @@ class InfrastructureCharts < Charts
     return data
   end
 
-  def infras
+  def heatmap
     data = Hash.new
     # todo vendors that allow multiple deployments in one country are counted double
     Vendor.where(:infrastructures.exists => true).only(:infrastructures).each do |vendor|
@@ -59,39 +60,54 @@ class InfrastructureCharts < Charts
   end
 
   def top_continents
-    continents = %w( EU NA SA AS AF OC )
     data = []
 
-    continents.each do |c|
+    continent_codes.keys.each do |c|
       count = Vendor.where('infrastructures.continent' => c).count
       public = Vendor.where('hosting.public' => true).count
-      data << [ c, (count / public.to_f * 100).round(0) ]
+      # TODO missing public infras
+      percentage = (count / public.to_f * 100).round(0)
+      data << { name: continent_by_code(c), y: percentage }
     end
 
-    data.sort! { |x,y| y[1] <=> x[1] }
+    data.sort! { |x,y| y[:y] <=> x[:y] }
+    data.to_json
   end
 
   def top_countries( amount=5 )
-    h = JSON.parse(infras)
-    h.keys.sort {|a, b| h[b] <=> h[a]}
+    # TODO hacky
+    h = JSON.parse(heatmap)
+    top = h.keys.sort {|a, b| h[b] <=> h[a]}
+    data = []
+    h.each do |e|
+      if top.include? e[0]
+        data << { name: e[0], value: e[1]}
+      end
+    end
+    data.sort! { |x,y| y[:value] <=> x[:value] }
+    data.first(amount)
+  end
+
+  def averages_data
+    infra_count = Vendor.where('hosting.public' => true).collect { |v| v.infrastructures.count }
+    infra_count.delete_if { |e| e == 0 }
+    infra_count.sort!
   end
 
   private
 
   def compute_averages
     # only public offerings
-    # TODO what about possibly missing null infras
     infra_count = Vendor.where('hosting.public' => true).collect { |v| v.infrastructures.count }
-    # mean
-    sum_infras = 0
-    infra_count.each { |v| sum_infras += v }
-    @mean_count = (sum_infras / infra_count.size.to_f).round(1)
-    # median
-    infra_count.sort!
-    len = infra_count.size
-    @median_count = (infra_count[(len - 1) / 2] + infra_count[len / 2]) / 2.0
-    # mode
-    @mode_count = infra_count.group_by { |n| n }.values.max_by(&:size).first
+    # TODO data fuzz: remove missing infrastructures
+    infra_count.delete_if { |e| e == 0 }
+    @mean_count = Charts.mean(infra_count)
+    @median_count = Charts.median(infra_count)
+    @mode_count = Charts.mode(infra_count)
+    @variance = Charts.variance(infra_count)
+    @sd = Charts.standard_deviation(infra_count)
+    @min = infra_count.min
+    @max = infra_count.max
   end
 
 end
