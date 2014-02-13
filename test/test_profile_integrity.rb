@@ -13,18 +13,18 @@ module PaasProfiles
     # test class
     test_class = Class.new(MiniTest::Test) do
       # set file path
-      @filepath = file
+      @file_path = file
       # profile
       @profile = nil
 
-      def self.filepath
-        @filepath
+      def self.file_path
+        @file_path
       end
 
       # loads and validates profile
       def setup
         begin
-          json = JSON.parse(File.read(self.class.filepath))
+          json = JSON.parse(File.read(self.class.file_path))
           @profile = Vendor.new(json)
         rescue JSON::ParserError
           assert(@profile != nil, 'JSON structure is not wellformed')
@@ -111,9 +111,23 @@ module PaasProfiles
         end
       end
 
-      # TODO duplicate versions
+=begin
       # TODO version formats
-      # TODO service types
+      define_method('test_version_formats') do
+        # runtimes
+        # middleware
+        # frameworks
+        # native services
+      end
+
+      # TODO duplicate versions
+      define_method('test_version_duplicates') do
+        # runtimes
+        # middleware
+        # frameworks
+        # native services
+      end
+=end
     end
 
     # self-descriptive classname
