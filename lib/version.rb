@@ -22,7 +22,6 @@ class Version
 
   def unify
     if major
-
       return major << '.' << minor
     else
       return 'Unknown'

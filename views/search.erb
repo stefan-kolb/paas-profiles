@@ -64,13 +64,13 @@
    end
 
    # infras
-   unless params[:heatmap].nil?
+   unless params[:infras].nil?
      # private paas can be deployed everywhere
      if params[:hosting].nil?
-       query = query.or({"infrastructures.continent" => {"$all" => params[:heatmap]}}, {"hosting.private" => true})
+       query = query.or({"infrastructures.continent" => {"$all" => params[:infras]}}, {"hosting.private" => true})
      # if hosting = public match infras
      elsif params[:hosting].length == 1 && params[:hosting].include?("public")
-       query = query.all("infrastructures.continent" => params[:heatmap])
+       query = query.all("infrastructures.continent" => params[:infras])
      end
      # ignore infras if hosting == private
    end

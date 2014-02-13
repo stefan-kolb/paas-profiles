@@ -73,10 +73,10 @@ class LanguageCharts < Charts
     data << { name: 'Language-specific', data: [] }
     data << { name: 'Distinct languages', data: [] }
 
-    RuntimeStats.all.asc(:revision).each do |e|
-      data.find { |e| e[:name] == 'Polyglot' }[:data] << e.polyglot
-      data.find { |e| e[:name] == 'Language-specific' }[:data] << e.language_specific
-      data.find { |e| e[:name] == 'Distinct languages' }[:data] << e.distinct_languages
+    Statistics.all.each do |e|
+      data.find { |e| e[:name] == 'Polyglot' }[:data] << e.polyglot_count
+      data.find { |e| e[:name] == 'Language-specific' }[:data] << e.lspecific_count
+      data.find { |e| e[:name] == 'Distinct languages' }[:data] << e.language_count
     end
     data.to_json
   end

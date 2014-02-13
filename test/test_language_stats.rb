@@ -8,6 +8,7 @@ require_relative '../models/vendor'
 require_relative '../lib/statistics/language_charts'
 
 Mongoid.load!('config/mongoid.yml', :test)
+FactoryGirl.find_definitions
 
 class TestLanguageStats < MiniTest::Test
       include FactoryGirl::Syntax::Methods
