@@ -58,3 +58,13 @@ get '/statistics/infrastructures' do
 
   erb :'statistics/infrastructures'
 end
+
+get '/statistics/addons' do
+  require_relative '../lib/statistics/charts'
+  require_relative '../lib/statistics/addon_charts'
+
+  @title = "Platform as a Service | Add-on Statistics"
+  @chart = AddonCharts.new
+
+  erb :'statistics/addons'
+end

@@ -6,7 +6,12 @@ class StatusCharts
   end
 
   def status_count status
-    Vendor.where(status: status).count
+    if status != 'eol'
+      Vendor.where(status: status).count
+    else
+      # TODO
+      Dir["../../profiles/eol"].length
+    end
   end
 
   def status_piedata

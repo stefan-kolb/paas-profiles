@@ -144,6 +144,7 @@ class Charts
       end
     end
 
+    # TODO sort bug 0.11 > 0.2
     data = data.sort { |x, y| x <=> y }
     # TODO rundungsfehler bug?!
     data.each do |v|

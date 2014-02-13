@@ -74,8 +74,8 @@
         more languages (<i>Polyglot PaaS</i>) attract a greater customer mass and allow more flexibility for developing
         in different languages while sticking to one particular PaaS provider.
         The mean amount of supported languages is
-        <i class="icon-arrow-up" title="<%= (@chart.mean_count - Statistics.last.mean_lang_count).round(1) %>"></i>
-        <span class="label label-inverse" title="<%= @chart.mean_count %> (mean)&#013;<%= @chart.median_count %> (median)&#013;<%= @chart.mode_count %> (mode)"><%= @chart.mean_count %></span>.
+        <i class="icon-arrow-up"></i>
+        <span class="label label-inverse" title="<%= @chart.mean_count %> (mean)&#013;<%= @chart.median_count %> (median)&#013;<%= @chart.mode_count.join(',') %> (mode)"><%= @chart.mean_count %></span>.
         <!--TODO Trend icon and change! Other averages median, ... -->
       </div>
       <div id="polyglot" class="span7" style="height: 300px;"></div>
@@ -236,13 +236,12 @@
                 text: 'Runtime support over time'
             },
             xAxis: {
-                categories: <%= @chart.trend_categories %>
+                //categories: <%= @chart.trend_categories %>
             },
             yAxis: {
                 title: {
                     text: 'Count'
-                },
-                min: 0
+                }
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'

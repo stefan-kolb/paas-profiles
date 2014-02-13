@@ -1,6 +1,6 @@
 require 'mongoid'
 
-require_relative 'statistics/runtime_trend'
+require_relative 'statistics/runtime_stats'
 
 # trends?
 class Statistics

@@ -46,8 +46,8 @@
 <div class="row">
   <div class="span12">
     <h2><span class="text-info">Overall</span></h2>
-    In total, <span class="label label-inverse"><%= @chart.vendor_count %></span> vendor profiles are available at the moment.
-    The following graph shows the profile trend split into overall, active and discontinued vendors.
+    In total, <span class="label label-inverse"><%= @chart.total_vendors %></span> vendor profiles are available at the moment.
+    The following graph shows the profile trend split into <i>overall</i>, <i>active</i> and <i>discontinued</i> vendors.
   </div>
   <div id="overtime" style="height: 350px;" class="span12 chart text-center"></div>
   <div class="span12">
@@ -66,12 +66,12 @@
     <h2><span class="text-info">Quality</span></h2>
     <strong>missing values, values over time</strong>
   </div>
+</div>
 
-  <div id="footnotes">
-    <small><sup class="muted">1</sup> The data source is the most recent collection of
-      <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
-    </small>
-  </div>
+<div id="footnotes" style="margin-top: 50px; border-top: 1px #eee solid;">
+  <small><sup class="muted">1</sup> The data source is the most recent collection of
+    <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
+  </small>
 </div>
 
 <script>
@@ -84,13 +84,13 @@
                 text: 'Language support over time'
             },
             xAxis: {
-                categories: null
+                type: 'datetime'
+
             },
             yAxis: {
                 title: {
                     text: 'Support'
-                },
-                min: 0
+                }
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
@@ -104,15 +104,15 @@
             series: [
                 {
                     name: "Overall",
-                    data: [ 75, 80, 87 ]
+                    data: <%= @chart.overtime_all %>
                 },
                 {
                     name: "Active",
-                    data: [ 60, 66, 67 ]
+                    data: <%= @chart.overtime_a %>
                 },
                 {
                     name: "EOL",
-                    data: [ 32, 34, 55 ]
+                    data: <%= @chart.overtime_e %>
                 }
             ]
         });
