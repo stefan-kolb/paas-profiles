@@ -281,4 +281,5 @@ This optional field may specify the name of the external IaaS provider used by t
 ---
 [![Build Status](https://travis-ci.org/stefan-kolb/paas-profiles.png)](https://travis-ci.org/stefan-kolb/paas-profiles)
 [![Dependency Status](https://gemnasium.com/stefan-kolb/paas-profiles.png)](https://gemnasium.com/stefan-kolb/paas-profiles)
+[![Coverage Status](https://coveralls.io/repos/stefan-kolb/paas-profiles/badge.png?branch=master)](https://coveralls.io/r/stefan-kolb/paas-profiles?branch=master)
 [![Code Climate](https://codeclimate.com/github/stefan-kolb/paas-profiles.png)](https://codeclimate.com/github/stefan-kolb/paas-profiles)
