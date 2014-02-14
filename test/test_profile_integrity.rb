@@ -119,15 +119,38 @@ module PaasProfiles
         # frameworks
         # native services
       end
-
-      # TODO duplicate versions
+=end
+      # TODO superset versions
+      # no runtime version duplicates and overlaps
       define_method('test_version_duplicates') do
         # runtimes
+        @profile.runtimes.each do |r|
+          uniq_versions = r.versions.uniq
+
+          assert_equal(uniq_versions.length, r.versions.length, 'There must be no duplicate runtime versions. This includes versions overlapped by a version superset')
+        end
         # middleware
+        @profile.middlewares.each do |m|
+          uniq_versions = m.versions.uniq
+
+          assert_equal(uniq_versions.length, m.versions.length, 'There must be no duplicate middleware versions. This includes versions overlapped by a version superset')
+        end
         # frameworks
+        @profile.frameworks.each do |f|
+          uniq_versions = f.versions.uniq
+
+          assert_equal(uniq_versions.length, f.versions.length, 'There must be no duplicate framework versions. This includes versions overlapped by a version superset')
+        end
         # native services
+        unless @profile.service.blank? || @profile.service.natives.blank?
+          @profile.service.natives.each do |s|
+            uniq_versions = s.versions.uniq
+
+            assert_equal(uniq_versions.length, s.versions.length, 'There must be no duplicate native service versions. This includes versions overlapped by a version superset')
+          end
+        end
       end
-=end
+
     end
 
     # self-descriptive classname
