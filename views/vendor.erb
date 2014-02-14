@@ -41,7 +41,7 @@
           <span class="label label-success">Production</span>
       <% end %>
       <% unless @profile["status_since"].nil? %>
-      since <span class="date" title="<%= @profile["status_since"].to_date %>"></span>
+          since <span class="date" title="<%= @profile["status_since"].to_date %>"></span>
       <% end %>.</p>
 
     <p>
@@ -339,13 +339,9 @@
     %>
             <div class="text-left">
               <span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
-						<span>
-							<% iso = JSON.parse(IO.read("public/js/iso-3166-2.json")) %>
-                          <% unless rt["country"].empty? %>
-							<%= iso.detect { |c| c["alpha-2"] == rt["country"] }["name"].strip %><% end
-                                                                                                    unless rt["region"].empty? %>, <em><%= rt["region"] %></em>
-							<% end %>
-						</span>
+			    <span>
+				    <% unless rt['country'].empty? %><%= country_by_code rt['country'] %><% end %><% unless rt['region'].empty? %>, <em><%= rt["region"] %></em><% end %>
+				</span>
               <% unless rt["provider"].nil? %>
                   <small class="muted"><em>&mdash; provided by <%= rt["provider"] %></em></small>
               <% end %>
@@ -387,20 +383,19 @@
                 }
             },
             markers:
-                <%
-                    markers = []
+            <%
+                markers = []
 
-                    unless @profile['infrastructures'].blank?
-                        @profile['infrastructures'].each do |infra|
-                            unless infra['region'].blank?
-                                dc = Datacenter.where(region: infra['region'], country: infra['country']).first
-                                markers << { latLng: dc.coordinates, name: "#{dc}" } unless dc.nil?
-                            end
+                unless @profile['infrastructures'].blank?
+                    @profile['infrastructures'].each do |infra|
+                        unless infra['region'].blank?
+                            dc = Datacenter.where(region: infra['region'], country: infra['country']).first
+                            markers << { latLng: dc.coordinates, name: "#{dc}" } unless dc.nil?
                         end
                     end
-                %>
-                <%= markers.to_json %>
-            ,
+                end
+            %>
+            <%= markers.to_json %>,
             <% if !@profile["infrastructures"].nil? && @profile["infrastructures"].uniq { |h| h["continent"] }.size == 1 %>
             <%= "focusOn: '" << @profile["infrastructures"][0]["country"] << "'," %>
             <% end %>
