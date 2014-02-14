@@ -1,78 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title><%= @title %></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Platform as a Service Provider Comparison">
-		<meta name="keywords" content="PaaS, Comparison, Matching, Cloud, Platform as a Service, Cloud Computing">
-		<meta name="author" content="Stefan Kolb">
-		<link href="<%= url('/css/bootstrap.css') %>" rel="stylesheet">
-		<link rel="icon" href="<%= url('/favicon.png') %>" type="image/png">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <script src="<%= url('/js/bootstrap.min.js') %>"></script>
-        <script src="<%= url('/js/nprogress.js') %>"></script>
-        <link rel="stylesheet" href="<%= url('/css/nprogress.css') %>">
-		<style>
-			hr.soften {
-			  height: 1px;
-			  margin: 25px 0 25px 0;
-			  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-			  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-			  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-			  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-			  border: 0;
-			}
-		</style>
-        <script>
+<head>
+  <meta charset="utf-8">
+  <title><%= @title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Platform as a Service Provider Comparison">
+  <meta name="keywords" content="PaaS, Comparison, Matching, Cloud, Platform as a Service, Cloud Computing">
+  <meta name="author" content="Stefan Kolb">
+  <link href="<%= url('/css/bootstrap.css') %>" rel="stylesheet">
+  <link href="<%= url('/css/nprogress.css') %>" rel="stylesheet">
+  <link rel="icon" href="<%= url('/favicon.png') %>" type="image/png">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="<%= url('/js/bootstrap.min.js') %>"></script>
+  <script src="<%= url('/js/nprogress.js') %>"></script>
+  <style>
+      hr.soften {
+          height: 1px;
+          margin: 25px 0 25px 0;
+          background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+          background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+          background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+          background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+          border: 0;
+      }
+  </style>
+</head>
+<body>
+<div id="top" class="container" style="padding-top: 40px; padding-bottom: 30px;">
+  <%= render_navigation(renderer: :breadcrumbs) %>
 
-        </script>
-	</head>
-	<body>
-		<div id="top" class="container" style="padding-top: 40px; padding-bottom: 30px;">
-            <%= render_navigation(renderer: :breadcrumbs) %>
+  <div class="row">
+    <div class="span12">
+      <%= yield %>
+    </div>
+  </div>
+</div>
+<hr class="soften"/>
+<footer id="footer" style="background-color: #fff; padding-bottom: 60px;">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="row text-center">
+          <div class="span12">
+            <a href="https://github.com/stefan-kolb/paas-profiles" target="_blank" style="text-decoration: none; padding: 5px;">
+              <img src="<%= url('/img/github.png') %>" alt="github" style="width: 30px;">
+            </a>
+            <a href="mailto:stefan.kolb@uni-bamberg.de" target="_blank" style="text-decoration: none; padding: 5px;">
+              <img src="<%= url('/img/email.png') %>" alt="mail" style="width: 30px;">
+            </a>
+            <a href="https://twitter.com/stfnklb" target="_blank" style="text-decoration: none; padding: 5px;">
+              <img src="<%= url('/img/twitter.png') %>" alt="twitter" style="width: 30px;">
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span12 text-center" style="margin-top: 20px;">
+            <small><em>&copy; 2014</em></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+    $(document).ready(function () {
+        NProgress.start();
+    });
 
-			<div class="row">
-				<div class="span12">
-					<%= yield %>
-				</div>
-			</div>
-		</div>
-		<hr class="soften"/>
-		<footer id="footer" style="background-color: #fff; padding-bottom: 60px;">
-				<div class="container">
-					<div class="row">
-						<div class="span12">
-							<div class="row text-center">
-								<div class="span12">
-									<a href="https://github.com/stefan-kolb/paas-profiles" target="_blank" style="text-decoration: none; padding: 5px;">
-										<img src="<%= url('/img/github.png') %>" alt="github" style="width: 30px;">
-									</a>
-									<a href="mailto:stefan.kolb@uni-bamberg.de" target="_blank" style="text-decoration: none; padding: 5px;">
-										<img src="<%= url('/img/email.png') %>" alt="mail" style="width: 30px;">
-									</a>
-									<a href="https://twitter.com/stfnklb" target="_blank" style="text-decoration: none; padding: 5px;">
-										<img src="<%= url('/img/twitter.png') %>" alt="twitter" style="width: 30px;">
-									</a>									
-								</div>
-							</div>
-							<div class="row">
-								<div class="span12 text-center" style="margin-top: 20px;">
-									<small><em>&copy; 2013&ndash;2014</em></small>
-								</div>
-							</div>
-						</div>            
-					</div>
-				</div>
-			</footer>
-        <script>
-            $(document).ready(function () {
-                NProgress.start();
-            });
-
-            $(window).load(function() {
-                NProgress.done();
-            });
-        </script>
-	</body>
+    $(window).load(function () {
+        NProgress.done();
+    });
+</script>
+</body>
 </html>
