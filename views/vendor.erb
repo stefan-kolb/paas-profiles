@@ -335,22 +335,7 @@
        unless @profile["infrastructures"].nil?
          @profile["infrastructures"].sort { |a, b| a["continent"] <=> b["continent"] }.each do |rt|
 
-           title = ""
-
-           case rt["continent"]
-             when "EU"
-               title = "Europe"
-             when "SA"
-               title = "South America"
-             when "NA"
-               title = "North America"
-             when "AS"
-               title = "Asia"
-             when "OC"
-               title = "Oceania"
-             else
-               title = "Africa"
-           end
+           title = continent_by_code rt['continent']
     %>
             <div class="text-left">
               <span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
