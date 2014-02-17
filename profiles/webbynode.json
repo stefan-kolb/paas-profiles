@@ -1,6 +1,6 @@
 {
   "name": "Webbynode",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2014-02-17",
   "url": "http://webbynode.com/",
   "status": "production",
   "status_since": "2009-06-11",
@@ -11,7 +11,7 @@
   },
   "pricing": [
     {
-      "model": "",
+      "model": "fixed",
       "period": "monthly"
     }
   ],
@@ -21,7 +21,9 @@
     "auto": false
   },
   "compliance": [
-
+    "SSAE 16",
+    "HIPPA",
+    "PCI"
   ],
   "runtimes": [
     {
@@ -52,14 +54,76 @@
   "middleware": [
 
   ],
-  "frameworks": null,
-  "services": null,
+  "frameworks": [
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+        "1.2.1"
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "2",
+        "3"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "beanstalked",
+        "description": "",
+        "type": "worker",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "memcached",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extensible": false,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "Florida"
     }
   ]
 }
