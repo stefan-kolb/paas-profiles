@@ -1,9 +1,9 @@
 {
   "name": "Tier3 WebFabric",
-  "revision": "2013-07-10T16:00:54+02:00",
+  "revision": "2014-02-17",
   "url": "http://www.tier3.com/products/services/web-fabric",
-  "status": "production",
-  "status_since": "2012-06-01",
+  "status": "eol",
+  "status_since": "2013-11-19",
   "type": "polyglot",
   "hosting": {
     "public": true,

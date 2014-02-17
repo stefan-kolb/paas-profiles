@@ -1,0 +1,180 @@
+{
+  "name": "CenturyLink Cloud",
+  "revision": "2014-02-17",
+  "url": "http://www.centurylinkcloud.com/products/services/platform-as-a-service",
+  "status": "production",
+  "status_since": "2012-06-01",
+  "type": "polyglot",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "dotnet",
+      "versions": [
+        "2.0",
+        "4.0"
+      ]
+    },
+    {
+      "language": "erlang",
+      "versions": [
+        "R14B01"
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+        "1.6",
+        "1.7"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "0.4.12",
+        "0.6.8",
+        "0.8.2"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.3"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.6.5"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.8.7",
+        "1.9.2"
+      ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "blob",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "0.51"
+        ]
+      },
+      {
+        "name": "microsoft sql server",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "10.50.2500"
+        ]
+      },
+      {
+        "name": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.0"
+        ]
+      },
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.1"
+        ]
+      },
+      {
+        "name": "neo4j",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.0"
+        ]
+      },
+      {
+        "name": "rabbitmq",
+        "description": "",
+        "type": "worker",
+        "versions": [
+          "2.4"
+        ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.2"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "GB",
+      "region": ""
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Washington"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Utah"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Illinois"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "New York"
+    }
+  ]
+}
