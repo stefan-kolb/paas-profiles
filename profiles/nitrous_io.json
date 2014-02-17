@@ -1,6 +1,6 @@
 {
   "name": "Nitrous.io",
-  "revision": "2013-07-15",
+  "revision": "2014-02-17",
   "url": "https://www.nitrous.io",
   "status": "beta",
   "status_since": "2012-06-20",
@@ -55,7 +55,9 @@
       ]
     }
   ],
-  "middleware": null,
+  "middleware": [
+
+  ],
   "frameworks": [
     {
       "name": "django",
@@ -75,11 +77,51 @@
   "services": {
     "native": [
       {
-        "name": "sqlite",
+        "name": "elasticsearch",
+        "description": "",
+        "type": "search",
+        "versions": [
+          "1"
+        ]
+      },
+      {
+        "name": "memcached",
         "description": "",
         "type": "datastore",
         "versions": [
-
+          "1.4.15"
+        ]
+      },
+      {
+        "name": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.4.6"
+        ]
+      },
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.6.13"
+        ]
+      },
+      {
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.2.4"
+        ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.6.16"
         ]
       }
     ],
@@ -87,7 +129,7 @@
 
     ]
   },
-  "extensible": false,
+  "extensible": true,
   "infrastructures": [
     {
       "continent": "AS",
