@@ -20,7 +20,9 @@ get '/statistics/languages' do
   @title = "Platform as a Service | Language Statistics"
   @chart = LanguageCharts.new
 
-  erb :'statistics/languages'
+  erb :statistics_layout do
+    erb :'statistics/languages'
+  end
 end
 
 get '/statistics/services' do
@@ -28,7 +30,10 @@ get '/statistics/services' do
   require_relative '../lib/statistics/service_charts'
 
   @title = "Platform as a Service | Native Services Statistics"
-  erb :'statistics/services'
+
+  erb :statistics_layout do
+    erb :'statistics/services'
+  end
 end
 
 get '/statistics/status' do
@@ -36,7 +41,10 @@ get '/statistics/status' do
   require_relative '../lib/statistics/status_charts'
 
   @title = "Platform as a Service | Maturity Statistics"
-  erb :'statistics/status'
+
+  erb :statistics_layout do
+    erb :'statistics/status'
+  end
 end
 
 get '/statistics/data' do
@@ -46,7 +54,9 @@ get '/statistics/data' do
   @title = "Platform as a Service | Data Statistics"
   @chart = DataCharts.new
 
-  erb :'statistics/data'
+  erb :statistics_layout do
+    erb :'statistics/data'
+  end
 end
 
 get '/statistics/infrastructures' do
@@ -56,5 +66,19 @@ get '/statistics/infrastructures' do
   @title = "Platform as a Service | Infrastructure Statistics"
   @chart = InfrastructureCharts.new
 
-  erb :'statistics/infrastructures'
+  erb :statistics_layout do
+    erb :'statistics/infrastructures'
+  end
+end
+
+get '/statistics/addons' do
+  require_relative '../lib/statistics/charts'
+  require_relative '../lib/statistics/addon_charts'
+
+  @title = "Platform as a Service | Add-on Statistics"
+  @chart = AddonCharts.new
+
+  erb :statistics_layout do
+    erb :'statistics/addons'
+  end
 end

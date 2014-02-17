@@ -11,6 +11,7 @@ gem 'versionomy'
 gem 'activesupport'
 gem 'sinatra-simple-navigation'
 gem 'geocoder'
+gem 'git'
 
 group :test do
   gem 'minitest'
