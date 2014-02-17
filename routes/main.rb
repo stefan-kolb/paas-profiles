@@ -3,14 +3,14 @@ get '/' do
 end
 
 get '/vendors' do
-  @title = "Platform as a Service Provider Comparison"
+  @title = 'Platform as a Service Provider Comparison'
   erb :'profiles/vendors'
 end
 
 get '/vendor/:name' do
   @route = request.fullpath
   regex  = params[:name].gsub('_', '[\s\.]')
-  regex = Regexp.new(regex, "i")
+  regex = Regexp.new(regex, 'i')
   @profile = Vendor.where(name: regex).first
 
   if @profile.nil?
@@ -24,7 +24,7 @@ get '/vendor/:name' do
 end
 
 get '/filter' do
-  @title = "Find your PaaS | PaaS Comparison"
+  @title = 'Find your PaaS | PaaS Comparison'
   erb :'profiles/filter'
 end
 

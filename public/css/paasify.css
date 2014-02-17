@@ -1,0 +1,37 @@
+hr.soften {
+    height: 1px;
+    margin: 25px 0 25px 0;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    border: 0;
+}
+
+.jumbotron {
+    margin: 50px 0;
+    text-align: center;
+    background-size: 100%;
+}
+
+.jumbotron h1 {
+    font-size: 60px;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.jumbotron .lead {
+    font-size: 18px;
+    line-height: 1.25;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.chart {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
