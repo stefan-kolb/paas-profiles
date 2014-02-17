@@ -4,7 +4,7 @@ end
 
 get '/vendors' do
   @title = "Platform as a Service Provider Comparison"
-  erb :vendors
+  erb :'profiles/vendors'
 end
 
 get '/vendor/:name' do
@@ -20,14 +20,14 @@ get '/vendor/:name' do
   @paas = @profile['name']
   @title = "#{@paas} | PaaS Comparison"
 
-  erb :vendor
+  erb :'profiles/vendor'
 end
 
 get '/filter' do
   @title = "Find your PaaS | PaaS Comparison"
-  erb :filter
+  erb :'profiles/filter'
 end
 
 get '/search' do
-  erb :search, :layout => false
+  erb :'profiles/search', :layout => false
 end
