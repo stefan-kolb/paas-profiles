@@ -1,71 +1,34 @@
-<% chart = ServiceCharts.new %>
-<script src="http://code.highcharts.com/3.0/highcharts.js"></script>
-<script src="/js/themes/paasify.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
-<link rel="stylesheet" href="/css/theme.bootstrap.css">
-<style>
-      /* Main marketing message and sign up button */
-      .jumbotron {
-	  /*height: 400px;*/
-        margin: 50px 0;
-        text-align: center;
-		/*background: url("img/sub.png") no-repeat;*/
-		background-size: 100%;
-      }
-      .jumbotron h1 {
-        font-size: 60px;
-        line-height: 1;
-		background: rgba(255, 255, 255, 0.6);
-      }
-      .jumbotron .lead {
-        font-size: 18px;
-        line-height: 1.25;
-		background: rgba(255, 255, 255, 0.6);
-      }
-      .jumbotron .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-      }
-    .chart {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    </style>
-	
-	<div class="jumbotron">
-		<h1>Native Services</h1>
-        <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted"><small><a href="#footnotes">1</a></small></sup>.</p>
-	</div>
-
-    <div class="row">
-        <div class="span12">
-          <strong>Native Services and Version Support.</strong>
-          Today's PaaS support a variety of different runtime languages as basis for customer applications.
-          Currently, PaaS offerings support a total of <span class="label label-inverse"><%= chart.service_count %></span> different languages.
-          The Top 5 native services based on support percentage are
-          <% chart.support_categories.slice(0..4).each_with_index do |r,i| %>
-              <span class="label" style="background-color: <%= Charts::COLORS[i] %>;"><%= r %></span>
-          <% end %>.
-          The following chart shows the support percentage of all available languages. When clicking on the language bars, a drilldown on the different available language versions will be made.
-        </div>
-        <div id="languages" style="height: 350px;" class="span12 chart text-center"></div>
-        <div class="span12">
-        <div class="row">
-            <div class="span5">
-              When PaaS first started, a lot of the offerings did only support one specific language. This changed dramatically over time.
-              Most of today's PaaS support way more than one language. While a specialization on one language may result in better and more specialized support of that language,
-              more languages attract a greater customer mass and allow more flexibility when developing in different languages.
-              The average amount of supported languages is <i class="icon-arrow-up"></i> <span class="label label-inverse"><%= chart.avg_service_count %></span>.
-              <!--TODO Trend icon and change! -->
-            </div>
-            <div id="polyglot" class="span7" style="height: 300px;"></div>
-        </div>
-        </div>
-        </div>
-    <div id="footnotes"><small><sup class="muted">1</sup> The data source is the most recent collection of <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.</small></div>
+<div class="span12">
+  <strong>Native Services and Version Support.</strong>
+  Today's PaaS support a variety of different runtime languages as basis for customer applications.
+  Currently, PaaS offerings support a total of <span class="label label-inverse"><%= chart.service_count %></span>
+  different languages.
+  The Top 5 native services based on support percentage are
+  <% chart.support_categories.slice(0..4).each_with_index do |r, i| %>
+      <span class="label" style="background-color: <%= Charts::COLORS[i] %>;"><%= r %></span>
+  <% end %>.
+  The following chart shows the support percentage of all available languages. When clicking on the language bars, a
+  drilldown on the different available language versions will be made.
+</div>
+<div id="languages" style="height: 350px;" class="span12 chart text-center"></div>
+<div class="span12">
+  <div class="row">
+    <div class="span5">
+      When PaaS first started, a lot of the offerings did only support one specific language. This changed dramatically
+      over time.
+      Most of today's PaaS support way more than one language. While a specialization on one language may result in
+      better and more specialized support of that language,
+      more languages attract a greater customer mass and allow more flexibility when developing in different languages.
+      The average amount of supported languages is <i class="icon-arrow-up"></i>
+      <span class="label label-inverse"><%= chart.avg_service_count %></span>.
+      <!--TODO Trend icon and change! -->
+    </div>
+    <div id="polyglot" class="span7" style="height: 300px;"></div>
+  </div>
+</div>
 
 <script>
-	$(document).ready(function() {
+    $(document).ready(function () {
         function setChart(name, categories, data, color) {
             chart.xAxis[0].setCategories(categories, false);
             chart.series[0].remove(false);
@@ -94,51 +57,52 @@
             xAxis: {
                 categories: categories
             },
-            yAxis: [{
-                min: 0,
-                max: 100,
-                title: {
-                    text: 'Support'
+            yAxis: [
+                {
+                    min: 0,
+                    max: 100,
+                    title: {
+                        text: 'Support'
+                    },
+                    labels: {
+                        formatter: function () {
+                            return this.value + ' %';
+                        }
+                    }/*,
+                 plotLines: [{
+                 color: '#3a87ad',
+                 dashStyle: 'ShortDash',
+                 width: 1,
+                 value: 67,
+                 zIndex: 0,
+                 label: {
+                 text: '100 %'
+                 }
+                 }]*/
                 },
-                labels:{
-                    formatter:function(){
-                        return this.value + ' %';
-                    }
-                }/*,
-                plotLines: [{
-                    color: '#3a87ad',
-                    dashStyle: 'ShortDash',
-                    width: 1,
-                    value: 67,
-                    zIndex: 0,
-                    label: {
-                        text: '100 %'
-                    }
-                }]*/
-            },
                 {
                     title: {
                         text: 'Count'
                     },
-                    labels:{
-                        formatter:function(){
+                    labels: {
+                        formatter: function () {
                             // TODO redraw axis for drilldown!
-                            max=<%= Charts.new.vendor_count %>,
-                                    min=0,
-                                    range=max-min;
+                            max =<%= Charts.new.vendor_count %>,
+                                    min = 0,
+                                    range = max - min;
                             return (this.value * max / 100.0).toFixed(0);
                         }
                     },
-                    linkedTo:0,
-                    opposite:true
+                    linkedTo: 0,
+                    opposite: true
                 }
             ],
             tooltip: {
-                formatter: function() {
+                formatter: function () {
                     var point = this.point,
-                            s = '<b>' + point.name +'</b>: Supported by <b>'+ this.y +'%</b><br/>';
+                            s = '<b>' + point.name + '</b>: Supported by <b>' + this.y + '%</b><br/>';
                     if (point.drilldown) {
-                        s += 'Click to view '+ point.category +' versions';
+                        s += 'Click to view ' + point.category + ' versions';
                     } else if (point.category != 'Others') {
                         s += 'Click to return to languages';
                     }
@@ -152,7 +116,7 @@
                     cursor: 'pointer',
                     point: {
                         events: {
-                            click: function() {
+                            click: function () {
                                 var drilldown = this.drilldown;
                                 if (drilldown) { // drill down
                                     // TODO axis must be redrawn too
@@ -165,11 +129,13 @@
                     }
                 }
             },
-            series: [{
-                name: name,
-                data: data,
-                color: 'white'
-            }]
+            series: [
+                {
+                    name: name,
+                    data: data,
+                    color: 'white'
+                }
+            ]
         }).highcharts();
-	});
+    });
 </script>

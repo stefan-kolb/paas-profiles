@@ -1,77 +1,27 @@
-<script src="http://code.highcharts.com/3.0/highcharts.js"></script>
-<script src="/js/themes/paasify.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
-<link rel="stylesheet" href="/css/theme.bootstrap.css">
-<style>
-        /* Main marketing message and sign up button */
-    .jumbotron {
-        /*height: 400px;*/
-        margin: 50px 0;
-        text-align: center;
-        background-size: 100%;
-    }
-
-    .jumbotron h1 {
-        font-size: 60px;
-        line-height: 1;
-        background: rgba(255, 255, 255, 0.6);
-    }
-
-    .jumbotron .lead {
-        font-size: 18px;
-        line-height: 1.25;
-        background: rgba(255, 255, 255, 0.6);
-    }
-
-    .jumbotron .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-    }
-
-    .chart {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-</style>
-
-<div class="jumbotron">
-  <h1>Data Quality</h1>
-
-  <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted">
-    <small><a href="#footnotes">1</a></small>
-  </sup>.
-  </p>
+<div class="span12">
+  <h2><span class="text-info">Overall</span></h2>
+  In total, <span class="label label-inverse"><%= @chart.total_vendors %></span> vendor profiles are available at the
+  moment.
+  The following graph shows the profile trend split into <i>overall</i>, <i>active</i> and <i>discontinued</i> vendors.
 </div>
-
-<div class="row">
-  <div class="span12">
-    <h2><span class="text-info">Overall</span></h2>
-    In total, <span class="label label-inverse"><%= @chart.vendor_count %></span> vendor profiles are available at the moment.
-    The following graph shows the profile trend split into overall, active and discontinued vendors.
-  </div>
-  <div id="overtime" style="height: 350px;" class="span12 chart text-center"></div>
-  <div class="span12">
-    <h2><span class="text-info">Participation</span></h2>
-    All profiles are open for community validation. Currently, <span class="label label-inverse"><%= @chart.verified_count %></span> profiles were additionally verified by vendor participation.
-    Verified over time. how many commits forks stars seitenaufrufe?
-  </div>
-  <div id="status" style="height: 350px;" class="span12 chart text-center"></div>
-  <div class="span12">
-    <h2><span class="text-info">Updates</span></h2>
-    The last profile update was <i>3 hours ago</i>.
-    Oldest profile. Update intervall. Updates per profile.
-    Count commits on profiles.
-  </div>
-  <div class="span12">
-    <h2><span class="text-info">Quality</span></h2>
-    <strong>missing values, values over time</strong>
-  </div>
-
-  <div id="footnotes">
-    <small><sup class="muted">1</sup> The data source is the most recent collection of
-      <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
-    </small>
-  </div>
+<div id="overtime" style="height: 350px;" class="span12 chart text-center"></div>
+<div class="span12">
+  <h2><span class="text-info">Participation</span></h2>
+  All profiles are open for community validation. Currently,
+  <span class="label label-inverse"><%= @chart.verified_count %></span> profiles were additionally verified by vendor
+  participation.
+  Verified over time. how many commits forks stars seitenaufrufe?
+</div>
+<div id="status" style="height: 350px;" class="span12 chart text-center"></div>
+<div class="span12">
+  <h2><span class="text-info">Updates</span></h2>
+  The last profile update was <i>3 hours ago</i>.
+  Oldest profile. Update intervall. Updates per profile.
+  Count commits on profiles.
+</div>
+<div class="span12">
+  <h2><span class="text-info">Quality</span></h2>
+  <strong>missing values, values over time</strong>
 </div>
 
 <script>
@@ -84,13 +34,13 @@
                 text: 'Language support over time'
             },
             xAxis: {
-                categories: null
+                type: 'datetime'
+
             },
             yAxis: {
                 title: {
                     text: 'Support'
-                },
-                min: 0
+                }
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b> ({point.y} Total)'
@@ -104,15 +54,15 @@
             series: [
                 {
                     name: "Overall",
-                    data: [ 75, 80, 87 ]
+                    data: <%= @chart.overtime_all %>
                 },
                 {
                     name: "Active",
-                    data: [ 60, 66, 67 ]
+                    data: <%= @chart.overtime_a %>
                 },
                 {
                     name: "EOL",
-                    data: [ 32, 34, 55 ]
+                    data: <%= @chart.overtime_e %>
                 }
             ]
         });
@@ -140,11 +90,13 @@
                     }
                 }
             },
-            series: [{
-                name: 'Supported by',
-                innerSize: '60%',
-                data: <%= @chart.verification_chart 'pie' %>
-            }]
+            series: [
+                {
+                    name: 'Supported by',
+                    innerSize: '60%',
+                    data: <%= @chart.verification_chart 'pie' %>
+                }
+            ]
         });
     });
 </script>

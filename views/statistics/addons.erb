@@ -1,0 +1,64 @@
+<div class="span12">
+  <strong>Native Services and Version Support.</strong>
+  Today's PaaS support a variety of different runtime languages as basis for customer applications.
+  Currently, PaaS offerings support a total of <span class="label label-inverse"><%= @chart %></span>
+  different languages.
+  The Top 5 native services based on support percentage are
+  The following chart shows the support percentage of all available languages. When clicking on the language bars, a
+  drilldown on the different available language versions will be made.
+</div>
+<div id="support" style="height: 350px;" class="span12 chart text-center"></div>
+<div id="languages" style="height: 350px;" class="span12 chart text-center"></div>
+<div class="span12">
+  <div class="row">
+    <div class="span5">
+      When PaaS first started, a lot of the offerings did only support one specific language. This changed
+      dramatically over time.
+      Most of today's PaaS support way more than one language. While a specialization on one language may result in
+      better and more specialized support of that language,
+      more languages attract a greater customer mass and allow more flexibility when developing in different
+      languages.
+      The average amount of supported add-ons is <i class="icon-arrow-up"><%= %></i>
+      <span class="label label-inverse"></span>.
+      <!--TODO Trend icon and change! -->
+    </div>
+    <div id="polyglot" class="span7" style="height: 300px;"></div>
+  </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $('#support').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Add-on Ecosystem',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: 0
+            },
+            tooltip: {
+                pointFormat: '<b>{point.percentage:.1f}%</b> ({point.y} Total)',
+                useHTML: true
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: 15,
+                        format: '<strong>{point.name}</strong>: <span class="text-info">{point.percentage:.1f} %</span>'
+                    }
+                }
+            },
+            series: [
+                {
+                    name: 'Supported by',
+                    innerSize: '60%',
+                    data: <%= @chart.support_chart 'pie' %>
+                }
+            ]
+        });
+    });
+</script>

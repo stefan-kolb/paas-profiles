@@ -1,128 +1,76 @@
 <link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
-<script src="http://code.highcharts.com/3.0/highcharts.js"></script>
-<script src="/js/themes/paasify.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
-<link rel="stylesheet" href="/css/theme.bootstrap.css">
-<style>
-        /* Main marketing message and sign up button */
-    .jumbotron {
-        /*height: 400px;*/
-        margin: 50px 0;
-        text-align: center;
-        background-size: 100%;
-    }
 
-    .jumbotron h1 {
-        font-size: 60px;
-        line-height: 1;
-        background: rgba(255, 255, 255, 0.6);
-    }
+<div class="span12">
+  <h3><span class="text-info">Overall</span></h3>
 
-    .jumbotron .lead {
-        font-size: 18px;
-        line-height: 1.25;
-        background: rgba(255, 255, 255, 0.6);
-    }
-
-    .jumbotron .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-    }
-
-    .chart {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-</style>
-
-<div class="jumbotron">
-  <h1>Public Infrastructures</h1>
-
-  <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted">
-    <small><a href="#footnotes">1</a></small>
-  </sup>.
+  <div class="row">
+    <p class="span12">
+      The mean number of available infrastructure options in public offerings is
+      <span class="label label-inverse"><%= @chart.mean_count %></span>.
+    </p>
+    <table class="table table-bordered table-condensed span12">
+      <thead>
+      <tr>
+        <th>mean</th>
+        <th>median</th>
+        <th>mode</th>
+        <th>variance</th>
+        <th>sd</th>
+        <th>min</th>
+        <th>max</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><%= @chart.mean_count %></td>
+        <td><%= @chart.median_count %></td>
+        <td><%= @chart.mode_count.join(',') %></td>
+        <td><%= @chart.variance.round(1) %></td>
+        <td><%= @chart.sd.round(1) %></td>
+        <td><%= @chart.min %></td>
+        <td><%= @chart.max %></td>
+      </tr>
+      </tbody>
+    </table>
+    <div id="averages" style="height: 200px;" class="span12 chart"></div>
+  </div>
+  <p>
+    A lot of PaaS providers use established IaaS offerings for their infrastructure management.
+    At least
+    <span class="label label-inverse"><%= (@chart.external_providers / @chart.vendor_count.to_f * 100).round(0) %>
+      %</span> use external IaaS providers for their infrastructure management.<br>
+    <a href="http://aws.amazon.com/" target="_blank">Amazon Web Services</a> is by far the most often used IaaS
+    provider of PaaS vendors.
   </p>
 </div>
 
-<div class="row">
-  <div class="span12">
-    <h3><span class="text-info">Overall</span></h3>
+<div class="span12">
+  <h3><span class="text-info">Distribution and Density</span></h3>
+  Below is a heat map of the world showing the geographical distribution and density of public PaaS infrastructures.
+  The more saturated the orange countries are, the more offerings support an application deployment in that
+  geographical region.
+  The markers indicate data center locations that are specified more precisely.
+</div>
+<div id="map" style="height: 400px;" class="span12 chart"></div>
+<div class="span12">
+  <h3><span class="text-info">Continental Distribution</span></h3>
 
-    <div class="row">
-      <p class="span12">
-        The mean number of available infrastructure options in public offerings is
-        <span class="label label-inverse"><%= @chart.mean_count %></span>.
-      </p>
-      <table class="table table-bordered table-condensed span12">
-        <thead>
-        <tr>
-          <th>mean</th>
-          <th>median</th>
-          <th>mode</th>
-          <th>variance</th>
-          <th>sd</th>
-          <th>min</th>
-          <th>max</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td><%= @chart.mean_count %></td>
-          <td><%= @chart.median_count %></td>
-          <td><%= @chart.mode_count.join(',') %></td>
-          <td><%= @chart.variance.round(1) %></td>
-          <td><%= @chart.sd.round(1) %></td>
-          <td><%= @chart.min %></td>
-          <td><%= @chart.max %></td>
-        </tr>
-        </tbody>
-      </table>
-      <div id="averages" style="height: 200px;" class="span12 chart"></div>
-    </div>
-    <p>
-      A lot of PaaS providers use established IaaS offerings for their infrastructure management.
-      At least
-    <span class="label label-inverse"><%= (@chart.external_providers / @chart.vendor_count.to_f * 100).round(0) %>
-      %</span> use external IaaS providers for their infrastructure management.<br>
-      <a href="http://aws.amazon.com/" target="_blank">Amazon Web Services</a> is by far the most often used IaaS
-      provider of PaaS vendors.
-    </p>
-  </div>
-
-  <div class="span12">
-    <h3><span class="text-info">Distribution and Density</span></h3>
-    Below is a heat map of the world showing the geographical distribution and density of public PaaS infrastructures.
-    The more saturated the orange countries are, the more offerings support an application deployment in that
-    geographical region.
-    The markers indicate data center locations that are specified more precisely.
-  </div>
-  <div id="map" style="height: 400px;" class="span12 chart"></div>
-  <div class="span12">
-    <h3><span class="text-info">Continental Distribution</span></h3>
-
-    <p>Infrastructure support on particular continents is different between PaaS.
-      Below, the graph shows the percentage of infrastructure support on a particular continent by public PaaS.
-      For example, deployment in <%= JSON.parse(@chart.top_continents)[0]['name'] %> is supported
-      by <i><%= JSON.parse(@chart.top_continents)[0]['y'] %> %</i> of the vendors.</p>
-  </div>
-
-  <div id="continents" style="height: 250px;" class="span12 chart"></div>
-
-  <!-- TODO Unique possible locations on continent: ? -->
-
-  <div class="span12">
-    <h3><span class="text-info">Country Distribution</span></h3>
-    Top 5 countries are:<br>
-    <% @chart.top_countries.each_with_index do |c, i| %>
-    <span class="label label-inverse"><%= IsoCountryCodes.find(c[:name]).name %></span> (<%= c[:value] %> times)<br>
-    <% end %>
-  </div>
+  <p>Infrastructure support on particular continents is different between PaaS.
+    Below, the graph shows the percentage of infrastructure support on a particular continent by public PaaS.
+    For example, deployment in <%= JSON.parse(@chart.top_continents)[0]['name'] %> is supported
+    by <i><%= JSON.parse(@chart.top_continents)[0]['y'] %> %</i> of the vendors.</p>
 </div>
 
-<div id="footnotes" style="margin-top: 50px; border-top: 1px #eee solid;">
-  <small><sup class="muted">1</sup> The data source is the most recent collection of
-    <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
-  </small>
+<div id="continents" style="height: 250px;" class="span12 chart"></div>
+
+<!-- TODO Unique possible locations on continent: ? -->
+
+<div class="span12">
+  <h3><span class="text-info">Country Distribution</span></h3>
+  Top 5 countries are:<br>
+  <% @chart.top_countries.each_with_index do |c, i| %>
+      <span class="label label-inverse"><%= IsoCountryCodes.find(c[:name]).name %></span> (<%= c[:value] %> times)<br>
+  <% end %>
 </div>
 
 <script src="../js/jquery-jvectormap-1.2.2.min.js"></script>
@@ -240,7 +188,7 @@
             ],
             tooltip: {
                 formatter: function () {
-                    var s = '<b>' + this.name + '</b>: Supported by <b>' + this.y + '%</b><br/>';
+                    var s = '<b>' + this.category + '</b>: Supported by <b>' + this.y + '%</b><br/>';
                     return s;
                 }
             },
