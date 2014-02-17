@@ -10,7 +10,7 @@ get '/statistics' do
   @service_chart = ServiceCharts.new
   @scaling_chart = ScalingCharts.new
 
-  erb :statistics
+  erb :'statistics/overview'
 end
 
 get '/statistics/languages' do
