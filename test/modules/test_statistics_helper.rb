@@ -22,7 +22,7 @@ class TestStatisticsHelper < MiniTest::Unit::TestCase
 
   def test_mode_unimodal
     array = [1, 2, 2, 3]
-    assert_equal(2, DummyClass.mode(array), 'Unexpected mode value')
+    assert_equal([2], DummyClass.mode(array), 'Unexpected mode value')
   end
 
   def test_mode_multimodal
@@ -32,7 +32,7 @@ class TestStatisticsHelper < MiniTest::Unit::TestCase
 
   def test_mode_of_one_element
     array = [2]
-    assert_equal(2, DummyClass.mode(array), 'Unexpected mode value')
+    assert_equal([2], DummyClass.mode(array), 'Unexpected mode value')
   end
 
   def test_mode_of_empty_array
