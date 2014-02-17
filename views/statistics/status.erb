@@ -1,19 +1,19 @@
 <div class="span12">
   <h2><span class="text-info">Product Lifecycle</span></h2>
-  Currently, <span class="label label-warning"><%= chart.status_count 'beta' %></span> offerings are in
+  Currently, <span class="label label-warning"><%= @chart.status_count 'beta' %></span> offerings are in
   <span class="label label-warning">Beta</span>,
-  while <span class="label label-success"><%= chart.status_count 'production' %></span> are in
+  while <span class="label label-success"><%= @chart.status_count 'production' %></span> are in
   <span class="label label-success">Production</span>.
-  <span class="label label-inverse"><%= chart.status_count 'eol' %></span> are discontinued or consolidated into other
+  <span class="label label-inverse"><%= @chart.status_count 'eol' %></span> are discontinued or consolidated into other
   PaaS.
 </div>
 <div id="status" style="height: 350px;" class="span12 chart text-center"></div>
 <div class="span12">
   <strong>Runtime Language Trend.</strong>
   The mean maturity of production ready PaaS is
-  <span class="label label-success"><%= chart.mean_maturity 'production' %> months</span>.
-  The mean maturity of beta PaaS is <span class="label label-warning"><%= chart.mean_maturity 'beta' %> months</span>.
-  The overall maturity of PaaS is <span class="label label-inverse"><%= chart.mean_maturity %> months</span>.
+  <span class="label label-success"><%= @chart.mean_maturity 'production' %> months</span>.
+  The mean maturity of beta PaaS is <span class="label label-warning"><%= @chart.mean_maturity 'beta' %> months</span>.
+  The overall maturity of PaaS is <span class="label label-inverse"><%= @chart.mean_maturity %> months</span>.
 </div>
 <div id="overtime" style="height: 350px;" class="span12 chart text-center"></div>
 <div class="span12">
@@ -26,7 +26,7 @@
       more languages (<i>Polyglot PaaS</i>) attract a greater customer mass and allow more flexibility for developing
       in different languages while sticking to one particular PaaS provider.
       The average amount of supported languages is <i class="icon-arrow-up" title="(+0.01)"></i>
-      <span class="label label-inverse" title="<%= chart.mean_count %> (mean)&#013;<%= chart.median_count %> (median)&#013;<%= chart.mode_count %> (mode)"><%= chart.mean_count %></span>.
+      <span class="label label-inverse" title="<%= @chart.mean_count %> (mean)&#013;<%= @chart.median_count %> (median)&#013;<%= @chart.mode_count %> (mode)"><%= @chart.mean_count %></span>.
       <!--TODO Trend icon and change! Other averages median, ... -->
     </div>
     <div id="polyglot" class="span7" style="height: 300px;"></div>
@@ -63,7 +63,7 @@
                 {
                     name: 'Supported by',
                     innerSize: '60%',
-                    data: <%= chart.status_piedata %>
+                    data: <%= @chart.status_piedata %>
                 }
             ]
         });
@@ -85,7 +85,7 @@
                         color: '#468847',
                         dashStyle: 'ShortDash',
                         width: 2,
-                        value: <%= chart.mean_maturity 'production' %>,
+                        value: <%= @chart.mean_maturity 'production' %>,
                         zIndex: 0,
                         label: {
                             text: 'avg. production'
@@ -95,7 +95,7 @@
                         color: '#f89406',
                         dashStyle: 'ShortDash',
                         width: 2,
-                        value: <%= chart.mean_maturity 'beta' %>,
+                        value: <%= @chart.mean_maturity 'beta' %>,
                         zIndex: 0,
                         label: {
                             text: 'avg. beta'
@@ -105,7 +105,7 @@
                         color: 'black',
                         dashStyle: 'ShortDash',
                         width: 2,
-                        value: <%= chart.mean_maturity %>,
+                        value: <%= @chart.mean_maturity %>,
                         zIndex: 0,
                         label: {
                             text: 'avg. overall'
@@ -128,7 +128,7 @@
                 verticalAlign: 'middle',
                 borderWidth: 0
             },
-            series: <%= chart.status_maturity %>
+            series: <%= @chart.status_maturity %>
         });
 
     });
