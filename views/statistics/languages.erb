@@ -44,7 +44,7 @@
 
 <script>
     $(document).ready(function () {
-        function setChart(name, categories, data, color) {
+        function setChart(name, categories, data, color, latest) {
             chart.xAxis[0].setCategories(categories, false);
             chart.series[0].remove(false);
             chart.addSeries({
@@ -52,6 +52,19 @@
                 data: data,
                 color: color || 'white'
             }, false);
+            if(!data[0].drilldown) {
+                chart.renderer.text('<b>Current Stable</b>: ' + latest, 100, 75)
+                    .css({
+                        color: color
+                    })
+                .add();
+            } else {
+                chart.renderer.rect(85, 60, 200, 20, 0)
+                        .attr({
+                            fill: 'white'
+                        })
+                        .add();
+            }
             chart.redraw();
         }
 
@@ -125,7 +138,7 @@
                                 var drilldown = this.drilldown;
                                 if (drilldown) { // drill down
                                     // TODO axis must be redrawn too
-                                    setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
+                                    setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color, drilldown.latest);
                                 } else { // restore
                                     setChart(name, categories, data);
                                 }

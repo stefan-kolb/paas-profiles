@@ -8,6 +8,20 @@ require_relative '../helper/statistics_helper'
 class Charts
   extend StatisticsHelper
 
+  # TODO make dynamic
+  LATEST = {
+      'php' => '5.5.9',
+      'java' => '1.7.0_51',
+      'ruby' => '2.1.0',
+      'node' => '0.10.25',
+      'python' => '3.3.4',
+      'dotnet' => '4.5',
+      'perl' => '5.18.2',
+      'go' => '1.2',
+      'scala' => '2.10.3',
+      'erlang' => 'R16B03',
+      'clojure' => '1.5.1'
+  }
   # Standard color array for Highcharts
   COLORS = %w( #2f7ed8 #0d233a #8bbc21 #910000 #1aadce #492970 #f28f43 #77a1e5 #c42525 #a6c96a )
 
@@ -69,6 +83,7 @@ class Charts
       data << {name: l, y: (count / vendor_count.to_f * 100).to_i, drilldown: {
           name: "#{l.capitalize} Versions",
           categories: distinct_versions(l),
+          latest: LATEST[l],
           data: distinct_versions_data(l)
       }
       }
@@ -144,6 +159,7 @@ class Charts
       end
     end
 
+    # TODO sort bug 0.11 > 0.2
     data = data.sort { |x, y| x <=> y }
     # TODO rundungsfehler bug?!
     data.each do |v|
