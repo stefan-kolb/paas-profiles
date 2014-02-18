@@ -166,8 +166,8 @@ module PaasProfiles
 
     end
 
-    # self-descriptive classname TODO each part of filename should be capitalized
-    self.const_set("Test#{filename.capitalize}", test_class)
+    # self-descriptive classname
+    self.const_set("Test#{filename.split('_').map(&:capitalize).join('_')}", test_class)
 
   end
 end
