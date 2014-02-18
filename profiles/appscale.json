@@ -1,6 +1,6 @@
 {
   "name": "AppScale",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2014-02-19",
   "url": "http://www.appscale.com/",
   "status": "production",
   "status_since": "2009-03-07",
@@ -24,13 +24,14 @@
     {
       "language": "go",
       "versions": [
-
+        "1.0"
       ]
     },
     {
       "language": "java",
       "versions": [
-
+        "1.6",
+        "1.7"
       ]
     },
     {
@@ -40,9 +41,15 @@
       ]
     },
     {
+      "language": "php",
+      "versions": [
+        "5.4.8"
+      ]
+    },
+    {
       "language": "python",
       "versions": [
-
+        "2.7.3"
       ]
     }
   ],
