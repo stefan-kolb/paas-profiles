@@ -128,7 +128,10 @@
             <% rt["versions"].each do |v|
               v.gsub! /\*\.\*/, 'All versions'
             end %>
-            <td><em><%= rt["versions"].join(", ") %></em></td>
+            <td>
+              <em><%= rt["versions"].join(", ") %></em>
+              <span class="status grey pull-right" title="Unknown"></span>
+            </td>
           </tr>
       <% end %>
       </tbody>

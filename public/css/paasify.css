@@ -35,3 +35,27 @@ hr.soften {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+.status {
+    display: block;
+    width: 12px;
+    height: 12px;
+    float: left;
+    margin: 2px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.status.green {
+    background-color: #468847;
+}
+
+.status.yellow {
+    background-color: #ffc40d;
+}
+
+.status.grey {
+    background-color: #d5d5d5;
+}
