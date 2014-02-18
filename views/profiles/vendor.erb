@@ -130,7 +130,13 @@
             end %>
             <td>
               <em><%= rt["versions"].join(", ") %></em>
-              <span class="status grey pull-right" title="Unknown"></span>
+              <% if rt['versions'].empty? %>
+                  <span class="status grey pull-right" title="Unknown"></span>
+              <% elsif rt['versions'].any? { |v| Version.new(v, rt['language']).latest? } %>
+              <span class="status green pull-right" title="Up-to-date"></span>
+              <% else %>
+              <span class="status yellow pull-right" title="Out-of-date"></span>
+              <% end %>
             </td>
           </tr>
       <% end %>

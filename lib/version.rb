@@ -1,8 +1,28 @@
 class Version
   include Comparable
 
-  attr :str
+  attr :str, :type
   attr :major, :minor, :patch
+
+  # TODO make dynamic
+  LATEST = {
+      'php' => '5.5',
+      'java' => '1.7',
+      'ruby' => '2.1',
+      'node' => '0.10',
+      'python' => '3.3',
+      'dotnet' => '4.5',
+      'perl' => '5.18',
+      'go' => '1.2',
+      'scala' => '2.10',
+      'erlang' => 'R16B03',
+      'clojure' => '1.5',
+      'groovy' => '2.2',
+      'apex' => '',
+      'cobol' => '2002',
+      'lua' => '5.2',
+      'dart' => '1.1',
+  }
 
   # http://semver.org/
   #java > 1.3.0: http://www.oracle.com/technetwork/java/javase/versioning-naming-139433.html
@@ -22,13 +42,15 @@ class Version
 
   def unify
     if major
+
       return major << '.' << minor
     else
       return 'Unknown'
     end
   end
 
-  def initialize(str)
+  def initialize(str, type=nil)
+    @type = type
     # auto match type of version
     # define language and only use this schema
     # define wildcard
@@ -39,6 +61,11 @@ class Version
 
     rescue
     # ignore
+  end
+
+  def latest?
+    return true unless @str.match(LATEST[type]).nil?
+    false
   end
 
   def inspect

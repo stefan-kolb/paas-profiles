@@ -8,6 +8,8 @@ get '/vendors' do
 end
 
 get '/vendor/:name' do
+  require_relative '../lib/version'
+
   @route = request.fullpath
   regex  = params[:name].gsub('_', '[\s\.]')
   regex = Regexp.new(regex, 'i')
