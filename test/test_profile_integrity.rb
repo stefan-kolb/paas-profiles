@@ -111,15 +111,28 @@ module PaasProfiles
         end
       end
 
-=begin
-      # TODO version formats
+      # TODO real version formats, for now: versions array must not include empty version strings
       define_method('test_version_formats') do
         # runtimes
+        @profile.runtimes.each do |r|
+          refute(r.versions.any?(&:empty?), 'Runtime versions must not include empty version strings')
+        end
         # middleware
+        @profile.middlewares.each do |m|
+          refute(m.versions.any?(&:empty?), 'Middleware versions must not include empty version strings')
+        end
         # frameworks
+        @profile.frameworks.each do |f|
+          refute(f.versions.any?(&:empty?), 'Framework versions must not include empty version strings')
+        end
         # native services
+        unless @profile.service.blank? || @profile.service.natives.blank?
+          @profile.service.natives.each do |s|
+            refute(s.versions.any?(&:empty?), 'Native service versions must not include empty version strings')
+          end
+        end
       end
-=end
+
       # TODO superset versions
       # no runtime version duplicates and overlaps
       define_method('test_version_duplicates') do
@@ -153,7 +166,7 @@ module PaasProfiles
 
     end
 
-    # self-descriptive classname
+    # self-descriptive classname TODO each part of filename should be capitalized
     self.const_set("Test#{filename.capitalize}", test_class)
 
   end

@@ -84,7 +84,7 @@
       "name": "httpd",
       "runtime": "php",
       "versions": [
-        ""
+
       ]
     },
     {
@@ -99,7 +99,7 @@
       "name": "passenger",
       "runtime": "ruby",
       "versions": [
-        ""
+
       ]
     },
     {
