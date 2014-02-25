@@ -44,9 +44,9 @@
         <th title="Order by Name">Name</th>
         <th data-sorter="false">Status</th>
         <th data-sorter="false">Runtimes</th>
-        <th data-sorter="false">Scaling</th>
-        <th data-sorter="false">Hosting</th>
-        <th data-sorter="false">Infrastructures</th>
+        <th data-sorter="false" class="hidden-phone">Scaling</th>
+        <th data-sorter="false" class="hidden-phone">Hosting</th>
+        <th data-sorter="false" class="hidden-phone">Infrastructures</th>
         <th data-sorter="false"></th>
       </tr>
       </thead>
@@ -85,7 +85,7 @@
               </div>
             </td>
 
-            <td>
+            <td class="hidden-phone">
               <% if profile["scaling"]["vertical"] %>
                   <span class="icon-resize-vertical" title="vertical"></span>
               <% end %>
@@ -97,7 +97,7 @@
               <% end %>
             </td>
 
-            <td>
+            <td class="hidden-phone">
               <% if profile['hosting']['public'] %>
                   <span class="icon-eye-open" title="public"></span>
               <% end
@@ -107,7 +107,7 @@
               <% end %>
             </td>
 
-            <td>
+            <td class="hidden-phone">
               <div class="row-fluid">
                 <%
                    unless profile["infrastructures"].nil?

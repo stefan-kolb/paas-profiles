@@ -89,9 +89,9 @@
         <th>Name</th>
         <th>Status</th>
         <th>Runtimes</th>
-        <th>Scaling</th>
-        <th>Hosting</th>
-        <th>Infrastructures</th>
+        <th class="hidden-phone">Scaling</th>
+        <th class="hidden-phone">Hosting</th>
+        <th class="hidden-phone">Infrastructures</th>
         <th></th>
       </tr>
       </thead>
@@ -130,7 +130,7 @@
               </div>
             </td>
 
-            <td>
+            <td class="hidden-phone">
               <% if profile["scaling"]["vertical"] %>
                   <span class="icon-resize-vertical" title="vertical"></span>
               <% end %>
@@ -142,7 +142,7 @@
               <% end %>
             </td>
 
-            <td>
+            <td class="hidden-phone">
               <% if profile["hosting"]["public"] %>
                   <span class="icon-eye-open" title="public"></span>
               <% end
@@ -152,7 +152,7 @@
               <% end %>
             </td>
 
-            <td>
+            <td class="hidden-phone">
               <div class="row-fluid">
                 <%
                    unless profile["infrastructures"].nil?
