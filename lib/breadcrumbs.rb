@@ -34,7 +34,7 @@ module SimpleNavigation
       end
 
       def github
-        '<li class="pull-right">
+        '<li class="pull-right hidden-phone">
           <small><em>We\'re Open Source!</em></small>
 					<a href="https://github.com/stefan-kolb/paas-profiles" target="_blank" style="text-decoration: none; padding: 5px;">
 						<img src="/img/github.png" style="width: 20px;" alt="github">
