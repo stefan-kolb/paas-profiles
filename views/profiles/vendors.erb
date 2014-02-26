@@ -38,7 +38,7 @@
 
 <div class="row">
   <div class="span12">
-    <table id="main" class="table table-bordered table-hover tablesorter">
+    <table id="vendors" class="table table-bordered table-hover tablesorter">
       <thead>
       <tr>
         <th title="Order by Name">Name</th>
@@ -131,11 +131,12 @@
       %>
       </tbody>
     </table>
+    <a href="#top" title="Back to top" class="pull-right icon-chevron-up"></a>
   </div>
 </div>
 <script>
     $(document).ready(function () {
-                $("#main").tablesorter({
+                $("#vendors").tablesorter({
                     theme: 'bootstrap',
                     headerTemplate: '{icon}{content}',
                     widgets: ['uitheme']
