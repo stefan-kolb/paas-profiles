@@ -256,7 +256,7 @@
                     <thead>
                     <tr>
                       <th>Name</th>
-                      <th>Description</th>
+                      <th class="hidden-phone">Description</th>
                       <th>Type</th>
                       <th>Versions</th>
                     </tr>
@@ -267,7 +267,7 @@
                           <td>
                             <%= rt["name"].split(" ").map(&:capitalize).join(" ") %>
                           </td>
-                          <td><em><%= rt["description"] %></em></td>
+                          <td class="hidden-phone"><em><%= rt["description"] %></em></td>
                           <td>
                             <% unless rt["type"].nil? %>
                                 <em><%= rt["type"].upcase %></em>
@@ -299,7 +299,7 @@
                 <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Description</th>
+                  <th class="hidden-phone">Description</th>
                   <th>Type</th>
                 </tr>
                 </thead>
@@ -316,7 +316,7 @@
                             <%= rt["name"].split(" ").map(&:capitalize).join(" ") %>
                             </a>
                           </td>
-                          <td><em><%= rt["description"] %></em></td>
+                          <td class="hidden-phone"><em><%= rt["description"] %></em></td>
                           <td>
                             <% unless rt["type"].nil? %>
                                 <em><%= rt["type"].upcase %></em>
@@ -352,7 +352,7 @@
 				    <% unless rt['country'].empty? %><%= country_by_code rt['country'] %><% end %><% unless rt['region'].empty? %>, <em><%= rt["region"] %></em><% end %>
 				</span>
               <% unless rt["provider"].nil? %>
-                  <small class="muted"><em>&mdash; provided by <%= rt["provider"] %></em></small>
+                <span><small class="muted"><em>&mdash; provided by <%= rt["provider"] %></em></small></span>
               <% end %>
             </div>
         <%
@@ -360,7 +360,7 @@
            end
         %>
   </div>
-  <div class="span7 thumbnail" id="map" style="width: 640px; height: 300px"></div>
+  <div class="span7 thumbnail" id="map" style="width: 100%; max-width: 650px; height: 320px"></div>
 </div>
 </div>
 
