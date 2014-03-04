@@ -10,14 +10,14 @@
   </div>
 
   <hr/>
-  <div class="row">
+  <div>
 
-    <form class="form-horizontal" id="filter">
+    <form class="form-horizontal span8" style="margin-left: auto; margin-right: auto; float: none;" id="filter">
       <div class="control-group">
         <label class="control-label" for="selectStatus">Status</label>
 
         <div class="controls">
-          <select name="status" class="selectpicker show-tick" id="selectStatus">
+          <select id="selectStatus" name="status" class="selectpicker show-tick" data-width="100%">
             <option value="">Any</option>
             <%
                Vendor.distinct(:status).each do |s|
@@ -32,7 +32,7 @@
         <label class="control-label">Hosting</label>
 
         <div class="controls">
-          <select name="hosting[]" class="selectpicker" multiple>
+          <select name="hosting[]" class="selectpicker" data-width="100%" multiple>
             <option data-icon="icon-eye-open" value="public">Public</option>
             <option data-icon="icon-lock" value="private">Private</option>
           </select>
@@ -43,7 +43,7 @@
         <label class="control-label">Scaling</label>
 
         <div class="controls">
-          <select name="scaling[]" class="selectpicker" multiple>
+          <select name="scaling[]" class="selectpicker" data-width="100%" multiple>
             <option data-icon="icon-resize-vertical" data-subtext="(Size of RAM, CPU, ...)" value="vertical">Vertical</option>
             <option data-icon="icon-resize-horizontal" data-subtext="(Number of instances)" value="horizontal">Horizontal</option>
             <option data-icon="icon-refresh" data-subtext="(Automatic scaling of one or both directions)" value="auto">Auto</option>
@@ -55,7 +55,7 @@
         <label class="control-label">Runtimes</label>
 
         <div class="controls">
-          <select name="runtimes[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
+          <select name="runtimes[]" class="selectpicker" data-width="100%" data-selected-text-format="count > 6" multiple>
             <%
                Vendor.distinct('runtimes.language').sort.each do |r|
             %>
@@ -69,7 +69,7 @@
         <label class="control-label">Middleware</label>
 
         <div class="controls">
-          <select name="middleware[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
+          <select name="middleware[]" class="selectpicker" data-width="100%" data-selected-text-format="count > 6" multiple>
             <%
                Vendor.distinct('middleware.name').sort.each do |r|
             %>
@@ -83,7 +83,7 @@
         <label class="control-label">Frameworks</label>
 
         <div class="controls">
-          <select name="frameworks[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 6" multiple>
+          <select name="frameworks[]" class="selectpicker" data-width="100%" data-selected-text-format="count > 6" multiple>
             <%
                Vendor.distinct('frameworks.name').sort.each do |r|
             %>
@@ -97,7 +97,7 @@
         <label title="Operated by the PaaS vendor" class="control-label">Services</label>
 
         <div class="controls">
-          <select name="services[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 5" multiple>
+          <select name="services[]" class="selectpicker" data-width="100%" data-selected-text-format="count > 5" multiple>
             <%
                Vendor.distinct('services.native.name').sort.each do |s|
             %>
@@ -111,7 +111,7 @@
         <label title="Operated by a 3rd party vendor" class="control-label">Addons</label>
 
         <div class="controls">
-          <select name="addons[]" class="selectpicker" data-width="500px" data-selected-text-format="count > 5" multiple>
+          <select name="addons[]" class="selectpicker" data-width="100%" data-selected-text-format="count > 5" multiple>
             <%
                Vendor.distinct('services.addon.name').sort.each do |s|
             %>
@@ -133,7 +133,7 @@
         <label title="Available deployment regions" class="control-label">Geolocations</label>
 
         <div class="controls">
-          <select name="infras[]" class="selectpicker" data-width="500px" multiple data-selected-text-format="count > 4" multiple>
+          <select name="infras[]" class="selectpicker" data-width="100%" multiple data-selected-text-format="count > 4" multiple>
             <option data-icon="icon-globe" value="NA">North America</option>
             <option data-icon="icon-globe" value="SA">South America</option>
             <option data-icon="icon-globe" value="EU">Europe</option>
@@ -151,6 +151,7 @@
 
     <div id="result" style="padding-top: 20px;"></div>
   </div>
+
 </div>
 
 <script src="../js/bootstrap-select.min.js"></script>
