@@ -47,7 +47,6 @@
     {
       "language": "ruby",
       "versions": [
-        "1.8.7",
         "1.9.3",
         "2.0.0"
       ]
@@ -70,7 +69,14 @@
     }
   ],
   "frameworks": [
-
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "3.2",
+        "4.0"
+      ]
+    }
   ],
   "services": {
     "native": [
@@ -86,7 +92,6 @@
         "name": "mysql",
         "type": "datastore",
         "versions": [
-          "5.0",
           "5.5"
         ]
       },
@@ -128,6 +133,11 @@
         "name": "cloudinary",
         "url": "http://cloudinary.com/",
         "type": "media"
+      },
+      {
+        "name": "Engine Yard Client Insights",
+        "url": "https://addons.engineyard.com/addons/3726",
+        "type": "analytics"
       },
       {
         "name": "ironmq",
@@ -175,6 +185,16 @@
         "type": "analytics"
       },
       {
+        "name": "phraseapp",
+        "url": "https://phraseapp.com/",
+        "type": "other"
+      },
+      {
+        "name": "rollbar",
+        "url": "https://rollbar.com/",
+        "type": "analytics"
+      },
+      {
         "name": "sendgrid",
         "url": "http://sendgrid.com/",
         "type": "messaging"
@@ -193,6 +213,16 @@
         "name": "treasure data hadoop",
         "url": "http://www.treasure-data.com/",
         "type": "analytics"
+      },
+      {
+        "name": "tinfoil security",
+        "url": "https://www.tinfoilsecurity.com/",
+        "type": "other"
+      },
+      {
+        "name": "usersnap",
+        "url": "https://usersnap.com/",
+        "type": "media"
       }
     ]
   },
