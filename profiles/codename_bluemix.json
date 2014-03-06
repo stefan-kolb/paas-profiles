@@ -1,0 +1,257 @@
+{
+  "name": "Codename:Bluemix",
+  "revision": "2014-03-06",
+  "url": "http://bluemix.net/",
+  "status": "beta",
+  "status_since": "2014-02-24",
+  "type": "polyglot",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+
+      ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "blu acceleration",
+        "description": "Free data warehouse for beta testing purposes only.",
+        "type": "analytics",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "cloud code",
+        "description": "With Cloud Code, you can run server-side scripting logic on the IBM cloud without having to worry about managing application servers or scale.",
+        "type": "devops",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "cloud integration",
+        "description": "Bind your applications to Cast Iron Live orchestrations.",
+        "type": "analytics",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "data cache",
+        "description": "Free data cache for beta testing purposes only.",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "decision",
+        "description": "Free Decision service for beta testing purposes only.",
+        "type": "other",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "elastic mq",
+        "description": "Free messaging service for beta testing purposes only.",
+        "type": "worker",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "jazzhub",
+        "description": "JazzHub includes Git hosting, an integrated Web IDE, Eclipse and Visual Studio integrations, agile planning and tracking, and automated deployment to BlueMix.",
+        "type": "devops",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "json database",
+        "description": "Free database for beta testing purposes only.",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "log analysis",
+        "description": "Free access for beta testing purposes only.",
+        "type": "analytics",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "map reduce",
+        "description": "Free access for beta testing purposes only.",
+        "type": "worker",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mobile application management",
+        "description": "With Mobile Application Management, you can centrally manage app access. You can control and secure apps with containerization and control the operational lifecycle of your apps.",
+        "type": "other",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mobile data",
+        "description": "With Mobile Data, you can store objects that need to be created and persisted from a mobile client.",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mobile quality assurance",
+        "description": "Capture tester and live-user experience for building great mobile apps.",
+        "type": "analytics",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mongodb",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "postgresql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "push",
+        "description": "With Push, you can create and deliver notifications to iOS and Android devices easily with the Mobile Cloud Services SDK.",
+        "type": "messaging",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "rabbitmq",
+        "type": "worker",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "redis",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "session cache",
+        "description": "Free session cache for beta testing purposes only.",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "sql database",
+        "description": "Free database for beta testing purposes only.",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "sso",
+        "description": "Policy-based web single sign-on capability, for ibm.com registered users.",
+        "type": "other",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+      {
+        "name": "cloudant",
+        "url": "https://cloudant.com/",
+        "type": "datastore"
+      },
+      {
+        "name": "twilio",
+        "url": "https://www.twilio.com/",
+        "type": "messaging"
+      }
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Dallas"
+    }
+  ]
+}
