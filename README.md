@@ -94,8 +94,8 @@ The URL leading to the PaaS' webpage.
 
 The current status of the offering. This may be one of the following lifecycle stages:
 
-`alpha` = Work in progress or early test version
-`beta` = In private or public beta testing
+`alpha` = Work in progress or early test version  
+`beta` = In private or public beta testing  
 `production` = Live and generally available  
 `eol` = Discontinued or integrated into another offering (End of life)
 
