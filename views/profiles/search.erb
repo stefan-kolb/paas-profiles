@@ -109,6 +109,8 @@
             <td>
               <% if profile["status"] == "beta" %>
                   <span class="label label-warning">Beta</span>
+              <% elsif profile["status"] == "alpha" %>
+                  <span class="label label-important">Alpha</span>
               <% else %>
                   <span class="label label-success">Production</span>
               <% end %>
