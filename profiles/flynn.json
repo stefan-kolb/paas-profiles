@@ -1,22 +1,19 @@
 {
-  "name": "Voxoz",
+  "name": "Flynn",
   "revision": "2014-03-11",
-  "url": "http://voxoz.com",
+  "url": "https://flynn.io/",
   "status": "alpha",
   "status_since": null,
-  "type": "language-specific",
+  "type": "polyglot",
   "hosting": {
-    "public": true,
-    "private": false
+    "public": false,
+    "private": true
   },
   "pricing": [
-    {
-      "model": "fixed",
-      "period": "monthly"
-    }
+
   ],
   "scaling": {
-    "vertical": true,
+    "vertical": false,
     "horizontal": true,
     "auto": false
   },
@@ -25,7 +22,7 @@
   ],
   "runtimes": [
     {
-      "language": "erlang",
+      "language": "node",
       "versions": [
 
       ]
@@ -38,7 +35,7 @@
 
   ],
   "services": null,
-  "extensible": false,
+  "extensible": true,
   "infrastructures": [
 
   ]

@@ -3,7 +3,7 @@
   "revision": "2013-07-05T17:47:54+02:00",
   "url": "http://www.pogoapp.com/",
   "status": "beta",
-  "status_since": null,
+  "status_since": "2013-03-04",
   "type": "polyglot",
   "hosting": {
     "public": true,
@@ -33,7 +33,7 @@
     {
       "language": "node",
       "versions": [
-
+        "*.*"
       ]
     },
     {
@@ -58,8 +58,70 @@
   "middleware": [
 
   ],
-  "frameworks": null,
-  "services": null,
+  "frameworks": [
+    {
+      "name": "luvit",
+      "runtime": "lua",
+      "versions": [
+
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "memcache",
+        "type": "datastore",
+        "description": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "postgresql",
+        "type": "datastore",
+        "description": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "redis",
+        "type": "datastore",
+        "description": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "ceph",
+        "type": "datastore",
+        "description": "Distributed object store",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mongodb",
+        "type": "datastore",
+        "description": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "description": "",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extensible": true,
   "infrastructures": [
     {

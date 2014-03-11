@@ -1,0 +1,62 @@
+{
+  "name": "Jumpstarter",
+  "revision": "2014-02-07",
+  "url": "http://jumpstarter.io/",
+  "status": "production",
+  "status_since": "2014-03-05",
+  "type": "language-specific",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "fixed",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "php",
+      "versions": [
+
+      ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "mysql",
+        "versions": [
+          "5.1"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "",
+      "region": "",
+      "provider": ""
+    }
+  ]
+}
