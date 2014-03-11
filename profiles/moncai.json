@@ -1,8 +1,8 @@
 {
   "name": "Moncai",
-  "revision": "2014-03-11",
+  "revision": "2013-07-05T17:47:54+02:00",
   "url": "http://moncai.com/",
-  "status": "alpha",
+  "status": "beta",
   "status_since": null,
   "type": "language-specific",
   "hosting": {
@@ -31,9 +31,7 @@
   "middleware": [
 
   ],
-  "frameworks": [
-
-  ],
+  "frameworks": null,
   "services": null,
   "extensible": false,
   "infrastructures": [
