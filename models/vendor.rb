@@ -35,7 +35,7 @@ class Vendor
   validates :name, presence: true
   validates :revision, presence: true
   validates :url, presence: true, format: {with: /http[s]?:\/\/.*/}
-  validates :status, presence: true, inclusion: {in: %w(alpha beta production eol)}
+  validates :status, presence: true, inclusion: {in: %w(beta production eol)}
   validates :extensible, presence: true
   validates :hosting, presence: true
   validates :pricings, presence: true, :allow_blank => true

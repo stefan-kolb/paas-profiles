@@ -37,8 +37,6 @@
       Is in
       <% if @profile["status"] == "beta" %>
           <span class="label label-warning">Beta</span>
-      <% elsif @profile["status"] == "alpha" %>
-          <span class="label label-important">Alpha</span>
       <% else %>
           <span class="label label-success">Production</span>
       <% end %>
@@ -135,9 +133,9 @@
               <% if rt['versions'].empty? %>
                   <span class="status grey pull-right" title="Unknown"></span>
               <% elsif rt['versions'].any? { |v| Version.new(v, rt['language']).latest? } %>
-                  <span class="status green pull-right" title="Up-to-date"></span>
+              <span class="status green pull-right" title="Up-to-date"></span>
               <% else %>
-                  <span class="status yellow pull-right" title="Out-of-date"></span>
+              <span class="status yellow pull-right" title="Out-of-date"></span>
               <% end %>
             </td>
           </tr>
@@ -351,11 +349,10 @@
             <div class="text-left">
               <span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
 			    <span>
-				    <% unless rt['country'].empty? %><%= country_by_code rt['country'] %><% end %>
-                  <% unless rt['region'].empty? %>, <em><%= rt["region"] %></em><% end %>
+				    <% unless rt['country'].empty? %><%= country_by_code rt['country'] %><% end %><% unless rt['region'].empty? %>, <em><%= rt["region"] %></em><% end %>
 				</span>
               <% unless rt["provider"].nil? %>
-                  <span><small class="muted"><em>&mdash; provided by <%= rt["provider"] %></em></small></span>
+                <span><small class="muted"><em>&mdash; provided by <%= rt["provider"] %></em></small></span>
               <% end %>
             </div>
         <%
