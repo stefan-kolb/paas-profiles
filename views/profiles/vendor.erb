@@ -252,7 +252,7 @@
           <div id="collapseOne" class="accordion-body collapse">
             <div class="accordion-inner">
               <%
-                 unless @profile["services"]["native"].nil?
+                 unless @profile["services"]["native"].blank?
               %>
                   <table class="table table-bordered table-hover">
                     <thead>
@@ -297,19 +297,19 @@
           </div>
           <div id="collapseTwo" class="accordion-body collapse">
             <div class="accordion-inner">
-              <table class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                  <th>Name</th>
-                  <th class="hidden-phone">Description</th>
-                  <th>Type</th>
-                </tr>
-                </thead>
-                <tbody>
-                <%
-                   unless @profile["services"]["addon"].nil?
-                     @profile["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt|
-                %>
+              <%
+                 unless @profile["services"]["addon"].blank?
+              %>
+                  <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th class="hidden-phone">Description</th>
+                      <th>Type</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% @profile["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                         <tr>
                           <td>
                             <% unless rt["url"].nil? || rt["url"].empty? %>
@@ -325,10 +325,10 @@
                             <% end %>
                           </td>
                         </tr>
-                    <% end
-                       end
-                    %>
-                </tbody>
+                  <% end
+                     end
+                  %>
+              </tbody>
               </table>
             </div>
           </div>
