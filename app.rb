@@ -1,4 +1,5 @@
 require 'json'
+require 'geocoder'
 require 'mongoid'
 require 'sinatra'
 require 'sinatra/simple-navigation'
