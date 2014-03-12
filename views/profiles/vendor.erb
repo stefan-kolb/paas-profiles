@@ -151,11 +151,10 @@
   </div>
 </div>
 
-<hr/>
-
 <%
    unless @profile["middleware"].nil? || @profile["middleware"].empty?
 %>
+    <hr/>
     <div class="row">
       <div class="span12"><h3>Middleware</h3></div>
       <div class="span12">
@@ -188,12 +187,12 @@
         </table>
       </div>
     </div>
-    <hr/>
 <% end %>
 
 <%
    unless @profile["frameworks"].nil? || @profile["frameworks"].empty?
 %>
+    <hr/>
     <div class="row">
       <div class="span12"><h3>Frameworks</h3></div>
       <div class="span12">
@@ -226,7 +225,6 @@
         </table>
       </div>
     </div>
-    <hr/>
 <% end %>
 
 <%
@@ -234,6 +232,7 @@
 
    unless services
 %>
+    <hr/>
     <div id="services" class="row">
       <div class="span12"><h3>Services</h3></div>
       <div class="accordion span12" id="accordion2">
@@ -336,18 +335,18 @@
       </div>
       <a href="#services" title="Back to services" class="pull-right icon-chevron-up"></a>
     </div>
-    <hr/>
 <% end %>
 
-<div class="row">
-  <div class="span12"><h3>Infrastructures</h3></div>
-  <div class="span5" style="margin-bottom: 20px;">
-    <%
-       unless @profile["infrastructures"].nil?
-         @profile["infrastructures"].sort { |a, b| a["continent"] <=> b["continent"] }.each do |rt|
+<% unless @profile["infrastructures"].blank? %>
+    <hr/>
+    <div class="row">
+      <div class="span12"><h3>Infrastructures</h3></div>
+      <div class="span5" style="margin-bottom: 20px;">
+        <%
+           @profile["infrastructures"].sort { |a, b| a["continent"] <=> b["continent"] }.each do |rt|
 
-           title = continent_by_code rt['continent']
-    %>
+             title = continent_by_code rt['continent']
+        %>
             <div class="text-left">
               <span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
 			    <span>
@@ -360,11 +359,12 @@
             </div>
         <%
            end
-           end
         %>
-  </div>
-  <div class="span7 thumbnail" id="map" style="width: 100%; max-width: 650px; height: 320px"></div>
-</div>
+      </div>
+      <div class="span7 thumbnail" id="map" style="width: 100%; max-width: 650px; height: 320px"></div>
+    </div>
+<% end %>
+
 </div>
 
 <script src="../js/jquery.prettydate.js"></script>
