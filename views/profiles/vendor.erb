@@ -404,6 +404,12 @@
                             markers << { latLng: dc.coordinates, name: "#{dc}" } unless dc.nil?
                         end
                     end
+
+                    # user info FIXME request limit 10k/h
+                    user_location = request.location.coordinates
+                    unless user_location.nil?
+                        markers << { latLng: user_location, name: "Yeah, that's you!", style: { fill: 'red' } }
+                    end
                 end
             %>
             <%= markers.to_json %>,
