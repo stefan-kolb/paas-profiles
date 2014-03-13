@@ -87,8 +87,8 @@
       <thead>
       <tr>
         <th>Name</th>
-        <th>Status</th>
-        <th>Runtimes</th>
+        <th class="hidden-phone">Status</th>
+        <th class="hidden-phone">Runtimes</th>
         <th class="hidden-phone">Scaling</th>
         <th class="hidden-phone">Hosting</th>
         <th class="hidden-phone">Infrastructures</th>
@@ -106,7 +106,7 @@
                   &nbsp;<span class="icon-ok-sign" title="Verified by Vendor"></span>
               <% end %>
             </td>
-            <td>
+            <td class="hidden-phone">
               <% if profile["status"] == "beta" %>
                   <span class="label label-warning">Beta</span>
               <% elsif profile["status"] == "alpha" %>
@@ -116,7 +116,7 @@
               <% end %>
             </td>
 
-            <td>
+            <td class="hidden-phone">
               <div class="row-fluid">
                 <%
                    profile["runtimes"].uniq { |h| h["language"] }.each do |rt|

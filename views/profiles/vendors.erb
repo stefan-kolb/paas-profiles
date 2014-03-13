@@ -42,8 +42,8 @@
       <thead>
       <tr>
         <th title="Order by Name">Name</th>
-        <th data-sorter="false">Status</th>
-        <th data-sorter="false">Runtimes</th>
+        <th data-sorter="false" class="hidden-phone">Status</th>
+        <th data-sorter="false" class="hidden-phone">Runtimes</th>
         <th data-sorter="false" class="hidden-phone">Scaling</th>
         <th data-sorter="false" class="hidden-phone">Hosting</th>
         <th data-sorter="false" class="hidden-phone">Infrastructures</th>
@@ -61,7 +61,7 @@
                   &nbsp;<span class="icon-ok-sign" title="Verified by Vendor"></span>
               <% end %>
             </td>
-            <td>
+            <td class="hidden-phone">
               <% if profile["status"] == "beta" %>
                   <span class="label label-warning">Beta</span>
               <% elsif profile["status"] == "alpha" %>
@@ -71,7 +71,7 @@
               <% end %>
             </td>
 
-            <td>
+            <td class="hidden-phone">
               <div class="row-fluid">
                 <%
                    profile["runtimes"].uniq { |h| h["language"] }.sort { |a, b| a["language"] <=> b["language"] }.each do |rt|
