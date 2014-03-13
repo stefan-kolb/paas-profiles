@@ -19,6 +19,9 @@ get '/vendor/:name' do
     halt 404, 'This one PaaSed away!'
   end
 
+  # user info FIXME request limit 10k/h
+  @user_location = request.location.coordinates
+
   @paas = @profile['name']
   @title = "#{@paas} | PaaS Comparison"
 
