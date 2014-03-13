@@ -1,20 +1,17 @@
 {
-  "name": "OpenShift Online",
+  "name": "OpenShift Origin",
   "revision": "2014-03-13",
-  "url": "https://www.openshift.com/products/online",
+  "url": "https://www.openshift.com/products/origin",
   "vendor_verified": "2014-01-07",
   "status": "production",
   "status_since": "2013-06-10",
   "type": "polyglot",
   "hosting": {
-    "public": true,
-    "private": false
+    "public": false,
+    "private": true
   },
   "pricing": [
-    {
-      "model": "hybrid",
-      "period": "monthly"
-    }
+
   ],
   "scaling": {
     "vertical": true,
@@ -35,27 +32,24 @@
     {
       "language": "node",
       "versions": [
-        "0.10",
-        "0.6"
+        "0.10"
       ]
     },
     {
       "language": "perl",
       "versions": [
-        "5.10"
+        "5.16"
       ]
     },
     {
       "language": "php",
       "versions": [
-        "5.3",
-        "5.4"
+        "5.5"
       ]
     },
     {
       "language": "python",
       "versions": [
-        "2.6",
         "2.7",
         "3.3"
       ]
@@ -63,8 +57,7 @@
     {
       "language": "ruby",
       "versions": [
-        "1.8",
-        "1.9"
+        "2.0"
       ]
     }
   ],
@@ -74,7 +67,8 @@
       "runtime": "java",
       "versions": [
         "6.2",
-        "7.1"
+        "7.1",
+        "8.0"
       ]
     },
     {
@@ -122,6 +116,13 @@
       "versions": [
 
       ]
+    },
+    {
+      "name": "vert.x",
+      "runtime": "java",
+      "versions": [
+        "2.1"
+      ]
     }
   ],
   "services": {
@@ -141,7 +142,6 @@
       {
         "name": "mysql",
         "versions": [
-          "5.1",
           "5.5"
         ]
       },
@@ -152,28 +152,9 @@
         ]
       },
       {
-        "name": "pgrouting",
-        "versions": [
-          "2.0"
-        ]
-      },
-      {
-        "name": "postgis",
-        "versions": [
-          "2.1"
-        ]
-      },
-      {
         "name": "postgresql",
         "versions": [
-          "8.4",
           "9.2"
-        ]
-      },
-      {
-        "name": "switchyard",
-        "versions": [
-          "0.8"
         ]
       }
     ],
@@ -183,11 +164,6 @@
   },
   "extensible": true,
   "infrastructures": [
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "Virginia",
-      "provider": "AWS"
-    }
+
   ]
 }
