@@ -419,7 +419,7 @@
                         arr = []
                         unless @profile["infrastructures"].nil?
                             @profile["infrastructures"].each do |i|
-                                arr << i["country"]
+                                arr << i["country"] unless i["country"].blank?
                             end
                         end
             %>
