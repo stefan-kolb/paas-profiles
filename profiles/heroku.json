@@ -471,11 +471,6 @@
         "type": ""
       },
       {
-        "name": "memcache",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "memcachier",
         "desc": "",
         "type": ""
