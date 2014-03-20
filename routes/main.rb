@@ -20,7 +20,12 @@ get '/vendor/:name' do
   end
 
   # user info FIXME request limit 10k/h
-  @user_location = request.location.coordinates
+  # FIXME possible errors
+  begin
+    @user_location = request.location.coordinates
+  rescue
+    @user_location = nil
+  end
 
   @paas = @profile['name']
   @title = "#{@paas} | PaaS Comparison"
