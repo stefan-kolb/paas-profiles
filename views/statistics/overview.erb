@@ -1,26 +1,8 @@
-<script src="http://code.highcharts.com/3.0/highcharts.js"></script>
-<script src="/js/themes/paasify.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
-<link rel="stylesheet" href="/css/theme.bootstrap.css">
+<div id="status" style="height: 350px;" class="chart text-center"></div>
+<div id="languages" style="height: 350px;" class="chart text-center"></div>
+<div id="service_support" style="height: 350px;" class="chart text-center"></div>
+<!--<div id="scaling_support" style="height: 350px;" class="text-center"></div>-->
 
-<div class="jumbotron">
-  <h1>Platform as a Service Statistics<sup><span class="badge badge-warning">&beta;eta</span></sup></h1>
-
-  <p class="lead text-info">Live statistics of the PaaS vendor landscape<sup class="muted">
-    <small><a href="#footnotes">1</a></small>
-  </sup>.
-  </p>
-</div>
-
-<div id="languages" style="height: 350px;" class="text-center"></div>
-<div id="service_support" style="height: 350px;" class="text-center"></div>
-<div id="status" style="height: 350px;" class="text-center"></div>
-<div id="scaling_support" style="height: 350px;" class="text-center"></div>
-<div id="footnotes">
-  <small><sup class="muted">1</sup> The data source is the most recent collection of
-    <a href="https://github.com/stefan-kolb/paas-profiles/tree/master/profiles">PaaS profiles</a>.
-  </small>
-</div>
 <script>
     $(document).ready(function () {
         function setChart(name, categories, data, color) {
@@ -213,9 +195,9 @@
                                 var drilldown = this.drilldown;
                                 if (drilldown) { // drill down
                                     // TODO axis must be redrawn too
-                                    setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
+                                    //setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
                                 } else { // restore
-                                    setChart(name2, categories2, data2);
+                                    //setChart(name2, categories2, data2);
                                 }
                             }
                         }
@@ -225,11 +207,13 @@
             series: [
                 {
                     name: name2,
-                    data: data2
+                    data: data2,
+                    color: 'white'
                 }
             ]
         }).highcharts();
 
+        /*
         var categories3 = <%= @scaling_chart.support_categories %>;
         var data3 = <%= @scaling_chart.support_columndata %>;
 
@@ -264,7 +248,7 @@
                  label: {
                  text: '100 %'
                  }
-                 }]*/
+                 }]
                 },
                 {
                     title: {
@@ -301,6 +285,7 @@
                 }
             ]
         });
+        */
 
         $('#status').highcharts({
             chart: {

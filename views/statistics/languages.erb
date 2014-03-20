@@ -34,14 +34,15 @@
     </div>
     <div id="polyglot" class="span7" style="height: 300px;"></div>
   </div>
-  <div id="count" style="height: 250px;" class="span12 chart text-center"></div>
+  <!--<div id="count" style="height: 250px;" class="span12 chart text-center"></div>-->
 </div>
+<!--
 <div class="span12">
   <strong>Runtime Language Trend.</strong>
   The succeeding graph shows the runtime language trend over time.
 </div>
 <div id="overtime" style="height: 350px;" class="span12 chart text-center"></div>
-
+-->
 <script>
     $(document).ready(function () {
         function setChart(name, categories, data, color, latest) {
@@ -188,6 +189,7 @@
             ]
         });
 
+        /*)
         $('#count').highcharts({
             title: {
                 text: 'Language-specific vs Polyglot Trend'
@@ -251,6 +253,7 @@
             },
             series: <%= @chart.get_trend %>
         });
+        */
 
     });
 </script>

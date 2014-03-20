@@ -9,7 +9,6 @@
       <span class="label label-inverse"><%= @chart.mean_count %></span>.
     </p>
     <table class="table table-bordered table-condensed span12">
-      <thead>
       <tr>
         <th>mean</th>
         <th>median</th>
@@ -19,8 +18,6 @@
         <th>min</th>
         <th>max</th>
       </tr>
-      </thead>
-      <tbody>
       <tr>
         <td><%= @chart.mean_count %></td>
         <td><%= @chart.median_count %></td>
@@ -30,9 +27,8 @@
         <td><%= @chart.min %></td>
         <td><%= @chart.max %></td>
       </tr>
-      </tbody>
     </table>
-    <div id="averages" style="height: 200px;" class="span12 chart"></div>
+    <div id="averages" style="height: 200px;" class="span12 chart hidden-phone"></div>
   </div>
   <p>
     A lot of PaaS providers use established IaaS offerings for their infrastructure management.
@@ -67,9 +63,9 @@
 
 <div class="span12">
   <h3><span class="text-info">Country Distribution</span></h3>
-  Top 5 countries are:<br>
+  The Top 5 countries are:<br>
   <% @chart.top_countries.each_with_index do |c, i| %>
-      <span class="label label-inverse"><%= IsoCountryCodes.find(c[:name]).name %></span> (<%= c[:value] %> times)<br>
+      <span class="icon icon-globe"></span>&nbsp;<span class="label label-info"><%= IsoCountryCodes.find(c[:name]).name %></span> (<%= c[:value] %> times)
   <% end %>
 </div>
 
