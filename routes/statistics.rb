@@ -9,8 +9,11 @@ get '/statistics' do
   @lang_chart = LanguageCharts.new
   @service_chart = ServiceCharts.new
   @scaling_chart = ScalingCharts.new
+  @teaser = 'Platform as a Service Statistics'
 
-  erb :'statistics/overview'
+  erb :statistics_layout do
+    erb :'statistics/overview'
+  end
 end
 
 get '/statistics/languages' do
