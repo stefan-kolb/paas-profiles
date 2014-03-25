@@ -1,17 +1,17 @@
 {
   "name": "iKnode",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2014-03-24",
   "url": "http://iknode.com",
-  "status": "beta",
+  "status": "production",
   "status_since": "2011-11-18",
   "type": "language-specific",
   "hosting": {
     "public": true,
-    "private": false
+    "private": true
   },
   "pricing": [
     {
-      "model": "fixed",
+      "model": "metered",
       "period": "monthly"
     }
   ],
@@ -27,21 +27,37 @@
     {
       "language": "dotnet",
       "versions": [
-
+        "4.0",
+        "4.5"
       ]
     }
   ],
   "middleware": [
 
   ],
+  "services": {
+    "native": [{
+        "name": "mongodb",
+        "type": "datastore",
+        "versions": [
+          "2.1"
+        ]
+      },{
+        "name": "scheduling",
+        "type": "other",
+        "versions": [
+          "2.0"
+        ]
+      }]
+  }
   "frameworks": null,
-  "services": null,
   "extensible": false,
   "infrastructures": [
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "",
+      "provider": "rackspace"
     }
   ]
 }
