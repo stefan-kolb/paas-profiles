@@ -1,0 +1,132 @@
+{
+  "name": "Trucker.io",
+  "revision": "2014-03-27",
+  "url": "https://www.trucker.io/",
+  "vendor_verified": "2014-03-25",
+  "status": "beta",
+  "status_since": null,
+  "type": "polyglot",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "compliance": [
+
+  ],
+  "runtimes": [
+    {
+      "language": "java",
+      "versions": [
+        "1.6",
+        "1.7",
+        "1.8"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.9.3",
+        "2.0"
+      ]
+    },
+    {
+      "language": "groovy",
+      "versions": [
+        "1.5",
+        "1.6",
+        "1.7",
+        "1.8",
+        "2.0",
+        "2.1",
+        "2.2"
+      ]
+    }
+  ],
+  "middleware": [
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "3.*"
+      ]
+    },
+    {
+      "name": "rack",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "express",
+      "runtime": "node",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "redis",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+
+  ]
+}
