@@ -36,19 +36,22 @@
 
   ],
   "services": {
-    "native": [{
+    "native": [
+      {
         "name": "mongodb",
         "type": "datastore",
         "versions": [
           "2.1"
         ]
-      },{
+      },
+      {
         "name": "scheduling",
-        "type": "other",
+        "type": "worker",
         "versions": [
           "2.0"
         ]
-      }]
+      }
+    ]
   },
   "frameworks": null,
   "extensible": false,
@@ -57,7 +60,7 @@
       "continent": "NA",
       "country": "US",
       "region": "",
-      "provider": "rackspace"
+      "provider": "Rackspace"
     }
   ]
 }
