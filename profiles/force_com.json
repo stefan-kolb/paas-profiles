@@ -11,7 +11,7 @@
   },
   "pricing": [
     {
-      "model": "",
+      "model": "metered",
       "period": "monthly"
     }
   ],
@@ -36,6 +36,29 @@
   "services": null,
   "extensible": false,
   "infrastructures": [
-
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "San Jose",
+      "provider": "Equinix"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Reston",
+      "provider": "Equinix"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "",
+      "provider": "Equinix"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "Equinix"
+    }
   ]
 }
