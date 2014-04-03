@@ -350,9 +350,9 @@
             <div class="text-left">
               <span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
 			    <span>
-				    <% unless rt['country'].empty? %><%= country_by_code rt['country'] %><% end %><% unless rt['region'].empty? %>, <em><%= rt["region"] %></em><% end %>
+				    <% unless rt['country'].blank? %><%= country_by_code rt['country'] %><% end %><% unless rt['region'].blank? %>, <em><%= rt["region"] %></em><% end %>
 				</span>
-              <% unless rt["provider"].nil? %>
+              <% unless rt["provider"].blank? %>
                   <span><small class="muted"><em>&mdash; provided by <%= rt["provider"] %></em></small></span>
               <% end %>
             </div>
