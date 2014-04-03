@@ -1,6 +1,6 @@
 {
   "name": "ElasticBox",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2014-04-03",
   "url": "http://www.elasticbox.com",
   "status": "beta",
   "status_since": "2011-12-01",
@@ -22,27 +22,9 @@
   ],
   "runtimes": [
     {
-      "language": "dotnet",
+      "language": "ruby",
       "versions": [
-
-      ]
-    },
-    {
-      "language": "java",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "node",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "perl",
-      "versions": [
-
+        "2.0.0"
       ]
     },
     {
@@ -50,45 +32,142 @@
       "versions": [
 
       ]
-    },
+    }
+  ],
+  "middleware": [
     {
-      "language": "python",
+      "name": "nginx",
       "versions": [
 
       ]
     }
   ],
-  "middleware": [
+  "frameworks": [
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
 
+      ]
+    }
   ],
-  "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "name": "mongodb",
+        "type": "datastore",
+        "versions": [
+          "2.4.8"
+        ]
+      },
+      {
+        "name": "rabbitmq",
+        "type": "worker",
+        "versions": [
+          "3.2.0"
+        ]
+      },
+      {
+        "name": "redis",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "memcached",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "microsoft sql server",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "oracle db",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "postgresql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extensible": true,
   "infrastructures": [
     {
       "continent": "AS",
-      "country": "",
-      "region": ""
+      "country": "JP",
+      "region": "Tokyo",
+      "provider": "AWS"
     },
     {
-      "continent": "EU",
-      "country": "",
-      "region": ""
-    },
-    {
-      "continent": "NA",
-      "country": "",
-      "region": ""
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "AWS"
     },
     {
       "continent": "OC",
-      "country": "",
-      "region": ""
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
     },
     {
       "continent": "SA",
-      "country": "",
-      "region": ""
+      "country": "BR",
+      "region": "Sao Paulo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern Virginia",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "provider": "Google"
     }
   ]
 }
