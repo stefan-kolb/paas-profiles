@@ -1,17 +1,17 @@
 {
   "name": "Acquia Cloud",
-  "revision": "2013-07-05T18:00:44+02:00",
+  "revision": "2014-04-18",
   "url": "http://www.acquia.com/acquia-cloud",
   "status": "production",
   "status_since": "2009-03-04",
-  "type": "language-specific",
+  "type": "SaaS-centric",
   "hosting": {
     "public": true,
     "private": false
   },
   "pricing": [
     {
-      "model": "",
+      "model": "metered",
       "period": "monthly"
     }
   ],
@@ -35,7 +35,13 @@
 
   ],
   "frameworks": [
+    {
+      "name": "drupal",
+      "runtime": "php",
+      "versions": [
 
+      ]
+    }
   ],
   "services": {
     "native": [
@@ -49,28 +55,27 @@
   "infrastructures": [
     {
       "continent": "AS",
-      "country": "",
-      "region": ""
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "AWS"
     },
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
     },
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "",
+      "provider": "AWS"
     },
     {
       "continent": "OC",
-      "country": "",
-      "region": ""
-    },
-    {
-      "continent": "SA",
-      "country": "",
-      "region": ""
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "AWS"
     }
   ]
 }
