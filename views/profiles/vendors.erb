@@ -52,7 +52,10 @@
       </thead>
       <tbody>
       <%
-         Vendor.all.shuffle.each do |profile|
+         # reward verified vendors
+         vendors = Vendor.exists(vendor_verified: true).shuffle + Vendor.not.exists(vendor_verified: true).shuffle
+
+         vendors.each do |profile|
       %>
           <tr>
             <td>
