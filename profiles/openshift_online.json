@@ -5,7 +5,7 @@
   "vendor_verified": "2014-01-07",
   "status": "production",
   "status_since": "2013-06-10",
-  "type": "polyglot",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": false
@@ -178,7 +178,51 @@
       }
     ],
     "addon": [
-
+      {
+        "name": "blazemeter",
+        "url": "",
+        "type": "analytics"
+      },
+      {
+        "name": "cleardb",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "iron",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "mongolab",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "new relic",
+        "url": "",
+        "type": "analytics"
+      },
+      {
+        "name": "redis cloud",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "memcached cloud",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "sendgrid",
+        "url": "",
+        "type": "messaging"
+      },
+      {
+        "name": "shippable",
+        "url": "",
+        "type": "devops"
+      }
     ]
   },
   "extensible": true,

@@ -4,7 +4,7 @@
   "url": "http://www.pogoapp.com/",
   "status": "beta",
   "status_since": "2013-03-04",
-  "type": "polyglot",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": false

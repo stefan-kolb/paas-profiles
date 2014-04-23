@@ -4,7 +4,7 @@
   "url": "http://appsembler.com",
   "status": "beta",
   "status_since": null,
-  "type": "polyglot",
+  "type": "SaaS-centric",
   "hosting": {
     "public": true,
     "private": false

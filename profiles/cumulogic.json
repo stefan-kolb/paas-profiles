@@ -1,10 +1,10 @@
 {
   "name": "Cumulogic",
-  "revision": "2013-07-05T17:47:54+02:00",
-  "url": "http://www.cumulogic.com/",
+  "revision": "2014-04-23",
+  "url": "http://www.cumulogic.com/cumulogic-software-portfolio/paas/",
   "status": "beta",
   "status_since": "2013-02-26",
-  "type": "polyglot",
+  "type": "IaaS-centric",
   "hosting": {
     "public": false,
     "private": true
@@ -35,12 +35,53 @@
       "versions": [
 
       ]
+    },
+    {
+      "language": "python",
+      "versions": [
+
+      ]
     }
   ],
   "middleware": [
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
 
+      ]
+    },
+    {
+      "name": "jboss",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "glassfish",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    }
   ],
-  "frameworks": null,
+  "frameworks": [
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    }
+  ],
   "services": null,
   "extensible": false,
   "infrastructures": [

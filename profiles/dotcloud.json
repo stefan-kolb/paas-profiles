@@ -4,7 +4,7 @@
   "url": "http://www.dotcloud.com/",
   "status": "production",
   "status_since": "2011-06-25",
-  "type": "polyglot",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": false

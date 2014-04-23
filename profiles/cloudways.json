@@ -4,7 +4,7 @@
   "url": "http://www.cloudways.com/en/",
   "status": "production",
   "status_since": "2012-03-21",
-  "type": "polyglot",
+  "type": "SaaS-centric",
   "hosting": {
     "public": true,
     "private": false

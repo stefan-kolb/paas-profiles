@@ -4,7 +4,7 @@
   "url": "http://voxoz.com",
   "status": "alpha",
   "status_since": null,
-  "type": "language-specific",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": false

@@ -5,7 +5,7 @@
   "vendor_verified": "2014-03-25",
   "status": "beta",
   "status_since": null,
-  "type": "polyglot",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": false

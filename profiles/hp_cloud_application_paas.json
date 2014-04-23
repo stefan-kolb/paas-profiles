@@ -4,7 +4,7 @@
   "url": "https://www.hpcloud.com/products/PaaSApp",
   "status": "beta",
   "status_since": "2012-12-05",
-  "type": "polyglot",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": false

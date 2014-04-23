@@ -4,7 +4,7 @@
   "url": "http://aws.amazon.com/elasticbeanstalk/",
   "status": "beta",
   "status_since": "2011-01-19",
-  "type": "polyglot",
+  "type": "IaaS-centric",
   "hosting": {
     "public": true,
     "private": false

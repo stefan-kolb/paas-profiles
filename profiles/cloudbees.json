@@ -4,7 +4,7 @@
   "url": "http://www.cloudbees.com/",
   "status": "production",
   "status_since": "2011-01-31",
-  "type": "language-specific",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": false

@@ -4,7 +4,7 @@
   "url": "http://www.heroku.com/",
   "status": "production",
   "status_since": "2009-04-24",
-  "type": "polyglot",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": false

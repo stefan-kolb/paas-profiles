@@ -4,7 +4,7 @@
   "url": "http://www.conpaas.eu",
   "status": "beta",
   "status_since": "2011-08-01",
-  "type": "polyglot",
+  "type": "IaaS-centric",
   "hosting": {
     "public": false,
     "private": true

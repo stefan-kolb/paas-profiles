@@ -4,7 +4,7 @@
   "url": "http://www.vmware.com/de/products/application-platform/vfabric/overview.html",
   "status": "production",
   "status_since": null,
-  "type": "language-specific",
+  "type": "IaaS-centric",
   "hosting": {
     "public": false,
     "private": true

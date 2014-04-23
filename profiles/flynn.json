@@ -4,7 +4,7 @@
   "url": "https://flynn.io/",
   "status": "alpha",
   "status_since": null,
-  "type": "polyglot",
+  "type": "Generic",
   "hosting": {
     "public": false,
     "private": true

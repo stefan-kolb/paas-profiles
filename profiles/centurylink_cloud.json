@@ -4,7 +4,7 @@
   "url": "http://www.centurylinkcloud.com/products/services/platform-as-a-service",
   "status": "production",
   "status_since": "2012-06-01",
-  "type": "polyglot",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": false

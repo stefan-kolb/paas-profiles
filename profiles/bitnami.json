@@ -4,7 +4,7 @@
   "url": "http://bitnami.org/cloud",
   "status": "production",
   "status_since": null,
-  "type": "polyglot",
+  "type": "IaaS-centric",
   "hosting": {
     "public": true,
     "private": false

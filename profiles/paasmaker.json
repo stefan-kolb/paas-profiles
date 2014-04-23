@@ -4,7 +4,7 @@
   "url": "http://paasmaker.org/",
   "status": "beta",
   "status_since": "2013-04-02",
-  "type": "polyglot",
+  "type": "Generic",
   "hosting": {
     "public": false,
     "private": true

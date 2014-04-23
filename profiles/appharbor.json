@@ -4,7 +4,7 @@
   "url": "https://appharbor.com/",
   "status": "production",
   "status_since": "2012-02-02",
-  "type": "language-specific",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": false

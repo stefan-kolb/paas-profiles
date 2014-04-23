@@ -4,7 +4,7 @@
   "url": "http://appfog.com",
   "status": "production",
   "status_since": "2012-07-15",
-  "type": "polyglot",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": true

@@ -1,16 +1,19 @@
 {
   "name": "Durga",
-  "revision": "2013-07-15",
+  "revision": "2014-03-23",
   "url": "https://durgacloud.com/",
   "status": "beta",
   "status_since": "2012-06-01",
-  "type": "language-specific",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": true
   },
   "pricing": [
-
+    {
+      "model": "fixed",
+      "period": "monthly"
+    }
   ],
   "scaling": {
     "vertical": true,
@@ -23,6 +26,12 @@
   "runtimes": [
     {
       "language": "php",
+      "versions": [
+        "5.3.10"
+      ]
+    },
+    {
+      "language": "dotnet",
       "versions": [
         "5.3.10"
       ]
@@ -41,11 +50,11 @@
         ]
       },
       {
-        "name": "oracle db",
+        "name": "mongodb",
         "description": "",
         "type": "datastore",
         "versions": [
-          "11"
+
         ]
       }
     ],
