@@ -5,7 +5,7 @@
 <br/>
 A no-standards approach for application portability.
 
-Currently 92 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
+Currently 95 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
 
 **The current web interface can be viewed at [PaaSify.it](http://paasify.it)**
 
@@ -32,7 +32,7 @@ The code below shows a sample profile. The profile specification is *beta* and t
   "url": "http://someurl.com",
   "status": "production",
   "status_since": "2012-07-15",
-  "type": "polyglot",
+  "type": "Generic",
   "hosting": {
     "public": true, "private": false
   },
@@ -105,10 +105,10 @@ The current status of the offering. This may be one of the following lifecycle s
 
 ### Type
 
-Type of the PaaS. Currently allowed categories:
+Positioning of the PaaS in between IaaS and SaaS. Currently allowed categories:
 
 ```
-language-specific, polyglot, apaas
+SaaS-centric, Generic, IaaS-centric
 ```
 
 ### Pricing
