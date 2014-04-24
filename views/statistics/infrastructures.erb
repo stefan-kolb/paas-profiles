@@ -82,6 +82,9 @@
             Datacenter.all.each do |center|
                 markers << { latLng: center.coordinates, name: "#{center}" }
             end
+
+            # user location
+            markers << { latLng: @user_location, name: "Yeah, that's you!", style: { fill: 'red' } } unless @user_location.nil?
         %>
         var markers = <%= markers.to_json %>;
 
