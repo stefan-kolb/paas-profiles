@@ -27,7 +27,7 @@ The code below shows a sample profile. The profile specification is *beta* and t
 ```javascript
 {
   "name": "SomePaas",
-  "revision": "2013-07-02",
+  "revision": "2014-04-24",
   "vendor_verified": "2013-07-02",
   "url": "http://someurl.com",
   "status": "production",
@@ -38,7 +38,7 @@ The code below shows a sample profile. The profile specification is *beta* and t
   },
   "pricing": [
 		{ "model": "fixed", "period": "monthly" }
-	],
+  ],
   "scaling": {
     "vertical": true, "horizontal": true, "auto": false
   },
