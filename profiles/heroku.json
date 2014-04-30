@@ -47,6 +47,12 @@
       ]
     },
     {
+      "language": "php",
+      "versions": [
+        "5.5"
+      ]
+    },
+    {
       "language": "python",
       "versions": [
         "2.7.6",
