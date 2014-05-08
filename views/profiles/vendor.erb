@@ -34,19 +34,6 @@
   <div class="span12"><h3>Facts</h3></div>
   <div class="span12">
     <p>
-      Is in
-      <% if @profile["status"] == "beta" %>
-          <span class="label label-warning">Beta</span>
-      <% elsif @profile["status"] == "alpha" %>
-          <span class="label label-important">Alpha</span>
-      <% else %>
-          <span class="label label-success">Production</span>
-      <% end %>
-      <% unless @profile["status_since"].nil? %>
-          since <span class="date" title="<%= @profile["status_since"].to_date %>"></span>
-      <% end %>.</p>
-
-    <p>
       <%= @profile["name"] %> is available as
       <% if @profile['hosting']['public'] %>
           public <span class="icon-eye-open" title="public"></span>
@@ -98,12 +85,103 @@
       <% end %>
     </p>
 
+  </div>
+</div>
+
+<hr/>
+<div class="row">
+  <div class="span12"><h3>Quality of Service <sup><span class="badge badge-warning">&beta;eta</span></sup></h3></div>
+  <div class="span12">
     <p>
-      <% unless @profile["compliance"].nil? || @profile["compliance"].empty? %>
-          <%= @profile["name"] + " is <em>" + @profile["compliance"].join(", ").upcase + " </em> certified" %>
+    Is in
+    <% if @profile["status"] == "beta" %>
+        <span class="label label-warning">Beta</span>
+    <% elsif @profile["status"] == "alpha" %>
+        <span class="label label-important">Alpha</span>
+    <% else %>
+        <span class="label label-success">Production</span>
+    <% end %>
+    <% unless @profile["status_since"].nil? %>
+        since <span class="date" title="<%= @profile["status_since"].to_date %>"></span><% end %>.
+    </p>
+    <!--<span class="label label-success">Up</span> for <span class="date" title="2013-09-13T14:52:00+00:00"></span>.</p>-->
+    <p>Stipulated Uptime: <% if @profile["qos"].blank? || @profile["qos"]["uptime"].blank? %>
+      <span class="label label-important">No guarantees</span>
+      <% else %>
+      <span class="label label-inverse"><%= @profile["qos"]["uptime"] %> %</span>
+      <% end %>
+    </p>
+    <p>
+      <% unless @profile["qos"].blank? || @profile["qos"]["compliance"].blank? %>
+          <%= @profile["name"] + " is <em>" + @profile["qos"]["compliance"].join(", ").upcase + " </em> certified" %>
           <span class="icon-certificate" title="compliance"></span>.
       <% end %>
     </p>
+    <!--
+    <p>Vendor-observed Uptime: <strong>99.8 % per month</strong></p>
+    <p>PaaSify-observed Uptime: <strong><span class="text-error">98 % per month</span></strong></p>
+    <p>Status updates: <a href="https://status.heroku.com">status.heroku.com</a>, <a href="https://twitter.com/herokustatus">@herokustatus</a></p>
+    <ul class="nav nav-tabs">
+      <li class="active"> <a href="#red" data-toggle="tab">Past Week</a></li>
+      <li> <a href="#orange" data-toggle="tab">Past Month</a></li>
+      <li> <a href="#yellow" data-toggle="tab">Overall</a></li>
+    </ul>
+
+    <div id="my-tab-content" class="tab-content">
+      <div class="tab-pane active" id="red">
+        <div class="span4">
+        <div class="graph">
+          <div class="data">
+            <h2>Availability</h2>
+            <span class="number" title="Updated about 24 seconds ago">100.0%</span>
+          </div>
+        </div>
+        </div>
+        <div class="span7">
+        <div id="sla" style="min-width: 310px; height: 120px; margin: 0 auto"></div>
+        <script>
+            $(function () {
+                $('#sla').highcharts({
+                    title: {
+                        text: ''
+                    },
+                    xAxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                    },
+                    yAxis: {
+                        title: {
+                            text: ''
+                        },
+                        plotLines: [{
+                            value: 0,
+                            width: 1,
+                            color: '#000000'
+                        }]
+                    },
+                    tooltip: {
+                        valueSuffix: '°C'
+                    },
+                    series: [{
+                        name: 'Tokyo',
+                        data: [100.0, 99.0, 100.0, 100.0, 88.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]
+                    }]
+                });
+            });
+        </script>
+          </div>
+      </div>
+      <div class="tab-pane" id="orange">
+        <h1>Orange</h1>
+        <p>orange orange orange orange orange</p>
+      </div>
+      <div class="tab-pane" id="yellow">
+        <h1>Yellow</h1>
+        <p>yellow yellow yellow yellow yellow</p>
+      </div>
+    </div>
+    -->
+
   </div>
 </div>
 
@@ -369,7 +447,6 @@
 <script src="../js/jquery.prettydate.js"></script>
 <script src="../js/jquery-jvectormap-1.2.2.min.js"></script>
 <script src="../js/jquery-jvectormap-world-mill-en.js"></script>
-
 <script>
     $(document).ready(function () {
         $(".date").prettyDate();
@@ -398,15 +475,24 @@
                 markers = []
 
                 unless @profile['infrastructures'].blank?
+                    # user location
+                    markers << { latLng: @user_location, name: "Yeah, that's you!", style: { fill: 'red' } } unless @user_location.nil?
+
                     @profile['infrastructures'].each do |infra|
                         unless infra['region'].blank?
                             dc = Datacenter.where(region: infra['region'], country: infra['country']).first
-                            markers << { latLng: dc.coordinates, name: "#{dc}" } unless dc.nil?
-                        end
-                    end
+                            unless dc.nil?
+                                unless @user_location.nil?
+                                    # speed of light / refraction
+                                    min_latency = (Geocoder::Calculations.distance_between(dc.coordinates, [49.7563900, 11.5450000], { :units => :km }) * 2 * 1000 / (299792458 / 1.52) * 1000).round(0)
+                                    name = dc.to_s << " > #{min_latency} ms"
+                                else
+                                    name = dc
+                                end
 
-                    unless @user_location.nil?
-                        markers << { latLng: @user_location, name: "Yeah, that's you!", style: { fill: 'red' } }
+                                markers << { latLng: dc.coordinates, name: "#{name}" }
+                            end
+                        end
                     end
                 end
             %>
