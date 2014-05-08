@@ -15,15 +15,17 @@
       "period": "monthly"
     }
   ],
+  "qos": {
+    "compliance": [
+      "ssae 16 type ii",
+      "isae 3402 type ii"
+    ]
+  },
   "scaling": {
     "vertical": false,
     "horizontal": true,
     "auto": true
   },
-  "compliance": [
-    "ssae 16 type ii",
-    "isae 3402 type ii"
-  ],
   "runtimes": [
     {
       "language": "go",

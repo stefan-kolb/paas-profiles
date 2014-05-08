@@ -17,9 +17,6 @@
     "horizontal": false,
     "auto": false
   },
-  "compliance": [
-
-  ],
   "runtimes": [
     {
       "language": "python",

@@ -17,9 +17,6 @@
     "horizontal": true,
     "auto": false
   },
-  "compliance": [
-
-  ],
   "runtimes": [
     {
       "language": "node",

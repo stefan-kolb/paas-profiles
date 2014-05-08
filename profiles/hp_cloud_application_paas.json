@@ -17,9 +17,6 @@
     "horizontal": true,
     "auto": true
   },
-  "compliance": [
-
-  ],
   "runtimes": [
     {
       "language": "clojure",

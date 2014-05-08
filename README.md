@@ -39,12 +39,15 @@ The code below shows a sample profile. The profile specification is *beta* and t
   "pricing": [
 		{ "model": "fixed", "period": "monthly" }
   ],
+  "qos": {
+        "uptime": 99.8,
+        "compliance": [
+          "SSAE 16 Type II", "ISAE 3402 Type II"
+        ]
+  },
   "scaling": {
     "vertical": true, "horizontal": true, "auto": false
   },
-  "compliance": [
-    "SSAE 16 Type II", "ISAE 3402 Type II"
-  ],
   "runtimes": [
     { "language": "java", "versions": [ "1.7", "1.6" ] }
   ],
@@ -128,6 +131,16 @@ The billing period. Currently allowed values:
 daily, monthly, annually
 ```
 
+### Quality of Service
+
+#### Uptime
+
+The guaranteed monthly uptime by the provider.
+
+#### Compliance
+
+Currently a simple string array of compliance standards that are fulfilled by the PaaS.
+
 ### Scaling
 
 An object including three boolean properties for characterizing the scaling capabilities:
@@ -140,10 +153,6 @@ An object including three boolean properties for characterizing the scaling capa
 
 An object that describes the different provided hosting styles of the PaaS.
 Values can be `public` for a publicly hosted service and `private` for a service that can be deployed on premise, too.
-
-### Compliance
-
-Currently a simple string array of compliance standards that are fulfilled by the PaaS.
 
 ### Runtimes
 

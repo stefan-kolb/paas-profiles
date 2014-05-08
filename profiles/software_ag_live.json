@@ -20,9 +20,6 @@
     "horizontal": false,
     "auto": true
   },
-  "compliance": [
-
-  ],
   "runtimes": [
     {
       "language": "java",

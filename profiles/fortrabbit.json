@@ -25,9 +25,6 @@
     "horizontal": true,
     "auto": false
   },
-  "compliance": [
-
-  ],
   "runtimes": [
     {
       "language": "php",

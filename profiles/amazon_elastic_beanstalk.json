@@ -15,26 +15,29 @@
       "period": "monthly"
     }
   ],
+  "qos": {
+    "uptime": null,
+    "compliance": [
+      "HIPAA",
+      "SOC 1/SSAE 16/ISAE 3402",
+      "SOC 2",
+      "SOC 3",
+      "PCI DSS Level 1",
+      "DIN ISO/IEC 27001",
+      "FedRAMP",
+      "DIACAP",
+      "FISMA",
+      "ITAR",
+      "FIPS 140-2",
+      "CSA",
+      "MPAA"
+    ]
+  },
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": true
   },
-  "compliance": [
-    "HIPAA",
-    "SOC 1/SSAE 16/ISAE 3402",
-    "SOC 2",
-    "SOC 3",
-    "PCI DSS Level 1",
-    "DIN ISO/IEC 27001",
-    "FedRAMP",
-    "DIACAP",
-    "FISMA",
-    "ITAR",
-    "FIPS 140-2",
-    "CSA",
-    "MPAA"
-  ],
   "runtimes": [
     {
       "language": "dotnet",

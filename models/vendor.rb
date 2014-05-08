@@ -1,6 +1,7 @@
 require 'mongoid'
 
 require_relative 'pricing'
+require_relative 'quality'
 require_relative 'scaling'
 require_relative 'runtime'
 require_relative 'middleware'
@@ -21,10 +22,10 @@ class Vendor
   field :status_since, type: Date
   field :type, type: String
   field :extensible, type: Boolean
-  field :compliance, type: Array
   # relations
   embeds_one :hosting
   embeds_many :pricings, store_as: "pricing"
+  embeds_one :quality, store_as: "qos"
   embeds_one :scaling
   embeds_many :runtimes
   embeds_many :middlewares, store_as: "middleware"

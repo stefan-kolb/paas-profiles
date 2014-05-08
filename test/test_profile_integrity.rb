@@ -90,9 +90,11 @@ module PaasProfiles
 
       # no compliance duplicates
       define_method('test_compliance_duplicates') do
-        uniq_compliance = @profile.compliance.uniq
+        unless @profile.quality.blank?
+          uniq_compliance = @profile.quality.compliance.uniq
 
-        assert_equal(uniq_compliance.length, @profile.compliance.length, 'There must be no duplicate compliance entries in one profile. Remove duplicate values')
+          assert_equal(uniq_compliance.length, @profile.quality.compliance.length, 'There must be no duplicate compliance entries in one profile. Remove duplicate values')
+        end
       end
 
       # middleware runtime must be present

@@ -16,14 +16,16 @@
       "period": "monthly"
     }
   ],
+  "qos": {
+    "compliance": [
+      "SSAE 16"
+    ]
+  },
   "scaling": {
     "vertical": true,
     "horizontal": true,
     "auto": false
   },
-  "compliance": [
-    "SSAE 16"
-  ],
   "runtimes": [
     {
       "language": "node",

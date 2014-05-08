@@ -15,16 +15,18 @@
       "period": "monthly"
     }
   ],
+  "qos": {
+    "compliance": [
+      "SSAE 16",
+      "HIPPA",
+      "PCI"
+    ]
+  },
   "scaling": {
     "vertical": true,
     "horizontal": false,
     "auto": false
   },
-  "compliance": [
-    "SSAE 16",
-    "HIPPA",
-    "PCI"
-  ],
   "runtimes": [
     {
       "language": "node",
