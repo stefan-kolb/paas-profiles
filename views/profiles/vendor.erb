@@ -485,7 +485,7 @@
                                 unless @user_location.nil?
                                     # speed of light / refraction
                                     min_latency = (Geocoder::Calculations.distance_between(dc.coordinates, [49.7563900, 11.5450000], { :units => :km }) * 2 * 1000 / (299792458 / 1.52) * 1000).round(0)
-                                    name = dc.to_s << " > #{min_latency} ms"
+                                    name = dc.to_s << " > #{min_latency} ms RTT"
                                 else
                                     name = dc
                                 end
