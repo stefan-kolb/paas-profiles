@@ -1,6 +1,7 @@
 require 'geocoder'
 require 'json'
 require 'mongoid'
+require 'rss'
 require 'sinatra'
 require 'sinatra/simple-navigation'
 require 'versionomy'
