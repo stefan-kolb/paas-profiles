@@ -101,7 +101,7 @@
       %>
           <tr>
             <td>
-              <a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/, '_') %>"><%= profile["name"] %></a>
+              <a href="/vendor/<%= url_encode(profile["name"]) %>"><%= profile["name"] %></a>
               <% unless profile["vendor_verified"].nil? %>
                   &nbsp;<span class="icon-ok-sign" title="Verified by Vendor"></span>
               <% end %>
@@ -171,7 +171,7 @@
             </td>
 
             <td>
-              <a href="/vendor/<%= profile["name"].downcase.gsub(/[\s\.]/, '_') %>" class="btn btn-success btn-small">Details</a>
+              <a href="/vendor/<%= url_encode(profile["name"]) %>" class="btn btn-success btn-small">Details</a>
             </td>
           </tr>
           </tbody>

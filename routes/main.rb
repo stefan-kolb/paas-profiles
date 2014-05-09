@@ -11,9 +11,8 @@ get '/vendor/:name' do
   require_relative '../lib/version'
 
   @route = request.fullpath
-  regex  = params[:name].gsub('_', '[\s\.]')
-  regex = Regexp.new(regex, 'i')
-  @profile = Vendor.where(name: regex).first
+  paas = url_decode(params[:name])
+  @profile = Vendor.where(name: /#{paas}/i).first
 
   if @profile.nil?
     halt 404, 'This one PaaSed away!'

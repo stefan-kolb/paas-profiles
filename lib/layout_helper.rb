@@ -1,4 +1,5 @@
 require 'json'
+require 'uri'
 require 'iso_country_codes'
 
 module LayoutHelper
@@ -18,6 +19,14 @@ module LayoutHelper
   def country_by_code(code)
     country = IsoCountryCodes.find(code)
     country.name unless country.nil?
+  end
+
+  def url_encode(string)
+    URI.escape(string.downcase)
+  end
+
+  def url_decode(string)
+    URI.unescape(string.downcase)
   end
 
 end
