@@ -48,14 +48,14 @@ get '/vendors.rss' do
     maker.channel.author = "Paasify.it"
     maker.channel.updated = Time.now.to_s
     maker.channel.link = "http://paasify.it/vendors.rss"
-    maker.channel.title = "PaaSify.it Platform as a Service Providers"
-    maker.channel.description = "PaaSify.it Platform as a Service Providers"
+    maker.channel.title = "PaaSify.it - Platform as a Service Providers"
+    maker.channel.description = "Platform as a Service provider overview, comparison and matchmaking."
     maker.items.do_sort = true
 
     Vendor.all.each do |vendor|
       maker.items.new_item do |item|
         item.link = "http://paasify.it/vendor/#{url_encode(vendor.name)}"
-        item.title = vendor.name
+        item.title = "PaaSify Update: " << vendor.name
         item.updated = vendor.revision.to_s
       end
     end
