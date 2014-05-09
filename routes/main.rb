@@ -45,9 +45,8 @@ get '/vendors.rss' do
   content_type 'text/xml'
 
   rss = RSS::Maker.make("2.0") do |maker|
-    maker.channel.author = "Paasify.it"
     maker.channel.updated = Time.now.to_s
-    maker.channel.link = "http://paasify.it/vendors.rss"
+    maker.channel.link = "http://paasify.it"
     maker.channel.title = "PaaSify.it - Platform as a Service Providers"
     maker.channel.description = "Platform as a Service provider overview, comparison and matchmaking."
     maker.items.do_sort = true
