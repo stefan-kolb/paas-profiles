@@ -1,4 +1,4 @@
-require_relative '../../models/hosting'
+require_relative '../../models/vendor/hosting'
 
 FactoryGirl.define do
   factory :hosting do

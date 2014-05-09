@@ -3,14 +3,17 @@ require 'mongoid'
 require 'rake/testtask'
 require 'active_support/core_ext'
 require 'geocoder'
+#require 'git'
 
-require_relative 'models/vendor'
+require_relative 'models/vendor/vendor'
 require_relative 'models/snapshot'
 require_relative 'models/statistics'
+require_relative 'models/statistics/runtime_stats'
+require_relative 'models/statistics/data_trend'
 require_relative 'models/statistics/runtime_trend'
 require_relative 'models/datacenter'
 
-Mongoid.load!("./config/mongoid.yml")
+Mongoid.load!('./config/mongoid.yml')
 
 namespace :mongo do
 
@@ -23,8 +26,8 @@ namespace :mongo do
       begin
         data = JSON.parse(File.read(file_name))
         Vendor.create!(data)
-      rescue
-        raise "An error occurred while parsing " + file_name
+      rescue Exception => e
+        raise "An error occurred while parsing " + file_name + ": " + e.message
       end
     end
     # be sure everything was imported
@@ -74,11 +77,12 @@ namespace :mongo do
             puts e
             sleep(2)
             retry
-            # todo test if all are here = count distinct regions, country
           end
         end
       end
     end
+
+    # todo test if all are here = count distinct regions, country
   end
 
   desc "Creates a snapshot of all PaaS JSON profiles"

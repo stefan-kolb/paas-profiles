@@ -7,7 +7,7 @@ class Version
   # TODO make dynamic
   LATEST = {
       'php' => '5.5',
-      'java' => '1.7',
+      'java' => '1.8',
       'ruby' => '2.1',
       'node' => '0.10',
       'python' => '3.3',

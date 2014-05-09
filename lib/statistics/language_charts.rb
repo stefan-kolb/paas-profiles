@@ -1,7 +1,7 @@
 require_relative 'charts'
 require_relative '../../models/statistics'
 
-# Chart class for language runtime specific statistics
+# Chart class for language runtime statistics
 class LanguageCharts < Charts
   attr_reader :language_count, :mean_count, :mode_count, :median_count, :support_data, :support_categories
 

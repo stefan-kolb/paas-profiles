@@ -24,13 +24,13 @@ class Vendor
   field :extensible, type: Boolean
   # relations
   embeds_one :hosting
-  embeds_many :pricings, store_as: "pricing"
-  embeds_one :quality, store_as: "qos"
+  embeds_many :pricings, store_as: 'pricing'
+  embeds_one :quality, store_as: 'qos'
   embeds_one :scaling
   embeds_many :runtimes
-  embeds_many :middlewares, store_as: "middleware"
+  embeds_many :middlewares, store_as: 'middleware'
   embeds_many :frameworks
-  embeds_one :service, store_as: "services"
+  embeds_one :service, store_as: 'services'
   embeds_many :infrastructures
   # validations
   validates :name, presence: true

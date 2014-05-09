@@ -1,4 +1,4 @@
-require_relative '../../models/scaling'
+require_relative '../../models/vendor/scaling'
 
 FactoryGirl.define do
   factory :scaling do

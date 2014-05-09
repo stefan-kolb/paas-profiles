@@ -1,4 +1,4 @@
-require_relative '../../models/runtime'
+require_relative '../../models/vendor/runtime'
 
 FactoryGirl.define do
   factory :runtime do

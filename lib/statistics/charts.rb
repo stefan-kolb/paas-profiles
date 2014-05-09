@@ -1,4 +1,4 @@
-require_relative '../../models/vendor'
+require_relative '../../models/vendor/vendor'
 require_relative '../../models/snapshot'
 require_relative '../../models/statistics/runtime_trend'
 require_relative '../version'
