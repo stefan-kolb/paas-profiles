@@ -45,11 +45,11 @@ get '/vendors.rss' do
   content_type 'application/rss+xml'
 
   rss = RSS::Maker.make("2.0") do |maker|
-    maker.channel.updated = Time.now.to_s
+    #maker.channel.updated = Time.now.to_s
     maker.channel.link = "http://paasify.it"
     maker.channel.title = "PaaSify.it - Platform as a Service Providers"
     maker.channel.description = "Platform as a Service provider overview, comparison and matchmaking."
-    maker.channel.ttl = 180
+    #maker.channel.ttl = 180
     maker.items.do_sort = true
 
     Vendor.all.each do |vendor|
@@ -57,7 +57,7 @@ get '/vendors.rss' do
         item.guid.content = url_encode(vendor.name) << vendor.revision.to_s
         item.guid.isPermaLink = false
         item.link = "http://paasify.it/vendor/#{url_encode(vendor.name)}"
-        item.title = "PaaSify Update: " << vendor.name
+        item.title = "PaaSify Update " << vendor.revision.strftime("%-m/%-d") << ": " << vendor.name
         item.updated = vendor.revision.to_s
       end
     end
