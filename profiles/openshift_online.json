@@ -1,6 +1,6 @@
 {
   "name": "OpenShift Online",
-  "revision": "2014-03-13",
+  "revision": "2014-05-13",
   "url": "https://www.openshift.com/products/online",
   "vendor_verified": "2014-01-07",
   "status": "production",
@@ -175,51 +175,7 @@
       }
     ],
     "addon": [
-      {
-        "name": "blazemeter",
-        "url": "",
-        "type": "analytics"
-      },
-      {
-        "name": "cleardb",
-        "url": "",
-        "type": "datastore"
-      },
-      {
-        "name": "iron",
-        "url": "",
-        "type": ""
-      },
-      {
-        "name": "mongolab",
-        "url": "",
-        "type": "datastore"
-      },
-      {
-        "name": "new relic",
-        "url": "",
-        "type": "analytics"
-      },
-      {
-        "name": "redis cloud",
-        "url": "",
-        "type": "datastore"
-      },
-      {
-        "name": "memcached cloud",
-        "url": "",
-        "type": "datastore"
-      },
-      {
-        "name": "sendgrid",
-        "url": "",
-        "type": "messaging"
-      },
-      {
-        "name": "shippable",
-        "url": "",
-        "type": "devops"
-      }
+
     ]
   },
   "extensible": true,
