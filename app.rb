@@ -1,7 +1,6 @@
 require 'geocoder'
 require 'json'
 require 'mongoid'
-require 'rss'
 require 'sinatra'
 require 'sinatra/simple-navigation'
 require 'versionomy'
@@ -15,6 +14,7 @@ require_relative 'models/datacenter'
 # libs
 require_relative 'lib/layout_helper'
 require_relative 'lib/breadcrumbs'
+require_relative 'lib/feed'
 
 # routes
 require_relative 'routes/main'
