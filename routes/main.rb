@@ -41,7 +41,7 @@ get '/search' do
   erb :'profiles/search', :layout => false
 end
 
-get '/feed' do
+get '/vendors.rss' do
   content_type 'application/rss+xml'
 
   Feed.vendor_updates
