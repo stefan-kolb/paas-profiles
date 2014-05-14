@@ -21,8 +21,6 @@ class Feed
         end
 
         maker.items.new_item do |item|
-          item.guid.content = "dcwubcfuw347647484"
-          item.guid.isPermaLink = false
           item.link = "http://paasify.it/vendors"
           item.title = "This should update immediately!"
           item.updated = vendor.revision.to_s(:rfc822)
