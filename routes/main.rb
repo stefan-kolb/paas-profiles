@@ -54,11 +54,11 @@ get '/vendors.rss' do
 
     Vendor.all.each do |vendor|
       maker.items.new_item do |item|
-        item.guid.content = url_encode(vendor.name) << vendor.revision.to_s
+        item.guid.content = "guid" << url_encode(vendor.name) << vendor.revision.to_s
         item.guid.isPermaLink = false
         item.link = "http://paasify.it/vendor/#{url_encode(vendor.name)}"
         item.title = "PaaSify Update " << vendor.revision.strftime("%-m/%-d") << ": " << vendor.name
-        item.updated = vendor.revision.to_s
+        item.updated = vendor.revision.to_s(:rfc822)
       end
     end
   end
