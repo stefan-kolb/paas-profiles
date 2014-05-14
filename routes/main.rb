@@ -41,7 +41,7 @@ get '/search' do
   erb :'profiles/search', :layout => false
 end
 
-get '/vendors.rss' do
+get '/feed' do
   content_type 'application/rss+xml'
 
   rss = RSS::Maker.make("2.0") do |maker|
