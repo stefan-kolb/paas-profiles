@@ -8,7 +8,6 @@ class Feed
       maker.channel.title = 'PaaSify.it - Platform as a Service Providers'
       maker.channel.link = 'http://paasify.it'
       maker.channel.description = 'Platform as a Service provider overview, comparison and matchmaking.'
-      maker.channel.updated = Time.now.to_s(:rfc822)
       maker.items.do_sort = true
 
       Vendor.all.each do |vendor|
