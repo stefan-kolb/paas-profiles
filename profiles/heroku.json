@@ -123,7 +123,7 @@
       },
       {
         "name": "airbrake",
-        "url": "",
+        "url": "https://airbrake.io",
         "desc": "",
         "type": ""
       },
@@ -156,7 +156,7 @@
       },
       {
         "name": "blitz",
-        "url": "",
+        "url": "https://www.blitz.io/",
         "desc": "",
         "type": ""
       },
@@ -223,13 +223,13 @@
       },
       {
         "name": "cleardb",
-        "url": "",
+        "url": "http://www.cleardb.com/",
         "desc": "",
         "type": ""
       },
       {
         "name": "cloudamqp",
-        "url": "",
+        "url": "http://cloudamqp.com/",
         "desc": "",
         "type": ""
       },
@@ -246,13 +246,13 @@
       },
       {
         "name": "cloudinary",
-        "url": "",
+        "url": "http://cloudinary.com/",
         "desc": "",
         "type": ""
       },
       {
         "name": "cloudmailin",
-        "url": "",
+        "url": "http://www.cloudmailin.com/",
         "desc": "",
         "type": ""
       },
@@ -269,7 +269,7 @@
       },
       {
         "name": "codeship",
-        "url": "",
+        "url": "https://www.codeship.io/",
         "desc": "",
         "type": ""
       },
@@ -285,7 +285,7 @@
       },
       {
         "name": "dbinsights",
-        "url": "",
+        "url": "https://dbinsights.herokuapp.com/",
         "desc": "",
         "type": ""
       },
@@ -436,7 +436,8 @@
       {
         "name": "librato",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://metrics.librato.com/"
       },
       {
         "name": "loaderio",
@@ -451,7 +452,8 @@
       {
         "name": "logentries",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://logentries.com/"
       },
       {
         "name": "loggly",
@@ -461,7 +463,8 @@
       {
         "name": "mailgun",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://www.mailgun.com/"
       },
       {
         "name": "mailtrap",
@@ -476,17 +479,20 @@
       {
         "name": "memcachier",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://www.memcachier.com/"
       },
       {
         "name": "mongohq",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://www.mongohq.com/"
       },
       {
         "name": "mongolab",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://mongolab.com/"
       },
       {
         "name": "mwiki",
@@ -516,7 +522,8 @@
       {
         "name": "openredis",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://openredis.com/"
       },
       {
         "name": "pandastream",
@@ -526,7 +533,8 @@
       {
         "name": "papertrail",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://papertrailapp.com/"
       },
       {
         "name": "pgbackups",
@@ -536,7 +544,8 @@
       {
         "name": "phrase",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://phraseapp.com/"
       },
       {
         "name": "postmark",
@@ -616,7 +625,8 @@
       {
         "name": "rollbar",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://rollbar.com/"
       },
       {
         "name": "runscope",
@@ -651,7 +661,8 @@
       {
         "name": "searchify",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://www.searchify.com/"
       },
       {
         "name": "securekey",
@@ -666,7 +677,8 @@
       {
         "name": "sendgrid",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://sendgrid.com/"
       },
       {
         "name": "sentry",
@@ -701,7 +713,8 @@
       {
         "name": "statsmix",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://www.statsmix.com/"
       },
       {
         "name": "statuspage",
@@ -741,7 +754,8 @@
       {
         "name": "tempodb",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://tempo-db.com/"
       },
       {
         "name": "temporize",
@@ -766,7 +780,8 @@
       {
         "name": "treasure data",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://www.treasure-data.com/"
       },
       {
         "name": "tripwire",
@@ -791,7 +806,8 @@
       {
         "name": "websolr",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://www.websolr.com/"
       },
       {
         "name": "wercker",

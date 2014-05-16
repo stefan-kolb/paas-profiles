@@ -73,17 +73,20 @@
       {
         "name": "blitz",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://www.blitz.io/"
       },
       {
         "name": "cloudamqp",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://cloudamqp.com/"
       },
       {
         "name": "cloudant",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://cloudant.com/"
       },
       {
         "name": "cloudbird",
@@ -93,17 +96,20 @@
       {
         "name": "cloudinary",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://cloudinary.com/"
       },
       {
         "name": "cloudmailin",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://www.cloudmailin.com/"
       },
       {
         "name": "elephantsql",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://www.elephantsql.com/"
       },
       {
         "name": "found elasticsearch",
@@ -113,32 +119,38 @@
       {
         "name": "hosted graphite",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://www.hostedgraphite.com/"
       },
       {
         "name": "ironmq",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://www.iron.io/mq"
       },
       {
         "name": "justonedb",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://www.justonedb.com/"
       },
       {
         "name": "loader.io",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://loader.io/"
       },
       {
         "name": "logentries",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://logentries.com/"
       },
       {
         "name": "mailgun",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://www.mailgun.com/"
       },
       {
         "name": "memcacher",
@@ -148,17 +160,20 @@
       {
         "name": "memcachier",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://www.memcachier.com/"
       },
       {
         "name": "mongohq",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://www.mongohq.com/"
       },
       {
         "name": "mongolab",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://mongolab.com/"
       },
       {
         "name": "myredis",
@@ -168,7 +183,8 @@
       {
         "name": "new relic",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://newrelic.com/"
       },
       {
         "name": "ravenhq",
@@ -178,12 +194,14 @@
       {
         "name": "redis to go",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://redistogo.com/"
       },
       {
         "name": "rediscloud",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://redis-cloud.com/"
       },
       {
         "name": "searchbox elasticsearch",
@@ -198,7 +216,8 @@
       {
         "name": "sendgrid",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "http://sendgrid.com/"
       },
       {
         "name": "spreedly",
@@ -208,7 +227,8 @@
       {
         "name": "statsmix",
         "desc": "",
-        "type": ""
+        "type": "",
+        "url": "https://www.statsmix.com/"
       },
       {
         "name": "stillalive",
