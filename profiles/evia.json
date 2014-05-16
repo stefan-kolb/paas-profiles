@@ -40,7 +40,8 @@
         "name": "mariadb",
         "versions": [
           "5.5"
-        ]
+        ],
+        "type": "datastore"
       }
     ],
     "addon": [

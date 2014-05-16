@@ -113,21 +113,25 @@
         "name": "jenkins",
         "versions": [
           "1.4"
-        ]
+        ],
+        "type": "devops"
+      },
       },
       {
         "name": "mysql",
         "versions": [
           "5.1",
           "5.5"
-        ]
+        ],
+        "type": "datastore"
       },
       {
         "name": "postgresql",
         "versions": [
           "8.4",
           "9.2"
-        ]
+        ],
+        "type": "datastore"
       }
     ],
     "addon": [

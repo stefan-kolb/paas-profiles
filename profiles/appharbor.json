@@ -42,20 +42,23 @@
         "name": "microsoft sql server",
         "versions": [
 
-        ]
+        ],
+        "type": "datastore"
       },
       {
         "name": "mysql",
         "versions": [
 
-        ]
+        ],
+        "type": "datastore"
       }
     ],
     "addon": [
       {
         "name": "airbrake",
+        "url": "https://airbrake.io",
         "desc": "",
-        "type": ""
+        "type": "analytics"
       },
       {
         "name": "appfail",

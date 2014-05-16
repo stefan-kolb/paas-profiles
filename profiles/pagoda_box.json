@@ -42,19 +42,22 @@
         "name": "memcached",
         "versions": [
 
-        ]
+        ],
+        "type": "datastore"
       },
       {
         "name": "mysql",
         "versions": [
 
-        ]
+        ],
+        "type": "datastore"
       },
       {
         "name": "redis",
         "versions": [
 
-        ]
+        ],
+        "type": "datastore"
       }
     ],
     "addon": [

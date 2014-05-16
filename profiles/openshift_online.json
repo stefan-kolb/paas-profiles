@@ -119,6 +119,13 @@
       "versions": [
 
       ]
+    },
+    {
+      "name": "switchyard",
+      "runtime": "java",
+      "versions": [
+        "0.8"
+      ]
     }
   ],
   "services": {
@@ -127,51 +134,52 @@
         "name": "jenkins",
         "versions": [
           "1.4"
-        ]
+        ],
+        "type": "devops"
       },
       {
         "name": "mongodb",
         "versions": [
           "2.4"
-        ]
+        ],
+        "type": "datastore"
       },
       {
         "name": "mysql",
         "versions": [
           "5.1",
           "5.5"
-        ]
+        ],
+        "type": "datastore"
       },
       {
         "name": "openshift metrics",
         "versions": [
           "0.1"
-        ]
+        ],
+        "type": "analytics"
       },
       {
         "name": "pgrouting",
         "versions": [
           "2.0"
-        ]
+        ],
+        "type": "datastore"
       },
       {
         "name": "postgis",
         "versions": [
           "2.1"
-        ]
+        ],
+        "type": "datastore"
       },
       {
         "name": "postgresql",
         "versions": [
           "8.4",
           "9.2"
-        ]
-      },
-      {
-        "name": "switchyard",
-        "versions": [
-          "0.8"
-        ]
+        ],
+        "type": "datastore"
       }
     ],
     "addon": [
