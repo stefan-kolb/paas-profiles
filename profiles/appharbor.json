@@ -46,6 +46,13 @@
         "type": "datastore"
       },
       {
+        "name": "memcached",
+        "versions": [
+
+        ],
+        "type": "datastore"
+      },
+      {
         "name": "mysql",
         "versions": [
 
@@ -63,12 +70,14 @@
       {
         "name": "appfail",
         "desc": "",
-        "type": ""
+        "type": "analytics",
+        "url": "http://appfail.net/"
       },
       {
         "name": "blitline",
         "desc": "",
-        "type": ""
+        "type": "media",
+        "url": "http://blitline.com/"
       },
       {
         "name": "blitz",
@@ -89,11 +98,6 @@
         "url": "https://cloudant.com/"
       },
       {
-        "name": "cloudbird",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "cloudinary",
         "desc": "",
         "type": "",
@@ -106,15 +110,22 @@
         "url": "http://www.cloudmailin.com/"
       },
       {
+        "name": "cloudscheduler",
+        "desc": "",
+        "type": "worker",
+        "url": "https://getcloudscheduler.com/"
+      },
+      {
         "name": "elephantsql",
         "desc": "",
-        "type": "",
+        "type": "datastore",
         "url": "http://www.elephantsql.com/"
       },
       {
         "name": "found elasticsearch",
         "desc": "",
-        "type": ""
+        "type": "search",
+        "url": "http://www.found.no/"
       },
       {
         "name": "hosted graphite",
@@ -125,14 +136,14 @@
       {
         "name": "ironmq",
         "desc": "",
-        "type": "",
+        "type": "worker",
         "url": "http://www.iron.io/mq"
       },
       {
-        "name": "justonedb",
+        "name": "librato",
         "desc": "",
-        "type": "",
-        "url": "http://www.justonedb.com/"
+        "type": "analytics",
+        "url": "https://librato.com/"
       },
       {
         "name": "loader.io",
@@ -143,7 +154,7 @@
       {
         "name": "logentries",
         "desc": "",
-        "type": "",
+        "type": "analytics",
         "url": "https://logentries.com/"
       },
       {
@@ -153,92 +164,100 @@
         "url": "http://www.mailgun.com/"
       },
       {
-        "name": "memcacher",
+        "name": "memcached cloud",
         "desc": "",
-        "type": ""
+        "type": "datastore",
+        "url": "http://redislabs.com/memcached-cloud"
       },
       {
         "name": "memcachier",
         "desc": "",
-        "type": "",
+        "type": "datastore",
         "url": "http://www.memcachier.com/"
       },
       {
         "name": "mongohq",
         "desc": "",
-        "type": "",
+        "type": "datastore",
         "url": "https://www.mongohq.com/"
       },
       {
         "name": "mongolab",
         "desc": "",
-        "type": "",
+        "type": "datastore",
         "url": "https://mongolab.com/"
-      },
-      {
-        "name": "myredis",
-        "desc": "",
-        "type": ""
       },
       {
         "name": "new relic",
         "desc": "",
-        "type": "",
+        "type": "analytics",
         "url": "http://newrelic.com/"
+      },
+      {
+        "name": "rabbitmq bigwig",
+        "desc": "",
+        "type": "worker",
+        "url": "http://bigwig.io/"
       },
       {
         "name": "ravenhq",
         "desc": "",
-        "type": ""
+        "type": "datastore",
+        "url": "https://www.ravenhq.com/"
       },
       {
         "name": "redis to go",
         "desc": "",
-        "type": "",
+        "type": "datastore",
         "url": "http://redistogo.com/"
       },
       {
         "name": "rediscloud",
         "desc": "",
-        "type": "",
+        "type": "datastore",
         "url": "http://redis-cloud.com/"
       },
       {
-        "name": "searchbox elasticsearch",
+        "name": "searchly elasticsearch",
         "desc": "",
-        "type": ""
+        "type": "search",
+        "url": "http://www.searchly.com/"
       },
       {
         "name": "searchify hosted search",
         "desc": "",
-        "type": ""
+        "type": "search",
+        "url": "https://www.searchify.com/"
       },
       {
         "name": "sendgrid",
         "desc": "",
-        "type": "",
+        "type": "messaging",
         "url": "http://sendgrid.com/"
       },
       {
         "name": "spreedly",
         "desc": "",
-        "type": ""
+        "type": "payment",
+        "url": "https://spreedly.com/"
       },
       {
         "name": "statsmix",
         "desc": "",
-        "type": "",
+        "type": "analytics",
         "url": "https://www.statsmix.com/"
       },
       {
         "name": "stillalive",
         "desc": "",
-        "type": ""
+        "type": "analytics",
+        "url": "https://stillalive.com/"
       },
       {
         "name": "svnsailor",
         "desc": "",
-        "type": ""
+        "type": "devops",
+        "url": "https://appharbor.com/addons/svnsailor"
       }
     ]
   },
