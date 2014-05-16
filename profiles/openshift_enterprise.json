@@ -116,7 +116,6 @@
         ],
         "type": "devops"
       },
-      },
       {
         "name": "mysql",
         "versions": [
