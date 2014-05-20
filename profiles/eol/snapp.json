@@ -1,9 +1,9 @@
 {
   "name": "Snapp",
-  "revision": "2013-07-17",
+  "revision": "2014-05-20",
   "url": "http://www.snapphq.com/",
-  "status": "beta",
-  "status_since": "2013-05-16",
+  "status": "eol",
+  "status_since": "2014-05-16",
   "type": "Generic",
   "hosting": {
     "public": true,
@@ -28,12 +28,13 @@
   "middleware": [
 
   ],
-  "frameworks": null,
+  "frameworks": [
+
+  ],
   "services": {
     "native": [
       {
         "name": "microsoft sql server",
-        "description": "",
         "type": "datastore",
         "versions": [
 
