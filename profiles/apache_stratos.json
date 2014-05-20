@@ -1,0 +1,64 @@
+{
+  "name": "Apache Stratos",
+  "revision": "2014-05-20",
+  "url": "http://stratos.incubator.apache.org/",
+  "status": "beta",
+  "status_since": "2010-11-15",
+  "type": "Generic",
+  "hosting": {
+    "public": false,
+    "private": true
+  },
+  "pricing": [
+
+  ],
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "runtimes": [
+    {
+      "language": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+
+      ]
+    }
+  ],
+  "middleware": [
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    }
+  ],
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+
+  ]
+}
