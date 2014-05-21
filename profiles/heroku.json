@@ -128,17 +128,6 @@
         "type": ""
       },
       {
-        "name": "alphamail",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "amazon rds",
-        "url": "",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "appsignal",
         "desc": "",
         "type": ""
@@ -183,24 +172,7 @@
         "type": ""
       },
       {
-        "name": "boxcar",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "cachely",
-        "url": "",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "cameratag",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "cassandraio",
-        "url": "",
         "desc": "",
         "type": ""
       },
@@ -240,11 +212,6 @@
         "type": ""
       },
       {
-        "name": "cloudassault",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "cloudinary",
         "url": "http://cloudinary.com/",
         "desc": "",
@@ -274,16 +241,6 @@
         "type": ""
       },
       {
-        "name": "dashmin",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "database.com",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "dbinsights",
         "url": "https://dbinsights.herokuapp.com/",
         "desc": "",
@@ -298,11 +255,6 @@
       {
         "name": "docraptor",
         "url": "",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "downloader",
         "desc": "",
         "type": ""
       },
@@ -334,12 +286,6 @@
         "type": ""
       },
       {
-        "name": "exceptional",
-        "url": "",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "filepicker",
         "url": "",
         "desc": "",
@@ -354,17 +300,6 @@
       {
         "name": "flying sphinx",
         "url": "",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "found search",
-        "url": "",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "framey",
         "desc": "",
         "type": ""
       },
@@ -385,16 +320,6 @@
       },
       {
         "name": "hostedgraphite",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "houndsleuth",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "hyperpdf",
         "desc": "",
         "type": ""
       },
@@ -424,16 +349,6 @@
         "type": ""
       },
       {
-        "name": "justonedb",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "keen io",
-        "desc": "",
-        "type": "analytics"
-      },
-      {
         "name": "librato",
         "desc": "",
         "type": "",
@@ -441,11 +356,6 @@
       },
       {
         "name": "loaderio",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "localeapp",
         "desc": "",
         "type": ""
       },
@@ -495,22 +405,7 @@
         "url": "https://mongolab.com/"
       },
       {
-        "name": "mwiki",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "neo4j",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "new relic",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "nodefly",
         "desc": "",
         "type": ""
       },
@@ -583,11 +478,6 @@
         "type": ""
       },
       {
-        "name": "rcmmder",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "rediscloud",
         "desc": "",
         "type": ""
@@ -608,16 +498,6 @@
         "type": ""
       },
       {
-        "name": "rethinkdb-cloud",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "rhoconnect",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "robowhois",
         "desc": "",
         "type": ""
@@ -629,17 +509,7 @@
         "url": "https://rollbar.com/"
       },
       {
-        "name": "runscope",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "runtimeerror",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "s3search",
         "desc": "",
         "type": ""
       },
@@ -696,11 +566,6 @@
         "type": ""
       },
       {
-        "name": "sourceninja",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "spreedlycore",
         "desc": "",
         "type": ""
@@ -732,11 +597,6 @@
         "type": ""
       },
       {
-        "name": "superfeedr",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "swiftype",
         "desc": "",
         "type": ""
@@ -763,17 +623,7 @@
         "type": ""
       },
       {
-        "name": "ticketly",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "tinfoilsecurity",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "trackman",
         "desc": "",
         "type": ""
       },
@@ -784,22 +634,7 @@
         "url": "http://www.treasure-data.com/"
       },
       {
-        "name": "tripwire",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "tronprint",
-        "desc": "",
-        "type": ""
-      },
-      {
         "name": "twist",
-        "desc": "",
-        "type": ""
-      },
-      {
-        "name": "urbanairship",
         "desc": "",
         "type": ""
       },
@@ -832,6 +667,176 @@
       {
         "name": "zeropush",
         "desc": "",
+        "type": ""
+      },
+      {
+        "name": "algoliasearch",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "auth0",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "bernoulli",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "blazemeter",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "boomerang",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "bugsnag",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "cornerstore",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "deadmanssnitch",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "exceptiontrap",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "expeditedssl",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "fodaddon",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "fortifyondemand",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "foundelasticsearch",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "gamerocket",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "goinstant",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "graphenedb",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "hypdf",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "mail2webhook",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "memcachedcloud",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "mongosoup",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "pgstudio",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "pointdns",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "quotaguard",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "quotaguardstatic",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "rcmmndr",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "redismonitor",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "ruppells-sockets",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "statushub",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "strongloop",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "traceview",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "transloadit",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "userbin",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "usersnap",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "keen",
+        "url": "",
         "type": ""
       }
     ]

@@ -30,5 +30,5 @@ class Addon
 	field :description, type: String
 	field :type, type: String
 	# validations
-  validates :url, :allow_blank => true, format: { with: /http[s]?:\/\/.*/ }
+  validates :url, allow_blank: true, format: { with: /http[s]?:\/\/.*/ }
 end
