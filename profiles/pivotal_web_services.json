@@ -1,0 +1,229 @@
+{
+  "name": "Pivotal Web Services",
+  "revision": "2014-05-22",
+  "url": "https://run.pivotal.io/",
+  "status": "production",
+  "status_since": "2014-05-07",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "groovy",
+      "versions": [
+        "1.5.*",
+        "1.6.*",
+        "1.7.*",
+        "1.8.*",
+        "2.0.*",
+        "2.1.*"
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+        "1.6.*",
+        "1.7.*",
+        "1.8.*"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "0.4.*",
+        "0.6.*",
+        "0.8.*",
+        "0.10.*"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.8.7",
+        "1.9.2",
+        "1.9.3",
+        "2.0.0"
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "1.1",
+        "1.2",
+        "2.1"
+      ]
+    }
+  ],
+  "middleware": [
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "grails",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+
+    ],
+    "addon": [
+      {
+        "name": "blazemeter",
+        "url": "http://blazemeter.com/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "name": "cleardb",
+        "url": "http://www.cleardb.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "name": "cloudamqp",
+        "url": "http://www.cloudamqp.com/",
+        "description": "",
+        "type": "worker"
+      },
+      {
+        "name": "cloudforge",
+        "url": "https://cloudforge.com/",
+        "description": "",
+        "type": "devops"
+      },
+      {
+        "name": "elephantsql",
+        "url": "http://www.elephantsql.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "name": "ironmq",
+        "url": "http://www.iron.io/mq",
+        "description": "",
+        "type": "worker"
+      },
+      {
+        "name": "ironworker",
+        "url": "http://www.iron.io/worker",
+        "description": "",
+        "type": "worker"
+      },
+      {
+        "name": "loadimpact",
+        "url": "http://loadimpact.com/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "name": "memcached cloud",
+        "url": "http://redislabs.com/memcached-cloud",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "name": "mongolab",
+        "url": "https://mongolab.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "name": "new relic",
+        "url": "http://newrelic.com/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "name": "rediscloud",
+        "url": "http://redis-cloud.com/",
+        "description": "",
+        "type": "datastore"
+      },
+      {
+        "name": "sendgrid",
+        "url": "http://sendgrid.com/",
+        "description": "",
+        "type": "messaging"
+      },
+      {
+        "name": "searchify",
+        "url": "https://www.searchify.com/",
+        "description": "",
+        "type": "search"
+      },
+      {
+        "name": "searchly",
+        "url": "http://www.searchly.com/",
+        "description": "",
+        "type": "search"
+      }
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
+      "provider": "AWS"
+    }
+  ]
+}

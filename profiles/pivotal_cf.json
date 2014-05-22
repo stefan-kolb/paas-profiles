@@ -1,9 +1,9 @@
 {
-  "name": "Cloud Foundry",
+  "name": "Pivotal CF",
   "revision": "2014-05-22",
-  "url": "http://www.cloudfoundry.org/",
+  "url": "http://www.gopivotal.com/paas",
   "status": "production",
-  "status_since": "2011-04-12",
+  "status_since": "2013-11-12",
   "type": "Generic",
   "hosting": {
     "public": false,
@@ -119,7 +119,30 @@
   ],
   "services": {
     "native": [
+      {
+        "name": "hadoop",
+        "description": "",
+        "type": "worker",
+        "versions": [
 
+        ]
+      },
+      {
+        "name": "rabbitmq",
+        "description": "",
+        "type": "worker",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
     ],
     "addon": [
 
@@ -127,11 +150,6 @@
   },
   "extensible": true,
   "infrastructures": [
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "Virginia",
-      "provider": "AWS"
-    }
+
   ]
 }
