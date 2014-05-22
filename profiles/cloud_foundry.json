@@ -127,11 +127,6 @@
   },
   "extensible": true,
   "infrastructures": [
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "Virginia",
-      "provider": "AWS"
-    }
+
   ]
 }
