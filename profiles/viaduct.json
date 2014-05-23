@@ -1,0 +1,101 @@
+{
+  "name": "Viaduct",
+  "revision": "2014-05-23",
+  "url": "http://viaduct.io/",
+  "status": "beta",
+  "status_since": "2014-03-08",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+
+  ],
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "node",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.5"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "2.1.1"
+      ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.4"
+        ]
+      },
+      {
+        "name": "mariadb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.5"
+        ]
+      },
+      {
+        "name": "memcached",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.8"
+        ]
+      },
+      {
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.3"
+        ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.8"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "GB",
+      "region": ""
+    }
+  ]
+}
