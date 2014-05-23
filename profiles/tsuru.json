@@ -1,6 +1,6 @@
 {
   "name": "Tsuru",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2014-05-23",
   "url": "http://www.tsuru.io/",
   "status": "beta",
   "status_since": "2013-08-28",
@@ -18,6 +18,12 @@
     "auto": false
   },
   "runtimes": [
+    {
+      "language": "go",
+      "versions": [
+
+      ]
+    },
     {
       "language": "node",
       "versions": [
@@ -47,7 +53,20 @@
 
   ],
   "frameworks": [
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
 
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    }
   ],
   "services": {
     "native": [
