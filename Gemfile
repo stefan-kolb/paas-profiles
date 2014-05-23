@@ -12,6 +12,10 @@ gem 'activesupport'
 gem 'sinatra-simple-navigation'
 gem 'geocoder'
 
+group :production do
+  gem 'unicorn'
+end
+
 group :test do
   gem 'minitest'
   gem 'factory_girl'
