@@ -10,18 +10,18 @@ class Version
       'java' => '1.8',
       'ruby' => '2.1',
       'node' => '0.10',
-      'python' => '3.3',
+      'python' => '3.4',
       'dotnet' => '4.5',
       'perl' => '5.18',
       'go' => '1.2',
-      'scala' => '2.10',
-      'erlang' => 'R16B03',
-      'clojure' => '1.5',
+      'scala' => '2.11',
+      'erlang' => '17.0',
+      'clojure' => '1.6',
       'groovy' => '2.2',
       'apex' => '',
       'cobol' => '2002',
       'lua' => '5.2',
-      'dart' => '1.1',
+      'dart' => '1.2',
   }
 
   # http://semver.org/
