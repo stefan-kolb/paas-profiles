@@ -22,10 +22,10 @@ class Feed
     def create_entries(feed)
       Vendor.all.each do |vendor|
         feed.items.new_item do |item|
-          item.id = url_encode(vendor.name) << vendor.revision.to_s
-          item.guid.isPermaLink =false
-          item.link = "http://paasify.it/vendor/#{url_encode(vendor.name)}"
           item.title = "PaaSify Update #{vendor.revision.strftime('%-m/%-d')}: #{vendor.name}"
+          item.guid.content = url_encode(vendor.name) << vendor.revision.to_s
+          item.guid.isPermaLink = false
+          item.link = "http://paasify.it/vendor/#{url_encode(vendor.name)}"
           item.updated = vendor.revision.to_s(:rfc822)
         end
       end
