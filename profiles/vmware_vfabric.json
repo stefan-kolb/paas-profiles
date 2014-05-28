@@ -11,7 +11,7 @@
   },
   "pricing": [
     {
-      "model": "",
+      "model": "fixed",
       "period": "annually"
     }
   ],
@@ -30,7 +30,41 @@
   ],
   "middleware": null,
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "name": "sqlfire",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "gemfire",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "postgresql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "rabbitmq",
+        "type": "worker",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extensible": false,
   "infrastructures": [
 

@@ -1,6 +1,6 @@
 {
   "name": "ELPaaS",
-  "revision": "2013-07-10T13:00:54+02:00",
+  "revision": "2014-05-28",
   "url": "https://www.elpaas.com/",
   "status": "production",
   "status_since": "2012-04-12",
@@ -11,8 +11,12 @@
   },
   "pricing": [
     {
-      "model": "",
+      "model": "metered",
       "period": "monthly"
+    },
+    {
+      "model": "fixed",
+      "period": "annually"
     }
   ],
   "scaling": {

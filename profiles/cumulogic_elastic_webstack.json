@@ -1,9 +1,9 @@
 {
-  "name": "Cumulogic",
+  "name": "Cumulogic Elastic WebStack",
   "revision": "2014-04-23",
   "url": "http://www.cumulogic.com/cumulogic-software-portfolio/paas/",
   "status": "beta",
-  "status_since": "2013-02-26",
+  "status_since": "2014-05-28",
   "type": "IaaS-centric",
   "hosting": {
     "public": false,
@@ -11,7 +11,7 @@
   },
   "pricing": [
     {
-      "model": "",
+      "model": "fixed",
       "period": "monthly"
     }
   ],
@@ -35,6 +35,12 @@
     },
     {
       "language": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "groovy",
       "versions": [
 
       ]
@@ -72,14 +78,52 @@
       ]
     },
     {
+      "name": "zend",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
       "name": "django",
       "runtime": "python",
       "versions": [
 
       ]
+    },
+    {
+      "name": "grails",
+      "runtime": "groovy",
+      "versions": [
+
+      ]
     }
   ],
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+          "5.5"
+        ]
+      },
+      {
+        "name": "mongodb",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "oracle db",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
+    ]
+  },
   "extensible": false,
   "infrastructures": [
 

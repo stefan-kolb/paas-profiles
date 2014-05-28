@@ -1,6 +1,6 @@
 {
   "name": "AppHarbor",
-  "revision": "2013-07-05T18:00:44+02:00",
+  "revision": "2014-05-28",
   "url": "https://appharbor.com/",
   "status": "production",
   "status_since": "2012-02-02",
@@ -11,7 +11,7 @@
   },
   "pricing": [
     {
-      "model": "",
+      "model": "fixed",
       "period": "monthly"
     }
   ],

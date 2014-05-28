@@ -1,6 +1,6 @@
 {
   "name": "Cloudways",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2014-05-28",
   "url": "http://www.cloudways.com/en/",
   "status": "production",
   "status_since": "2012-03-21",
@@ -11,7 +11,7 @@
   },
   "pricing": [
     {
-      "model": "",
+      "model": "metered",
       "period": "monthly"
     }
   ],
@@ -55,18 +55,75 @@
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "NL",
+      "region": "Amsterdam",
+      "provider": "DigitalOcean"
     },
     {
       "continent": "NA",
-      "country": "",
-      "region": ""
+      "country": "US",
+      "region": "San Francisco",
+      "provider": "DigitalOcean"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "New York",
+      "provider": "DigitalOcean"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "DigitalOcean"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Tokyo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+      "provider": "AWS"
     },
     {
       "continent": "OC",
-      "country": "",
-      "region": ""
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "AWS"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo",
+      "provider": "AWS"
     }
   ]
 }

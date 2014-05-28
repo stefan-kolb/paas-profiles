@@ -11,7 +11,7 @@
   },
   "pricing": [
     {
-      "model": "",
+      "model": "fixed",
       "period": "monthly"
     }
   ],
