@@ -44,5 +44,5 @@ end
 get '/vendors.rss' do
   content_type 'application/rss+xml'
 
-  Feed.vendor_updates
+  Feed.get_rss
 end
