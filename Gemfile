@@ -15,7 +15,6 @@ gem 'rest-client'
 group :test do
   gem 'minitest'
   gem 'factory_girl'
-  gem 'coveralls', require: false
 end
 
 group :production do
