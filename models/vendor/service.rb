@@ -7,6 +7,9 @@ class Service
 
   embeds_many :natives, store_as: 'native'
   embeds_many :addons, store_as: 'addon'
+  # validations
+  validates :natives, presence: true, allow_blank: true
+  validates :natives, presence: true, allow_blank: true
 end
 
 class Native

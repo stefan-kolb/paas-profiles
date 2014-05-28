@@ -122,6 +122,9 @@
 
         ]
       }
+    ],
+    "addon": [
+
     ]
   },
   "extensible": false,
