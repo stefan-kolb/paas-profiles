@@ -79,6 +79,7 @@ DEPENDENCIES
   mongoid (>= 3.0)
   newrelic_rpm
   rake
+  rest-client
   sinatra
   sinatra-simple-navigation
   unicorn

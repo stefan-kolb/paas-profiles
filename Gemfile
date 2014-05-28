@@ -4,20 +4,21 @@ ruby '2.0.0'
 
 gem 'sinatra'
 gem 'mongoid', '>= 3.0'
-gem 'newrelic_rpm'
 gem 'rake'
 gem 'iso_country_codes'
 gem 'versionomy'
 gem 'activesupport'
 gem 'sinatra-simple-navigation'
 gem 'geocoder'
-
-group :production do
-  gem 'unicorn'
-end
+gem 'rest-client'
 
 group :test do
   gem 'minitest'
   gem 'factory_girl'
   gem 'coveralls', require: false
+end
+
+group :production do
+  gem 'unicorn'
+  gem 'newrelic_rpm'
 end

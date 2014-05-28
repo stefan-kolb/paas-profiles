@@ -4,8 +4,7 @@ require 'mongoid'
 require 'sinatra'
 require 'sinatra/simple-navigation'
 require 'versionomy'
-
-require 'newrelic_rpm'
+require 'rest-client'
 
 # models
 require_relative 'models/vendor/vendor'
@@ -25,9 +24,13 @@ require_relative 'routes/api'
 not_found { erb :'404', :layout => false }
 error { erb :'500', :layout => false }
 
-# protection
-set :protection, :except => :frame_options
-
 Mongoid.load!('./config/mongoid.yml')
 
 include LayoutHelper
+
+configure :production do
+  # monitoring
+  require 'newrelic_rpm'
+  # protection
+  set :protection, :except => :frame_options
+end
