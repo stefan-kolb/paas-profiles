@@ -3,15 +3,25 @@ require 'rss'
 require_relative '../models/vendor/vendor'
 
 class Feed
-  def self.vendor_updates
-    rss = RSS::Maker.make('2.0') do |maker|
-      maker.channel.title = 'PaaSify.it - Platform as a Service Providers'
-      maker.channel.link = 'http://paasify.it'
-      maker.channel.description = 'Platform as a Service provider overview, comparison and matchmaking.'
-      maker.items.do_sort = true
+  class << self
+    def get_rss
+      rss = RSS::Maker.make('2.0') do |feed|
+        feed.channel.title = 'PaaSify.it - Platform as a Service Providers'
+        feed.channel.link = 'http://paasify.it'
+        feed.channel.description = 'Platform as a Service provider overview, comparison and matchmaking.'
+        feed.items.do_sort = true
 
+        create_entries(feed)
+      end
+
+      rss.to_s
+    end
+
+    private
+
+    def create_entries(feed)
       Vendor.all.each do |vendor|
-        maker.items.new_item do |item|
+        feed.items.new_item do |item|
           item.id = url_encode(vendor.name) << vendor.revision.to_s
           item.guid.isPermaLink =false
           item.link = "http://paasify.it/vendor/#{url_encode(vendor.name)}"
@@ -21,6 +31,5 @@ class Feed
       end
     end
 
-    rss.to_s
   end
 end
