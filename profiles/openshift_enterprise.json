@@ -1,6 +1,6 @@
 {
   "name": "OpenShift Enterprise",
-  "revision": "2014-03-13",
+  "revision": "2014-06-03",
   "url": "https://www.openshift.com/products/enterprise",
   "vendor_verified": "2014-01-07",
   "status": "production",
@@ -49,7 +49,8 @@
       "language": "python",
       "versions": [
         "2.6",
-        "2.7"
+        "2.7",
+        "3.3"
       ]
     },
     {
@@ -115,6 +116,13 @@
           "1.4"
         ],
         "type": "devops"
+      },
+      {
+        "name": "mongodb",
+        "versions": [
+          "2.4"
+        ],
+        "type": "datastore"
       },
       {
         "name": "mysql",

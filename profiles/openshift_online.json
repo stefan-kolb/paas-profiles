@@ -1,6 +1,6 @@
 {
   "name": "OpenShift Online",
-  "revision": "2014-05-13",
+  "revision": "2014-06-03",
   "url": "https://www.openshift.com/products/online",
   "vendor_verified": "2014-01-07",
   "status": "production",
@@ -183,7 +183,51 @@
       }
     ],
     "addon": [
-
+      {
+        "name": "aerogear push",
+        "url": "http://aerogear.org/",
+        "type": "messaging"
+      },
+      {
+        "name": "cloudforge",
+        "url": "http://cloudforge.com/",
+        "type": "devops"
+      },
+      {
+        "name": "cloudamqp",
+        "url": "http://www.cloudamqp.com/",
+        "type": "worker"
+      },
+      {
+        "name": "elephantsql",
+        "url": "http://www.elephantsql.com/",
+        "type": "datastore"
+      },
+      {
+        "name": "iron mq",
+        "url": "http://www.iron.io/mq",
+        "type": "worker"
+      },
+      {
+        "name": "memcached cloud",
+        "url": "http://redislabs.com/",
+        "type": "datastore"
+      },
+      {
+        "name": "mongolab",
+        "url": "http://mongolab.com/",
+        "type": "datastore"
+      },
+      {
+        "name": "redis cloud",
+        "url": "http://redislabs.com/",
+        "type": "datastore"
+      },
+      {
+        "name": "searchly elasticsearch",
+        "url": "http://www.searchly.com/",
+        "type": "search"
+      }
     ]
   },
   "extensible": true,
