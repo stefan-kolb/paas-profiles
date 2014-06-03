@@ -1,0 +1,202 @@
+{
+  "name": "App42 PaaS",
+  "revision": "2014-06-03",
+  "url": "http://app42paas.shephertz.com/",
+  "status": "production",
+  "status_since": "2014-01-14",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "groovy",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+        "1.6",
+        "1.7"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "0.10.22"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "2.0.0"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.3",
+        "5.5"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7"
+      ]
+    }
+  ],
+  "middleware": [
+    {
+      "name": "apache",
+      "versions": [
+        "2.2",
+        "2.4.2"
+      ]
+    },
+    {
+      "name": "nginx",
+      "versions": [
+        "1.4.1"
+      ]
+    },
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6.0"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "grails",
+      "runtime": "groovy",
+      "versions": [
+        "1.3.7",
+        "2.2.1"
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+        "3.2.4"
+      ]
+    },
+    {
+      "name": "roo",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "cake",
+      "runtime": "php",
+      "versions": [
+        "2.3.9"
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "4.0"
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+        "1.4"
+      ]
+    },
+    {
+      "name": "compoundjs",
+      "runtime": "node",
+      "versions": [
+        "1.1"
+      ]
+    },
+    {
+      "name": "expressjs",
+      "runtime": "node",
+      "versions": [
+        "3.4"
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "mongodb",
+        "type": "datastore",
+        "versions": [
+          "2.4"
+        ]
+      },
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+          "5.5"
+        ]
+      },
+      {
+        "name": "postgresql",
+        "type": "datastore",
+        "versions": [
+          "9.1"
+        ]
+      },
+      {
+        "name": "couchdb",
+        "type": "datastore",
+        "versions": [
+          "1.0"
+        ]
+      },
+      {
+        "name": "redis",
+        "type": "datastore",
+        "versions": [
+          "2.8"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+      "provider": "AWS"
+    }
+  ]
+}
