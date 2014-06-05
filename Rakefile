@@ -164,13 +164,26 @@ namespace :profiles do
   task :images do
     Vendor.all.each do |v|
       unless v['twitter'].blank?
+        begin
         # FIXME limit is 180
         resp = RestClient.get("https://api.twitter.com/1.1/users/show.json?screen_name=#{v['twitter']}", :'authorization' => "Bearer #{ENV['TWITTER_SECRET']}")
+        unless response.code == 200
+          fail "Bad response"
+        end
+
         profile = JSON.parse(resp.body)
         img_url = profile['profile_image_url_https'].gsub('normal', 'bigger')
         v.update_attributes(
             image: img_url
         )
+        rescue
+          puts "Error retrieving image of #{v['name']}"
+          sleep 5
+          retry
+        end
+      end
+    end
+  end
       end
     end
   end
