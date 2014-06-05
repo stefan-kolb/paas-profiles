@@ -46,10 +46,14 @@ namespace :mongo do
 
     data.each do |e|
       unless e['twitter'].blank? || e['image'].blank?
-        Vendor.find_by(name: e['vendor']).update_attributes(
-            twitter: e['twitter'],
-            image: e['image']
-        )
+        begin
+          Vendor.find_by(name: e['vendor']).update_attributes(
+              twitter: e['twitter'],
+              image: e['image']
+          )
+        rescue Mongoid::Errors::DocumentNotFound
+          # ignore
+        end
       end
     end
   end
