@@ -45,9 +45,10 @@ namespace :mongo do
     data = JSON.parse(File.read('./data/twitter_profiles.json'))
 
     data.each do |e|
-      unless e['twitter'].blank?
+      unless e['twitter'].blank? || e['image'].blank?
         Vendor.find_by(name: e['vendor']).update_attributes(
-            twitter: e['twitter']
+            twitter: e['twitter'],
+            image: e['image']
         )
       end
     end
@@ -162,24 +163,32 @@ namespace :profiles do
 
   desc "Retrieves profile pictures from Twitter"
   task :images do
-    Vendor.all.each do |v|
-      unless v['twitter'].blank?
-        begin
-        # FIXME limit is 180
-        resp = RestClient.get("https://api.twitter.com/1.1/users/show.json?screen_name=#{v['twitter']}", :'authorization' => "Bearer #{ENV['TWITTER_SECRET']}")
-        unless response.code == 200
-          fail "Bad response"
-        end
+    data = JSON.parse(File.read('./data/twitter_profiles.json'))
 
-        profile = JSON.parse(resp.body)
-        img_url = profile['profile_image_url_https'].gsub('normal', 'bigger')
-        v.update_attributes(
-            image: img_url
-        )
-        rescue
-          puts "Error retrieving image of #{v['name']}"
-          sleep 5
-          retry
+    data.each do |e|
+      unless e['twitter'].blank?
+        begin
+          # FIXME limit is 180
+          resp = RestClient.get("https://api.twitter.com/1.1/users/show.json?screen_name=#{e['twitter']}", :'authorization' => "Bearer #{ENV['TWITTER_SECRET']}")
+          unless resp.code == 200
+            fail "Bad response"
+          end
+
+          profile = JSON.parse(resp.body)
+          img_url = profile['profile_image_url_https'].gsub('normal', 'bigger')
+          e['image'] = img_url
+        rescue Exception => ex
+          puts "Error retrieving image of #{e['vendor']}"
+          puts ex.message
+          puts "Rate limiting is 15 minutes!"
+        end
+      end
+    end
+
+    File.open('./data/twitter_profiles.json', 'w') do |f|
+      f.write(JSON.pretty_generate data)
+    end
+  end
         end
       end
     end
