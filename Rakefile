@@ -189,13 +189,6 @@ namespace :profiles do
       f.write(JSON.pretty_generate data)
     end
   end
-        end
-      end
-    end
-  end
-      end
-    end
-  end
 end
 
 Rake::TestTask.new do |t|
