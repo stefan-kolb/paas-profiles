@@ -3,6 +3,7 @@ require 'mongoid'
 require 'rake/testtask'
 require 'active_support/core_ext'
 require 'geocoder'
+require 'rest-client'
 #require 'git'
 
 require_relative 'models/vendor/vendor'
@@ -34,8 +35,22 @@ namespace :mongo do
     unless Dir["./profiles#{File::SEPARATOR}*.json"].length == Vendor.count
       raise "Not all profiles were imported into MongoDB"
     end
+    # twitter data
+    twitter
     # geo information
     geodata
+  end
+
+  def twitter
+    data = JSON.parse(File.read('./data/twitter_profiles.json'))
+
+    data.each do |e|
+      unless e['twitter'].blank?
+        Vendor.find_by(name: e['vendor']).update_attributes(
+            twitter: e['twitter']
+        )
+      end
+    end
   end
 
   def geodata
@@ -141,6 +156,21 @@ namespace :profiles do
         end
       rescue
         raise "An error occurred while sorting #{file_name}"
+      end
+    end
+  end
+
+  desc "Retrieves profile pictures from Twitter"
+  task :images do
+    Vendor.all.each do |v|
+      unless v['twitter'].blank?
+        # FIXME limit is 180
+        resp = RestClient.get("https://api.twitter.com/1.1/users/show.json?screen_name=#{v['twitter']}", :'authorization' => "Bearer #{ENV['TWITTER_SECRET']}")
+        profile = JSON.parse(resp.body)
+        img_url = profile['profile_image_url_https'].gsub('normal', 'bigger')
+        v.update_attributes(
+            image: img_url
+        )
       end
     end
   end

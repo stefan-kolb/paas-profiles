@@ -1,0 +1,310 @@
+[
+  {
+    "vendor": "Acquia Cloud",
+    "twitter": "aquia"
+  },
+  {
+    "vendor": "Amazon Elastic Beanstalk",
+    "twitter": "awscloud"
+  },
+  {
+    "vendor": "Anynines",
+    "twitter": "anynines"
+  },
+  {
+    "vendor": "Apache Stratos",
+    "twitter": "ApacheStratos"
+  },
+  {
+    "vendor": "App42 PaaS",
+    "twitter": "shephertz"
+  },
+  {
+    "vendor": "AppFog",
+    "twitter": "appfog"
+  },
+  {
+    "vendor": "AppHarbor",
+    "twitter": "appharbor"
+  },
+  {
+    "vendor": "Apprenda",
+    "twitter": "apprenda"
+  },
+  {
+    "vendor": "AppScale",
+    "twitter": "appscalecloud"
+  },
+  {
+    "vendor": "Appsembler",
+    "twitter": "appsembler"
+  },
+  {
+    "vendor": "BitNami",
+    "twitter": "bitnami"
+  },
+  {
+    "vendor": "brightbox",
+    "twitter": "brightbox"
+  },
+  {
+    "vendor": "CatN",
+    "twitter": "catn"
+  },
+  {
+    "vendor": "CenturyLink Cloud",
+    "twitter": "centurylinkcld"
+  },
+  {
+    "vendor": "Clever Cloud",
+    "twitter": "clever_cloud"
+  },
+  {
+    "vendor": "CloudBees",
+    "twitter": "cloudbees"
+  },
+  {
+    "vendor": "cloudControl",
+    "twitter": "cloudcontrolled"
+  },
+  {
+    "vendor": "Cloudify",
+    "twitter": "cloudifysource"
+  },
+  {
+    "vendor": "Cloudnode",
+    "twitter": "cloudno_de"
+  },
+  {
+    "vendor": "Cloudn PaaS",
+    "twitter": "cloudn_nttcom"
+  },
+  {
+    "vendor": "Cloudways",
+    "twitter": "cloudways"
+  },
+  {
+    "vendor": "Cloud Foundry",
+    "twitter": "cloudfoundry"
+  },
+  {
+    "vendor": "Codename:Bluemix",
+    "twitter": "IBMcloud"
+  },
+  {
+    "vendor": "ConPaaS",
+    "twitter": "Contrailproject"
+  },
+  {
+    "vendor": "Cumulogic Elastic WebStack",
+    "twitter": "cumulogic"
+  },
+  {
+    "vendor": "Deis",
+    "twitter": "opendeis"
+  },
+  {
+    "vendor": "dotCloud",
+    "twitter": "dot_cloud"
+  },
+  {
+    "vendor": "Durga",
+    "twitter": "senathltd"
+  },
+  {
+    "vendor": "ElasticBox",
+    "twitter": "elasticbox"
+  },
+  {
+    "vendor": "ELPaaS",
+    "twitter": "elpaas"
+  },
+  {
+    "vendor": "EngineYard",
+    "twitter": "engineyard"
+  },
+  {
+    "vendor": "Evia",
+    "twitter": "relbit"
+  },
+  {
+    "vendor": "Flynn",
+    "twitter": ""
+  },
+  {
+    "vendor": "Force.com",
+    "twitter": "forcedotcom"
+  },
+  {
+    "vendor": "fortrabbit",
+    "twitter": "fortrabbit"
+  },
+  {
+    "vendor": "Getup Cloud",
+    "twitter": "GetupCloud"
+  },
+  {
+    "vendor": "Gondor",
+    "twitter": "eldarion"
+  },
+  {
+    "vendor": "Google App Engine",
+    "twitter": "googlecloud"
+  },
+  {
+    "vendor": "Heroku",
+    "twitter": "heroku"
+  },
+  {
+    "vendor": "HP Cloud Application PaaS",
+    "twitter": "hphelioncloud"
+  },
+  {
+    "vendor": "iKnode",
+    "twitter": "iknode"
+  },
+  {
+    "vendor": "Jelastic",
+    "twitter": "jelastic"
+  },
+  {
+    "vendor": "Mendix",
+    "twitter": "Mendix"
+  },
+  {
+    "vendor": "Modulus",
+    "twitter": "OnModulus"
+  },
+  {
+    "vendor": "Moncai",
+    "twitter": "moncai"
+  },
+  {
+    "vendor": "MoPaaS",
+    "twitter": ""
+  },
+  {
+    "vendor": "mOSAIC",
+    "twitter": ""
+  },
+  {
+    "vendor": "Ninefold",
+    "twitter": "ninefold"
+  },
+  {
+    "vendor": "Nitrous.io",
+    "twitter": "nitrousio"
+  },
+  {
+    "vendor": "Nodejitsu",
+    "twitter": "nodejitsu"
+  },
+  {
+    "vendor": "OpenShift Enterprise",
+    "twitter": "openshift"
+  },
+  {
+    "vendor": "OpenShift Online",
+    "twitter": "openshift"
+  },
+  {
+    "vendor": "OpenShift Origin",
+    "twitter": "openshift"
+  },
+  {
+    "vendor": "Oracle Cloud PaaS",
+    "twitter": "OracleCloudZone"
+  },
+  {
+    "vendor": "OrangeScape",
+    "twitter": "orangescape"
+  },
+  {
+    "vendor": "Paasmaker",
+    "twitter": "Paasmaker"
+  },
+  {
+    "vendor": "Pagoda Box",
+    "twitter": "pagodabox"
+  },
+  {
+    "vendor": "PHPCloud",
+    "twitter": "phpCloud"
+  },
+  {
+    "vendor": "Pivotal CF",
+    "twitter": "gopivotal"
+  },
+  {
+    "vendor": "Pivotal Web Services",
+    "twitter": "gopivotal"
+  },
+  {
+    "vendor": "Pogoapp",
+    "twitter": "pogoapp"
+  },
+  {
+    "vendor": "Railscloud",
+    "twitter": "railscloud"
+  },
+  {
+    "vendor": "SAP HANA Cloud",
+    "twitter": "saphcp"
+  },
+  {
+    "vendor": "Shelly Cloud",
+    "twitter": "ShellyCloud"
+  },
+  {
+    "vendor": "Software AG Live",
+    "twitter": "SoftwareAG"
+  },
+  {
+    "vendor": "Stackato",
+    "twitter": "ActiveState"
+  },
+  {
+    "vendor": "Standing Cloud",
+    "twitter": "standing_cloud"
+  },
+  {
+    "vendor": "Static",
+    "twitter": "staticcorp"
+  },
+  {
+    "vendor": "Trucker.io",
+    "twitter": "trucker_io"
+  },
+  {
+    "vendor": "Tsuru",
+    "twitter": "tsurupaas"
+  },
+  {
+    "vendor": "Uhuru AppCloud",
+    "twitter": "uhurusoftware"
+  },
+  {
+    "vendor": "Viaduct",
+    "twitter": "askviaduct"
+  },
+  {
+    "vendor": "VMWARE vFabric",
+    "twitter": "VMware"
+  },
+  {
+    "vendor": "Voxoz",
+    "twitter": ""
+  },
+  {
+    "vendor": "Webappcabaret",
+    "twitter": ""
+  },
+  {
+    "vendor": "Webbynode",
+    "twitter": "webbynode"
+  },
+  {
+    "vendor": "Windows Azure",
+    "twitter": "Azure"
+  }
+]
