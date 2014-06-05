@@ -2,8 +2,9 @@
   "name": "Cumulogic Elastic WebStack",
   "revision": "2014-05-28",
   "url": "http://www.cumulogic.com/cumulogic-software-portfolio/paas/",
-  "status": "beta",
-  "status_since": "2013-02-26",
+  "vendor_verified": "2014-06-05",
+  "status": "production",
+  "status_since": "2012-07-11",
   "type": "IaaS-centric",
   "hosting": {
     "public": false,
