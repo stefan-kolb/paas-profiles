@@ -15,7 +15,7 @@
   "scaling": {
     "vertical": true,
     "horizontal": true,
-    "auto": false
+    "auto": true
   },
   "runtimes": [
     {
@@ -66,6 +66,18 @@
       "versions": [
         "1.1",
         "1.2"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+
       ]
     }
   ],
@@ -138,6 +150,46 @@
         "name": "mysql",
         "description": "",
         "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "riak cs",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "neo4j",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "elasticsearch",
+        "description": "",
+        "type": "search",
         "versions": [
 
         ]
