@@ -1,0 +1,109 @@
+{
+  "name": "Shelly Cloud",
+  "revision": "2014-06-05",
+  "url": "https://shellycloud.com/",
+  "status": "production",
+  "status_since": "",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": false,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "ruby",
+      "versions": [
+        "1.9.3",
+        "2.0.0",
+        "2.1.0",
+        "2.1.1",
+        "2.1.2"
+      ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "2.3.*",
+        "3.*",
+        "4.*"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "filesystem",
+        "description": "Persistent filesystem",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.4.5"
+        ]
+      },
+      {
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.3"
+        ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.6.13"
+        ]
+      },
+      {
+        "name": "elasticsearch",
+        "description": "",
+        "type": "search",
+        "versions": [
+          "1.0"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Nuremberg"
+    },
+    {
+      "continent": "EU",
+      "country": "FR",
+      "region": "Roubaix"
+    }
+  ]
+}
