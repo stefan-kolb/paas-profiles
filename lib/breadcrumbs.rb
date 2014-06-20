@@ -5,7 +5,7 @@ module SimpleNavigation
     class Breadcrumbs < SimpleNavigation::Renderer::Base
 
       def render(item_container)
-        content_tag(:ul, (li_tags(item_container) << github).join(''), {id: item_container.dom_id, class: 'breadcrumb'})
+        content_tag(:ul, (li_tags(item_container) << github).join(''), {id: item_container.dom_id, class: 'crumb'})
       end
 
       protected

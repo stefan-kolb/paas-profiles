@@ -1,3 +1,26 @@
+.crumb {
+    padding: 10px 0px;
+    margin: 0 0 0px;
+    list-style: none;
+    background-color: #f5f5f5;
+}
+
+.crumb>li {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    text-shadow: 0 1px 0 #ffffff;
+}
+
+.crumb>li>.divider {
+    padding: 0 5px;
+    color: #ccc;
+}
+
+.crumb>.active {
+    color: #999999;
+}
+
 hr.soften {
     height: 1px;
     margin: 25px 0 25px 0;
