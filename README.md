@@ -228,10 +228,10 @@ A string array containing the supported framework versions.
 ```json
 "services": {
   "native": [
-    { "name": "mongodb", type="datastore", "description": "", "versions": [ "1.8" ] }
+    { "name": "mongodb", type: "datastore", "description": "", "versions": [ "1.8" ] }
   ],
   "addon": [
-    { "name": "mongolab", url="https://mongolab.com/", description="", type="datastore" }
+    { "name": "mongolab", url: "https://mongolab.com/", description: "", type: "datastore" }
   ]
 }
 ```
