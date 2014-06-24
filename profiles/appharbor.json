@@ -64,198 +64,165 @@
       {
         "name": "airbrake",
         "url": "https://airbrake.io",
-        "desc": "",
         "type": "analytics"
       },
       {
         "name": "appfail",
-        "desc": "",
         "type": "analytics",
         "url": "http://appfail.net/"
       },
       {
         "name": "blitline",
-        "desc": "",
         "type": "media",
         "url": "http://blitline.com/"
       },
       {
         "name": "blitz",
-        "desc": "",
-        "type": "",
+        "type": "analytics",
         "url": "https://www.blitz.io/"
       },
       {
         "name": "cloudamqp",
-        "desc": "",
         "type": "",
         "url": "http://cloudamqp.com/"
       },
       {
         "name": "cloudant",
-        "desc": "",
         "type": "",
         "url": "https://cloudant.com/"
       },
       {
         "name": "cloudinary",
-        "desc": "",
         "type": "",
         "url": "http://cloudinary.com/"
       },
       {
         "name": "cloudmailin",
-        "desc": "",
         "type": "",
         "url": "http://www.cloudmailin.com/"
       },
       {
         "name": "cloudscheduler",
-        "desc": "",
         "type": "worker",
         "url": "https://getcloudscheduler.com/"
       },
       {
         "name": "elephantsql",
-        "desc": "",
         "type": "datastore",
         "url": "http://www.elephantsql.com/"
       },
       {
         "name": "found elasticsearch",
-        "desc": "",
         "type": "search",
         "url": "http://www.found.no/"
       },
       {
         "name": "hosted graphite",
-        "desc": "",
         "type": "",
         "url": "https://www.hostedgraphite.com/"
       },
       {
         "name": "ironmq",
-        "desc": "",
         "type": "worker",
         "url": "http://www.iron.io/mq"
       },
       {
         "name": "librato",
-        "desc": "",
         "type": "analytics",
         "url": "https://librato.com/"
       },
       {
         "name": "loader.io",
-        "desc": "",
         "type": "",
         "url": "http://loader.io/"
       },
       {
         "name": "logentries",
-        "desc": "",
         "type": "analytics",
         "url": "https://logentries.com/"
       },
       {
         "name": "mailgun",
-        "desc": "",
         "type": "",
         "url": "http://www.mailgun.com/"
       },
       {
         "name": "memcached cloud",
-        "desc": "",
         "type": "datastore",
         "url": "http://redislabs.com/memcached-cloud"
       },
       {
         "name": "memcachier",
-        "desc": "",
         "type": "datastore",
         "url": "http://www.memcachier.com/"
       },
       {
         "name": "mongohq",
-        "desc": "",
         "type": "datastore",
         "url": "https://www.mongohq.com/"
       },
       {
         "name": "mongolab",
-        "desc": "",
         "type": "datastore",
         "url": "https://mongolab.com/"
       },
       {
         "name": "new relic",
-        "desc": "",
         "type": "analytics",
         "url": "http://newrelic.com/"
       },
       {
         "name": "rabbitmq bigwig",
-        "desc": "",
         "type": "worker",
         "url": "http://bigwig.io/"
       },
       {
         "name": "ravenhq",
-        "desc": "",
         "type": "datastore",
         "url": "https://www.ravenhq.com/"
       },
       {
         "name": "redis to go",
-        "desc": "",
         "type": "datastore",
         "url": "http://redistogo.com/"
       },
       {
         "name": "rediscloud",
-        "desc": "",
         "type": "datastore",
         "url": "http://redis-cloud.com/"
       },
       {
         "name": "searchly elasticsearch",
-        "desc": "",
         "type": "search",
         "url": "http://www.searchly.com/"
       },
       {
         "name": "searchify hosted search",
-        "desc": "",
         "type": "search",
         "url": "https://www.searchify.com/"
       },
       {
         "name": "sendgrid",
-        "desc": "",
         "type": "messaging",
         "url": "http://sendgrid.com/"
       },
       {
         "name": "spreedly",
-        "desc": "",
         "type": "payment",
         "url": "https://spreedly.com/"
       },
       {
         "name": "statsmix",
-        "desc": "",
         "type": "analytics",
         "url": "https://www.statsmix.com/"
       },
       {
         "name": "stillalive",
-        "desc": "",
         "type": "analytics",
         "url": "https://stillalive.com/"
       },
       {
         "name": "svnsailor",
-        "desc": "",
         "type": "devops",
         "url": "https://appharbor.com/addons/svnsailor"
       }

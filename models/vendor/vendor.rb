@@ -12,6 +12,7 @@ require_relative 'hosting'
 
 class Vendor
   include Mongoid::Document
+  include Mongoid::Attributes::Dynamic
 
   # fields
   field :name, type: String

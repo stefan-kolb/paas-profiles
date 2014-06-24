@@ -153,175 +153,146 @@
       {
         "name": "46elks",
         "url": "http://www.46elks.com/",
-        "desc": "",
         "type": "messaging"
       },
       {
         "name": "blitz",
         "url": "https://www.blitz.io/",
-        "desc": "",
         "type": "analytics"
       },
       {
         "name": "cloudamqp",
         "url": "http://www.cloudamqp.com/",
-        "desc": "",
         "type": "worker"
       },
       {
         "name": "cloudant",
         "url": "https://cloudant.com/",
-        "desc": "",
         "type": "datastore"
       },
       {
         "name": "cloudinary",
         "url": "http://cloudinary.com/",
-        "desc": "",
         "type": "media"
       },
       {
         "name": "cloudmailin",
         "url": "http://www.cloudmailin.com/",
-        "desc": "",
         "type": "messaging"
       },
       {
         "name": "codeship",
         "url": "https://www.codeship.io/",
-        "desc": "",
         "type": "devops"
       },
       {
         "name": "dbinsights",
         "url": "https://dbinsights.herokuapp.com/",
-        "desc": "",
         "type": "analytics"
       },
       {
         "name": "elephantsql",
         "url": "http://www.elephantsql.com/",
-        "desc": "",
         "type": "datastore"
       },
       {
         "name": "found elasticsearch",
         "url": "http://www.found.no/",
-        "desc": "",
         "type": "search"
       },
       {
         "name": "hosted graphite",
         "url": "https://www.hostedgraphite.com/",
-        "desc": "",
         "type": "analytics"
       },
       {
         "name": "indexdepot",
         "url": "https://www.indexdepot.com/",
-        "desc": "",
         "type": "search"
       },
       {
         "name": "ironmq",
         "url": "http://www.iron.io/mq",
-        "desc": "",
         "type": "worker"
       },
       {
         "name": "ironworker",
         "url": "http://www.iron.io/worker",
-        "desc": "",
         "type": "worker"
       },
       {
         "name": "loader.io",
         "url": "http://loader.io/",
-        "desc": "",
         "type": "analytics"
       },
       {
         "name": "logentries",
         "url": "https://logentries.com/",
-        "desc": "",
         "type": "analytics"
       },
       {
         "name": "mailgun",
         "url": "http://www.mailgun.com/",
-        "desc": "",
         "type": "messaging"
       },
       {
         "name": "memcachier",
         "url": "https://www.memcachier.com/",
-        "desc": "",
         "type": "datastore"
       },
       {
         "name": "mongolab",
         "url": "https://mongolab.com/",
-        "desc": "",
         "type": "datastore"
       },
       {
         "name": "mongosoup",
         "url": "http://www.mongosoup.de/",
-        "desc": "",
         "type": "datastore"
       },
       {
         "name": "new relic",
         "url": "http://newrelic.com/",
-        "desc": "",
         "type": "analytics"
       },
       {
         "name": "openredis",
         "url": "https://openredis.com/",
-        "desc": "",
         "type": "datastore"
       },
       {
         "name": "phraseapp",
         "url": "https://phraseapp.com/",
-        "desc": "",
         "type": "other"
       },
       {
         "name": "searchbox",
         "url": "https://searchbox.io/",
-        "desc": "",
         "type": "search"
       },
       {
         "name": "searchify",
         "url": "https://www.searchify.com/",
-        "desc": "",
         "type": "search"
       },
       {
         "name": "sendgrid",
         "url": "http://sendgrid.com/",
-        "desc": "",
         "type": "messaging"
       },
       {
         "name": "stillalive",
         "url": "https://stillalive.com/",
-        "desc": "",
         "type": "analytics"
       },
       {
         "name": "treasure data",
         "url": "http://www.treasure-data.com/",
-        "desc": "",
         "type": "analytics"
       },
       {
         "name": "usersnap",
         "url": "http://usersnap.com/",
-        "desc": "",
         "type": "devops"
       }
     ]

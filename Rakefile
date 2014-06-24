@@ -47,7 +47,7 @@ namespace :mongo do
     data.each do |e|
       unless e['twitter'].blank? || e['image'].blank?
         begin
-          Vendor.find_by(name: e['vendor']).update_attributes(
+          Vendor.find_by(name: e['vendor']).update(
               twitter: e['twitter'],
               image: e['image']
           )

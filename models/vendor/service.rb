@@ -2,6 +2,7 @@ require 'mongoid'
 
 class Service
   include Mongoid::Document
+  include Mongoid::Attributes::Dynamic
 
   embedded_in :vendor
 
@@ -14,6 +15,7 @@ end
 
 class Native
   include Mongoid::Document
+  include Mongoid::Attributes::Dynamic
 
   embedded_in :service
 
@@ -27,6 +29,7 @@ end
 
 class Addon
   include Mongoid::Document
+  include Mongoid::Attributes::Dynamic
 
   embedded_in :service
 
