@@ -32,7 +32,7 @@ GEM
       bson (~> 2.2)
       connection_pool (~> 2.0)
       optionable (~> 0.2.0)
-    newrelic_rpm (3.8.1.221)
+    newrelic_rpm (3.9.0.229)
     optionable (0.2.0)
     origin (2.1.1)
     rack (1.5.2)
