@@ -288,6 +288,12 @@
       "country": "US",
       "region": "Virginia",
       "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Santa Clara",
+      "provider": "CenturyLink"
     }
   ]
 }
