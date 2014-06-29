@@ -1,6 +1,6 @@
 {
   "name": "Jelastic",
-  "revision": "2014-02-11",
+  "revision": "2014-06-29",
   "url": "http://jelastic.com",
   "status": "production",
   "status_since": "2012-03-01",
@@ -33,7 +33,8 @@
       "language": "java",
       "versions": [
         "1.6.*",
-        "1.7.*"
+        "1.7.*",
+        "1.8.*"
       ]
     },
     {
@@ -42,6 +43,23 @@
         "5.3.*",
         "5.4.*",
         "5.5.*"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7.6",
+        "3.3.5",
+        "3.4.0"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.9.2",
+        "1.9.3",
+        "2.0.0",
+        "2.1.1"
       ]
     }
   ],
@@ -63,22 +81,22 @@
     {
       "name": "nginx",
       "versions": [
-        "1.4.3"
+        "1.5.12"
       ]
     },
     {
       "name": "tomcat",
       "runtime": "java",
       "versions": [
-        "6.0.37",
-        "7.0.47"
+        "6.0.39",
+        "7.0.53"
       ]
     },
     {
       "name": "tomee",
       "runtime": "java",
       "versions": [
-        "1.5.2"
+        "1.6"
       ]
     }
   ],
@@ -99,8 +117,8 @@
         "name": "mariadb",
         "type": "datastore",
         "versions": [
-          "5.5.34",
-          "10.0.6"
+          "5.5.36",
+          "10.0.10"
         ]
       },
       {
@@ -115,14 +133,14 @@
         "name": "mongodb",
         "type": "datastore",
         "versions": [
-          "2.4.8"
+          "2.6.0"
         ]
       },
       {
         "name": "mysql",
         "type": "datastore",
         "versions": [
-          "5.5.34"
+          "5.6.17"
         ]
       },
       {
@@ -130,8 +148,8 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "8.4.18",
-          "9.3.1"
+          "8.4.21",
+          "9.3.4"
         ]
       }
     ],
@@ -139,7 +157,7 @@
 
     ]
   },
-  "extensible": false,
+  "extensible": true,
   "infrastructures": [
     {
       "continent": "AS",
