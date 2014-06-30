@@ -1,12 +1,12 @@
-<link href="../css/glyphicons.css" rel="stylesheet">
-<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+<link href="<%= url('/css/glyphicons.css') %>" rel="stylesheet">
+<link href="<%= url('/css/jquery-jvectormap-1.2.2.css') %>" rel="stylesheet">
 
 <div class="container">
 <div class="row">
   <div class="span8">
     <h1>
       <% unless @profile['image'].blank? %>
-      <img src="<%= @profile['image'] %>" class="img-rounded" style="margin-bottom: 8px; width: 73px; height: 73px;">
+      <img src="<%= url('/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << File.extname(@profile['image'])) %>" class="img-rounded" style="margin-bottom: 8px; width: 73px; height: 73px;">
       <% end %>
       <a href="<%= @profile["url"] %>" target="_blank">
         <%= @profile["name"] %>

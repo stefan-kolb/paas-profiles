@@ -4,6 +4,7 @@ require 'rake/testtask'
 require 'active_support/core_ext'
 require 'geocoder'
 require 'rest-client'
+require 'open-uri'
 #require 'git'
 
 require_relative 'models/vendor/vendor'
@@ -181,6 +182,11 @@ namespace :profiles do
           profile = JSON.parse(resp.body)
           img_url = profile['profile_image_url_https'].gsub('normal', 'bigger')
           e['image'] = img_url
+
+          fn = e['vendor'].downcase.gsub(/[^a-z0-9]/, '_') << File.extname(img_url)
+          open('public/img/vendor/' << fn, 'wb') do |file|
+            file.write(open(e['image']).read)
+          end
         rescue Exception => ex
           puts "Error retrieving image of #{e['vendor']}"
           puts ex.message
