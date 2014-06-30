@@ -244,7 +244,7 @@
     {
         "vendor": "Nitrous.io",
         "twitter": "nitrousio",
-        "image": "https://pbs.twimg.com/profile_images/428352639919607808/cgNDBEEy_bigger.png"
+        "image": "https://pbs.twimg.com/profile_images/479400286557970433/UDR06A5a_bigger.png"
     },
     {
         "vendor": "Nodejitsu",
@@ -319,7 +319,7 @@
     {
         "vendor": "Shelly Cloud",
         "twitter": "ShellyCloud",
-        "image": "https://pbs.twimg.com/profile_images/378800000408936033/d6ea1f5de9c88e8faededd2e75c2db74_bigger.png"
+        "image": "https://pbs.twimg.com/profile_images/478521540162486272/X0g3ER4B_bigger.png"
     },
     {
         "vendor": "Software AG Live",
@@ -340,6 +340,11 @@
         "vendor": "Static",
         "twitter": "staticcorp",
         "image": "https://pbs.twimg.com/profile_images/3759198169/6dda92bc3e15838150b015ced17a79da_bigger.png"
+    },
+    {
+        "vendor": "CloudUnit",
+        "twitter": "treeptikTeam",
+        "image": "https://pbs.twimg.com/profile_images/3396395882/fd25b295f37fbca2c67744c747705f93_bigger.jpeg"
     },
     {
         "vendor": "Trucker.io",
