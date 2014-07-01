@@ -1,6 +1,6 @@
 {
   "name": "Amazon Elastic Beanstalk",
-  "revision": "2013-07-05T18:00:44+02:00",
+  "revision": "2014-07-01",
   "url": "http://aws.amazon.com/elasticbeanstalk/",
   "status": "beta",
   "status_since": "2011-01-19",
@@ -42,6 +42,7 @@
     {
       "language": "dotnet",
       "versions": [
+        "1.*",
         "2.*",
         "3.*",
         "4.*"
@@ -50,8 +51,8 @@
     {
       "language": "java",
       "versions": [
-        "1.5",
-        "1.6"
+        "1.6",
+        "1.7"
       ]
     },
     {
@@ -64,21 +65,22 @@
     {
       "language": "php",
       "versions": [
-        "5.3",
-        "5.4"
+        "5.4",
+        "5.5"
       ]
     },
     {
       "language": "python",
       "versions": [
-        "2.6"
+        "2.6",
+        "2.7"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-        "1.8.7",
-        "1.9.3"
+        "1.9.3",
+        "2.0.0"
       ]
     }
   ],
