@@ -183,6 +183,7 @@ namespace :profiles do
           img_url = profile['profile_image_url_https'].gsub('normal', 'bigger')
           e['image'] = img_url
 
+          # TODO delete files
           fn = e['vendor'].downcase.gsub(/[^a-z0-9]/, '_') << File.extname(img_url)
           open('public/img/vendor/' << fn, 'wb') do |file|
             file.write(open(e['image']).read)
