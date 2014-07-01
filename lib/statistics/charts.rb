@@ -10,17 +10,18 @@ class Charts
 
   # TODO make dynamic
   LATEST = {
-      'php' => '5.5.9',
-      'java' => '1.7.0_51',
-      'ruby' => '2.1.0',
-      'node' => '0.10.25',
-      'python' => '3.3.4',
+      'php' => '5.5.14',
+      'java' => '1.8.0_5',
+      'ruby' => '2.1.2',
+      'node' => '0.10.29',
+      'python' => '3.4.1',
       'dotnet' => '4.5',
-      'perl' => '5.18.2',
-      'go' => '1.2',
-      'scala' => '2.10.3',
-      'erlang' => 'R16B03',
-      'clojure' => '1.5.1'
+      'perl' => '5.20.0',
+      'go' => '1.3',
+      'scala' => '2.11',
+      'erlang' => '17.0',
+      'clojure' => '1.6.0',
+      'groovy' => '2.3.0'
   }
   # Standard color array for Highcharts
   COLORS = %w( #2f7ed8 #0d233a #8bbc21 #910000 #1aadce #492970 #f28f43 #77a1e5 #c42525 #a6c96a )
