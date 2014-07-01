@@ -1,16 +1,19 @@
 {
-  "name": "Codename:Bluemix",
+  "name": "Bluemix",
   "revision": "2014-03-06",
   "url": "http://bluemix.net/",
-  "status": "beta",
-  "status_since": "2014-02-24",
+  "status": "production",
+  "status_since": "2014-06-30",
   "type": "Generic",
   "hosting": {
     "public": true,
     "private": false
   },
   "pricing": [
-
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
   ],
   "scaling": {
     "vertical": true,
