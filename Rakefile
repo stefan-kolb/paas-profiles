@@ -60,6 +60,9 @@ namespace :mongo do
   end
 
   def geodata
+    # Raise errors
+    Geocoder.configure(:always_raise => :all)
+
     # delete collection
     Datacenter.delete_all
 
@@ -93,17 +96,18 @@ namespace :mongo do
             end
             # dont hit query limit
             sleep(1/10.0)
-          rescue Exception => e
-            puts 'something went wrong'
-            puts e
+          rescue Geocoder::Error => e
+            puts 'Error while retrieving geolocation:'
+            puts e.to_s
             sleep(2)
+            puts 'Retrying...'
             retry
           end
         end
       end
     end
 
-    # todo test if all are here = count distinct regions, country
+    # TODO test if all are here = count distinct regions, country
   end
 
   desc "Creates a snapshot of all PaaS JSON profiles"
