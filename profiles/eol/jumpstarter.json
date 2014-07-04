@@ -1,0 +1,60 @@
+{
+  "name": "Jumpstarter",
+  "revision": "2014-07-04",
+  "url": "http://jumpstarter.io/",
+  "status": "eol",
+  "status_since": "2014-07-01",
+  "type": "SaaS-centric",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "fixed",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "runtimes": [
+    {
+      "language": "php",
+      "versions": [
+
+      ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "mariadb",
+        "versions": [
+          "5.1"
+        ],
+        "type": "datastore"
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "",
+      "region": "",
+      "provider": ""
+    }
+  ]
+}
