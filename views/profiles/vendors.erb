@@ -32,7 +32,7 @@
     <p>Data structures are <a href="https://github.com/stefan-kolb/paas-profiles" target="_blank">publicly available</a>
       and editable by the community. We also aim at vendors to
       <a href="https://github.com/stefan-kolb/paas-profiles#contribution" target="_blank">verify</a>
-      <span class="icon-ok-sign"></span> their profiles.</p>
+      <i class="fa fa-check-circle"></i> their profiles.</p>
   </div>
 </div>
 
@@ -81,7 +81,7 @@
             <td>
               <a href="/vendor/<%= url_encode(profile["name"]) %>"><%= profile["name"] %></a>
               <% unless profile["vendor_verified"].nil? %>
-                  &nbsp;<span class="icon-ok-sign" title="Verified by Vendor"></span>
+                  &nbsp;<i class="fa fa-check-circle"></i>
               <% end %>
             </td>
             <td class="hidden-phone">
@@ -112,23 +112,23 @@
 
             <td class="hidden-phone">
               <% if profile["scaling"]["vertical"] %>
-                  <span class="icon-resize-vertical" title="vertical"></span>
+                  <i class="fa fa-arrows-v" title="vertical"></i>
               <% end %>
               <% if profile["scaling"]["horizontal"] %>
-                  <span class="icon-resize-horizontal" title="horizontal"></span>
+                  <i class="fa fa-arrows-h" title="horizontal"></i>
               <% end %>
               <% if profile["scaling"]["auto"] %>
-                  <span class="icon-refresh" title="auto"></span>
+                  <i class="fa fa-refresh" title="auto"></i>
               <% end %>
             </td>
 
             <td class="hidden-phone">
               <% if profile['hosting']['public'] %>
-                  <span class="icon-eye-open" title="public"></span>
+                  <i class="fa fa-eye" title="public"></i>
               <% end
                  if profile['hosting']['private']
               %>
-                  <span class="icon-lock" title="private"></span>
+                  <i class="fa fa-lock" title="private"></i>
               <% end %>
             </td>
 
@@ -156,7 +156,7 @@
       %>
       </tbody>
     </table>
-    <a href="#top" title="Back to top" class="pull-right icon-chevron-up"></a>
+    <a href="#top" title="Back to top" class="i-link pull-right"><i class="fa fa-chevron-up"></i></a>
   </div>
 </div>
 <script>

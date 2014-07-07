@@ -86,3 +86,12 @@ hr.soften {
 .bootstrap-select {
     max-width: 500px;
 }
+
+.i-link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.i-link:hover, .i-link:focus, .i-link:active {
+    text-decoration: none;
+}

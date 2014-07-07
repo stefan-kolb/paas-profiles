@@ -65,7 +65,7 @@
   <h3><span class="text-info">Country Distribution</span></h3>
   The Top 5 countries are:<br>
   <% @chart.top_countries.each_with_index do |c, i| %>
-      <span class="icon icon-globe"></span>&nbsp;<span class="label label-info"><%= IsoCountryCodes.find(c[:name]).name %></span> (<%= c[:value] %> times)
+      <i class="fa fa-globe"></i>&nbsp;<span class="label label-info"><%= IsoCountryCodes.find(c[:name]).name %></span> (<%= c[:value] %> times)
   <% end %>
 </div>
 
