@@ -82,6 +82,10 @@
       ]
     },
     {
+      "name": "flask",
+      "runtime": "python"
+    },
+    {
       "name": "rails",
       "runtime": "ruby",
       "versions": [
