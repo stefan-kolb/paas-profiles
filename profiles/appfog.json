@@ -1,6 +1,6 @@
 {
   "name": "AppFog",
-  "revision": "2014-06-26",
+  "revision": "2014-07-07",
   "url": "http://appfog.com",
   "status": "production",
   "status_since": "2012-07-15",
@@ -83,7 +83,10 @@
     },
     {
       "name": "flask",
-      "runtime": "python"
+      "runtime": "python",
+      "versions": [
+
+      ]
     },
     {
       "name": "rails",
