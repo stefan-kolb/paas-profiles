@@ -1,10 +1,10 @@
 {
   "name": "AppScale",
   "revision": "2014-07-08",
+  "vendor_verified": "2014-07-08",
   "url": "http://www.appscale.com/",
   "status": "production",
   "status_since": "2009-03-07",
-  "vendor_verified": "2014-07-08",
   "type": "Generic",
   "hosting": {
     "public": false,
@@ -49,13 +49,55 @@
 
   ],
   "frameworks": [
-    "webapp2",
-    "Flask",
-    "tornado",
-    "Django",
-    "CherryPy",
-    "Pyramid",
-    "Spring"
+    {
+      "name": "webapp2",
+      "runtime": "python",
+      "versions": [
+        "2"
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "tornado",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "cherrypy",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "pyramid",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    }
   ],
   "services": {
     "native": [
