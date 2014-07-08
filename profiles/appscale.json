@@ -1,6 +1,7 @@
 {
   "name": "AppScale",
-  "revision": "2014-02-19",
+  "revision": "2014-07-08",
+  "vendor_verified": "2014-07-08",
   "url": "http://www.appscale.com/",
   "status": "production",
   "status_since": "2009-03-07",
@@ -32,12 +33,6 @@
       ]
     },
     {
-      "language": "node",
-      "versions": [
-
-      ]
-    },
-    {
       "language": "php",
       "versions": [
         "5.4.8"
@@ -54,7 +49,55 @@
 
   ],
   "frameworks": [
+    {
+      "name": "webapp2",
+      "runtime": "python",
+      "versions": [
+        "2"
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
 
+      ]
+    },
+    {
+      "name": "tornado",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "cherrypy",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "pyramid",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    }
   ],
   "services": {
     "native": [
