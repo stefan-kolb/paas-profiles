@@ -1,6 +1,6 @@
 {
   "name": "Platformer.com",
-  "revision": "2014-03-23",
+  "revision": "2014-07-14",
   "url": "https://www.platformer.com/",
   "status": "production",
   "status_since": "2014-07-08",
@@ -24,13 +24,13 @@
     {
       "language": "php",
       "versions": [
-        "5.3.10"
+
       ]
     },
     {
       "language": "dotnet",
       "versions": [
-        "5.3.10"
+
       ]
     }
   ],
