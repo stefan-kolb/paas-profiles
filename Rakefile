@@ -3,7 +3,7 @@ require 'mongoid'
 require 'rake/testtask'
 require 'active_support/core_ext'
 require 'geocoder'
-require 'rest_client'
+require 'rest-client'
 require 'open-uri'
 #require 'git'
 

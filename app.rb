@@ -4,7 +4,7 @@ require 'mongoid'
 require 'sinatra'
 require 'sinatra/simple-navigation'
 require 'versionomy'
-require 'rest_client'
+require 'rest-client'
 
 # models
 require_relative 'models/vendor/vendor'

@@ -6,11 +6,11 @@ gem 'sinatra'
 gem 'mongoid', '>= 4.0'
 gem 'rake'
 gem 'iso_country_codes'
+gem 'rest-client'
 gem 'versionomy'
 gem 'activesupport'
 gem 'sinatra-simple-navigation'
 gem 'geocoder'
-gem 'rest-client'
 
 group :test do
   gem 'minitest'
