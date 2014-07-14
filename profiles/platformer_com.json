@@ -1,9 +1,9 @@
 {
-  "name": "Durga",
+  "name": "Platformer.com",
   "revision": "2014-03-23",
-  "url": "https://durgacloud.com/",
-  "status": "beta",
-  "status_since": "2012-06-01",
+  "url": "https://www.platformer.com/",
+  "status": "production",
+  "status_since": "2014-07-08",
   "type": "Generic",
   "hosting": {
     "public": true,
@@ -34,8 +34,12 @@
       ]
     }
   ],
-  "middleware": null,
-  "frameworks": null,
+  "middleware": [
+
+  ],
+  "frameworks": [
+
+  ],
   "services": {
     "native": [
       {
