@@ -42,7 +42,7 @@ GEM
       rack
     raindrops (0.13.0)
     rake (10.3.2)
-    rest-client (1.7.1-x86-mingw32)
+    rest-client (1.7.2-x86-mingw32)
       ffi (~> 1.9)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
