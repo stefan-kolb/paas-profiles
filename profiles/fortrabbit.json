@@ -1,6 +1,6 @@
 {
   "name": "fortrabbit",
-  "revision": "2013-07-09",
+  "revision": "2014-07-16",
   "url": "http://fortrabbit.com/",
   "vendor_verified": "2013-07-10",
   "status": "production",
@@ -38,7 +38,35 @@
 
   ],
   "frameworks": [
+    {
+      "name": "phalcon",
+      "runtime": "php",
+      "versions": [
 
+      ]
+    },
+    {
+      "name": "drupal",
+      "runtime": "php",
+      "versions": [
+        "8"
+      ]
+    },
+    {
+      "name": "symfony",
+      "runtime": "php",
+      "versions": [
+        "2"
+      ]
+    },
+    {
+      "name": "laravel",
+      "runtime": "php",
+      "versions": [
+        "3",
+        "4"
+      ]
+    }
   ],
   "services": {
     "native": [
