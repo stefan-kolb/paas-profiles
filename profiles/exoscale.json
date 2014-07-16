@@ -1,0 +1,161 @@
+{
+  "name": "exoscale Apps",
+  "revision": "2014-07-16",
+  "vendor_verified": "2014-07-16",
+  "url": "http://exoscale.ch/",
+  "status": "production",
+  "status_since": "2010-14-05",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
+  ],
+  "qos": {
+     "uptime": 99.95
+  },
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "java",
+      "versions": [
+        "1.6",
+        "1.7"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "0.4.*",
+        "0.6.*",
+        "0.8.*",
+        "0.10.*"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.3",
+        "5.4"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7.*",
+        "3.*"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.8.7",
+        "1.9.2",
+        "1.9.3",
+        "2.0.0"
+      ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+    {
+      "name": "cakephp",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "kohana",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "symfony",
+      "runtime": "php",
+      "versions": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "yii",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "zend",
+      "runtime": "php",
+      "versions": [
+        "1",
+        "2"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "CH",
+      "region": "Geneva",
+      "provider": "exoscale"
+    }
+  ]
+}
