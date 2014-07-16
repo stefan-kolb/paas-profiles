@@ -90,7 +90,7 @@ module PaasProfiles
 
       # no compliance duplicates
       define_method('test_compliance_duplicates') do
-        unless @profile.quality.blank?
+        unless @profile.quality.blank? || @profile.quality.compliance.blank?
           uniq_compliance = @profile.quality.compliance.uniq
 
           assert_equal(uniq_compliance.length, @profile.quality.compliance.length, 'There must be no duplicate compliance entries in one profile. Remove duplicate values')
