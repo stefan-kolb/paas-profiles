@@ -44,8 +44,16 @@ class Version
   end
 
   def latest?
-    return true unless /#{@str}/.match(Runtime.where(name: type).first['version']).nil?
+    result = Runtime.where(name: type).first
+    latest = result['version'] unless result.nil?
+    return true unless /#{@str}/.match(latest).nil?
     false
+  end
+
+  def self.latest language
+    result = Runtime.where(name: language).first
+    return result['version'] unless result.nil?
+    'unknown'
   end
 
   def inspect
