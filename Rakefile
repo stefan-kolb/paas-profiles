@@ -99,7 +99,7 @@ namespace :mongo do
           rescue Geocoder::Error => e
             puts 'Error while retrieving geolocation:'
             puts e.to_s
-            sleep(2)
+            sleep(5)
             puts 'Retrying...'
             retry
           end
