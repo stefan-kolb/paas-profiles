@@ -1,5 +1,5 @@
 /*
- * jQuery prettyDate v1.1.0
+ * jQuery prettyDate v1.1.3
  *
  * @author John Resig (ejohn.org)
  * @author Jörn Zaefferer
@@ -8,9 +8,9 @@
  * Based on http://ejohn.org/blog/javascript-pretty-date
  * Documentation: http://bassistance.de/jquery-plugins/jquery-plugin-prettydate/
  *
- * Dual licensed under the MIT and GPL licenses:
+ * Copyright 2013 Jörn Zaefferer
+ * Released under the MIT license:
  *   http://www.opensource.org/licenses/mit-license.php
- *   http://www.gnu.org/licenses/gpl.html
  */
 
 (function ($) {
