@@ -32,3 +32,16 @@ get '/vendor/:name/infrastructures' do
 
   markers.to_json
 end
+
+get '/infrastructures' do
+  markers = []
+
+  user_location = Geocoder.search(request.ip).first.coordinates
+  markers << { latLng: user_location, name: "Yeah, that's you!", style: { fill: 'red' } } unless user_location.nil?
+
+  Datacenter.all.each do |center|
+    markers << { latLng: center.coordinates, name: "#{center}" }
+  end
+
+  markers.to_json
+end

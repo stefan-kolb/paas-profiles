@@ -76,17 +76,6 @@
         var continental_distribution = <%= @chart.top_continents %>;
         // heat map
         var data = <%= @chart.heatmap %>;
-        <%
-            markers = []
-
-            Datacenter.all.each do |center|
-                markers << { latLng: center.coordinates, name: "#{center}" }
-            end
-
-            # user location
-            markers << { latLng: @user_location, name: "Yeah, that's you!", style: { fill: 'red' } } unless @user_location.nil?
-        %>
-        var markers = <%= markers.to_json %>;
 
         $('#map').vectorMap({
             map: 'world_mill_en',
@@ -120,8 +109,13 @@
                     fill: '#ffffff',
                     stroke: '#000000'
                 }
-            },
-            markers: markers
+            }
+        });
+
+        // Geographic information
+        $.getJSON('/infrastructures').done(function(data) {
+            var mapObject = $('#map').vectorMap('get', 'mapObject');
+            mapObject.addMarkers(data, []);
         });
 
         $('#averages').highcharts({
