@@ -19,6 +19,7 @@ require_relative 'lib/feed'
 require_relative 'routes/main'
 require_relative 'routes/statistics'
 require_relative 'routes/api'
+require_relative 'routes/helpers'
 
 # errors
 not_found { erb :'404', :layout => false }

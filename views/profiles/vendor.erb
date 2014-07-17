@@ -391,6 +391,7 @@
 
         $('#map').vectorMap({
             map: 'world_mill_en',
+            backgroundColor: '#ffffff',
             regionStyle: {
                 initial: {
                     fill: '#0088cc'
@@ -408,46 +409,26 @@
                     stroke: '#000000'
                 }
             },
-            markers:
+            <% if !@profile['infrastructures'].nil? && @profile['infrastructures'].uniq { |h| h['continent'] }.size == 1 %>
+            <%= "focusOn: '" << @profile['infrastructures'][0]['country'] << "'," %>
+            <% end %>
             <%
-                markers = []
-
+                arr = []
                 unless @profile['infrastructures'].blank?
-                    # user location
-                    markers << { latLng: @user_location, name: "Yeah, that's you!", style: { fill: 'red' } } unless @user_location.nil?
-
-                    @profile['infrastructures'].each do |infra|
-                        unless infra['region'].blank?
-                            dc = Datacenter.where(region: infra['region'], country: infra['country']).first
-                            unless dc.nil?
-                                unless @user_location.nil?
-                                    # speed of light / refraction
-                                    min_latency = (Geocoder::Calculations.distance_between(dc.coordinates, [49.7563900, 11.5450000], { :units => :km }) * 2 * 1000 / (299792458 / 1.52) * 1000).round(0)
-                                    name = dc.to_s << " > #{min_latency} ms RTT"
-                                else
-                                    name = dc
-                                end
-
-                                markers << { latLng: dc.coordinates, name: "#{name}" }
-                            end
-                        end
+                    @profile['infrastructures'].each do |i|
+                        arr << i['country'] unless i['country'].blank?
                     end
                 end
             %>
-            <%= markers.to_json %>,
-            <% if !@profile["infrastructures"].nil? && @profile["infrastructures"].uniq { |h| h["continent"] }.size == 1 %>
-            <%= "focusOn: '" << @profile["infrastructures"][0]["country"] << "'," %>
-            <% end %>
-            backgroundColor: '#ffffff',
-            <%
-                        arr = []
-                        unless @profile["infrastructures"].nil?
-                            @profile["infrastructures"].each do |i|
-                                arr << i["country"] unless i["country"].blank?
-                            end
-                        end
-            %>
             <%= 'selectedRegions: ' << arr.to_s %>
         });
+
+        <% unless @profile['infrastructures'].blank? %>
+        // Geographic information
+        $.getJSON('/vendor/<%=  url_encode(@profile['name']) %>/infrastructures').done(function(data) {
+            var mapObject = $('#map').vectorMap('get', 'mapObject');
+            mapObject.addMarkers(data, []);
+        });
+        <% end %>
     });
 </script>
