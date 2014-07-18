@@ -18,10 +18,8 @@
         <div class="controls">
           <select id="selectStatus" name="status" class="selectpicker show-tick" data-width="100%">
             <option value="">Any</option>
-            <%
-               Vendor.distinct(:status).each do |s|
-            %>
-                <option value="<%= s %>"><%= s.capitalize %></option>
+            <% Vendor.distinct(:status).each do |s| %>
+            <option value="<%= s %>"><%= s.capitalize %></option>
             <% end %>
           </select>
         </div>
@@ -55,10 +53,8 @@
 
         <div class="controls">
           <select name="runtimes[]" class="selectpicker" data-width="100%" data-selected-text-format="count > 6" multiple>
-            <%
-               Vendor.distinct('runtimes.language').sort.each do |r|
-            %>
-                <option value="<%= r %>"><%= r.capitalize %></option>
+            <% Vendor.distinct('runtimes.language').sort.each do |r| %>
+            <option value="<%= r %>"><%= r.capitalize %></option>
             <% end %>
           </select>
         </div>
@@ -69,10 +65,8 @@
 
         <div class="controls">
           <select name="middleware[]" class="selectpicker" data-width="100%" data-selected-text-format="count > 6" multiple>
-            <%
-               Vendor.distinct('middleware.name').sort.each do |r|
-            %>
-                <option value="<%= r %>"><%= r.capitalize %></option>
+            <% Vendor.distinct('middleware.name').sort.each do |r| %>
+            <option value="<%= r %>"><%= r.capitalize %></option>
             <% end %>
           </select>
         </div>
@@ -83,10 +77,8 @@
 
         <div class="controls">
           <select name="frameworks[]" class="selectpicker" data-width="100%" data-selected-text-format="count > 6" multiple>
-            <%
-               Vendor.distinct('frameworks.name').sort.each do |r|
-            %>
-                <option value="<%= r %>"><%= r.capitalize %></option>
+            <% Vendor.distinct('frameworks.name').sort.each do |r| %>
+            <option value="<%= r %>"><%= r.capitalize %></option>
             <% end %>
           </select>
         </div>
@@ -97,10 +89,8 @@
 
         <div class="controls">
           <select name="services[]" class="selectpicker" data-live-search="true" data-width="100%" data-selected-text-format="count > 5" multiple>
-            <%
-               Vendor.distinct('services.native.name').sort.each do |s|
-            %>
-                <option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
+            <% Vendor.distinct('services.native.name').sort.each do |s| %>
+            <option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
             <% end %>
           </select>
         </div>
@@ -111,10 +101,8 @@
 
         <div class="controls">
           <select name="addons[]" class="selectpicker" data-live-search="true" data-width="100%" data-selected-text-format="count > 5" multiple>
-            <%
-               Vendor.distinct('services.addon.name').sort.each do |s|
-            %>
-                <option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
+            <% Vendor.distinct('services.addon.name').sort.each do |s| %>
+            <option value="<%= s %>"><%= s.split(" ").map(&:capitalize).join(" ") %></option>
             <% end %>
           </select>
         </div>
