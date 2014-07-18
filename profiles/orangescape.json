@@ -1,12 +1,12 @@
 {
   "name": "OrangeScape",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2014-07-18",
   "url": "http://www.orangescape.com/paas/platform-as-a-service/",
   "status": "production",
-  "status_since": null,
+  "status_since": "2008-12-01",
   "type": "SaaS-centric",
   "hosting": {
-    "public": true,
+    "public": false,
     "private": true
   },
   "pricing": [
@@ -28,7 +28,9 @@
   "middleware": [
 
   ],
-  "frameworks": null,
+  "frameworks": [
+
+  ],
   "services": null,
   "extensible": false,
   "infrastructures": [

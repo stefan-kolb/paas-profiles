@@ -1,9 +1,9 @@
 {
   "name": "Mendix",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2014-07-18",
   "url": "http://www.mendix.com",
   "status": "production",
-  "status_since": null,
+  "status_since": "2005-01-01",
   "type": "SaaS-centric",
   "hosting": {
     "public": true,
