@@ -353,28 +353,22 @@
     </div>
 <% end %>
 
-<% unless @profile["infrastructures"].blank? %>
+<% unless @profile['infrastructures'].blank? %>
     <hr/>
     <div class="row">
       <div class="span12"><h3>Infrastructures</h3></div>
       <div class="span5" style="margin-bottom: 20px;">
-        <%
-           @profile["infrastructures"].sort { |a, b| a["continent"] <=> b["continent"] }.each do |rt|
-
-             title = continent_by_code rt['continent']
-        %>
+        <% @profile['infrastructures'].sort { |a, b| a['continent'] <=> b['continent'] }.each do |rt| %>
             <div class="text-left">
-              <span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
-			    <span>
-				    <% unless rt['country'].blank? %><%= country_by_code rt['country'] %><% end %><% unless rt['region'].blank? %>, <em><%= rt["region"] %></em><% end %>
-				</span>
-              <% unless rt["provider"].blank? %>
-                  <span><small class="muted"><em>&mdash; provided by <%= rt["provider"] %></em></small></span>
+              <span class="label label-inverse" title="<%= continent_by_code rt['continent'] %>"><%= rt['continent'] %></span>
+			  <span>
+              <%= country_by_code rt['country'] unless rt['country'].blank? %><% unless rt['region'].blank? %>, <em><%= rt['region'] %></em><% end %>
+              </span>
+              <% unless rt['provider'].blank? %>
+              <span><small class="muted"><em>&mdash; provided by <%= rt['provider'] %></em></small></span>
               <% end %>
             </div>
-        <%
-           end
-        %>
+        <% end %>
       </div>
       <div class="span7 thumbnail" id="map" style="width: 100%; max-width: 650px; height: 320px"></div>
     </div>

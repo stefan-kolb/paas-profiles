@@ -5,8 +5,7 @@
 <div class="jumbotron">
   <h1>Find your Platform as a Service!</h1>
 
-  <p class="lead">What's best on your PaaS? Define your needs and get a list of candidates that claim to be your best
-    fit.</p>
+  <p class="lead">What's best on your PaaS? Define your needs and get a list of candidates that claim to be your best fit.</p>
 
   <div class="text-center"><a href="filter" class="btn btn-warning btn-large">Find your PaaS</a></div>
 </div>
@@ -16,7 +15,7 @@
     <h2>Comprehensive</h2>
     <h4><em>More than 70 vendors</em></h4>
 
-    <p>...and counting.</p>
+    <p>&hellip;and counting.</p>
   </div>
   <div class="span4">
     <h2>Comparable</h2>
@@ -38,17 +37,21 @@
 
 <div class="row hidden-phone" style="margin-bottom: 50px;">
   <div class="span12">
-  <ul class="thumbnails" style="height: 120px;">
-    <li class="span12">
-      <div class="thumbnail">
-        <img src="img/infras-teaser.png" style="float:left; margin-right: 15px; padding: 5px;">
-        <h3>PaaS Market Statistics<sup><span class="badge badge-warning">&beta;eta</span></sup></h3>
-        <p><i>Live statistics of the PaaS vendor landscape.</i></p>
-        <p><a href="/statistics/languages" class="btn btn-primary">Runtime</a> or
-        <a href="/statistics/infrastructures" class="btn">Infrastructure</a> support across the market in numbers.</p>
-      </div>
-    </li>
-  </ul>
+    <ul class="thumbnails" style="height: 120px;">
+      <li class="span12">
+        <div class="thumbnail">
+          <img src="img/infras-teaser.png" style="float:left; margin-right: 15px; padding: 5px;">
+
+          <h3>PaaS Market Statistics<sup><span class="badge badge-warning">&beta;eta</span></sup></h3>
+
+          <p><i>Live statistics of the PaaS vendor landscape.</i></p>
+
+          <p><a href="/statistics/languages" class="btn btn-primary">Runtime</a> or
+            <a href="/statistics/infrastructures" class="btn">Infrastructure</a> support across the market in numbers.
+          </p>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -79,15 +82,15 @@
       %>
           <tr>
             <td>
-              <a href="/vendor/<%= url_encode(profile["name"]) %>"><%= profile["name"] %></a>
-              <% unless profile["vendor_verified"].nil? %>
+              <a href="/vendor/<%= url_encode(profile['name']) %>"><%= profile['name'] %></a>
+              <% unless profile['vendor_verified'].blank? %>
                   &nbsp;<i class="fa fa-check-circle"></i>
               <% end %>
             </td>
             <td class="hidden-phone">
-              <% if profile["status"] == "beta" %>
+              <% if profile['status'] == 'beta' %>
                   <span class="label label-warning">Beta</span>
-              <% elsif profile["status"] == "alpha" %>
+              <% elsif profile['status'] == 'alpha' %>
                   <span class="label label-important">Alpha</span>
               <% else %>
                   <span class="label label-success">Production</span>
@@ -96,28 +99,23 @@
 
             <td class="hidden-phone">
               <div class="row-fluid">
-                <%
-                   profile["runtimes"].uniq { |h| h["language"] }.sort { |a, b| a["language"] <=> b["language"] }.each do |rt|
-                %>
-                    <span class="label label-info"><%= rt["language"] %></span>
-                <%
-                   end
-
-                   if profile["extensible"]
-                %>
+                <% profile['runtimes'].sort { |a, b| a['language'] <=> b['language'] }.each do |rt| %>
+                    <span class="label label-info"><%= rt['language'] %></span>
+                <% end %>
+                <% if profile['extensible'] %>
                     <span class="label label-success">extensible</span>
                 <% end %>
               </div>
             </td>
 
             <td class="hidden-phone">
-              <% if profile["scaling"]["vertical"] %>
+              <% if profile['scaling']['vertical'] %>
                   <i class="fa fa-arrows-v" title="vertical"></i>
               <% end %>
-              <% if profile["scaling"]["horizontal"] %>
+              <% if profile['scaling']['horizontal'] %>
                   <i class="fa fa-arrows-h" title="horizontal"></i>
               <% end %>
-              <% if profile["scaling"]["auto"] %>
+              <% if profile['scaling']['auto'] %>
                   <i class="fa fa-refresh" title="auto"></i>
               <% end %>
             </td>
@@ -125,9 +123,8 @@
             <td class="hidden-phone">
               <% if profile['hosting']['public'] %>
                   <i class="fa fa-eye" title="public"></i>
-              <% end
-                 if profile['hosting']['private']
-              %>
+              <% end %>
+              <% if profile['hosting']['private'] %>
                   <i class="fa fa-lock" title="private"></i>
               <% end %>
             </td>
@@ -135,20 +132,18 @@
             <td class="hidden-phone">
               <div class="row-fluid">
                 <%
-                   unless profile["infrastructures"].nil?
-                     profile["infrastructures"].uniq { |h| h["continent"] }.sort { |a, b| a["continent"] <=> b["continent"] }.each do |rt|
-                       title = continent_by_code rt['continent']
+                   unless profile['infrastructures'].nil?
+                     profile['infrastructures'].uniq { |h| h['continent'] }.sort { |a, b| a['continent'] <=> b['continent'] }.each do |rt|
                 %>
-                        <span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
-                    <%
-                       end
-                       end
-                    %>
+                <span class="label label-inverse" title="<%= continent_by_code rt['continent'] %>"><%= rt['continent'] %></span>
+                <%   end
+                   end
+                %>
               </div>
             </td>
 
             <td>
-              <a href="/vendor/<%= url_encode(profile["name"]) %>" class="btn btn-success btn-small">Details</a>
+              <a href="/vendor/<%= url_encode(profile['name']) %>" class="btn btn-success btn-small">Details</a>
             </td>
           </tr>
       <%
@@ -161,11 +156,10 @@
 </div>
 <script>
     $(document).ready(function () {
-                $("#vendors").tablesorter({
-                    theme: 'bootstrap',
-                    headerTemplate: '{icon}{content}',
-                    widgets: ['uitheme']
-                });
-            }
-    );
+        $("#vendors").tablesorter({
+            theme: 'bootstrap',
+            headerTemplate: '{icon}{content}',
+            widgets: ['uitheme']
+        });
+    });
 </script>
