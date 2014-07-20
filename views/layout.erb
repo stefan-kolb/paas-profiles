@@ -18,8 +18,10 @@
   <script>window.jQuery || document.write('<script src="<%= url('/js/jquery.min.js') %>"><\/script>')</script>
   <script src="<%= url('/js/bootstrap.min.js') %>"></script>
   <script src="<%= url('/js/nprogress.js') %>"></script>
-  <script src="http://code.highcharts.com/3.0/highcharts.js"></script>
-  <script src="/js/themes/paasify.js"></script>
+  <script src="//code.highcharts.com/3.0/highcharts.js"></script>
+  <!-- Highcharts fallback if CDN is blocked or fails -->
+  <script>window.Highcharts || document.write('<script src="<%= url('/js/highcharts.min.js') %>"><\/script>')</script>
+  <script src="<%= url('/js/themes/paasify.js') %>"></script>
   <!--<script src="http://code.highcharts.com/modules/exporting.js"></script>-->
 </head>
 <body>
