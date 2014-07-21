@@ -3,7 +3,6 @@ rvm:
   - "2.0.0"
 services:
   - mongodb
-install: bundle install
 
 deploy:
   provider: heroku
