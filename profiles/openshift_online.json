@@ -1,6 +1,6 @@
 {
   "name": "OpenShift Online",
-  "revision": "2014-06-03",
+  "revision": "2014-07-21",
   "url": "https://www.openshift.com/products/online",
   "vendor_verified": "2014-01-07",
   "status": "production",
@@ -14,6 +14,10 @@
     {
       "model": "hybrid",
       "period": "monthly"
+    },
+    {
+      "model": "fixed",
+      "period": "annually"
     }
   ],
   "scaling": {
@@ -126,6 +130,13 @@
       "versions": [
         "0.8"
       ]
+    },
+    {
+      "name": "vert.x",
+      "runtime": "java",
+      "versions": [
+
+      ]
     }
   ],
   "services": {
@@ -189,6 +200,11 @@
         "type": "messaging"
       },
       {
+        "name": "blazemeter",
+        "url": "http://blazemeter.com/",
+        "type": "analytics"
+      },
+      {
         "name": "cloudforge",
         "url": "http://cloudforge.com/",
         "type": "devops"
@@ -209,6 +225,21 @@
         "type": "worker"
       },
       {
+        "name": "iron worker",
+        "url": "http://www.iron.io/worker",
+        "type": "worker"
+      },
+      {
+        "name": "jboss fuse",
+        "url": "http://www.jboss.org/products/fuse/overview/",
+        "type": "worker"
+      },
+      {
+        "name": "liveoak",
+        "url": "http://liveoak.io/",
+        "type": "other"
+      },
+      {
         "name": "memcached cloud",
         "url": "http://redislabs.com/",
         "type": "datastore"
@@ -219,6 +250,11 @@
         "type": "datastore"
       },
       {
+        "name": "pubnub",
+        "url": "http://www.pubnub.com/",
+        "type": "worker"
+      },
+      {
         "name": "redis cloud",
         "url": "http://redislabs.com/",
         "type": "datastore"
@@ -227,6 +263,11 @@
         "name": "searchly elasticsearch",
         "url": "http://www.searchly.com/",
         "type": "search"
+      },
+      {
+        "name": "sendgrid",
+        "url": "http://sendgrid.com/",
+        "type": "messaging"
       }
     ]
   },
