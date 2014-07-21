@@ -12,4 +12,5 @@ deploy:
   app: paas-profiles
   on:
     repo: stefan-kolb/paas-profiles
+  before_deploy: bundle install
   run: "rake mongo:import"
