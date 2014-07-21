@@ -77,14 +77,14 @@
     <% end %>
 
     <p>
-      <% unless @profile["pricing"].nil? || @profile["pricing"].empty? %>
+      <% unless @profile['pricing'].blank? %>
           Usage and pricing options available are
-          <% @profile["pricing"].each_with_index do |p, i|
+          <% @profile['pricing'].each_with_index do |p, i|
             if i > 0 %>
                   or
               <% end %>
-              <i class="fa fa-money" title="pricing"></i> <%= p["model"] + " usage, " + p["period"] + " bills" %>
-          <% end %>.
+              <i class="fa fa-money" title="pricing"></i>
+              &nbsp;<%= p['model'] << ' usage' %><%= ', ' << p['period'] << ' bills' unless p['period'].blank? %><% end %>.
       <% end %>
     </p>
 
@@ -116,7 +116,7 @@
     <p>
       <% unless @profile["qos"].blank? || @profile["qos"]["compliance"].blank? %>
           <%= @profile["name"] + " is <em>" + @profile["qos"]["compliance"].join(", ").upcase + " </em> certified" %>
-          <span class="icon-certificate" title="compliance"></span>.
+          <i class="fa fa-certificate" title="compliance"></i>.
       <% end %>
     </p>
   </div>
