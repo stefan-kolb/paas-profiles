@@ -18,6 +18,9 @@
     {
       "model": "fixed",
       "period": "monthly"
+    },
+    {
+      "model": "free"
     }
   ],
   "scaling": {

@@ -116,13 +116,13 @@ SaaS-centric, Generic, IaaS-centric
 
 ### Pricing
 
-An array of all available billing options. If the PaaS is Open Source or no pricing is announced yet, the array should be empty.
+An array of all available billing options.
 
 #### Model
 
 The pricing model of the PaaS. Currently allowed values:
 ```
-fixed, metered, hybrid
+free, fixed, metered, hybrid
 ```
 #### Period
 
@@ -130,6 +130,8 @@ The billing period. Currently allowed values:
 ```
 daily, monthly, annually
 ```
+
+Can be omitted if the pricing model is ```free```.
 
 ### Quality of Service
 

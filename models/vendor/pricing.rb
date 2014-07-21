@@ -8,6 +8,6 @@ class Pricing
   field :model, type: String
   field :period, type: String
   # validations
-  validates :model, inclusion: {in: %w(fixed metered hybrid)}
-  validates :period, inclusion: {in: %w(daily monthly annually)}
+  validates :model, inclusion: {in: %w(fixed metered hybrid free)}
+  validates :period, inclusion: {in: %w(daily monthly annually)}, :if => Proc.new { !model.eql?('free') }
 end

@@ -13,6 +13,9 @@
     {
       "model": "metered",
       "period": "monthly"
+    },
+    {
+      "model": "free"
     }
   ],
   "qos": {
