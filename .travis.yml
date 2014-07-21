@@ -3,6 +3,7 @@ rvm:
   - "2.0.0"
 services:
   - mongodb
+before_deploy: bundle install
 
 deploy:
   provider: heroku
@@ -11,5 +12,4 @@ deploy:
   app: paas-profiles
   on:
     repo: stefan-kolb/paas-profiles
-  before_deploy: bundle install
   run: "rake mongo:import"
