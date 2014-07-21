@@ -2,17 +2,15 @@
 
 <div class="container">
 <div class="row">
-  <div class="span8">
+  <div class="span12">
     <h1>
-      <% unless @profile['image'].blank? %>
-      <img src="<%= url('/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << File.extname(@profile['image'])) %>" class="img-rounded" style="margin-bottom: 8px; width: 73px; height: 73px;">
-      <% end %>
-      <a href="<%= @profile["url"] %>" target="_blank">
-        <%= @profile["name"] %>
-      </a>
-      <% unless @profile["vendor_verified"].nil? %>
-          <span class="icon-ok-sign" title="Verified by Vendor on <%= @profile["vendor_verified"].to_date %>"></span>
-      <% end %>
+    <% unless @profile['image'].blank? %>
+    <img src="<%= url('/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << File.extname(@profile['image'])) %>" class="img-rounded" style="margin-bottom: 8px; width: 73px; height: 73px;">
+    <% end %>
+    <a href="<%= @profile['url'] %>" target="_blank"><%= @profile['name'] %></a>
+    <% unless @profile['vendor_verified'].nil? %>
+    <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @profile['vendor_verified'].to_date %>"></i>
+    <% end %>
     </h1>
   </div>
 </div>
@@ -27,7 +25,7 @@
   <div class="span4">
     <p class="pull-right">
       <small>
-        <em>Last updated <span class="date" title="<%= @profile["revision"].to_datetime %>"></span> ago.</em>
+        <em>Last updated <span class="date" title="<%= @profile['revision'].to_datetime %>"></span> ago.</em>
       </small>
     </p>
   </div>
