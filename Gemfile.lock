@@ -19,7 +19,7 @@ GEM
     ffi (1.9.3-x86-mingw32)
     geocoder (1.2.3)
     i18n (0.6.11)
-    iso_country_codes (0.4.3)
+    iso_country_codes (0.4.4)
     json (1.8.1)
     kgio (2.9.2)
     mime-types (2.3)
