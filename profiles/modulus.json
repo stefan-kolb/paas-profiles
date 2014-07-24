@@ -56,13 +56,37 @@
       {
         "name": "mongodb",
         "versions": [
-          "2.4"
+          "2.4.9",
+          "2.6.3"
         ],
         "type": "datastore"
       }
     ],
     "addon": [
-
+      {
+        "name": "iron worker",
+        "url": "http://www.iron.io/worker",
+        "description": "",
+        "type": "worker"
+      },
+      {
+        "name": "iron mq",
+        "url": "http://www.iron.io/mq",
+        "description": "",
+        "type": "worker"
+      },
+      {
+        "name": "keen.io",
+        "url": "https://keen.io/",
+        "description": "",
+        "type": "analytics"
+      },
+      {
+        "name": "sendgrid",
+        "url": "http://sendgrid.com/",
+        "description": "",
+        "type": "messaging"
+      }
     ]
   },
   "extensible": false,
