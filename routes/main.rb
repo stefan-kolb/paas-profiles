@@ -29,6 +29,13 @@ get '/filter' do
   erb :'profiles/filter'
 end
 
+get '/compare' do
+  require_relative '../lib/version'
+  @p1 = Vendor.where(name: /heroku/i).first
+  @p2 = Vendor.where(name: /appharbor/i).first
+  erb :'profiles/compare'
+end
+
 get '/search' do
   erb :'profiles/search', :layout => false
 end
