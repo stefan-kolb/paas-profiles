@@ -180,7 +180,7 @@
         "type": ""
       },
       {
-        "name": "cdn sumo",
+        "name": "fastly",
         "url": "",
         "description": "",
         "type": ""
