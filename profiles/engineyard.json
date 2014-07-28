@@ -152,7 +152,7 @@
         "type": "datastore"
       },
       {
-        "name": "librato metrics",
+        "name": "librato",
         "url": "https://metrics.librato.com/",
         "type": "analytics"
       },

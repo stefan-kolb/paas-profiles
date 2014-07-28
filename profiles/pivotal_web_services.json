@@ -191,7 +191,7 @@
         "type": "analytics"
       },
       {
-        "name": "rediscloud",
+        "name": "redis cloud",
         "url": "http://redis-cloud.com/",
         "description": "",
         "type": "datastore"

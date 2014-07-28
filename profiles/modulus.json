@@ -64,19 +64,19 @@
     ],
     "addon": [
       {
-        "name": "iron worker",
+        "name": "ironworker",
         "url": "http://www.iron.io/worker",
         "description": "",
         "type": "worker"
       },
       {
-        "name": "iron mq",
+        "name": "ironmq",
         "url": "http://www.iron.io/mq",
         "description": "",
         "type": "worker"
       },
       {
-        "name": "keen.io",
+        "name": "keen",
         "url": "https://keen.io/",
         "description": "",
         "type": "analytics"
