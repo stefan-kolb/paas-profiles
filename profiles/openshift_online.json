@@ -223,12 +223,12 @@
         "type": "datastore"
       },
       {
-        "name": "iron mq",
+        "name": "ironmq",
         "url": "http://www.iron.io/mq",
         "type": "worker"
       },
       {
-        "name": "iron worker",
+        "name": "ironworker",
         "url": "http://www.iron.io/worker",
         "type": "worker"
       },
@@ -263,7 +263,7 @@
         "type": "datastore"
       },
       {
-        "name": "searchly elasticsearch",
+        "name": "searchly",
         "url": "http://www.searchly.com/",
         "type": "search"
       },

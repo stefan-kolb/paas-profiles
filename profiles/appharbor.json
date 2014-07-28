@@ -115,7 +115,7 @@
         "url": "http://www.elephantsql.com/"
       },
       {
-        "name": "found elasticsearch",
+        "name": "found",
         "type": "search",
         "url": "http://www.found.no/"
       },
@@ -190,12 +190,12 @@
         "url": "http://redistogo.com/"
       },
       {
-        "name": "rediscloud",
+        "name": "redis cloud",
         "type": "datastore",
         "url": "http://redis-cloud.com/"
       },
       {
-        "name": "searchly elasticsearch",
+        "name": "searchly",
         "type": "search",
         "url": "http://www.searchly.com/"
       },

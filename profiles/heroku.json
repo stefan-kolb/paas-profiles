@@ -322,9 +322,10 @@
         "type": ""
       },
       {
-        "name": "hostedgraphite",
+        "name": "hosted graphite",
+        "url": "https://www.hostedgraphite.com/",
         "description": "",
-        "type": ""
+        "type": "analytics"
       },
       {
         "name": "indexden",
@@ -337,17 +338,17 @@
         "type": ""
       },
       {
-        "name": "iron cache",
+        "name": "ironcache",
         "description": "",
         "type": ""
       },
       {
-        "name": "iron mq",
+        "name": "ironmq",
         "description": "",
         "type": ""
       },
       {
-        "name": "iron worker",
+        "name": "ironworker",
         "description": "",
         "type": ""
       },
@@ -358,7 +359,7 @@
         "url": "https://metrics.librato.com/"
       },
       {
-        "name": "loaderio",
+        "name": "loader.io",
         "description": "",
         "type": ""
       },
@@ -481,7 +482,7 @@
         "type": ""
       },
       {
-        "name": "rediscloud",
+        "name": "redis cloud",
         "description": "",
         "type": ""
       },
@@ -569,7 +570,7 @@
         "type": ""
       },
       {
-        "name": "spreedlycore",
+        "name": "spreedly",
         "description": "",
         "type": ""
       },
@@ -626,7 +627,7 @@
         "type": ""
       },
       {
-        "name": "tinfoilsecurity",
+        "name": "tinfoil security",
         "description": "",
         "type": ""
       },
@@ -733,9 +734,9 @@
         "type": ""
       },
       {
-        "name": "foundelasticsearch",
-        "url": "",
-        "type": ""
+        "name": "found",
+        "url": "http://www.found.no/",
+        "type": "search"
       },
       {
         "name": "gamerocket",
@@ -763,7 +764,7 @@
         "type": ""
       },
       {
-        "name": "memcachedcloud",
+        "name": "memcached cloud",
         "url": "",
         "type": ""
       },
