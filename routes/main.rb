@@ -40,7 +40,7 @@ get '/compare/*-vs-*' do
   @versus_path = request.fullpath
   @p1 = Vendor.where(name: /#{params[:splat][0]}/i).first
   @p2 = Vendor.where(name: /#{params[:splat][1]}/i).first
-  @title = "#{p1.name} vs #{p2.name}| PaaS Comparison"
+  @title = "#{@p1.name} vs #{@p2.name}| PaaS Comparison"
 
   erb :'profiles/compare'
 end
