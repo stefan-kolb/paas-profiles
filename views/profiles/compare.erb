@@ -1,0 +1,563 @@
+<div class="container">
+<div class="jumbotron">
+    <img class="img-rounded" src="https://pbs.twimg.com/profile_images/464169564171821056/43sHKeth_400x400.png" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
+    <i class="fa fa-bolt fa-5x" style="vertical-align: middle;font-size: 8em; margin: 25px;"></i>
+    <img class="img-rounded" src="https://pbs.twimg.com/profile_images/378800000771529671/854d85d0c77271af224b455f81b5fc88.png" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
+</div>
+
+<ul class="thumbnails">
+<li class="span6">
+  <div class="thumbnail" style="text-align:center; padding: 20px;">
+    <% unless @p1['image'].blank? %>
+        <img src="<%= url('/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << File.extname(@p1['image'])) %>" class="img-rounded tip" style="margin-bottom: 8px; width: 73px; height: 73px;">
+    <% end %>
+    <h2>
+      <a href="/vendor/<%= url_encode(@p1['name']) %>"><%= @p1['name'] %></a>
+      <% unless @p1['vendor_verified'].nil? %>
+          <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @p1['vendor_verified'].to_date %>"></i>
+      <% end %>
+    </h2>
+    <div>
+      <a href="/vendor/<%= url_encode(@p1['name']) %>" class="btn btn-inverse btn-mini">View details</a>
+    </div>
+    <p><br></p>
+
+    <table class="table">
+      <tbody>
+      <tr>
+        <td>
+          <p class="text-center muted"><small>Deployment</small></p>
+
+          <div class="text-center">
+          <% if @p1['hosting']['public'] %>
+               <span class="fa-stack fa-lg tip" title="Public PaaS">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-eye fa-stack-1x"></i>
+                </span>
+          <% elsif @p1['hosting']['private'] %>
+               <span class="fa-stack fa-lg tip" title="Private PaaS">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-lock fa-stack-1x"></i>
+                </span>
+          <% end %>
+              </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-center muted"><small>Scaling</small></p>
+          <div class="text-center">
+          <% if @p1["scaling"]["vertical"] %>
+                               <span class="fa-stack fa-lg tip" title="Vertical Scaling">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-arrows-v fa-stack-1x fa-inverse"></i>
+                </span>
+          <% end %>
+          <% if @p1["scaling"]["horizontal"] %>
+                            <span class="fa-stack fa-lg tip" title="Horizontal Scaling">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-arrows-h fa-stack-1x fa-inverse"></i>
+                </span>
+          <% end %>
+          <% if @p1["scaling"]["auto"] %>
+                            <span class="fa-stack fa-lg tip" title="Auto Scaling">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-refresh fa-stack-1x fa-inverse"></i>
+                </span>
+          <% end %>
+              </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-center muted"><small>Status</small></p>
+          <div class="text-center">
+            <span class="text-center">
+            <% if @p1["status"] == "beta" %>
+                <span class="fa-stack fa-lg tip" title="Beta">
+                  <i class="fa fa-circle fa-stack-2x" style="color: #f89406;"></i>
+                  <i class="fa fa-warning fa-stack-1x fa-inverse"></i>
+                </span>
+            <% elsif @p1["status"] == "alpha" %>
+                <span class="fa-stack fa-lg tip" title="Alpha">
+                  <i class="fa fa-circle fa-stack-2x" style="color: #b94a48"></i>
+                  <i class="fa fa-bug fa-stack-1x fa-inverse"></i>
+                </span>
+            <% else %>
+               <span class="fa-stack fa-lg tip" title="Production">
+                  <i class="fa fa-circle fa-stack-2x" style="color: #468847;"></i>
+                  <i class="fa fa-shield fa-stack-1x fa-inverse"></i>
+                </span>
+            <% end %>
+            </span>
+              </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-center muted"><small>Runtimes</small></p>
+          <div class="text-center">
+            <%
+               @p1["runtimes"].sort { |a, b| a["language"] <=> b["language"] }.each do |rt|
+            %>
+                <img src="<%= url('/img/languages/' << rt['language'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["language"].capitalize %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6">
+
+            <% end %>
+            <% if @p1["extensible"] %>
+                <span class="img-rounded tip" style="background-color: #468847; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="Extensible">
+                  <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus fa-inverse"></i></span>
+               </span>
+            <% end %>
+          </div>
+        </td>
+      </tr>
+      </td>
+      </tr>
+
+      <!-- TODO middleware -->
+
+      <tr>
+        <td>
+          <p class="text-center muted"><small>Frameworks</small></p>
+          <div class="text-center">
+            <% unless @p1['frameworks'].nil? %>
+                <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Frameworks">
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p1['frameworks'].size %></strong></span>
+               </span></p>
+            <% end %>
+            <%
+               unless @p1["frameworks"].blank?
+            %>
+                <%
+                   p1_framework_missing = 0
+                   @p1["frameworks"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt|
+
+                     url = settings.public_folder << '/img/frameworks/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png'
+
+                     if File.exist?(url)
+                %>
+                        <a href="#">
+                          <img src="<%= url('/img/frameworks/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">
+                        </a>
+                    <% else
+                         p1_framework_missing += 1
+                       end
+                       end
+                       end
+                    %>
+            <% unless p1_framework_missing.eql? 0 %>
+              <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p1_framework_missing.to_s << ' more available' %>">
+                  <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
+               </span>
+            <% end %>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="text-center muted"><small>Services</small></p>
+          <div class="text-center">
+          <% unless @p1['services'].nil? %>
+              <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Services">
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p1['services']['native'].size %></strong></span>
+               </span></p>
+          <% end %>
+          <%
+             p1_service_missing = 0
+             unless @p1["services"]["native"].blank?
+          %>
+              <%
+                 @p1["services"]["native"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt|
+
+                   url = settings.public_folder << '/img/services/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png'
+
+                   if File.exist?(url)
+              %>
+                  <a href="#">
+                    <img src="<%= url('/img/services/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">
+                  </a>
+              <% else
+                   p1_service_missing += 1
+                 end
+                 end
+                 end
+              %>
+            <% unless p1_service_missing.eql? 0 %>
+              <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p1_service_missing.to_s << ' more available' %>">
+                  <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
+               </span>
+            <% end %>
+            </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+              <p class="text-center muted"><small>Add-ons</small></p>
+
+              <div class="text-center">
+                <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Add-ons">
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p1['services']['addon'].size %></strong></span>
+               </span></p>
+
+
+                <%
+                   p1_addon_missing = 0
+
+                   unless @p1["services"]["addon"].blank?
+                %>
+                <div class="text-left">
+                <%
+                   @p1["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
+                    <%
+                       url = settings.public_folder << '/img/addons/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png'
+
+                       if File.exist?(url)
+                    %>
+                        <a href="<% unless rt["url"].nil? || rt["url"].empty? %><%= rt["url"] %><%end%>" target="_blank">
+                          <img src="<%= url('/img/addons/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">
+                        </a>
+                  <%    else
+                            p1_addon_missing += 1
+                        end
+                     end
+                     end
+                  %>
+          <% unless p1_addon_missing.eql?(0) %>
+              <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p1_addon_missing.to_s << ' more available' %>">
+                  <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
+               </span>
+          <% end %>
+          </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-center muted"><small>Infrastructures</small></p>
+
+          <div class="text-center">
+                <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Infrastructures">
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= 0 || @p1['infrastructures'].size %></strong></span>
+               </span></p>
+
+            <% unless @p1['infrastructures'].blank? %>
+              <% @p1['infrastructures'].sort { |a, b| a['continent'] <=> b['continent'] }.each do |rt| %>
+               <span class="img-rounded tip" style="background-color: #468847; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= continent_by_code rt['continent'] %>">
+                  <span style="color: #ffffff;display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><strong><%= rt['continent'] %></strong></span>
+               </span>
+              <% end %>
+          <% else %>
+
+           <span><em>Bring your own infrastructure.</em></span>
+          <% end %>
+              </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+
+
+<li class="span6">
+<div class="thumbnail" style="text-align:center; padding: 20px;">
+<% unless @p2['image'].blank? %>
+    <img src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << File.extname(@p2['image'])) %>" class="img-rounded tip" style="margin-bottom: 8px; width: 73px; height: 73px;">
+<% end %>
+<h2>
+  <a href="/vendor/<%= url_encode(@p2['name']) %>"><%= @p2['name'] %></a>
+  <% unless @p2['vendor_verified'].nil? %>
+      <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @p2['vendor_verified'].to_date %>"></i>
+  <% end %>
+</h2>
+<div>
+  <a href="/vendor/<%= url_encode(@p2['name']) %>" class="btn btn-inverse btn-mini">View details</a>
+</div>
+<p><br></p>
+
+<table class="table">
+<tbody>
+<tr>
+  <td>
+    <p class="text-center muted"><small>Deployment</small></p>
+
+    <div class="text-center">
+      <% if @p2['hosting']['public'] %>
+               <span class="fa-stack fa-lg tip" title="Public PaaS">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-eye fa-stack-1x"></i>
+                </span>
+      <% elsif @p2['hosting']['private'] %>
+               <span class="fa-stack fa-lg tip" title="Private PaaS">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-lock fa-stack-1x"></i>
+                </span>
+      <% end %>
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <p class="text-center muted"><small>Scaling</small></p>
+    <div class="text-center">
+      <% if @p2["scaling"]["vertical"] %>
+                               <span class="fa-stack fa-lg tip" title="Vertical Scaling">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-arrows-v fa-stack-1x fa-inverse"></i>
+                </span>
+      <% end %>
+      <% if @p2["scaling"]["horizontal"] %>
+                            <span class="fa-stack fa-lg tip" title="Horizontal Scaling">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-arrows-h fa-stack-1x fa-inverse"></i>
+                </span>
+      <% end %>
+      <% if @p2["scaling"]["auto"] %>
+                            <span class="fa-stack fa-lg tip" title="Auto Scaling">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-refresh fa-stack-1x fa-inverse"></i>
+                </span>
+      <% end %>
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <p class="text-center muted"><small>Status</small></p>
+    <div class="text-center">
+            <span class="text-center">
+            <% if @p2["status"] == "beta" %>
+                <span class="fa-stack fa-lg tip" title="Beta">
+                  <i class="fa fa-circle fa-stack-2x" style="color: #f89406;"></i>
+                  <i class="fa fa-warning fa-stack-1x fa-inverse"></i>
+                </span>
+            <% elsif @p2["status"] == "alpha" %>
+                <span class="fa-stack fa-lg tip" title="Alpha">
+                  <i class="fa fa-circle fa-stack-2x" style="color: #b94a48"></i>
+                  <i class="fa fa-bug fa-stack-1x fa-inverse"></i>
+                </span>
+            <% else %>
+               <span class="fa-stack fa-lg tip" title="Production">
+                  <i class="fa fa-circle fa-stack-2x" style="color: #468847;"></i>
+                  <i class="fa fa-shield fa-stack-1x fa-inverse"></i>
+                </span>
+            <% end %>
+            </span>
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <p class="text-center muted"><small>Runtimes</small></p>
+    <div class="text-center">
+      <%
+         @p2["runtimes"].sort { |a, b| a["language"] <=> b["language"] }.each do |rt|
+      %>
+          <img src="<%= url('/img/languages/' << rt['language'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["language"].capitalize %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6">
+
+      <% end %>
+      <% if @p2["extensible"] %>
+                <span class="img-rounded tip" style="background-color: #468847; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="Extensible">
+                  <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus fa-inverse"></i></span>
+               </span>
+      <% end %>
+    </div>
+  </td>
+</tr>
+</td>
+</tr>
+
+<!-- TODO middleware -->
+
+<tr>
+  <td>
+    <p class="text-center muted"><small>Frameworks</small></p>
+    <div class="text-center">
+      <% unless @p2['frameworks'].nil? %>
+          <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Frameworks">
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p2['frameworks'].size %></strong></span>
+               </span></p>
+      <% end %>
+      <%
+         unless @p2["frameworks"].blank?
+      %>
+          <%
+             p2_framework_missing = 0
+             @p2["frameworks"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt|
+
+               url = settings.public_folder << '/img/frameworks/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png'
+
+               if File.exist?(url)
+          %>
+                  <a href="#">
+                    <img src="<%= url('/img/frameworks/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">
+                  </a>
+              <% else
+                   p2_framework_missing += 1
+                 end
+                 end
+                 end
+              %>
+      <% unless p2_framework_missing.eql? 0 %>
+              <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p2_framework_missing.to_s << ' more available' %>">
+                  <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
+               </span>
+      <% end %>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <p class="text-center muted"><small>Services</small></p>
+    <div class="text-center">
+      <% unless @p2['services'].nil? %>
+          <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Services">
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p2['services']['native'].size %></strong></span>
+               </span></p>
+      <% end %>
+      <%
+         p2_service_missing = 0
+         unless @p2["services"]["native"].blank?
+      %>
+          <%
+             @p2["services"]["native"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt|
+
+               url = settings.public_folder << '/img/services/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png'
+
+               if File.exist?(url)
+          %>
+                  <a href="#">
+                    <img src="<%= url('/img/services/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">
+                  </a>
+              <% else
+                   p2_service_missing += 1
+                 end
+                 end
+                 end
+              %>
+      <% unless p2_service_missing.eql? 0 %>
+              <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p2_service_missing.to_s << ' more available' %>">
+                  <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
+               </span>
+      <% end %>
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <p class="text-center muted"><small>Add-ons</small></p>
+
+    <div class="text-center">
+      <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Add-ons">
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p2['services']['addon'].size %></strong></span>
+               </span></p>
+
+
+      <%
+         p2_addon_missing = 0
+
+         unless @p2["services"]["addon"].blank?
+      %>
+          <div class="text-left">
+            <%
+               @p2["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
+                <%
+                   url = settings.public_folder << '/img/addons/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png'
+
+                   if File.exist?(url)
+                %>
+                    <a href="<% unless rt["url"].nil? || rt["url"].empty? %><%= rt["url"] %><%end%>" target="_blank">
+                      <img src="<%= url('/img/addons/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">
+                    </a>
+              <%    else
+                      p2_addon_missing += 1
+                    end
+                    end
+                    end
+              %>
+      <% unless p2_addon_missing.eql?(0) %>
+              <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p2_addon_missing.to_s << ' more available' %>">
+                  <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
+               </span>
+      <% end %>
+      </div>
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <p class="text-center muted"><small>Infrastructures</small></p>
+
+    <div class="text-center">
+      <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Infrastructures">
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= 0 || @p2['infrastructures'].size %></strong></span>
+               </span></p>
+
+      <% unless @p2['infrastructures'].blank? %>
+          <% @p2['infrastructures'].sort { |a, b| a['continent'] <=> b['continent'] }.each do |rt| %>
+               <span class="img-rounded tip" style="background-color: #468847; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= continent_by_code rt['continent'] %>">
+                  <span style="color: #ffffff;display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><strong><%= rt['continent'] %></strong></span>
+               </span>
+          <% end %>
+      <% else %>
+
+          <span><em>Bring your own infrastructure.</em></span>
+      <% end %>
+    </div>
+  </td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+
+</ul>
+
+</div>
+
+<script src="../js/bootstrap-select.min.js"></script>
+<script src="../js/jquery.prettydate.js"></script>
+
+<script>
+    function loadData() {
+        var data = $('#filter').serialize();
+
+        $.get('search', data, function (response) {
+                    $('#result').html(response);
+                },
+                'html'
+        );
+    }
+
+    $(document).ready(function () {
+        $('.selectpicker').selectpicker();
+        loadData();
+
+        $(':reset').on('click', function (e) {
+            e.preventDefault();
+
+            $('#filter')[0].reset();
+            $('.selectpicker').selectpicker('render');
+            loadData();
+        });
+
+        $('#submit').on('click', function (e) {
+            e.preventDefault();
+
+            data = $('#filter').serialize();
+
+            $.get('search', data, function (response) {
+                        $('#result').html(response);
+                        $('body,html').animate({
+                            scrollTop: $("#result").offset().top
+                        }, 500);
+                    },
+                    'html'
+            );
+        });
+
+    });
+</script>

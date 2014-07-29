@@ -1,0 +1,82 @@
+[
+  {
+    "vendor": "django",
+    "twitter": "djangoproject",
+    "image": "https://pbs.twimg.com/profile_images/1124946054/django_logo_avatar_bigger.png"
+  },
+  {
+    "vendor": "rails",
+    "twitter": "rails",
+    "image": "https://pbs.twimg.com/profile_images/378800000296761640/2e69482e09113a93ccdd109c36f7fca7_bigger.png"
+  },
+  {
+    "vendor": "sinatra",
+    "twitter": "sinatra",
+    "image": "https://pbs.twimg.com/profile_images/80388980/logo_bigger.png"
+  },
+  {
+    "vendor": "cake",
+    "twitter": "cakephp",
+    "image": "https://pbs.twimg.com/profile_images/2905107296/ef389381581beefbb1a633746b9cdfb3_bigger.png"
+  },
+  {
+    "vendor": "drupal",
+    "twitter": "drupal",
+    "image": "https://pbs.twimg.com/profile_images/412836031671828480/vHfZXpbU_bigger.jpeg"
+  },
+  {
+    "vendor": "grails",
+    "twitter": "grailsframework",
+    "image": "https://pbs.twimg.com/profile_images/367258659/favicon48_bigger.png"
+  },
+  {
+    "vendor": "kohana",
+    "twitter": "kohanaphp",
+    "image": "https://pbs.twimg.com/profile_images/68948177/logo_k_bigger.png"
+  },
+  {
+    "vendor": "expressjs",
+    "twitter": "expressjs",
+    "image": "https://pbs.twimg.com/profile_images/2203401849/hashtag_bigger.png"
+  },
+  {
+    "vendor": "laravel",
+    "twitter": "laravelphp",
+    "image": "https://pbs.twimg.com/profile_images/3631880837/74c5dd82a8b5540ab7dd4ce30fc0a2f6_bigger.png"
+  },
+  {
+    "vendor": "play",
+    "twitter": "playframework",
+    "image": "https://pbs.twimg.com/profile_images/3212357378/d2176cabe17d035516e95dab91b45588_bigger.png"
+  },
+  {
+    "vendor": "spring",
+    "twitter": "springframework",
+    "image": "https://pbs.twimg.com/profile_images/1386071839/SpringFramework_Twitter_Avatar-NoBorder_bigger.png"
+  },
+  {
+    "vendor": "symfony",
+    "twitter": "symfony",
+    "image": "https://pbs.twimg.com/profile_images/1450222519/logosf_positif_03_icon_bigger.png"
+  },
+  {
+    "vendor": "yii",
+    "twitter": "yiiframework",
+    "image": "https://pbs.twimg.com/profile_images/1050712832/logo-body2_bigger.png"
+  },
+  {
+    "vendor": "vert.x",
+    "twitter": "vertx_project",
+    "image": "https://pbs.twimg.com/profile_images/3596182297/1d7352601aa7eac739760874228b64b3_bigger.jpeg"
+  },
+  {
+    "vendor": "zend",
+    "twitter": "zfdevteam",
+    "image": "https://pbs.twimg.com/profile_images/2552246710/zf-logo-mark_bigger.png"
+  },
+  {
+    "vendor": "roo",
+    "twitter": "springroo",
+    "image": "https://pbs.twimg.com/profile_images/852162383/Logo_SpringRoo_Sq_bigger.png"
+  }
+]
