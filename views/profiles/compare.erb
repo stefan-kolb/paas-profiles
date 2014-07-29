@@ -238,7 +238,7 @@
 
           <div class="text-center">
                 <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Infrastructures">
-                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= 0 || @p1['infrastructures'].size %></strong></span>
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= !@p1['infrastructures'].blank? ? @p1['infrastructures'].size : 0 %></strong></span>
                </span></p>
 
             <% unless @p1['infrastructures'].blank? %>
@@ -492,7 +492,7 @@
 
     <div class="text-center">
       <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Infrastructures">
-                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= 0 || @p2['infrastructures'].size %></strong></span>
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= !@p2['infrastructures'].blank? ? @p2['infrastructures'].size : 0 %></strong></span>
                </span></p>
 
       <% unless @p2['infrastructures'].blank? %>
