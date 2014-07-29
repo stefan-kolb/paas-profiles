@@ -518,46 +518,4 @@
 
 </div>
 
-<script src="../js/bootstrap-select.min.js"></script>
 <script src="../js/jquery.prettydate.js"></script>
-
-<script>
-    function loadData() {
-        var data = $('#filter').serialize();
-
-        $.get('search', data, function (response) {
-                    $('#result').html(response);
-                },
-                'html'
-        );
-    }
-
-    $(document).ready(function () {
-        $('.selectpicker').selectpicker();
-        loadData();
-
-        $(':reset').on('click', function (e) {
-            e.preventDefault();
-
-            $('#filter')[0].reset();
-            $('.selectpicker').selectpicker('render');
-            loadData();
-        });
-
-        $('#submit').on('click', function (e) {
-            e.preventDefault();
-
-            data = $('#filter').serialize();
-
-            $.get('search', data, function (response) {
-                        $('#result').html(response);
-                        $('body,html').animate({
-                            scrollTop: $("#result").offset().top
-                        }, 500);
-                    },
-                    'html'
-            );
-        });
-
-    });
-</script>
