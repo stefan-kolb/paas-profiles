@@ -30,9 +30,14 @@ get '/filter' do
 end
 
 get '/compare' do
-  require_relative '../lib/version'
   @p1 = Vendor.where(name: /heroku/i).first
-  @p2 = Vendor.where(name: /appharbor/i).first
+  @p2 = Vendor.where(name: /openshift online/i).first
+  erb :'profiles/compare'
+end
+
+get '/compare/*-vs-*' do
+  @p1 = Vendor.where(name: /#{params[:splat][0]}/i).first
+  @p2 = Vendor.where(name: /#{params[:splat][1]}/i).first
   erb :'profiles/compare'
 end
 
