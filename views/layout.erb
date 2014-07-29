@@ -46,13 +46,13 @@
         <small><em>&copy; 2014<br>Brewed in <i class="fa fa-university" title="University"></i> of Bamberg.</em></small>
       </li>
       <li style="display: inline-block;" class="pull-right hidden-phone">
-        <a class="tip" href="https://github.com/stefan-kolb/paas-profiles" data-toggle="tooltip" title="Contribute on Github" target="_blank" style="text-decoration: none; padding: 5px;">
+        <a class="tip_bottom" href="https://github.com/stefan-kolb/paas-profiles" data-toggle="tooltip" title="Contribute on Github" target="_blank" style="text-decoration: none; padding: 5px;">
           <img src="<%= url('/img/github.png') %>" alt="github" style="width: 25px;">
         </a>
-        <a class="tip" href="mailto:stefan.kolb@uni-bamberg.de" data-toggle="tooltip" title="Connect via mail" target="_blank" style="text-decoration: none; padding: 5px;">
+        <a class="tip_bottom" href="mailto:stefan.kolb@uni-bamberg.de" data-toggle="tooltip" title="Connect via mail" target="_blank" style="text-decoration: none; padding: 5px;">
           <img src="<%= url('/img/email.png') %>" alt="mail" style="width: 25px;">
         </a>
-        <a class="tip" href="https://twitter.com/stfnklb" data-toggle="tooltip" title="Follow on Twitter" target="_blank" style="text-decoration: none; padding: 5px;">
+        <a class="tip_bottom" href="https://twitter.com/stfnklb" data-toggle="tooltip" title="Follow on Twitter" target="_blank" style="text-decoration: none; padding: 5px;">
           <img src="<%= url('/img/twitter.png') %>" alt="twitter" style="width: 25px;">
         </a>
       </li>
@@ -70,8 +70,8 @@
     });
 
     // tooltips
-    $('.tip').tooltip({ placement: 'bottom' });
-    $('.tiptop').tooltip({ placement: 'top' });
+    $('.tip').tooltip({ placement: 'top' });
+    $('.tip_bottom').tooltip({ placement: 'bottom' });
 </script>
 </body>
 </html>
