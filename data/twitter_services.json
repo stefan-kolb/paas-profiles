@@ -1,0 +1,57 @@
+[
+  {
+    "vendor": "mysql",
+    "twitter": "mysql",
+    "image": "https://pbs.twimg.com/profile_images/1240079072/logo-mysql-170x170_bigger.png"
+  },
+  {
+    "vendor": "mongodb",
+    "twitter": "mongodb",
+    "image": "https://pbs.twimg.com/profile_images/2452709870/wo2h8r0qy8d5lsxe5lgd_bigger.png"
+  },
+  {
+    "vendor": "redis",
+    "twitter": "redisfeed",
+    "image": "https://pbs.twimg.com/profile_images/2718920759/89eb03dba89157abca4d05d7a3898180_bigger.png"
+  },
+  {
+    "vendor": "memcached",
+    "twitter": "memcached",
+    "image": "https://pbs.twimg.com/profile_images/475535621/memcached-logo-200x152_bigger.png"
+  },
+  {
+    "vendor": "rabbitmq",
+    "twitter": "rabbitmq",
+    "image": "https://pbs.twimg.com/profile_images/107544284/rabbit_bigger.jpg"
+  },
+  {
+    "vendor": "jenkins",
+    "twitter": "jenkinsci",
+    "image": "https://pbs.twimg.com/profile_images/1310810522/headshot_bigger.png"
+  },
+  {
+    "vendor": "elasticsearch",
+    "twitter": "elasticsearch",
+    "image": "https://pbs.twimg.com/profile_images/631946075/realistic_bigger.png"
+  },
+  {
+    "vendor": "couchdb",
+    "twitter": "couchdb",
+    "image": "https://pbs.twimg.com/profile_images/51904457/logo_bigger.png"
+  },
+  {
+    "vendor": "microsoft sql server",
+    "twitter": "sqlserver",
+    "image": "https://pbs.twimg.com/profile_images/471681237786980354/kJC_L6_c_bigger.png"
+  },
+  {
+    "vendor": "neo4j",
+    "twitter": "neo4j",
+    "image": "https://pbs.twimg.com/profile_images/195275920/square-logo-no-text-2_bigger.png"
+  },
+  {
+    "vendor": "hadoop",
+    "twitter": "hadoop",
+    "image": "https://pbs.twimg.com/profile_images/1252505253/elephant_rgb_sq_bigger.png"
+  }
+]
