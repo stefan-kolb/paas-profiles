@@ -78,5 +78,15 @@
     "vendor": "roo",
     "twitter": "springroo",
     "image": "https://pbs.twimg.com/profile_images/852162383/Logo_SpringRoo_Sq_bigger.png"
+  },
+  {
+    "vendor": "phalcon",
+    "twitter": "phalconphp",
+    "image": "https://pbs.twimg.com/profile_images/3539758563/9f91cac523f3b75ea7a484fb0bfdd1f8_bigger.png"
+  },
+  {
+    "vendor": "codeigniter",
+    "twitter": "ellislab",
+    "image": "https://pbs.twimg.com/profile_images/1504949499/social-logo_bigger.jpg"
   }
 ]

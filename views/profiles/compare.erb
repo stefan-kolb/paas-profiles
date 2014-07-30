@@ -1,8 +1,8 @@
 <div class="container">
 <div class="jumbotron">
-    <img class="img-rounded" src="https://pbs.twimg.com/profile_images/464169564171821056/43sHKeth_400x400.png" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
+    <img class="img-rounded" src="<%= url('/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big' << File.extname(@p1['image'])) %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
     <i class="fa fa-bolt fa-5x" style="vertical-align: middle;font-size: 8em; margin: 25px;"></i>
-    <img class="img-rounded" src="https://pbs.twimg.com/profile_images/378800000771529671/854d85d0c77271af224b455f81b5fc88.png" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
+    <img class="img-rounded" src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big' << File.extname(@p2['image'])) %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
 </div>
 
 <ul class="thumbnails">
@@ -30,7 +30,7 @@
 
           <div class="text-center">
           <% if @p1['hosting']['public'] %>
-               <span class="fa-stack fa-lg tip" title="Public PaaS">
+               <span class="fa-stack fa-2x tip" title="Public PaaS">
                   <i class="fa fa-circle-thin fa-stack-2x"></i>
                   <i class="fa fa-eye fa-stack-1x"></i>
                 </span>
@@ -48,7 +48,7 @@
           <p class="text-center muted"><small>Scaling</small></p>
           <div class="text-center">
           <% if @p1["scaling"]["vertical"] %>
-                               <span class="fa-stack fa-lg tip" title="Vertical Scaling">
+                               <span class="fa-stack fa-2x tip" title="Vertical Scaling">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-arrows-v fa-stack-1x fa-inverse"></i>
                 </span>
@@ -84,7 +84,7 @@
                   <i class="fa fa-bug fa-stack-1x fa-inverse"></i>
                 </span>
             <% else %>
-               <span class="fa-stack fa-lg tip" title="Production">
+               <span class="fa-stack fa-2x tip" title="Production">
                   <i class="fa fa-circle fa-stack-2x" style="color: #468847;"></i>
                   <i class="fa fa-shield fa-stack-1x fa-inverse"></i>
                 </span>
@@ -118,13 +118,8 @@
 
       <tr>
         <td>
-          <p class="text-center muted"><small>Frameworks</small></p>
+          <p class="text-center muted"><small>Selection of Frameworks<sup class="tip" title="More frameworks may be supported">1</sup></small></p>
           <div class="text-center">
-            <% unless @p1['frameworks'].nil? %>
-                <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Frameworks">
-                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p1['frameworks'].size %></strong></span>
-               </span></p>
-            <% end %>
             <%
                unless @p1["frameworks"].blank?
             %>
@@ -372,13 +367,8 @@
 
 <tr>
   <td>
-    <p class="text-center muted"><small>Frameworks</small></p>
+    <p class="text-center muted"><small>Selection of Frameworks<sup class="tip" title="More frameworks may be supported">1</sup></small></p>
     <div class="text-center">
-      <% unless @p2['frameworks'].nil? %>
-          <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Frameworks">
-                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p2['frameworks'].size %></strong></span>
-               </span></p>
-      <% end %>
       <%
          unless @p2["frameworks"].blank?
       %>
