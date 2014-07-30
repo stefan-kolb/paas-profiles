@@ -131,9 +131,7 @@
 
                      if File.exist?(url)
                 %>
-                        <a href="#">
-                          <img src="<%= url('/img/frameworks/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">
-                        </a>
+                    <img src="<%= url('/img/frameworks/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">
                     <% else
                          p1_framework_missing += 1
                        end
@@ -169,9 +167,7 @@
 
                    if File.exist?(url)
               %>
-                  <a href="#">
                     <img src="<%= url('/img/services/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">
-                  </a>
               <% else
                    p1_service_missing += 1
                  end
@@ -380,9 +376,7 @@
 
                if File.exist?(url)
           %>
-                  <a href="#">
                     <img src="<%= url('/img/frameworks/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">
-                  </a>
               <% else
                    p2_framework_missing += 1
                  end
@@ -418,9 +412,7 @@
 
                if File.exist?(url)
           %>
-                  <a href="#">
                     <img src="<%= url('/img/services/' << rt['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">
-                  </a>
               <% else
                    p2_service_missing += 1
                  end
