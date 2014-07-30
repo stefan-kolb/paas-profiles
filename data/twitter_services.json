@@ -53,5 +53,10 @@
     "vendor": "hadoop",
     "twitter": "hadoop",
     "image": "https://pbs.twimg.com/profile_images/1252505253/elephant_rgb_sq_bigger.png"
+  },
+  {
+    "vendor": "couchbase",
+    "twitter": "couchbase",
+    "image": "https://pbs.twimg.com/profile_images/1252505253/elephant_rgb_sq_bigger.png"
   }
 ]

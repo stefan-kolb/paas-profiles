@@ -16,12 +16,12 @@
   },
   {
     "vendor": "iron worker",
-    "twitter": "getiron",
+    "twitter": "",
     "image": "https://pbs.twimg.com/profile_images/1676269960/iron-white-logo-sm-sqaure_bigger.png"
   },
   {
     "vendor": "iron mq",
-    "twitter": "getiron",
+    "twitter": "",
     "image": "https://pbs.twimg.com/profile_images/1676269960/iron-white-logo-sm-sqaure_bigger.png"
   },
   {
@@ -316,7 +316,7 @@
   },
   {
     "vendor": "iron cache",
-    "twitter": "getiron",
+    "twitter": "",
     "image": "https://pbs.twimg.com/profile_images/1676269960/iron-white-logo-sm-sqaure_bigger.png"
   },
   {
@@ -801,7 +801,7 @@
   },
   {
     "vendor": "redis to go",
-    "twitter": "",
+    "twitter": "redistogo",
     "image": ""
   },
   {
