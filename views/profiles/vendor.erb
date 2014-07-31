@@ -5,7 +5,7 @@
   <div class="span12">
     <h1>
     <% unless @profile['image'].blank? %>
-    <img src="<%= url('/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << File.extname(@profile['image'])) %>" class="img-rounded" style="margin-bottom: 8px; width: 73px; height: 73px;">
+    <img src="<%= url('/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded" style="margin-bottom: 8px; width: 73px; height: 73px;">
     <% end %>
     <a href="<%= @profile['url'] %>" target="_blank"><%= @profile['name'] %></a>
     <% unless @profile['vendor_verified'].nil? %>

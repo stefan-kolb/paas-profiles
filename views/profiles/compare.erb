@@ -1,15 +1,15 @@
 <div class="container">
 <div class="jumbotron">
-    <img class="img-rounded" src="<%= url('/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big' << File.extname(@p1['image'])) %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
+    <img class="img-rounded" src="<%= url('/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big.png') %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
     <i class="fa fa-bolt fa-5x" style="vertical-align: middle;font-size: 8em; margin: 25px;"></i>
-    <img class="img-rounded" src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big' << File.extname(@p2['image'])) %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
+    <img class="img-rounded" src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big.png') %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
 </div>
 
 <ul class="thumbnails">
 <li class="span6">
   <div class="thumbnail" style="text-align:center; padding: 20px;">
     <% unless @p1['image'].blank? %>
-        <img src="<%= url('/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << File.extname(@p1['image'])) %>" class="img-rounded tip" style="margin-bottom: 8px; width: 73px; height: 73px;">
+        <img src="<%= url('/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" style="margin-bottom: 8px; width: 73px; height: 73px;">
     <% end %>
     <h2>
       <a href="/vendor/<%= url_encode(@p1['name']) %>"><%= @p1['name'] %></a>
@@ -260,7 +260,7 @@
 <li class="span6">
 <div class="thumbnail" style="text-align:center; padding: 20px;">
 <% unless @p2['image'].blank? %>
-    <img src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << File.extname(@p2['image'])) %>" class="img-rounded tip" style="margin-bottom: 8px; width: 73px; height: 73px;">
+    <img src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" style="margin-bottom: 8px; width: 73px; height: 73px;">
 <% end %>
 <h2>
   <a href="/vendor/<%= url_encode(@p2['name']) %>"><%= @p2['name'] %></a>
