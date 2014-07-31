@@ -139,9 +139,11 @@
                        end
                     %>
             <% unless p1_framework_missing.eql? 0 %>
-              <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p1_framework_missing.to_s << ' more available' %>">
+                <a href="/vendor/<%= url_encode(@p1['name']) %>#frameworks">
+                <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p1_framework_missing.to_s << ' more available' %>">
                   <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
                </span>
+                    </a>
             <% end %>
           </div>
         </td>
@@ -175,9 +177,11 @@
                  end
               %>
             <% unless p1_service_missing.eql? 0 %>
+                <a href="/vendor/<%= url_encode(@p1['name']) %>#services">
               <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p1_service_missing.to_s << ' more available' %>">
                   <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
                </span>
+                    </a>
             <% end %>
             </div>
         </td>
@@ -215,9 +219,11 @@
                      end
                   %>
           <% unless p1_addon_missing.eql?(0) %>
+                    <a href="/vendor/<%= url_encode(@p1['name']) %>#services">
               <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p1_addon_missing.to_s << ' more available' %>">
                   <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
                </span>
+                        </a>
           <% end %>
           </div>
           </div>
@@ -384,9 +390,11 @@
                  end
               %>
       <% unless p2_framework_missing.eql? 0 %>
+          <a href="/vendor/<%= url_encode(@p2['name']) %>#frameworks">
               <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p2_framework_missing.to_s << ' more available' %>">
                   <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
                </span>
+              </a>
       <% end %>
     </div>
   </td>
@@ -420,9 +428,11 @@
                  end
               %>
       <% unless p2_service_missing.eql? 0 %>
+          <a href="/vendor/<%= url_encode(@p2['name']) %>#services">
               <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p2_service_missing.to_s << ' more available' %>">
                   <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
                </span>
+              </a>
       <% end %>
     </div>
   </td>
@@ -460,9 +470,11 @@
                     end
               %>
       <% unless p2_addon_missing.eql?(0) %>
+          <a href="/vendor/<%= url_encode(@p2['name']) %>#services">
               <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="<%= p2_addon_missing.to_s << ' more available' %>">
                   <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>
                </span>
+              </a>
       <% end %>
       </div>
     </div>
