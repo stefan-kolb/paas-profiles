@@ -10,10 +10,7 @@ gem 'versionomy'
 gem 'activesupport'
 gem 'sinatra-simple-navigation'
 gem 'geocoder'
-
-group :development do
-  gem 'rmagick'
-end
+gem 'rmagick'
 
 group :test do
   gem 'rake'
