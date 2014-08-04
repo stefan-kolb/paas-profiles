@@ -4,7 +4,7 @@ require 'rake/testtask'
 require 'geocoder'
 require 'rest-client'
 require 'open-uri'
-require 'rmagick'
+require 'RMagick'
 
 # models
 require_relative 'models/vendor/vendor'
