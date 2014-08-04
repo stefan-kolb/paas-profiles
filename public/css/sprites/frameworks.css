@@ -1,0 +1,192 @@
+﻿/* glue: 0.9.4 hash: 4473d86e01 */
+        .sprite-frameworks-zend,
+.sprite-frameworks-yii,
+.sprite-frameworks-vert_x,
+.sprite-frameworks-symfony,
+.sprite-frameworks-spring,
+.sprite-frameworks-sinatra,
+.sprite-frameworks-roo,
+.sprite-frameworks-rails,
+.sprite-frameworks-play,
+.sprite-frameworks-phalcon,
+.sprite-frameworks-laravel,
+.sprite-frameworks-kohana,
+.sprite-frameworks-grails,
+.sprite-frameworks-flask,
+.sprite-frameworks-expressjs,
+.sprite-frameworks-drupal,
+.sprite-frameworks-django,
+.sprite-frameworks-codeigniter,
+.sprite-frameworks-cake {
+            background-image: url('../../img/sprites/frameworks.png');
+            background-repeat: no-repeat;
+        }
+        
+        .sprite-frameworks-zend {
+            background-position: -1px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-yii {
+            background-position: -43px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-vert_x {
+            background-position: -1px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-symfony {
+            background-position: -43px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-spring {
+            background-position: -85px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-sinatra {
+            background-position: -85px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-roo {
+            background-position: -1px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-rails {
+            background-position: -43px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-play {
+            background-position: -85px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-phalcon {
+            background-position: -127px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-laravel {
+            background-position: -127px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-kohana {
+            background-position: -127px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-grails {
+            background-position: -1px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-flask {
+            background-position: -43px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-expressjs {
+            background-position: -85px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-drupal {
+            background-position: -127px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-django {
+            background-position: -169px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-codeigniter {
+            background-position: -169px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-frameworks-cake {
+            background-position: -169px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+            .sprite-frameworks-zend,
+    .sprite-frameworks-yii,
+    .sprite-frameworks-vert_x,
+    .sprite-frameworks-symfony,
+    .sprite-frameworks-spring,
+    .sprite-frameworks-sinatra,
+    .sprite-frameworks-roo,
+    .sprite-frameworks-rails,
+    .sprite-frameworks-play,
+    .sprite-frameworks-phalcon,
+    .sprite-frameworks-laravel,
+    .sprite-frameworks-kohana,
+    .sprite-frameworks-grails,
+    .sprite-frameworks-flask,
+    .sprite-frameworks-expressjs,
+    .sprite-frameworks-drupal,
+    .sprite-frameworks-django,
+    .sprite-frameworks-codeigniter,
+    .sprite-frameworks-cake {
+                background-image: url('../../img/sprites/frameworks.png');
+                -webkit-background-size: 210px 168px;
+                -moz-background-size: 210px 168px;
+                background-size: 210px 168px;
+            }
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 2.0), screen and (min--moz-device-pixel-ratio: 2.0), screen and (-o-min-device-pixel-ratio: 200/100), screen and (min-device-pixel-ratio: 2.0), screen and (min-resolution: 2.0dppx) {
+            .sprite-frameworks-zend,
+    .sprite-frameworks-yii,
+    .sprite-frameworks-vert_x,
+    .sprite-frameworks-symfony,
+    .sprite-frameworks-spring,
+    .sprite-frameworks-sinatra,
+    .sprite-frameworks-roo,
+    .sprite-frameworks-rails,
+    .sprite-frameworks-play,
+    .sprite-frameworks-phalcon,
+    .sprite-frameworks-laravel,
+    .sprite-frameworks-kohana,
+    .sprite-frameworks-grails,
+    .sprite-frameworks-flask,
+    .sprite-frameworks-expressjs,
+    .sprite-frameworks-drupal,
+    .sprite-frameworks-django,
+    .sprite-frameworks-codeigniter,
+    .sprite-frameworks-cake {
+                background-image: url('../../img/sprites/frameworks@2x.png');
+                -webkit-background-size: 210px 168px;
+                -moz-background-size: 210px 168px;
+                background-size: 210px 168px;
+            }
+        }
+        

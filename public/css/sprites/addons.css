@@ -1,0 +1,1029 @@
+﻿/* glue: 0.9.4 hash: b7bcc07d29 */
+        .sprite-addons-zeropush,
+.sprite-addons-zencoder,
+.sprite-addons-wercker,
+.sprite-addons-websolr,
+.sprite-addons-usersnap,
+.sprite-addons-userbin,
+.sprite-addons-twist,
+.sprite-addons-twilio,
+.sprite-addons-treasure_data,
+.sprite-addons-transloadit,
+.sprite-addons-tinfoil_security,
+.sprite-addons-tempodb,
+.sprite-addons-tddium,
+.sprite-addons-swiftype,
+.sprite-addons-strongloop,
+.sprite-addons-stillalive,
+.sprite-addons-statuspage,
+.sprite-addons-statushub,
+.sprite-addons-statsmix,
+.sprite-addons-spreedly,
+.sprite-addons-solano_labs,
+.sprite-addons-sentry,
+.sprite-addons-sendgrid,
+.sprite-addons-securekey,
+.sprite-addons-searchly,
+.sprite-addons-searchify,
+.sprite-addons-searchbox,
+.sprite-addons-sauce_labs,
+.sprite-addons-saaspose,
+.sprite-addons-rollbar,
+.sprite-addons-robowhois,
+.sprite-addons-redisgreen,
+.sprite-addons-redis_to_go,
+.sprite-addons-redis_cloud,
+.sprite-addons-rcmmndr,
+.sprite-addons-ravenhq,
+.sprite-addons-quotaguard,
+.sprite-addons-pusher,
+.sprite-addons-pubnub,
+.sprite-addons-pointdns,
+.sprite-addons-phraseapp,
+.sprite-addons-papertrail,
+.sprite-addons-pandastream,
+.sprite-addons-openredis,
+.sprite-addons-nodetime,
+.sprite-addons-nexmo,
+.sprite-addons-new_relic,
+.sprite-addons-mongosoup,
+.sprite-addons-mongolab,
+.sprite-addons-mongohq,
+.sprite-addons-memcachier,
+.sprite-addons-memcached_cloud,
+.sprite-addons-mandrill,
+.sprite-addons-mailtrap,
+.sprite-addons-mailgun,
+.sprite-addons-loggly,
+.sprite-addons-logentries,
+.sprite-addons-loadimpact,
+.sprite-addons-loader_io,
+.sprite-addons-librato,
+.sprite-addons-keen,
+.sprite-addons-justonedb,
+.sprite-addons-jfrog,
+.sprite-addons-iriscouch,
+.sprite-addons-indexden,
+.sprite-addons-hosted_graphite,
+.sprite-addons-groupdocs,
+.sprite-addons-graphenedb,
+.sprite-addons-goinstant,
+.sprite-addons-gemfury,
+.sprite-addons-found,
+.sprite-addons-fortifyondemand,
+.sprite-addons-flying_sphinx,
+.sprite-addons-flydata,
+.sprite-addons-filepicker,
+.sprite-addons-fastly,
+.sprite-addons-elephantsql,
+.sprite-addons-ebookglue,
+.sprite-addons-docraptor,
+.sprite-addons-deadmanssnitch,
+.sprite-addons-dbinsights,
+.sprite-addons-codeship,
+.sprite-addons-cloudvertical,
+.sprite-addons-cloudscheduler,
+.sprite-addons-cloudmqtt,
+.sprite-addons-cloudmailin,
+.sprite-addons-cloudinary,
+.sprite-addons-cloudforge,
+.sprite-addons-cloudant,
+.sprite-addons-cloudamqp,
+.sprite-addons-cleardb,
+.sprite-addons-circle_ci,
+.sprite-addons-chargify,
+.sprite-addons-cedexis,
+.sprite-addons-cameratag,
+.sprite-addons-bugsnag,
+.sprite-addons-bounscale,
+.sprite-addons-bonsai,
+.sprite-addons-blowerio,
+.sprite-addons-blitz,
+.sprite-addons-blitline,
+.sprite-addons-blazemeter,
+.sprite-addons-bablic,
+.sprite-addons-appsignal,
+.sprite-addons-appfirst,
+.sprite-addons-appdynamics,
+.sprite-addons-algoliasearch,
+.sprite-addons-airbrake,
+.sprite-addons-aerogear_push,
+.sprite-addons-adminium,
+.sprite-addons-adept_scale,
+.sprite-addons-46elks {
+            background-image: url('../../img/sprites/addons.png');
+            background-repeat: no-repeat;
+        }
+        
+        .sprite-addons-zeropush {
+            background-position: -1px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-zencoder {
+            background-position: -43px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-wercker {
+            background-position: -1px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-websolr {
+            background-position: -43px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-usersnap {
+            background-position: -85px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-userbin {
+            background-position: -85px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-twist {
+            background-position: -1px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-twilio {
+            background-position: -43px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-treasure_data {
+            background-position: -85px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-transloadit {
+            background-position: -127px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-tinfoil_security {
+            background-position: -127px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-tempodb {
+            background-position: -127px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-tddium {
+            background-position: -1px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-swiftype {
+            background-position: -43px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-strongloop {
+            background-position: -85px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-stillalive {
+            background-position: -127px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-statuspage {
+            background-position: -169px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-statushub {
+            background-position: -169px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-statsmix {
+            background-position: -169px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-spreedly {
+            background-position: -169px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-solano_labs {
+            background-position: -1px -169px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-sentry {
+            background-position: -43px -169px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-sendgrid {
+            background-position: -85px -169px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-securekey {
+            background-position: -127px -169px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-searchly {
+            background-position: -169px -169px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-searchify {
+            background-position: -211px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-searchbox {
+            background-position: -211px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-sauce_labs {
+            background-position: -211px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-saaspose {
+            background-position: -211px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-rollbar {
+            background-position: -211px -169px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-robowhois {
+            background-position: -1px -211px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-redisgreen {
+            background-position: -43px -211px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-redis_to_go {
+            background-position: -85px -211px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-redis_cloud {
+            background-position: -127px -211px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-rcmmndr {
+            background-position: -169px -211px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-ravenhq {
+            background-position: -211px -211px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-quotaguard {
+            background-position: -253px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-pusher {
+            background-position: -253px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-pubnub {
+            background-position: -253px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-pointdns {
+            background-position: -253px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-phraseapp {
+            background-position: -253px -169px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-papertrail {
+            background-position: -253px -211px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-pandastream {
+            background-position: -1px -253px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-openredis {
+            background-position: -43px -253px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-nodetime {
+            background-position: -85px -253px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-nexmo {
+            background-position: -127px -253px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-new_relic {
+            background-position: -169px -253px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-mongosoup {
+            background-position: -211px -253px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-mongolab {
+            background-position: -253px -253px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-mongohq {
+            background-position: -295px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-memcachier {
+            background-position: -295px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-memcached_cloud {
+            background-position: -295px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-mandrill {
+            background-position: -295px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-mailtrap {
+            background-position: -295px -169px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-mailgun {
+            background-position: -295px -211px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-loggly {
+            background-position: -295px -253px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-logentries {
+            background-position: -1px -295px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-loadimpact {
+            background-position: -43px -295px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-loader_io {
+            background-position: -85px -295px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-librato {
+            background-position: -127px -295px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-keen {
+            background-position: -169px -295px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-justonedb {
+            background-position: -211px -295px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-jfrog {
+            background-position: -253px -295px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-iriscouch {
+            background-position: -295px -295px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-indexden {
+            background-position: -337px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-hosted_graphite {
+            background-position: -337px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-groupdocs {
+            background-position: -337px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-graphenedb {
+            background-position: -337px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-goinstant {
+            background-position: -337px -169px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-gemfury {
+            background-position: -337px -211px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-found {
+            background-position: -337px -253px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-fortifyondemand {
+            background-position: -337px -295px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-flying_sphinx {
+            background-position: -1px -337px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-flydata {
+            background-position: -43px -337px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-filepicker {
+            background-position: -85px -337px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-fastly {
+            background-position: -127px -337px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-elephantsql {
+            background-position: -169px -337px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-ebookglue {
+            background-position: -211px -337px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-docraptor {
+            background-position: -253px -337px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-deadmanssnitch {
+            background-position: -295px -337px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-dbinsights {
+            background-position: -337px -337px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-codeship {
+            background-position: -379px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-cloudvertical {
+            background-position: -379px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-cloudscheduler {
+            background-position: -379px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-cloudmqtt {
+            background-position: -379px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-cloudmailin {
+            background-position: -379px -169px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-cloudinary {
+            background-position: -379px -211px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-cloudforge {
+            background-position: -379px -253px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-cloudant {
+            background-position: -379px -295px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-cloudamqp {
+            background-position: -379px -337px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-cleardb {
+            background-position: -1px -379px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-circle_ci {
+            background-position: -43px -379px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-chargify {
+            background-position: -85px -379px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-cedexis {
+            background-position: -127px -379px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-cameratag {
+            background-position: -169px -379px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-bugsnag {
+            background-position: -211px -379px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-bounscale {
+            background-position: -253px -379px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-bonsai {
+            background-position: -295px -379px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-blowerio {
+            background-position: -337px -379px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-blitz {
+            background-position: -379px -379px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-blitline {
+            background-position: -421px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-blazemeter {
+            background-position: -421px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-bablic {
+            background-position: -421px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-appsignal {
+            background-position: -421px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-appfirst {
+            background-position: -421px -169px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-appdynamics {
+            background-position: -421px -211px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-algoliasearch {
+            background-position: -421px -253px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-airbrake {
+            background-position: -421px -295px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-aerogear_push {
+            background-position: -421px -337px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-adminium {
+            background-position: -421px -379px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-adept_scale {
+            background-position: -1px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-46elks {
+            background-position: -43px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+            .sprite-addons-zeropush,
+    .sprite-addons-zencoder,
+    .sprite-addons-wercker,
+    .sprite-addons-websolr,
+    .sprite-addons-usersnap,
+    .sprite-addons-userbin,
+    .sprite-addons-twist,
+    .sprite-addons-twilio,
+    .sprite-addons-treasure_data,
+    .sprite-addons-transloadit,
+    .sprite-addons-tinfoil_security,
+    .sprite-addons-tempodb,
+    .sprite-addons-tddium,
+    .sprite-addons-swiftype,
+    .sprite-addons-strongloop,
+    .sprite-addons-stillalive,
+    .sprite-addons-statuspage,
+    .sprite-addons-statushub,
+    .sprite-addons-statsmix,
+    .sprite-addons-spreedly,
+    .sprite-addons-solano_labs,
+    .sprite-addons-sentry,
+    .sprite-addons-sendgrid,
+    .sprite-addons-securekey,
+    .sprite-addons-searchly,
+    .sprite-addons-searchify,
+    .sprite-addons-searchbox,
+    .sprite-addons-sauce_labs,
+    .sprite-addons-saaspose,
+    .sprite-addons-rollbar,
+    .sprite-addons-robowhois,
+    .sprite-addons-redisgreen,
+    .sprite-addons-redis_to_go,
+    .sprite-addons-redis_cloud,
+    .sprite-addons-rcmmndr,
+    .sprite-addons-ravenhq,
+    .sprite-addons-quotaguard,
+    .sprite-addons-pusher,
+    .sprite-addons-pubnub,
+    .sprite-addons-pointdns,
+    .sprite-addons-phraseapp,
+    .sprite-addons-papertrail,
+    .sprite-addons-pandastream,
+    .sprite-addons-openredis,
+    .sprite-addons-nodetime,
+    .sprite-addons-nexmo,
+    .sprite-addons-new_relic,
+    .sprite-addons-mongosoup,
+    .sprite-addons-mongolab,
+    .sprite-addons-mongohq,
+    .sprite-addons-memcachier,
+    .sprite-addons-memcached_cloud,
+    .sprite-addons-mandrill,
+    .sprite-addons-mailtrap,
+    .sprite-addons-mailgun,
+    .sprite-addons-loggly,
+    .sprite-addons-logentries,
+    .sprite-addons-loadimpact,
+    .sprite-addons-loader_io,
+    .sprite-addons-librato,
+    .sprite-addons-keen,
+    .sprite-addons-justonedb,
+    .sprite-addons-jfrog,
+    .sprite-addons-iriscouch,
+    .sprite-addons-indexden,
+    .sprite-addons-hosted_graphite,
+    .sprite-addons-groupdocs,
+    .sprite-addons-graphenedb,
+    .sprite-addons-goinstant,
+    .sprite-addons-gemfury,
+    .sprite-addons-found,
+    .sprite-addons-fortifyondemand,
+    .sprite-addons-flying_sphinx,
+    .sprite-addons-flydata,
+    .sprite-addons-filepicker,
+    .sprite-addons-fastly,
+    .sprite-addons-elephantsql,
+    .sprite-addons-ebookglue,
+    .sprite-addons-docraptor,
+    .sprite-addons-deadmanssnitch,
+    .sprite-addons-dbinsights,
+    .sprite-addons-codeship,
+    .sprite-addons-cloudvertical,
+    .sprite-addons-cloudscheduler,
+    .sprite-addons-cloudmqtt,
+    .sprite-addons-cloudmailin,
+    .sprite-addons-cloudinary,
+    .sprite-addons-cloudforge,
+    .sprite-addons-cloudant,
+    .sprite-addons-cloudamqp,
+    .sprite-addons-cleardb,
+    .sprite-addons-circle_ci,
+    .sprite-addons-chargify,
+    .sprite-addons-cedexis,
+    .sprite-addons-cameratag,
+    .sprite-addons-bugsnag,
+    .sprite-addons-bounscale,
+    .sprite-addons-bonsai,
+    .sprite-addons-blowerio,
+    .sprite-addons-blitz,
+    .sprite-addons-blitline,
+    .sprite-addons-blazemeter,
+    .sprite-addons-bablic,
+    .sprite-addons-appsignal,
+    .sprite-addons-appfirst,
+    .sprite-addons-appdynamics,
+    .sprite-addons-algoliasearch,
+    .sprite-addons-airbrake,
+    .sprite-addons-aerogear_push,
+    .sprite-addons-adminium,
+    .sprite-addons-adept_scale,
+    .sprite-addons-46elks {
+                background-image: url('../../img/sprites/addons.png');
+                -webkit-background-size: 462px 462px;
+                -moz-background-size: 462px 462px;
+                background-size: 462px 462px;
+            }
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 2.0), screen and (min--moz-device-pixel-ratio: 2.0), screen and (-o-min-device-pixel-ratio: 200/100), screen and (min-device-pixel-ratio: 2.0), screen and (min-resolution: 2.0dppx) {
+            .sprite-addons-zeropush,
+    .sprite-addons-zencoder,
+    .sprite-addons-wercker,
+    .sprite-addons-websolr,
+    .sprite-addons-usersnap,
+    .sprite-addons-userbin,
+    .sprite-addons-twist,
+    .sprite-addons-twilio,
+    .sprite-addons-treasure_data,
+    .sprite-addons-transloadit,
+    .sprite-addons-tinfoil_security,
+    .sprite-addons-tempodb,
+    .sprite-addons-tddium,
+    .sprite-addons-swiftype,
+    .sprite-addons-strongloop,
+    .sprite-addons-stillalive,
+    .sprite-addons-statuspage,
+    .sprite-addons-statushub,
+    .sprite-addons-statsmix,
+    .sprite-addons-spreedly,
+    .sprite-addons-solano_labs,
+    .sprite-addons-sentry,
+    .sprite-addons-sendgrid,
+    .sprite-addons-securekey,
+    .sprite-addons-searchly,
+    .sprite-addons-searchify,
+    .sprite-addons-searchbox,
+    .sprite-addons-sauce_labs,
+    .sprite-addons-saaspose,
+    .sprite-addons-rollbar,
+    .sprite-addons-robowhois,
+    .sprite-addons-redisgreen,
+    .sprite-addons-redis_to_go,
+    .sprite-addons-redis_cloud,
+    .sprite-addons-rcmmndr,
+    .sprite-addons-ravenhq,
+    .sprite-addons-quotaguard,
+    .sprite-addons-pusher,
+    .sprite-addons-pubnub,
+    .sprite-addons-pointdns,
+    .sprite-addons-phraseapp,
+    .sprite-addons-papertrail,
+    .sprite-addons-pandastream,
+    .sprite-addons-openredis,
+    .sprite-addons-nodetime,
+    .sprite-addons-nexmo,
+    .sprite-addons-new_relic,
+    .sprite-addons-mongosoup,
+    .sprite-addons-mongolab,
+    .sprite-addons-mongohq,
+    .sprite-addons-memcachier,
+    .sprite-addons-memcached_cloud,
+    .sprite-addons-mandrill,
+    .sprite-addons-mailtrap,
+    .sprite-addons-mailgun,
+    .sprite-addons-loggly,
+    .sprite-addons-logentries,
+    .sprite-addons-loadimpact,
+    .sprite-addons-loader_io,
+    .sprite-addons-librato,
+    .sprite-addons-keen,
+    .sprite-addons-justonedb,
+    .sprite-addons-jfrog,
+    .sprite-addons-iriscouch,
+    .sprite-addons-indexden,
+    .sprite-addons-hosted_graphite,
+    .sprite-addons-groupdocs,
+    .sprite-addons-graphenedb,
+    .sprite-addons-goinstant,
+    .sprite-addons-gemfury,
+    .sprite-addons-found,
+    .sprite-addons-fortifyondemand,
+    .sprite-addons-flying_sphinx,
+    .sprite-addons-flydata,
+    .sprite-addons-filepicker,
+    .sprite-addons-fastly,
+    .sprite-addons-elephantsql,
+    .sprite-addons-ebookglue,
+    .sprite-addons-docraptor,
+    .sprite-addons-deadmanssnitch,
+    .sprite-addons-dbinsights,
+    .sprite-addons-codeship,
+    .sprite-addons-cloudvertical,
+    .sprite-addons-cloudscheduler,
+    .sprite-addons-cloudmqtt,
+    .sprite-addons-cloudmailin,
+    .sprite-addons-cloudinary,
+    .sprite-addons-cloudforge,
+    .sprite-addons-cloudant,
+    .sprite-addons-cloudamqp,
+    .sprite-addons-cleardb,
+    .sprite-addons-circle_ci,
+    .sprite-addons-chargify,
+    .sprite-addons-cedexis,
+    .sprite-addons-cameratag,
+    .sprite-addons-bugsnag,
+    .sprite-addons-bounscale,
+    .sprite-addons-bonsai,
+    .sprite-addons-blowerio,
+    .sprite-addons-blitz,
+    .sprite-addons-blitline,
+    .sprite-addons-blazemeter,
+    .sprite-addons-bablic,
+    .sprite-addons-appsignal,
+    .sprite-addons-appfirst,
+    .sprite-addons-appdynamics,
+    .sprite-addons-algoliasearch,
+    .sprite-addons-airbrake,
+    .sprite-addons-aerogear_push,
+    .sprite-addons-adminium,
+    .sprite-addons-adept_scale,
+    .sprite-addons-46elks {
+                background-image: url('../../img/sprites/addons@2x.png');
+                -webkit-background-size: 462px 462px;
+                -moz-background-size: 462px 462px;
+                background-size: 462px 462px;
+            }
+        }
+        

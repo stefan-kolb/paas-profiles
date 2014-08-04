@@ -11,6 +11,10 @@ gem 'activesupport'
 gem 'sinatra-simple-navigation'
 gem 'geocoder'
 
+group :development do
+  gem 'rmagick'
+end
+
 group :test do
   gem 'rake'
   gem 'minitest'

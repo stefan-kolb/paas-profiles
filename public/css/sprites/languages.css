@@ -1,0 +1,165 @@
+﻿/* glue: 0.9.4 hash: bc7bb71cb0 */
+        .sprite-languages-scala,
+.sprite-languages-ruby,
+.sprite-languages-python,
+.sprite-languages-php,
+.sprite-languages-perl,
+.sprite-languages-node,
+.sprite-languages-lua,
+.sprite-languages-java,
+.sprite-languages-groovy,
+.sprite-languages-go,
+.sprite-languages-erlang,
+.sprite-languages-dotnet,
+.sprite-languages-dart,
+.sprite-languages-cobol,
+.sprite-languages-clojure,
+.sprite-languages-apex {
+            background-image: url('../../img/sprites/languages.png');
+            background-repeat: no-repeat;
+        }
+        
+        .sprite-languages-scala {
+            background-position: -1px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-ruby {
+            background-position: -43px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-python {
+            background-position: -1px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-php {
+            background-position: -43px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-perl {
+            background-position: -85px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-node {
+            background-position: -85px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-lua {
+            background-position: -1px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-java {
+            background-position: -43px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-groovy {
+            background-position: -85px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-go {
+            background-position: -127px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-erlang {
+            background-position: -127px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-dotnet {
+            background-position: -127px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-dart {
+            background-position: -1px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-cobol {
+            background-position: -43px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-clojure {
+            background-position: -85px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-languages-apex {
+            background-position: -127px -127px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+            .sprite-languages-scala,
+    .sprite-languages-ruby,
+    .sprite-languages-python,
+    .sprite-languages-php,
+    .sprite-languages-perl,
+    .sprite-languages-node,
+    .sprite-languages-lua,
+    .sprite-languages-java,
+    .sprite-languages-groovy,
+    .sprite-languages-go,
+    .sprite-languages-erlang,
+    .sprite-languages-dotnet,
+    .sprite-languages-dart,
+    .sprite-languages-cobol,
+    .sprite-languages-clojure,
+    .sprite-languages-apex {
+                background-image: url('../../img/sprites/languages.png');
+                -webkit-background-size: 168px 168px;
+                -moz-background-size: 168px 168px;
+                background-size: 168px 168px;
+            }
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 2.0), screen and (min--moz-device-pixel-ratio: 2.0), screen and (-o-min-device-pixel-ratio: 200/100), screen and (min-device-pixel-ratio: 2.0), screen and (min-resolution: 2.0dppx) {
+            .sprite-languages-scala,
+    .sprite-languages-ruby,
+    .sprite-languages-python,
+    .sprite-languages-php,
+    .sprite-languages-perl,
+    .sprite-languages-node,
+    .sprite-languages-lua,
+    .sprite-languages-java,
+    .sprite-languages-groovy,
+    .sprite-languages-go,
+    .sprite-languages-erlang,
+    .sprite-languages-dotnet,
+    .sprite-languages-dart,
+    .sprite-languages-cobol,
+    .sprite-languages-clojure,
+    .sprite-languages-apex {
+                background-image: url('../../img/sprites/languages@2x.png');
+                -webkit-background-size: 168px 168px;
+                -moz-background-size: 168px 168px;
+                background-size: 168px 168px;
+            }
+        }
+        

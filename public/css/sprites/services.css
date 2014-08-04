@@ -1,0 +1,138 @@
+﻿/* glue: 0.9.4 hash: 0596585d56 */
+        .sprite-services-redis,
+.sprite-services-rabbitmq,
+.sprite-services-neo4j,
+.sprite-services-mysql,
+.sprite-services-mongodb,
+.sprite-services-microsoft_sql_server,
+.sprite-services-memcached,
+.sprite-services-jenkins,
+.sprite-services-hadoop,
+.sprite-services-elasticsearch,
+.sprite-services-couchdb,
+.sprite-services-couchbase,
+.sprite-services-postgresql {
+            background-image: url('../../img/sprites/services.png');
+            background-repeat: no-repeat;
+        }
+        
+        .sprite-services-redis {
+            background-position: -1px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-rabbitmq {
+            background-position: -43px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-neo4j {
+            background-position: -1px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-mysql {
+            background-position: -43px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-mongodb {
+            background-position: -85px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-microsoft_sql_server {
+            background-position: -85px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-memcached {
+            background-position: -1px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-jenkins {
+            background-position: -43px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-hadoop {
+            background-position: -85px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-elasticsearch {
+            background-position: -127px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-couchdb {
+            background-position: -127px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-couchbase {
+            background-position: -127px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-services-postgresql {
+            background-position: -1px -127px;
+            width: 37px;
+            height: 37px;
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+            .sprite-services-redis,
+    .sprite-services-rabbitmq,
+    .sprite-services-neo4j,
+    .sprite-services-mysql,
+    .sprite-services-mongodb,
+    .sprite-services-microsoft_sql_server,
+    .sprite-services-memcached,
+    .sprite-services-jenkins,
+    .sprite-services-hadoop,
+    .sprite-services-elasticsearch,
+    .sprite-services-couchdb,
+    .sprite-services-couchbase,
+    .sprite-services-postgresql {
+                background-image: url('../../img/sprites/services.png');
+                -webkit-background-size: 168px 165px;
+                -moz-background-size: 168px 165px;
+                background-size: 168px 165px;
+            }
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 2.0), screen and (min--moz-device-pixel-ratio: 2.0), screen and (-o-min-device-pixel-ratio: 200/100), screen and (min-device-pixel-ratio: 2.0), screen and (min-resolution: 2.0dppx) {
+            .sprite-services-redis,
+    .sprite-services-rabbitmq,
+    .sprite-services-neo4j,
+    .sprite-services-mysql,
+    .sprite-services-mongodb,
+    .sprite-services-microsoft_sql_server,
+    .sprite-services-memcached,
+    .sprite-services-jenkins,
+    .sprite-services-hadoop,
+    .sprite-services-elasticsearch,
+    .sprite-services-couchdb,
+    .sprite-services-couchbase,
+    .sprite-services-postgresql {
+                background-image: url('../../img/sprites/services@2x.png');
+                -webkit-background-size: 168px 165px;
+                -moz-background-size: 168px 165px;
+                background-size: 168px 165px;
+            }
+        }
+        
