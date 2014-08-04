@@ -96,8 +96,8 @@
   },
   {
     "vendor": "appfail",
-    "twitter": "",
-    "image": ""
+    "twitter": "appfaildotnet",
+    "image": "https://pbs.twimg.com/profile_images/2301288498/xykckx7ip8i4ykjldeg2_400x400.png"
   },
   {
     "vendor": "cloudscheduler",
@@ -161,8 +161,8 @@
   },
   {
     "vendor": "indexdepot",
-    "twitter": "",
-    "image": ""
+    "twitter": "IndexDepot",
+    "image": "https://pbs.twimg.com/profile_images/1848075717/twitter-128x128_400x400.png"
   },
   {
     "vendor": "loader.io",
@@ -291,11 +291,11 @@
   },
   {
     "vendor": "intercom",
-    "twitter": "",
-    "image": ""
+    "twitter": "intercom",
+    "image": "https://pbs.twimg.com/profile_images/1994111916/1_400x400.png"
   },
   {
-    "vendor": "iron cache",
+    "vendor": "ironcache",
     "twitter": "",
     "image": "https://pbs.twimg.com/profile_images/1676269960/iron-white-logo-sm-sqaure_bigger.png"
   },
@@ -336,11 +336,6 @@
   },
   {
     "vendor": "pgbackups",
-    "twitter": "",
-    "image": ""
-  },
-  {
-    "vendor": "phrase",
     "twitter": "",
     "image": ""
   },
@@ -596,8 +591,8 @@
   },
   {
     "vendor": "hypdf",
-    "twitter": "",
-    "image": ""
+    "twitter": "HyPDF",
+    "image": "https://pbs.twimg.com/profile_images/344513261577278389/1161b3457729148a7c947d67fd40e8e8_400x400.png"
   },
   {
     "vendor": "mail2webhook",

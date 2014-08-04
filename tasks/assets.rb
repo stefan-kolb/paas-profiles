@@ -3,53 +3,45 @@ namespace :assets do
   desc 'Retrieves vendor logos from Twitter'
   task :vendor do
     puts '----> Retrieving vendor logos...'
-    data = JSON.parse(File.read('data/twitter_profiles.json'))
-    mkdir_p('public/sources/vendor') unless File.exists?('public/sources/vendor')
-    get_twitter_images(data, :vendor)
-    rm_rf('public/sources/vendor')
-    # write data file
-    write_json_file('data/twitter_profiles.json', data)
+    get_icons(:vendor)
   end
 
   desc 'Retrieves framework logos from Twitter'
   task :frameworks do
     puts '----> Retrieving framework logos...'
-    data = JSON.parse(File.read('data/twitter_frameworks.json'))
-    mkdir_p('public/sources/frameworks') unless File.exists?('public/sources/frameworks')
-    get_twitter_images(data, :frameworks)
-    # write data file
-    write_json_file('data/twitter_frameworks.json', data)
+    get_icons(:frameworks)
   end
 
   desc 'Retrieves add-on logos from Twitter'
   task :addons do
     puts '----> Retrieving addon logos...'
-    data = JSON.parse(File.read('data/twitter_addons.json'))
-    mkdir_p('public/sources/addons') unless File.exists?('public/sources/addons')
-    get_twitter_images(data, :addons)
-    # write data file
-    write_json_file('data/twitter_addons.json', data)
+    get_icons(:addons)
   end
 
   desc 'Retrieves service logos from Twitter'
   task :services do
     puts '----> Retrieving service logos...'
-    data = JSON.parse(File.read('data/twitter_services.json'))
-    mkdir_p('public/sources/services') unless File.exists?('public/sources/services')
-    get_twitter_images(data, :services)
-    # write data file
-    write_json_file('data/twitter_services.json', data)
+    get_icons(:services)
   end
 
   desc 'Creates sprites for each image folder'
   task :sprites do
     puts '----> Creating sprites...'
-    # http://glue.readthedocs.org/en/latest/quickstart.html
+    # http://glue.readthedocs.org/en/latest/options.html
     cmd = 'glue public/sources --img=public/img/sprites --css=public/css/sprites --retina --margin=1 --project'
     %x[ #{cmd} ]
   end
 
   private
+
+  def get_icons(type)
+    data = JSON.parse(File.read("data/twitter_#{type}.json"))
+    mkdir_p("public/sources/#{type}") unless File.exists?("public/sources/#{type}")
+    get_twitter_images(data, type)
+    rm_rf("public/sources/#{type}")
+    # write data file
+    write_json_file("data/twitter_#{type}.json", data)
+  end
 
   def get_twitter_images(data, type)
     data.each do |vendor|
