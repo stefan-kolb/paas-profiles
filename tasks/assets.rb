@@ -1,3 +1,5 @@
+require 'RMagick'
+
 namespace :assets do
 
   desc 'Retrieves vendor logos from Twitter'

@@ -14,10 +14,6 @@ module IoHelper
     image.write(filename << '.png')
   end
 
-  def create_sprites(folder)
-    SpriteFactory.run!('images/icons')
-  end
-
   def to_filename(str)
     str.downcase.gsub(/[^a-z0-9]/, '_')
   end
