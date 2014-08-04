@@ -168,11 +168,11 @@
           var p1_frameworks_missing = 0;
       </script>
       <% unless @p1["frameworks"].blank? %>
-          <div id="frameworks-list">
+          <div id="p1-frameworks-list">
             <% @p1["frameworks"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                 <script>
                     if (selectorInStyleSheet('frameworks.css', ".sprite-frameworks-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %>")) {
-                        $("#frameworks-list").append('<img src="<%= url('img/s.gif') %>" class="sprite-frameworks-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %> img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">');
+                        $("#p1-frameworks-list").append('<img src="<%= url('img/s.gif') %>" class="sprite-frameworks-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %> img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">');
                     } else {
                         p1_frameworks_missing++;
                     }
@@ -183,7 +183,7 @@
           %>
       <script>
           if (p1_frameworks_missing > 0) {
-              $("#frameworks-list").append('<a href="/vendor/<%= url_encode(@p1['name']) %>#frameworks">\
+              $("#p1-frameworks-list").append('<a href="/vendor/<%= url_encode(@p1['name']) %>#frameworks">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p1_frameworks_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
@@ -211,11 +211,11 @@
           var p1_services_missing = 0;
       </script>
       <% unless @p1["services"]["native"].blank? %>
-          <div id="services-list">
+          <div id="p1-services-list">
             <% @p1["services"]["native"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                 <script>
                     if (selectorInStyleSheet('services.css', ".sprite-services-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %>")) {
-                        $("#services-list").append('<img src="<%= url('img/s.gif') %>" class="sprite-services-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %> img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">');
+                        $("#p1-services-list").append('<img src="<%= url('img/s.gif') %>" class="sprite-services-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %> img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">');
                     } else {
                         p1_services_missing++;
                     }
@@ -226,7 +226,7 @@
           %>
       <script>
           if (p1_services_missing > 0) {
-              $("#services-list").append('<a href="/vendor/<%= url_encode(@p1['name']) %>#services">\
+              $("#p1-services-list").append('<a href="/vendor/<%= url_encode(@p1['name']) %>#services">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p1_services_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
@@ -254,11 +254,11 @@
           var p1_addon_missing = 0;
       </script>
       <% unless @p1["services"]["addon"].blank? %>
-          <div id="addon-list" class="text-left">
+          <div id="p1-addon-list" class="text-left">
             <% @p1["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                 <script>
                     if (selectorInStyleSheet('addons.css', ".sprite-addons-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %>")) {
-                        $("#addon-list").append('<a <% unless rt["url"].blank? %>href="<%= rt["url"] %>"<% end %> target="_blank">\
+                        $("#p1-addon-list").append('<a <% unless rt["url"].blank? %>href="<%= rt["url"] %>"<% end %> target="_blank">\
                       <img src="<%= url('img/s.gif') %>" class="sprite-addons-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %> img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;"></a>');
                     } else {
                         p1_addon_missing++;
@@ -270,7 +270,7 @@
           %>
       <script>
           if (p1_addon_missing > 0) {
-              $("#addon-list").append('<a href="/vendor/<%= url_encode(@p1['name']) %>#services">\
+              $("#p1-addon-list").append('<a href="/vendor/<%= url_encode(@p1['name']) %>#services">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p1_addon_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
@@ -440,11 +440,11 @@
           var p2_frameworks_missing = 0;
       </script>
       <% unless @p2["frameworks"].blank? %>
-          <div id="frameworks-list">
+          <div id="p2-frameworks-list">
             <% @p2["frameworks"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                 <script>
                     if (selectorInStyleSheet('frameworks.css', ".sprite-frameworks-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %>")) {
-                        $("#frameworks-list").append('<img src="<%= url('img/s.gif') %>" class="sprite-frameworks-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %> img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">');
+                        $("#p2-frameworks-list").append('<img src="<%= url('img/s.gif') %>" class="sprite-frameworks-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %> img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">');
                     } else {
                         p2_frameworks_missing++;
                     }
@@ -455,7 +455,7 @@
           %>
       <script>
           if (p2_frameworks_missing > 0) {
-              $("#frameworks-list").append('<a href="/vendor/<%= url_encode(@p2['name']) %>#frameworks">\
+              $("#p2-frameworks-list").append('<a href="/vendor/<%= url_encode(@p2['name']) %>#frameworks">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p2_frameworks_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
@@ -483,11 +483,11 @@
           var p2_services_missing = 0;
       </script>
       <% unless @p2["services"]["native"].blank? %>
-          <div id="services-list">
+          <div id="p2-services-list">
             <% @p2["services"]["native"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                 <script>
                     if (selectorInStyleSheet('services.css', ".sprite-services-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %>")) {
-                        $("#services-list").append('<img src="<%= url('img/s.gif') %>" class="sprite-services-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %> img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">');
+                        $("#p2-services-list").append('<img src="<%= url('img/s.gif') %>" class="sprite-services-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %> img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;">');
                     } else {
                         p2_services_missing++;
                     }
@@ -498,7 +498,7 @@
           %>
       <script>
           if (p2_services_missing > 0) {
-              $("#services-list").append('<a href="/vendor/<%= url_encode(@p2['name']) %>#services">\
+              $("#p2-services-list").append('<a href="/vendor/<%= url_encode(@p2['name']) %>#services">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p2_services_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
@@ -526,11 +526,11 @@
           var p2_addon_missing = 0;
       </script>
       <% unless @p2["services"]["addon"].blank? %>
-      <div id="addon-list" class="text-left">
+      <div id="p2-addon-list" class="text-left">
             <% @p2["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
               <script>
                 if (selectorInStyleSheet('addons.css', ".sprite-addons-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %>")) {
-                    $("#addon-list").append('<a <% unless rt["url"].blank? %>href="<%= rt["url"] %>"<% end %> target="_blank">\
+                    $("#p2-addon-list").append('<a <% unless rt["url"].blank? %>href="<%= rt["url"] %>"<% end %> target="_blank">\
                       <img src="<%= url('img/s.gif') %>" class="sprite-addons-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %> img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;"></a>');
                 } else {
                   p2_addon_missing++;
@@ -542,7 +542,7 @@
           %>
           <script>
               if (p2_addon_missing > 0) {
-                  $("#addon-list").append('<a href="/vendor/<%= url_encode(@p2['name']) %>#services">\
+                  $("#p2-addon-list").append('<a href="/vendor/<%= url_encode(@p2['name']) %>#services">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p2_addon_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
