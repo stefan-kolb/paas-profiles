@@ -4,8 +4,8 @@
 <div class="row">
   <div class="span12">
     <h1>
-    <% unless @profile['image'].blank? %>
-    <img src="<%= url('/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded" style="margin-bottom: 8px; width: 73px; height: 73px;">
+    <% if File.exist?(settings.public_folder << '/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>
+    <img src="<%= url('/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded" style="margin-bottom: 8px">
     <% end %>
     <a href="<%= @profile['url'] %>" target="_blank"><%= @profile['name'] %></a>
     <% unless @profile['vendor_verified'].nil? %>
