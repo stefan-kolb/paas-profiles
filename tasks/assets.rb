@@ -4,6 +4,7 @@ namespace :assets do
   task :vendor do
     puts '----> Retrieving vendor logos...'
     get_icons(:vendor)
+    rm_rf("public/sources/#{type}")
   end
 
   desc 'Retrieves framework logos from Twitter'
@@ -38,7 +39,6 @@ namespace :assets do
     data = JSON.parse(File.read("data/twitter_#{type}.json"))
     mkdir_p("public/sources/#{type}") unless File.exists?("public/sources/#{type}")
     get_twitter_images(data, type)
-    rm_rf("public/sources/#{type}")
     # write data file
     write_json_file("data/twitter_#{type}.json", data)
   end

@@ -1,4 +1,4 @@
-﻿/* glue: 0.9.4 hash: c8d8c896fc */
+﻿/* glue: 0.9.4 hash: 74ceebaebb */
         .sprite-addons-zeropush,
 .sprite-addons-zencoder,
 .sprite-addons-wercker,
@@ -62,8 +62,14 @@
 .sprite-addons-keen,
 .sprite-addons-justonedb,
 .sprite-addons-jfrog,
+.sprite-addons-ironworker,
+.sprite-addons-ironmq,
+.sprite-addons-ironcache,
 .sprite-addons-iriscouch,
+.sprite-addons-intercom,
+.sprite-addons-indexdepot,
 .sprite-addons-indexden,
+.sprite-addons-hypdf,
 .sprite-addons-hosted_graphite,
 .sprite-addons-groupdocs,
 .sprite-addons-graphenedb,
@@ -104,6 +110,7 @@
 .sprite-addons-bablic,
 .sprite-addons-appsignal,
 .sprite-addons-appfirst,
+.sprite-addons-appfail,
 .sprite-addons-appdynamics,
 .sprite-addons-algoliasearch,
 .sprite-addons-airbrake,
@@ -493,296 +500,338 @@
             height: 40px;
         }
         
-        .sprite-addons-iriscouch {
+        .sprite-addons-ironworker {
             background-position: -295px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-indexden {
+        .sprite-addons-ironmq {
             background-position: -337px -1px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-hosted_graphite {
+        .sprite-addons-ironcache {
             background-position: -337px -43px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-groupdocs {
+        .sprite-addons-iriscouch {
             background-position: -337px -85px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-graphenedb {
+        .sprite-addons-intercom {
             background-position: -337px -127px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-goinstant {
+        .sprite-addons-indexdepot {
             background-position: -337px -169px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-gemfury {
+        .sprite-addons-indexden {
             background-position: -337px -211px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-found {
+        .sprite-addons-hypdf {
             background-position: -337px -253px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-fortifyondemand {
+        .sprite-addons-hosted_graphite {
             background-position: -337px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-flying_sphinx {
+        .sprite-addons-groupdocs {
             background-position: -1px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-flydata {
+        .sprite-addons-graphenedb {
             background-position: -43px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-filepicker {
+        .sprite-addons-goinstant {
             background-position: -85px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-fastly {
+        .sprite-addons-gemfury {
             background-position: -127px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-elephantsql {
+        .sprite-addons-found {
             background-position: -169px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-ebookglue {
+        .sprite-addons-fortifyondemand {
             background-position: -211px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-docraptor {
+        .sprite-addons-flying_sphinx {
             background-position: -253px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-deadmanssnitch {
+        .sprite-addons-flydata {
             background-position: -295px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-dbinsights {
+        .sprite-addons-filepicker {
             background-position: -337px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-codeship {
+        .sprite-addons-fastly {
             background-position: -379px -1px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudvertical {
+        .sprite-addons-elephantsql {
             background-position: -379px -43px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudscheduler {
+        .sprite-addons-ebookglue {
             background-position: -379px -85px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudmqtt {
+        .sprite-addons-docraptor {
             background-position: -379px -127px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudmailin {
+        .sprite-addons-deadmanssnitch {
             background-position: -379px -169px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudinary {
+        .sprite-addons-dbinsights {
             background-position: -379px -211px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudforge {
+        .sprite-addons-codeship {
             background-position: -379px -253px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudant {
+        .sprite-addons-cloudvertical {
             background-position: -379px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudamqp {
+        .sprite-addons-cloudscheduler {
             background-position: -379px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cleardb {
+        .sprite-addons-cloudmqtt {
             background-position: -1px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-circle_ci {
+        .sprite-addons-cloudmailin {
             background-position: -43px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-chargify {
+        .sprite-addons-cloudinary {
             background-position: -85px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cedexis {
+        .sprite-addons-cloudforge {
             background-position: -127px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cameratag {
+        .sprite-addons-cloudant {
             background-position: -169px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-bugsnag {
+        .sprite-addons-cloudamqp {
             background-position: -211px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-bounscale {
+        .sprite-addons-cleardb {
             background-position: -253px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-bonsai {
+        .sprite-addons-circle_ci {
             background-position: -295px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-blowerio {
+        .sprite-addons-chargify {
             background-position: -337px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-blitz {
+        .sprite-addons-cedexis {
             background-position: -379px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-blitline {
+        .sprite-addons-cameratag {
             background-position: -421px -1px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-blazemeter {
+        .sprite-addons-bugsnag {
             background-position: -421px -43px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-bablic {
+        .sprite-addons-bounscale {
             background-position: -421px -85px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-appsignal {
+        .sprite-addons-bonsai {
             background-position: -421px -127px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-appfirst {
+        .sprite-addons-blowerio {
             background-position: -421px -169px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-appdynamics {
+        .sprite-addons-blitz {
             background-position: -421px -211px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-algoliasearch {
+        .sprite-addons-blitline {
             background-position: -421px -253px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-airbrake {
+        .sprite-addons-blazemeter {
             background-position: -421px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-aerogear_push {
+        .sprite-addons-bablic {
             background-position: -421px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-adminium {
+        .sprite-addons-appsignal {
             background-position: -421px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-adept_scale {
+        .sprite-addons-appfirst {
             background-position: -1px -421px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-46elks {
+        .sprite-addons-appfail {
             background-position: -43px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-appdynamics {
+            background-position: -85px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-algoliasearch {
+            background-position: -127px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-airbrake {
+            background-position: -169px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-aerogear_push {
+            background-position: -211px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-adminium {
+            background-position: -253px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-adept_scale {
+            background-position: -295px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-46elks {
+            background-position: -337px -421px;
             width: 40px;
             height: 40px;
         }
@@ -851,8 +900,14 @@
     .sprite-addons-keen,
     .sprite-addons-justonedb,
     .sprite-addons-jfrog,
+    .sprite-addons-ironworker,
+    .sprite-addons-ironmq,
+    .sprite-addons-ironcache,
     .sprite-addons-iriscouch,
+    .sprite-addons-intercom,
+    .sprite-addons-indexdepot,
     .sprite-addons-indexden,
+    .sprite-addons-hypdf,
     .sprite-addons-hosted_graphite,
     .sprite-addons-groupdocs,
     .sprite-addons-graphenedb,
@@ -893,6 +948,7 @@
     .sprite-addons-bablic,
     .sprite-addons-appsignal,
     .sprite-addons-appfirst,
+    .sprite-addons-appfail,
     .sprite-addons-appdynamics,
     .sprite-addons-algoliasearch,
     .sprite-addons-airbrake,
@@ -971,8 +1027,14 @@
     .sprite-addons-keen,
     .sprite-addons-justonedb,
     .sprite-addons-jfrog,
+    .sprite-addons-ironworker,
+    .sprite-addons-ironmq,
+    .sprite-addons-ironcache,
     .sprite-addons-iriscouch,
+    .sprite-addons-intercom,
+    .sprite-addons-indexdepot,
     .sprite-addons-indexden,
+    .sprite-addons-hypdf,
     .sprite-addons-hosted_graphite,
     .sprite-addons-groupdocs,
     .sprite-addons-graphenedb,
@@ -1013,6 +1075,7 @@
     .sprite-addons-bablic,
     .sprite-addons-appsignal,
     .sprite-addons-appfirst,
+    .sprite-addons-appfail,
     .sprite-addons-appdynamics,
     .sprite-addons-algoliasearch,
     .sprite-addons-airbrake,
