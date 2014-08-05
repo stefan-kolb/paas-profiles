@@ -38,25 +38,27 @@
 
 <ul class="thumbnails">
 
-<li class="span6">
+<li id="p1" class="span6">
 <div class="thumbnail" style="text-align:center; padding: 20px;">
-<% unless @p1['image'].blank? %>
-    <img src="<%= url('/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" style="margin-bottom: 8px; width: 73px; height: 73px;">
-<% end %>
-<h2>
-  <a href="/vendor/<%= url_encode(@p1['name']) %>"><%= @p1['name'] %></a>
-  <% unless @p1['vendor_verified'].nil? %>
-      <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @p1['vendor_verified'].to_date %>"></i>
-  <% end %>
-</h2>
-
-<div>
-  <a href="/vendor/<%= url_encode(@p1['name']) %>" class="btn btn-inverse btn-mini">View details</a>
-</div>
-<p><br></p>
 
 <table class="table">
 <tbody>
+<tr>
+  <% if File.exist?(settings.public_folder << '/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>
+      <img src="<%= url('/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded" style="margin-bottom: 8px">
+  <% end %>
+  <h2>
+    <a href="/vendor/<%= url_encode(@p1['name']) %>"><%= @p1['name'] %></a>
+    <% unless @p1['vendor_verified'].nil? %>
+        <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @p1['vendor_verified'].to_date %>"></i>
+    <% end %>
+  </h2>
+
+  <div>
+    <a href="/vendor/<%= url_encode(@p1['name']) %>" class="btn btn-inverse btn-mini">View details</a>
+  </div>
+  <p><br></p>
+</tr>
 <tr>
   <td>
     <p class="text-center muted">
@@ -310,25 +312,27 @@
 </div>
 </li>
 
-<li class="span6">
+<li id="p2" class="span6">
 <div class="thumbnail" style="text-align:center; padding: 20px;">
-<% unless @p2['image'].blank? %>
-    <img src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded tip" style="margin-bottom: 8px; width: 73px; height: 73px;">
-<% end %>
-<h2>
-  <a href="/vendor/<%= url_encode(@p2['name']) %>"><%= @p2['name'] %></a>
-  <% unless @p2['vendor_verified'].nil? %>
-      <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @p2['vendor_verified'].to_date %>"></i>
-  <% end %>
-</h2>
-
-<div>
-  <a href="/vendor/<%= url_encode(@p2['name']) %>" class="btn btn-inverse btn-mini">View details</a>
-</div>
-<p><br></p>
 
 <table class="table">
 <tbody>
+<tr>
+  <% if File.exist?(settings.public_folder << '/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>
+      <img src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded" style="margin-bottom: 8px">
+  <% end %>
+  <h2>
+    <a href="/vendor/<%= url_encode(@p2['name']) %>"><%= @p2['name'] %></a>
+    <% unless @p2['vendor_verified'].nil? %>
+        <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @p2['vendor_verified'].to_date %>"></i>
+    <% end %>
+  </h2>
+
+  <div>
+    <a href="/vendor/<%= url_encode(@p2['name']) %>" class="btn btn-inverse btn-mini">View details</a>
+  </div>
+  <p><br></p>
+</tr>
 <tr>
   <td>
     <p class="text-center muted">
@@ -587,3 +591,18 @@
 </div>
 
 <script src="../js/jquery.prettydate.js"></script>
+<script>
+    $(window).load(function() {
+;
+        var p2_grid = $('#p2 tr');
+        $('#p1 tr').each(function(index) {
+            var p2_tr = p2_grid.eq(index);
+            if ($(this).height() >= p2_tr.height()) {
+                p2_tr.height($(this).height());
+            } else {
+                $(this).height(p2_tr.height());
+            }
+        });
+
+    });
+</script>
