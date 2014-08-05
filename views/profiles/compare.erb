@@ -30,10 +30,29 @@
 </script>
 
 <div class="container">
-<div class="jumbotron">
+<div class="jumbotron" style="margin: 15px">
   <img class="img-rounded" src="<%= url('/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big.png') %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
   <i class="fa fa-bolt fa-5x" style="vertical-align: middle;font-size: 8em; margin: 25px;"></i>
   <img class="img-rounded" src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big.png') %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
+</div>
+
+<div class="text-center" style="margin-bottom: 50px">
+  <% vendor = Vendor.distinct(:name).sort_by { |name| name.downcase } %>
+  <form id="select" class="form-horizontal" style="margin-left: auto; margin-right: auto; float: none;">
+    <div>
+      <select id="p1_select" class="selectpicker" data-width="auto">
+      <% vendor.each do |v| %>
+          <option value="<%= v.downcase %>" <%= v.eql?(@p1['name']) ? 'selected' : ' ' %>><%= v %></option>
+      <% end %>
+    </select>
+    <button id="submit" type="submit" class="btn btn-large btn-warning fa fa-bolt fa-lg" style="padding: 7px 19px; margin: 0px 20px"></button>
+    <select id="p2_select" class="selectpicker" data-width="auto">
+      <% vendor.each do |v| %>
+          <option value="<%= v.downcase %>" <%= v.eql?(@p2['name']) ? 'selected' : ' ' %>><%= v %></option>
+      <% end %>
+    </select>
+        </div>
+  </form>
 </div>
 
 <ul class="thumbnails">
@@ -203,16 +222,14 @@
       <small>Services</small>
     </p>
     <div class="text-center">
-      <% unless @p1['services'].nil? %>
           <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Services">
-                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p1['services']['native'].size %></strong></span>
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= !@p1['services'].blank? ? @p1['services']['native'].size : 0 %></strong></span>
                </span></p>
-      <% end %>
 
       <script>
           var p1_services_missing = 0;
       </script>
-      <% unless @p1["services"]["native"].blank? %>
+      <% unless @p1["services"].blank? || @p1["services"]["native"].blank? %>
           <div id="p1-services-list">
             <% @p1["services"]["native"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                 <script>
@@ -248,14 +265,14 @@
     <div class="text-center">
       <p>
         <span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Add-ons">
-            <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p1['services']['addon'].size %></strong></span>
+            <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= !@p1['services'].blank? ? @p1['services']['addon'].size : 0 %></strong></span>
         </span>
       </p>
 
       <script>
           var p1_addon_missing = 0;
       </script>
-      <% unless @p1["services"]["addon"].blank? %>
+      <% unless @p1["services"].blank? || @p1["services"]["addon"].blank? %>
           <div id="p1-addon-list" class="text-left">
             <% @p1["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                 <script>
@@ -436,9 +453,9 @@
 <tr>
   <td>
     <div class="text-center">
-    <p class="text-center muted">
-      <small>Selection of Frameworks<sup class="tip" title="More frameworks may be supported">1</sup></small>
-    </p>
+      <p class="text-center muted">
+        <small>Selection of Frameworks<sup class="tip" title="More frameworks may be supported">1</sup></small>
+      </p>
 
       <script>
           var p2_frameworks_missing = 0;
@@ -477,16 +494,14 @@
       <small>Services</small>
     </p>
     <div class="text-center">
-      <% unless @p2['services'].nil? %>
           <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Services">
-                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p2['services']['native'].size %></strong></span>
+                  <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= !@p2['services'].blank? ? @p2['services']['native'].size : 0 %></strong></span>
                </span></p>
-      <% end %>
 
       <script>
           var p2_services_missing = 0;
       </script>
-      <% unless @p2["services"]["native"].blank? %>
+      <% unless @p2["services"].blank? || @p2["services"]["native"].blank? %>
           <div id="p2-services-list">
             <% @p2["services"]["native"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                 <script>
@@ -522,36 +537,36 @@
     <div class="text-center">
       <p>
         <span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Add-ons">
-            <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= @p2['services']['addon'].size %></strong></span>
+            <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= !@p2['services'].blank? ? @p2['services']['addon'].size : 0 %></strong></span>
         </span>
       </p>
 
       <script>
           var p2_addon_missing = 0;
       </script>
-      <% unless @p2["services"]["addon"].blank? %>
-      <div id="p2-addon-list" class="text-left">
-            <% @p2["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
-              <script>
-                if (selectorInStyleSheet('addons.css', ".sprite-addons-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %>")) {
-                    $("#p2-addon-list").append('<a <% unless rt["url"].blank? %>href="<%= rt["url"] %>"<% end %> target="_blank">\
+      <% unless @p2["services"].blank? || @p2["services"]["addon"].blank? %>
+          <div id="p2-addon-list" class="text-left">
+            <% @p2["services"].blank? || @p2["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
+                <script>
+                    if (selectorInStyleSheet('addons.css', ".sprite-addons-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %>")) {
+                        $("#p2-addon-list").append('<a <% unless rt["url"].blank? %>href="<%= rt["url"] %>"<% end %> target="_blank">\
                       <img src="<%= url('img/s.gif') %>" class="sprite-addons-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %> img-rounded tip" title="<%= rt["name"].split(" ").map(&:capitalize).join(" ") %>" style="margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;"></a>');
-                } else {
-                  p2_addon_missing++;
-                }
-              </script>
+                    } else {
+                        p2_addon_missing++;
+                    }
+                </script>
           <%
              end
              end
           %>
-          <script>
-              if (p2_addon_missing > 0) {
-                  $("#p2-addon-list").append('<a href="/vendor/<%= url_encode(@p2['name']) %>#services">\
+      <script>
+          if (p2_addon_missing > 0) {
+              $("#p2-addon-list").append('<a href="/vendor/<%= url_encode(@p2['name']) %>#services">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p2_addon_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
-              }
-          </script>
+          }
+      </script>
       </div>
 
     </div>
@@ -591,11 +606,25 @@
 </div>
 
 <script src="../js/jquery.prettydate.js"></script>
+<link href="../css/bootstrap-select.min.css" rel="stylesheet"/>
+<script src="../js/bootstrap-select.min.js"></script>
+
 <script>
-    $(window).load(function() {
-;
+    $(document).ready(function () {
+        $('.selectpicker').selectpicker();
+
+        $('#submit').on('click', function (e) {
+            e.preventDefault();
+
+            window.location.href = "/compare/" + $('#p1_select').val() + '-vs-' + $('#p2_select').val();
+        });
+
+    });
+
+    $(window).load(function () {
+        ;
         var p2_grid = $('#p2 tr');
-        $('#p1 tr').each(function(index) {
+        $('#p1 tr').each(function (index) {
             var p2_tr = p2_grid.eq(index);
             if ($(this).height() >= p2_tr.height()) {
                 p2_tr.height($(this).height());
