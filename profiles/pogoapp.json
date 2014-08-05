@@ -67,7 +67,7 @@
   "services": {
     "native": [
       {
-        "name": "memcache",
+        "name": "memcached",
         "type": "datastore",
         "description": "",
         "versions": [
