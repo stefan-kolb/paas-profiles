@@ -271,7 +271,7 @@
           var p1_addon_missing = 0;
       </script>
       <% unless @p1["services"].blank? || @p1["services"]["addon"].blank? %>
-          <div id="p1-addon-list" class="text-left">
+          <div id="p1-addon-list">
             <% @p1["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                 <script>
                     if (selectorInStyleSheet('addons.css', ".sprite-addons-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %>")) {
@@ -543,7 +543,7 @@
           var p2_addon_missing = 0;
       </script>
       <% unless @p2["services"].blank? || @p2["services"]["addon"].blank? %>
-          <div id="p2-addon-list" class="text-left">
+          <div id="p2-addon-list">
             <% @p2["services"].blank? || @p2["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                 <script>
                     if (selectorInStyleSheet('addons.css', ".sprite-addons-<%= rt['name'].downcase.gsub(/[^a-z0-9]/, '_') %>")) {
