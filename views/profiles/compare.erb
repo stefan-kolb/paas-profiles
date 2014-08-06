@@ -36,24 +36,22 @@
   <img class="img-rounded" src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big.png') %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
 </div>
 
-<div class="text-center" style="margin-bottom: 50px">
-  <% vendor = Vendor.distinct(:name).sort_by { |name| name.downcase } %>
-  <form id="select" class="form-horizontal" style="margin-left: auto; margin-right: auto; float: none;">
-    <div>
-      <select id="p1_select" class="selectpicker" data-width="auto">
-      <% vendor.each do |v| %>
-          <option value="<%= v.downcase %>" <%= v.eql?(@p1['name']) ? 'selected' : ' ' %>><%= v %></option>
-      <% end %>
-    </select>
-    <button id="submit" type="submit" class="btn btn-large btn-warning fa fa-bolt fa-lg" style="padding: 7px 19px; margin: 0px 20px"></button>
-    <select id="p2_select" class="selectpicker" data-width="auto">
-      <% vendor.each do |v| %>
-          <option value="<%= v.downcase %>" <%= v.eql?(@p2['name']) ? 'selected' : ' ' %>><%= v %></option>
-      <% end %>
-    </select>
-        </div>
-  </form>
-</div>
+<% vendor = Vendor.distinct(:name).sort_by { |name| name.downcase } %>
+<form id="select" class="text-center form-horizontal" style="margin-bottom: 50px;">
+
+  <select id="p1_select" class="selectpicker" data-width="auto">
+    <% vendor.each do |v| %>
+        <option value="<%= v.downcase %>" <%= v.eql?(@p1['name']) ? 'selected' : ' ' %>><%= v %></option>
+    <% end %>
+  </select>
+  <span id="submit" type="submit" class="btn btn-large btn-warning fa fa-bolt fa-lg" style="padding: 7px 19px; margin: 0px 20px"></span>
+  <select id="p2_select" class="selectpicker" data-width="auto">
+    <% vendor.each do |v| %>
+        <option value="<%= v.downcase %>" <%= v.eql?(@p2['name']) ? 'selected' : ' ' %>><%= v %></option>
+    <% end %>
+  </select>
+
+</form>
 
 <ul class="thumbnails">
 
@@ -222,7 +220,7 @@
       <small>Services</small>
     </p>
     <div class="text-center">
-          <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Services">
+      <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Services">
                   <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= !@p1['services'].blank? ? @p1['services']['native'].size : 0 %></strong></span>
                </span></p>
 
@@ -494,7 +492,7 @@
       <small>Services</small>
     </p>
     <div class="text-center">
-          <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Services">
+      <p><span class="img-rounded tip" style="background-color: #000000; display:inline-block;vertical-align:middle;margin:5px;width: 25px;height:25px;border: 1px solid #000000;" title="Total amount of Services">
                   <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;"><strong><%= !@p2['services'].blank? ? @p2['services']['native'].size : 0 %></strong></span>
                </span></p>
 

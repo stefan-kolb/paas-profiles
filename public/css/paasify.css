@@ -95,3 +95,8 @@ hr.soften {
 .i-link:hover, .i-link:focus, .i-link:active {
     text-decoration: none;
 }
+
+/* center-align hack */
+.dropdown-menu {
+    text-align: left;
+}
