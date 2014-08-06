@@ -5,8 +5,8 @@ class TestImages < MiniTest::Test
   def test_vendor_logos
     Dir.glob(File.dirname(__FILE__) + '/../profiles/*.json') do |file|
       vendor = File.basename(file, '.json')
-      assert(File.exist?('../public/img/vendor/' + vendor + '.png'), "No small logo available for #{vendor}")
-      assert(File.exist?('../public/img/vendor/' + vendor  + '_big.png'), "No big logo available for #{vendor}")
+      assert(File.exist?(File.dirname(__FILE__) + '/../public/img/vendor/' + vendor + '.png'), "No small logo available for #{vendor}")
+      assert(File.exist?(File.dirname(__FILE__) + '/../public/img/vendor/' + vendor  + '_big.png'), "No big logo available for #{vendor}")
     end
   end
 end
