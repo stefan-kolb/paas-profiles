@@ -6,7 +6,7 @@ namespace :assets do
   task :vendor do
     puts '----> Retrieving vendor logos...'
     get_icons(:vendor)
-    rm_rf("public/sources/#{type}")
+    rm_rf('public/sources/vendor')
   end
 
   desc 'Retrieves framework logos from Twitter'
