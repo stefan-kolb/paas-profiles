@@ -1,6 +1,6 @@
 {
   "name": "Getup Cloud",
-  "revision": "2014-02-07",
+  "revision": "2014-08-08",
   "url": "http://getupcloud.com/",
   "status": "production",
   "status_since": "2013-04-30",
@@ -154,6 +154,11 @@
       "country": "US",
       "region": "Oregon",
       "provider": "AWS"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo"
     }
   ]
 }
