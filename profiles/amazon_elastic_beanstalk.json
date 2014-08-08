@@ -111,6 +111,13 @@
       ]
     },
     {
+      "name": "puma",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
       "name": "tomcat",
       "runtime": "java",
       "versions": [
