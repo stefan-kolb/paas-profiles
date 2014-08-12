@@ -106,7 +106,7 @@
       ]
     },
     {
-      "name": "cake",
+      "name": "cakephp",
       "runtime": "php",
       "versions": [
         "2.3.9"
@@ -134,7 +134,7 @@
       ]
     },
     {
-      "name": "expressjs",
+      "name": "express",
       "runtime": "node",
       "versions": [
         "3.4"

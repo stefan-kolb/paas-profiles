@@ -1,4 +1,4 @@
-﻿/* glue: 0.9.4 hash: 6b6254e839 */
+﻿/* glue: 0.9.4 hash: a27538b974 */
         .sprite-frameworks-zend,
 .sprite-frameworks-yii,
 .sprite-frameworks-vert_x,
@@ -13,11 +13,11 @@
 .sprite-frameworks-kohana,
 .sprite-frameworks-grails,
 .sprite-frameworks-flask,
-.sprite-frameworks-expressjs,
+.sprite-frameworks-express,
 .sprite-frameworks-drupal,
 .sprite-frameworks-django,
 .sprite-frameworks-codeigniter,
-.sprite-frameworks-cake {
+.sprite-frameworks-cakephp {
             background-image: url('../../img/sprites/frameworks.png');
             background-repeat: no-repeat;
         }
@@ -106,7 +106,7 @@
             height: 40px;
         }
         
-        .sprite-frameworks-expressjs {
+        .sprite-frameworks-express {
             background-position: -85px -127px;
             width: 40px;
             height: 40px;
@@ -130,7 +130,7 @@
             height: 40px;
         }
         
-        .sprite-frameworks-cake {
+        .sprite-frameworks-cakephp {
             background-position: -169px -85px;
             width: 40px;
             height: 40px;
@@ -151,11 +151,11 @@
     .sprite-frameworks-kohana,
     .sprite-frameworks-grails,
     .sprite-frameworks-flask,
-    .sprite-frameworks-expressjs,
+    .sprite-frameworks-express,
     .sprite-frameworks-drupal,
     .sprite-frameworks-django,
     .sprite-frameworks-codeigniter,
-    .sprite-frameworks-cake {
+    .sprite-frameworks-cakephp {
                 background-image: url('../../img/sprites/frameworks.png');
                 -webkit-background-size: 210px 168px;
                 -moz-background-size: 210px 168px;
@@ -178,11 +178,11 @@
     .sprite-frameworks-kohana,
     .sprite-frameworks-grails,
     .sprite-frameworks-flask,
-    .sprite-frameworks-expressjs,
+    .sprite-frameworks-express,
     .sprite-frameworks-drupal,
     .sprite-frameworks-django,
     .sprite-frameworks-codeigniter,
-    .sprite-frameworks-cake {
+    .sprite-frameworks-cakephp {
                 background-image: url('../../img/sprites/frameworks@2x.png');
                 -webkit-background-size: 210px 168px;
                 -moz-background-size: 210px 168px;

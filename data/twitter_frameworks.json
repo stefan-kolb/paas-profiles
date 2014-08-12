@@ -15,7 +15,7 @@
     "image": "https://pbs.twimg.com/profile_images/80388980/logo_bigger.png"
   },
   {
-    "vendor": "cake",
+    "vendor": "cakephp",
     "twitter": "cakephp",
     "image": "https://pbs.twimg.com/profile_images/2905107296/ef389381581beefbb1a633746b9cdfb3_bigger.png"
   },
@@ -35,7 +35,7 @@
     "image": "https://pbs.twimg.com/profile_images/68948177/logo_k_bigger.png"
   },
   {
-    "vendor": "expressjs",
+    "vendor": "express",
     "twitter": "expressjs",
     "image": "https://pbs.twimg.com/profile_images/2203401849/hashtag_bigger.png"
   },
