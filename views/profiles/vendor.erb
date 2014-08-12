@@ -15,18 +15,21 @@
   </div>
 </div>
 <div class="row">
-  <div class="span4">
+  <div class="span3">
     <a href="<%= @profile["url"] %>" target="_blank" class="btn btn-inverse btn-mini">Visit Vendor Page</a>
   </div>
-  <div class="span4">
+  <div class="span3 text-center">
     <i class="fa fa-tags" title="PaaS type"></i>
     <small><strong>&nbsp;<%= @profile["type"] %></strong></small>
   </div>
-  <div class="span4">
+  <div class="span3 text-center">
+    <small>
+      <em>Last updated <span class="date" title="<%= @profile['revision'].to_datetime %>"></span> ago.</em>
+    </small>
+  </div>
+  <div class="span3">
     <p class="pull-right">
-      <small>
-        <em>Last updated <span class="date" title="<%= @profile['revision'].to_datetime %>"></span> ago.</em>
-      </small>
+      <a href="https://github.com/stefan-kolb/paas-profiles#contribution" title="Report error" class="tip"><i class="fa fa-bug fa-lg"></i></a>
     </p>
   </div>
 </div>
