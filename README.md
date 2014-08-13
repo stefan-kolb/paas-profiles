@@ -189,8 +189,8 @@ An array of preconfigured middleware stacks.
 
 ```json
 "middleware": [
-    { "name": "tomcat", "versions": [ "6", "7" ] },
-    { "name": "glassfish", "versions": [ "3.1" ] }
+    { "name": "tomcat", "runtime": "java", "versions": [ "6", "7" ] },
+    { "name": "nginx", "versions": [ "1.6" ] }
 ]
 ```
 
@@ -198,13 +198,17 @@ An array of preconfigured middleware stacks.
 
 Should be the official name in lowercase. Currently not restricted.
 
+#### Runtime
+
+(Optional) The associated runtime of the middleware product.
+
 #### Versions
 
 A string array containing the supported middleware versions.
 
 ### Frameworks
 
-An array of *preinstalled* frameworks.
+An array of *officially and fully supported* frameworks.
 
 ```json
 "frameworks": [

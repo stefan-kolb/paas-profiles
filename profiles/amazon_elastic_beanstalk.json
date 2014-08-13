@@ -90,7 +90,6 @@
   "middleware": [
     {
       "name": "httpd",
-      "runtime": "php",
       "versions": [
 
       ]

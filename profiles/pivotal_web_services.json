@@ -85,7 +85,7 @@
   "frameworks": [
     {
       "name": "grails",
-      "runtime": "java",
+      "runtime": "groovy",
       "versions": [
 
       ]
