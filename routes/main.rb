@@ -12,10 +12,10 @@ get '/vendor/:name' do
 
   @vendor_path = request.fullpath
   paas = url_decode(params[:name])
-  @profile = Vendor.where(name: /#{paas}/i).first
+  @profile = Vendor.where(name: /^#{paas}$/i).first
 
   if @profile.nil?
-    halt 404, 'This one PaaSed away!'
+    halt 404
   end
 
   @paas = @profile['name']
@@ -40,8 +40,13 @@ end
 
 get '/compare/*-vs-*' do
   @versus_path = request.fullpath
-  @p1 = Vendor.where(name: /#{params[:splat][0]}/i).first
-  @p2 = Vendor.where(name: /#{params[:splat][1]}/i).first
+  @p1 = Vendor.where(name: /^#{params[:splat][0]}$/i).first
+  @p2 = Vendor.where(name: /^#{params[:splat][1]}$/i).first
+
+  if @p1.nil? || @p2.nil?
+    halt 404
+  end
+
   @title = "#{@p1.name} vs #{@p2.name} | PaaS Comparison"
 
   erb :'profiles/compare'

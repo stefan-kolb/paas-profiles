@@ -4,7 +4,7 @@ require 'active_support/core_ext'
 
 require_relative '../models/vendor/vendor'
 
-Mongoid.load!('../config/mongoid.yml', :test)
+Mongoid.load!('./config/mongoid.yml', :test)
 
 class TestConsistency < MiniTest::Test
   def setup
