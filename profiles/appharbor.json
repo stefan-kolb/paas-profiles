@@ -160,9 +160,9 @@
         "url": "http://www.memcachier.com/"
       },
       {
-        "name": "mongohq",
+        "name": "compose mongodb",
         "type": "datastore",
-        "url": "https://www.mongohq.com/"
+        "url": "https://www.compose.io/mongodb/"
       },
       {
         "name": "mongolab",

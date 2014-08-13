@@ -1,4 +1,4 @@
-﻿/* glue: 0.9.4 hash: 74ceebaebb */
+﻿/* glue: 0.9.4 hash: 64f8f42455 */
         .sprite-addons-zeropush,
 .sprite-addons-zencoder,
 .sprite-addons-wercker,
@@ -48,7 +48,6 @@
 .sprite-addons-new_relic,
 .sprite-addons-mongosoup,
 .sprite-addons-mongolab,
-.sprite-addons-mongohq,
 .sprite-addons-memcachier,
 .sprite-addons-memcached_cloud,
 .sprite-addons-mandrill,
@@ -86,6 +85,7 @@
 .sprite-addons-docraptor,
 .sprite-addons-deadmanssnitch,
 .sprite-addons-dbinsights,
+.sprite-addons-compose_mongodb,
 .sprite-addons-codeship,
 .sprite-addons-cloudvertical,
 .sprite-addons-cloudscheduler,
@@ -416,229 +416,229 @@
             height: 40px;
         }
         
-        .sprite-addons-mongohq {
+        .sprite-addons-memcachier {
             background-position: -295px -1px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-memcachier {
+        .sprite-addons-memcached_cloud {
             background-position: -295px -43px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-memcached_cloud {
+        .sprite-addons-mandrill {
             background-position: -295px -85px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-mandrill {
+        .sprite-addons-mailtrap {
             background-position: -295px -127px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-mailtrap {
+        .sprite-addons-mailgun {
             background-position: -295px -169px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-mailgun {
+        .sprite-addons-loggly {
             background-position: -295px -211px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-loggly {
+        .sprite-addons-logentries {
             background-position: -295px -253px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-logentries {
+        .sprite-addons-loadimpact {
             background-position: -1px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-loadimpact {
+        .sprite-addons-loader_io {
             background-position: -43px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-loader_io {
+        .sprite-addons-librato {
             background-position: -85px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-librato {
+        .sprite-addons-keen {
             background-position: -127px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-keen {
+        .sprite-addons-justonedb {
             background-position: -169px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-justonedb {
+        .sprite-addons-jfrog {
             background-position: -211px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-jfrog {
+        .sprite-addons-ironworker {
             background-position: -253px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-ironworker {
+        .sprite-addons-ironmq {
             background-position: -295px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-ironmq {
+        .sprite-addons-ironcache {
             background-position: -337px -1px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-ironcache {
+        .sprite-addons-iriscouch {
             background-position: -337px -43px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-iriscouch {
+        .sprite-addons-intercom {
             background-position: -337px -85px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-intercom {
+        .sprite-addons-indexdepot {
             background-position: -337px -127px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-indexdepot {
+        .sprite-addons-indexden {
             background-position: -337px -169px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-indexden {
+        .sprite-addons-hypdf {
             background-position: -337px -211px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-hypdf {
+        .sprite-addons-hosted_graphite {
             background-position: -337px -253px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-hosted_graphite {
+        .sprite-addons-groupdocs {
             background-position: -337px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-groupdocs {
+        .sprite-addons-graphenedb {
             background-position: -1px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-graphenedb {
+        .sprite-addons-goinstant {
             background-position: -43px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-goinstant {
+        .sprite-addons-gemfury {
             background-position: -85px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-gemfury {
+        .sprite-addons-found {
             background-position: -127px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-found {
+        .sprite-addons-fortifyondemand {
             background-position: -169px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-fortifyondemand {
+        .sprite-addons-flying_sphinx {
             background-position: -211px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-flying_sphinx {
+        .sprite-addons-flydata {
             background-position: -253px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-flydata {
+        .sprite-addons-filepicker {
             background-position: -295px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-filepicker {
+        .sprite-addons-fastly {
             background-position: -337px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-fastly {
+        .sprite-addons-elephantsql {
             background-position: -379px -1px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-elephantsql {
+        .sprite-addons-ebookglue {
             background-position: -379px -43px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-ebookglue {
+        .sprite-addons-docraptor {
             background-position: -379px -85px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-docraptor {
+        .sprite-addons-deadmanssnitch {
             background-position: -379px -127px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-deadmanssnitch {
+        .sprite-addons-dbinsights {
             background-position: -379px -169px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-dbinsights {
+        .sprite-addons-compose_mongodb {
             background-position: -379px -211px;
             width: 40px;
             height: 40px;
@@ -886,7 +886,6 @@
     .sprite-addons-new_relic,
     .sprite-addons-mongosoup,
     .sprite-addons-mongolab,
-    .sprite-addons-mongohq,
     .sprite-addons-memcachier,
     .sprite-addons-memcached_cloud,
     .sprite-addons-mandrill,
@@ -924,6 +923,7 @@
     .sprite-addons-docraptor,
     .sprite-addons-deadmanssnitch,
     .sprite-addons-dbinsights,
+    .sprite-addons-compose_mongodb,
     .sprite-addons-codeship,
     .sprite-addons-cloudvertical,
     .sprite-addons-cloudscheduler,
@@ -1013,7 +1013,6 @@
     .sprite-addons-new_relic,
     .sprite-addons-mongosoup,
     .sprite-addons-mongolab,
-    .sprite-addons-mongohq,
     .sprite-addons-memcachier,
     .sprite-addons-memcached_cloud,
     .sprite-addons-mandrill,
@@ -1051,6 +1050,7 @@
     .sprite-addons-docraptor,
     .sprite-addons-deadmanssnitch,
     .sprite-addons-dbinsights,
+    .sprite-addons-compose_mongodb,
     .sprite-addons-codeship,
     .sprite-addons-cloudvertical,
     .sprite-addons-cloudscheduler,

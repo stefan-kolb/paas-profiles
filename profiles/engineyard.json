@@ -167,8 +167,8 @@
         "type": "messaging"
       },
       {
-        "name": "mongohq",
-        "url": "https://www.mongohq.com/home",
+        "name": "compose mongodb",
+        "url": "https://www.compose.io/mongodb/",
         "type": "datastore"
       },
       {

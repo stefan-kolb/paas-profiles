@@ -53,8 +53,8 @@
         "type": "datastore"
       },
       {
-        "name": "mongohq",
-        "url": "https://www.mongohq.com/",
+        "name": "compose mongodb",
+        "url": "https://www.compose.io/mongodb/",
         "type": "datastore"
       },
       {
