@@ -54,6 +54,14 @@
   "services": {
     "native": [
       {
+        "name": "elasticsearch",
+        "description": "",
+        "type": "search",
+        "versions": [
+          "1.2"
+        ]
+      },
+      {
         "name": "mongodb",
         "description": "",
         "type": "datastore",
@@ -74,7 +82,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "2.8"
+          "1.4"
         ]
       },
       {
@@ -103,7 +111,7 @@
     {
       "continent": "EU",
       "country": "GB",
-      "region": ""
+      "region": "London"
     }
   ]
 }
