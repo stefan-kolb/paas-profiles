@@ -1,6 +1,6 @@
 {
   "name": "OpenShift Online",
-  "revision": "2014-07-21",
+  "revision": "2014-08-15",
   "url": "https://www.openshift.com/products/online",
   "vendor_verified": "2014-01-07",
   "status": "production",
@@ -68,7 +68,8 @@
       "language": "ruby",
       "versions": [
         "1.8",
-        "1.9"
+        "1.9",
+        "2.0"
       ]
     }
   ],
@@ -78,7 +79,8 @@
       "runtime": "java",
       "versions": [
         "6.2",
-        "7.1"
+        "7.1",
+        "8.0"
       ]
     },
     {
@@ -124,7 +126,8 @@
       "name": "rails",
       "runtime": "ruby",
       "versions": [
-
+        "3",
+        "4"
       ]
     },
     {
@@ -138,7 +141,7 @@
       "name": "vert.x",
       "runtime": "java",
       "versions": [
-
+        "2.1"
       ]
     }
   ],
