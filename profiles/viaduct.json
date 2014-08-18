@@ -10,7 +10,13 @@
     "private": false
   },
   "pricing": [
-
+    {
+      "model": "free"
+    },
+    {
+      "model": "fixed",
+      "period": "monthly"
+    }
   ],
   "scaling": {
     "vertical": false,

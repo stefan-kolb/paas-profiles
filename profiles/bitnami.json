@@ -13,6 +13,9 @@
     {
       "model": "hybrid",
       "period": "monthly"
+    },
+    {
+      "model": "free"
     }
   ],
   "scaling": {

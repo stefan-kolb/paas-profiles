@@ -10,7 +10,9 @@
     "private": false
   },
   "pricing": [
-
+    {
+      "model": "free"
+    }
   ],
   "scaling": {
     "vertical": false,

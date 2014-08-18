@@ -10,7 +10,10 @@
     "private": false
   },
   "pricing": [
-
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
   ],
   "scaling": {
     "vertical": true,
