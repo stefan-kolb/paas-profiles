@@ -16,6 +16,11 @@
      end
    end
 
+   # pricing
+   unless params[:pricing].nil? || params[:pricing].empty?
+     query = query.where("pricing.model" => params[:pricing])
+   end
+
    # scaling
    unless params[:scaling].nil?
      if params[:scaling].include? "vertical"
