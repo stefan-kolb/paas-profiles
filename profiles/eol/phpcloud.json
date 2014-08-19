@@ -1,9 +1,9 @@
 {
   "name": "PHPCloud",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2014-09-07",
   "url": "http://www.phpcloud.com/",
-  "status": "beta",
-  "status_since": "2011-10-18",
+  "status": "eol",
+  "status_since": "2014-09-07",
   "type": "Generic",
   "hosting": {
     "public": true,
