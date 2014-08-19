@@ -8,59 +8,55 @@
 
    # hosting
    unless params[:hosting].nil?
-     if params[:hosting].include? "public"
-       query = query.where("hosting.public" => true)
+     if params[:hosting].include? 'public'
+       query = query.where('hosting.public' => true)
      end
-     if params[:hosting].include? "private"
-       query = query.where("hosting.private" => true)
+     if params[:hosting].include? 'private'
+       query = query.where('hosting.private' => true)
      end
    end
 
    # pricing
    unless params[:pricing].nil? || params[:pricing].empty?
-     query = query.where("pricing.model" => params[:pricing])
+     query = query.where('pricing.model' => params[:pricing])
    end
 
    # scaling
    unless params[:scaling].nil?
-     if params[:scaling].include? "vertical"
-       query = query.where("scaling.vertical" => true)
+     if params[:scaling].include? 'vertical'
+       query = query.where('scaling.vertical' => true)
      end
-     if params[:scaling].include? "horizontal"
-       query = query.where("scaling.horizontal" => true)
+     if params[:scaling].include? 'horizontal'
+       query = query.where('scaling.horizontal' => true)
      end
-     if params[:scaling].include? "auto"
-       query = query.where("scaling.auto" => true)
+     if params[:scaling].include? 'auto'
+       query = query.where('scaling.auto' => true)
      end
    end
 
    # runtimes
    unless params[:runtimes].nil?
-     query = query.all("runtimes.language" => params[:runtimes])
+     query = query.all('runtimes.language' => params[:runtimes])
    end
 
    # middleware
    unless params[:middleware].nil?
-     params[:middleware].map { |e| /#{e}/i }
-     query = query.all("middleware.name" => params[:middleware])
+     query = query.all('middleware.name' => params[:middleware])
    end
 
    # frameworks
    unless params[:frameworks].nil?
-     params[:frameworks].map { |e| /#{e}/i }
-     query = query.all("frameworks.name" => params[:frameworks])
+     query = query.all('frameworks.name' => params[:frameworks])
    end
 
    # services
    unless params[:services].nil?
-     params[:services].map { |e| /#{e}/i }
-     query = query.all("services.native.name" => params[:services])
+     query = query.all('services.native.name' => params[:services])
    end
 
    # addons
    unless params[:addons].nil?
-     params[:addons].map { |e| /#{e}/i }
-     query = query.all("services.addon.name" => params[:addons])
+     query = query.all('services.addon.name' => params[:addons])
    end
 
    # extensible
@@ -72,10 +68,10 @@
    unless params[:infras].nil?
      # private paas can be deployed everywhere
      if params[:hosting].nil?
-       query = query.or({"infrastructures.continent" => {"$all" => params[:infras]}}, {"hosting.private" => true})
+       query = query.or({'infrastructures.continent' => {'$all' => params[:infras]}}, {'hosting.private' => true})
        # if hosting = public match infras
-     elsif params[:hosting].length == 1 && params[:hosting].include?("public")
-       query = query.all("infrastructures.continent" => params[:infras])
+     elsif params[:hosting].length == 1 && params[:hosting].include?('public')
+       query = query.all('infrastructures.continent' => params[:infras])
      end
      # ignore infras if hosting == private
    end
@@ -106,15 +102,15 @@
       %>
           <tr>
             <td>
-              <a href="/vendor/<%= url_encode(profile["name"]) %>"><%= profile["name"] %></a>
-              <% unless profile["vendor_verified"].nil? %>
+              <a href="/vendor/<%= url_encode(profile['name']) %>"><%= profile['name'] %></a>
+              <% unless profile['vendor_verified'].nil? %>
                   &nbsp;<i class="fa fa-check-circle" title="Verified by Vendor"></i>
               <% end %>
             </td>
             <td class="hidden-phone">
-              <% if profile["status"] == "beta" %>
+              <% if profile['status'].eql? 'beta' %>
                   <span class="label label-warning">Beta</span>
-              <% elsif profile["status"] == "alpha" %>
+              <% elsif profile['status'].eql? 'alpha' %>
                   <span class="label label-important">Alpha</span>
               <% else %>
                   <span class="label label-success">Production</span>
@@ -124,13 +120,13 @@
             <td class="hidden-phone">
               <div class="row-fluid">
                 <%
-                   profile["runtimes"].uniq { |h| h["language"] }.each do |rt|
+                   profile['runtimes'].uniq { |h| h['language'] }.each do |rt|
                 %>
-                    <span class="label label-info"><%= rt["language"] %></span>
+                    <span class="label label-info"><%= rt['language'] %></span>
                 <%
                    end
 
-                   if profile["extensible"]
+                   if profile['extensible']
                 %>
                     <span class="label label-success">extensible</span>
                 <% end %>
@@ -138,22 +134,22 @@
             </td>
 
             <td class="hidden-phone">
-              <% if profile["scaling"]["vertical"] %>
+              <% if profile['scaling']['vertical'] %>
                   <i class="fa fa-arrows-v" title="vertical"></i>
               <% end %>
-              <% if profile["scaling"]["horizontal"] %>
+              <% if profile['scaling']['horizontal'] %>
                   <i class="fa fa-arrows-h" title="horizontal"></i>
               <% end %>
-              <% if profile["scaling"]["auto"] %>
+              <% if profile['scaling']['auto'] %>
                   <i class="fa fa-refresh" title="auto"></i>
               <% end %>
             </td>
 
             <td class="hidden-phone">
-              <% if profile["hosting"]["public"] %>
+              <% if profile['hosting']['public'] %>
                   <i class="fa fa-eye" title="public"></i>
               <% end
-                 if profile["hosting"]["private"]
+                 if profile['hosting']['private']
               %>
                   <i class="fa fa-lock" title="private"></i>
               <% end %>
@@ -162,12 +158,12 @@
             <td class="hidden-phone">
               <div class="row-fluid">
                 <%
-                   unless profile["infrastructures"].nil?
-                     profile["infrastructures"].uniq { |h| h["continent"] }.each do |rt|
+                   unless profile['infrastructures'].nil?
+                     profile['infrastructures'].uniq { |h| h['continent'] }.each do |rt|
 
                        title = continent_by_code rt['continent']
                 %>
-                        <span class="label label-inverse" title="<%= title %>"><%= rt["continent"] %></span>
+                        <span class="label label-inverse" title="<%= title %>"><%= rt['continent'] %></span>
                     <%
                        end
                        end
@@ -176,7 +172,7 @@
             </td>
 
             <td>
-              <a href="/vendor/<%= url_encode(profile["name"]) %>" class="btn btn-success btn-small">Details</a>
+              <a href="/vendor/<%= url_encode(profile['name']) %>" class="btn btn-success btn-small">Details</a>
             </td>
           </tr>
           </tbody>
