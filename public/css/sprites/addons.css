@@ -1,4 +1,4 @@
-﻿/* glue: 0.9.4 hash: 64f8f42455 */
+﻿/* glue: 0.9.4 hash: db3bf7cc7b */
         .sprite-addons-zeropush,
 .sprite-addons-zencoder,
 .sprite-addons-wercker,
@@ -66,6 +66,7 @@
 .sprite-addons-ironcache,
 .sprite-addons-iriscouch,
 .sprite-addons-intercom,
+.sprite-addons-informant,
 .sprite-addons-indexdepot,
 .sprite-addons-indexden,
 .sprite-addons-hypdf,
@@ -87,7 +88,9 @@
 .sprite-addons-dbinsights,
 .sprite-addons-compose_mongodb,
 .sprite-addons-codeship,
+.sprite-addons-codacy,
 .sprite-addons-cloudvertical,
+.sprite-addons-cloudsponge,
 .sprite-addons-cloudscheduler,
 .sprite-addons-cloudmqtt,
 .sprite-addons-cloudmailin,
@@ -97,7 +100,9 @@
 .sprite-addons-cloudamqp,
 .sprite-addons-cleardb,
 .sprite-addons-circle_ci,
+.sprite-addons-cine,
 .sprite-addons-chargify,
+.sprite-addons-chain,
 .sprite-addons-cedexis,
 .sprite-addons-cameratag,
 .sprite-addons-bugsnag,
@@ -117,7 +122,8 @@
 .sprite-addons-aerogear_push,
 .sprite-addons-adminium,
 .sprite-addons-adept_scale,
-.sprite-addons-46elks {
+.sprite-addons-46elks,
+.sprite-addons-3scale {
             background-image: url('../../img/sprites/addons.png');
             background-repeat: no-repeat;
         }
@@ -524,314 +530,350 @@
             height: 40px;
         }
         
-        .sprite-addons-indexdepot {
+        .sprite-addons-informant {
             background-position: -337px -127px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-indexden {
+        .sprite-addons-indexdepot {
             background-position: -337px -169px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-hypdf {
+        .sprite-addons-indexden {
             background-position: -337px -211px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-hosted_graphite {
+        .sprite-addons-hypdf {
             background-position: -337px -253px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-groupdocs {
+        .sprite-addons-hosted_graphite {
             background-position: -337px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-graphenedb {
+        .sprite-addons-groupdocs {
             background-position: -1px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-goinstant {
+        .sprite-addons-graphenedb {
             background-position: -43px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-gemfury {
+        .sprite-addons-goinstant {
             background-position: -85px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-found {
+        .sprite-addons-gemfury {
             background-position: -127px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-fortifyondemand {
+        .sprite-addons-found {
             background-position: -169px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-flying_sphinx {
+        .sprite-addons-fortifyondemand {
             background-position: -211px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-flydata {
+        .sprite-addons-flying_sphinx {
             background-position: -253px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-filepicker {
+        .sprite-addons-flydata {
             background-position: -295px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-fastly {
+        .sprite-addons-filepicker {
             background-position: -337px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-elephantsql {
+        .sprite-addons-fastly {
             background-position: -379px -1px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-ebookglue {
+        .sprite-addons-elephantsql {
             background-position: -379px -43px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-docraptor {
+        .sprite-addons-ebookglue {
             background-position: -379px -85px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-deadmanssnitch {
+        .sprite-addons-docraptor {
             background-position: -379px -127px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-dbinsights {
+        .sprite-addons-deadmanssnitch {
             background-position: -379px -169px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-compose_mongodb {
+        .sprite-addons-dbinsights {
             background-position: -379px -211px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-codeship {
+        .sprite-addons-compose_mongodb {
             background-position: -379px -253px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudvertical {
+        .sprite-addons-codeship {
             background-position: -379px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudscheduler {
+        .sprite-addons-codacy {
             background-position: -379px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudmqtt {
+        .sprite-addons-cloudvertical {
             background-position: -1px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudmailin {
+        .sprite-addons-cloudsponge {
             background-position: -43px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudinary {
+        .sprite-addons-cloudscheduler {
             background-position: -85px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudforge {
+        .sprite-addons-cloudmqtt {
             background-position: -127px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudant {
+        .sprite-addons-cloudmailin {
             background-position: -169px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cloudamqp {
+        .sprite-addons-cloudinary {
             background-position: -211px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cleardb {
+        .sprite-addons-cloudforge {
             background-position: -253px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-circle_ci {
+        .sprite-addons-cloudant {
             background-position: -295px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-chargify {
+        .sprite-addons-cloudamqp {
             background-position: -337px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cedexis {
+        .sprite-addons-cleardb {
             background-position: -379px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-cameratag {
+        .sprite-addons-circle_ci {
             background-position: -421px -1px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-bugsnag {
+        .sprite-addons-cine {
             background-position: -421px -43px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-bounscale {
+        .sprite-addons-chargify {
             background-position: -421px -85px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-bonsai {
+        .sprite-addons-chain {
             background-position: -421px -127px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-blowerio {
+        .sprite-addons-cedexis {
             background-position: -421px -169px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-blitz {
+        .sprite-addons-cameratag {
             background-position: -421px -211px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-blitline {
+        .sprite-addons-bugsnag {
             background-position: -421px -253px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-blazemeter {
+        .sprite-addons-bounscale {
             background-position: -421px -295px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-bablic {
+        .sprite-addons-bonsai {
             background-position: -421px -337px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-appsignal {
+        .sprite-addons-blowerio {
             background-position: -421px -379px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-appfirst {
+        .sprite-addons-blitz {
             background-position: -1px -421px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-appfail {
+        .sprite-addons-blitline {
             background-position: -43px -421px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-appdynamics {
+        .sprite-addons-blazemeter {
             background-position: -85px -421px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-algoliasearch {
+        .sprite-addons-bablic {
             background-position: -127px -421px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-airbrake {
+        .sprite-addons-appsignal {
             background-position: -169px -421px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-aerogear_push {
+        .sprite-addons-appfirst {
             background-position: -211px -421px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-adminium {
+        .sprite-addons-appfail {
             background-position: -253px -421px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-adept_scale {
+        .sprite-addons-appdynamics {
             background-position: -295px -421px;
             width: 40px;
             height: 40px;
         }
         
-        .sprite-addons-46elks {
+        .sprite-addons-algoliasearch {
             background-position: -337px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-airbrake {
+            background-position: -379px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-aerogear_push {
+            background-position: -421px -421px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-adminium {
+            background-position: -463px -1px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-adept_scale {
+            background-position: -463px -43px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-46elks {
+            background-position: -463px -85px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sprite-addons-3scale {
+            background-position: -463px -127px;
             width: 40px;
             height: 40px;
         }
@@ -904,6 +946,7 @@
     .sprite-addons-ironcache,
     .sprite-addons-iriscouch,
     .sprite-addons-intercom,
+    .sprite-addons-informant,
     .sprite-addons-indexdepot,
     .sprite-addons-indexden,
     .sprite-addons-hypdf,
@@ -925,7 +968,9 @@
     .sprite-addons-dbinsights,
     .sprite-addons-compose_mongodb,
     .sprite-addons-codeship,
+    .sprite-addons-codacy,
     .sprite-addons-cloudvertical,
+    .sprite-addons-cloudsponge,
     .sprite-addons-cloudscheduler,
     .sprite-addons-cloudmqtt,
     .sprite-addons-cloudmailin,
@@ -935,7 +980,9 @@
     .sprite-addons-cloudamqp,
     .sprite-addons-cleardb,
     .sprite-addons-circle_ci,
+    .sprite-addons-cine,
     .sprite-addons-chargify,
+    .sprite-addons-chain,
     .sprite-addons-cedexis,
     .sprite-addons-cameratag,
     .sprite-addons-bugsnag,
@@ -955,11 +1002,12 @@
     .sprite-addons-aerogear_push,
     .sprite-addons-adminium,
     .sprite-addons-adept_scale,
-    .sprite-addons-46elks {
+    .sprite-addons-46elks,
+    .sprite-addons-3scale {
                 background-image: url('../../img/sprites/addons.png');
-                -webkit-background-size: 462px 462px;
-                -moz-background-size: 462px 462px;
-                background-size: 462px 462px;
+                -webkit-background-size: 504px 462px;
+                -moz-background-size: 504px 462px;
+                background-size: 504px 462px;
             }
         }
         
@@ -1031,6 +1079,7 @@
     .sprite-addons-ironcache,
     .sprite-addons-iriscouch,
     .sprite-addons-intercom,
+    .sprite-addons-informant,
     .sprite-addons-indexdepot,
     .sprite-addons-indexden,
     .sprite-addons-hypdf,
@@ -1052,7 +1101,9 @@
     .sprite-addons-dbinsights,
     .sprite-addons-compose_mongodb,
     .sprite-addons-codeship,
+    .sprite-addons-codacy,
     .sprite-addons-cloudvertical,
+    .sprite-addons-cloudsponge,
     .sprite-addons-cloudscheduler,
     .sprite-addons-cloudmqtt,
     .sprite-addons-cloudmailin,
@@ -1062,7 +1113,9 @@
     .sprite-addons-cloudamqp,
     .sprite-addons-cleardb,
     .sprite-addons-circle_ci,
+    .sprite-addons-cine,
     .sprite-addons-chargify,
+    .sprite-addons-chain,
     .sprite-addons-cedexis,
     .sprite-addons-cameratag,
     .sprite-addons-bugsnag,
@@ -1082,11 +1135,12 @@
     .sprite-addons-aerogear_push,
     .sprite-addons-adminium,
     .sprite-addons-adept_scale,
-    .sprite-addons-46elks {
+    .sprite-addons-46elks,
+    .sprite-addons-3scale {
                 background-image: url('../../img/sprites/addons@2x.png');
-                -webkit-background-size: 462px 462px;
-                -moz-background-size: 462px 462px;
-                background-size: 462px 462px;
+                -webkit-background-size: 504px 462px;
+                -moz-background-size: 504px 462px;
+                background-size: 504px 462px;
             }
         }
         

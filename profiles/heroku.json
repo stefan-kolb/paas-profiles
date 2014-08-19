@@ -333,11 +333,6 @@
         "type": ""
       },
       {
-        "name": "intercom",
-        "description": "",
-        "type": ""
-      },
-      {
         "name": "ironcache",
         "description": "",
         "type": ""
@@ -493,11 +488,6 @@
       },
       {
         "name": "redis to go",
-        "description": "",
-        "type": ""
-      },
-      {
-        "name": "restful metrics",
         "description": "",
         "type": ""
       },
@@ -724,11 +714,6 @@
         "type": ""
       },
       {
-        "name": "fodaddon",
-        "url": "",
-        "type": ""
-      },
-      {
         "name": "fortifyondemand",
         "url": "",
         "type": ""
@@ -740,11 +725,6 @@
       },
       {
         "name": "gamerocket",
-        "url": "",
-        "type": ""
-      },
-      {
-        "name": "goinstant",
         "url": "",
         "type": ""
       },
@@ -841,6 +821,51 @@
       {
         "name": "keen",
         "url": "",
+        "type": ""
+      },
+      {
+        "name": "chain",
+        "url": "https://chain.com/",
+        "type": "payments"
+      },
+      {
+        "name": "cine",
+        "url": "https://www.cine.io/",
+        "type": "media"
+      },
+      {
+        "name": "cloudsponge",
+        "url": "https://www.cloudsponge.com/",
+        "type": ""
+      },
+      {
+        "name": "codacy",
+        "url": "https://www.codacy.com/",
+        "type": "devops"
+      },
+      {
+        "name": "informant",
+        "url": "https://www.informantapp.com/",
+        "type": "analytics"
+      },
+      {
+        "name": "liveinsight",
+        "url": "https://app.liveinsight.io/",
+        "type": "analytics"
+      },
+      {
+        "name": "oauthio",
+        "url": "https://oauth.io/",
+        "type": ""
+      },
+      {
+        "name": "raygun",
+        "url": "https://raygun.io/",
+        "type": ""
+      },
+      {
+        "name": "3scale",
+        "url": "http://www.3scale.net/",
         "type": ""
       }
     ]

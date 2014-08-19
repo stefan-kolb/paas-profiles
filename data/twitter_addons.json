@@ -7,17 +7,27 @@
   {
     "vendor": "compose mongodb",
     "twitter": "compose",
-    "image": "https://pbs.twimg.com/profile_images/462253310888534018/s4tjykHB_400x400.png"
+    "image": "https://pbs.twimg.com/profile_images/500962509525118976/d2NsbCtM_400x400.jpeg"
   },
   {
-    "vendor": "iron worker",
-    "twitter": "",
-    "image": "https://pbs.twimg.com/profile_images/1676269960/iron-white-logo-sm-sqaure_bigger.png"
+    "vendor": "chain",
+    "twitter": "chain",
+    "image": "https://pbs.twimg.com/profile_images/465919347840397313/Gp1vFNle_400x400.png"
   },
   {
-    "vendor": "iron mq",
-    "twitter": "",
-    "image": "https://pbs.twimg.com/profile_images/1676269960/iron-white-logo-sm-sqaure_bigger.png"
+    "vendor": "cine",
+    "twitter": "cine_io",
+    "image": "https://pbs.twimg.com/profile_images/473581057682317313/h94cFfDV_400x400.png"
+  },
+  {
+    "vendor": "cloudsponge",
+    "twitter": "cloudsponge",
+    "image": "https://pbs.twimg.com/profile_images/1153141194/favicon_400x400.jpg"
+  },
+  {
+    "vendor": "codacy",
+    "twitter": "codacy",
+    "image": "https://pbs.twimg.com/profile_images/378800000735619796/064abe2e4502fa58b1adf73291558c1e_400x400.png"
   },
   {
     "vendor": "pusher",
@@ -570,6 +580,11 @@
     "image": "https://pbs.twimg.com/profile_images/2431658566/91xzh8ubd40qp7by118y_400x400.png"
   },
   {
+    "vendor": "informant",
+    "twitter": "informantapp",
+    "image": "https://pbs.twimg.com/profile_images/484052987279462400/Zh-jY3K3_400x400.png"
+  },
+  {
     "vendor": "gamerocket",
     "twitter": "",
     "image": ""
@@ -688,6 +703,11 @@
     "vendor": "bonsai",
     "twitter": "bonsaisearch",
     "image": "https://pbs.twimg.com/profile_images/3097257050/c0daef6c2bf692d268e53a799111789c_400x400.png"
+  },
+  {
+    "vendor": "3scale",
+    "twitter": "3scale",
+    "image": "https://pbs.twimg.com/profile_images/476491488008732672/3SbpyJRP_400x400.jpeg"
   },
   {
     "vendor": "bounscale",
