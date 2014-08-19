@@ -21,7 +21,7 @@
   "scaling": {
     "vertical": true,
     "horizontal": true,
-    "auto": false
+    "auto": true
   },
   "runtimes": [
     {
