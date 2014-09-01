@@ -1,6 +1,6 @@
 {
   "name": "ElasticBox",
-  "revision": "2014-04-03",
+  "revision": "2014-09-01",
   "url": "http://www.elasticbox.com",
   "status": "beta",
   "status_since": "2011-12-01",
@@ -50,6 +50,13 @@
   ],
   "services": {
     "native": [
+      {
+        "name": "couchbase",
+        "type": "datastore",
+        "versions": [
+          "2.5.1"
+        ]
+      },
       {
         "name": "mongodb",
         "type": "datastore",
@@ -165,6 +172,76 @@
       "continent": "NA",
       "country": "US",
       "provider": "Google"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Iowa",
+      "provider": "Azure"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
+      "provider": "Azure"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Illinois",
+      "provider": "Azure"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Texas",
+      "provider": "Azure"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "California",
+      "provider": "Azure"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "provider": "Azure"
+    },
+    {
+      "continent": "EU",
+      "country": "NL",
+      "provider": "Azure"
+    },
+    {
+      "continent": "AS",
+      "country": "HK",
+      "region": "Hong Kong",
+      "provider": "Azure"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "Azure"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Saitama",
+      "provider": "Azure"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Osaka",
+      "provider": "Azure"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo",
+      "provider": "Azure"
     }
   ]
 }
