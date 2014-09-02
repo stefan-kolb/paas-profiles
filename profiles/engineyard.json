@@ -1,6 +1,6 @@
 {
   "name": "EngineYard",
-  "revision": "2013-12-19",
+  "revision": "2014-09-02",
   "url": "http://www.engineyard.com/",
   "status": "production",
   "status_since": "2006-09-01",
@@ -30,22 +30,24 @@
     {
       "language": "node",
       "versions": [
-        "0.8.11",
-        "0.8.16",
-        "0.6.21"
+        "0.10",
+        "0.8",
+        "0.6"
       ]
     },
     {
       "language": "php",
       "versions": [
-        "5.4"
+        "5.4",
+        "5.5"
       ]
     },
     {
       "language": "ruby",
       "versions": [
         "1.9.3",
-        "2.0.0"
+        "2.0.0",
+        "2.1.2"
       ]
     }
   ],
@@ -63,15 +65,78 @@
       "versions": [
         "7"
       ]
+    },
+    {
+      "name": "unicorn",
+      "runtime": "ruby",
+      "versions": [
+        "4.1.1"
+      ]
+    },
+    {
+      "name": "passenger",
+      "runtime": "ruby",
+      "versions": [
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "puma",
+      "runtime": "ruby",
+      "versions": [
+        "1.6"
+      ]
+    },
+    {
+      "name": "haproxy",
+      "versions": [
+        "1.5"
+      ]
+    },
+    {
+      "name": "nginx",
+      "versions": [
+        "1.4"
+      ]
     }
   ],
   "frameworks": [
     {
+      "name": "rack",
+      "runtime": "ruby",
+      "versions": [
+        "1.5"
+      ]
+    },
+    {
+      "name": "grape",
+      "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
       "name": "rails",
       "runtime": "ruby",
       "versions": [
+        "2",
         "3.2",
-        "4.0"
+        "4"
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "merb",
+      "runtime": "ruby",
+      "versions": [
+
       ]
     }
   ],
@@ -89,7 +154,8 @@
         "name": "mysql",
         "type": "datastore",
         "versions": [
-          "5.5"
+          "5.5",
+          "5.6"
         ]
       },
       {
@@ -97,21 +163,23 @@
         "type": "datastore",
         "versions": [
           "9.1",
-          "9.2"
+          "9.2",
+          "9.3"
         ]
       },
       {
         "name": "redis",
         "type": "datastore",
         "versions": [
-          "2.4"
+          "2.4",
+          "2.8"
         ]
       },
       {
         "name": "riak",
         "type": "datastore",
         "versions": [
-          "1.3.1"
+          "1.4.1"
         ]
       }
     ],
