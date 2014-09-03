@@ -75,13 +75,6 @@
       ]
     },
     {
-      "language": "play",
-      "versions": [
-        "1.2.*",
-        "2.0.*"
-      ]
-    },
-    {
       "language": "python",
       "versions": [
         "2.7",
@@ -134,7 +127,44 @@
       ]
     }
   ],
-  "frameworks": null,
+  "frameworks": [
+    {
+      "name": "grails",
+      "runtime": "groovy",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+        "1.2.*",
+        "2.0.*"
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    }
+  ],
   "services": {
     "native": [
       {
@@ -197,7 +227,7 @@
     ],
     "addon": [
       {
-        "name": "oracle db",
+        "name": "oracle db integration",
         "url": "",
         "type": "datastore"
       }
