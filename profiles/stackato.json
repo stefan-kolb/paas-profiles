@@ -1,6 +1,7 @@
 {
   "name": "Stackato",
-  "revision": "2013-07-25",
+  "revision": "2014-08-29",
+  "vendor_verified": "2014-08-29",
   "url": "http://www.activestate.com/stackato",
   "status": "production",
   "status_since": "2012-02-29",
@@ -24,65 +25,121 @@
     {
       "language": "clojure",
       "versions": [
-
-      ]
-    },
-    {
-      "language": "dotnet",
-      "versions": [
-
+        "1.2.1"
       ]
     },
     {
       "language": "go",
       "versions": [
-
+        "1.2"
+      ]
+    },
+    {
+      "language": "groovy",
+      "versions": [
+        "1.5.*",
+        "1.6.*",
+        "1.7.*",
+        "1.8.*",
+        "2.0.*",
+        "2.1.*"
       ]
     },
     {
       "language": "java",
       "versions": [
-
+        "1.7",
+        "1.6"
       ]
     },
     {
       "language": "node",
       "versions": [
-
+        "0.6.20",
+        "0.8.22",
+        "0.10.1",
+        "0.10.31"
       ]
     },
     {
       "language": "perl",
       "versions": [
-
+        "5.16"
       ]
     },
     {
       "language": "php",
       "versions": [
-
+        "5.3",
+        "5.5"
+      ]
+    },
+    {
+      "language": "play",
+      "versions": [
+        "1.2.*",
+        "2.0.*"
       ]
     },
     {
       "language": "python",
       "versions": [
-
+        "2.7",
+        "3.3"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-
+        "1.9.2",
+        "1.9.3",
+        "2.0.0"
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+        "*.*"
       ]
     }
   ],
-  "middleware": null,
+  "middleware": [
+    {
+      "name": "apache",
+      "runtime": "php",
+      "versions": [
+        "2.4.9"
+      ]
+    },
+    {
+      "name": "jboss",
+      "runtime": "java",
+      "versions": [
+        "7.0.2"
+      ]
+    },
+    {
+      "name": "nginx",
+      "versions": [
+        "1.6"
+      ]
+    },
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6.0.*",
+        "7.0.*",
+        "8.0.*"
+      ]
+    }
+  ],
   "frameworks": null,
   "services": {
     "native": [
       {
         "name": "filesystem",
-        "description": "Persistent file system",
+        "description": "Persistent file system service",
         "type": "datastore",
         "versions": [
 
@@ -97,19 +154,11 @@
         ]
       },
       {
-        "name": "microsoft sql server",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
         "name": "mongodb",
         "description": "",
         "type": "datastore",
         "versions": [
-
+          "2.4"
         ]
       },
       {
@@ -117,7 +166,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-
+          "5.5"
         ]
       },
       {
@@ -125,7 +174,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-
+          "9.1"
         ]
       },
       {
@@ -133,7 +182,8 @@
         "description": "",
         "type": "worker",
         "versions": [
-
+          "2.8",
+          "3.1"
         ]
       },
       {
@@ -141,12 +191,16 @@
         "description": "",
         "type": "datastore",
         "versions": [
-
+          "2.8"
         ]
       }
     ],
     "addon": [
-
+      {
+        "name": "oracle db",
+        "url": "",
+        "type": "datastore"
+      }
     ]
   },
   "extensible": true,
