@@ -11,7 +11,7 @@ class TestConsistency < MiniTest::Test
   def setup
     Vendor.delete_all
 
-    Dir.glob('../profiles/*.json').each do |file|
+    Dir.glob(File.dirname(__FILE__) + '/../profiles/*.json').each do |file|
       begin
         data = JSON.parse(File.read(file))
         Vendor.create!(data)
@@ -25,21 +25,39 @@ class TestConsistency < MiniTest::Test
     Vendor.delete_all
   end
 
+  # do not allow to have one software in any of the other categories
+  def test_software_intersection
+    software = %w(runtimes.language middleware.name frameworks.name services.native.name services.addon.name)
+    arr = []
+    software.each do |s|
+      arr << Vendor.distinct(s)
+    end
+
+    arr.each_with_index do |s, i|
+      temp = arr.dup
+      temp.delete_at(i)
+
+      s.each do |entry|
+        refute(temp.flatten.include?(entry), "Intersecting software #{entry}. No software entity may be included in another category.")
+      end
+    end
+  end
+
   # only one distinct runtime allowed per framework
   def test_framework_runtimes
-    find_duplicates :frameworks
+    distinct_runtime :frameworks
   end
 
   # only one distinct runtime allowed per middleware
   def test_middleware_runtimes
-    find_duplicates :middleware
+    distinct_runtime :middleware
   end
 
   # TODO distinct url per add-on
 
   private
 
-  def find_duplicates(field)
+  def distinct_runtime(field)
     distinct = Vendor.distinct("#{field}.name")
     products = Vendor.all.pluck(field).flatten
 

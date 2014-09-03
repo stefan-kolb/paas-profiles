@@ -11,7 +11,7 @@ class TestDuplicates < MiniTest::Test
   def setup
     Vendor.delete_all
 
-    Dir.glob('../profiles/*.json').each do |file|
+    Dir.glob(File.dirname(__FILE__) + '/../profiles/*.json').each do |file|
       begin
         data = JSON.parse(File.read(file))
         Vendor.create!(data)
