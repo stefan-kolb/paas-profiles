@@ -92,7 +92,7 @@
       ]
     },
     {
-      "name": "zend",
+      "name": "zend server",
       "runtime": "php",
       "versions": [
         "5.6",
