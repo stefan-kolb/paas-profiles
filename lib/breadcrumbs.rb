@@ -35,10 +35,11 @@ module SimpleNavigation
 
       def github
         '<li class="pull-right hidden-phone">
-          <small><em>We\'re Open Source!</em></small>
-					<a href="https://github.com/stefan-kolb/paas-profiles" target="_blank" style="text-decoration: none; padding: 5px;">
-						<img src="/img/github.png" style="width: 20px;" alt="github">
-					</a>
+          <a class="github-button"
+            href="https://github.com/stefan-kolb/paas-profiles"
+            data-icon="octicon-mark-github"
+            data-count-api="/repos/stefan-kolb/paas-profiles#stargazers_count"></a>
+          <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 				</li>'
       end
 
