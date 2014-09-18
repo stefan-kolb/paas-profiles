@@ -2,115 +2,160 @@
   "name": "Rapidcloud.io",
   "revision": "2014-09-18",
   "vendor_verified": "2014-09-18",
-  "url": "https://rapidcloud.io/?invite=rapid2014",
+  "url": "https://rapidcloud.io",
   "status": "beta",
   "status_since": "2014-09-16",
   "type": "Generic",
   "hosting": {
-    "public": true, "private": false
+    "public": true,
+    "private": false
   },
   "pricing": [
-        { "model": "fixed", "period": "monthly" }
+    {
+      "model": "fixed",
+      "period": "monthly"
+    }
   ],
-
   "scaling": {
-    "vertical": false, "horizontal": true, "auto": false
+    "vertical": false,
+    "horizontal": true,
+    "auto": false
   },
   "runtimes": [
-    { "language": "java", "versions": [ "1.8" ] }
+    {
+      "language": "java",
+      "versions": [
+        "1.8"
+      ]
+    }
   ],
   "middleware": [
-    { "name": "tomcat", "runtime": "java", "versions": [ "8.0" ] }
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "8.0"
+      ]
+    }
   ],
   "frameworks": [
-    { "name": "play", "runtime": "java", "versions": [ "2" ] }
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+        "2"
+      ]
+    }
   ],
   "services": {
     "native": [
-      { "name": "mysql", "description": "", "type": "datastore", "versions": [ "5.6" ] },
-      { "name": "redis", "description": "", "type": "datastore", "versions": [ "2.8" ] },
-      { "name": "memcached", "description": "", "type": "cache", "versions": [ "1.4" ] }
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.6"
+        ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.8"
+        ]
+      },
+      {
+        "name": "memcached",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "1.4"
+        ]
+      }
     ],
     "addon": [
+
     ]
   },
   "extensible": false,
   "infrastructures": [
-    { 
+    {
       "continent": "NA",
-      "country": "United States",
+      "country": "US",
       "region": "Virginia",
       "provider": "AWS"
     },
-    { 
+    {
       "continent": "NA",
-      "country": "United States",
+      "country": "US",
       "region": "Northern California",
       "provider": "AWS"
-    }
-	,
-    { 
+    },
+    {
       "continent": "NA",
-      "country": "United States",
+      "country": "US",
       "region": "Oregon",
       "provider": "AWS"
     },
-    { 
-      "continent": "NA",
-      "country": "Ireland",
+    {
+      "continent": "EU",
+      "country": "IE",
       "region": "Dublin",
       "provider": "AWS"
     },
-    { 
+    {
       "continent": "NA",
-      "country": "United States",
+      "country": "US",
       "region": "San Francisco",
       "provider": "Digital Ocean"
     },
-    { 
+    {
       "continent": "NA",
-      "country": "United States",
+      "country": "US",
       "region": "New York",
       "provider": "Digital Ocean"
     },
-    { 
-      "continent": "NA",
-      "country": "Singapore",
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
       "provider": "Digital Ocean"
     },
-    { 
-      "continent": "NA",
-      "country": "Amsterdam",
+    {
+      "continent": "EU",
+      "country": "NL",
+      "region": "Amsterdam",
       "provider": "Digital Ocean"
     },
-    { 
+    {
       "continent": "NA",
-      "country": "United States",
-	  "region" : "Chicago",
+      "country": "US",
+      "region": "Chicago",
       "provider": "Rackspace"
     },
-    { 
+    {
       "continent": "NA",
-      "country": "United States",
-	  "region" : "Dallas/Ft. Worth",
+      "country": "US",
+      "region": "Dallas/Ft. Worth",
       "provider": "Rackspace"
     },
-    { 
+    {
       "continent": "NA",
-      "country": "United States",
-	  "region" : "Northern Virginia",
+      "country": "US",
+      "region": "Northern Virginia",
       "provider": "Rackspace"
     },
-    { 
-      "continent": "NA",
-      "country": "Australia",
-	  "region" : "Sydney",
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
       "provider": "Rackspace"
     },
-    { 
-      "continent": "NA",
-      "country": "China",
-	  "region" : "Hong Kong",
+    {
+      "continent": "AS",
+      "country": "HK",
+      "region": "Hong Kong",
       "provider": "Rackspace"
     }
   ]
