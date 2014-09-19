@@ -1,6 +1,6 @@
 {
   "name": "Heroku",
-  "revision": "2014-04-30",
+  "revision": "2014-09-19",
   "url": "http://www.heroku.com/",
   "status": "production",
   "status_since": "2009-04-24",
@@ -66,7 +66,7 @@
         "1.9.2",
         "1.9.3",
         "2.0.0",
-        "2.1.2"
+        "2.1.3"
       ]
     },
     {
