@@ -54,8 +54,13 @@
 
     <p>You can deploy apps written in
       <span class="label label-inverse"><%= @profile["runtimes"].uniq { |h| h["language"] }.size %></span> languages to
+      <% if @profile['hosting']['public'] %>
       <span class="label label-inverse"><%= @profile["infrastructures"].nil? ? 0 : @profile["infrastructures"].size %></span>
-      different infrastructures.</p>
+      different infrastructures.
+      <% else %>
+      your private infrastructure of choice.
+      <% end %>
+    </p>
 
     <% unless @profile["services"].nil? %>
         <p>You can automatically bind
