@@ -185,7 +185,7 @@ A string array containing the supported runtime versions. Wildcards `*` may be u
 
 ### Middleware
 
-An array of preconfigured middleware stacks.
+An array of *preinstalled or fully supported* middleware stacks.
 
 ```json
 "middleware": [
