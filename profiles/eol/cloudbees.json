@@ -1,9 +1,9 @@
 {
   "name": "CloudBees",
-  "revision": "2013-07-12T13:00:54+02:00",
+  "revision": "2014-09-23",
   "url": "http://www.cloudbees.com/",
-  "status": "production",
-  "status_since": "2011-01-31",
+  "status": "eol",
+  "status_since": "2014-09-11",
   "type": "Generic",
   "hosting": {
     "public": true,
