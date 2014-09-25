@@ -1,6 +1,6 @@
 {
-  "name": "Windows Azure",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "name": "Microsoft Azure",
+  "revision": "2013-07-05",
   "url": "http://www.microsoft.com/windowsazure/",
   "status": "production",
   "status_since": "2010-02-01",
@@ -58,9 +58,20 @@
       ]
     }
   ],
-  "middleware": null,
-  "frameworks": null,
-  "services": null,
+  "middleware": [
+
+  ],
+  "frameworks": [
+
+  ],
+  "services": {
+    "native": [
+
+    ],
+    "addon": [
+
+    ]
+  },
   "extensible": true,
   "infrastructures": [
     {
