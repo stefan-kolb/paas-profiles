@@ -16,13 +16,15 @@ Currently 95 PaaS vendor profiles. Profiles are encoded as [JSON files](/profile
 I encourage **everyone** to submit corrections or additions in order to keep the profiles accurate and up-to-date.
 In any case, please add evidence for the information so I can verify your changes.
 
-I am also interested in direct **cooperation with vendors** in order to keep the profiles at first hand and spot-on. Contact me if you are interested to supply a [vendor verified profile](#vendor-verification).
+I am also interested in direct **cooperation with vendors** in order to keep the profiles at first hand and spot-on. Contact me, if you are interested to supply a [vendor verified profile](#vendor-verification).
+
+You can validate changes to the profiles via a simple test run, i.e., ```rake test``` that only requires a local MongoDB instance.  
 
 Contribute either via [pull request](https://help.github.com/articles/using-pull-requests), create an [issue](https://github.com/stefan-kolb/paas-profiles/issues) or send me an [email](mailto:stefan.kolb@uni-bamberg.de).
 
 ## Profile
 
-The code below shows a sample profile. The profile specification is *beta* and the properties are subject to change.
+The code below shows a sample profile. The profile specification is *beta* and the properties are subject to change. 
 
 ```javascript
 {
