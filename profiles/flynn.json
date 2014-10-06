@@ -1,9 +1,9 @@
 {
   "name": "Flynn",
-  "revision": "2014-03-11",
+  "revision": "2014-10-06",
   "url": "https://flynn.io/",
-  "status": "alpha",
-  "status_since": null,
+  "status": "beta",
+  "status_since": "2014-08-13",
   "type": "Generic",
   "hosting": {
     "public": false,
