@@ -108,25 +108,25 @@
       "continent": "NA",
       "country": "US",
       "region": "San Francisco",
-      "provider": "Digital Ocean"
+      "provider": "DigitalOcean"
     },
     {
       "continent": "NA",
       "country": "US",
       "region": "New York",
-      "provider": "Digital Ocean"
+      "provider": "DigitalOcean"
     },
     {
       "continent": "AS",
       "country": "SG",
       "region": "Singapore",
-      "provider": "Digital Ocean"
+      "provider": "DigitalOcean"
     },
     {
       "continent": "EU",
       "country": "NL",
       "region": "Amsterdam",
-      "provider": "Digital Ocean"
+      "provider": "DigitalOcean"
     },
     {
       "continent": "NA",
