@@ -3,6 +3,7 @@ require_relative '../models/statistics'
 #require_relative '../models/statistics/runtime_stats'
 #require_relative '../models/statistics/data_trend'
 require_relative '../models/statistics/runtime_trend'
+require_relative '../models/datacenter'
 
 namespace :db do
 
@@ -24,7 +25,7 @@ namespace :db do
       raise 'Not all profiles were imported!'
     end
     # geographical information
-    Rake::Task["geo:datacenter"].execute
+    datacenter
   end
 
   def twitter
@@ -39,6 +40,20 @@ namespace :db do
         rescue Mongoid::Errors::DocumentNotFound
           # ignore
         end
+      end
+    end
+  end
+
+  def datacenter
+    Datacenter.delete_all
+
+    data = JSON.parse(File.read('./data/geo_datacenter.json'))
+
+    data.each do |dc|
+      begin
+        Datacenter.create!(dc)
+      rescue Exception => e
+        raise "An error occurred while writing datacenter #{dc}: #{e.message}"
       end
     end
   end

@@ -1,0 +1,530 @@
+[
+  {
+    "continent": "EU",
+    "coordinates": [
+      53.3498053,
+      -6.2603097
+    ],
+    "country": "IE",
+    "provider": [
+      "AWS"
+    ],
+    "region": "Dublin"
+  },
+  {
+    "continent": "AS",
+    "coordinates": [
+      35.6894875,
+      139.6917064
+    ],
+    "country": "JP",
+    "provider": [
+      "AWS"
+    ],
+    "region": "Tokyo"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      38.8375215,
+      -120.8958242
+    ],
+    "country": "US",
+    "provider": [
+      "AWS"
+    ],
+    "region": "Northern California"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      43.8041334,
+      -120.5542012
+    ],
+    "country": "US",
+    "provider": [
+      "AWS"
+    ],
+    "region": "Oregon"
+  },
+  {
+    "continent": "SA",
+    "coordinates": [
+      -23.5505199,
+      -46.63330939999999
+    ],
+    "country": "BR",
+    "provider": [
+      "AWS",
+      "Azure"
+    ],
+    "region": "Sao Paulo"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      37.3541079,
+      -121.9552356
+    ],
+    "country": "US",
+    "provider": [
+      "CenturyLink"
+    ],
+    "region": "Santa Clara"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      32.7801399,
+      -96.80045109999999
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Dallas"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      38.9071923,
+      -77.0368707
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Washington"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      39.3209801,
+      -111.0937311
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Utah"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      40.6331249,
+      -89.3985283
+    ],
+    "country": "US",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Illinois"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      40.7127837,
+      -74.0059413
+    ],
+    "country": "US",
+    "provider": [
+      "DigitalOcean"
+    ],
+    "region": "New York"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      48.856614,
+      2.3522219
+    ],
+    "country": "FR",
+    "provider": [
+
+    ],
+    "region": "Paris"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      45.5086699,
+      -73.55399249999999
+    ],
+    "country": "CA",
+    "provider": [
+      "Netelligent"
+    ],
+    "region": "Montreal"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      52.3702157,
+      4.895167900000001
+    ],
+    "country": "NL",
+    "provider": [
+      "DigitalOcean",
+      "Joyent"
+    ],
+    "region": "Amsterdam"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      37.7749295,
+      -122.4194155
+    ],
+    "country": "US",
+    "provider": [
+      "DigitalOcean"
+    ],
+    "region": "San Francisco"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      37.2232316,
+      -81.4498717
+    ],
+    "country": "US",
+    "provider": [
+      "AWS",
+      "Rackspace"
+    ],
+    "region": "Northern Virginia"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      41.8780025,
+      -93.097702
+    ],
+    "country": "US",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Iowa"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      37.4315734,
+      -78.6568942
+    ],
+    "country": "US",
+    "provider": [
+      "AWS",
+      "Azure"
+    ],
+    "region": "Virginia"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      31.9685988,
+      -99.9018131
+    ],
+    "country": "US",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Texas"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      36.778261,
+      -119.4179324
+    ],
+    "country": "US",
+    "provider": [
+      "Azure"
+    ],
+    "region": "California"
+  },
+  {
+    "continent": "AS",
+    "coordinates": [
+      1.2800945,
+      103.8509491
+    ],
+    "country": "SG",
+    "provider": [
+      "AWS",
+      "DigitalOcean",
+      "Azure",
+      "Equinix"
+    ],
+    "region": "Singapore"
+  },
+  {
+    "continent": "AS",
+    "coordinates": [
+      35.8617292,
+      139.6454822
+    ],
+    "country": "JP",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Saitama"
+  },
+  {
+    "continent": "AS",
+    "coordinates": [
+      34.6937378,
+      135.5021651
+    ],
+    "country": "JP",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Osaka"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      50.0755381,
+      14.4378005
+    ],
+    "country": "CZ",
+    "provider": [
+
+    ],
+    "region": "Prague"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      46.1983922,
+      6.142296099999999
+    ],
+    "country": "CH",
+    "provider": [
+      "Equinix"
+    ],
+    "region": "Geneva"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      37.3393857,
+      -121.8949555
+    ],
+    "country": "US",
+    "provider": [
+      "Equinix"
+    ],
+    "region": "San Jose"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      38.9586307,
+      -77.35700279999999
+    ],
+    "country": "US",
+    "provider": [
+      "Equinix"
+    ],
+    "region": "Reston"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      51.5073509,
+      -0.1277583
+    ],
+    "country": "GB",
+    "provider": [
+      "Rackspace"
+    ],
+    "region": "London"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      41.8781136,
+      -87.6297982
+    ],
+    "country": "US",
+    "provider": [
+      "Rackspace"
+    ],
+    "region": "Chicago"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      50.937531,
+      6.9602786
+    ],
+    "country": "DE",
+    "provider": [
+      "Host Europe"
+    ],
+    "region": "Cologne"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      37.2232316,
+      -81.4498717
+    ],
+    "country": "US",
+    "provider": [
+      "Joyent"
+    ],
+    "region": "Nothern Virginia"
+  },
+  {
+    "continent": "AS",
+    "coordinates": [
+      1.2800945,
+      103.8509491
+    ],
+    "country": "SG",
+    "provider": [
+      "AWS"
+    ],
+    "region": "Singapur"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      39.0437567,
+      -77.4874416
+    ],
+    "country": "US",
+    "provider": [
+      "Joyent"
+    ],
+    "region": "Ashburn"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      36.1699412,
+      -115.1398296
+    ],
+    "country": "US",
+    "provider": [
+      "HP",
+      "Joyent"
+    ],
+    "region": "Las Vegas"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      53.07929619999999,
+      8.8016937
+    ],
+    "country": "DE",
+    "provider": [
+
+    ],
+    "region": "Bremen"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      32.761422,
+      -96.8580128
+    ],
+    "country": "US",
+    "provider": [
+      "Rackspace"
+    ],
+    "region": "Dallas/Ft. Worth"
+  },
+  {
+    "continent": "OC",
+    "coordinates": [
+      -33.8674869,
+      151.2069902
+    ],
+    "country": "AU",
+    "provider": [
+      "AWS",
+      "OrionVM",
+      "Ninefold",
+      "Rackspace"
+    ],
+    "region": "Sydney"
+  },
+  {
+    "continent": "AS",
+    "coordinates": [
+      22.396428,
+      114.109497
+    ],
+    "country": "HK",
+    "provider": [
+      "Azure",
+      "Rackspace"
+    ],
+    "region": "Hong Kong"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      49.45203,
+      11.07675
+    ],
+    "country": "DE",
+    "provider": [
+
+    ],
+    "region": "Nuremberg"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      50.6927049,
+      3.177847
+    ],
+    "country": "FR",
+    "provider": [
+
+    ],
+    "region": "Roubaix"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      35.4675602,
+      -97.5164276
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Oklahoma"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      36.63714340000001,
+      -121.09191
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Western United States"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      27.6648274,
+      -81.5157535
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Florida"
+  }
+]

@@ -16,7 +16,7 @@ namespace :geo do
           begin
             # get coordinates
             coord = Geocoder.coordinates("#{infra.region}, #{infra.country}")
-            unless coord.blank?
+            #unless coord.blank?
               # save datacenter
               ds = Datacenter.where(country: infra.country, region: infra.region).first
 
@@ -37,7 +37,7 @@ namespace :geo do
                 ds.provider << infra.provider unless ds.provider.include?(infra.provider) || infra.provider.blank?
                 ds.save
               end
-            end
+            #end
             # dont hit query limit
             sleep(1/10.0)
           rescue Geocoder::Error => e
@@ -49,6 +49,12 @@ namespace :geo do
           end
         end
       end
+    end
+
+    file = 'data/geo_datacenter.json'
+
+    File.open(file, "w") do |f|
+      f.write(JSON.pretty_generate JSON.parse(Datacenter.all.without(:id).to_json))
     end
 
     # TODO test if all are here = count distinct regions, country
