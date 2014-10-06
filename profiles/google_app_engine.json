@@ -64,7 +64,8 @@
       "name": "django",
       "runtime": "python",
       "versions": [
-        "1.4.13", "1.5.8"
+        "1.4.13",
+        "1.5.8"
       ]
     },
     {
