@@ -5,6 +5,7 @@ require 'sinatra'
 require 'sinatra/simple-navigation'
 require 'versionomy'
 require 'rest-client'
+require 'require_all'
 
 # models
 require_relative 'models/vendor/vendor'
@@ -15,11 +16,8 @@ require_relative 'lib/layout_helper'
 require_relative 'lib/breadcrumbs'
 require_relative 'lib/feed'
 
-# routes
-require_relative 'routes/main'
-require_relative 'routes/statistics'
-require_relative 'routes/api'
-require_relative 'routes/helpers'
+# controllers
+require_all 'controllers'
 
 # errors
 not_found { erb :'404', :layout => false }

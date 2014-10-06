@@ -11,6 +11,7 @@ gem 'sinatra-simple-navigation'
 gem 'geocoder'
 gem 'rmagick'
 gem 'activesupport'
+gem 'require_all'
 
 group :test do
   gem 'rake'
