@@ -1,9 +1,13 @@
-require_relative '../models/snapshot'
-require_relative '../models/statistics'
-#require_relative '../models/statistics/runtime_stats'
-#require_relative '../models/statistics/data_trend'
-require_relative '../models/statistics/runtime_trend'
-require_relative '../models/datacenter'
+require_relative '../app/models/snapshot'
+require_relative '../app/models/statistics'
+#require_relative '../app/models/statistics/runtime_stats'
+#require_relative '../app/models/statistics/data_trend'
+require_relative '../app/models/statistics/runtime_trend'
+require_relative '../app/models/software/addon'
+require_relative '../app/models/software/service'
+require_relative '../app/models/software/framework'
+require_relative '../app/models/software/middleware'
+require_relative '../app/models/datacenter'
 
 namespace :db do
 

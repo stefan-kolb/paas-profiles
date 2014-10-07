@@ -1,4 +1,4 @@
-require_relative '../models/datacenter'
+require_relative '../app/models/datacenter'
 
 namespace :geo do
 

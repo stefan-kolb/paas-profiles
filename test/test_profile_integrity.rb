@@ -3,7 +3,7 @@ require 'json'
 require 'active_support'
 require 'active_support/core_ext'
 
-require_relative '../models/vendor/vendor'
+require_relative '../app/models/vendor/vendor'
 
 module PaasProfiles
   # create a test class for every profile

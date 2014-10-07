@@ -1,6 +1,6 @@
 require 'rss'
 
-require_relative '../models/vendor/vendor'
+require_relative '../app/models/vendor/vendor'
 
 class Feed
   class << self

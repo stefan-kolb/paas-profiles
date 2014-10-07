@@ -1,5 +1,6 @@
 require_relative 'charts'
-require_relative '../../models/statistics'
+require_relative '../../app/models/statistics'
+require_relative '../../app/models/statistics/data_stats'
 
 class DataCharts < Charts
   def verification_chart( type='pie' )

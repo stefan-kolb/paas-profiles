@@ -1,4 +1,4 @@
-require_relative '../../models/vendor/pricing'
+require_relative '../../app/models/vendor/pricing'
 
 FactoryGirl.define do
   factory :pricing do

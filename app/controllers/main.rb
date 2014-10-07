@@ -8,7 +8,7 @@ get '/vendors' do
 end
 
 get '/vendor/:name' do
-  require_relative '../lib/version'
+  require_relative '../../lib/version'
 
   @vendor_path = request.fullpath
   paas = url_decode(params[:name])
@@ -57,6 +57,8 @@ get '/search' do
 end
 
 get '/vendors.rss' do
+  require 'feed'
+
   content_type 'application/rss+xml'
 
   Feed.get_rss

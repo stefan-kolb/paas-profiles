@@ -2,7 +2,7 @@ require 'json'
 require 'uri'
 require 'iso_country_codes'
 
-module LayoutHelper
+module ApplicationHelpers
   CONTINENT_CODES = {
       'AF' => 'Africa',
       'AS' => 'Asia',

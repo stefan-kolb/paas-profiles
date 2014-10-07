@@ -1,6 +1,6 @@
-require_relative '../../models/vendor/vendor'
-require_relative '../../models/snapshot'
-require_relative '../../models/statistics/runtime_trend'
+require_relative '../../app/models/vendor/vendor'
+require_relative '../../app/models/snapshot'
+require_relative '../../app/models/statistics/runtime_trend'
 require_relative '../version'
 require_relative '../helper/statistics_helper'
 

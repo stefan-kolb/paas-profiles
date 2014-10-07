@@ -3,7 +3,7 @@ require 'json'
 require 'active_support'
 require 'active_support/core_ext'
 
-require_relative '../models/vendor/vendor'
+require_relative '../app/models/vendor/vendor'
 
 Mongoid.load!('./config/mongoid.yml', :test)
 

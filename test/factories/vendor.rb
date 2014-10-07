@@ -1,4 +1,4 @@
-require_relative '../../models/vendor/vendor'
+require_relative '../../app/models/vendor/vendor'
 
 FactoryGirl.define do
   factory :vendor do
