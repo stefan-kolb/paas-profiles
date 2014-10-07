@@ -1,5 +1,5 @@
 require_relative 'charts'
-require_relative '../../app/models/statistics/statistics'
+require_relative '../../app/models/statistics'
 
 # Chart class for language runtime statistics
 class LanguageCharts < Charts
