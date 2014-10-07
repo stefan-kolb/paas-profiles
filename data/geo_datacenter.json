@@ -26,14 +26,15 @@
   {
     "continent": "NA",
     "coordinates": [
-      38.8375215,
-      -120.8958242
+      37.4315734,
+      -78.6568942
     ],
     "country": "US",
     "provider": [
-      "AWS"
+      "AWS",
+      "Azure"
     ],
-    "region": "Northern California"
+    "region": "Virginia"
   },
   {
     "continent": "NA",
@@ -48,17 +49,17 @@
     "region": "Oregon"
   },
   {
-    "continent": "SA",
+    "continent": "NA",
     "coordinates": [
-      -23.5505199,
-      -46.63330939999999
+      36.1699412,
+      -115.1398296
     ],
-    "country": "BR",
+    "country": "US",
     "provider": [
-      "AWS",
-      "Azure"
+      "HP",
+      "Joyent"
     ],
-    "region": "Sao Paulo"
+    "region": "Las Vegas"
   },
   {
     "continent": "NA",
@@ -157,19 +158,6 @@
     "region": "Montreal"
   },
   {
-    "continent": "EU",
-    "coordinates": [
-      52.3702157,
-      4.895167900000001
-    ],
-    "country": "NL",
-    "provider": [
-      "DigitalOcean",
-      "Joyent"
-    ],
-    "region": "Amsterdam"
-  },
-  {
     "continent": "NA",
     "coordinates": [
       37.7749295,
@@ -182,17 +170,31 @@
     "region": "San Francisco"
   },
   {
+    "continent": "AS",
+    "coordinates": [
+      1.2800945,
+      103.8509491
+    ],
+    "country": "SG",
+    "provider": [
+      "AWS",
+      "DigitalOcean",
+      "Azure",
+      "Equinix"
+    ],
+    "region": "Singapore"
+  },
+  {
     "continent": "NA",
     "coordinates": [
-      37.2232316,
-      -81.4498717
+      38.8375215,
+      -120.8958242
     ],
     "country": "US",
     "provider": [
-      "AWS",
-      "Rackspace"
+      "AWS"
     ],
-    "region": "Northern Virginia"
+    "region": "Northern California"
   },
   {
     "continent": "NA",
@@ -205,19 +207,6 @@
       "Azure"
     ],
     "region": "Iowa"
-  },
-  {
-    "continent": "NA",
-    "coordinates": [
-      37.4315734,
-      -78.6568942
-    ],
-    "country": "US",
-    "provider": [
-      "AWS",
-      "Azure"
-    ],
-    "region": "Virginia"
   },
   {
     "continent": "NA",
@@ -246,17 +235,15 @@
   {
     "continent": "AS",
     "coordinates": [
-      1.2800945,
-      103.8509491
+      22.396428,
+      114.109497
     ],
-    "country": "SG",
+    "country": "HK",
     "provider": [
-      "AWS",
-      "DigitalOcean",
       "Azure",
-      "Equinix"
+      "Rackspace"
     ],
-    "region": "Singapore"
+    "region": "Hong Kong"
   },
   {
     "continent": "AS",
@@ -281,6 +268,19 @@
       "Azure"
     ],
     "region": "Osaka"
+  },
+  {
+    "continent": "SA",
+    "coordinates": [
+      -23.5505199,
+      -46.63330939999999
+    ],
+    "country": "BR",
+    "provider": [
+      "AWS",
+      "Azure"
+    ],
+    "region": "Sao Paulo"
   },
   {
     "continent": "EU",
@@ -369,14 +369,27 @@
   {
     "continent": "NA",
     "coordinates": [
-      37.2232316,
-      -81.4498717
+      39.0437567,
+      -77.4874416
     ],
     "country": "US",
     "provider": [
       "Joyent"
     ],
-    "region": "Nothern Virginia"
+    "region": "Ashburn"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      52.3702157,
+      4.895167900000001
+    ],
+    "country": "NL",
+    "provider": [
+      "DigitalOcean",
+      "Joyent"
+    ],
+    "region": "Amsterdam"
   },
   {
     "continent": "AS",
@@ -389,31 +402,6 @@
       "AWS"
     ],
     "region": "Singapur"
-  },
-  {
-    "continent": "NA",
-    "coordinates": [
-      39.0437567,
-      -77.4874416
-    ],
-    "country": "US",
-    "provider": [
-      "Joyent"
-    ],
-    "region": "Ashburn"
-  },
-  {
-    "continent": "NA",
-    "coordinates": [
-      36.1699412,
-      -115.1398296
-    ],
-    "country": "US",
-    "provider": [
-      "HP",
-      "Joyent"
-    ],
-    "region": "Las Vegas"
   },
   {
     "continent": "EU",
@@ -440,6 +428,19 @@
     "region": "Dallas/Ft. Worth"
   },
   {
+    "continent": "NA",
+    "coordinates": [
+      37.2232316,
+      -81.4498717
+    ],
+    "country": "US",
+    "provider": [
+      "AWS",
+      "Rackspace"
+    ],
+    "region": "Northern Virginia"
+  },
+  {
     "continent": "OC",
     "coordinates": [
       -33.8674869,
@@ -453,19 +454,6 @@
       "Rackspace"
     ],
     "region": "Sydney"
-  },
-  {
-    "continent": "AS",
-    "coordinates": [
-      22.396428,
-      114.109497
-    ],
-    "country": "HK",
-    "provider": [
-      "Azure",
-      "Rackspace"
-    ],
-    "region": "Hong Kong"
   },
   {
     "continent": "EU",
