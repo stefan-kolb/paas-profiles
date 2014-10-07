@@ -6,7 +6,7 @@ require 'rest-client'
 require 'open-uri'
 
 # models
-require_relative 'models/vendor/vendor'
+require_relative 'app/models/vendor/vendor'
 
 # helper
 require_relative 'lib/io_helper'
