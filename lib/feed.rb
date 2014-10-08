@@ -1,8 +1,11 @@
 require 'rss'
 
 require_relative '../app/models/vendor/vendor'
+require_relative '../app/helpers/application_helpers'
 
 class Feed
+  extend ApplicationHelpers
+
   class << self
     def get_rss
       rss = RSS::Maker.make('2.0') do |feed|
