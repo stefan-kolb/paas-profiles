@@ -1,6 +1,6 @@
 {
   "name": "EngineYard",
-  "revision": "2014-09-02",
+  "revision": "2014-10-09",
   "url": "http://www.engineyard.com/",
   "status": "production",
   "status_since": "2006-09-01",
@@ -47,7 +47,8 @@
       "versions": [
         "1.9.3",
         "2.0.0",
-        "2.1.2"
+        "2.1.2",
+        "2.1.3"
       ]
     }
   ],
