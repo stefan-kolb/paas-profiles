@@ -1,6 +1,6 @@
 {
   "name": "AppFog",
-  "revision": "2014-07-07",
+  "revision": "2014-10-20",
   "url": "http://appfog.com",
   "status": "production",
   "status_since": "2012-07-15",
@@ -38,7 +38,10 @@
     {
       "language": "php",
       "versions": [
-        "5.3.10"
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6"
       ]
     },
     {
