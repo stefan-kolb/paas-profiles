@@ -97,6 +97,18 @@
         "3.*",
         "4.*"
       ]
+    },
+    {
+      "name": "Grails",
+      "runtime":r "java"
+    },
+    {
+      "name": "Django",
+      "runtime":r "python"
+    },
+    {
+      "name": "Flash",
+      "runtime":r "python"
     }
   ],
   "services": {
