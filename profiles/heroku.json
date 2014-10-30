@@ -1,6 +1,6 @@
 {
   "name": "Heroku",
-  "revision": "2014-10-02",
+  "revision": "2014-10-30",
   "url": "http://www.heroku.com/",
   "status": "production",
   "status_since": "2009-04-24",
@@ -26,6 +26,12 @@
   "runtimes": [
     {
       "language": "clojure",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "groovy",
       "versions": [
         "*.*"
       ]
@@ -99,16 +105,25 @@
       ]
     },
     {
-      "name": "Grails",
-      "runtime":r "java"
+      "name": "grails",
+      "runtime": "groovy",
+      "versions": [
+
+      ]
     },
     {
-      "name": "Django",
-      "runtime":r "python"
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
     },
     {
-      "name": "Flash",
-      "runtime":r "python"
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+
+      ]
     }
   ],
   "services": {
