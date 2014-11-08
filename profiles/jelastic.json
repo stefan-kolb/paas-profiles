@@ -166,7 +166,7 @@
   "extensible": true,
   "infrastructures": [
     {
-      "continent": "AS",
+      "continent": "EU",
       "country": "RU",
       "region": "",
       "provider": "Rusonyx"

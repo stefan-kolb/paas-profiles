@@ -16,8 +16,14 @@ class Infrastructure
   validate :country_codes, :if => Proc.new { !country.blank? }
 
   def country_codes
-    if IsoCountryCodes.find(country).nil?
+    code = IsoCountryCodes.find(country)
+    # valid code
+    if code.nil?
       errors[:country] = '#{country} is not a valid ISO 3166-1 code'
+    end
+    # valid continent
+    unless code.continent.eql?(continent)
+      errors[:country] = 'Wrong continent code for #{country}'
     end
   end
 
