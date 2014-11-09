@@ -137,7 +137,7 @@
     {
       "continent": "AS",
       "country": "SG",
-      "region": "Singapur",
+      "region": "Singapore",
       "provider": "AWS"
     },
     {
@@ -149,7 +149,7 @@
     {
       "continent": "NA",
       "country": "US",
-      "region": "Virginia",
+      "region": "Northern Virginia",
       "provider": "AWS"
     },
     {
