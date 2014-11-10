@@ -1,10 +1,6 @@
 get '/vendor/:name/infrastructures' do
   markers = []
 
-  user_location = Geocoder.search(request.ip).first
-  user_location = user_location.coordinates unless user_location.nil?
-  markers << { latLng: user_location, name: "Yeah, that's you!", style: { fill: 'red' } } unless user_location.nil?
-
   vendor = Vendor.where(name: /#{params[:name]}/i).only(:infrastructures).first
 
   unless vendor['infrastructures'].blank?
@@ -36,9 +32,6 @@ end
 
 get '/infrastructures' do
   markers = []
-
-  user_location = Geocoder.search(request.ip).first
-  markers << { latLng: user_location.coordinates, name: "Yeah, that's you!", style: { fill: 'red' } } unless user_location.nil?
 
   Datacenter.all.each do |center|
     markers << { latLng: center.coordinates, name: "#{center}" }

@@ -433,5 +433,15 @@
             mapObject.addMarkers(data, []);
         });
         <% end %>
+
+        $.ajax( {
+            url: '//freegeoip.net/json/',
+            type: 'POST',
+            dataType: 'jsonp',
+            success: function(location) {
+                var mapObject = $('#map').vectorMap('get', 'mapObject');
+                mapObject.addMarker('user', { latLng: [location.latitude, location.longitude], name: "Yeah, that's you!", style: { fill: 'red' } }, []);
+            }
+        } );
     });
 </script>
