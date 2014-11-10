@@ -251,7 +251,8 @@
     {
       "continent": "NA",
       "country": "US",
-      "region": "Dallas"
+      "region": "Dallas",
+      "provider": "Softlayer"
     }
   ]
 }
