@@ -12,17 +12,7 @@ get '/vendor/:name/infrastructures' do
           dc = Geocoder.coordinates("#{infra.region}, #{infra.country}")
         end
 
-        unless dc.blank?
-          unless user_location.blank?
-            # speed of light / refraction
-            min_latency = (Geocoder::Calculations.distance_between(dc.coordinates, user_location, {:units => :km}) * 2 * 1000 / (299792458 / 1.52) * 1000).round(0)
-            name = dc.to_s << " > #{min_latency} ms RTT"
-          else
-            name = dc
-          end
-
-          markers << {latLng: dc.coordinates, name: "#{name}"}
-        end
+        markers << { latLng: dc.coordinates, name: dc.to_s } unless dc.blank?
       end
     end
   end
