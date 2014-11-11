@@ -1,4 +1,8 @@
 get '/vendor/:name/infrastructures' do
+  Geocoder.configure(
+    :timeout => 5
+  )
+
   markers = []
 
   vendor = Vendor.where(name: /#{params[:name]}/i).only(:infrastructures).first
