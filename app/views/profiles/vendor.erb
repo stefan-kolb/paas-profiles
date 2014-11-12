@@ -113,12 +113,14 @@
     <% unless @profile["status_since"].nil? %>
         since <span class="date" title="<%= @profile["status_since"].to_date %>"></span><% end %>.
     </p>
+    <% if @profile.hosting.public %>
     <p>Stipulated Uptime: <% if @profile["qos"].blank? || @profile["qos"]["uptime"].blank? %>
       <span class="label label-important">No guarantees</span>
       <% else %>
       <span class="label label-inverse"><%= @profile["qos"]["uptime"] %> %</span>
       <% end %>
     </p>
+    <% end %>
     <p>
       <% unless @profile["qos"].blank? || @profile["qos"]["compliance"].blank? %>
           <%= @profile["name"] + " is <em>" + @profile["qos"]["compliance"].join(", ").upcase + " </em> certified" %>
