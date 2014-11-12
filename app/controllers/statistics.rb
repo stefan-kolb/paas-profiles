@@ -76,14 +76,6 @@ get '/statistics/infrastructures' do
   @teaser = 'Public Infrastructures'
   @chart = InfrastructureCharts.new
 
-  # user info FIXME request limit 10k/h
-  # FIXME possible errors
-  begin
-    @user_location = request.location.coordinates
-  rescue
-    @user_location = nil
-  end
-
   erb :statistics_layout do
     erb :'statistics/infrastructures'
   end
