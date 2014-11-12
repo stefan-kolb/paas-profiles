@@ -432,7 +432,6 @@
             var mapObject = $('#map').vectorMap('get', 'mapObject');
             mapObject.addMarkers(data, []);
         });
-        <% end %>
 
         $.ajax( {
             url: '//freegeoip.net/json/',
@@ -443,5 +442,6 @@
                 mapObject.addMarker('user', { latLng: [location.latitude, location.longitude], name: "Yeah, that's you!", style: { fill: 'red' } }, []);
             }
         } );
+        <% end %>
     });
 </script>
