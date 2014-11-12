@@ -1,6 +1,7 @@
 {
   "name": "Flynn",
-  "revision": "2014-10-06",
+  "revision": "2014-11-12",
+  "vendor_verified": "2014-11-12",
   "url": "https://flynn.io/",
   "status": "beta",
   "status_since": "2014-08-13",
@@ -15,13 +16,61 @@
     }
   ],
   "scaling": {
-    "vertical": false,
+    "vertical": true,
     "horizontal": true,
     "auto": false
   },
   "runtimes": [
     {
+      "language": "clojure",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "groovy",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+
+      ]
+    },
+    {
       "language": "node",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "go",
       "versions": [
 
       ]
@@ -31,9 +80,53 @@
 
   ],
   "frameworks": [
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
 
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "grails",
+      "runtime": "groovy",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    }
   ],
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "name": "postgresql",
+        "type": "datastore",
+        "versions": [
+          "9.3"
+        ]
+      }
+    ]
+  },
   "extensible": true,
   "infrastructures": [
 
