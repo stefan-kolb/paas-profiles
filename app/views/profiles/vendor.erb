@@ -64,8 +64,8 @@
 
     <% unless @profile["services"].nil? %>
         <p>You can automatically bind
-          <span class="label label-inverse"><%= @profile["services"]["native"].size %></span> services and
-          <span class="label label-inverse"><%= @profile["services"]["addon"].size %></span> integrated addons to your
+          <span class="label label-inverse"><%= @profile["services"]["native"] ? @profile["services"]["native"].size : 0 %></span> services and
+          <span class="label label-inverse"><%= @profile["services"]["addon"] ? @profile["services"]["addon"].size :  0 %></span> integrated addons to your
           applications.</p>
     <% end %>
     <% unless @profile["scaling"]["vertical"] == false && @profile["scaling"]["horizontal"] ==false && @profile["scaling"]["auto"] == false %>
@@ -309,6 +309,7 @@
           <div class="accordion-heading">
             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
               <%
+                 size = 0
                  unless @profile["services"]["addon"].nil?
                    size = @profile["services"]["addon"].size
                  end
