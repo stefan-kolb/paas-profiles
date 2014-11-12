@@ -80,8 +80,7 @@
     ],
     "country": "HK",
     "provider": [
-      "Rackspace",
-      "Azure"
+      "Rackspace"
     ],
     "region": "Hong Kong"
   },
@@ -228,6 +227,18 @@
       "Azure"
     ],
     "region": "California"
+  },
+  {
+    "continent": "AS",
+    "coordinates": [
+      22.2824605,
+      114.1615709
+    ],
+    "country": "CN",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Hong Kong"
   },
   {
     "continent": "AS",
@@ -393,7 +404,7 @@
     ],
     "country": "US",
     "provider": [
-
+      "Softlayer"
     ],
     "region": "Dallas"
   },
