@@ -510,7 +510,7 @@
                   <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;">
                     <strong>
                       <% unless @p2['services'].blank? %>
-                          <%= @p2['services']['native'] ? @p1['services']['native'].size : 0 %>
+                          <%= @p2['services']['native'] ? @p2['services']['native'].size : 0 %>
                       <% end %>
                     </strong>
                   </span>
@@ -558,7 +558,7 @@
             <span style="color: #ffffff; display:inline-block;text-align:center; margin-top: 3px; font-size:15px;width: 25px;height:25px;">
                 <strong>
                   <% unless @p2['services'].blank? %>
-                      <%= @p2['services']['addon'] ? @p1['services']['addon'].size : 0 %>
+                      <%= @p2['services']['addon'] ? @p2['services']['addon'].size : 0 %>
                   <% end %>
                 </strong>
             </span>
