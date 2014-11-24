@@ -253,6 +253,12 @@
       "country": "US",
       "region": "Dallas",
       "provider": "Softlayer"
+    },
+    {
+      "continent": "EU",
+      "country": "GB",
+      "region": "London",
+      "provider": "Softlayer"
     }
   ]
 }
