@@ -284,6 +284,12 @@
       "country": "US",
       "region": "Northern Virginia",
       "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
     }
   ]
 }
