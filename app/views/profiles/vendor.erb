@@ -15,19 +15,36 @@
   </div>
 </div>
 <div class="row">
-  <div class="span3">
+  <div class="span2">
     <a href="<%= @profile["url"] %>" target="_blank" class="btn btn-inverse btn-mini">Visit Vendor Page</a>
   </div>
-  <div class="span3 text-center">
-    <i class="fa fa-tags" title="PaaS type"></i>
-    <small><strong>&nbsp;<%= @profile["type"] %></strong></small>
+
+  <div class="span6 text-center">
+    <div class="row">
+      <div class="span2">
+        <i class="fa fa-tags tip" title="PaaS type"></i>
+        <small><strong>&nbsp;<%= @profile["type"] %></strong></small>
+      </div>
+      <% unless @profile["platform"].blank? %>
+      <div class="span2">
+      <i class="fa fa-institution tip" title="Platform"></i>
+      <small><strong>&nbsp;<a href="/vendor/<%= @profile["platform"] %>"><%= @profile["platform"] %></a></strong></small>
+      </div>
+      <% end %>
+      <% unless @profile["isolation"].blank? %>
+      <div class="span2">
+      <i class="fa fa-gears tip" title="Isolation"></i>
+      <small><strong>&nbsp;<%= @profile["isolation"] %></strong></small>
+      </div>
+      <% end %>
+    </div>
   </div>
   <div class="span3 text-center">
     <small>
       <em>Last updated <span class="date" title="<%= @profile['revision'].to_datetime %>"></span> ago.</em>
     </small>
   </div>
-  <div class="span3">
+  <div class="span1">
     <p class="pull-right">
       <a href="https://github.com/stefan-kolb/paas-profiles#contribution" title="Report error" class="tip"><i class="fa fa-bug fa-lg"></i></a>
     </p>

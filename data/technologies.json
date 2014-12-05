@@ -1,0 +1,387 @@
+[
+  {
+    "vendor": "Acquia Cloud",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Amazon Elastic Beanstalk",
+    "platform": "",
+    "isolation": "Virtual Machine"
+  },
+  {
+    "vendor": "Anynines",
+    "platform": "Cloud Foundry",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "Apache Stratos",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "App42 PaaS",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "AppFog",
+    "platform": "",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "AppHarbor",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Apprenda",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "AppScale",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Appsembler",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "BitNami",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Bluemix",
+    "platform": "Cloud Foundry",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "brightbox",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "CatN",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "CenturyLink Cloud",
+    "platform": "Cloud Foundry",
+    "isolation": ""
+  },
+  {
+    "vendor": "Clever Cloud",
+    "platform": "",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "Cloud Foundry",
+    "platform": "Cloud Foundry",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "cloudControl",
+    "platform": "cloudControl",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "Cloudify",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Cloudn PaaS",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Cloudnode",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Cloudways",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "ConPaaS",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Cumulogic Elastic WebStack",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Deis",
+    "platform": "",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "dotCloud",
+    "platform": "",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "ElasticBox",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "ELPaaS",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "EngineYard",
+    "platform": "",
+    "isolation": "Virtual Machine"
+  },
+  {
+    "vendor": "Evia",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "exoscale Apps",
+    "platform": "cloudControl",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "Flynn",
+    "platform": "",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "Force.com",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "fortrabbit",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Getup Cloud",
+    "platform": "OpenShift Origin",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "Gondor",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Google App Engine",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Heroku",
+    "platform": "",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "HP Cloud Application PaaS",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "iKnode",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Jelastic",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Mendix",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Microsoft Azure",
+    "platform": "",
+    "isolation": "Virtual Machine"
+  },
+  {
+    "vendor": "Modulus",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Moncai",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "MoPaaS",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "mOSAIC",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Ninefold",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Nitrous.io",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Nodejitsu",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "OpenShift Enterprise",
+    "platform": "OpenShift Origin",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "OpenShift Online",
+    "platform": "OpenShift Origin",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "OpenShift Origin",
+    "platform": "OpenShift Origin",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "Oracle Cloud PaaS",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "OrangeScape",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Paasmaker",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Pagoda Box",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Pivotal CF",
+    "platform": "Cloud Foundry",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "Pivotal Web Services",
+    "platform": "Cloud Foundry",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "Platformer.com",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Pogoapp",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Railscloud",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Rapidcloud.io",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "SAP HANA Cloud",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Shelly Cloud",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Software AG Live",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Stackato",
+    "platform": "Cloud Foundry",
+    "isolation": ""
+  },
+  {
+    "vendor": "Standing Cloud",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Static",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Trucker.io",
+    "platform": "Cloud Foundry",
+    "isolation": ""
+  },
+  {
+    "vendor": "Tsuru",
+    "platform": "",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "Uhuru AppCloud",
+    "platform": "Cloud Foundry",
+    "isolation": "Container"
+  },
+  {
+    "vendor": "Viaduct",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "VMWARE vFabric",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Voxoz",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Webappcabaret",
+    "platform": "",
+    "isolation": ""
+  },
+  {
+    "vendor": "Webbynode",
+    "platform": "",
+    "isolation": ""
+  }
+]

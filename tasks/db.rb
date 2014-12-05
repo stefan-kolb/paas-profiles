@@ -30,6 +30,23 @@ namespace :db do
     end
     # geographical information
     datacenter
+    # technology information
+    technologies
+  end
+
+  def technologies
+    data = JSON.parse(File.read('./data/technologies.json'))
+
+    data.each do |e|
+      begin
+        Vendor.find_by(name: e['vendor']).update(
+            platform: e['platform'],
+            isolation: e['isolation']
+        )
+      rescue Mongoid::Errors::DocumentNotFound
+        # ignore
+      end
+    end
   end
 
   def twitter
