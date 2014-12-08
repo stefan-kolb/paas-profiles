@@ -1,6 +1,6 @@
 {
   "name": "Shelly Cloud",
-  "revision": "2014-09-29",
+  "revision": "2014-12-08",
   "url": "https://shellycloud.com/",
   "vendor_verified": "2014-06-10",
   "status": "production",
@@ -88,6 +88,14 @@
         "type": "search",
         "versions": [
           "1.0"
+        ]
+      },
+      {
+        "name": "mariadb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "10.0"
         ]
       }
     ],
