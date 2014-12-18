@@ -128,7 +128,8 @@
     "native": [
       {
       "name": "centos",
-      "runtime": "",
+      "description": "",
+      "type": "other",
       "versions": [
         "6.5"
       ]
@@ -143,6 +144,7 @@
       },
       {
         "name": "mariadb",
+        "description": "",
         "type": "datastore",
         "versions": [
           "5.5.39",
@@ -151,7 +153,8 @@
       },
       {
       "name": "maven",
-      "runtime": "",
+      "description": "",
+      "type": "other",
       "versions": [
         "3.2.3"
       ]
@@ -159,7 +162,7 @@
       {
         "name": "memcached",
         "description": "",
-        "type": "cache",
+        "type": "datastore",
         "versions": [
           "1.4.20"
         ]
@@ -180,7 +183,7 @@
       },
       {
         "name": "nginx",
-        "type": "balancing",
+        "type": "other",
         "versions": [
           "1.6.1"
         ]
