@@ -202,7 +202,7 @@
   {
     "vendor": "Jelastic",
     "platform": "",
-    "isolation": ""
+    "isolation": "Container"
   },
   {
     "vendor": "Mendix",
