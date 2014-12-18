@@ -1,10 +1,11 @@
 {
   "name": "Jelastic",
   "revision": "2014-10-17",
+  "vendor_verified": "2014-12-18" 
   "url": "http://jelastic.com",
   "status": "production",
   "status_since": "2012-03-01",
-  "type": "Generic, IaaS-centric",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": true
@@ -86,13 +87,6 @@
     },
     {
       "name": "nginx",
-      "runtime": "php",
-      "versions": [
-        "1.6.1"
-      ]
-    },
-    {
-      "name": "nginx",
       "runtime": "ruby",
       "versions": [
         "1.6.1"
@@ -115,28 +109,7 @@
     },
     {
       "name": "apache",
-      "runtime": "php, ruby, python",
-      "versions": [
-        "2.2.15"
-      ]
-    },
-    {
-      "name": "apache",
       "runtime": "php",
-      "versions": [
-        "2.2.15"
-      ]
-    },
-    {
-      "name": "apache",
-      "runtime": "ruby",
-      "versions": [
-        "2.2.15"
-      ]
-    },
-    {
-      "name": "apache",
-      "runtime": "python",
       "versions": [
         "2.2.15"
       ]
@@ -155,14 +128,6 @@
   "services": {
     "native": [
       {
-      "name": "centos",
-      "description": "",
-      "type": "other",
-      "versions": [
-        "6.5"
-      ]
-    },
-      {
         "name": "couchdb",
         "description": "",
         "type": "datastore",
@@ -179,14 +144,6 @@
           "10.0.13"
         ]
       },
-      {
-      "name": "maven",
-      "description": "",
-      "type": "other",
-      "versions": [
-        "3.2.3"
-      ]
-    }
       {
         "name": "memcached",
         "description": "",
@@ -207,13 +164,6 @@
         "type": "datastore",
         "versions": [
           "5.7.4"
-        ]
-      },
-      {
-        "name": "nginx",
-        "type": "other",
-        "versions": [
-          "1.6.1"
         ]
       },
       {
