@@ -87,7 +87,6 @@
     },
     {
       "name": "nginx",
-      "runtime": "ruby",
       "versions": [
         "1.6.1"
       ]
@@ -109,16 +108,8 @@
     },
     {
       "name": "apache",
-      "runtime": "php",
       "versions": [
         "2.2.15"
-      ]
-    },
-    {
-      "name": "nodejs",
-      "runtime": "node.js",
-      "versions": [
-        "0.1"
       ]
     }
   ],
@@ -178,7 +169,7 @@
     ],
     "addon": [
 
-    ],
+    ]
   },
   "extensible": true,
   "infrastructures": [
