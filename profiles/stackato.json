@@ -99,7 +99,6 @@
   "middleware": [
     {
       "name": "apache",
-      "runtime": "php",
       "versions": [
         "2.4.9"
       ]
