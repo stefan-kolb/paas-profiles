@@ -4,7 +4,7 @@
   "url": "http://jelastic.com",
   "status": "production",
   "status_since": "2012-03-01",
-  "type": "Generic",
+  "type": "Generic, IaaS-centric",
   "hosting": {
     "public": true,
     "private": true
@@ -86,6 +86,7 @@
     },
     {
       "name": "nginx",
+      "runtime": "php, ruby",
       "versions": [
         "1.6.1"
       ]
@@ -104,6 +105,20 @@
       "versions": [
         "1.7.0"
       ]
+    },
+    {
+      "name": "apache",
+      "runtime": "php, ruby, python",
+      "versions": [
+        "2.2.15"
+      ]
+    },
+    {
+      "name": "nodejs",
+      "runtime": "node.js",
+      "versions": [
+        "0.1"
+      ]
     }
   ],
   "frameworks": [
@@ -111,6 +126,13 @@
   ],
   "services": {
     "native": [
+      {
+      "name": "centos",
+      "runtime": "",
+      "versions": [
+        "6.5"
+      ]
+    },
       {
         "name": "couchdb",
         "description": "",
@@ -128,9 +150,16 @@
         ]
       },
       {
+      "name": "maven",
+      "runtime": "",
+      "versions": [
+        "3.2.3"
+      ]
+    }
+      {
         "name": "memcached",
         "description": "",
-        "type": "datastore",
+        "type": "cache",
         "versions": [
           "1.4.20"
         ]
@@ -139,7 +168,7 @@
         "name": "mongodb",
         "type": "datastore",
         "versions": [
-          "2.6.0"
+          "2.6.4"
         ]
       },
       {
@@ -147,6 +176,13 @@
         "type": "datastore",
         "versions": [
           "5.7.4"
+        ]
+      },
+      {
+        "name": "nginx",
+        "type": "balancing",
+        "versions": [
+          "1.6.1"
         ]
       },
       {
@@ -166,12 +202,6 @@
   "extensible": true,
   "infrastructures": [
     {
-      "continent": "EU",
-      "country": "RU",
-      "region": "",
-      "provider": "Rusonyx"
-    },
-    {
       "continent": "AS",
       "country": "JP",
       "region": "",
@@ -179,9 +209,27 @@
     },
     {
       "continent": "AS",
+      "country": "MY",
+      "region": "",
+      "provider": "Skali.net"
+    },
+    {
+      "continent": "AS",
+      "country": "IN",
+      "region": "",
+      "provider": "Everdata"
+    },
+    {
+      "continent": "AS",
       "country": "KZ",
       "region": "",
-      "provider": "dnr"
+      "provider": "DNR.kz"
+    },
+    {
+      "continent": "AS",
+      "country": "KZ",
+      "region": "",
+      "provider": "Hoster.kz"
     },
     {
       "continent": "EU",
@@ -198,14 +246,38 @@
     {
       "continent": "EU",
       "country": "DE",
-      "region": "Cologne",
-      "provider": "Host Europe"
+      "region": "",
+      "provider": "dogado"
     },
     {
       "continent": "EU",
       "country": "FR",
       "region": "",
       "provider": "Lunacloud"
+    },
+    {
+      "continent": "EU",
+      "country": "FR",
+      "region": "",
+      "provider": "Magic.fr"
+    },
+    {
+      "continent": "EU",
+      "country": "RO",
+      "region": "",
+      "provider": "Star Storage"
+    },
+    {
+      "continent": "EU",
+      "country": "BY",
+      "region": "",
+      "provider": "MyCloud"
+    },
+    {
+      "continent": "EU",
+      "country": "LU",
+      "region": "",
+      "provider": "Telecom Luxembourg"
     },
     {
       "continent": "EU",
@@ -241,7 +313,7 @@
       "continent": "EU",
       "country": "FI",
       "region": "",
-      "provider": "Planetta Internet"
+      "provider": "Planeetta Internet"
     },
     {
       "continent": "EU",
@@ -256,6 +328,12 @@
       "provider": "ServInt"
     },
     {
+      "continent": "NA",
+      "country": "US",
+      "region": "",
+      "provider": "Webhosting.net"
+    },
+    {
       "continent": "SA",
       "country": "BR",
       "region": "",
@@ -266,6 +344,12 @@
       "country": "BR",
       "region": "",
       "provider": "Websolute"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "",
+      "provider": "Hostdime"
     }
   ]
 }
