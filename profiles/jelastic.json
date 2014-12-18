@@ -86,7 +86,14 @@
     },
     {
       "name": "nginx",
-      "runtime": "php, ruby",
+      "runtime": "php",
+      "versions": [
+        "1.6.1"
+      ]
+    },
+    {
+      "name": "nginx",
+      "runtime": "ruby",
       "versions": [
         "1.6.1"
       ]
@@ -109,6 +116,27 @@
     {
       "name": "apache",
       "runtime": "php, ruby, python",
+      "versions": [
+        "2.2.15"
+      ]
+    },
+    {
+      "name": "apache",
+      "runtime": "php",
+      "versions": [
+        "2.2.15"
+      ]
+    },
+    {
+      "name": "apache",
+      "runtime": "ruby",
+      "versions": [
+        "2.2.15"
+      ]
+    },
+    {
+      "name": "apache",
+      "runtime": "python",
       "versions": [
         "2.2.15"
       ]
@@ -200,7 +228,7 @@
     ],
     "addon": [
 
-    ]
+    ],
   },
   "extensible": true,
   "infrastructures": [
