@@ -93,6 +93,7 @@
   "middleware": [
     {
       "name": "glassfish",
+      "runtime": "java",
       "versions": [
         "4.0",
         "4.1"
