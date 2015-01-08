@@ -1,8 +1,8 @@
 {
   "name": "Shelly Cloud",
-  "revision": "2014-12-08",
+  "revision": "2015-01-07",
   "url": "https://shellycloud.com/",
-  "vendor_verified": "2014-06-10",
+  "vendor_verified": "2015-01-7",
   "status": "production",
   "status_since": "2011-06-01",
   "type": "Generic",
@@ -30,7 +30,10 @@
         "2.1.0",
         "2.1.1",
         "2.1.2",
-        "2.1.3"
+        "2.1.3",
+        "2.1.4",
+        "2.1.5",
+        "2.2.0"
       ]
     }
   ],
@@ -92,7 +95,7 @@
       },
       {
         "name": "mariadb",
-        "description": "",
+        "description": "Using MariaDB drop in replacement for MySQL",
         "type": "datastore",
         "versions": [
           "10.0"
@@ -107,13 +110,13 @@
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "DE",
-      "region": "Nuremberg"
-    },
-    {
-      "continent": "EU",
       "country": "FR",
       "region": "Roubaix"
+    },
+    {
+      "continent": "NA",
+      "country": "CA",
+      "region": "Beauharnois"
     }
   ]
 }
