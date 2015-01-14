@@ -13,7 +13,7 @@ get '/vendor/:name/infrastructures' do
         begin
           dc = Datacenter.find_by(region: infra['region'], country: infra['country'])
         rescue Mongoid::Errors::DocumentNotFound
-          dc = Geocoder.coordinates("#{infra.region}, #{infra.country}")
+          dc = Geocoder.coordinates("#{infra['region']}, #{infra['country']}")
         end
 
         markers << { latLng: dc.coordinates, name: dc.to_s } unless dc.blank?
