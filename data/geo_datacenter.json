@@ -2,55 +2,6 @@
   {
     "continent": "NA",
     "coordinates": [
-      37.3393857,
-      -121.8949555
-    ],
-    "country": "US",
-    "provider": [
-      "Equinix"
-    ],
-    "region": "San Jose"
-  },
-  {
-    "continent": "NA",
-    "coordinates": [
-      37.7749295,
-      -122.4194155
-    ],
-    "country": "US",
-    "provider": [
-      "DigitalOcean"
-    ],
-    "region": "San Francisco"
-  },
-  {
-    "continent": "NA",
-    "coordinates": [
-      40.7127837,
-      -74.0059413
-    ],
-    "country": "US",
-    "provider": [
-      "DigitalOcean"
-    ],
-    "region": "New York"
-  },
-  {
-    "continent": "EU",
-    "coordinates": [
-      52.3702157,
-      4.895167900000001
-    ],
-    "country": "NL",
-    "provider": [
-      "DigitalOcean",
-      "Joyent"
-    ],
-    "region": "Amsterdam"
-  },
-  {
-    "continent": "NA",
-    "coordinates": [
       41.8781136,
       -87.6297982
     ],
@@ -63,8 +14,8 @@
   {
     "continent": "NA",
     "coordinates": [
-      32.761422,
-      -96.8580128
+      32.8998091,
+      -97.0403352
     ],
     "country": "US",
     "provider": [
@@ -87,6 +38,18 @@
   {
     "continent": "NA",
     "coordinates": [
+      35.4675602,
+      -97.5164276
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Oklahoma"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
       36.63714340000001,
       -121.09191
     ],
@@ -104,9 +67,22 @@
     ],
     "country": "GB",
     "provider": [
+      "Softlayer",
       "Rackspace"
     ],
     "region": "London"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      27.6648274,
+      -81.5157535
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Florida"
   },
   {
     "continent": "NA",
@@ -119,6 +95,18 @@
       "CenturyLink"
     ],
     "region": "Santa Clara"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      32.7766642,
+      -96.79698789999999
+    ],
+    "country": "US",
+    "provider": [
+      "Softlayer"
+    ],
+    "region": "Dallas"
   },
   {
     "continent": "NA",
@@ -171,8 +159,8 @@
   {
     "continent": "NA",
     "coordinates": [
-      45.5086699,
-      -73.55399249999999
+      45.5016889,
+      -73.567256
     ],
     "country": "CA",
     "provider": [
@@ -231,8 +219,8 @@
   {
     "continent": "AS",
     "coordinates": [
-      22.2824605,
-      114.1615709
+      22.2783151,
+      114.174695
     ],
     "country": "CN",
     "provider": [
@@ -291,6 +279,18 @@
   {
     "continent": "NA",
     "coordinates": [
+      37.3382082,
+      -121.8863286
+    ],
+    "country": "US",
+    "provider": [
+      "Equinix"
+    ],
+    "region": "San Jose"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
       38.9586307,
       -77.35700279999999
     ],
@@ -299,18 +299,6 @@
       "Equinix"
     ],
     "region": "Reston"
-  },
-  {
-    "continent": "EU",
-    "coordinates": [
-      50.937531,
-      6.9602786
-    ],
-    "country": "DE",
-    "provider": [
-      "Host Europe"
-    ],
-    "region": "Cologne"
   },
   {
     "continent": "NA",
@@ -351,18 +339,6 @@
   {
     "continent": "EU",
     "coordinates": [
-      49.45203,
-      11.07675
-    ],
-    "country": "DE",
-    "provider": [
-
-    ],
-    "region": "Nuremberg"
-  },
-  {
-    "continent": "EU",
-    "coordinates": [
       50.6927049,
       3.177847
     ],
@@ -375,38 +351,14 @@
   {
     "continent": "NA",
     "coordinates": [
-      35.4675602,
-      -97.5164276
+      45.3150817,
+      -73.8779033
     ],
-    "country": "US",
+    "country": "CA",
     "provider": [
 
     ],
-    "region": "Oklahoma"
-  },
-  {
-    "continent": "NA",
-    "coordinates": [
-      27.6648274,
-      -81.5157535
-    ],
-    "country": "US",
-    "provider": [
-
-    ],
-    "region": "Florida"
-  },
-  {
-    "continent": "NA",
-    "coordinates": [
-      32.7801399,
-      -96.80045109999999
-    ],
-    "country": "US",
-    "provider": [
-      "Softlayer"
-    ],
-    "region": "Dallas"
+    "region": "Beauharnois"
   },
   {
     "continent": "EU",
@@ -416,7 +368,8 @@
     ],
     "country": "IE",
     "provider": [
-      "AWS"
+      "AWS",
+      "GCE"
     ],
     "region": "Dublin"
   },
@@ -493,17 +446,17 @@
     "country": "AU",
     "provider": [
       "AWS",
+      "Rackspace",
       "OrionVM",
-      "Ninefold",
-      "Rackspace"
+      "Ninefold"
     ],
     "region": "Sydney"
   },
   {
     "continent": "SA",
     "coordinates": [
-      -23.5431786,
-      -46.6291845
+      -23.5505199,
+      -46.63330939999999
     ],
     "country": "BR",
     "provider": [
@@ -511,5 +464,42 @@
       "Azure"
     ],
     "region": "Sao Paulo"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      37.7749295,
+      -122.4194155
+    ],
+    "country": "US",
+    "provider": [
+      "DigitalOcean"
+    ],
+    "region": "San Francisco"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      40.7127837,
+      -74.0059413
+    ],
+    "country": "US",
+    "provider": [
+      "DigitalOcean"
+    ],
+    "region": "New York"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      52.3702157,
+      4.895167900000001
+    ],
+    "country": "NL",
+    "provider": [
+      "DigitalOcean",
+      "Joyent"
+    ],
+    "region": "Amsterdam"
   }
 ]
