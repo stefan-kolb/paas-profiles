@@ -1,7 +1,7 @@
 {
-  "name": "ELPaaS",
-  "revision": "2014-05-28",
-  "url": "https://www.elpaas.com/",
+  "name": "Heirloom PaaS",
+  "revision": "2015-01-21",
+  "url": "http://heirloomcomputing.com/",
   "status": "production",
   "status_since": "2012-04-12",
   "type": "IaaS-centric",
