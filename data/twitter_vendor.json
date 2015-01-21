@@ -2,7 +2,7 @@
   {
     "vendor": "Acquia Cloud",
     "twitter": "acquia",
-    "image": "https://pbs.twimg.com/profile_images/378800000678133605/092bec34e4fdb06d35a064d39a2b8d50_400x400.png"
+    "image": "https://pbs.twimg.com/profile_images/540261037958647808/Z63KGW_g_400x400.png"
   },
   {
     "vendor": "Amazon Elastic Beanstalk",
@@ -57,7 +57,7 @@
   {
     "vendor": "Bluemix",
     "twitter": "IBMBlueMix",
-    "image": "https://pbs.twimg.com/profile_images/489976913218138113/lsnIC1fU_400x400.png"
+    "image": "https://pbs.twimg.com/profile_images/552522617282756608/SbsmJ5_0_400x400.png"
   },
   {
     "vendor": "brightbox",
@@ -67,7 +67,7 @@
   {
     "vendor": "CatN",
     "twitter": "catn",
-    "image": "https://pbs.twimg.com/profile_images/2788106738/d3e0397e16a961bc69c9dac225b1f01e_400x400.png"
+    "image": "https://pbs.twimg.com/profile_images/504590010666844160/FNAPt4b3_400x400.jpeg"
   },
   {
     "vendor": "CenturyLink Cloud",
@@ -82,7 +82,7 @@
   {
     "vendor": "CloudBees",
     "twitter": "cloudbees",
-    "image": "https://pbs.twimg.com/profile_images/1077898171/favicon_400x400.png"
+    "image": "https://pbs.twimg.com/profile_images/532207991567552512/Hs6hM8pM_400x400.png"
   },
   {
     "vendor": "cloudControl",
@@ -107,7 +107,7 @@
   {
     "vendor": "Cloudways",
     "twitter": "cloudways",
-    "image": "https://pbs.twimg.com/profile_images/435458436092809216/zmaJcLBz_400x400.png"
+    "image": "https://pbs.twimg.com/profile_images/556113110423969792/KiMcPM1f_400x400.png"
   },
   {
     "vendor": "Cloud Foundry",
@@ -142,12 +142,12 @@
   {
     "vendor": "ElasticBox",
     "twitter": "elasticbox",
-    "image": "https://pbs.twimg.com/profile_images/459103152646529024/sgGRoFj2_400x400.jpeg"
+    "image": "https://pbs.twimg.com/profile_images/556257377507225602/V7_KZKTx_400x400.png"
   },
   {
-    "vendor": "ELPaaS",
-    "twitter": "elpaas",
-    "image": "https://pbs.twimg.com/profile_images/1298601971/hic-logo_400x400.jpg"
+    "vendor": "Heirloom PaaS",
+    "twitter": "heirloompaas",
+    "image": "https://pbs.twimg.com/profile_images/516814632577548289/ubHeSEVX_400x400.png"
   },
   {
     "vendor": "EngineYard",
@@ -162,7 +162,7 @@
   {
     "vendor": "exoscale Apps",
     "twitter": "exoscale",
-    "image": "https://pbs.twimg.com/profile_images/459415100244230144/hfMVi3fk_400x400.png"
+    "image": "https://pbs.twimg.com/profile_images/544175064795455488/l_RqY7y2_400x400.png"
   },
   {
     "vendor": "Flynn",
@@ -171,7 +171,7 @@
   {
     "vendor": "Force.com",
     "twitter": "forcedotcom",
-    "image": "https://pbs.twimg.com/profile_images/464893458004463616/9qCWNsNF_400x400.png"
+    "image": "https://pbs.twimg.com/profile_images/530101453453418496/klzTXRDf_400x400.png"
   },
   {
     "vendor": "fortrabbit",
@@ -294,13 +294,13 @@
   },
   {
     "vendor": "Pivotal CF",
-    "twitter": "gopivotal",
-    "image": "https://pbs.twimg.com/profile_images/378800000567636721/3ccfeaf29a4440bb971313baccc7ff1a_400x400.jpeg"
+    "twitter": "pivotalcf",
+    "image": "https://pbs.twimg.com/profile_images/515074466024390656/9BSLTs-2_400x400.png"
   },
   {
     "vendor": "Pivotal Web Services",
-    "twitter": "gopivotal",
-    "image": "https://pbs.twimg.com/profile_images/378800000567636721/3ccfeaf29a4440bb971313baccc7ff1a_400x400.jpeg"
+    "twitter": "pivotalws",
+    "image": "https://pbs.twimg.com/profile_images/525060263645437952/AHlE-Vne_400x400.png"
   },
   {
     "vendor": "Pogoapp",
@@ -315,7 +315,7 @@
   {
     "vendor": "SAP HANA Cloud",
     "twitter": "saphcp",
-    "image": "https://pbs.twimg.com/profile_images/2403236104/v6rs9xr9qlp8z2xgo0ck_400x400.jpeg"
+    "image": "https://pbs.twimg.com/profile_images/543044894910984194/FqEv4nSJ_400x400.png"
   },
   {
     "vendor": "Shelly Cloud",
@@ -365,7 +365,7 @@
   {
     "vendor": "Viaduct",
     "twitter": "askviaduct",
-    "image": "https://pbs.twimg.com/profile_images/413013705287139328/NSGR9rMm_400x400.png"
+    "image": "https://pbs.twimg.com/profile_images/532231233023926272/L3d3MPal_400x400.png"
   },
   {
     "vendor": "VMWARE vFabric",
@@ -386,8 +386,8 @@
     "image": "https://pbs.twimg.com/profile_images/378800000731366799/8f56a2e8ff01d94ddadf2ea27ada91d6_400x400.jpeg"
   },
   {
-    "vendor": "Windows Azure",
+    "vendor": "Microsoft Azure",
     "twitter": "Azure",
-    "image": "https://pbs.twimg.com/profile_images/451786311586676736/RZOOPfbm_400x400.jpeg"
+    "image": "https://pbs.twimg.com/profile_images/546024114272468993/W9gT7hZo_400x400.png"
   }
 ]
