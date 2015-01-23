@@ -1,9 +1,9 @@
 {
   "name": "Moncai",
-  "revision": "2014-03-11",
+  "revision": "2015-01-23",
   "url": "http://moncai.com/",
-  "status": "alpha",
-  "status_since": null,
+  "status": "eol",
+  "status_since": "2015-01-23",
   "type": "Generic",
   "hosting": {
     "public": true,
