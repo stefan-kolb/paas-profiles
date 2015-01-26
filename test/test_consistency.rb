@@ -59,7 +59,7 @@ class TestConsistency < MiniTest::Test
 
   def distinct_runtime(field)
     distinct = Vendor.distinct("#{field}.name")
-    products = Vendor.all.pluck(field).flatten
+    products = Vendor.all.pluck(field).flatten.compact
 
     distinct.each do |f|
       product = products.select { |e| e['name'].eql?(f) }
