@@ -1,7 +1,7 @@
 {
   "name": "Microsoft Azure",
-  "revision": "2013-07-05",
-  "url": "http://www.microsoft.com/windowsazure/",
+  "revision": "2015-02-03",
+  "url": "https://azure.microsoft.com/",
   "status": "production",
   "status_since": "2010-02-01",
   "type": "IaaS-centric",
@@ -75,19 +75,74 @@
   "extensible": true,
   "infrastructures": [
     {
-      "continent": "AS",
-      "country": "",
+      "continent": "NA",
+      "country": "US",
+      "region": "Iowa"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Illinois"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Texas"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "California"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
       "region": ""
     },
     {
       "continent": "EU",
-      "country": "",
+      "country": "NL",
       "region": ""
     },
     {
-      "continent": "NA",
-      "country": "",
-      "region": ""
+      "continent": "AS",
+      "country": "CN",
+      "region": "Hong Kong"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Saitama"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Osaka"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "New South Wales"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Victoria"
     }
   ]
 }
