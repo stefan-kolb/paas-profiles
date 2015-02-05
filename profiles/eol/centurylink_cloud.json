@@ -1,9 +1,9 @@
 {
   "name": "CenturyLink Cloud",
-  "revision": "2014-02-17",
+  "revision": "2015-02-05",
   "url": "http://www.centurylinkcloud.com/products/services/platform-as-a-service",
-  "status": "production",
-  "status_since": "2012-06-01",
+  "status": "eol",
+  "status_since": "",
   "type": "Generic",
   "hosting": {
     "public": true,
