@@ -3,7 +3,7 @@
   "revision": "2015-02-05",
   "url": "http://www.centurylinkcloud.com/products/services/platform-as-a-service",
   "status": "eol",
-  "status_since": "",
+  "status_since": "2015-01-31",
   "type": "Generic",
   "hosting": {
     "public": true,
