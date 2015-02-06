@@ -1,6 +1,6 @@
 {
   "name": "Bluemix",
-  "revision": "2014-07-01",
+  "revision": "2015-02-06",
   "url": "http://bluemix.net/",
   "status": "production",
   "status_since": "2014-06-30",
@@ -18,7 +18,7 @@
   "scaling": {
     "vertical": true,
     "horizontal": true,
-    "auto": false
+    "auto": true
   },
   "runtimes": [
     {
@@ -35,6 +35,24 @@
     },
     {
       "language": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "python",
       "versions": [
 
       ]
