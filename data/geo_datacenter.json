@@ -2,8 +2,8 @@
   {
     "continent": "NA",
     "coordinates": [
-      41.8781136,
-      -87.6297982
+      41.8199054,
+      -87.6454862
     ],
     "country": "US",
     "provider": [
@@ -14,8 +14,8 @@
   {
     "continent": "NA",
     "coordinates": [
-      32.8998091,
-      -97.0403352
+      32.761422,
+      -96.8580128
     ],
     "country": "US",
     "provider": [
@@ -34,18 +34,6 @@
       "Rackspace"
     ],
     "region": "Hong Kong"
-  },
-  {
-    "continent": "NA",
-    "coordinates": [
-      35.4675602,
-      -97.5164276
-    ],
-    "country": "US",
-    "provider": [
-
-    ],
-    "region": "Oklahoma"
   },
   {
     "continent": "NA",
@@ -109,42 +97,6 @@
     "region": "Dallas"
   },
   {
-    "continent": "NA",
-    "coordinates": [
-      38.9071923,
-      -77.0368707
-    ],
-    "country": "US",
-    "provider": [
-
-    ],
-    "region": "Washington"
-  },
-  {
-    "continent": "NA",
-    "coordinates": [
-      39.3209801,
-      -111.0937311
-    ],
-    "country": "US",
-    "provider": [
-
-    ],
-    "region": "Utah"
-  },
-  {
-    "continent": "NA",
-    "coordinates": [
-      40.6331249,
-      -89.3985283
-    ],
-    "country": "US",
-    "provider": [
-      "Azure"
-    ],
-    "region": "Illinois"
-  },
-  {
     "continent": "EU",
     "coordinates": [
       48.856614,
@@ -191,6 +143,18 @@
       "Azure"
     ],
     "region": "Virginia"
+  },
+  {
+    "continent": "NA",
+    "coordinates": [
+      40.6331249,
+      -89.3985283
+    ],
+    "country": "US",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Illinois"
   },
   {
     "continent": "NA",
@@ -299,6 +263,30 @@
       "Equinix"
     ],
     "region": "Reston"
+  },
+  {
+    "continent": "OC",
+    "coordinates": [
+      -33.864174,
+      151.2052868
+    ],
+    "country": "AU",
+    "provider": [
+
+    ],
+    "region": "New South Wales"
+  },
+  {
+    "continent": "OC",
+    "coordinates": [
+      -37.4713077,
+      144.7851531
+    ],
+    "country": "AU",
+    "provider": [
+
+    ],
+    "region": "Victoria"
   },
   {
     "continent": "NA",
