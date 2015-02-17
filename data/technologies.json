@@ -295,6 +295,11 @@
     "isolation": "Container"
   },
   {
+    "vendor": "platform.sh",
+    "platform": "",
+    "isolation": "Container"
+  },
+  {
     "vendor": "Platformer.com",
     "platform": "",
     "isolation": ""
