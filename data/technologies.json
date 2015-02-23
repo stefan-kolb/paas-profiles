@@ -325,6 +325,11 @@
     "isolation": ""
   },
   {
+    "vendor": "Scalingo",
+    "platform": "",
+    "isolation": "Container"
+  },
+  {
     "vendor": "Shelly Cloud",
     "platform": "",
     "isolation": ""
