@@ -7,14 +7,22 @@
   "status_since": "2015-02-03",
   "type": "Generic",
   "hosting": {
-    "public": true, "private": true
+    "public": true,
+    "private": true
   },
   "pricing": [
-        { "model": "free" },
-        { "model": "metered", "period": "monthly" }
+    {
+      "model": "free"
+    },
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
   ],
   "scaling": {
-    "vertical": false, "horizontal": true, "auto": false
+    "vertical": false,
+    "horizontal": true,
+    "auto": false
   },
   "runtimes": [
     {
@@ -93,6 +101,7 @@
     }
   ],
   "middleware": [
+
   ],
   "frameworks": [
     {
@@ -144,21 +153,21 @@
     },
     {
       "name": "symfony",
-      "runtime": "PHP",
+      "runtime": "php",
       "versions": [
         "2.*"
       ]
     },
     {
       "name": "laravel",
-      "runtime": "PHP",
+      "runtime": "php",
       "versions": [
         "*.*"
       ]
     },
     {
       "name": "yii",
-      "runtime": "PHP",
+      "runtime": "php",
       "versions": [
         "1.*",
         "2.*"
@@ -166,42 +175,42 @@
     },
     {
       "name": "magento",
-      "runtime": "PHP",
+      "runtime": "php",
       "versions": [
         "*.*"
-      ]      
+      ]
     },
     {
       "name": "cakephp",
-      "runtime": "PHP",
+      "runtime": "php",
       "versions": [
         "2.*"
       ]
     },
     {
       "name": "zf2",
-      "runtime": "PHP",
+      "runtime": "php",
       "versions": [
         "2.*"
       ]
     },
     {
       "name": "slim",
-      "runtime": "PHP",
+      "runtime": "php",
       "versions": [
         "*.*"
       ]
     },
     {
       "name": "silex",
-      "runtime": "PHP",
+      "runtime": "php",
       "versions": [
         "*.*"
       ]
     },
     {
       "name": "change",
-      "runtime": "PHP",
+      "runtime": "php",
       "versions": [
         "4.*"
       ]
@@ -209,13 +218,49 @@
   ],
   "services": {
     "native": [
-      { "name": "mongodb", "description": "", "type": "datastore", "versions": [ "2.6.5" ] },
-      { "name": "mysql", "description": "", "type": "datastore", "versions": [ "5.5.40" ] },
-      { "name": "postgresql", "description": "", "type": "datastore", "versions": [ "9.3.5" ] },
-      { "name": "redis", "description": "", "type": "datastore", "versions": [ "2.8.17" ] },
-      { "name": "elasticsearch", "description": "", "type": "datastore", "versions": [ "1.3.8" ] }
+      {
+        "name": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.6.5"
+        ]
+      },
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.5.40"
+        ]
+      },
+      {
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.3.5"
+        ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.8.17"
+        ]
+      },
+      {
+        "name": "elasticsearch",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "1.3.8"
+        ]
+      }
     ],
     "addon": [
+
     ]
   },
   "extensible": true,
