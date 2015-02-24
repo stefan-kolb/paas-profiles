@@ -2,8 +2,8 @@
   {
     "continent": "NA",
     "coordinates": [
-      41.8199054,
-      -87.6454862
+      41.8781136,
+      -87.6297982
     ],
     "country": "US",
     "provider": [
@@ -36,16 +36,28 @@
     "region": "Hong Kong"
   },
   {
-    "continent": "NA",
+    "continent": "EU",
     "coordinates": [
-      36.63714340000001,
-      -121.09191
+      48.856614,
+      2.3522219
     ],
-    "country": "US",
+    "country": "FR",
     "provider": [
 
     ],
-    "region": "Western United States"
+    "region": "Paris"
+  },
+  {
+    "continent": "EU",
+    "coordinates": [
+      48.5734053,
+      7.752111299999999
+    ],
+    "country": "FR",
+    "provider": [
+
+    ],
+    "region": "Strasbourg"
   },
   {
     "continent": "EU",
@@ -95,18 +107,6 @@
       "Softlayer"
     ],
     "region": "Dallas"
-  },
-  {
-    "continent": "EU",
-    "coordinates": [
-      48.856614,
-      2.3522219
-    ],
-    "country": "FR",
-    "provider": [
-
-    ],
-    "region": "Paris"
   },
   {
     "continent": "NA",
@@ -349,6 +349,31 @@
     "region": "Beauharnois"
   },
   {
+    "continent": "NA",
+    "coordinates": [
+      43.8041334,
+      -120.5542012
+    ],
+    "country": "US",
+    "provider": [
+      "AWS"
+    ],
+    "region": "Oregon"
+  },
+  {
+    "continent": "SA",
+    "coordinates": [
+      -23.5505199,
+      -46.63330939999999
+    ],
+    "country": "BR",
+    "provider": [
+      "AWS",
+      "Azure"
+    ],
+    "region": "Sao Paulo"
+  },
+  {
     "continent": "EU",
     "coordinates": [
       53.3498053,
@@ -414,18 +439,6 @@
     "region": "Northern California"
   },
   {
-    "continent": "NA",
-    "coordinates": [
-      43.8041334,
-      -120.5542012
-    ],
-    "country": "US",
-    "provider": [
-      "AWS"
-    ],
-    "region": "Oregon"
-  },
-  {
     "continent": "OC",
     "coordinates": [
       -33.8674869,
@@ -439,19 +452,6 @@
       "Ninefold"
     ],
     "region": "Sydney"
-  },
-  {
-    "continent": "SA",
-    "coordinates": [
-      -23.5505199,
-      -46.63330939999999
-    ],
-    "country": "BR",
-    "provider": [
-      "AWS",
-      "Azure"
-    ],
-    "region": "Sao Paulo"
   },
   {
     "continent": "NA",
