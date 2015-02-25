@@ -28,7 +28,7 @@ module PaasProfiles
           json = JSON.parse(File.read(self.class.file_path))
           @profile = Vendor.new(json)
         rescue JSON::ParserError
-          assert(@profile != nil, 'JSON structure is not wellformed')
+          refute_nil(@profile, 'JSON structure is not well-formed')
         end
 
         # profile validation

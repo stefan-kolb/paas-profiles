@@ -12,6 +12,8 @@ gem 'geocoder'
 gem 'rmagick'
 gem 'activesupport'
 gem 'require_all'
+gem 'grape'
+gem 'grape-entity'
 
 group :test do
   gem 'rake'

@@ -45,8 +45,8 @@ class TestDuplicates < MiniTest::Test
 
   def find_duplicates(field)
     Vendor.distinct("#{field}.name").each do |e|
-      partial = Vendor.where(:"#{field}.name" => /^#{e}/i)
-      exact = Vendor.where(:"#{field}.name" => /^#{e}$/i)
+      partial = Vendor.where("#{field}.name" => /^#{e}/i)
+      exact = Vendor.where("#{field}.name" => /^#{e}$/i)
 
       if partial.size != exact.size
         vendors = partial - exact

@@ -1,2 +1,4 @@
 require './app'
-run Sinatra::Application
+require './app/controllers/api'
+
+run Rack::Cascade.new [Sinatra::Application, Profiles::API]
