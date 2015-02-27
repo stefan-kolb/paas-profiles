@@ -20,7 +20,7 @@ group :test do
   gem 'minitest'
   gem 'rack-test'
   gem 'factory_girl'
-  gem 'database_cleaner'
+  gem 'database_cleaner', '~> 1.3.0'
 end
 
 group :production do
