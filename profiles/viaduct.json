@@ -1,7 +1,7 @@
 {
   "name": "Viaduct",
-  "revision": "2015-01-07",
-  "url": "http://viaduct.io/refer/c48e9e",
+  "revision": "2015-02-27",
+  "url": "https://viaduct.io",
   "status": "production",
   "status_since": "2014-07-07",
   "type": "Generic",
@@ -27,6 +27,7 @@
     {
       "language": "node",
       "versions": [
+        "0.12",
         "0.10",
         "0.8",
         "0.6"
@@ -43,6 +44,7 @@
     {
       "language": "ruby",
       "versions": [
+        "2.2.0",
         "2.1.5",
         "1.9.3"
       ]
