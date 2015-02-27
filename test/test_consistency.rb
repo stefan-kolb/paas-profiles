@@ -3,14 +3,11 @@ require 'json'
 require 'active_support'
 require 'active_support/core_ext'
 
+require_relative 'test_helper'
 require_relative '../app/models/vendor/vendor'
-
-Mongoid.load!('./config/mongoid.yml', :test)
 
 class TestConsistency < MiniTest::Test
   def setup
-    Vendor.delete_all
-
     Dir.glob(File.dirname(__FILE__) + '/../profiles/*.json').each do |file|
       begin
         data = JSON.parse(File.read(file))
@@ -22,7 +19,7 @@ class TestConsistency < MiniTest::Test
   end
 
   def teardown
-    Vendor.delete_all
+    DatabaseCleaner.clean
   end
 
   # do not allow to have one software in any of the other categories

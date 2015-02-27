@@ -10,24 +10,26 @@ module Profiles
     prefix :api
 
     resource :vendors do
+      params do
+        requires :name, type: String, regexp: /^[a-z_]+$/, desc: 'Vendor name.'
+      end
 
-      desc 'Returns the profile of a vendor.'
-      get ':vendor' do
+      desc 'Returns a vendor.'
+      get ':name' do
         begin
-          vendor = ::Vendor.find_by(name: /#{params[:vendor].gsub('_', '.')}/i)
+          vendor = ::Vendor.find_by(name: /#{params[:name]}/i)
           present vendor, with: Profiles::Vendor::Entity
         rescue Mongoid::Errors::DocumentNotFound
           error! 'Vendor not found', 404
         end
       end
-
     end
 
     post 'match' do
       begin
         data = JSON.parse(request.body.read)
         # match this vendor
-        # TODO validation
+        # TODO: validation
         lookup = ::Vendor.new(data)
       rescue
         error! 'JSON request has a bad format', 400
@@ -37,7 +39,7 @@ module Profiles
 
       # matching
       # name
-      #query = query.all(name: lookup.name)
+      # query = query.all(name: lookup.name)
       # revision
       # vendor verified
       # url
@@ -51,9 +53,9 @@ module Profiles
         query = query.all('hosting.private' => lookup.hosting.private) unless lookup.hosting.private.nil?
       end
       # pricing
-      #lookup.pricings.each do |p|
-      #  query = query.and({'pricing.model' => p.model}, {'pricing.period' => p.period})
-      #end
+      # lookup.pricings.each do |p|
+      #   query = query.and({'pricing.model' => p.model}, {'pricing.period' => p.period})
+      # end
       # scaling
       if lookup.scaling
         query = query.all('scaling.vertical' => lookup.scaling.vertical) unless lookup.scaling.vertical.nil?
@@ -61,7 +63,7 @@ module Profiles
         query = query.all('scaling.auto' => lookup.scaling.auto) unless lookup.scaling.auto.nil?
       end
       # compliance FIXME structure changed
-      #query = query.all(compliance: lookup.compliance)
+      # query = query.all(compliance: lookup.compliance)
       # runtimes
       lookup.runtimes.each do |r|
         query = query.all('runtimes.language' => r.language)
@@ -98,7 +100,7 @@ module Profiles
         result << d
       end
 
-      # TODO check versions on result
+      # TODO: check versions on result
       res = result.dup
       lookup.runtimes.each do |runtime|
         runtime.versions.map! { |v| v.gsub! '*', '99' } unless runtime.versions
@@ -113,10 +115,8 @@ module Profiles
 
               runtime.versions.each do |v1|
                 r['versions'].each do |v2|
-                  # TODO >= ==?
-                  if v2 >= v1
-                    version_support = true
-                  end
+                  # TODO: >= ==?
+                  v2 >= v1 && version_support = true
                 end
               end
             end
@@ -128,6 +128,5 @@ module Profiles
       puts query.inspect
       present res, with: Profiles::Vendor::Entity
     end
-
   end
 end

@@ -3,9 +3,9 @@ require_relative '../../app/models/vendor/vendor'
 FactoryGirl.define do
   factory :vendor do
     # mandatory properties
-    name 'UnibaPaaS'
+    name 'unibapaas'
     url 'http://example.com'
-    revision DateTime.now
+    revision Date.today
     status 'production'
     extensible false
 
@@ -13,7 +13,7 @@ FactoryGirl.define do
     scaling { FactoryGirl.build(:scaling) }
 
     # runtimes
-    ignore do
+    transient do
       language 'ruby'
     end
 
@@ -22,7 +22,7 @@ FactoryGirl.define do
     end
 
     factory :vendor_with_distinct_runtimes do
-      ignore do
+      transient do
         runtime_count 2
       end
 
@@ -33,7 +33,7 @@ FactoryGirl.define do
 
     factory :vendor_with_middleware do
       # middleware
-      ignore do
+      transient do
         middleware_count 5
       end
 
@@ -44,7 +44,7 @@ FactoryGirl.define do
 
     factory :vendor_with_frameworks do
       # frameworks
-      ignore do
+      transient do
         frameworks_count 5
       end
 
@@ -55,7 +55,7 @@ FactoryGirl.define do
 
     factory :vendor_with_infrastructures do
       # infrastructures
-      ignore do
+      transient do
         infrastructures_count 5
       end
 

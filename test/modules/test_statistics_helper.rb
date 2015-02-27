@@ -4,7 +4,7 @@ require_relative '../../lib/helper/statistics_helper'
 
 class DummyClass; extend StatisticsHelper; end
 
-class TestStatisticsHelper < MiniTest::Unit::TestCase
+class TestStatisticsHelper < MiniTest::Test
 
   def test_mean
     array = [2, 4, 5]

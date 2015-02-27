@@ -18,7 +18,9 @@ gem 'grape-entity'
 group :test do
   gem 'rake'
   gem 'minitest'
+  gem 'rack-test'
   gem 'factory_girl'
+  gem 'database_cleaner'
 end
 
 group :production do
