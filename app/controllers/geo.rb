@@ -1,35 +1,41 @@
-get '/vendor/:name/infrastructures' do
-  Geocoder.configure(
-    :timeout => 5
-  )
 
-  markers = []
+    get '/vendors/:name/infrastructures' do
+      name = params[:name]
+      # TODO: move to main configuration file
+      Geocoder.configure(
+          :timeout => 5
+      )
 
-  vendor = Vendor.where(name: /#{params[:name]}/i).only(:infrastructures).first
+      markers = []
+      vendor = Vendor.where(name: /#{name}/i).only(:infrastructures).first
 
-  unless vendor['infrastructures'].blank?
-    vendor['infrastructures'].each do |infra|
-      unless infra['region'].blank?
-        begin
-          dc = Datacenter.find_by(region: infra['region'], country: infra['country'])
-        rescue Mongoid::Errors::DocumentNotFound
-          dc = Geocoder.coordinates("#{infra['region']}, #{infra['country']}")
+      unless vendor['infrastructures'].blank?
+        vendor['infrastructures'].each do |infra|
+          unless infra['region'].blank?
+            begin
+              puts 'Requesting geo data...'
+              dc = Datacenter.find_by(region: infra['region'], country: infra['country'])
+              markers << { latLng: dc.coordinates, name: dc.to_s }
+            rescue Mongoid::Errors::DocumentNotFound
+              puts 'Requesting geo data from remote service...'
+              coord = Geocoder.coordinates("#{infra['region']}, #{infra['country']}")
+              markers << { latLng: infra['region'], name: coord }
+            end
+          end
         end
-
-        markers << { latLng: dc.coordinates, name: dc.to_s } unless dc.blank?
       end
+
+      markers.to_json
+    end
+
+    get '/infrastructures' do
+      markers = []
+
+      Datacenter.all.each do |center|
+        markers << {latLng: center.coordinates, name: "#{center}"}
+      end
+
+      markers.to_json
     end
   end
-
-  markers.to_json
-end
-
-get '/infrastructures' do
-  markers = []
-
-  Datacenter.all.each do |center|
-    markers << { latLng: center.coordinates, name: "#{center}" }
-  end
-
-  markers.to_json
 end
