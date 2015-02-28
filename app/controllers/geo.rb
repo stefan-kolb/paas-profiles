@@ -1,5 +1,5 @@
 
-    get '/vendors/:name/infrastructures' do
+    get '/vendor/:name/infrastructures' do
       name = params[:name]
       # TODO: move to main configuration file
       Geocoder.configure(
@@ -13,11 +13,9 @@
         vendor['infrastructures'].each do |infra|
           unless infra['region'].blank?
             begin
-              puts 'Requesting geo data...'
               dc = Datacenter.find_by(region: infra['region'], country: infra['country'])
               markers << { latLng: dc.coordinates, name: dc.to_s }
             rescue Mongoid::Errors::DocumentNotFound
-              puts 'Requesting geo data from remote service...'
               coord = Geocoder.coordinates("#{infra['region']}, #{infra['country']}")
               markers << { latLng: infra['region'], name: coord }
             end
