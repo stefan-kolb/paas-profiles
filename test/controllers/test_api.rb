@@ -37,4 +37,18 @@ class TestApi < MiniTest::Test
     post '/api/broker'
     assert(last_response.client_error?)
   end
+
+  def test_get_infrastructures
+    get '/api/infrastructures'
+    assert(last_response.ok?)
+    # TODO: test factory
+  end
+
+  def test_get_vendor_infrastructures_remote_query
+    vendor = create(:vendor)
+    response = [{ latLng: [49.8988135, 10.9027636], name: 'Bamberg' }]
+    get "/api/vendors/#{vendor.name}/infrastructures"
+    assert(last_response.ok?)
+    assert_equal(response.to_json, last_response.body, 'Unexpected JSON response')
+  end
 end

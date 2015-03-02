@@ -113,7 +113,7 @@
         });
 
         // Geographic information
-        $.getJSON('/infrastructures').done(function(data) {
+        $.getJSON('/api/infrastructures').done(function(data) {
             var mapObject = $('#map').vectorMap('get', 'mapObject');
             mapObject.addMarkers(data, []);
         });

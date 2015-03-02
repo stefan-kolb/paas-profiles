@@ -446,7 +446,7 @@
 
         <% unless @profile['infrastructures'].blank? %>
         // Geographic information
-        $.getJSON('/vendors/<%=  url_encode(@profile['name']) %>/infrastructures').done(function(data) {
+        $.getJSON('/api/vendors/<%=  url_encode(@profile['name']) %>/infrastructures').done(function(data) {
             var mapObject = $('#map').vectorMap('get', 'mapObject');
             mapObject.addMarkers(data, []);
         });

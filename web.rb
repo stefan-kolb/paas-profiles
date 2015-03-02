@@ -5,7 +5,6 @@ require 'require_all'
 # controllers
 require_relative 'base'
 require_relative 'app/controllers/main'
-require_relative 'app/controllers/geo'
 require_relative 'app/controllers/statistics'
 
 # models
@@ -18,6 +17,5 @@ module Profiles
     # controllers
     use Main
     use StatisticsController
-    use Geo
   end
 end
