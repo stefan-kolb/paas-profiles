@@ -32,4 +32,9 @@ class TestApi < MiniTest::Test
     get '/api/vendors/alphanumeric_and_underscore_only_no_1+23'
     assert(last_response.client_error?, 'No [a-z_] parameters should raise 4xx client error')
   end
+
+  def test_post_broker_no_request_body
+    post '/api/broker'
+    assert(last_response.client_error?)
+  end
 end
