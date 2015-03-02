@@ -17,7 +17,7 @@
               markers << { latLng: dc.coordinates, name: dc.to_s }
             rescue Mongoid::Errors::DocumentNotFound
               coord = Geocoder.coordinates("#{infra['region']}, #{infra['country']}")
-              markers << { latLng: infra['region'], name: coord }
+              markers << { latLng: coord, name: infra['region'] }
             end
           end
         end
