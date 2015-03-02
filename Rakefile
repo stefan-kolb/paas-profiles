@@ -24,7 +24,7 @@ include IoHelper
 Rake::TestTask.new do |t|
   t.warning = true
   t.verbose = true
-  t.test_files = FileList['test/test*.rb']
+  t.test_files = FileList['test/**/test*.rb']
 end
 
 task :default => [:test]

@@ -1,11 +1,13 @@
 require 'mongoid'
 
-class RuntimeTrend
-  include Mongoid::Document
+module Profiles
+  class RuntimeTrend
+    include Mongoid::Document
 
-  field :revision, type: Date
-  field :language, type: String
-  field :count, type: Integer
-  field :percentage, type: Float
-  # validations
+    field :revision, type: Date
+    field :language, type: String
+    field :count, type: Integer
+    field :percentage, type: Float
+    # validations
+  end
 end

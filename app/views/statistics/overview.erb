@@ -64,7 +64,7 @@
                     labels: {
                         formatter: function () {
                             // TODO redraw axis for drilldown!
-                            max =<%= Charts.new.vendor_count %>,
+                            max =<%= Profiles::Charts.new.vendor_count %>,
                                     min = 0,
                                     range = max - min;
                             return (this.value * max / 100.0).toFixed(0);
@@ -314,7 +314,7 @@
                 {
                     name: 'Supported by',
                     innerSize: '60%',
-                    data: <%= Charts.new.get_piedata 'status', false %>
+                    data: <%= Profiles::Charts.new.get_piedata 'status', false %>
                 }
             ]
         });

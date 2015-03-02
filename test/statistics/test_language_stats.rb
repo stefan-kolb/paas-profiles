@@ -7,60 +7,58 @@ require 'factory_girl'
 require_relative '../../app/models/vendor/vendor'
 require_relative '../../lib/statistics/language_charts'
 
-Mongoid.load!('config/mongoid.yml', :test)
+module Profiles
+  class TestLanguageStats < MiniTest::Test
+    include FactoryGirl::Syntax::Methods
 
-class TestLanguageStats < MiniTest::Test
-      include FactoryGirl::Syntax::Methods
+    def teardown
+      DatabaseCleaner.clean
+    end
 
-      # deletes all collections and indexes before each test
-      def setup
-        Mongoid.purge!
-      end
+    def test_language_count
+      # test aggregation
+      create_list(:vendor, 10, language: 'ruby')
+      # test counting
+      create_list(:vendor_with_distinct_runtimes, 10, runtime_count: 2)
+      chart = LanguageCharts.new
+      assert_equal(21, chart.language_count, 'Unexpected amount of distinct runtime languages')
+    end
 
-      def test_language_count
-        # test aggregation
-        create_list(:vendor, 10, language: 'ruby')
-        # test counting
-        create_list(:vendor_with_distinct_runtimes, 10, runtime_count: 2)
-        chart = LanguageCharts.new
-        assert_equal(21, chart.language_count, 'Unexpected amount of distinct runtime languages')
-      end
+    def test_mean_count
+      create_list(:vendor_with_distinct_runtimes, 5, runtime_count: 5)
+      create_list(:vendor_with_distinct_runtimes, 5, runtime_count: 10)
+      chart = LanguageCharts.new
+      # (5*5+5*10)/10
+      assert_equal(7.5, chart.mean_count, 'Unexpected mean language count')
+    end
 
-      def test_mean_count
-        create_list(:vendor_with_distinct_runtimes, 5, runtime_count: 5)
-        create_list(:vendor_with_distinct_runtimes, 5, runtime_count: 10)
-        chart = LanguageCharts.new
-        # (5*5+5*10)/10
-        assert_equal(7.5, chart.mean_count, 'Unexpected mean language count')
-      end
+    def test_mode_count
+      # unimodal
+      create_list(:vendor, 5, language: 'ruby')
+      chart = LanguageCharts.new
+      # 1,1,1,1,1
+      assert_equal([1], chart.mode_count, 'Unexpected mode language count')
+      # multimodal
+      create_list(:vendor_with_distinct_runtimes, 5, runtime_count: 3)
+      chart = LanguageCharts.new
+      # 1,1,1,1,1,3,3,3,3,3
+      assert_equal([1, 3], chart.mode_count, 'Unexpected mode language count')
+    end
 
-      def test_mode_count
-        # unimodal
-        create_list(:vendor, 5, language: 'ruby')
-        chart = LanguageCharts.new
-        # 1,1,1,1,1
-        assert_equal([1], chart.mode_count, 'Unexpected mode language count')
-        # multimodal
-        create_list(:vendor_with_distinct_runtimes, 5, runtime_count: 3)
-        chart = LanguageCharts.new
-        # 1,1,1,1,1,3,3,3,3,3
-        assert_equal([1,3], chart.mode_count, 'Unexpected mode language count')
-      end
-
-      def test_median_count
-        # odd number
-        create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 1)
-        create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 2)
-        create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 3)
-        chart = LanguageCharts.new
-        # 1,2,3
-        assert_equal(2, chart.median_count, 'Unexpected median language count')
-        # even number
-        create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 4)
-        chart = LanguageCharts.new
-        # 1,2,3,4
-        assert_equal(2.5, chart.median_count, 'Unexpected median language count')
-      end
+    def test_median_count
+      # odd number
+      create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 1)
+      create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 2)
+      create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 3)
+      chart = LanguageCharts.new
+      # 1,2,3
+      assert_equal(2, chart.median_count, 'Unexpected median language count')
+      # even number
+      create_list(:vendor_with_distinct_runtimes, 1, runtime_count: 4)
+      chart = LanguageCharts.new
+      # 1,2,3,4
+      assert_equal(2.5, chart.median_count, 'Unexpected median language count')
+    end
 =begin
       # TODO ab hier
       def test_support_data
@@ -131,4 +129,5 @@ class TestLanguageStats < MiniTest::Test
         assert_equal(9, data[1]['y'], 'Unexpected language support percentage')
       end
 =end
+  end
 end

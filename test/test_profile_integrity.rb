@@ -5,7 +5,7 @@ require 'active_support/core_ext'
 
 require_relative '../app/models/vendor/vendor'
 
-module PaasProfiles
+module Profiles
   # create a test class for every profile
   Dir.glob(File.dirname(__FILE__) + '/../profiles/*.json') do |file|
     # filename
@@ -114,7 +114,7 @@ module PaasProfiles
         end
       end
 
-      # TODO real version formats, for now: versions array must not include empty version strings
+      # TODO: real version formats, for now: versions array must not include empty version strings
       define_method('test_version_formats') do
         # runtimes
         @profile.runtimes.each do |r|
@@ -136,7 +136,7 @@ module PaasProfiles
         end
       end
 
-      # TODO superset versions
+      # TODO: superset versions
       # no runtime version duplicates and overlaps
       define_method('test_version_duplicates') do
         # runtimes
@@ -166,11 +166,9 @@ module PaasProfiles
           end
         end
       end
-
     end
 
     # self-descriptive classname
-    self.const_set("Test#{filename.split('_').map(&:capitalize).join('_')}", test_class)
-
+    const_set("Test#{filename.split('_').map(&:capitalize).join('_')}", test_class)
   end
 end

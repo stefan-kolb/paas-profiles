@@ -1,41 +1,43 @@
 require 'mongoid'
 
-class Service
-  include Mongoid::Document
-  include Mongoid::Attributes::Dynamic
+module Profiles
+  class Service
+    include Mongoid::Document
+    include Mongoid::Attributes::Dynamic
 
-  embedded_in :vendor
+    embedded_in :vendor
 
-  embeds_many :natives, store_as: 'native'
-  embeds_many :addons, store_as: 'addon'
-  # validations
-  validates :natives, presence: true, allow_blank: true
-  validates :natives, presence: true, allow_blank: true
-end
+    embeds_many :natives, store_as: 'native'
+    embeds_many :addons, store_as: 'addon'
+    # validations
+    validates :natives, presence: true, allow_blank: true
+    validates :natives, presence: true, allow_blank: true
+  end
 
-class Native
-  include Mongoid::Document
+  class Native
+    include Mongoid::Document
 
-  embedded_in :service
+    embedded_in :service
 
-  field :name, type: String
-  field :description, type: String
-  field :type, type: String
-  field :versions, type: Array
-  # validations
-  validates :name, presence: true
-end
+    field :name, type: String
+    field :description, type: String
+    field :type, type: String
+    field :versions, type: Array
+    # validations
+    validates :name, presence: true
+  end
 
-class Addon
-  include Mongoid::Document
+  class Addon
+    include Mongoid::Document
 
-  embedded_in :service
+    embedded_in :service
 
-  field :name, type: String
-  field :url, type: String
-  field :description, type: String
-  field :type, type: String
-  # validations
-  validates :name, presence: true
-  validates :url, allow_blank: true, format: {with: /http[s]?:\/\/.*/}
+    field :name, type: String
+    field :url, type: String
+    field :description, type: String
+    field :type, type: String
+    # validations
+    validates :name, presence: true
+    validates :url, allow_blank: true, format: { with: %r{http[s]?://.*} }
+  end
 end

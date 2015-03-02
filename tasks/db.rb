@@ -14,18 +14,18 @@ namespace :db do
   desc 'Imports all existing vendor profiles'
   task :seed do
     # delete collection
-    Vendor.delete_all
+    Profiles::Vendor.delete_all
     # import files
     Dir.glob('profiles/*.json').each do |file|
       begin
         data = JSON.parse(File.read(file))
-        Vendor.create!(data)
+        Profiles::Vendor.create!(data)
       rescue Exception => e
         raise "An error occurred while parsing #{file}: #{e.message}"
       end
     end
     # be sure everything was imported
-    unless Dir['profiles/*.json'].length == Vendor.count
+    unless Dir['profiles/*.json'].length == Profiles::Vendor.count
       raise 'Not all profiles were imported!'
     end
     # geographical information
@@ -39,7 +39,7 @@ namespace :db do
 
     data.each do |e|
       begin
-        Vendor.find_by(name: e['vendor']).update(
+        Profiles::Vendor.find_by(name: e['vendor']).update(
             platform: e['platform'],
             isolation: e['isolation']
         )
@@ -55,7 +55,7 @@ namespace :db do
     data.each do |e|
       unless e['twitter'].blank?
         begin
-          Vendor.find_by(name: e['vendor']).update(
+          Profiles::Vendor.find_by(name: e['vendor']).update(
               twitter: e['twitter']
           )
         rescue Mongoid::Errors::DocumentNotFound
@@ -66,13 +66,13 @@ namespace :db do
   end
 
   def datacenter
-    Datacenter.delete_all
+    Profiles::Datacenter.delete_all
 
     data = JSON.parse(File.read('./data/geo_datacenter.json'))
 
     data.each do |dc|
       begin
-        Datacenter.create!(dc)
+        Profiles::Datacenter.create!(dc)
       rescue Exception => e
         raise "An error occurred while writing datacenter #{dc}: #{e.message}"
       end
@@ -84,7 +84,7 @@ namespace :db do
     # stats
     # overall trends
     sum_languages = 0
-    Vendor.all.each { |v| sum_languages += v.runtimes.count }
+    Profiles::Vendor.all.each { |v| sum_languages += v.runtimes.count }
     mean = (sum_languages / Vendor.count.to_f).round(1)
 
     Statistics.create(

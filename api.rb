@@ -1,7 +1,8 @@
 require 'grape'
 require 'versionomy'
 
-require_relative '../entities/vendor'
+require_relative 'app/entities/vendor'
+require_relative 'app/models/vendor/vendor'
 
 module Profiles
   class API < Grape::API
@@ -10,15 +11,14 @@ module Profiles
     prefix :api
 
     resource :vendors do
+      desc 'Returns a vendor.'
       params do
         requires :name, type: String, regexp: /^[a-z_]+$/, desc: 'Vendor name.'
       end
-
-      desc 'Returns a vendor.'
       get ':name' do
         begin
-          vendor = ::Vendor.find_by(name: /#{params[:name]}/i)
-          present vendor, with: Profiles::Vendor::Entity
+          vendor = Vendor.find_by(name: /#{params[:name]}/i)
+          present vendor
         rescue Mongoid::Errors::DocumentNotFound
           error! 'Vendor not found', 404
         end
@@ -30,12 +30,12 @@ module Profiles
         data = JSON.parse(request.body.read)
         # match this vendor
         # TODO: validation
-        lookup = ::Vendor.new(data)
+        lookup = Vendor.new(data)
       rescue
         error! 'JSON request has a bad format', 400
       end
       # initial query
-      query = ::Vendor.all
+      query = Vendor.all
 
       # matching
       # name
@@ -104,14 +104,14 @@ module Profiles
       res = result.dup
       lookup.runtimes.each do |runtime|
         runtime.versions.map! { |v| v.gsub! '*', '99' } unless runtime.versions
-        runtime.versions.map! { |v| ::Versionomy.parse(v) } unless runtime.versions
+        runtime.versions.map! { |v| Versionomy.parse(v) } unless runtime.versions
         version_support = false
 
         result.each do |provider|
           provider['runtimes'].each do |r|
             if r['language'] == runtime['language']
               r['versions'].map! { |v| v.gsub! '*', '99' } unless r['versions']
-              r['versions'].map! { |v| ::Versionomy.parse(v) } unless r['versions']
+              r['versions'].map! { |v| Versionomy.parse(v) } unless r['versions']
 
               runtime.versions.each do |v1|
                 r['versions'].each do |v2|
@@ -126,7 +126,7 @@ module Profiles
       end
 
       puts query.inspect
-      present res, with: Profiles::Vendor::Entity
+      present res
     end
   end
 end

@@ -68,7 +68,7 @@ namespace :profiles do
             if s['url'].blank?
               puts "[MISSING] #{data['name']} #{s['name']} is missing addon url"
               begin
-                alt = Vendor.ne(name: data['name']).where('services.addon.name' => /#{s['name']}/, 'services.addon.url' => { '$ne' => ''}, 'services.addon.url' => { '$exists' => true })
+                alt = Profiles::Vendor.ne(name: data['name']).where('services.addon.name' => /#{s['name']}/, 'services.addon.url' => { '$ne' => ''}, 'services.addon.url' => { '$exists' => true })
                 type = alt[0]['services']['addon'].select { |v| v['name'] =~ /#{s['name']}/ }[0] unless alt.blank?
                 puts "What about #{type['url']} (y/n)"
                 accept = STDIN.gets.chomp()
@@ -131,9 +131,8 @@ namespace :profiles do
     end
 
     # save file
-    File.open("./profiles/heroku.json", "w") do |f|
+    File.open("./profiles/heroku.json", 'w') do |f|
       f.write(JSON.pretty_generate(profile))
     end
   end
-
 end

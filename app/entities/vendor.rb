@@ -13,7 +13,6 @@ require_relative 'service'
 module Profiles
   class Vendor
     class Entity < Grape::Entity
-
       expose :name, :revision, :url, :status, :status_since, :type, :extensible
       expose :vendor_verified, if: :vendor_verified
 
@@ -28,7 +27,6 @@ module Profiles
       expose :service, using: Service::Entity
 
       expose :infrastructures, using: Infrastructure::Entity
-
     end
   end
 end

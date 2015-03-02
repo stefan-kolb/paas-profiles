@@ -8,9 +8,9 @@ namespace :geo do
     Geocoder.configure(:always_raise => :all)
 
     # delete collection
-    Datacenter.delete_all
+    Profiles::Datacenter.delete_all
 
-    Vendor.where(:infrastructures.nin => [[], nil]).each do |vendor|
+    Profiles::Vendor.where(:infrastructures.nin => [[], nil]).each do |vendor|
       vendor.infrastructures.each do |infra|
         unless infra.region.blank?
           begin
@@ -18,10 +18,10 @@ namespace :geo do
             coord = Geocoder.coordinates("#{infra.region}, #{infra.country}")
             #unless coord.blank?
               # save datacenter
-              ds = Datacenter.where(country: infra.country, region: infra.region).first
+              ds = Profiles::Datacenter.where(country: infra.country, region: infra.region).first
 
               if ds.blank?
-                ds = Datacenter.new(
+                ds = Profiles::Datacenter.new(
                     coordinates: coord,
                     continent: infra.continent,
                     country: infra.country,
@@ -53,8 +53,8 @@ namespace :geo do
 
     file = 'data/geo_datacenter.json'
 
-    File.open(file, "w") do |f|
-      f.write(JSON.pretty_generate JSON.parse(Datacenter.all.without(:id).to_json))
+    File.open(file, 'w') do |f|
+      f.write(JSON.pretty_generate JSON.parse(Profiles::Datacenter.all.without(:id).to_json))
     end
 
     # TODO test if all are here = count distinct regions, country

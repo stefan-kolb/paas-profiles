@@ -2,10 +2,12 @@ require 'mongoid'
 
 require_relative 'vendor/vendor'
 
-class Snapshot
-  include Mongoid::Document
+module Profiles
+  class Snapshot
+    include Mongoid::Document
 
-  field :revision, type: Date
+    field :revision, type: Date
 
-  embeds_many :vendors
+    embeds_many :vendors
+  end
 end

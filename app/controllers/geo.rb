@@ -1,5 +1,6 @@
-
-    get '/vendor/:name/infrastructures' do
+module Profiles
+  class Geo < Base
+    get '/vendors/:name/infrastructures' do
       name = params[:name]
       # TODO: move to main configuration file
       Geocoder.configure(
@@ -35,3 +36,5 @@
 
       markers.to_json
     end
+  end
+end

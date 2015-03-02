@@ -36,7 +36,7 @@
   <img class="img-rounded" src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big.png') %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
 </div>
 
-<% vendor = Vendor.distinct(:name).sort_by { |name| name.downcase } %>
+<% vendor = Profiles::Vendor.distinct(:name).sort_by { |name| name.downcase } %>
 <form id="select" class="text-center form-horizontal" style="margin-bottom: 50px;">
 
   <select id="p1_select" class="selectpicker" data-width="auto">

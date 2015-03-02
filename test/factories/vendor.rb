@@ -1,7 +1,7 @@
 require_relative '../../app/models/vendor/vendor'
 
 FactoryGirl.define do
-  factory :vendor do
+  factory :vendor, class: Profiles::Vendor do
     # mandatory properties
     name 'unibapaas'
     url 'http://example.com'
@@ -11,7 +11,12 @@ FactoryGirl.define do
 
     hosting { FactoryGirl.build(:hosting) }
     scaling { FactoryGirl.build(:scaling) }
+    pricings { [FactoryGirl.build(:pricing)] }
 
+    middlewares { [] }
+    frameworks { [] }
+    # service { [] }
+    infrastructures { [FactoryGirl.build(:infrastructure)] }
     # runtimes
     transient do
       language 'ruby'
@@ -53,6 +58,7 @@ FactoryGirl.define do
       end
     end
 
+    # FIXME: does not create infrastructure
     factory :vendor_with_infrastructures do
       # infrastructures
       transient do

@@ -1,4 +1,4 @@
-require './app'
-require './app/controllers/api'
+require './web'
+require './api'
 
-run Rack::Cascade.new [Sinatra::Application, Profiles::API]
+run Rack::Cascade.new [Profiles::Web, Profiles::API]

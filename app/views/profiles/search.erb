@@ -1,5 +1,5 @@
 <%
-   query = Vendor.all
+   query = Profiles::Vendor.all
 
    # status
    unless params[:status].nil? || params[:status].empty?
@@ -102,7 +102,7 @@
       %>
           <tr>
             <td>
-              <a href="/vendor/<%= url_encode(profile['name']) %>"><%= profile['name'] %></a>
+              <a href="<%= url("/vendors/#{url_encode(profile['name'])}") %>"><%= profile['name'] %></a>
               <% unless profile['vendor_verified'].nil? %>
                   &nbsp;<i class="fa fa-check-circle" title="Verified by Vendor"></i>
               <% end %>
@@ -172,7 +172,7 @@
             </td>
 
             <td>
-              <a href="/vendor/<%= url_encode(profile['name']) %>" class="btn btn-success btn-small">Details</a>
+              <a href="<%= url("/vendors/#{url_encode(profile['name'])}") %>" class="btn btn-success btn-small">Details</a>
             </td>
           </tr>
           </tbody>
@@ -181,7 +181,7 @@
       %>
       </table>
     <div>
-      <small><em>Showing <%= query.length %> out of <%= Vendor.count %> vendors.</em></small>
+      <small><em>Showing <%= query.length %> out of <%= Profiles::Vendor.count %> vendors.</em></small>
       <a href="#top" title="Back to top" class="pull-right i-link"><i class="fa fa-chevron-up"></i></a>
     </div>
 <% end %>
