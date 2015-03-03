@@ -3,7 +3,7 @@ $LOAD_PATH.unshift('lib')
 require 'require_all'
 
 # controllers
-require_relative 'base'
+require_relative 'app/base'
 require_relative 'app/controllers/main'
 require_relative 'app/controllers/statistics'
 

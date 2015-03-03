@@ -9,7 +9,7 @@ require 'require_all'
 # FIXME: change to sinatra/base when simple-navigation is fixed
 require 'sinatra'
 require 'sinatra/simple-navigation'
-#SimpleNavigation.config_file_paths << File.expand_path('../config', __dir__)
+SimpleNavigation.config_file_paths << File.expand_path('../config', __dir__)
 
 # helpers
 require_all 'app/helpers'
@@ -22,13 +22,13 @@ module Profiles
       # configuration
       helpers ApplicationHelpers
 
-      #set :root, proc { File.expand_path('../', __dir__) }
+      set :root, proc { File.expand_path('..', __dir__) }
       # views
       set :views, proc { File.join(root, 'app/views') }
       not_found { erb :'404', :layout => false }
       error { erb :'500', :layout => false }
     end
-                                                                                                          ö
+
     configure :production do
       # monitoring
       require 'newrelic_rpm'
