@@ -9,6 +9,9 @@
     "public": true,
     "private": true
   },
+  "qos": {
+    "uptime": 99.95
+  },
   "pricing": [
     {
       "model": "metered",
