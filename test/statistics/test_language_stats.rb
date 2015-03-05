@@ -1,8 +1,5 @@
-require 'minitest/autorun'
 require 'json'
 require 'active_support/core_ext'
-require 'mongoid'
-require 'factory_girl'
 
 require_relative '../../app/models/vendor/vendor'
 require_relative '../../lib/statistics/language_charts'

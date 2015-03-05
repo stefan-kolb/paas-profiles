@@ -1,7 +1,4 @@
-﻿require 'minitest/autorun'
-require 'rack/test'
-
-require_relative '../test_helper'
+﻿require_relative '../test_helper'
 
 class TestApi < MiniTest::Test
   include Rack::Test::Methods
@@ -11,44 +8,60 @@ class TestApi < MiniTest::Test
     APPLICATION
   end
 
+  def setup
+    @vendor = create(:vendor)
+  end
+
   def teardown
     DatabaseCleaner.clean
   end
 
-  def test_get_unknown_vendor_returns_not_found
-    get '/api/vendors/this_vendor_is_unknown'
-    assert(last_response.not_found?, 'This vendor should be unknown')
+  context 'GET vendor' do
+    should 'return an existing vendor' do
+      entity = Profiles::Vendor::Entity.represent(@vendor)
+      get "/api/vendors/#{@vendor.name}"
+      assert(last_response.ok?)
+      assert_equal(entity.to_json, last_response.body, 'Unexpected JSON response')
+    end
+
+    should 'return not found for nonexistant vendor' do
+      get '/api/vendors/this_vendor_is_unknown'
+      assert(last_response.not_found?, 'This vendor should be unknown')
+    end
+
+    should 'should only accept string parameters' do
+      get '/api/vendors/alphanumeric_and_underscore_only_no_1+23'
+      assert(last_response.client_error?, 'No [a-z_] parameters should raise 4xx client error')
+    end
   end
 
-  def test_get_vendor_returns_vendor
-    vendor = create(:vendor)
-    entity = Profiles::Vendor::Entity.represent(vendor)
-    get "/api/vendors/#{vendor.name}"
-    assert(last_response.ok?)
-    assert_equal(last_response.body, entity.to_json, 'Unexpected JSON response')
+  context 'POST broker' do
+    should 'return client error when request body is missing' do
+      post '/api/broker'
+      assert(last_response.client_error?)
+    end
+
+    should 'return all vendors when query is empty' do
+      entities = [Profiles::Vendor::Entity.represent(@vendor)]
+      post '/api/broker', '{}'
+      assert(last_response.ok?)
+      assert_equal(entities.to_json, last_response.body, 'Unexpected JSON response')
+    end
   end
 
-  def test_get_vendor_expects_string_parameter
-    get '/api/vendors/alphanumeric_and_underscore_only_no_1+23'
-    assert(last_response.client_error?, 'No [a-z_] parameters should raise 4xx client error')
-  end
+  context 'GET infrastructures' do
+    should 'return infrastructures' do
+      get '/api/infrastructures'
+      assert(last_response.ok?)
+      # TODO: test factory
+    end
 
-  def test_post_broker_no_request_body
-    post '/api/broker'
-    assert(last_response.client_error?)
-  end
-
-  def test_get_infrastructures
-    get '/api/infrastructures'
-    assert(last_response.ok?)
-    # TODO: test factory
-  end
-
-  def test_get_vendor_infrastructures_remote_query
-    vendor = create(:vendor)
-    response = [{ latLng: [49.8988135, 10.9027636], name: 'Bamberg' }]
-    get "/api/vendors/#{vendor.name}/infrastructures"
-    assert(last_response.ok?)
-    assert_equal(response.to_json, last_response.body, 'Unexpected JSON response')
+    should 'query external geo API when location is unknown' do
+      vendor = create(:vendor)
+      response = [{ latLng: [49.8988135, 10.9027636], name: 'Bamberg' }]
+      get "/api/vendors/#{vendor.name}/infrastructures"
+      assert(last_response.ok?)
+      assert_equal(response.to_json, last_response.body, 'Unexpected JSON response')
+    end
   end
 end

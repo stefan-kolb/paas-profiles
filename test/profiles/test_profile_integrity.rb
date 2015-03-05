@@ -1,13 +1,13 @@
-﻿require 'minitest/autorun'
-require 'json'
+﻿require 'json'
 require 'active_support'
 require 'active_support/core_ext'
 
-require_relative '../app/models/vendor/vendor'
+require_relative '../test_helper'
+require_relative '../../app/models/vendor/vendor'
 
 module Profiles
   # create a test class for every profile
-  Dir.glob(File.dirname(__FILE__) + '/../profiles/*.json') do |file|
+  Dir.glob(File.dirname(__FILE__) + '/../../profiles/*.json') do |file|
     # filename
     filename = File.basename(file, '.json')
 

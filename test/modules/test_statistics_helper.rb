@@ -1,5 +1,3 @@
-require 'minitest/autorun'
-
 require_relative '../../lib/helper/statistics_helper'
 
 class DummyClass; extend StatisticsHelper; end

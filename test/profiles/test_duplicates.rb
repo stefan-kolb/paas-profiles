@@ -1,10 +1,9 @@
-﻿require 'minitest/autorun'
-require 'json'
+﻿require 'json'
 require 'active_support'
 require 'active_support/core_ext'
 
-require_relative 'test_helper'
-require_relative '../app/models/vendor/vendor'
+require_relative '../test_helper'
+require_relative '../../app/models/vendor/vendor'
 
 module Profiles
   class TestDuplicates < MiniTest::Test

@@ -81,6 +81,7 @@ GEM
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
     rmagick (2.13.4)
+    shoulda-context (1.2.1)
     simple-navigation (3.14.0)
       activesupport (>= 2.3.2)
     sinatra (1.4.5)
@@ -124,6 +125,7 @@ DEPENDENCIES
   require_all
   rest-client
   rmagick
+  shoulda-context
   sinatra
   sinatra-simple-navigation
   unicorn

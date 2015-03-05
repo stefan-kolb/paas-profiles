@@ -18,6 +18,7 @@ gem 'grape-entity'
 group :test do
   gem 'rake'
   gem 'minitest'
+  gem 'shoulda-context'
   gem 'rack-test'
   gem 'factory_girl'
   gem 'database_cleaner', '~> 1.3.0'

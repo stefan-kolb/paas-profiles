@@ -1,15 +1,14 @@
-﻿require 'minitest/autorun'
-require 'json'
+﻿require 'json'
 require 'active_support'
 require 'active_support/core_ext'
 
-require_relative 'test_helper'
-require_relative '../app/models/vendor/vendor'
+require_relative '../test_helper'
+require_relative '../../app/models/vendor/vendor'
 
 module Profiles
   class TestConsistency < MiniTest::Test
     def setup
-      Dir.glob(File.dirname(__FILE__) + '/../profiles/*.json').each do |file|
+      Dir.glob(File.dirname(__FILE__) + '/../../profiles/*.json').each do |file|
         begin
           data = JSON.parse(File.read(file))
           Vendor.create!(data)

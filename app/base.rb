@@ -19,11 +19,9 @@ module Profiles
     register Sinatra::SimpleNavigation
 
     configure do
-      # configuration
       helpers ApplicationHelpers
 
       set :root, proc { File.expand_path('..', __dir__) }
-      # views
       set :views, proc { File.join(root, 'app/views') }
       not_found { erb :'404', :layout => false }
       error { erb :'500', :layout => false }
