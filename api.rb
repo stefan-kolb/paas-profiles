@@ -60,6 +60,7 @@ module Profiles
         # match this vendor
         result = Broker.new.match(data)
         present result
+        status 200
       rescue JSON::ParserError => e
         error! "JSON request has a bad format #{e}", 400
       rescue StandardError => e
