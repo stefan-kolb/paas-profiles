@@ -3,17 +3,13 @@
   "revision": "2013-07-05T18:00:44+02:00",
   "url": "http://apprenda.com/",
   "status": "production",
-  "status_since": "2008-12-02",
-  "type": "SaaS-centric",
+  "status_since": "2015-11-03",
+  "type": "Private PaaS",
   "hosting": {
-    "public": false,
+    "public": true,
     "private": true
   },
   "pricing": [
-    {
-      "model": "fixed",
-      "period": "annually"
-    }
   ],
   "scaling": {
     "vertical": true,
@@ -24,31 +20,52 @@
     {
       "language": "dotnet",
       "versions": [
-
+        "3.5", "4.0", "4.5", "4.5.1"
       ]
     },
     {
       "language": "java",
       "versions": [
-
+        "1.6", "1.7", "1.8"
       ]
     }
   ],
   "middleware": [
-
+    {
+      "name": "jboss",
+      "runtime": "java",
+      "versions": [
+        "6.2"
+      ]
+    }
   ],
   "frameworks": [
-
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+      ]
+    }
   ],
   "services": {
     "native": [
-
+      {
+        "name": "SQL Server",
+        "versions": [
+          "2008R2", "2012"
+        ],
+        "type": "Database"
+      }
     ],
     "addon": [
-
+      {
+        "name": "AWS S3",
+        "url": "http://s3.amazonaws.com/",
+        "type": "cloud file storage"
+      }
     ]
   },
-  "extensible": false,
+  "extensible": true,
   "infrastructures": [
 
   ]
