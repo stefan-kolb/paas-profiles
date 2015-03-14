@@ -1,0 +1,111 @@
+{
+  "name": "Paasmaker",
+  "revision": "2015-03-14",
+  "url": "http://paasmaker.org",
+  "status": "eol",
+  "status_since": null,
+  "type": "Generic",
+  "hosting": {
+    "public": false,
+    "private": true
+  },
+  "pricing": [
+    {
+      "model": "free"
+    }
+  ],
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "node",
+      "versions": [
+        "0.8.22"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.3"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+
+      ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "filesystem",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.6.9"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+
+  ]
+}
