@@ -1,9 +1,9 @@
 {
   "name": "Paasmaker",
-  "revision": "2014-01-17",
-  "url": "http://docs.paasmaker.org/index.html",
-  "status": "beta",
-  "status_since": "2013-04-02",
+  "revision": "2015-03-14",
+  "url": "http://paasmaker.org",
+  "status": "eol",
+  "status_since": null,
   "type": "Generic",
   "hosting": {
     "public": false,
