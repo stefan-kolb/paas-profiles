@@ -1,10 +1,10 @@
 {
   "name": "Nodejitsu",
-  "revision": "2014-05-09",
+  "revision": "2015-03-15",
   "url": "http://www.nodejitsu.com/",
   "vendor_verified": "2013-10-17",
-  "status": "production",
-  "status_since": "2012-10-10",
+  "status": "eol",
+  "status_since": "2015-02-10",
   "type": "Generic",
   "hosting": {
     "public": true,
