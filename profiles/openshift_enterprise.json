@@ -1,6 +1,6 @@
 {
   "name": "OpenShift Enterprise",
-  "revision": "2014-06-03",
+  "revision": "2015-03-16",
   "url": "https://www.openshift.com/products/enterprise",
   "vendor_verified": "2014-01-07",
   "status": "production",
@@ -67,7 +67,8 @@
       "name": "jboss",
       "runtime": "java",
       "versions": [
-        "6.2"
+        "6.2",
+        "6.3"
       ]
     },
     {
@@ -114,7 +115,7 @@
       {
         "name": "jenkins",
         "versions": [
-          "1.4"
+          "1.5"
         ],
         "type": "devops"
       },

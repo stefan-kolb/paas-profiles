@@ -1,6 +1,6 @@
 {
   "name": "OpenShift Online",
-  "revision": "2014-08-15",
+  "revision": "2015-03-16",
   "url": "https://www.openshift.com/products/online",
   "vendor_verified": "2014-01-07",
   "status": "production",
@@ -150,7 +150,7 @@
       {
         "name": "jenkins",
         "versions": [
-          "1.4"
+          "1.5"
         ],
         "type": "devops"
       },
@@ -201,6 +201,11 @@
     ],
     "addon": [
       {
+        "name": "appdynamics",
+        "url": "http://www.appdynamics.de/",
+        "type": "analytics"
+      },
+      {
         "name": "aerogear push",
         "url": "http://aerogear.org/",
         "type": "messaging"
@@ -211,6 +216,16 @@
         "type": "analytics"
       },
       {
+        "name": "cine.io",
+        "url": "https://www.cine.io/",
+        "type": "media"
+      },
+      {
+        "name": "cleardb",
+        "url": "https://www.cleardb.com/",
+        "type": "datastore"
+      },
+      {
         "name": "cloudforge",
         "url": "http://cloudforge.com/",
         "type": "devops"
@@ -219,6 +234,16 @@
         "name": "cloudamqp",
         "url": "http://www.cloudamqp.com/",
         "type": "worker"
+      },
+      {
+        "name": "dynatrace",
+        "url": "http://www.dynatrace.com",
+        "type": "analytics"
+      },
+      {
+        "name": "dreamfactory",
+        "url": "http://www.dreamfactory.com/",
+        "type": "other"
       },
       {
         "name": "elephantsql",
@@ -241,9 +266,24 @@
         "type": "worker"
       },
       {
+        "name": "jrebel",
+        "url": "https://zeroturnaround.com/software/jrebel/",
+        "type": "devops"
+      },
+      {
         "name": "liveoak",
         "url": "http://liveoak.io/",
         "type": "other"
+      },
+      {
+        "name": "loadimpact",
+        "url": "https://loadimpact.com/",
+        "type": "analytics"
+      },
+      {
+        "name": "memcachier",
+        "url": "https://www.memcachier.com/",
+        "type": "datastore"
       },
       {
         "name": "memcached cloud",
@@ -254,6 +294,16 @@
         "name": "mongolab",
         "url": "http://mongolab.com/",
         "type": "datastore"
+      },
+      {
+        "name": "nitrous.io",
+        "url": "http://www.nitrous.io/",
+        "type": "devops"
+      },
+      {
+        "name": "newrelic",
+        "url": "http://newrelic.com/",
+        "type": "analytics"
       },
       {
         "name": "pubnub",
@@ -274,6 +324,16 @@
         "name": "sendgrid",
         "url": "http://sendgrid.com/",
         "type": "messaging"
+      },
+      {
+        "name": "statica",
+        "url": "https://www.statica.io/",
+        "type": "devops"
+      },
+      {
+        "name": "vizuri openshift jetstream",
+        "url": "http://engage.vizuri.com/openshift-consultation",
+        "type": "other"
       }
     ]
   },

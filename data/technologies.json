@@ -190,9 +190,9 @@
     "isolation": "Container"
   },
   {
-    "vendor": "HP Cloud Application PaaS",
-    "platform": "",
-    "isolation": ""
+    "vendor": "HP Helion Development Platform",
+    "platform": "Cloud Foundry",
+    "isolation": "Container"
   },
   {
     "vendor": "iKnode",
