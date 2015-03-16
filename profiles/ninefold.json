@@ -1,9 +1,9 @@
 {
   "name": "Ninefold",
-  "revision": "2014-06-06",
+  "revision": "2015-03-16",
   "url": "https://ninefold.com",
-  "status": "production",
-  "status_since": "2013-09-01",
+  "status": "eol",
+  "status_since": "2015-05-24",
   "type": "Generic",
   "hosting": {
     "public": true,
