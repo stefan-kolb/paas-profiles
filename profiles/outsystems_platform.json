@@ -1,0 +1,213 @@
+{
+  "name": "OutSystems Platform",
+  "revision": "2015-03-16",
+  "vendor_verified": "2015-03-16",
+  "url": "http://www.outsystems.com",
+  "status": "production",
+  "status_since": "2001-04-19",
+  "type": "SaaS-centric",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "free",
+      "period": "monthly"
+    },
+    {
+      "model": "fixed",
+      "period": "annually"
+    },
+    {
+      "model": "hybrid",
+      "period": "annually"
+    }
+  ],
+  "qos": {
+    "uptime": 99.9,
+    "compliance": [
+
+    ]
+  },
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "java",
+      "versions": [
+        "1.6"
+      ]
+    },
+    {
+      "language": "dotnet",
+      "versions": [
+        "4.5"
+      ]
+    }
+  ],
+  "middleware": [
+    {
+      "name": "jboss",
+      "runtime": "java",
+      "versions": [
+        "6.3",
+        "7.1"
+      ]
+    },
+    {
+      "name": "weblogic",
+      "runtime": "java",
+      "versions": [
+        "11g",
+        "12c"
+      ]
+    },
+    {
+      "name": "iis",
+      "runtime": "dotnet",
+      "versions": [
+        "7.5",
+        "8"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "description": "Deploy your applications on top of MySQL",
+        "versions": [
+          "5.6.*"
+        ]
+      },
+      {
+        "name": "oracle",
+        "type": "datastore",
+        "description": "Deploy your applications on top of Oracle",
+        "versions": [
+          "11g",
+          "12c"
+        ]
+      },
+      {
+        "name": "ms sql",
+        "type": "datastore",
+        "description": "Deploy your applications on top of Microsoft SQL Server",
+        "versions": [
+          "2008",
+          "2012",
+          "2014"
+        ]
+      },
+      {
+        "name": "User Performance Monitoring",
+        "type": "analytics",
+        "description": "Real-time performance monitoring measures the performance your users are experiencing, when using your web and mobile applications",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "Automated Application Staging",
+        "type": "devops",
+        "description": "OutSystems Platform automates the staging of applications from development to production across cloud, on-premises or hybrid environments",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "Visual Application Development",
+        "type": "other",
+        "description": "Visual development environment to design the front-end and back-end of mobile and web applications, including their user interfaces, business logic, data model, and security policies. Application models are automatically converted into standard .NET or Java applications. You can also use Eclipse or Visual Studio to extend the model with Java or C# code.",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "Wizard-based SOAP and REST integration",
+        "type": "other",
+        "description": "Automated mechanisms to consume and expose functionality as standard SOAP and REST web services",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "Pre-built integration connectors",
+        "type": "other",
+        "description": "Connect to the most popular cloud services like Facebook, Zendesk, Twilio, and external databases like IBM DB2, Oracle, CouchDB",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "Mobile Hybrid Development",
+        "type": "other",
+        "description": "OutSystems Now is a native mobile app shell that provides access to sensors like the GPS, barcode reader, file system, or camera to your applications. This allows you to create applications that make use of native functionality without having to write native code",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "Business Process Management",
+        "type": "other",
+        "description": "Business Process Management platform to model, execute, and monitor business processes and workflows",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern Virginia",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+      "provider": "AWS"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Tokyo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "AWS"
+    }
+  ]
+}

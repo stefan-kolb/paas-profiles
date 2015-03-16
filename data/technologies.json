@@ -274,6 +274,11 @@
     "platform": "",
     "isolation": ""
   },
+    {
+        "vendor": "OutSystems Platform",
+        "platform": "",
+        "isolation": ""
+    },
   {
     "vendor": "Paasmaker",
     "platform": "",
