@@ -183,11 +183,6 @@
         "type": ""
       },
       {
-        "name": "blowerio",
-        "description": "",
-        "type": ""
-      },
-      {
         "name": "bomberman",
         "url": "",
         "description": "",
@@ -239,12 +234,6 @@
         "type": ""
       },
       {
-        "name": "cloudant",
-        "url": "",
-        "description": "",
-        "type": ""
-      },
-      {
         "name": "cloudinary",
         "url": "http://cloudinary.com/",
         "description": "",
@@ -280,12 +269,6 @@
         "type": ""
       },
       {
-        "name": "deployhooks",
-        "url": "",
-        "description": "",
-        "type": ""
-      },
-      {
         "name": "docraptor",
         "url": "",
         "description": "",
@@ -298,23 +281,12 @@
         "type": ""
       },
       {
-        "name": "ebookglue",
-        "description": "",
-        "type": ""
-      },
-      {
         "name": "eltanin",
         "description": "",
         "type": ""
       },
       {
         "name": "errorapp",
-        "description": "",
-        "type": ""
-      },
-      {
-        "name": "eshq",
-        "url": "",
         "description": "",
         "type": ""
       },
@@ -358,11 +330,6 @@
         "type": "analytics"
       },
       {
-        "name": "indexden",
-        "description": "",
-        "type": ""
-      },
-      {
         "name": "ironcache",
         "description": "",
         "type": ""
@@ -393,11 +360,6 @@
         "description": "",
         "type": "",
         "url": "https://logentries.com/"
-      },
-      {
-        "name": "loggly",
-        "description": "",
-        "type": ""
       },
       {
         "name": "mailgun",
@@ -461,11 +423,6 @@
         "url": "https://papertrailapp.com/"
       },
       {
-        "name": "pgbackups",
-        "description": "",
-        "type": ""
-      },
-      {
         "name": "phraseapp",
         "description": "",
         "type": "",
@@ -473,11 +430,6 @@
       },
       {
         "name": "postmark",
-        "description": "",
-        "type": ""
-      },
-      {
-        "name": "process-scheduler",
         "description": "",
         "type": ""
       },
@@ -493,11 +445,6 @@
       },
       {
         "name": "pusher",
-        "description": "",
-        "type": ""
-      },
-      {
-        "name": "rabbitmq-bigwig",
         "description": "",
         "type": ""
       },
@@ -522,11 +469,6 @@
         "type": ""
       },
       {
-        "name": "robowhois",
-        "description": "",
-        "type": ""
-      },
-      {
         "name": "rollbar",
         "description": "",
         "type": "",
@@ -534,11 +476,6 @@
       },
       {
         "name": "runtimeerror",
-        "description": "",
-        "type": ""
-      },
-      {
-        "name": "saaspose",
         "description": "",
         "type": ""
       },
@@ -559,11 +496,6 @@
         "url": "http://www.searchify.com/"
       },
       {
-        "name": "securekey",
-        "description": "",
-        "type": ""
-      },
-      {
         "name": "semaphore",
         "description": "",
         "type": ""
@@ -576,11 +508,6 @@
       },
       {
         "name": "sentry",
-        "description": "",
-        "type": ""
-      },
-      {
-        "name": "sharedworkforce",
         "description": "",
         "type": ""
       },
@@ -626,20 +553,9 @@
         "type": ""
       },
       {
-        "name": "tddium",
-        "description": "",
-        "type": ""
-      },
-      {
         "name": "telapi",
         "description": "",
         "type": ""
-      },
-      {
-        "name": "tempodb",
-        "description": "",
-        "type": "",
-        "url": "http://tempo-db.com/"
       },
       {
         "name": "temporize",
@@ -694,17 +610,7 @@
         "type": ""
       },
       {
-        "name": "algoliasearch",
-        "url": "",
-        "type": ""
-      },
-      {
         "name": "auth0",
-        "url": "",
-        "type": ""
-      },
-      {
-        "name": "bernoulli",
         "url": "",
         "type": ""
       },
@@ -729,17 +635,7 @@
         "type": ""
       },
       {
-        "name": "deadmanssnitch",
-        "url": "",
-        "type": ""
-      },
-      {
         "name": "exceptiontrap",
-        "url": "",
-        "type": ""
-      },
-      {
-        "name": "expeditedssl",
         "url": "",
         "type": ""
       },
@@ -784,11 +680,6 @@
         "type": ""
       },
       {
-        "name": "pgstudio",
-        "url": "",
-        "type": ""
-      },
-      {
         "name": "pointdns",
         "url": "",
         "type": ""
@@ -799,22 +690,12 @@
         "type": ""
       },
       {
-        "name": "quotaguardstatic",
-        "url": "",
-        "type": ""
-      },
-      {
         "name": "rcmmndr",
         "url": "",
         "type": ""
       },
       {
         "name": "redismonitor",
-        "url": "",
-        "type": ""
-      },
-      {
-        "name": "ruppells-sockets",
         "url": "",
         "type": ""
       },
@@ -835,11 +716,6 @@
       },
       {
         "name": "transloadit",
-        "url": "",
-        "type": ""
-      },
-      {
-        "name": "userbin",
         "url": "",
         "type": ""
       },
@@ -879,11 +755,6 @@
         "type": "analytics"
       },
       {
-        "name": "liveinsight",
-        "url": "https://app.liveinsight.io/",
-        "type": "analytics"
-      },
-      {
         "name": "oauthio",
         "url": "https://oauth.io/",
         "type": ""
@@ -896,6 +767,311 @@
       {
         "name": "3scale",
         "url": "http://www.3scale.net/",
+        "type": ""
+      },
+      {
+        "name": "Airbrake Bug Tracker",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Algolia Realtime Search",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Aspose for Cloud",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Autobus",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Blackfire Profiler",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Blower.io SMS",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Bonsai Elasticsearch",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Boomerang.io",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "cine.io",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "CircleCI",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Clearbit",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "ClearDB MySQL Database",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Clerk",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "6px",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "CloudSponge Contact Importer",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "datawaki",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Dead Man's Snitch",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Deploy Hooks",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Dyn: DynECT Managed DNS",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Ebook Glue",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "elastic.io Contact Sync",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Eltanin Eye for Facebook",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Expedited SSL",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Fastly ",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Filepicker.io",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Fortify on Demand",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Found Elasticsearch",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Gioco Pro",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Graph Story",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Heroku Connect",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Heroku Postgres",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "The Informant",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "JawsDB MySQL",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Keen IO",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Mailtrap by Railsware",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Mandrill by MailChimp",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "New Relic APM",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "OAuth.io",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "PostgreSQL Studio",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "PhraseApp - Translate Software Better",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Planter",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Process Scheduler",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "QuotaGuard Static",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "RabbitMQ Bigwig",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Rainforest QA",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Raygun.io",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Ruppell's Sockets",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "ScaleDrone",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Heroku Scheduler",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "SearchBox Elasticsearch",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Secure Key",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Shared Workforce",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Stormpath User Management",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Swiftype Search & Autocomplete",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Solano CI",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Temporize Scheduler",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "ThingFabric ",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Treasure Data Hadoop",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Wrangler",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Xplenty",
+        "url": "",
+        "type": ""
+      },
+      {
+        "name": "Ziggeo",
+        "url": "",
         "type": ""
       }
     ]
