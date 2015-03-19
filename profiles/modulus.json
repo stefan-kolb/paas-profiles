@@ -1,6 +1,6 @@
 {
   "name": "Modulus",
-  "revision": "2014-07-24",
+  "revision": "2015-03-19",
   "url": "https://modulus.io",
   "status": "production",
   "status_since": "2013-03-15",
@@ -86,6 +86,12 @@
         "url": "http://sendgrid.com/",
         "description": "",
         "type": "messaging"
+      },
+      {
+        "name": "searchly",
+        "url": "http://www.searchly.com/",
+        "description": "",
+        "type": "search"
       }
     ]
   },
