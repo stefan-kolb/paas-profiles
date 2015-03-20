@@ -1,6 +1,6 @@
 {
   "name": "OutSystems Platform",
-  "revision": "2015-03-16",
+  "revision": "2015-03-20",
   "vendor_verified": "2015-03-16",
   "url": "http://www.outsystems.com",
   "status": "production",
@@ -8,7 +8,7 @@
   "type": "SaaS-centric",
   "hosting": {
     "public": true,
-    "private": false
+    "private": true
   },
   "pricing": [
     {
