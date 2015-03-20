@@ -93,46 +93,4 @@ namespace :profiles do
       end
     end
   end
-
-  desc "Updates Heroku Addons"
-  task :update do
-    # get addons
-    response = RestClient.get('https://api.heroku.com/addon-services', {'Accept' => 'application/vnd.heroku+json; version=3' })
-    recent = JSON.parse(response.body)
-    profile = JSON.parse(File.read("./profiles/heroku.json"))
-
-    puts "Recent #{recent.size}, Old #{profile['services']['addon'].size}"
-    # check if included
-    recent.each do |a|
-      reg = a['name'].gsub(/[\s_-]/, '.')
-      reg = reg.gsub(/(.{1})(?=.)/, '\1(.)?\2')
-      unless profile['services']['addon'].detect { |i| i['name'] =~ /#{reg}/i }
-        puts "Potentially new add-on #{a['name']}"
-        puts 'Add (y/n)?'
-        accept = STDIN.gets.chomp()
-        if accept.eql? 'y'
-          profile['services']['addon'] << { "name" => a['name'], "url" => "", "type" => "" }
-        end
-      end
-    end
-
-    # remove old
-    profile['services']['addon'].each do |a|
-      reg = a['name'].gsub(/[\s_-]/, '.')
-      reg = reg.gsub(/(.{1})(?=.)/, '\1(.)?\2')
-      unless recent.detect { |i| i['name'] =~ /#{reg}/i } || recent.detect { |i| i['name'] =~ /#{a['name'].gsub(/[\s_-]/, '')}/i }
-        puts "Potentially removed add-on #{a['name']}"
-        puts 'Delete (y/n)?'
-        accept = STDIN.gets.chomp()
-        if accept.eql? 'y'
-          profile['services']['addon'].delete(a)
-        end
-      end
-    end
-
-    # save file
-    File.open("./profiles/heroku.json", 'w') do |f|
-      f.write(JSON.pretty_generate(profile))
-    end
-  end
 end
