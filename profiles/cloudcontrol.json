@@ -1,6 +1,6 @@
 {
   "name": "cloudControl",
-  "revision": "2015-03-20",
+  "revision": "2015-03-23",
   "url": "http://cloudcontrol.com/",
   "status": "production",
   "status_since": "2010-12-01",
@@ -188,8 +188,8 @@
       },
       {
         "name": "codizy",
-        "url": "",
-        "type": ""
+        "url": "http://www.codizy.com/",
+        "type": "devops"
       },
       {
         "name": "dbinsights",
@@ -198,7 +198,7 @@
       },
       {
         "name": "elasticio",
-        "url": "",
+        "url": "http://www.elastic.io/",
         "type": ""
       },
       {
@@ -208,8 +208,8 @@
       },
       {
         "name": "exceptiontrap",
-        "url": "",
-        "type": ""
+        "url": "https://exceptiontrap.com/",
+        "type": "analytics"
       },
       {
         "name": "found",
@@ -218,18 +218,18 @@
       },
       {
         "name": "foundelasticsearch",
-        "url": "",
-        "type": ""
+        "url": "https://www.found.no/",
+        "type": "search"
       },
       {
         "name": "groupdocs",
-        "url": "",
-        "type": ""
+        "url": "http://groupdocs.com/",
+        "type": "media"
       },
       {
         "name": "hostedgraphite",
-        "url": "",
-        "type": ""
+        "url": "https://www.hostedgraphite.com/",
+        "type": "analytics"
       },
       {
         "name": "indexdepot",
@@ -238,18 +238,18 @@
       },
       {
         "name": "iron_mq",
-        "url": "",
-        "type": ""
+        "url": "http://www.iron.io/mq",
+        "type": "worker"
       },
       {
         "name": "iron_worker",
-        "url": "",
-        "type": ""
+        "url": "http://www.iron.io/worker",
+        "type": "worker"
       },
       {
         "name": "loaderio",
-        "url": "",
-        "type": ""
+        "url": "http://loader.io/",
+        "type": "analytics"
       },
       {
         "name": "logentries",
@@ -278,8 +278,8 @@
       },
       {
         "name": "newrelic",
-        "url": "",
-        "type": ""
+        "url": "http://newrelic.com/",
+        "type": "analytics"
       },
       {
         "name": "openredis",
@@ -288,8 +288,8 @@
       },
       {
         "name": "phrase",
-        "url": "",
-        "type": ""
+        "url": "https://phraseapp.com/",
+        "type": "other"
       },
       {
         "name": "quotaguard",
@@ -303,11 +303,6 @@
       },
       {
         "name": "rabbitmq_bigwig",
-        "url": "",
-        "type": ""
-      },
-      {
-        "name": "railsonfire",
         "url": "",
         "type": ""
       },
