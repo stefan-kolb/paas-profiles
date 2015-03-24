@@ -1,6 +1,6 @@
 {
   "name": "Microsoft Azure",
-  "revision": "2015-02-03",
+  "revision": "2015-03-24",
   "url": "https://azure.microsoft.com/",
   "status": "production",
   "status_since": "2010-02-01",
@@ -15,6 +15,9 @@
       "period": "monthly"
     }
   ],
+  "qos": {
+    "uptime": 99.95
+  },
   "scaling": {
     "vertical": true,
     "horizontal": true,
@@ -59,17 +62,215 @@
     }
   ],
   "middleware": [
-
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "7"
+      ]
+    }
   ],
   "frameworks": [
+    {
+      "name": "cakephp",
+      "runtime": "php",
+      "versions": [
 
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    }
   ],
   "services": {
     "native": [
 
     ],
     "addon": [
-
+      {
+        "name": "abbyy ocr",
+        "url": "",
+        "type": "media"
+      },
+      {
+        "name": "alert logic log manager",
+        "url": "",
+        "type": "analytics"
+      },
+      {
+        "name": "appdynamics",
+        "url": "",
+        "type": "analytics"
+      },
+      {
+        "name": "aspera server on demand",
+        "url": "",
+        "type": "devops"
+      },
+      {
+        "name": "auth0",
+        "url": "",
+        "type": "other"
+      },
+      {
+        "name": "automatic backup",
+        "url": "",
+        "type": "devops"
+      },
+      {
+        "name": "azure watch",
+        "url": "",
+        "type": "analytics"
+      },
+      {
+        "name": "buddy",
+        "url": "",
+        "type": "other"
+      },
+      {
+        "name": "clearpointe azure management",
+        "url": "",
+        "type": "devops"
+      },
+      {
+        "name": "cloudconnector",
+        "url": "",
+        "type": "devops"
+      },
+      {
+        "name": "cloudamqp",
+        "url": "",
+        "type": "worker"
+      },
+      {
+        "name": "cloudant",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "crypteron cipherdb",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "facetflow elasticsearch",
+        "url": "",
+        "type": "search"
+      },
+      {
+        "name": "ironworker",
+        "url": "",
+        "type": "worker"
+      },
+      {
+        "name": "istreamplanet cloud live",
+        "url": "",
+        "type": "media"
+      },
+      {
+        "name": "kayak media processor",
+        "url": "",
+        "type": "media"
+      },
+      {
+        "name": "livearena publisher",
+        "url": "",
+        "type": "media"
+      },
+      {
+        "name": "memcached cloud",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "memcachier",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "microsoft content",
+        "url": "",
+        "type": "media"
+      },
+      {
+        "name": "microsoft photodna cloud",
+        "url": "",
+        "type": "media"
+      },
+      {
+        "name": "mongodb",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "mongolab",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "myget",
+        "url": "",
+        "type": "devops"
+      },
+      {
+        "name": "newrelic",
+        "url": "",
+        "type": "analytics"
+      },
+      {
+        "name": "nodejitsu redis",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "noxum workflow service",
+        "url": "",
+        "type": "other"
+      },
+      {
+        "name": "noxum pdf as a service",
+        "url": "",
+        "type": "media"
+      },
+      {
+        "name": "ravenhq",
+        "url": "https://ravenhq.com/",
+        "type": "datastore"
+      },
+      {
+        "name": "raygun",
+        "url": "",
+        "type": "analytics"
+      },
+      {
+        "name": "rediscloud",
+        "url": "",
+        "type": "datastore"
+      },
+      {
+        "name": "sendgrid",
+        "url": "https://sendgrid.com/",
+        "type": "mail"
+      },
+      {
+        "name": "supportify",
+        "url": "",
+        "type": "other"
+      },
+      {
+        "name": "the identity hub",
+        "url": "",
+        "type": "other"
+      },
+      {
+        "name": "vs anywhere collaboration",
+        "url": "",
+        "type": "devops"
+      }
     ]
   },
   "extensible": true,
