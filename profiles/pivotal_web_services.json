@@ -125,94 +125,130 @@
     ],
     "addon": [
       {
+        "name": "searchify",
+        "url": "",
+        "description": "Custom search you control",
+        "type": ""
+      },
+      {
         "name": "blazemeter",
-        "url": "http://blazemeter.com/",
-        "description": "",
-        "type": "analytics"
+        "url": "",
+        "description": "The JMeter Load Testing Cloud",
+        "type": ""
+      },
+      {
+        "name": "rediscloud",
+        "url": "",
+        "description": "Enterprise-Class Redis for Developers",
+        "type": ""
       },
       {
         "name": "cleardb",
-        "url": "http://www.cleardb.com/",
-        "description": "",
-        "type": "datastore"
+        "url": "",
+        "description": "Highly available MySQL for your Apps.",
+        "type": ""
       },
       {
         "name": "cloudamqp",
-        "url": "http://www.cloudamqp.com/",
-        "description": "",
-        "type": "worker"
-      },
-      {
-        "name": "cloudforge",
-        "url": "https://cloudforge.com/",
-        "description": "",
-        "type": "devops"
+        "url": "",
+        "description": "Managed HA RabbitMQ servers in the cloud",
+        "type": ""
       },
       {
         "name": "elephantsql",
-        "url": "http://www.elephantsql.com/",
-        "description": "",
-        "type": "datastore"
-      },
-      {
-        "name": "ironmq",
-        "url": "http://www.iron.io/mq",
-        "description": "",
-        "type": "worker"
-      },
-      {
-        "name": "ironworker",
-        "url": "http://www.iron.io/worker",
-        "description": "",
-        "type": "worker"
-      },
-      {
-        "name": "loadimpact",
-        "url": "http://loadimpact.com/",
-        "description": "",
-        "type": "analytics"
-      },
-      {
-        "name": "memcached cloud",
-        "url": "http://redislabs.com/memcached-cloud",
-        "description": "",
-        "type": "datastore"
-      },
-      {
-        "name": "mongolab",
-        "url": "https://mongolab.com/",
-        "description": "",
-        "type": "datastore"
-      },
-      {
-        "name": "new relic",
-        "url": "http://newrelic.com/",
-        "description": "",
-        "type": "analytics"
-      },
-      {
-        "name": "redis cloud",
-        "url": "http://redis-cloud.com/",
-        "description": "",
-        "type": "datastore"
+        "url": "",
+        "description": "PostgreSQL as a Service",
+        "type": ""
       },
       {
         "name": "sendgrid",
-        "url": "http://sendgrid.com/",
-        "description": "",
-        "type": "messaging"
+        "url": "",
+        "description": "Email Delivery. Simplified.",
+        "type": ""
       },
       {
-        "name": "searchify",
-        "url": "https://www.searchify.com/",
-        "description": "",
-        "type": "search"
+        "name": "mongolab",
+        "url": "",
+        "description": "Fully-managed MongoDB-as-a-Service",
+        "type": ""
+      },
+      {
+        "name": "newrelic",
+        "url": "",
+        "description": "Manage and monitor your apps",
+        "type": ""
+      },
+      {
+        "name": "loadimpact",
+        "url": "",
+        "description": "Automated and on-demand performance testing",
+        "type": ""
+      },
+      {
+        "name": "memcachier",
+        "url": "",
+        "description": "The easiest, most advanced memcache.",
+        "type": ""
+      },
+      {
+        "name": "memcachedcloud",
+        "url": "",
+        "description": "Enterprise-Class Memcached for Developers",
+        "type": ""
       },
       {
         "name": "searchly",
-        "url": "http://www.searchly.com/",
-        "description": "",
-        "type": "search"
+        "url": "",
+        "description": "Search Made Simple. Powered-by Elasticsearch",
+        "type": ""
+      },
+      {
+        "name": "cloudforge",
+        "url": "",
+        "description": "Development Tools In The Cloud",
+        "type": ""
+      },
+      {
+        "name": "ironworker",
+        "url": "",
+        "description": "Scalable Background and Async Processing",
+        "type": ""
+      },
+      {
+        "name": "ironmq",
+        "url": "",
+        "description": "Powerful Durable Message Queueing Service",
+        "type": ""
+      },
+      {
+        "name": "pubnub",
+        "url": "",
+        "description": "Build Realtime Apps that Scale",
+        "type": ""
+      },
+      {
+        "name": "cine-io",
+        "url": "",
+        "description": "instant global live video streaming",
+        "type": ""
+      },
+      {
+        "name": "cedexisopenmix",
+        "url": "",
+        "description": "Openmix Global Cloud & Data Center Load Balancer",
+        "type": ""
+      },
+      {
+        "name": "cedexisradar",
+        "url": "",
+        "description": "Free Website &amp; Mobile App Performance Reports",
+        "type": ""
+      },
+      {
+        "name": "statica",
+        "url": "",
+        "description": "Enterprise Static IP Addresses",
+        "type": ""
       }
     ]
   },
