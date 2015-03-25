@@ -65,14 +65,14 @@
       <img src="<%= url('/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded" style="margin-bottom: 8px">
   <% end %>
   <h2>
-    <a href="/vendor/<%= url_encode(@p1['name']) %>"><%= @p1['name'] %></a>
+    <a href="/vendors/<%= url_encode(@p1['name']) %>"><%= @p1['name'] %></a>
     <% unless @p1['vendor_verified'].nil? %>
         <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @p1['vendor_verified'].to_date %>"></i>
     <% end %>
   </h2>
 
   <div>
-    <a href="/vendor/<%= url_encode(@p1['name']) %>" class="btn btn-inverse btn-mini">View details</a>
+    <a href="/vendors/<%= url_encode(@p1['name']) %>" class="btn btn-inverse btn-mini">View details</a>
   </div>
   <p><br></p>
 </tr>
@@ -202,7 +202,7 @@
           %>
       <script>
           if (p1_frameworks_missing > 0) {
-              $("#p1-frameworks-list").append('<a href="/vendor/<%= url_encode(@p1['name']) %>#frameworks">\
+              $("#p1-frameworks-list").append('<a href="/vendors/<%= url_encode(@p1['name']) %>#frameworks">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p1_frameworks_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
@@ -251,7 +251,7 @@
           %>
       <script>
           if (p1_services_missing > 0) {
-              $("#p1-services-list").append('<a href="/vendor/<%= url_encode(@p1['name']) %>#services">\
+              $("#p1-services-list").append('<a href="/vendors/<%= url_encode(@p1['name']) %>#services">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p1_services_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
@@ -301,7 +301,7 @@
           %>
       <script>
           if (p1_addon_missing > 0) {
-              $("#p1-addon-list").append('<a href="/vendor/<%= url_encode(@p1['name']) %>#services">\
+              $("#p1-addon-list").append('<a href="/vendors/<%= url_encode(@p1['name']) %>#services">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p1_addon_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
@@ -351,14 +351,14 @@
       <img src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded" style="margin-bottom: 8px">
   <% end %>
   <h2>
-    <a href="/vendor/<%= url_encode(@p2['name']) %>"><%= @p2['name'] %></a>
+    <a href="/vendors/<%= url_encode(@p2['name']) %>"><%= @p2['name'] %></a>
     <% unless @p2['vendor_verified'].nil? %>
         <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @p2['vendor_verified'].to_date %>"></i>
     <% end %>
   </h2>
 
   <div>
-    <a href="/vendor/<%= url_encode(@p2['name']) %>" class="btn btn-inverse btn-mini">View details</a>
+    <a href="/vendors/<%= url_encode(@p2['name']) %>" class="btn btn-inverse btn-mini">View details</a>
   </div>
   <p><br></p>
 </tr>
@@ -488,7 +488,7 @@
           %>
       <script>
           if (p2_frameworks_missing > 0) {
-              $("#p2-frameworks-list").append('<a href="/vendor/<%= url_encode(@p2['name']) %>#frameworks">\
+              $("#p2-frameworks-list").append('<a href="/vendors/<%= url_encode(@p2['name']) %>#frameworks">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p2_frameworks_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
@@ -535,7 +535,7 @@
           %>
       <script>
           if (p2_services_missing > 0) {
-              $("#p2-services-list").append('<a href="/vendor/<%= url_encode(@p2['name']) %>#services">\
+              $("#p2-services-list").append('<a href="/vendors/<%= url_encode(@p2['name']) %>#services">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p2_services_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
@@ -585,7 +585,7 @@
           %>
       <script>
           if (p2_addon_missing > 0) {
-              $("#p2-addon-list").append('<a href="/vendor/<%= url_encode(@p2['name']) %>#services">\
+              $("#p2-addon-list").append('<a href="/vendors/<%= url_encode(@p2['name']) %>#services">\
                                     <span class="img-rounded tip" style="background-color: #ffffff; display:inline-block;vertical-align:middle;margin:5px;width: 40px;height:40px;border: 1px solid #E6E6E6;" title="' + p2_addon_missing + ' more available">\
                                     <span style="display:inline-block;text-align:center; margin-top: 10px; font-size:20px;width: 40px;height:40px;"><i class="fa fa-plus"></i><strong></strong></span>\
                                     </span></a>');
