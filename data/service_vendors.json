@@ -338,7 +338,7 @@
   {
     "key": "cloudamqp",
     "name": "cloudamqp",
-    "url": "http://www.cloudamqp.com/,http://cloudamqp.com/",
+    "url": "http://www.cloudamqp.com/",
     "description": "Managed HA RabbitMQ servers in the cloud",
     "twitter": "cloudamqp",
     "type": "worker"
@@ -1154,7 +1154,7 @@
   {
     "key": "ravenhq",
     "name": "ravenhq",
-    "url": "https://ravenhq.com/,https://www.ravenhq.com/",
+    "url": "https://ravenhq.com/",
     "description": "",
     "twitter": "ravenhq",
     "type": "datastore"
@@ -1258,7 +1258,7 @@
   {
     "key": "searchify",
     "name": "searchify",
-    "url": "https://www.searchify.com/,http://www.searchify.com/",
+    "url": "https://www.searchify.com/",
     "description": "Custom search you control",
     "twitter": "getsearchify",
     "type": "search"
@@ -1290,7 +1290,7 @@
   {
     "key": "sendgrid",
     "name": "sendgrid",
-    "url": "http://sendgrid.com/,https://sendgrid.com/",
+    "url": "http://sendgrid.com/",
     "description": "Email Delivery. Simplified.",
     "twitter": "sendgrid",
     "type": "messaging,mail"
@@ -1362,7 +1362,7 @@
   {
     "key": "statsmix",
     "name": "statsmix",
-    "url": "http://www.statsmix.com/,https://www.statsmix.com/",
+    "url": "http://www.statsmix.com/",
     "description": "",
     "twitter": "statsmix",
     "type": "analytics"
@@ -1530,7 +1530,7 @@
   {
     "key": "usersnap",
     "name": "usersnap",
-    "url": "http://usersnap.com/,https://usersnap.com/",
+    "url": "http://usersnap.com",
     "description": "",
     "twitter": "usersnap",
     "type": "devops,media"
