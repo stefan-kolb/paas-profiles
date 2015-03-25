@@ -8,6 +8,7 @@ require_relative '../app/models/statistics/runtime_trend'
 #require_relative '../app/models/software/framework'
 #require_relative '../app/models/software/middleware'
 require_relative '../app/models/datacenter'
+require_relative '../app/models/service_vendor'
 
 namespace :db do
 
@@ -20,7 +21,7 @@ namespace :db do
       begin
         data = JSON.parse(File.read(file))
         Profiles::Vendor.create!(data)
-      rescue Exception => e
+      rescue StandardError => e
         raise "An error occurred while parsing #{file}: #{e.message}"
       end
     end
@@ -32,6 +33,22 @@ namespace :db do
     datacenter
     # technology information
     technologies
+    # service vendors
+    service_vendors
+  end
+
+  def service_vendors
+    data = JSON.parse(File.read('./data/service_vendors.json'))
+
+    # delete collection
+    Profiles::ServiceVendor.delete_all
+    data.each do |e|
+      begin
+        Profiles::ServiceVendor.create!(e)
+      rescue StandardError => e
+        raise "An error occurred while writing service vendors: #{e.message}"
+      end
+    end
   end
 
   def technologies

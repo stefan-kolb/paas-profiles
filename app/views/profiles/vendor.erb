@@ -349,18 +349,25 @@
                     </thead>
                     <tbody>
                     <% @profile["services"]["addon"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
+                        <%
+                           begin
+                             addon = Profiles::ServiceVendor.find_by(:key => rt['name'].downcase)
+                           rescue Mongoid::Errors::DocumentNotFound
+                             addon = rt
+                           end
+                        %>
                         <tr>
                           <td>
-                            <% unless rt["url"].nil? || rt["url"].empty? %>
-                                <a href="<%= rt["url"] %>" target="_blank">
+                            <% unless addon["url"].blank? %>
+                                <a href="<%= addon["url"] %>" target="_blank">
                             <% end %>
-                            <%= rt["name"].split(" ").map(&:capitalize).join(" ") %>
+                            <%= addon["name"] %>
                             </a>
                           </td>
-                          <td class="hidden-phone"><em><%= rt["description"] %></em></td>
+                          <td class="hidden-phone"><em><%= addon["description"] %></em></td>
                           <td>
-                            <% unless rt["type"].nil? %>
-                                <em><%= rt["type"].upcase %></em>
+                            <% unless addon["type"].blank? %>
+                                <em><%= addon["type"].upcase %></em>
                             <% end %>
                           </td>
                         </tr>
