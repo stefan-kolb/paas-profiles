@@ -10,6 +10,7 @@ require_relative 'app/models/vendor/vendor'
 
 # helper
 require_relative 'lib/io_helper'
+include IoHelper
 
 # subtasks
 require_relative 'tasks/db'
@@ -18,8 +19,6 @@ require_relative 'tasks/profiles'
 require_relative 'tasks/geo'
 
 Mongoid.load!('./config/mongoid.yml')
-
-include IoHelper
 
 Rake::TestTask.new do |t|
   t.warning = true

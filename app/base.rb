@@ -1,9 +1,5 @@
-require 'rubygems'
-require 'bundler/setup'
-
 require 'geocoder'
 require 'json'
-require 'mongoid'
 require 'versionomy'
 require 'require_all'
 # FIXME: change to sinatra/base when simple-navigation is fixed

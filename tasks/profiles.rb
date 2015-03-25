@@ -16,7 +16,7 @@ namespace :profiles do
         end
         data['infrastructures'].sort_by! { |c| c['continent'] } unless data['infrastructures'].blank?
         # save file
-        File.open(file_name, "w") do |f|
+        File.open(file_name, 'w') do |f|
           f.write(JSON.pretty_generate(data))
         end
       rescue
