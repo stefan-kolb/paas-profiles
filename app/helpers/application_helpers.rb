@@ -1,5 +1,5 @@
 require 'json'
-require 'uri'
+require 'cgi'
 require 'iso_country_codes'
 
 module ApplicationHelpers
@@ -22,11 +22,11 @@ module ApplicationHelpers
   end
 
   def url_encode(string)
-    URI.escape(string.downcase)
+    CGI::escape(string.downcase)
   end
 
   def url_decode(string)
-    URI.unescape(string.downcase)
+    CGI::unescape(string.downcase)
   end
 
 end
