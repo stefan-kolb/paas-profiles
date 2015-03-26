@@ -63,5 +63,17 @@ class TestApi < MiniTest::Test
       assert(last_response.ok?)
       assert_equal(response.to_json, last_response.body, 'Unexpected JSON response')
     end
+
+    should 'unescape vendor name correctly' do
+      create(:vendor, name: 'OpenShift Online')
+
+      url_name = 'openshift%20online'
+      get "/api/vendors/#{url_name}/infrastructures"
+      assert(last_response.ok?)
+
+      url_name = 'openshift+online'
+      get "/api/vendors/#{url_name}/infrastructures"
+      assert(last_response.ok?)
+    end
   end
 end

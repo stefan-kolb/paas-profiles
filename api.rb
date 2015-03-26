@@ -1,6 +1,7 @@
 require 'grape'
 require 'versionomy'
 require 'geocoder'
+require 'cgi'
 
 require_relative 'app/entities/vendor'
 require_relative 'app/models/vendor/vendor'
@@ -27,7 +28,7 @@ module Profiles
       end
 
       get ':name/infrastructures' do
-        name = params[:name]
+        name = CGI::unescape(params[:name])
         # TODO: move to main configuration file
         Geocoder.configure(
             :timeout => 5
