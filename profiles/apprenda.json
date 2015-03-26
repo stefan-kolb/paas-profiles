@@ -37,13 +37,12 @@
       "versions": [
         "6.2"
       ]
-    }
-  ],
-  "frameworks": [
+    },
     {
-      "name": "django",
-      "runtime": "python",
+      "name": "tomcat",
+      "runtime": "java",
       "versions": [
+        "6", "7"
       ]
     }
   ],
@@ -55,6 +54,13 @@
           "2008R2", "2012"
         ],
         "type": "Database"
+      },
+      {
+        "name": "Oracle",
+        "versions": [
+          "11g", "12c"
+          ],
+          "type": "Database"
       }
     ],
     "addon": [
