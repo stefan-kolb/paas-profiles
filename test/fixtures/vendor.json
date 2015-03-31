@@ -1,0 +1,82 @@
+{
+    "name": "example",
+    "revision": "1970-01-01",
+    "vendor_verified": "1970-01-01",
+    "url": "http://www.example.com",
+    "status": "production",
+    "status_since": "1970-01-01",
+    "type": "example",
+    "extensible": true,
+    "hosting": {
+        "public": true,
+        "private": true
+    },
+    "pricing": [
+        {
+            "model": "fixed",
+            "period": "monthly"
+        }
+    ],
+    "qos": {
+        "uptime": 100,
+        "compliance": ["example"]
+    },
+    "scaling": {
+        "vertical": true,
+        "horizontal": true,
+        "auto": true
+    },
+    "runtimes": [
+        {
+            "language": "example",
+            "versions": [
+                "1.0"
+            ]
+        }
+    ],
+    "middleware": [
+        {
+            "name": "example",
+            "runtime": "example",
+            "versions": [
+                "1.0"
+            ]
+        }
+    ],
+    "frameworks": [
+        {
+            "name": "example",
+            "runtime": "example",
+            "versions": [
+                "1.0"
+            ]
+        }
+    ],
+    "services": {
+        "native": [
+            {
+                "name": "example",
+                "type": "example",
+                "versions": [
+                    "1.0"
+                ]
+            }
+        ],
+        "addon": [
+            {
+                "name": "example",
+                "url": "http://www.example.com",
+                "description": "example",
+                "type": "example"
+            }
+        ]
+    },
+    "infrastructures": [
+        {
+            "continent": "EU",
+            "country": "DE",
+            "region": "example",
+            "provider": "example"
+        }
+    ]
+}
