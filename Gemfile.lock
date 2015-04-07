@@ -135,6 +135,6 @@ DEPENDENCIES
   rmagick
   shoulda-context
   sinatra
-  sinatra-simple-navigation
+  sinatra-simple-navigation (~> 3.7)
   unicorn
   versionomy
