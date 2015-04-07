@@ -1,9 +1,9 @@
 {
   "name": "Evia",
-  "revision": "2013-12-11",
+  "revision": "2015-04-07",
   "url": "https://eviaproject.org/",
-  "status": "beta",
-  "status_since": "2013-12-10",
+  "status": "eol",
+  "status_since": "2015-04-01",
   "type": "Generic",
   "hosting": {
     "public": true,
