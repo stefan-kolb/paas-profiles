@@ -7,6 +7,8 @@ gem 'mongoid', '>= 4.0'
 gem 'iso_country_codes'
 gem 'rest-client'
 gem 'versionomy'
+# remove after gem has been updated to v4
+gem 'simple-navigation', '~> 3.0'
 gem 'sinatra-simple-navigation', '~> 3.7'
 gem 'geocoder'
 gem 'rmagick'
