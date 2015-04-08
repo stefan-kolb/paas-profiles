@@ -2,8 +2,7 @@ require 'geocoder'
 require 'json'
 require 'versionomy'
 require 'require_all'
-# FIXME: change to sinatra/base when simple-navigation is fixed
-require 'sinatra'
+require 'sinatra/base'
 require 'sinatra/simple-navigation'
 SimpleNavigation.config_file_paths << File.expand_path('../config', __dir__)
 

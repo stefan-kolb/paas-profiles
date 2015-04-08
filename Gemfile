@@ -7,9 +7,7 @@ gem 'mongoid', '>= 4.0'
 gem 'iso_country_codes'
 gem 'rest-client'
 gem 'versionomy'
-# remove after gem has been updated to v4
-gem 'simple-navigation', '~> 3.0'
-gem 'sinatra-simple-navigation', '~> 3.7'
+gem 'sinatra-simple-navigation', '~> 4.0'
 gem 'geocoder'
 gem 'rmagick'
 gem 'activesupport'
@@ -23,7 +21,7 @@ group :test do
   gem 'shoulda-context'
   gem 'rack-test'
   gem 'factory_girl'
-  gem 'database_cleaner', '~> 1.3.0'
+  gem 'database_cleaner', '~> 1.4.1'
 end
 
 group :production do
