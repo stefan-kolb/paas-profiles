@@ -17,7 +17,8 @@
   {
     "vendor": "Apache Stratos",
     "platform": "",
-    "isolation": ""
+    "isolation": "",
+    "dev_model": "open source"
   },
   {
     "vendor": "App42 PaaS",
@@ -42,7 +43,8 @@
   {
     "vendor": "AppScale",
     "platform": "",
-    "isolation": ""
+    "isolation": "",
+    "dev_model": "open source"
   },
   {
     "vendor": "Appsembler",
@@ -82,7 +84,8 @@
   {
     "vendor": "Cloud Foundry",
     "platform": "Cloud Foundry",
-    "isolation": "Container"
+    "isolation": "Container",
+    "dev_model": "open source"
   },
   {
     "vendor": "cloudControl",
@@ -92,7 +95,8 @@
   {
     "vendor": "Cloudify",
     "platform": "",
-    "isolation": ""
+    "isolation": "",
+    "dev_model": "open source"
   },
   {
     "vendor": "Cloudn PaaS",
@@ -112,7 +116,8 @@
   {
     "vendor": "ConPaaS",
     "platform": "",
-    "isolation": ""
+    "isolation": "",
+    "dev_model": "open source"
   },
   {
     "vendor": "Cumulogic Elastic WebStack",
@@ -122,7 +127,8 @@
   {
     "vendor": "Deis",
     "platform": "",
-    "isolation": "Container"
+    "isolation": "Container",
+    "dev_model": "open source"
   },
   {
     "vendor": "dotCloud",
@@ -135,7 +141,7 @@
     "isolation": ""
   },
   {
-    "vendor": "ELPaaS",
+    "vendor": "Heirloom PaaS",
     "platform": "",
     "isolation": ""
   },
@@ -157,7 +163,8 @@
   {
     "vendor": "Flynn",
     "platform": "",
-    "isolation": "Container"
+    "isolation": "Container",
+    "dev_model": "open source"
   },
   {
     "vendor": "Force.com",
@@ -232,7 +239,8 @@
   {
     "vendor": "mOSAIC",
     "platform": "",
-    "isolation": ""
+    "isolation": "",
+    "dev_model": "open source"
   },
   {
     "vendor": "Ninefold",
@@ -262,7 +270,8 @@
   {
     "vendor": "OpenShift Origin",
     "platform": "OpenShift Origin",
-    "isolation": "Container"
+    "isolation": "Container",
+    "dev_model": "open source"
   },
   {
     "vendor": "Oracle Cloud PaaS",
@@ -367,7 +376,8 @@
   {
     "vendor": "Tsuru",
     "platform": "",
-    "isolation": "Container"
+    "isolation": "Container",
+    "dev_model": "open source"
   },
   {
     "vendor": "Uhuru AppCloud",
