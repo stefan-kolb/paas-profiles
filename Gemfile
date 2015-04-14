@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'sinatra'
-gem 'mongoid', '>= 4.0'
+gem 'mongoid', '~> 4.0'
 gem 'iso_country_codes'
 gem 'rest-client'
 gem 'versionomy'
@@ -21,7 +21,7 @@ group :test do
   gem 'shoulda-context'
   gem 'rack-test'
   gem 'factory_girl'
-  gem 'database_cleaner', '~> 1.4.1'
+  gem 'database_cleaner', '>= 1.4.1'
 end
 
 group :production do

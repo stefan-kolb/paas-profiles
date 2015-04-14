@@ -120,14 +120,14 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
-  database_cleaner (~> 1.4.1)
+  database_cleaner (>= 1.4.1)
   factory_girl
   geocoder
   grape
   grape-entity
   iso_country_codes
   minitest
-  mongoid (>= 4.0)
+  mongoid (~> 4.0)
   newrelic_rpm
   rack-test
   rake
