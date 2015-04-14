@@ -83,13 +83,11 @@
   },
   {
     "vendor": "Cloud Foundry",
-    "platform": "Cloud Foundry",
     "isolation": "Container",
     "dev_model": "open source"
   },
   {
     "vendor": "cloudControl",
-    "platform": "cloudControl",
     "isolation": "Container"
   },
   {
@@ -269,7 +267,6 @@
   },
   {
     "vendor": "OpenShift Origin",
-    "platform": "OpenShift Origin",
     "isolation": "Container",
     "dev_model": "open source"
   },

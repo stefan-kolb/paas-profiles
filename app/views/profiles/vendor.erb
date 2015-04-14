@@ -27,14 +27,20 @@
       </div>
       <% unless @profile["platform"].blank? %>
       <div class="span2">
-      <i class="fa fa-institution tip" title="Platform"></i>
-      <small><strong>&nbsp;<a href="/vendor/<%= @profile["platform"] %>"><%= @profile["platform"] %></a></strong></small>
+        <i class="fa fa-institution tip" title="Platform"></i>
+        <small><strong>&nbsp;<a href="/vendors/<%= url_encode(@profile["platform"]) %>"><%= @profile["platform"] %></a></strong></small>
       </div>
       <% end %>
       <% unless @profile["isolation"].blank? %>
       <div class="span2">
-      <i class="fa fa-gears tip" title="Isolation"></i>
-      <small><strong>&nbsp;<%= @profile["isolation"] %></strong></small>
+        <i class="fa fa-gears tip" title="Isolation"></i>
+        <small><strong>&nbsp;<%= @profile["isolation"] %></strong></small>
+      </div>
+      <% end %>
+      <% unless @profile["dev_model"].blank? %>
+      <div class="span2">
+        <i class="fa fa-linux tip" title="Development Model"></i>
+        <small><strong>&nbsp;<%= @profile["dev_model"].titleize %></strong></small>
       </div>
       <% end %>
     </div>
