@@ -1,6 +1,6 @@
 {
   "name": "fortrabbit",
-  "revision": "2014-07-16",
+  "revision": "2015-04-14",
   "url": "http://fortrabbit.com/",
   "vendor_verified": "2013-07-10",
   "status": "production",
@@ -18,9 +18,6 @@
     {
       "model": "fixed",
       "period": "monthly"
-    },
-    {
-      "model": "free"
     }
   ],
   "scaling": {
