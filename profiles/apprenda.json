@@ -58,16 +58,116 @@
       {
         "name": "Oracle",
         "versions": [
-          "11g", "12c"
+          "11g"
           ],
           "type": "Database"
       }
     ],
     "addon": [
       {
+        "name": "AWS EC2",
+        "url": "http://s3.amazonaws.com/",
+        "type": "Cloud Computing"
+      },
+      {
         "name": "AWS S3",
         "url": "http://s3.amazonaws.com/",
-        "type": "cloud file storage"
+        "type": "Cloud File Storage"
+      },
+      {
+        "name": "AWS EMR",
+        "url": "http://aws.amazon.com/emr",
+        "type": "Big Data Analytics"
+      },
+      {
+        "name": "AWS SQS",
+        "url": "http://aws.amazon.com/sqs",
+        "type": "Cloud Messaging"
+      },
+      {
+        "name": "AWS SNS",
+        "url": "http://aws.amazon.com/sns",
+        "type": "Cloud Messaging"
+      },
+      {
+        "name": "AWS Glacier",
+        "url": "http://aws.amazon.com/glacier",
+        "type": "Cloud Storage Archival and Backup"
+      },
+      {
+        "name": "AWS RDS",
+        "url": "http://aws.amazon.com/rds/",
+        "type": "Cloud Relational Database"
+      },
+      {
+        "name": "AWS Redshift",
+        "url": "http://aws.amazon.com/redshift/",
+        "type": "Cloud Petabyte-Scale Data Warehouse"
+      },
+      {
+        "name": "Azure Storage",
+        "url": "http://azure.microsoft.com/en-us/services/storage/",
+        "type": "Cloud File Storage"
+      },
+      {
+        "name": "Azure Service Bus",
+        "url": "http://azure.microsoft.com/en-us/services/service-bus/",
+        "type": "Cloud Messaging Service"
+      },
+      {
+        "name": "NetApp",
+        "url": "http://www.netapp.com/",
+        "type": "Enterprise File Storage"
+      },
+      {
+        "name": "CIRBA",
+        "url": "http://www.cirba.com/",
+        "type": "Datacenter Orchestration and Optimization"
+      },
+      {
+        "name": "VMWare vRealize Automation",
+        "url": "https://www.vmware.com/products/vrealize-suite",
+        "type": "Enterprise IaaS"
+      },
+      {
+        "name": "VMWare vRealize Operations",
+        "url": "https://www.vmware.com/products/vrealize-suite",
+        "type": "Enterprise Infrastructure Monitoring"
+      },
+      {
+        "name": "OpenStack - All Major Distributions",
+        "url": "http://www.openstack.org",
+        "type": "Enterprise and Cloud IaaS"
+      },
+      {
+        "name": "Splunk",
+        "url": "http://www.splunk.com/",
+        "type": "Enterprise Operational Intelligence"
+      },
+      {
+        "name": "NewRelic",
+        "url": "http://www.newrelic.com/",
+        "type": "Enterprise Operational Intelligence"
+      },
+      {
+        "name": "AppDynamics",
+        "url": "http://www.appdynamics.com/",
+        "type": "Enterprise Operational Intelligence"
+      },
+      {
+        "name": "Google Cloud Storage",
+        "url": "https://cloud.google.com/storage/",
+        "type": "Cloud File Storage"
+      },
+      {
+        "name": "Google Cloud Compute Engine",
+        "url": "http://cloud.google.com/compute",
+        "type": "Cloud Computing"
+      },
+      {
+        "name": "SalesForce.com",
+        "url": "http://www.salesforce.com",
+        "type": "Enterprise CRM"
       }
     ]
   },
