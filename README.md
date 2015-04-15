@@ -5,9 +5,9 @@
 <br/>
 A no-standards approach for application portability.
 
-Currently 95 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
+Currently over 100 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
 
-**The current web interface can be viewed at [PaaSify.it](http://paasify.it)**
+**The web interface can be viewed at [PaaSify.it](http://paasify.it)**
 
 **Any errors? Important missing properties? Suggestions? [Contribute](#contribution).**
 
@@ -22,11 +22,22 @@ You can validate changes to the profiles via a simple test run, i.e., ```rake te
 
 Contribute either via [pull request](https://help.github.com/articles/using-pull-requests), create an [issue](https://github.com/stefan-kolb/paas-profiles/issues) or send me an [email](mailto:stefan.kolb@uni-bamberg.de).
 
-## Profile
+## Profile Specification
+
+- [General Properties](#name)
+- [Pricing](#pricing)
+- [Quality of Service](#quality-of-service)
+- [Hosting](#hosting)
+- [Scaling](#scaling)
+- [Runtimes](#runtimes)
+- [Middleware](#middleware)
+- [Frameworks](#frameworks)
+- [Services](#services)
+- [Infrastructures](#infrastructures)
 
 The code below shows a sample profile. The profile specification is *beta* and the properties are subject to change. 
 
-```javascript
+```json
 {
   "name": "SomePaas",
   "revision": "2014-04-24",
@@ -79,6 +90,7 @@ The code below shows a sample profile. The profile specification is *beta* and t
   ]
 }
 ```
+
 ### Name  
 
 The official name of the PaaS offering.
@@ -145,18 +157,18 @@ The guaranteed monthly uptime by the provider.
 
 Currently a simple string array of compliance standards that are fulfilled by the PaaS.
 
+### Hosting
+
+An object that describes the different provided hosting styles of the PaaS.
+Values can be `public` for a publicly hosted service and `private` for a service that can be deployed on premises, too.
+
 ### Scaling
 
 An object including three boolean properties for characterizing the scaling capabilities:
 
-`vertical` = Can you scale the instance sizes, e.g. ram?  
-`horizontal` = Can you scale the number of instances?  
-`auto` = Is the PaaS capable of scaling any of the above properties automatically?    
-
-### Hosting
-
-An object that describes the different provided hosting styles of the PaaS.
-Values can be `public` for a publicly hosted service and `private` for a service that can be deployed on premise, too.
+`vertical` = Can you scale the instance sizes, e.g. ram?
+`horizontal` = Can you scale the number of instances?
+`auto` = Is the PaaS capable of scaling any of the above properties automatically?
 
 ### Runtimes
 
