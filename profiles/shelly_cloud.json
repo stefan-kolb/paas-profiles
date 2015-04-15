@@ -1,8 +1,8 @@
 {
   "name": "Shelly Cloud",
-  "revision": "2015-04-12",
+  "revision": "2015-04-15",
   "url": "https://shellycloud.com/",
-  "vendor_verified": "2015-04-12",
+  "vendor_verified": "2015-04-15",
   "status": "production",
   "status_since": "2011-06-01",
   "type": "Generic",
@@ -33,8 +33,10 @@
         "2.1.3",
         "2.1.4",
         "2.1.5",
+        "2.1.6",
         "2.2.0",
-        "2.2.1"
+        "2.2.1",
+        "2.2.2"
       ]
     }
   ],
