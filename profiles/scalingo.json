@@ -1,6 +1,6 @@
 {
   "name": "Scalingo",
-  "revision": "2015-02-23",
+  "revision": "2015-04-15",
   "vendor_verified": "2015-02-23",
   "url": "https://scalingo.com",
   "status": "production",
@@ -90,7 +90,7 @@
         "1.9.3",
         "2.0.0",
         "2.1.5",
-        "2.2.0"
+        "2.2.2"
       ]
     },
     {
