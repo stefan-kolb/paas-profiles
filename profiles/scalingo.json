@@ -102,6 +102,7 @@
     }
   ],
   "middleware": [
+
   ],
   "frameworks": [
     {
@@ -133,7 +134,7 @@
       "name": "express",
       "runtime": "node",
       "versions": [
-        "**"
+        "*.*"
       ]
     },
     {
@@ -148,13 +149,6 @@
       "runtime": "java",
       "versions": [
         "1.2.*",
-        "2.*"
-      ]
-    },
-    {
-      "name": "play",
-      "runtime": "scala",
-      "versions": [
         "2.*"
       ]
     },
@@ -256,46 +250,47 @@
     "native": [
       {
         "name": "mongodb",
-	"description": "",
-	"type": "datastore",
-	"versions": [
-	  "2.6.5"
-	]
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.6.5"
+        ]
       },
       {
-	"name": "mysql",
-	"description": "",
-	"type": "datastore",
-	"versions": [
-	  "5.5.41"
-	]
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.5.41"
+        ]
       },
       {
-	"name": "postgresql",
-	"description": "",
-	"type": "datastore",
-	"versions": [
-	  "9.3.6"
-	]
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "9.3.6"
+        ]
       },
       {
-	"name": "redis",
-	"description": "",
-	"type": "datastore",
-	"versions": [
-	  "2.8.17"
-	]
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "2.8.17"
+        ]
       },
       {
-	"name": "elasticsearch",
-	"description": "",
-	"type": "datastore",
-	"versions": [
-	  "1.4.4"
-	]
+        "name": "elasticsearch",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "1.4.4"
+        ]
       }
     ],
     "addon": [
+
     ]
   },
   "extensible": true,
