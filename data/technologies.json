@@ -112,6 +112,11 @@
     "isolation": ""
   },
   {
+    "vendor": "Cloud&Heat App Elevator",
+    "platform": "cloudControl",
+    "isolation": "Container"
+  },
+  {
     "vendor": "ConPaaS",
     "platform": "",
     "isolation": "",
