@@ -29,7 +29,7 @@ module Profiles
             item.title = "PaaSify Update #{vendor.revision.strftime('%-m/%-d')}: #{vendor.name}"
             item.guid.content = url_encode(vendor.name) << vendor.revision.to_s
             item.guid.isPermaLink = false
-            item.link = "http://paasify.it/vendor/#{url_encode(vendor.name)}"
+            item.link = "http://paasify.it/vendors/#{url_encode(vendor.name)}"
             item.updated = vendor.revision.to_s(:rfc822)
           end
         end
