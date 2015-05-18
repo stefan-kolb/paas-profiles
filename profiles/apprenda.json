@@ -1,10 +1,11 @@
 {
   "name": "Apprenda",
-  "revision": "2013-07-05T18:00:44+02:00",
+  "revision": "2015-05-18T18:00:44+02:00",
+  "vendor_verified": "2015-05-18"
   "url": "http://apprenda.com/",
   "status": "production",
-  "status_since": "2015-11-03",
-  "type": "Private PaaS",
+  "status_since": "2015-05-18",
+  "type": "SaaS-centric",
   "hosting": {
     "public": true,
     "private": true
@@ -44,6 +45,13 @@
       "versions": [
         "6", "7"
       ]
+    },
+    {
+      "name": "websphere"
+      "runtime": "java"
+      "versions": [
+        "8.5"
+      ]
     }
   ],
   "services": {
@@ -61,6 +69,13 @@
           "11g"
           ],
           "type": "Database"
+      },
+      {
+        "name": "Docker",
+        "versions":[
+          "1.6"
+          ],
+        "type": "Container"
       }
     ],
     "addon": [
@@ -173,6 +188,17 @@
   },
   "extensible": true,
   "infrastructures": [
-
+    {
+      "continent": "AF, AS, EU, NA, OC, SA",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AF, AS, EU, NA, OC, SA",
+      "provider": "Microsoft Azure"
+    },
+    {
+      "continent": "AF, AS, EU, NA, OC, SA",
+      "provider": "OpenStack"
+    }
   ]
 }
