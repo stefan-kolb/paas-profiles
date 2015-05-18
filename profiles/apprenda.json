@@ -11,6 +11,7 @@
     "private": true
   },
   "pricing": [
+    { "model" : "fixed", "period": "annually"
   ],
   "scaling": {
     "vertical": true,
