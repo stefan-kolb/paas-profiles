@@ -48,7 +48,7 @@
     },
     {
       "name": "websphere"
-      "runtime": "java"
+      "runtime": "java",
       "versions": [
         "8.5"
       ]
