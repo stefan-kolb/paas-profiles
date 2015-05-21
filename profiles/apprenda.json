@@ -30,7 +30,37 @@
       "versions": [
         "1.6", "1.7", "1.8"
       ]
-    }
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7", "3.4"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "2.2.2"
+      ]
+    }, 
+    {
+      "language": "node",
+      "versions": [
+        "0.12.3"
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "1.4"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.4", "5.5", "5.6"
+      ]
+    }, 
   ],
   "middleware": [
     {
