@@ -1,13 +1,13 @@
 {
   "name": "Cloud&Heat App Elevator",
-  "revision": "2015-04-29",
-  "url": "https://www.cloudandheat.com/de/appelevator",
+  "revision": "2015-05-21",
+  "url": "https://www.cloudandheat.com/en/paas.html",
   "status": "production",
   "status_since": null,
   "type": "Generic",
   "hosting": {
     "public": true,
-    "private": true
+    "private": false
   },
   "pricing": [
     {
@@ -146,7 +146,11 @@
       }
     ],
     "addon": [
-
+      {
+        "name": "mongosoup",
+        "url": "https://www.mongosoup.de",
+        "type": "datastore"
+      }
     ]
   },
   "extensible": true,
