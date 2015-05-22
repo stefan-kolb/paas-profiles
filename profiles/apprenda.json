@@ -1,17 +1,20 @@
 {
   "name": "Apprenda",
-  "revision": "2015-05-18T18:00:44+02:00",
+  "revision": "2015-05-22",
   "vendor_verified": "2015-05-18",
   "url": "http://apprenda.com/",
   "status": "production",
-  "status_since": "2015-05-18",
+  "status_since": "2008-12-02",
   "type": "SaaS-centric",
   "hosting": {
-    "public": true,
+    "public": false,
     "private": true
   },
   "pricing": [
-    { "model" : "fixed", "period": "annually" }
+    {
+      "model": "fixed",
+      "period": "annually"
+    }
   ],
   "scaling": {
     "vertical": true,
@@ -22,45 +25,19 @@
     {
       "language": "dotnet",
       "versions": [
-        "3.5", "4.0", "4.5", "4.5.1"
+        "3.5",
+        "4.0",
+        "4.5.*"
       ]
     },
     {
       "language": "java",
       "versions": [
-        "1.6", "1.7", "1.8"
+        "1.6",
+        "1.7",
+        "1.8"
       ]
-    },
-    {
-      "language": "python",
-      "versions": [
-        "2.7", "3.4"
-      ]
-    },
-    {
-      "language": "ruby",
-      "versions": [
-        "2.2.2"
-      ]
-    }, 
-    {
-      "language": "node",
-      "versions": [
-        "0.12.3"
-      ]
-    },
-    {
-      "language": "go",
-      "versions": [
-        "1.4"
-      ]
-    },
-    {
-      "language": "php",
-      "versions": [
-        "5.4", "5.5", "5.6"
-      ]
-    }, 
+    }
   ],
   "middleware": [
     {
@@ -74,7 +51,8 @@
       "name": "tomcat",
       "runtime": "java",
       "versions": [
-        "6", "7"
+        "6",
+        "7"
       ]
     },
     {
@@ -90,23 +68,24 @@
       {
         "name": "SQL Server",
         "versions": [
-          "2008R2", "2012"
+          "2008R2",
+          "2012"
         ],
-        "type": "Database"
+        "type": "datastore"
       },
       {
         "name": "Oracle",
         "versions": [
           "11g"
-          ],
-          "type": "Database"
+        ],
+        "type": "datastore"
       },
       {
         "name": "Docker",
-        "versions":[
+        "versions": [
           "1.6"
-          ],
-        "type": "Container"
+        ],
+        "type": "other"
       }
     ],
     "addon": [
@@ -217,19 +196,8 @@
       }
     ]
   },
-  "extensible": true,
+  "extensible": false,
   "infrastructures": [
-    {
-      "continent": "AF, AS, EU, NA, OC, SA",
-      "provider": "AWS"
-    },
-    {
-      "continent": "AF, AS, EU, NA, OC, SA",
-      "provider": "Microsoft Azure"
-    },
-    {
-      "continent": "AF, AS, EU, NA, OC, SA",
-      "provider": "OpenStack"
-    }
+
   ]
 }
