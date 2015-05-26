@@ -1,5 +1,5 @@
 require 'json'
-require 'RMagick'
+require 'rmagick'
 
 module IoHelper
   def write_json_file(filename, data)

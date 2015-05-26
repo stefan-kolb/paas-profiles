@@ -1,4 +1,4 @@
-require 'RMagick'
+require 'rmagick'
 
 namespace :assets do
 
