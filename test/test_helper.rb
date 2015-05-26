@@ -7,6 +7,7 @@ require 'mongoid'
 require 'minitest/autorun'
 require 'rack/test'
 require 'shoulda/context'
+require 'rest-client'
 
 # database
 Mongoid.load!('./config/mongoid.yml')

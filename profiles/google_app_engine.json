@@ -1,7 +1,7 @@
 {
   "name": "Google App Engine",
   "revision": "2014-09-24",
-  "url": "https://developers.google.com/appengine/",
+  "url": "https://cloud.google.com/appengine",
   "status": "production",
   "status_since": "2011-11-07",
   "type": "Generic",

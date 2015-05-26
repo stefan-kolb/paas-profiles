@@ -1,7 +1,7 @@
 {
   "name": "Railscloud",
   "revision": "2013-07-15",
-  "url": "https://railscloud.de/",
+  "url": "https://railscloud.de",
   "status": "production",
   "status_since": "2013-06-01",
   "type": "IaaS-centric",

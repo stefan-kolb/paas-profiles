@@ -45,6 +45,14 @@ module Profiles
         assert_equal(exp_name, filename, 'Filename must match lowercase vendor name without all characters except a-z0-9 replaced by "_"')
       end
 
+      # url must be reachable
+      define_method('test_url') do
+        begin
+          code ||= RestClient::Request.execute(:method => :get, :url => @profile['url'], :timeout => 5, :open_timeout => 5).code
+        rescue;end
+        $stderr.puts "WARN: #{@profile['name']} url must respond with status OK" unless code == 200
+      end
+
       # must be available either as public or private service
       define_method('test_hosting_existence') do
         assert(@profile.hosting.public || @profile.hosting.private, 'A PaaS must be available either as public or private service')
