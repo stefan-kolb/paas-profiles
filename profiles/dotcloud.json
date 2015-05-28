@@ -1,6 +1,6 @@
 {
   "name": "dotCloud",
-  "revision": "2013-07-10T11:20:54+02:00",
+  "revision": "2015-05-28",
   "url": "http://www.dotcloud.com/",
   "status": "production",
   "status_since": "2011-06-25",
@@ -13,6 +13,9 @@
     {
       "model": "metered",
       "period": "monthly"
+    },
+    {
+      "model": "free"
     }
   ],
   "scaling": {
@@ -31,108 +34,153 @@
     {
       "language": "node",
       "versions": [
-        "0.4.12",
-        "0.6.20",
-        "0.8.3"
-      ]
-    },
-    {
-      "language": "perl",
-      "versions": [
-        "5.12.4",
-        "5.14.2",
-        "5.16.0"
+        "0.4.*",
+        "0.6.*",
+        "0.8.*",
+        "0.10.*"
       ]
     },
     {
       "language": "php",
       "versions": [
-        "5.4.6"
+        "5.3",
+        "5.4"
       ]
     },
     {
       "language": "python",
       "versions": [
-        "2.6.5",
-        "2.7.2",
-        "3.1.2",
-        "3.2.2"
+        "2.7.*",
+        "3.*"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-        "1.8",
+        "1.8.7",
         "1.9.2",
-        "1.9.3"
+        "1.9.3",
+        "2.0.0"
       ]
     }
   ],
   "middleware": [
+
+  ],
+  "frameworks": [
     {
-      "name": "jetty",
-      "runtime": "java",
+      "name": "cakephp",
+      "runtime": "php",
       "versions": [
-        "6",
-        "7",
-        "8"
+
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "kohana",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "symfony",
+      "runtime": "php",
+      "versions": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "yii",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "zend",
+      "runtime": "php",
+      "versions": [
+        "1",
+        "2"
       ]
     }
   ],
-  "frameworks": null,
   "services": {
     "native": [
       {
-        "name": "mongodb",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "2.2.2"
-        ]
-      },
-      {
         "name": "mysql",
-        "description": "",
         "type": "datastore",
-        "versions": [
-          "5.1"
-        ]
-      },
-      {
-        "name": "postgresql",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "9.0"
-        ]
-      },
-      {
-        "name": "redis",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "2.4.11"
-        ]
-      },
-      {
-        "name": "smtp",
-        "description": "",
-        "type": "messaging",
         "versions": [
 
-        ]
-      },
-      {
-        "name": "solr",
-        "description": "",
-        "type": "search",
-        "versions": [
-          "3.4.0"
         ]
       }
     ],
     "addon": [
-
+      {
+        "name": "cloudamqp",
+        "url": "http://www.cloudamqp.com/",
+        "type": "worker"
+      },
+      {
+        "name": "elephantsql",
+        "url": "http://www.elephantsql.com/",
+        "type": "datastore"
+      },
+      {
+        "name": "logentries",
+        "url": "https://logentries.com/",
+        "type": "analytics"
+      },
+      {
+        "name": "memcachier",
+        "url": "https://www.memcachier.com/",
+        "type": "datastore"
+      },
+      {
+        "name": "memcached cloud",
+        "url": "https://redislabs.com/memcached-cloud",
+        "type": "datastore"
+      },
+      {
+        "name": "redis cloud",
+        "url": "https://redislabs.com/redis-cloud",
+        "type": "datastore"
+      },
+      {
+        "name": "sendgrid",
+        "url": "http://sendgrid.com/",
+        "type": "messaging"
+      }
     ]
   },
   "extensible": true,
@@ -140,8 +188,8 @@
     {
       "continent": "NA",
       "country": "US",
-      "region": "Northern Virginia",
-      "provider": "AWS"
+      "region": "Council Bluffs",
+      "provider": "GCE"
     }
   ]
 }

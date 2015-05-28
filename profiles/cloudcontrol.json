@@ -1,6 +1,6 @@
 {
   "name": "cloudControl",
-  "revision": "2015-03-23",
+  "revision": "2015-05-28",
   "url": "http://cloudcontrol.com/",
   "status": "production",
   "status_since": "2010-12-01",
@@ -157,6 +157,11 @@
     ],
     "addon": [
       {
+        "name": "blackfire",
+        "url": "https://blackfire.io/",
+        "type": "analytics"
+      },
+      {
         "name": "blitz",
         "url": "https://www.blitz.io/",
         "type": "analytics"
@@ -199,7 +204,7 @@
       {
         "name": "elasticio",
         "url": "http://www.elastic.io/",
-        "type": ""
+        "type": "other"
       },
       {
         "name": "elephantsql",
@@ -264,11 +269,6 @@
       {
         "name": "mongolab",
         "url": "https://mongolab.com/",
-        "type": "datastore"
-      },
-      {
-        "name": "mongosoup",
-        "url": "http://www.mongosoup.de/",
         "type": "datastore"
       },
       {

@@ -135,7 +135,7 @@
   },
   {
     "vendor": "dotCloud",
-    "platform": "",
+    "platform": "cloudControl",
     "isolation": "Container"
   },
   {
