@@ -1,6 +1,7 @@
 {
   "name": "Apprenda",
-  "revision": "2013-07-05T18:00:44+02:00",
+  "revision": "2015-05-22",
+  "vendor_verified": "2015-05-18",
   "url": "http://apprenda.com/",
   "status": "production",
   "status_since": "2008-12-02",
@@ -24,28 +25,175 @@
     {
       "language": "dotnet",
       "versions": [
-
+        "3.5",
+        "4.0",
+        "4.5.*"
       ]
     },
     {
       "language": "java",
       "versions": [
-
+        "1.6",
+        "1.7",
+        "1.8"
       ]
     }
   ],
   "middleware": [
-
-  ],
-  "frameworks": [
-
+    {
+      "name": "jboss",
+      "runtime": "java",
+      "versions": [
+        "6.2"
+      ]
+    },
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "name": "websphere",
+      "runtime": "java",
+      "versions": [
+        "8.5"
+      ]
+    }
   ],
   "services": {
     "native": [
-
+      {
+        "name": "SQL Server",
+        "versions": [
+          "2008R2",
+          "2012"
+        ],
+        "type": "datastore"
+      },
+      {
+        "name": "Oracle",
+        "versions": [
+          "11g"
+        ],
+        "type": "datastore"
+      },
+      {
+        "name": "Docker",
+        "versions": [
+          "1.6"
+        ],
+        "type": "other"
+      }
     ],
     "addon": [
-
+      {
+        "name": "AWS EC2",
+        "url": "http://s3.amazonaws.com/",
+        "type": "Cloud Computing"
+      },
+      {
+        "name": "AWS S3",
+        "url": "http://s3.amazonaws.com/",
+        "type": "Cloud File Storage"
+      },
+      {
+        "name": "AWS EMR",
+        "url": "http://aws.amazon.com/emr",
+        "type": "Big Data Analytics"
+      },
+      {
+        "name": "AWS SQS",
+        "url": "http://aws.amazon.com/sqs",
+        "type": "Cloud Messaging"
+      },
+      {
+        "name": "AWS SNS",
+        "url": "http://aws.amazon.com/sns",
+        "type": "Cloud Messaging"
+      },
+      {
+        "name": "AWS Glacier",
+        "url": "http://aws.amazon.com/glacier",
+        "type": "Cloud Storage Archival and Backup"
+      },
+      {
+        "name": "AWS RDS",
+        "url": "http://aws.amazon.com/rds/",
+        "type": "Cloud Relational Database"
+      },
+      {
+        "name": "AWS Redshift",
+        "url": "http://aws.amazon.com/redshift/",
+        "type": "Cloud Petabyte-Scale Data Warehouse"
+      },
+      {
+        "name": "Azure Storage",
+        "url": "http://azure.microsoft.com/en-us/services/storage/",
+        "type": "Cloud File Storage"
+      },
+      {
+        "name": "Azure Service Bus",
+        "url": "http://azure.microsoft.com/en-us/services/service-bus/",
+        "type": "Cloud Messaging Service"
+      },
+      {
+        "name": "NetApp",
+        "url": "http://www.netapp.com/",
+        "type": "Enterprise File Storage"
+      },
+      {
+        "name": "CIRBA",
+        "url": "http://www.cirba.com/",
+        "type": "Datacenter Orchestration and Optimization"
+      },
+      {
+        "name": "VMWare vRealize Automation",
+        "url": "https://www.vmware.com/products/vrealize-suite",
+        "type": "Enterprise IaaS"
+      },
+      {
+        "name": "VMWare vRealize Operations",
+        "url": "https://www.vmware.com/products/vrealize-suite",
+        "type": "Enterprise Infrastructure Monitoring"
+      },
+      {
+        "name": "OpenStack - All Major Distributions",
+        "url": "http://www.openstack.org",
+        "type": "Enterprise and Cloud IaaS"
+      },
+      {
+        "name": "Splunk",
+        "url": "http://www.splunk.com/",
+        "type": "Enterprise Operational Intelligence"
+      },
+      {
+        "name": "NewRelic",
+        "url": "http://www.newrelic.com/",
+        "type": "Enterprise Operational Intelligence"
+      },
+      {
+        "name": "AppDynamics",
+        "url": "http://www.appdynamics.com/",
+        "type": "Enterprise Operational Intelligence"
+      },
+      {
+        "name": "Google Cloud Storage",
+        "url": "https://cloud.google.com/storage/",
+        "type": "Cloud File Storage"
+      },
+      {
+        "name": "Google Cloud Compute Engine",
+        "url": "http://cloud.google.com/compute",
+        "type": "Cloud Computing"
+      },
+      {
+        "name": "SalesForce.com",
+        "url": "http://www.salesforce.com",
+        "type": "Enterprise CRM"
+      }
     ]
   },
   "extensible": false,
