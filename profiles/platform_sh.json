@@ -1,6 +1,6 @@
 {
-  "name": "platform.sh",
-  "revision": "2015-02-17",
+  "name": "Platform.sh",
+  "revision": "2015-05-29",
   "url": "https://platform.sh",
   "status": "production",
   "status_since": "2014-09-01",
@@ -11,10 +11,11 @@
   },
   "pricing": [
     {
-      "model": "fixed",
+      "model": "hybrid",
       "period": "monthly"
     }
   ],
+  "qos": {"uptime": 99.99 },
   "scaling": {
     "vertical": true,
     "horizontal": true,
@@ -80,6 +81,34 @@
     },
     {
       "name": "zend",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "magento",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "prestashop",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "silex",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "sonata",
       "runtime": "php",
       "versions": [
 
@@ -162,11 +191,13 @@
         ]
       }
     ],
-    "addon": [
-
-    ]
-  },
-  "extensible": false,
+      "addon": [
+        { "name": "blackfire", "url": "https://blackfire.io/", "description": "Blackfire Profiler automatically instruments your code to gather data about consumed server resources like memory, CPU time, and I/O. ", "type": "analytics" },
+        { "name": "bitbucket", "url": "https://bitbucket.org/", "description": "Git and Mercurial code management for teams.", "type": "other" },
+        { "name": "github", "url": "https://bitbucket.org/", "description": "Powerful collaboration, code review, and code management for open source and private projects.", "type": "other" },
+        { "name": "hipchat", "url": "https://www.hipchat.com/", "description": "Group and private chat, file sharing, and integrations", "type": "other" }
+      ]  },
+  "extensible": true,
   "infrastructures": [
     {
       "continent": "AS",
