@@ -74,7 +74,7 @@
         "type": "datastore"
       },
       {
-        "name": "Oracle",
+        "name": "oracle db",
         "versions": [
           "11g"
         ],
