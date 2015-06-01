@@ -15,7 +15,9 @@
       "period": "monthly"
     }
   ],
-  "qos": {"uptime": 99.99 },
+  "qos": {
+    "uptime": 99.99
+  },
   "scaling": {
     "vertical": true,
     "horizontal": true,
@@ -191,12 +193,33 @@
         ]
       }
     ],
-      "addon": [
-        { "name": "blackfire", "url": "https://blackfire.io/", "description": "Blackfire Profiler automatically instruments your code to gather data about consumed server resources like memory, CPU time, and I/O. ", "type": "analytics" },
-        { "name": "bitbucket", "url": "https://bitbucket.org/", "description": "Git and Mercurial code management for teams.", "type": "other" },
-        { "name": "github", "url": "https://github.com/", "description": "Powerful collaboration, code review, and code management for open source and private projects.", "type": "other" },
-        { "name": "hipchat", "url": "https://www.hipchat.com/", "description": "Group and private chat, file sharing, and integrations", "type": "other" }
-      ]  },
+    "addon": [
+      {
+        "name": "blackfire",
+        "url": "https://blackfire.io/",
+        "description": "Blackfire Profiler automatically instruments your code to gather data about consumed server resources like memory, CPU time, and I/O. ",
+        "type": "analytics"
+      },
+      {
+        "name": "bitbucket",
+        "url": "https://bitbucket.org/",
+        "description": "Git and Mercurial code management for teams.",
+        "type": "other"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/",
+        "description": "Powerful collaboration, code review, and code management for open source and private projects.",
+        "type": "other"
+      },
+      {
+        "name": "hipchat",
+        "url": "https://www.hipchat.com/",
+        "description": "Group and private chat, file sharing, and integrations",
+        "type": "other"
+      }
+    ]
+  },
   "extensible": false,
   "infrastructures": [
     {
