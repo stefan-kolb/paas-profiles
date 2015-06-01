@@ -157,7 +157,7 @@
     ],
     "addon": [
       {
-        "name": "blackfire",
+        "name": "blackfire profiler",
         "url": "https://blackfire.io/",
         "type": "analytics"
       },
@@ -282,7 +282,7 @@
         "type": "datastore"
       },
       {
-        "name": "phrase",
+        "name": "phraseapp",
         "url": "https://phraseapp.com/",
         "type": "other"
       },

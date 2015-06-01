@@ -86,7 +86,7 @@
         ]
       },
       {
-        "name": "oracle",
+        "name": "oracle db",
         "type": "datastore",
         "description": "Deploy your applications on top of Oracle",
         "versions": [
