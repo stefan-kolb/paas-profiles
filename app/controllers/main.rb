@@ -1,3 +1,5 @@
+require 'feed'
+
 module Profiles
   class Main < Base
     get '/' do
@@ -59,10 +61,7 @@ module Profiles
     end
 
     get '/vendors.rss' do
-      require 'feed'
-
       content_type 'application/rss+xml'
-
       Feed.get_rss
     end
   end
