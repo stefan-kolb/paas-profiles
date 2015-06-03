@@ -10,16 +10,16 @@ module Profiles
 
     def continent_codes
       {
-          'AF' => 'Africa',
-          'AS' => 'Asia',
-          'EU' => 'Europe',
-          'NA' => 'North America',
-          'OC' => 'Oceania',
-          'SA' => 'South America'
+        'AF' => 'Africa',
+        'AS' => 'Asia',
+        'EU' => 'Europe',
+        'NA' => 'North America',
+        'OC' => 'Oceania',
+        'SA' => 'South America'
       }
     end
 
-    def continent_by_code code
+    def continent_by_code(code)
       continent_codes[code]
     end
 
@@ -33,24 +33,26 @@ module Profiles
       # missing continents
       data << ['Africa', 0]
 
-      return data
+      data
     end
 
     def heatmap
-      data = Hash.new
+      data = {}
       # todo vendors that allow multiple deployments in one country are counted double
       Vendor.where(:infrastructures.exists => true).only(:infrastructures).each do |vendor|
-        if !vendor.infrastructures.blank?
-          vendor.infrastructures.each do |i|
-            if !i.country.empty?
-              unless data[i.country].nil?
-                data[i.country] += 1
-              else
-                data[i.country] = 1
-              end
-            end
+        next if vendor.infrastructures.blank?
+
+        vendor.infrastructures.each do |i|
+          next if i.country.empty?
+
+          if !data[i.country].nil?
+            data[i.country] += 1
+          else
+            data[i.country] = 1
           end
+
         end
+
       end
 
       data.to_json
@@ -68,21 +70,21 @@ module Profiles
         public = Vendor.where('hosting.public' => true).count
         # TODO missing public infras
         percentage = (count / public.to_f * 100).round(0)
-        data << {name: continent_by_code(c), y: percentage}
+        data << { name: continent_by_code(c), y: percentage }
       end
 
       data.sort! { |x, y| y[:y] <=> x[:y] }
       data.to_json
     end
 
-    def top_countries(amount=5)
+    def top_countries(amount = 5)
       # TODO hacky
       h = JSON.parse(heatmap)
       top = h.keys.sort { |a, b| h[b] <=> h[a] }
       data = []
       h.each do |e|
         if top.include? e[0]
-          data << {name: e[0], value: e[1]}
+          data << { name: e[0], value: e[1] }
         end
       end
       data.sort! { |x, y| y[:value] <=> x[:value] }

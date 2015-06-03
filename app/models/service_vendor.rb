@@ -10,7 +10,7 @@ module Profiles
     field :type, type: String
     # validations
     validates :name, presence: true
-    validates :url, allow_blank: true, format: {with: %r{http[s]?://.*}}
-    validates :description, allow_blank: true, format: {with: %r{\A.{,140}\z}}
+    validates :url, allow_blank: true, format: { with: %r{http[s]?://.*} }
+    validates :description, allow_blank: true, format: { with: /\A.{,140}\z/ }
   end
 end

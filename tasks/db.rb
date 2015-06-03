@@ -1,12 +1,12 @@
 require_relative '../app/models/snapshot'
 require_relative '../app/models/statistics'
-#require_relative '../app/models/statistics/runtime_stats'
-#require_relative '../app/models/statistics/data_trend'
+# require_relative '../app/models/statistics/runtime_stats'
+# require_relative '../app/models/statistics/data_trend'
 require_relative '../app/models/statistics/runtime_trend'
-#require_relative '../app/models/software/addon'
-#require_relative '../app/models/software/service'
-#require_relative '../app/models/software/framework'
-#require_relative '../app/models/software/middleware'
+# require_relative '../app/models/software/addon'
+# require_relative '../app/models/software/service'
+# require_relative '../app/models/software/framework'
+# require_relative '../app/models/software/middleware'
 require_relative '../app/models/datacenter'
 require_relative '../app/models/service_vendor'
 
@@ -27,7 +27,7 @@ namespace :db do
     end
     # be sure everything was imported
     unless Dir['profiles/*.json'].length == Profiles::Vendor.count
-      raise 'Not all profiles were imported!'
+      fail 'Not all profiles were imported!'
     end
     # geographical information
     datacenter
@@ -57,12 +57,12 @@ namespace :db do
     data.each do |e|
       begin
         Profiles::Vendor.find_by(name: e['vendor']).update(
-            platform: e['platform'],
-            isolation: e['isolation'],
-            dev_model: e['dev_model']
+          platform: e['platform'],
+          isolation: e['isolation'],
+          dev_model: e['dev_model']
         )
       rescue Mongoid::Errors::DocumentNotFound
-        # ignore
+        puts 'WARN: Vendor is missing for technology update'
       end
     end
   end
@@ -71,15 +71,16 @@ namespace :db do
     data = JSON.parse(File.read('./data/twitter_profiles.json'))
 
     data.each do |e|
-      unless e['twitter'].blank?
-        begin
-          Profiles::Vendor.find_by(name: e['vendor']).update(
-              twitter: e['twitter']
-          )
-        rescue Mongoid::Errors::DocumentNotFound
-          # ignore
-        end
+      next if e['twitter'].blank?
+
+      begin
+        Profiles::Vendor.find_by(name: e['vendor']).update(
+          twitter: e['twitter']
+        )
+      rescue Mongoid::Errors::DocumentNotFound
+        puts 'WARN: Vendor is missing for twitter update'
       end
+
     end
   end
 
@@ -91,13 +92,13 @@ namespace :db do
     data.each do |dc|
       begin
         Profiles::Datacenter.create!(dc)
-      rescue Exception => e
+      rescue StandardError => e
         raise "An error occurred while writing datacenter #{dc}: #{e.message}"
       end
     end
   end
 
-  desc "Creates a snapshot of all PaaS JSON profiles"
+  desc 'Creates a snapshot of all PaaS JSON profiles'
   task :snapshot do
     # stats
     # overall trends
@@ -106,33 +107,33 @@ namespace :db do
     mean = (sum_languages / Vendor.count.to_f).round(1)
 
     Statistics.create(
-        revision: Time.now.utc + 4.days,
-        vendor_count: Vendor.count,
-        mean_lang_count: mean,
-        polyglot_count: Vendor.count - Vendor.where(:runtimes.with_size => 1).count,
-        lspecific_count: Vendor.where(:runtimes.with_size => 1).count,
-        language_count: Vendor.distinct('runtimes.language').count
+      revision: Time.now.utc + 4.days,
+      vendor_count: Vendor.count,
+      mean_lang_count: mean,
+      polyglot_count: Vendor.count - Vendor.where(:runtimes.with_size => 1).count,
+      lspecific_count: Vendor.where(:runtimes.with_size => 1).count,
+      language_count: Vendor.distinct('runtimes.language').count
     )
     # runtime trend
     Vendor.distinct('runtimes.language').each do |l|
       RuntimeTrend.create!(
-          revision: Time.now.utc,
-          language: l,
-          count: Vendor.where('runtimes.language' => l).count,
-          percentage: (Vendor.where('runtimes.language' => l).count / Vendor.count.to_f).round(2)
+        revision: Time.now.utc,
+        language: l,
+        count: Vendor.where('runtimes.language' => l).count,
+        percentage: (Vendor.where('runtimes.language' => l).count / Vendor.count.to_f).round(2)
       )
     end
     # snapshot
     Snapshot.create!(
-        revision: Time.now.utc + 4.days,
-        vendors: Vendor.all
+      revision: Time.now.utc + 4.days,
+      vendors: Vendor.all
     )
   end
 
   task :history do
     g = Git.open('C:\Users\Administrator\Documents\GitHub\paas-profiles')
 
-    g.log(count=500).since('30 weeks ago').each do |l|
+    g.log(count = 500).since('30 weeks ago').each do |l|
       g.checkout l
       dir = 'C:/Users/Administrator/Documents/GitHub/paas-profiles/profiles/*'
       active = Dir[dir].count { |file| File.file?(file) }
@@ -140,9 +141,9 @@ namespace :db do
       eol = Dir[dir].count { |file| File.file?(file) }
 
       dt = DataTrend.new(
-          revision: l.date,
-          active_count: active,
-          eol_count: eol
+        revision: l.date,
+        active_count: active,
+        eol_count: eol
       )
       # only write if something has changed TODO?
       last = DataTrend.asc(:revision).last
@@ -154,15 +155,15 @@ namespace :db do
       # restore historic database
       # TODO problem if test does not pass!
       begin
-        #Rake::Task[:test].execute
+        # Rake::Task[:test].execute
         Rake::Task['mongo:import'].execute
 
         # Runtime trends
         new = RuntimeStats.new(
-            revision: l.date,
-            polyglot: Vendor.count - Vendor.where(:runtimes.with_size => 1).count,
-            language_specific: Vendor.where(:runtimes.with_size => 1).count,
-            distinct_languages: Vendor.distinct('runtimes.language').count
+          revision: l.date,
+          polyglot: Vendor.count - Vendor.where(:runtimes.with_size => 1).count,
+          language_specific: Vendor.where(:runtimes.with_size => 1).count,
+          distinct_languages: Vendor.distinct('runtimes.language').count
         )
 
         # only write if something has changed TODO?
@@ -171,7 +172,7 @@ namespace :db do
         if last.nil? || last.polyglot != new.polyglot || last.language_specific != new.language_specific || last.distinct_languages != new.distinct_languages
           new.save
         end
-      rescue Exception => e
+      rescue StandardError => e
         puts e.message
       end
     end

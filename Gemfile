@@ -15,6 +15,10 @@ gem 'require_all'
 gem 'grape'
 gem 'grape-entity'
 
+group :development do
+  gem 'rubocop', require: false
+end
+
 group :test do
   gem 'rake'
   gem 'minitest'

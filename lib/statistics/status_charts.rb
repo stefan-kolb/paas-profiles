@@ -6,7 +6,7 @@ module Profiles
 
     end
 
-    def status_count status
+    def status_count(status)
       Vendor.where(status: status).count
     end
 
@@ -14,7 +14,7 @@ module Profiles
       Charts.new.get_piedata 'status', false
     end
 
-    def mean_maturity(status=nil)
+    def mean_maturity(status = nil)
       if status
         sum = 0
         vendors = Vendor.where(status: status).only(:status_since)
@@ -24,7 +24,7 @@ module Profiles
         vendors.each do |v|
           sum += Date.today.to_time.to_i - v.status_since.to_time.to_i
         end
-        result = (sum / vendors.length.to_f / 2592000).to_i
+        result = (sum / vendors.length.to_f / 2_592_000).to_i
       else
         sum = 0
         vendors = Vendor.all.only(:status_since)
@@ -34,20 +34,20 @@ module Profiles
           sum += Date.today.to_time.to_i - v.status_since.to_time.to_i unless v.status_since.nil?
         end
         puts sum
-        result = (sum / vendors.length.to_f / 2592000).to_i
+        result = (sum / vendors.length.to_f / 2_592_000).to_i
       end
     end
 
-    def status_maturity(type='production')
-      data = [{name: 'production', data: []}]
+    def status_maturity(type = 'production')
+      data = [{ name: 'production', data: [] }]
       # vendor
       vendor = Vendor.where(status: type).only(:status_since).desc(:status_since)
       # remove nil status_since
       vendor = vendor.delete_if { |x| x.status_since.nil? }
-      #vendor = vendor.sort { |x,y| x.status_since <=> y.status_since }
+      # vendor = vendor.sort { |x,y| x.status_since <=> y.status_since }
       # aggreagate from 0 to oldest
       vendor.each do |v|
-        months = (Date.today.to_time.to_i - v.status_since.to_time.to_i) / 2592000
+        months = (Date.today.to_time.to_i - v.status_since.to_time.to_i) / 2_592_000
         if data[0][:data][months]
           data[0][:data][months] += 1
         else
@@ -58,13 +58,13 @@ module Profiles
       data.to_json
     end
 
-    def support_columndata threshold=0.05
+    def support_columndata(threshold = 0.05)
       data = Charts.new.support_columndata 'runtimes.language', threshold
 
-      return data
+      data
     end
 
-    def support_categories threshold=0.05
+    def support_categories(threshold = 0.05)
       arr = []
       JSON.parse(support_columndata threshold).each { |e| arr << e['name'] }
       arr
@@ -76,10 +76,10 @@ module Profiles
       data << ['Language-specific', one.length]
       data << ['Polyglot', Vendor.count - one.length]
 
-      return data
+      data
     end
 
-    def get_trend threshold=0.05
+    def get_trend(threshold = 0.05)
       data = []
 
       languages = RuntimeTrend.distinct(:language)
@@ -91,7 +91,7 @@ module Profiles
           if entry
             entry[:data] << d.percentage * 100
           else
-            data << {name: d.language, data: [d.percentage * 100]}
+            data << { name: d.language, data: [d.percentage * 100] }
           end
         end
       end
@@ -104,19 +104,19 @@ module Profiles
       # sort by count descending
       data.sort! { |x, y| y[:data].last <=> x[:data].last }
 
-      return data.to_json
+      data.to_json
     end
 
     def trend_categories
-      Snapshot.all().only(:revision).collect { |e| e.revision.strftime("%m-%Y") }
+      Snapshot.all.only(:revision).collect { |e| e.revision.strftime('%m-%Y') }
     end
 
     def get_count_trend
       data = []
-      data << {name: 'polyglot', data: [0, 5, 10, 24, 39]}
-      data << {name: 'language-specific', data: [10, 25, 45, 35, 28]}
-      data << {name: 'total', data: [10, 30, 55, 59, 67]}
-      data << {name: 'distinct languages', data: [3, 5, 9, 10, 15]}
+      data << { name: 'polyglot', data: [0, 5, 10, 24, 39] }
+      data << { name: 'language-specific', data: [10, 25, 45, 35, 28] }
+      data << { name: 'total', data: [10, 30, 55, 59, 67] }
+      data << { name: 'distinct languages', data: [3, 5, 9, 10, 15] }
       data.to_json
     end
 
@@ -138,7 +138,7 @@ module Profiles
       arr = Vendor.all.collect { |v| v.runtimes.count }
       sorted = arr.sort
       len = sorted.length
-      return (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
+      (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
     end
   end
 end

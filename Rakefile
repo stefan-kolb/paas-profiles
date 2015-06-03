@@ -20,10 +20,15 @@ require_relative 'tasks/geo'
 
 Mongoid.load!('./config/mongoid.yml')
 
+# code style
+require 'rubocop/rake_task'
+RuboCop::RakeTask.new
+
+# tests
 Rake::TestTask.new do |t|
   t.warning = true
   t.verbose = true
   t.test_files = FileList['test/**/test*.rb']
 end
 
-task :default => [:test]
+task :default => [:rubocop, :test]

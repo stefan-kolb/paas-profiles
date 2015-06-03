@@ -78,17 +78,18 @@ module Profiles
 
         result.each do |provider|
           provider['runtimes'].each do |r|
-            if r['language'] == runtime['language']
-              r['versions'].map! { |v| v.gsub! '*', '99' } unless r['versions']
-              r['versions'].map! { |v| Versionomy.parse(v) } unless r['versions']
+            next unless r['language'] == runtime['language']
 
-              runtime.versions.each do |v1|
-                r['versions'].each do |v2|
-                  # TODO: >= ==?
-                  v2 >= v1 && version_support = true
-                end
+            r['versions'].map! { |v| v.gsub! '*', '99' } unless r['versions']
+            r['versions'].map! { |v| Versionomy.parse(v) } unless r['versions']
+
+            runtime.versions.each do |v1|
+              r['versions'].each do |v2|
+                # TODO: >= ==?
+                v2 >= v1 && version_support = true
               end
             end
+
           end
           res.delete(provider) unless version_support
         end

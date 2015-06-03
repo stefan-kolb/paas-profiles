@@ -28,10 +28,10 @@ module Profiles
       end
 
       get ':name/infrastructures' do
-        name = CGI::unescape(params[:name])
+        name = CGI.unescape(params[:name])
         # TODO: move to main configuration file
         Geocoder.configure(
-            :timeout => 5
+          :timeout => 5
         )
 
         markers = []
@@ -39,15 +39,16 @@ module Profiles
 
         unless vendor['infrastructures'].blank?
           vendor['infrastructures'].each do |infra|
-            unless infra['region'].blank?
-              begin
-                dc = Datacenter.find_by(region: infra['region'], country: infra['country'])
-                markers << { latLng: dc.coordinates, name: dc.to_s }
-              rescue Mongoid::Errors::DocumentNotFound
-                coord = Geocoder.coordinates("#{infra['region']}, #{infra['country']}")
-                markers << { latLng: coord, name: infra['region'] }
-              end
+            next if infra['region'].blank?
+
+            begin
+              dc = Datacenter.find_by(region: infra['region'], country: infra['country'])
+              markers << { latLng: dc.coordinates, name: dc.to_s }
+            rescue Mongoid::Errors::DocumentNotFound
+              coord = Geocoder.coordinates("#{infra['region']}, #{infra['country']}")
+              markers << { latLng: coord, name: infra['region'] }
             end
+
           end
         end
 
@@ -73,7 +74,7 @@ module Profiles
       markers = []
 
       Datacenter.all.each do |center|
-        markers << {latLng: center.coordinates, name: "#{center}"}
+        markers << { latLng: center.coordinates, name: "#{center}" }
       end
 
       markers

@@ -4,7 +4,7 @@ require_relative '../../app/models/statistics/data_stats'
 
 module Profiles
   class DataCharts < Charts
-    def verification_chart(type='pie')
+    def verification_chart(type = 'pie')
       data = []
 
       if type.eql? 'pie'

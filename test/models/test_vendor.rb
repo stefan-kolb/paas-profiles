@@ -72,4 +72,3 @@ class TestVendor < MiniTest::Test
     assert_equal('example', entity.infrastructures.first.provider)
   end
 end
-

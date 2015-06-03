@@ -2,23 +2,23 @@ module Profiles
   class Version
     include Comparable
 
-    attr :str, :type
-    attr :major, :minor, :patch
+    attr_reader :str, :type
+    attr_reader :major, :minor, :patch
 
     # http://semver.org/
-    #java > 1.3.0: http://www.oracle.com/technetwork/java/javase/versioning-naming-139433.html
-    def <=>(anOther)
-      return major <=> anOther.major unless (major <=> anOther.major) == 0
-      return minor <=> anOther.minor unless (minor <=> anOther.minor) == 0
-      return patch <=> anOther.patch unless (patch <=> anOther.patch) == 0
+    # java > 1.3.0: http://www.oracle.com/technetwork/java/javase/versioning-naming-139433.html
+    def <=>(other)
+      return major <=> other.major unless (major <=> other.major) == 0
+      return minor <=> other.minor unless (minor <=> other.minor) == 0
+      return patch <=> other.patch unless (patch <=> other.patch) == 0
     end
 
-    def match(anOther)
+    def match(other)
       return true if anOther.major == '*'
-      return true if (major <=> anOther.major) == 0 && anOther.minor == '*'
-      return major <=> anOther.major unless (major <=> anOther.major) == 0
-      return minor <=> anOther.minor unless (minor <=> anOther.minor) == 0
-      return true
+      return true if (major <=> other.major) == 0 && other.minor == '*'
+      return major <=> other.major unless (major <=> other.major) == 0
+      return minor <=> other.minor unless (minor <=> other.minor) == 0
+      true
     end
 
     def unify
@@ -30,7 +30,7 @@ module Profiles
       end
     end
 
-    def initialize(str, type=nil)
+    def initialize(str, type = nil)
       @type = type
       # auto match type of version
       # define language and only use this schema
@@ -40,8 +40,8 @@ module Profiles
       @major = arr[0]
       @minor = arr[1]
 
-    rescue
-      # ignore
+    rescue StandardError => e
+      puts 'Error in version.rb ' << e.to_s
     end
 
     def latest?
@@ -51,7 +51,7 @@ module Profiles
       false
     end
 
-    def self.latest language
+    def self.latest(language)
       result = Runtime.where(name: language).first
       return result['version'] unless result.nil?
       'unknown'

@@ -18,9 +18,7 @@ module Profiles
       paas = url_decode(params[:name])
       @profile = Vendor.where(name: /^#{paas}$/i).first
 
-      if @profile.nil?
-        halt 404
-      end
+      halt 404 if @profile.nil?
 
       @paas = @profile['name']
       @title = "#{@paas} | PaaS Comparison"

@@ -14,11 +14,11 @@ module Profiles
       @language_count ||= Vendor.distinct('runtimes.language').length
     end
 
-    def support_columndata threshold=0.05
+    def support_columndata(threshold = 0.05)
       @support_data ||= Charts.new.support_columndata 'runtimes.language', threshold
     end
 
-    def support_categories threshold=0.05
+    def support_categories(threshold = 0.05)
       unless @support_categories
         arr = []
         JSON.parse(support_columndata threshold).each { |e| arr << e['name'] }
@@ -33,10 +33,10 @@ module Profiles
       data << ['Language-specific', one]
       data << ['Polyglot', vendor_count - one]
 
-      return data
+      data
     end
 
-    def get_trend threshold=0.1
+    def get_trend(threshold = 0.1)
       data = []
 
       languages = RuntimeTrend.distinct(:language)
@@ -48,7 +48,7 @@ module Profiles
           if entry
             entry[:data] << d.percentage * 100
           else
-            data << {name: d.language, data: [d.percentage * 100]}
+            data << { name: d.language, data: [d.percentage * 100] }
           end
         end
       end
@@ -61,23 +61,23 @@ module Profiles
       # sort by count descending
       data.sort! { |x, y| y[:data].last <=> x[:data].last }
 
-      return data.to_json
+      data.to_json
     end
 
     def trend_categories
-      Snapshot.all().only(:revision).collect { |e| e.revision.strftime("%m-%Y") }
+      Snapshot.all.only(:revision).collect { |e| e.revision.strftime('%m-%Y') }
     end
 
     def get_count_trend
       data = []
-      data << {name: 'Polyglot', data: []}
-      data << {name: 'Language-specific', data: []}
-      data << {name: 'Distinct languages', data: []}
+      data << { name: 'Polyglot', data: [] }
+      data << { name: 'Language-specific', data: [] }
+      data << { name: 'Distinct languages', data: [] }
 
       Statistics.all.each do |e|
-        data.find { |e| e[:name] == 'Polyglot' }[:data] << e.polyglot_count
-        data.find { |e| e[:name] == 'Language-specific' }[:data] << e.lspecific_count
-        data.find { |e| e[:name] == 'Distinct languages' }[:data] << e.language_count
+        data.find { |d| d[:name] == 'Polyglot' }[:data] << e.polyglot_count
+        data.find { |d| d[:name] == 'Language-specific' }[:data] << e.lspecific_count
+        data.find { |d| d[:name] == 'Distinct languages' }[:data] << e.language_count
       end
       data.to_json
     end

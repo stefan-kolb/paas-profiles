@@ -49,7 +49,7 @@ module Profiles
       define_method('test_url') do
         begin
           code ||= RestClient::Request.execute(:method => :get, :url => @profile['url'], :timeout => 5, :open_timeout => 5).code
-        rescue;end
+        rescue; end
         $stderr.puts "WARN: #{@profile['name']} url must respond with status OK" unless code == 200
       end
 

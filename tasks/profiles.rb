@@ -1,6 +1,6 @@
 namespace :profiles do
 
-  desc "Sorts all entries in the profiles"
+  desc 'Sorts all entries in the profiles'
   task :sort do
     # import files
     Dir.glob("./profiles#{File::SEPARATOR}/**/*.json").each do |file_name|
@@ -19,13 +19,13 @@ namespace :profiles do
         File.open(file_name, 'w') do |f|
           f.write(JSON.pretty_generate(data))
         end
-      rescue
+      rescue StandardError
         raise "An error occurred while sorting #{file_name}"
       end
     end
   end
 
-  desc "Tries to autocomplete missing values"
+  desc 'Tries to autocomplete missing values'
   task :complete do
     # import files
     Dir.glob("./profiles#{File::SEPARATOR}/**/*.json").each do |file_name|
@@ -35,16 +35,17 @@ namespace :profiles do
         # services
         unless data['services'].blank?
           data['services']['native'].each do |s|
-            if s['type'].blank?
-              puts "[MISSING] #{data['name']} #{s['name']} is missing service type"
-              alt = Vendor.ne(name: data['name']).find_by('services.native.name' => /#{s['name']}/)
-              type = alt['services']['native'].select { |v| v['name'] =~ /#{s['name']}/ }[0]
-              puts "What about #{type['type']}? (y/n)"
-              accept = STDIN.gets.chomp()
-              if accept.eql? 'y'
-                s['type'] = type['type']
-              end
+            next unless s['type'].blank?
+
+            puts "[MISSING] #{data['name']} #{s['name']} is missing service type"
+            alt = Vendor.ne(name: data['name']).find_by('services.native.name' => /#{s['name']}/)
+            type = alt['services']['native'].select { |v| v['name'] =~ /#{s['name']}/ }[0]
+            puts "What about #{type['type']}? (y/n)"
+            accept = STDIN.gets.chomp
+            if accept.eql? 'y'
+              s['type'] = type['type']
             end
+
           end
         end
 
@@ -65,29 +66,31 @@ namespace :profiles do
             end
 =end
             # url
-            if s['url'].blank?
-              puts "[MISSING] #{data['name']} #{s['name']} is missing addon url"
-              begin
-                alt = Profiles::Vendor.ne(name: data['name']).where('services.addon.name' => /#{s['name']}/, 'services.addon.url' => { '$ne' => ''}, 'services.addon.url' => { '$exists' => true })
-                type = alt[0]['services']['addon'].select { |v| v['name'] =~ /#{s['name']}/ }[0] unless alt.blank?
-                puts "What about #{type['url']} (y/n)"
-                accept = STDIN.gets.chomp()
-                if accept.eql? 'y'
-                  s['url'] = type['url']
-                end
-              rescue Exception => e
-                puts e.message
-                # nothing to do
+            next unless s['url'].blank?
+
+            puts "[MISSING] #{data['name']} #{s['name']} is missing addon url"
+            begin
+              alt = Profiles::Vendor.ne(name: data['name'])
+                    .where('services.addon.name' => /#{s['name']}/, 'services.addon.url' => { '$ne' => '' }, 'services.addon.url' => { '$exists' => true })
+              type = alt[0]['services']['addon'].select { |v| v['name'] =~ /#{s['name']}/ }[0] unless alt.blank?
+              puts "What about #{type['url']} (y/n)"
+              accept = STDIN.gets.chomp
+              if accept.eql? 'y'
+                s['url'] = type['url']
               end
+            rescue StandardError => e
+              puts e.message
+              # nothing to do
             end
           end
+
         end
 
         # save file
-        File.open(file_name, "w") do |f|
+        File.open(file_name, 'w') do |f|
           f.write(JSON.pretty_generate(data))
         end
-      rescue Exception => e
+      rescue StandardError => e
         puts e.message
         raise "An error occurred while trying to autocomplete #{file_name}"
       end

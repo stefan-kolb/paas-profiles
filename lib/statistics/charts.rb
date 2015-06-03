@@ -57,7 +57,7 @@ module Profiles
         data << others
       end
 
-      return data
+      data
     end
 
     # todo define no threshold = false or 0? -> tests
@@ -69,11 +69,11 @@ module Profiles
         rt = Runtime.where(name: l).first
         latest = rt['version'] unless rt.blank?
 
-        data << {name: l, y: (count / vendor_count.to_f * 100).to_i, drilldown: {
-            name: "#{l.capitalize} Versions",
-            categories: distinct_versions(l),
-            latest: latest,
-            data: distinct_versions_data(l)
+        data << { name: l, y: (count / vendor_count.to_f * 100).to_i, drilldown: {
+          name: "#{l.capitalize} Versions",
+          categories: distinct_versions(l),
+          latest: latest,
+          data: distinct_versions_data(l)
         }
         }
       end
@@ -86,10 +86,10 @@ module Profiles
       if threshold
         sum = 0
         data.each { |e| sum += e[:y] }
-        others = {name: 'Others', y: 0}
+        others = { name: 'Others', y: 0 }
 
         data.delete_if do |e|
-          if (e[:y].to_f < (threshold * 100.0))
+          if e[:y].to_f < (threshold * 100.0)
             # aggregate those below the threshold TODO + value or only +1 for others?
             others[:y] += e[:y]
             true
@@ -101,50 +101,51 @@ module Profiles
 
       # colors
       data.each_with_index do |l, i|
-        l[:color] = COLORS[i%COLORS.length]
+        l[:color] = COLORS[i % COLORS.length]
         if l[:name] != 'Others'
-          l[:drilldown][:color] = COLORS[i%COLORS.length]
+          l[:drilldown][:color] = COLORS[i % COLORS.length]
         end
       end
 
-      return data.to_json
+      data.to_json
     end
 
-    def language_count language
+    def language_count(language)
       Vendor.where('runtimes.language' => language).length
     end
 
-    def distinct_versions language
-      return distinct_versions_data(language).collect { |x| x[0] }
+    def distinct_versions(language)
+      distinct_versions_data(language).collect { |x| x[0] }
     end
 
-    def distinct_versions_data language
+    def distinct_versions_data(language)
       # TODO duplicate languages in profile will cause false results
       vendors = Vendor.where('runtimes.language' => language)
-      data = Hash.new
+      data = {}
 
       vendors.each do |vendor|
         vendor['runtimes'].each do |rt|
-          if rt['language'] == language
-            if rt['versions'].blank?
-              if data.has_key? 'Unknown'
-                data['Unknown'] += 1
-              else
-                data['Unknown'] = 1
-              end
-            else
-              rt['versions'].each do |v|
-                # TODO uniform version format, filter empty versions
-                v = Version.new(v).unify
+          next unless rt['language'] == language
 
-                if data.has_key? v
-                  data[v] += 1
-                else
-                  data[v] = 1
-                end
+          if rt['versions'].blank?
+            if data.key? 'Unknown'
+              data['Unknown'] += 1
+            else
+              data['Unknown'] = 1
+            end
+          else
+            rt['versions'].each do |v|
+              # TODO uniform version format, filter empty versions
+              v = Version.new(v).unify
+
+              if data.key? v
+                data[v] += 1
+              else
+                data[v] = 1
               end
             end
           end
+
         end
       end
 
@@ -157,7 +158,7 @@ module Profiles
       data
     end
 
-    def distinct_values type
+    def distinct_values(type)
       Vendor.distinct type
     end
   end
