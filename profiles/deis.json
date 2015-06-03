@@ -1,6 +1,6 @@
 {
   "name": "Deis",
-  "revision": "2015-04-14",
+  "revision": "2015-06-03",
   "url": "http://deis.io",
   "status": "production",
   "status_since": "2014-11-11",
@@ -27,12 +27,6 @@
       ]
     },
     {
-      "language": "dart",
-      "versions": [
-
-      ]
-    },
-    {
       "language": "go",
       "versions": [
 
@@ -46,12 +40,6 @@
     },
     {
       "language": "node",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "perl",
       "versions": [
 
       ]
