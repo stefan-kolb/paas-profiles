@@ -25,19 +25,13 @@
   <!--<script src="http://code.highcharts.com/modules/exporting.js"></script>-->
 </head>
 <body>
-<div style="background-color: #f5f5f5; margin-bottom: 10px;">
+<div style="background-color: #f5f5f5">
   <div class="container">
     <%= render_navigation(renderer: :breadcrumbs) %>
   </div>
 </div>
 
-<div id="top" class="container" style="padding-bottom: 30px;">
-  <div class="row">
-    <div class="span12">
-      <%= yield %>
-    </div>
-  </div>
-</div>
+<%= yield %>
 
 <footer id="footer" style="background-color: #f5f5f5; padding: 25px 0px 80px;">
   <div class="container">

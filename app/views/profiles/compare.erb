@@ -29,10 +29,10 @@
     }
 </script>
 
-<div class="container">
+<div id="top" class="container" style="margin-top: 10px; padding-bottom: 30px;">
 <div class="jumbotron" style="margin: 15px">
   <img class="img-rounded" src="<%= url('/img/vendor/' << @p1['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big.png') %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
-  <i class="fa fa-bolt fa-5x" style="vertical-align: middle;font-size: 8em; margin: 25px;"></i>
+  <i class="fa fa-bolt fa-5x" style="color: #000; vertical-align: middle;font-size: 8em; margin: 25px;"></i>
   <img class="img-rounded" src="<%= url('/img/vendor/' << @p2['name'].downcase.gsub(/[^a-z0-9]/, '_') << '_big.png') %>" class="img-rounded" style="width: 150px; height: 150px; margin: 25px;">
 </div>
 

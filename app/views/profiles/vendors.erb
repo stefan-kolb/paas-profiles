@@ -2,38 +2,69 @@
 <script src="/js/jquery.tablesorter.widgets.min.js"></script>
 <link rel="stylesheet" href="/css/theme.bootstrap.css">
 
-<div class="jumbotron">
-  <h1>Find your Platform as a Service!</h1>
+<div class="header" style="height: calc(100vh - 40px)">
 
-  <p class="lead">What's best on your PaaS? Define your needs and get a list of candidates that claim to be your best fit.</p>
+    <div class="jumbotron" style="
+            background: url(img/header.jpg) no-repeat fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            width: 100%;
+            min-height: 200px;
+            height: 100%;
+            overflow: hidden;
+           background-position: 0px -45px">
+      <h1 style="padding-top: 10%">Find your Platform as a Service!</h1>
 
-  <div class="text-center"><a href="filter" class="btn btn-warning btn-large">Find your PaaS</a></div>
+      <p class="lead">What's best on your PaaS? Define your needs and get a list of candidates that claim to be your best
+        fit.</p>
+
+      <div class="text-center"><a href="filter" class="btn btn-warning btn-large">Find your PaaS</a></div>
+    </div>
+
+  <div style="position: absolute;
+          bottom: 0px; background-color: #fff; width: 100%;
+          padding: 35px;
+          padding-bottom: 15px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          margin: 0;">
+  <div class="row-fluid text-center" style="margin-bottom: 20px">
+
+    <div class="span4">
+      <h2>Comprehensive</h2>
+      <h4><em>More than 70 vendors</em></h4>
+
+      <p>&hellip;and counting.</p>
+    </div>
+    <div class="span4">
+      <h2>Comparable</h2>
+      <h4><em>Distinctive PaaS features</em></h4>
+
+      <p>A set of distinctive and intersecting properties to enable comparison and matching of different PaaS
+        offerings.</p>
+    </div>
+    <div class="span4">
+      <h2>Current</h2>
+      <h4><em>Continuously updated</em></h4>
+
+      <p>Data structures are <a href="https://github.com/stefan-kolb/paas-profiles" target="_blank">publicly available</a>
+        and editable by the community. We also aim at vendors to
+        <a href="https://github.com/stefan-kolb/paas-profiles#contribution" target="_blank">verify</a>
+        <i class="fa fa-check-circle"></i> their profiles.</p>
+    </div>
+
+  </div>
+
+  <div class="text-center"><span class="fa fa-chevron-down fa-2x" style="color: #eeeeee"></span></div>
+
+  </div>
+
 </div>
 
-<div class="row-fluid text-center" style="margin-bottom: 50px;">
-  <div class="span4">
-    <h2>Comprehensive</h2>
-    <h4><em>More than 70 vendors</em></h4>
-
-    <p>&hellip;and counting.</p>
-  </div>
-  <div class="span4">
-    <h2>Comparable</h2>
-    <h4><em>Distinctive PaaS features</em></h4>
-
-    <p>A set of distinctive and intersecting properties to enable comparison and matching of different PaaS
-      offerings.</p>
-  </div>
-  <div class="span4">
-    <h2>Current</h2>
-    <h4><em>Continuously updated</em></h4>
-
-    <p>Data structures are <a href="https://github.com/stefan-kolb/paas-profiles" target="_blank">publicly available</a>
-      and editable by the community. We also aim at vendors to
-      <a href="https://github.com/stefan-kolb/paas-profiles#contribution" target="_blank">verify</a>
-      <i class="fa fa-check-circle"></i> their profiles.</p>
-  </div>
-</div>
+<div id="top" class="container" style="margin-top: 10px; padding-bottom: 30px;">
 
 <div class="row hidden-phone" style="margin-bottom: 10px;">
   <div class="span12">
@@ -100,7 +131,8 @@
 
           <p><i>Live statistics of the PaaS vendor landscape.</i></p>
 
-          <p><a href="/statistics/languages" class="btn btn-primary">Runtime Statistics</a> <a href="/statistics/infrastructures" class="btn">Infrastructure Statistics</a></p>
+          <p><a href="/statistics/languages" class="btn btn-primary">Runtime Statistics</a>
+            <a href="/statistics/infrastructures" class="btn">Infrastructure Statistics</a></p>
         </div>
       </li>
     </ul>
@@ -113,11 +145,20 @@
       <li class="span12">
         <div class="thumbnail">
           <img src="img/paper-teaser.png" style="float:left; margin-right: 15px; padding: 5px;">
+
           <h3>Publications</h3>
+
           <p><i>Scientific deliverables discussing the work around PaaSify.</i></p>
+
           <p>
-            <span><a href="http://www.uni-bamberg.de/?id=94841" target="_blank"><i>Application Migration Effort in the Cloud - The Case of Cloud Platforms</i></a><small> &mdash; 8th IEEE Conference on Cloud Computing, 2015 (to appear).</small></span><br>
-            <span><a href="http://www.uni-bamberg.de/?id=85921" target="_blank"><i>Towards Application Portability in Platform as a Service</i></a><small> &mdash; 8th IEEE Symposium on Service-Oriented System Engineering, 2014.</small></span>
+            <span><a href="http://www.uni-bamberg.de/?id=94841" target="_blank"><i>Application Migration Effort in the
+              Cloud - The Case of Cloud Platforms</i></a><small> &mdash; 8th IEEE Conference on Cloud Computing, 2015
+              (to appear).
+            </small></span><br>
+            <span><a href="http://www.uni-bamberg.de/?id=85921" target="_blank"><i>Towards Application Portability in
+              Platform as a Service</i></a><small> &mdash; 8th IEEE Symposium on Service-Oriented System Engineering,
+              2014.
+            </small></span>
           </p>
         </div>
       </li>
@@ -202,10 +243,10 @@
                    unless profile['infrastructures'].nil?
                      profile['infrastructures'].uniq { |h| h['continent'] }.sort { |a, b| a['continent'] <=> b['continent'] }.each do |rt|
                 %>
-                <span class="label label-inverse" title="<%= continent_by_code rt['continent'] %>"><%= rt['continent'] %></span>
-                <%   end
-                   end
-                %>
+                        <span class="label label-inverse" title="<%= continent_by_code rt['continent'] %>"><%= rt['continent'] %></span>
+                    <% end
+                       end
+                    %>
               </div>
             </td>
 
@@ -221,6 +262,11 @@
     <a href="#top" title="Back to top" class="i-link pull-right"><i class="fa fa-chevron-up"></i></a>
   </div>
 </div>
+
+</div>
+</div>
+</div>
+
 <script>
     $(document).ready(function () {
         $("#vendors").tablesorter({

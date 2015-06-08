@@ -32,21 +32,18 @@ hr.soften {
 }
 
 .jumbotron {
-    margin: 50px 0;
     text-align: center;
-    background-size: 100%;
+    color: #eee;
 }
 
 .jumbotron h1 {
     font-size: 60px;
     line-height: 1;
-    background: rgba(255, 255, 255, 0.6);
 }
 
 .jumbotron .lead {
     font-size: 18px;
     line-height: 1.25;
-    background: rgba(255, 255, 255, 0.6);
 }
 
 .jumbotron .btn {
