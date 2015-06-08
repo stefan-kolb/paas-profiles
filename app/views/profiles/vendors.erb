@@ -57,7 +57,7 @@
 
   </div>
 
-  <div class="text-center"><span class="fa fa-chevron-down fa-2x" style="color: #eeeeee"></span></div>
+  <div id="head-scroll" class="text-center"><span class="fa fa-chevron-down fa-2x" style="color: #eeeeee"></span></div>
 
   </div>
 
@@ -272,6 +272,14 @@
             theme: 'bootstrap',
             headerTemplate: '{icon}{content}',
             widgets: ['uitheme']
+        });
+
+        $(window).scroll(function() {
+            if($(document).scrollTop() > 100){
+                $('#head-scroll').hide();
+            } else {
+                $('#head-scroll').show();
+            }
         });
     });
 </script>
