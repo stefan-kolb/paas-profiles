@@ -154,3 +154,6 @@ DEPENDENCIES
   sinatra-simple-navigation (~> 4.0)
   unicorn
   versionomy
+
+BUNDLED WITH
+   1.10.3
