@@ -8,7 +8,7 @@ require_relative '../../app/models/vendor/vendor'
 module Profiles
   class TestDuplicates < MiniTest::Test
     def setup
-      Dir.glob(File.dirname(__FILE__) + '/../../profiles/*.json').each do |file|
+      Dir.glob(File.join(__dir__, '..', '..', 'profiles/*.json')).each do |file|
         begin
           data = JSON.parse(File.read(file))
           Vendor.create!(data)

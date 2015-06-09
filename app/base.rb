@@ -4,7 +4,7 @@ require 'versionomy'
 require 'require_all'
 require 'sinatra/base'
 require 'sinatra/simple-navigation'
-SimpleNavigation.config_file_paths << File.expand_path('../config', __dir__)
+SimpleNavigation.config_file_paths << File.join(__dir__, '..', 'config')
 
 # helpers
 require_all 'app/helpers'
@@ -16,7 +16,7 @@ module Profiles
     configure do
       helpers ApplicationHelpers
 
-      set :root, proc { File.expand_path('..', __dir__) }
+      set :root, proc { File.join(__dir__, '..') }
       set :views, proc { File.join(root, 'app/views') }
       not_found { erb :'404', :layout => false }
       error { erb :'500', :layout => false }

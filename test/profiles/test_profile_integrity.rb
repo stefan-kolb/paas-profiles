@@ -7,7 +7,7 @@ require_relative '../../app/models/vendor/vendor'
 
 module Profiles
   # create a test class for every profile
-  Dir.glob(File.dirname(__FILE__) + '/../../profiles/*.json') do |file|
+  Dir.glob(File.join(__dir__, '..', '..', 'profiles/*.json')) do |file|
     # filename
     filename = File.basename(file, '.json')
 
