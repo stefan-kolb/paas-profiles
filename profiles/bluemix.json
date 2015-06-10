@@ -1,6 +1,6 @@
 {
   "name": "Bluemix",
-  "revision": "2015-02-06",
+  "revision": "2015-06-10",
   "url": "http://bluemix.net/",
   "status": "production",
   "status_since": "2014-06-30",
@@ -80,17 +80,330 @@
   "services": {
     "native": [
       {
-        "name": "blu acceleration",
-        "description": "Free data warehouse for beta testing purposes only.",
-        "type": "analytics",
+        "name": "alchemyapi",
+        "description": "",
+        "type": "",
         "versions": [
 
         ]
       },
       {
-        "name": "cloud code",
-        "description": "With Cloud Code, you can run server-side scripting logic on the IBM cloud without having to worry about managing application servers or scale.",
-        "type": "devops",
+        "name": "concept expansion",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "concept insights",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "language identification",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "machine translation",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "personality insights",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "question and answer",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "relationship extraction",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "speech to text",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "text to speech",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "tradeoff analytics",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "visual recognition",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "advanced mobile access",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "cloudant nosql db",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "presence insights",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "push ios 8",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "auto-scaling",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "monitoring and analytics",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "track & plan",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "delivery pipeline",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "business rules",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mq light",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "workflow",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "workload scheduler",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "api management",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "secure gateway",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "dataworks",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "object storage",
+        "description": "",
+        "type": "",
+        "versions": [
+          "1",
+          "2"
+        ]
+      },
+      {
+        "name": "biginsights for hadoop",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "dashdb",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "geospatial analytics",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "insights for twitter",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "time series database",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "application security manager",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "appscan dynamic analyzer",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "appscan mobile analyzer",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mobile analyzer for ios",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "static analyzer",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "embeddable reporting",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "predictive modeling",
+        "description": "",
+        "type": "",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "internet of things",
+        "description": "",
+        "type": "",
         "versions": [
 
         ]
@@ -112,62 +425,6 @@
         ]
       },
       {
-        "name": "decision",
-        "description": "Free Decision service for beta testing purposes only.",
-        "type": "other",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "elastic mq",
-        "description": "Free messaging service for beta testing purposes only.",
-        "type": "worker",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "jazzhub",
-        "description": "JazzHub includes Git hosting, an integrated Web IDE, Eclipse and Visual Studio integrations, agile planning and tracking, and automated deployment to BlueMix.",
-        "type": "devops",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "json database",
-        "description": "Free database for beta testing purposes only.",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "log analysis",
-        "description": "Free access for beta testing purposes only.",
-        "type": "analytics",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "map reduce",
-        "description": "Free access for beta testing purposes only.",
-        "type": "worker",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "mobile application management",
-        "description": "With Mobile Application Management, you can centrally manage app access. You can control and secure apps with containerization and control the operational lifecycle of your apps.",
-        "type": "other",
-        "versions": [
-
-        ]
-      },
-      {
         "name": "mobile data",
         "description": "With Mobile Data, you can store objects that need to be created and persisted from a mobile client.",
         "type": "datastore",
@@ -184,44 +441,9 @@
         ]
       },
       {
-        "name": "mongodb",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "mysql",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "postgresql",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
         "name": "push",
         "description": "With Push, you can create and deliver notifications to iOS and Android devices easily with the Mobile Cloud Services SDK.",
         "type": "messaging",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "rabbitmq",
-        "type": "worker",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "redis",
-        "type": "datastore",
         "versions": [
 
         ]
@@ -253,9 +475,139 @@
     ],
     "addon": [
       {
+        "name": "flowthings",
+        "url": "https://flowthings.io/",
+        "type": "other"
+      },
+      {
+        "name": "namara",
+        "url": "http://namara.io/",
+        "type": "search"
+      },
+      {
+        "name": "reappt",
+        "url": "http://reappt.io/",
+        "type": ""
+      },
+      {
+        "name": "sendgrid",
+        "url": "https://sendgrid.com/",
+        "type": "messaging"
+      },
+      {
+        "name": "Simplicite aPaaS",
+        "url": "https://marketplace.ibmcloud.com/apps/2449",
+        "type": "other"
+      },
+      {
+        "name": "mongolab",
+        "url": "https://mongolab.com/",
+        "type": "fatastore"
+      },
+      {
+        "name": "elephantsql",
+        "url": "http://www.elephantsql.com/",
+        "type": "datastore"
+      },
+      {
+        "name": "cupenya",
+        "url": "http://cupenya.com/",
+        "type": "analytics"
+      },
+      {
+        "name": "aPersona Adaptive Security Manager",
+        "url": "https://marketplace.ibmcloud.com/apps/2860",
+        "type": "other"
+      },
+      {
+        "name": "statica",
+        "url": "https://www.statica.io/",
+        "type": "devops"
+      },
+      {
+        "name": "ustream",
+        "url": "http://www.ustream.tv/",
+        "type": "media"
+      },
+      {
+        "name": "cleardb",
+        "url": "https://www.cleardb.com/",
+        "type": "datastore"
+      },
+      {
+        "name": "rediscloud",
+        "url": "https://redislabs.com/redis-cloud",
+        "type": "datastore"
+      },
+      {
+        "name": "blazemeter",
+        "url": "https://blazemeter.com/",
+        "type": "analytics"
+      },
+      {
         "name": "cloudant",
         "url": "https://cloudant.com/",
         "type": "datastore"
+      },
+      {
+        "name": "cloudamqp",
+        "url": "https://www.cloudamqp.com/",
+        "type": "worker"
+      },
+      {
+        "name": "dreamface",
+        "url": "",
+        "type": "devops"
+      },
+      {
+        "name": "cognitive commerce",
+        "url": "http://cognitivescale.com/",
+        "type": "analytics"
+      },
+      {
+        "name": "cognitive graph",
+        "url": "http://cognitivescale.com/",
+        "type": "analytics"
+      },
+      {
+        "name": "cognitive insights",
+        "url": "http://cognitivescale.com/",
+        "type": "analytics"
+      },
+      {
+        "name": "loadimpact",
+        "url": "https://loadimpact.com/",
+        "type": "analytics"
+      },
+      {
+        "name": "geocoding",
+        "url": "http://www.pitneybowes.com/",
+        "type": "other"
+      },
+      {
+        "name": "travel boundary service",
+        "url": "http://www.pitneybowes.com/",
+        "type": "other"
+      },
+      {
+        "name": "reverse geocoding",
+        "url": "http://www.pitneybowes.com/",
+        "type": "other"
+      },
+      {
+        "name": "validate address",
+        "url": "http://www.pitneybowes.com/",
+        "type": "other"
+      },
+      {
+        "name": "memcached cloud",
+        "url": "https://redislabs.com/memcached-cloud",
+        "type": "datastore"
+      },
+      {
+        "name": "new relic",
+        "url": "http://newrelic.com/",
+        "type": "analytics"
       },
       {
         "name": "twilio",
