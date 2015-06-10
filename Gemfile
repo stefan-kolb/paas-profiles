@@ -14,10 +14,7 @@ gem 'activesupport'
 gem 'require_all'
 gem 'grape'
 gem 'grape-entity'
-
-group :development do
-  gem 'rubocop', require: false
-end
+gem 'rubocop', require: false
 
 group :test do
   gem 'rake'
