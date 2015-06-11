@@ -195,7 +195,7 @@
     ],
     "addon": [
       {
-        "name": "blackfire",
+        "name": "blackfire profiler",
         "url": "https://blackfire.io/",
         "description": "Blackfire Profiler automatically instruments your code to gather data about consumed server resources like memory, CPU time, and I/O. ",
         "type": "analytics"

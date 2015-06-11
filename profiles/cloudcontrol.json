@@ -217,7 +217,7 @@
         "type": "analytics"
       },
       {
-        "name": "foundelasticsearch",
+        "name": "found",
         "url": "https://www.found.no/",
         "type": "search"
       },
