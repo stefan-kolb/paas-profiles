@@ -18,8 +18,8 @@ module Profiles
       # profile
       @profile = nil
 
-      def self.file_path
-        @file_path
+      class << self
+        attr_reader :file_path
       end
 
       # loads and validates profile
@@ -48,9 +48,10 @@ module Profiles
       # url must be reachable
       define_method('test_url') do
         begin
-          code ||= RestClient::Request.execute(:method => :get, :url => @profile['url'], :timeout => 5, :open_timeout => 5).code
-        rescue; end
-        $stderr.puts "WARN: #{@profile['name']} url must respond with status OK" unless code == 200
+          RestClient::Request.execute(method: :get, url: @profile['url'], timeout: 10)
+        rescue StandardError
+          $stderr.puts "WARN: #{@profile['name']} url must respond with status OK"
+        end
       end
 
       # must be available either as public or private service

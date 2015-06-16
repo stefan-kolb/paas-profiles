@@ -18,15 +18,15 @@ module Profiles
 
       set :root, proc { File.join(__dir__, '..') }
       set :views, proc { File.join(root, 'app/views') }
-      not_found { erb :'404', :layout => false }
-      error { erb :'500', :layout => false }
+      not_found { erb :'404', layout: false }
+      error { erb :'500', layout: false }
     end
 
     configure :production do
       # monitoring
       require 'newrelic_rpm'
       # protection
-      set :protection, :except => :frame_options
+      set :protection, except: :frame_options
     end
   end
 end

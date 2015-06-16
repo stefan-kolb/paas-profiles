@@ -28,5 +28,4 @@ module ApplicationHelpers
   def url_decode(string)
     CGI.unescape(string.downcase)
   end
-
 end

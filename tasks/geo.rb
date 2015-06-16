@@ -3,9 +3,9 @@ require_relative '../app/models/datacenter'
 namespace :geo do
 
   desc 'Retrieve geo coordinates for all data center locations'
-  task :datacenter => 'db:seed' do
+  task datacenter: 'db:seed' do
     # raise errors
-    Geocoder.configure(:always_raise => :all)
+    Geocoder.configure(always_raise: :all)
 
     # delete collection
     Profiles::Datacenter.delete_all
@@ -58,6 +58,6 @@ namespace :geo do
       f.write(JSON.pretty_generate JSON.parse(Profiles::Datacenter.all.without(:id).to_json))
     end
 
-    # TODO test if all are here = count distinct regions, country
+    # TODO: test if all are here = count distinct regions, country
   end
 end

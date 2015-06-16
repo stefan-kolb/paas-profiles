@@ -3,18 +3,14 @@ require 'active_support/core_ext'
 
 module StatisticsHelper
   def median(set)
-    if set.blank?
-      fail ArgumentError, 'There is no median for an empty set'
-    end
+    fail ArgumentError, 'There is no median for an empty set' if set.blank?
 
     set.sort!
     (set[(set.length - 1) / 2] + set[set.length / 2]) / 2.0
   end
 
   def mode(set)
-    if set.blank?
-      fail ArgumentError, 'There is no mode for an empty set'
-    end
+    fail ArgumentError, 'There is no mode for an empty set' if set.blank?
 
     freq = set.each_with_object(Hash.new(0)) do |e, a|
       a[e] += 1
@@ -26,9 +22,7 @@ module StatisticsHelper
   end
 
   def mean(set)
-    if set.blank?
-      fail ArgumentError, 'There is no mean for an empty set'
-    end
+    fail ArgumentError, 'There is no mean for an empty set' if set.blank?
 
     (set.reduce(:+) / set.length.to_f).round(1)
   end
@@ -41,5 +35,4 @@ module StatisticsHelper
   def standard_deviation(set)
     Math.sqrt(variance(set))
   end
-
 end

@@ -42,9 +42,7 @@ namespace :profiles do
             type = alt['services']['native'].select { |v| v['name'] =~ /#{s['name']}/ }[0]
             puts "What about #{type['type']}? (y/n)"
             accept = STDIN.gets.chomp
-            if accept.eql? 'y'
-              s['type'] = type['type']
-            end
+            s['type'] = type['type'] if accept.eql? 'y'
 
           end
         end
@@ -75,9 +73,7 @@ namespace :profiles do
               type = alt[0]['services']['addon'].select { |v| v['name'] =~ /#{s['name']}/ }[0] unless alt.blank?
               puts "What about #{type['url']} (y/n)"
               accept = STDIN.gets.chomp
-              if accept.eql? 'y'
-                s['url'] = type['url']
-              end
+              s['url'] = type['url'] if accept.eql? 'y'
             rescue StandardError => e
               puts e.message
               # nothing to do

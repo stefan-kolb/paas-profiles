@@ -133,7 +133,7 @@ namespace :db do
   task :history do
     g = Git.open('C:\Users\Administrator\Documents\GitHub\paas-profiles')
 
-    g.log(count = 500).since('30 weeks ago').each do |l|
+    g.log(500).since('30 weeks ago').each do |l|
       g.checkout l
       dir = 'C:/Users/Administrator/Documents/GitHub/paas-profiles/profiles/*'
       active = Dir[dir].count { |file| File.file?(file) }
@@ -153,7 +153,7 @@ namespace :db do
       end
 
       # restore historic database
-      # TODO problem if test does not pass!
+      # TODO: problem if test does not pass!
       begin
         # Rake::Task[:test].execute
         Rake::Task['mongo:import'].execute

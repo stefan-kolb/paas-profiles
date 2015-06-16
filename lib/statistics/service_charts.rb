@@ -7,7 +7,7 @@ module Profiles
     def initialize
       @service_count = Vendor.distinct('services.native.name').length
       # avg services count
-      sum_services = 0
+      # sum_services = 0
       # Vendor.all.each { |v| sum_services += v.service.natives.count }
       # @avg_service_count = (sum_services / Charts.new.vendor_count.to_f).round(1)
     end

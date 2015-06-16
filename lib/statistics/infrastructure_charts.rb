@@ -38,7 +38,7 @@ module Profiles
 
     def heatmap
       data = {}
-      # todo vendors that allow multiple deployments in one country are counted double
+      # TODO: vendors that allow multiple deployments in one country are counted double
       Vendor.where(:infrastructures.exists => true).only(:infrastructures).each do |vendor|
         next if vendor.infrastructures.blank?
 
@@ -68,7 +68,7 @@ module Profiles
       continent_codes.keys.each do |c|
         count = Vendor.where('infrastructures.continent' => c).count
         public = Vendor.where('hosting.public' => true).count
-        # TODO missing public infras
+        # TODO: missing public infras
         percentage = (count / public.to_f * 100).round(0)
         data << { name: continent_by_code(c), y: percentage }
       end
@@ -78,14 +78,12 @@ module Profiles
     end
 
     def top_countries(amount = 5)
-      # TODO hacky
+      # TODO: hacky
       h = JSON.parse(heatmap)
       top = h.keys.sort { |a, b| h[b] <=> h[a] }
       data = []
       h.each do |e|
-        if top.include? e[0]
-          data << { name: e[0], value: e[1] }
-        end
+        data << { name: e[0], value: e[1] } if top.include? e[0]
       end
       data.sort! { |x, y| y[:value] <=> x[:value] }
       data.first(amount)
@@ -102,7 +100,7 @@ module Profiles
     def compute_averages
       # only public offerings
       infra_count = Vendor.where('hosting.public' => true).collect { |v| v.infrastructures.count }
-      # TODO data fuzz: remove missing infrastructures
+      # TODO: data fuzz: remove missing infrastructures
       infra_count.delete_if { |e| e == 0 }
       @mean_count = Charts.mean(infra_count)
       @median_count = Charts.median(infra_count)

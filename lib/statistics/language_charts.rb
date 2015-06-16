@@ -53,7 +53,7 @@ module Profiles
         end
       end
 
-      # TODO now, aggregate others?
+      # TODO: now, aggregate others?
       # threshold
       data.reject! { |i| i[:data].last <= threshold * 100 }
       # capitalize
@@ -68,7 +68,7 @@ module Profiles
       Snapshot.all.only(:revision).collect { |e| e.revision.strftime('%m-%Y') }
     end
 
-    def get_count_trend
+    def count_trend
       data = []
       data << { name: 'Polyglot', data: [] }
       data << { name: 'Language-specific', data: [] }

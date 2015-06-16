@@ -46,4 +46,4 @@ module SimpleNavigation
   end
 end
 
-SimpleNavigation.register_renderer :breadcrumbs => SimpleNavigation::Renderer::Breadcrumbs
+SimpleNavigation.register_renderer breadcrumbs: SimpleNavigation::Renderer::Breadcrumbs

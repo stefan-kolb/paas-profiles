@@ -1,1 +1,38 @@
-inherit_from: .rubocop_todo.yml
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Style/IndentationConsistency:
+  Enabled: false
+
+Style/FileName:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false

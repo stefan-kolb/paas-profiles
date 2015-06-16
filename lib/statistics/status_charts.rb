@@ -3,7 +3,6 @@ require_relative 'charts'
 module Profiles
   class StatusCharts
     def initialize
-
     end
 
     def status_count(status)
@@ -15,6 +14,8 @@ module Profiles
     end
 
     def mean_maturity(status = nil)
+      result = 0
+
       if status
         sum = 0
         vendors = Vendor.where(status: status).only(:status_since)
@@ -36,6 +37,8 @@ module Profiles
         puts sum
         result = (sum / vendors.length.to_f / 2_592_000).to_i
       end
+
+      result
     end
 
     def status_maturity(type = 'production')
@@ -96,7 +99,7 @@ module Profiles
         end
       end
 
-      # TODO now
+      # TODO: now
       # threshold
       data.reject! { |i| i[:data].last <= threshold * 100 }
       # capitalize
@@ -111,7 +114,7 @@ module Profiles
       Snapshot.all.only(:revision).collect { |e| e.revision.strftime('%m-%Y') }
     end
 
-    def get_count_trend
+    def count_trend
       data = []
       data << { name: 'polyglot', data: [0, 5, 10, 24, 39] }
       data << { name: 'language-specific', data: [10, 25, 45, 35, 28] }

@@ -45,9 +45,7 @@ module Profiles
       @p1 = Vendor.where(name: /^#{params[:splat][0]}$/i).first
       @p2 = Vendor.where(name: /^#{params[:splat][1]}$/i).first
 
-      if @p1.nil? || @p2.nil?
-        halt 404
-      end
+      halt 404 if @p1.nil? || @p2.nil?
 
       @title = "#{@p1.name} vs #{@p2.name} | PaaS Comparison"
 
@@ -55,12 +53,12 @@ module Profiles
     end
 
     get '/search' do
-      erb :'profiles/search', :layout => false
+      erb :'profiles/search', layout: false
     end
 
     get '/vendors.rss' do
       content_type 'application/rss+xml'
-      Feed.get_rss
+      Feed.rss
     end
   end
 end

@@ -33,7 +33,7 @@ module Profiles
 
       distinct_values(type).each do |l|
         count = Vendor.where(type => l).count
-        # TODO if property is not mandatory this will lead to false % distribution, e.g. middleware
+        # TODO: if property is not mandatory this will lead to false % distribution, e.g. middleware
         # Wrong chart type because values don't add up to a 100 %
         data << [l, count]
       end
@@ -60,11 +60,11 @@ module Profiles
       data
     end
 
-    # todo define no threshold = false or 0? -> tests
+    # TODO: define no threshold = false or 0? -> tests
     def support_columndata(type, threshold = 0.05)
       data = []
 
-      distinct_values(type).each_with_index do |l, i|
+      distinct_values(type).each_with_index do |l, _i|
         count = Vendor.where(type => l).count
         rt = Runtime.where(name: l).first
         latest = rt['version'] unless rt.blank?
@@ -119,7 +119,7 @@ module Profiles
     end
 
     def distinct_versions_data(language)
-      # TODO duplicate languages in profile will cause false results
+      # TODO: duplicate languages in profile will cause false results
       vendors = Vendor.where('runtimes.language' => language)
       data = {}
 
@@ -135,7 +135,7 @@ module Profiles
             end
           else
             rt['versions'].each do |v|
-              # TODO uniform version format, filter empty versions
+              # TODO: uniform version format, filter empty versions
               v = Version.new(v).unify
 
               if data.key? v
@@ -149,9 +149,9 @@ module Profiles
         end
       end
 
-      # TODO sort bug 0.11 > 0.2
+      # TODO: sort bug 0.11 > 0.2
       data = data.sort { |x, y| x <=> y }
-      # TODO rundungsfehler bug?!
+      # TODO: rundungsfehler bug?!
       data.each do |v|
         v[1] = (v[1] / language_count(language).to_f * 100).to_i
       end

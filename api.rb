@@ -31,7 +31,7 @@ module Profiles
         name = CGI.unescape(params[:name])
         # TODO: move to main configuration file
         Geocoder.configure(
-          :timeout => 5
+          timeout: 5
         )
 
         markers = []

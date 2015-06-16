@@ -8,7 +8,7 @@ module Profiles
     extend ApplicationHelpers
 
     class << self
-      def get_rss
+      def rss
         rss = RSS::Maker.make('2.0') do |feed|
           feed.channel.title = 'PaaSify.it - Platform as a Service Providers'
           feed.channel.link = 'http://paasify.it'

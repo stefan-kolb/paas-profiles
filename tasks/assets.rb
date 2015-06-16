@@ -31,8 +31,7 @@ namespace :assets do
   task :sprites do
     puts '----> Creating sprites...'
     # http://glue.readthedocs.org/en/latest/options.html
-    cmd = 'glue public/sources --img=public/img/sprites --css=public/css/sprites --retina --margin=1 --project'
-    `cmd`
+    `glue public/sources --img=public/img/sprites --css=public/css/sprites --retina --margin=1 --project`
   end
 
   private
@@ -50,8 +49,8 @@ namespace :assets do
       next if vendor['twitter'].blank?
 
       begin
-        # FIXME limit is 180
-        resp = RestClient.get("https://api.twitter.com/1.1/users/show.json?screen_name=#{vendor['twitter']}", :authorization => "Bearer #{ENV['TWITTER_SECRET']}")
+        # FIXME: limit is 180
+        resp = RestClient.get("https://api.twitter.com/1.1/users/show.json?screen_name=#{vendor['twitter']}", authorization: "Bearer #{ENV['TWITTER_SECRET']}")
 
         fail 'Bad response' unless resp.code == 200
 
