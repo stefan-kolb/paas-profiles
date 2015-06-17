@@ -1,6 +1,6 @@
 {
   "name": "Google App Engine",
-  "revision": "2014-09-24",
+  "revision": "2015-06-17",
   "url": "https://cloud.google.com/appengine",
   "status": "production",
   "status_since": "2011-11-07",
@@ -33,7 +33,7 @@
     {
       "language": "go",
       "versions": [
-        "1.2.1"
+        "1.4.2"
       ]
     },
     {
@@ -45,7 +45,8 @@
     {
       "language": "php",
       "versions": [
-        "5.4.32"
+        "5.4.35",
+        "5.5"
       ]
     },
     {
