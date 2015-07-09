@@ -14,13 +14,18 @@ module Profiles
     prefix :api
 
     resource :vendors do
+      desc 'Returns all vendors'
+      get do
+        present Vendor.all
+      end
+
       desc 'Returns a vendor.'
       params do
-        requires :name, type: String, regexp: /^[a-z_]+$/, desc: 'Vendor name.'
+        requires :name, type: String, desc: 'Vendor name.'
       end
       get ':name' do
         begin
-          vendor = Vendor.find_by(name: /#{params[:name].gsub('_', ' ')}/i)
+          vendor = Vendor.find_by(name: /\A#{params[:name].gsub('_', '.')}\z/i)
           present vendor
         rescue Mongoid::Errors::DocumentNotFound
           error! 'Vendor not found', 404
@@ -28,7 +33,7 @@ module Profiles
       end
 
       get ':name/infrastructures' do
-        name = CGI.unescape(params[:name])
+        name = params[:name].gsub('_', '.')
         # TODO: move to main configuration file
         Geocoder.configure(
           timeout: 5
@@ -37,7 +42,7 @@ module Profiles
         markers = []
         vendor = Vendor.where(name: /#{name}/i).only(:infrastructures).first
 
-        unless vendor['infrastructures'].blank?
+        unless vendor.nil? || vendor['infrastructures'].blank?
           vendor['infrastructures'].each do |infra|
             next if infra['region'].blank?
 
