@@ -32,7 +32,6 @@
 
     ga('create', 'UA-64667246-1', 'auto');
     ga('send', 'pageview');
-
   </script>
 </head>
 <body>
@@ -68,18 +67,18 @@
   </div>
 </footer>
 <script>
-    // progress bar
     $(document).ready(function () {
+        // progress bar
         NProgress.start();
+        // tooltips
+        $('.tip').tooltip({ placement: 'top' });
+        $('.tip_bottom').tooltip({ placement: 'bottom' });
     });
 
     $(window).load(function () {
+        // progress bar
         NProgress.done();
     });
-
-    // tooltips
-    $('.tip').tooltip({ placement: 'top' });
-    $('.tip_bottom').tooltip({ placement: 'bottom' });
 </script>
 </body>
 </html>
