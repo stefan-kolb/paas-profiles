@@ -97,3 +97,7 @@ hr.soften {
 .dropdown-menu {
     text-align: left;
 }
+
+@media (max-width: 767px) {
+  #hero { width: calc(100vw - 40px) !important; }
+}
