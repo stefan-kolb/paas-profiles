@@ -1,9 +1,9 @@
 {
   "name": "Appsembler",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2015-07-17",
   "url": "http://appsembler.com",
-  "status": "beta",
-  "status_since": null,
+  "status": "eol",
+  "status_since": "2015-05-01",
   "type": "SaaS-centric",
   "hosting": {
     "public": true,
