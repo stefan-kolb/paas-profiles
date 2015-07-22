@@ -1,6 +1,6 @@
 {
   "name": "Scalingo",
-  "revision": "2015-04-17",
+  "revision": "2015-07-22",
   "vendor_verified": "2015-04-17",
   "url": "https://scalingo.com",
   "status": "production",
@@ -11,9 +11,6 @@
     "private": true
   },
   "pricing": [
-    {
-      "model": "free"
-    },
     {
       "model": "metered",
       "period": "monthly"
@@ -253,7 +250,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "2.6.5"
+          "2.6.10"
         ]
       },
       {
@@ -277,7 +274,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "2.8.17"
+          "2.8.21"
         ]
       },
       {
@@ -285,7 +282,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "1.4.4"
+          "1.4.5"
         ]
       }
     ],
