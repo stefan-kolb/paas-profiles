@@ -25,7 +25,7 @@ module Profiles
       end
       get ':name' do
         begin
-          vendor = Vendor.find_by(name: /\A#{params[:name].gsub('_', '.')}\z/i)
+          vendor = Vendor.find_by(name: /\A#{params[:name].tr('_', '.')}\z/i)
           present vendor
         rescue Mongoid::Errors::DocumentNotFound
           error! 'Vendor not found', 404
@@ -33,7 +33,7 @@ module Profiles
       end
 
       get ':name/infrastructures' do
-        name = params[:name].gsub('_', '.')
+        name = params[:name].tr('_', '.')
         # TODO: move to main configuration file
         Geocoder.configure(
           timeout: 5

@@ -1,4 +1,4 @@
-﻿require_relative '../test_helper'
+require_relative '../test_helper'
 
 class TestVendor < MiniTest::Test
   include FactoryGirl::Syntax::Methods
