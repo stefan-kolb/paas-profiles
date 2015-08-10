@@ -4,6 +4,7 @@ rvm:
 services:
   - mongodb
 install: bundle install
+sudo: false
 
 deploy:
   provider: heroku
