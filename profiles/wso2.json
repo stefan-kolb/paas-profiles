@@ -1,0 +1,103 @@
+{
+  "name": "WSO2",
+  "revision": "2015-08-04",
+  "vendor_verified": "2015-08-04",
+  "url": "http://wso2.com/cloud",
+  "status": "beta",
+  "status_since": "2014-06-01",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": true
+  },
+  "pricing": [
+    {
+      "model": "free",
+      "period": "monthly"
+    }
+  ],
+  "qos": {
+    "uptime": 99.9
+  },
+  "scaling": {
+    "vertical": false,
+    "horizontal": true,
+    "auto": true
+  },
+  "runtimes": [
+    {
+      "language": "java",
+      "versions": [
+        "1.7"
+      ]
+    }
+  ],
+  "middleware": [
+    {
+      "name": "WSO2 Application Server",
+      "runtime": "java",
+      "versions": [
+        "5.2.1"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "JAX-RS",
+      "runtime": "java",
+      "versions": [
+        "2.0"
+      ]
+    },
+    {
+      "name": "JAX-WS",
+      "runtime": "java",
+      "versions": [
+        "2.2.10"
+      ]
+    },
+    {
+      "name": "jaggery",
+      "runtime": "java",
+      "versions": [
+        "0.9.0-ALPHA-3"
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+        "4.2.0"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "MySQL",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.6"
+        ]
+      },
+      {
+        "name": "API Cloud",
+        "description": "API Management, Gateway, and Subscriber Portal",
+        "type": "other",
+        "versions": [
+          "5.6"
+        ]
+      }
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
+      "provider": "AWS"
+    }
+  ]
+}
