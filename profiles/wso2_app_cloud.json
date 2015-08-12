@@ -1,6 +1,6 @@
 {
-  "name": "WSO2",
-  "revision": "2015-08-04",
+  "name": "WSO2 App Cloud",
+  "revision": "2015-08-12",
   "vendor_verified": "2015-08-04",
   "url": "http://wso2.com/cloud",
   "status": "beta",
@@ -68,6 +68,13 @@
       "runtime": "java",
       "versions": [
         "4.2.0"
+      ]
+    },
+    {
+      "name": "hibernate",
+      "runtime": "java",
+      "versions": [
+
       ]
     }
   ],
