@@ -1,6 +1,6 @@
 {
   "name": "Heroku",
-  "revision": "2015-05-12",
+  "revision": "2015-08-20",
   "url": "http://www.heroku.com/",
   "status": "production",
   "status_since": "2009-04-24",
@@ -74,8 +74,14 @@
         "1.9.2",
         "1.9.3",
         "2.0.0",
-        "2.1.5",
-        "2.2.0"
+        "2.1.7",
+        "2.2.3"
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "1.5"
       ]
     },
     {
