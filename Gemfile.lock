@@ -1,10 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (4.2.3)
-      activesupport (= 4.2.3)
+    activemodel (4.2.4)
+      activesupport (= 4.2.4)
       builder (~> 3.1)
-    activesupport (4.2.3)
+    activesupport (4.2.4)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -33,7 +33,7 @@ GEM
       activesupport (>= 3.0.0)
     ffi (1.9.10-x86-mingw32)
     geocoder (1.2.9)
-    grape (0.12.0)
+    grape (0.13.0)
       activesupport
       builder
       hashie (>= 2.1.0)
@@ -43,7 +43,7 @@ GEM
       rack-accept
       rack-mount
       virtus (>= 1.0.0)
-    grape-entity (0.4.7)
+    grape-entity (0.4.8)
       activesupport
       multi_json (>= 1.3.2)
     hashie (3.4.2)
@@ -55,20 +55,20 @@ GEM
     json (1.8.3)
     kgio (2.9.3)
     mime-types (2.6.1)
-    minitest (5.7.0)
+    minitest (5.8.0)
     mongoid (4.0.2)
       activemodel (~> 4.0)
       moped (~> 2.0.0)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
-    moped (2.0.6)
+    moped (2.0.7)
       bson (~> 3.0)
       connection_pool (~> 2.0)
       optionable (~> 0.2.0)
     multi_json (1.11.2)
     multi_xml (0.5.5)
     netrc (0.10.3)
-    newrelic_rpm (3.12.1.298)
+    newrelic_rpm (3.13.0.299)
     optionable (0.2.0)
     origin (2.1.1)
     parser (2.2.2.6)
@@ -92,7 +92,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rmagick (2.15.3)
+    rmagick (2.15.4)
     rubocop (0.33.0)
       astrolabe (~> 1.3)
       parser (>= 2.2.2.5, < 3.0)
