@@ -23,7 +23,7 @@ GEM
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     connection_pool (2.2.0)
-    database_cleaner (1.5.0)
+    database_cleaner (1.4.1)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     domain_name (0.5.24)
@@ -134,7 +134,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
-  database_cleaner (>= 1.4.1)
+  database_cleaner (~> 1.4.1)
   factory_girl
   geocoder
   grape

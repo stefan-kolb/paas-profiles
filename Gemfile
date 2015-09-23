@@ -22,7 +22,7 @@ group :test do
   gem 'shoulda-context'
   gem 'rack-test'
   gem 'factory_girl'
-  gem 'database_cleaner', '>= 1.4.1'
+  gem 'database_cleaner', '~> 1.4.1'
 end
 
 group :production do
