@@ -1,10 +1,10 @@
 {
   "name": "Stackato",
-  "revision": "2014-08-29",
+  "revision": "2015-09-23",
   "vendor_verified": "2014-08-29",
   "url": "http://www.activestate.com/stackato",
-  "status": "production",
-  "status_since": "2012-02-29",
+  "status": "eol",
+  "status_since": "2015-07-28",
   "type": "Generic",
   "hosting": {
     "public": false,
