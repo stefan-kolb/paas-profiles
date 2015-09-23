@@ -69,7 +69,7 @@ namespace :profiles do
             puts "[MISSING] #{data['name']} #{s['name']} is missing addon url"
             begin
               alt = Profiles::Vendor.ne(name: data['name'])
-                    .where('services.addon.name' => /#{s['name']}/, 'services.addon.url' => { '$ne' => '' }, 'services.addon.url' => { '$exists' => true })
+                    .where('services.addon.name' => /#{s['name']}/, 'services.addon.url' => { '$ne' => '' })
               type = alt[0]['services']['addon'].select { |v| v['name'] =~ /#{s['name']}/ }[0] unless alt.blank?
               puts "What about #{type['url']} (y/n)"
               accept = STDIN.gets.chomp
