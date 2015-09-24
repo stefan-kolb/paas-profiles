@@ -1,0 +1,45 @@
+{
+  "name": "PythonAnywhere",
+  "revision": "2015-08-24",
+  "vendor_verified": "2015-08-24",
+  "url": "https://www.pythonanywhere.com",
+  "status": "production",
+  "status_since": "2012-03-09",
+  "type": "Generic",
+  "hosting": {
+    "public": true, "private": false
+  },
+  "pricing": [
+        { "model": "fixed", "period": "monthly" }
+  ],
+  "scaling": {
+    "vertical": true, "horizontal": true, "auto": false
+  },
+  "runtimes": [
+    { "language": "python", "versions": [ "2.7", "3.3", "3.4" ] }
+  ],
+  "middleware": [
+    { "name": "tomcat", "runtime": "java", "versions": [ "6.0.35" ] }
+  ],
+  "frameworks": [
+    { "name": "rails", "runtime": "ruby", "versions": [ "4.0.0" ] },
+    { "name": "django", "runtime": "python", "versions": [ "1.5.1" ] }
+  ],
+  "services": {
+    "native": [
+      { "name": "mongodb", "description": "", "type": "datastore", "versions": [ "1.8" ] }
+    ],
+    "addon": [
+      { "name": "mongolab", "url": "https://mongolab.com/", "description": "", "type": "datastore" }
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
+      "provider": "AWS"
+    }
+  ]
+}
