@@ -19,19 +19,22 @@
     { "language": "python", "versions": [ "2.7", "3.3", "3.4" ] }
   ],
   "middleware": [
-    { "name": "tomcat", "runtime": "java", "versions": [ "6.0.35" ] }
+    { "name": "wsgi", "runtime": "python", "versions": [] }
   ],
   "frameworks": [
-    { "name": "rails", "runtime": "ruby", "versions": [ "4.0.0" ] },
-    { "name": "django", "runtime": "python", "versions": [ "1.5.1" ] }
+    { "name": "django", "runtime": "python", "versions": [ "*" ] }
+    { "name": "flask", "runtime": "python", "versions": [ "*" ] }
+    { "name": "web2py", "runtime": "python", "versions": [ "*" ] }
+    { "name": "bottle", "runtime": "python", "versions": [ "*" ] }
+    { "name": "mezzanine", "runtime": "python", "versions": [ "*" ] }
+    { "name": "web.py", "runtime": "python", "versions": [ "*" ] }
+    { "name": "Generic WSGI", "runtime": "python", "versions": [ "*" ] }
   ],
   "services": {
     "native": [
-      { "name": "mongodb", "description": "", "type": "datastore", "versions": [ "1.8" ] }
+      { "name": "mysql", "description": "", "type": "datastore", "versions": [ "5.5.42" ] }
+      { "name": "postgres", "description": "", "type": "datastore", "versions": [ "9.4" ] }
     ],
-    "addon": [
-      { "name": "mongolab", "url": "https://mongolab.com/", "description": "", "type": "datastore" }
-    ]
   },
   "extensible": false,
   "infrastructures": [
