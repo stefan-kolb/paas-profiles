@@ -19,7 +19,7 @@
     { "language": "python", "versions": [ "2.7", "3.3", "3.4" ] }
   ],
   "middleware": [
-    { "name": "wsgi", "runtime": "python", "versions": [] }
+
   ],
   "frameworks": [
     { "name": "django", "runtime": "python", "versions": [ "*" ] },
@@ -27,7 +27,8 @@
     { "name": "web2py", "runtime": "python", "versions": [ "*" ] },
     { "name": "bottle", "runtime": "python", "versions": [ "*" ] },
     { "name": "mezzanine", "runtime": "python", "versions": [ "*" ] },
-    { "name": "web.py", "runtime": "python", "versions": [ "*" ] }
+    { "name": "web.py", "runtime": "python", "versions": [ "*" ] },
+    { "name": "wsgi", "runtime": "python", "versions": [ "*"] }
   ],
   "services": {
     "native": [
