@@ -1,0 +1,48 @@
+{
+  "name": "PythonAnywhere",
+  "revision": "2015-08-24",
+  "vendor_verified": "2015-08-24",
+  "url": "https://www.pythonanywhere.com",
+  "status": "production",
+  "status_since": "2012-03-09",
+  "type": "Generic",
+  "hosting": {
+    "public": true, "private": false
+  },
+  "pricing": [
+        { "model": "fixed", "period": "monthly" }
+  ],
+  "scaling": {
+    "vertical": true, "horizontal": true, "auto": false
+  },
+  "runtimes": [
+    { "language": "python", "versions": [ "2.7", "3.3", "3.4" ] }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+    { "name": "django", "runtime": "python", "versions": [ "*" ] },
+    { "name": "flask", "runtime": "python", "versions": [ "*" ] },
+    { "name": "web2py", "runtime": "python", "versions": [ "*" ] },
+    { "name": "bottle", "runtime": "python", "versions": [ "*" ] },
+    { "name": "mezzanine", "runtime": "python", "versions": [ "*" ] },
+    { "name": "web.py", "runtime": "python", "versions": [ "*" ] },
+    { "name": "wsgi", "runtime": "python", "versions": [ "*"] }
+  ],
+  "services": {
+    "native": [
+      { "name": "mysql", "description": "", "type": "datastore", "versions": [ "5.5.42" ] },
+      { "name": "postgres", "description": "", "type": "datastore", "versions": [ "9.4" ] }
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Virginia",
+      "provider": "AWS"
+    }
+  ]
+}
