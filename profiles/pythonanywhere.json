@@ -28,7 +28,6 @@
     { "name": "bottle", "runtime": "python", "versions": [ "*" ] },
     { "name": "mezzanine", "runtime": "python", "versions": [ "*" ] },
     { "name": "web.py", "runtime": "python", "versions": [ "*" ] },
-    { "name": "Generic WSGI", "runtime": "python", "versions": [ "*" ] }
   ],
   "services": {
     "native": [
