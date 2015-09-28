@@ -22,13 +22,13 @@
 
   ],
   "frameworks": [
-    { "name": "django", "runtime": "python", "versions": [ "*" ] },
-    { "name": "flask", "runtime": "python", "versions": [ "*" ] },
-    { "name": "web2py", "runtime": "python", "versions": [ "*" ] },
-    { "name": "bottle", "runtime": "python", "versions": [ "*" ] },
-    { "name": "mezzanine", "runtime": "python", "versions": [ "*" ] },
-    { "name": "web.py", "runtime": "python", "versions": [ "*" ] },
-    { "name": "wsgi", "runtime": "python", "versions": [ "*"] }
+    { "name": "django", "runtime": "python", "versions": [ "*.*" ] },
+    { "name": "flask", "runtime": "python", "versions": [ "*.*" ] },
+    { "name": "web2py", "runtime": "python", "versions": [ "*.*" ] },
+    { "name": "bottle", "runtime": "python", "versions": [ "*.*" ] },
+    { "name": "mezzanine", "runtime": "python", "versions": [ "*.*" ] },
+    { "name": "web.py", "runtime": "python", "versions": [ "*.*" ] },
+    { "name": "wsgi", "runtime": "python", "versions": [ "*.*"] }
   ],
   "services": {
     "native": [
