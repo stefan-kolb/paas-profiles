@@ -33,7 +33,7 @@
   "services": {
     "native": [
       { "name": "mysql", "description": "", "type": "datastore", "versions": [ "5.5.42" ] },
-      { "name": "postgres", "description": "", "type": "datastore", "versions": [ "9.4" ] }
+      { "name": "postgresql", "description": "", "type": "datastore", "versions": [ "9.4" ] }
     ]
   },
   "extensible": false,
