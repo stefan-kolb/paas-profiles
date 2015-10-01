@@ -16,3 +16,5 @@ production:
   sessions:
     default:
       uri: <%= ENV['MONGO_URL'] %>
+      options:
+        pool_timeout: 30
