@@ -1,18 +1,18 @@
 development:
-  sessions:
+  clients:
     default:
       database: paas
       hosts:
-          - 127.0.0.1:27017
+        - 127.0.0.1:27017
 
 test:
-  sessions:
+  clients:
     default:
       database: paas_test
       hosts:
         - 127.0.0.1:27017
 
 production:
-  sessions:
+  clients:
     default:
       uri: <%= ENV['MONGO_URL'] %>
