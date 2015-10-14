@@ -1,0 +1,129 @@
+{
+  "name": "Nuvla",
+  "revision": "2015-10-13",
+  "vendor_verified": "2015-10-13",
+  "url": "http://nuv.la/login",
+  "status": "production",
+  "status_since": "2012-01-01",
+  "type": "Generic",
+  "hosting": {
+    "public": true, "private": true
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    },
+    {
+      "model": "free"
+    }
+  ],
+  "scaling": {
+    "vertical": true, "horizontal": true, "auto": false
+  },
+  "runtimes": [
+    { "language": "python",     "versions": [ "*.*" ] },
+    { "language": "ruby",       "versions": [ "*.*" ] },
+    { "language": "bash",       "versions": [ "*.*" ] },
+    { "language": "powershell", "versions": [ "*.*" ] }
+  ],
+  "middleware": [
+  ],
+  "frameworks": [
+    { "name": "Couchbase",      "runtime": "bash",        "versions": [ "2.1.1", "*.*" ]  },
+    { "name": "Docker Swarm",   "runtime": "bash",        "versions": [ "*.*" ]  },
+    { "name": "Drupal",         "runtime": "bash",        "versions": [ "7.28", "*.*" ]  },
+    { "name": "Galaxy",         "runtime": "bash",        "versions": [ "15.07", "*.*" ]  },
+    { "name": "Hadoop",         "runtime": "bash",        "versions": [ "2.0.1", "*.*" ]  },
+    { "name": "LAMP",           "runtime": "bash",        "versions": [ "*.*" ]  },
+    { "name": "Minecraft",      "runtime": "bash",        "versions": [ "1.8.7", "*.*" ]  },
+    { "name": "MongoDB",        "runtime": "bash",        "versions": [ "3.0", "*.*" ]  },
+    { "name": "OpenERP",        "runtime": "bash",        "versions": [ "*.*" ]  },
+    { "name": "RStudio",        "runtime": "bash",        "versions": [ "0.97.551", "*.*" ]  },
+    { "name": "SlipStream",     "runtime": "bash",        "versions": [ "2.17", "*.*" ]  },
+    { "name": "Torque",         "runtime": "bash",        "versions": [ "*.*" ]  },
+    { "name": "WordPress",      "runtime": "bash",        "versions": [ "*.*" ]  },
+    { "name": "Windows Server", "runtime": "powershell",  "versions": [ "2012" ] },
+    { "name": "Ubuntu",         "runtime": "bash",        "versions": [ "14.04" ]  },
+    { "name": "CentOS",         "runtime": "bash",        "versions": [ "6" ]  }
+  ],
+  "services": {
+    "native": [
+      { "name": "SlipStream Engine", "type": "deployment",  "description": "The Nuvla platform is powered by SlipStream.", "versions": [ "2.17" ] },
+      { "name": "Metering",         "type": "profiling",   "description": "Control the resources usage across all used clouds.", "versions": [ "*.*" ] },
+      { "name": "Events",           "type": "profiling",   "description": "Unified overview of all events related to the account and its deployments.", "versions": [ "*.*" ] },
+      { "name": "Usage",  "type": "management",  "description": "Aggregated and consolidated usage records.", "versions": [ "*.*" ] },
+      { "name": "Quotas",           "type": "management",  "description": "Per cloud quota enforcement.", "versions": [ "*.*" ] },
+      { "name": "Multi-tier",       "type": "management",  "description": "Group and account ACLs for all modules", "versions": [ "*.*" ] }
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "ec2-ap-northeast-1 - Tokyo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "ec2-ap-southeast-1 - Singapore",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "ec2-eu-west - Dublin",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "ec2-eu-central-1 - Frankfurt",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "ec2-us-east-1 - N. Virginia",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "ec2-us-west-1 - N. California",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "ec2-us-west-2 - Oregon",
+      "provider": "AWS"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "ec2-ap-southeast-2 - Sydney",
+      "provider": "AWS"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "ec2-sa-east-1 - Sao Paulo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "CH",
+      "region": "exoscale-ch-gva - Geneva",
+      "provider": "Exoscale"
+    },
+    {
+      "continent": "EU",
+      "country": "CZ",
+      "region": "ultimum-cz1 - Prague",
+      "provider": "Ultimum"
+    }
+  ]
+}
