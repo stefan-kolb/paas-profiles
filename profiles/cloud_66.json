@@ -10,9 +10,8 @@
     "private": true
   },
   "pricing": [
-    {
-      "model": "metered"
-    }
+    { "model": "fixed", "period": "monthly" },
+    { "model": "fixed", "period": "annually" }
   ],
   "scaling": {
     "vertical": true,
@@ -23,22 +22,23 @@
     {
       "language": "docker",
       "versions": [
+
       ]
     }
   ],
   "middleware": [
-    { "name" : "nginx" },
-    { "name" : "HAProxy" },
-    { "name" : "Rabbit MQ" }
+    { "name" : "NGINX", "versions": [ "1.8" ] },
+    { "name" : "HAProxy", "versions": [ "1.5" ] },
+    { "name" : "Rabbit MQ", "versions": [ "3.5.6" ] }
   ],
   "services": {
     "native": [
-        { "name": "mysql", "type": "datastore" },
-        { "name": "postgres", "type": "datastore" },
-        { "name": "mongodb", "type": "datastore" },
-        { "name": "redis", "type": "datastore" },
-        { "name": "elastic_search", "type": "datastore" },
-        { "name": "memcached", "type": "datastore" },
+        { "name": "MySQL", "type": "datastore", "versions": [ "5.6.19" ] },
+        { "name": "PostgreSQL", "type": "datastore", "versions": [ "9.4.4" ] },
+        { "name": "MongoDB", "type": "datastore", "versions" : [ "2.6.11" ] },
+        { "name": "Redis", "type": "datastore", "versions": [ "3.0.4" ] },
+        { "name": "ElasticSearch", "type": "datastore", "versions": [ "1.7.2" ] },
+        { "name": "Memcached", "type": "datastore", "versions": [ "1.4.24" ] }
     ],
     "addon": [
 
