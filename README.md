@@ -22,6 +22,77 @@ You can validate changes to the profiles via a simple test run, i.e., ```rake te
 
 Contribute either via [pull request](https://help.github.com/articles/using-pull-requests), create an [issue](https://github.com/stefan-kolb/paas-profiles/issues) or send me an [email](mailto:stefan.kolb@uni-bamberg.de).
 
+### Development
+
+#### Preparing the environment
+
+You might want to clone your own fork instead.
+
+``` bash
+git clone git@github.com:slipstream/paas-profiles.git
+cd paas-profiles
+gem install bundler # upgrade to the latest version of Bundler
+bundle install
+```
+
+> **Note:** On some Ubuntu installations you might find following
+> error about the MagickCore package:
+> 
+> ```
+> Package MagickCore was not found in the pkg-config search path.
+> (...)
+> An error occurred while installing rmagick (2.15.4), and Bundler cannot continue.
+> Make sure that `gem install rmagick -v '2.15.4'` succeeds before bundling.
+> ```
+> 
+> In that case you might need to manually install `libmagickwand-dev`
+> and `imagemagick` libraries, and relaunch the install:
+> 
+> ``` bash
+> sudo apt-get install libmagickwand-dev imagemagick
+> bundle install
+> ```
+
+#### Preparing the DB
+
+To run the tests and a local instance of the application, you will
+need an instance of MongoDB running. On Ubuntu you might want to
+follow [this script][mongodb_gist] to install it, or
+[this instructions][mongodb_c9] if you are on [c9.io].
+
+[mongodb_gist]: https://gist.github.com/rbf/4001e6cc6d74465803f3
+[mongodb_c9]: https://docs.c9.io/docs/setting-up-mongodb
+[c9.io]: http://c9.io
+
+Setup the following system variable with the DB endpoint:
+
+``` bash
+export MONGO_URL=127.0.0.1:27017
+```
+
+#### Locally launch the application
+
+First you need to seed the database with
+
+``` bash
+rake db:seed
+```
+
+Then you can start the application with following command (from the
+[`Procfile`](Procfile) file).
+
+``` bash
+bundle exec unicorn -p $PORT -c ./config/unicorn.rb
+```
+
+If you change the [JSON files](/profiles/), you can re-seed the DB
+without having to restart the app.
+
+#### Testing
+
+As stated above, before sending a PR make sure that `rake test`
+reports all green.
+
 ## Profile Specification
 
 - [General Properties](#name)
