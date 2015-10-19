@@ -74,11 +74,11 @@ bundle install
 To run the tests and a local instance of the application, you will
 need an instance of MongoDB running. On Ubuntu you might want to
 follow [this script][mongodb_gist] to install it, or
-[this instructions][mongodb_c9] if you are on [c9.io].
+[this instructions][mongodb_c9] if you are on [`c9.io`].
 
 [mongodb_gist]: https://gist.github.com/rbf/4001e6cc6d74465803f3
 [mongodb_c9]: https://docs.c9.io/docs/setting-up-mongodb
-[c9.io]: http://c9.io
+[`c9.io`]: http://c9.io
 
 Setup the following system variable with the DB endpoint:
 
@@ -91,14 +91,20 @@ export MONGO_URL=127.0.0.1:27017
 First you need to seed the database with
 
 ``` bash
-rake db:seed
+MONGOID_ENV=development bundle exec rake db:seed
 ```
 
-Then you can start the application with following command (from the
-[`Procfile`](Procfile) file).
+Then you can start the application with following command:
 
 ``` bash
-bundle exec unicorn -p $PORT -c ./config/unicorn.rb
+bundle exec rackup
+```
+
+If you are on [`c9.io`] you should change how the server starts as per
+the following command:
+
+``` bash
+bundle exec rackup --host $IP --port $PORT
 ```
 
 If you change the [JSON files](/profiles/), you can re-seed the DB
