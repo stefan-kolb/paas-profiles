@@ -10,7 +10,8 @@ require 'shoulda/context'
 require 'rest-client'
 
 # database
-Mongoid.load!('./config/mongoid.yml')
+Mongoid.load!('config/mongoid.yml')
+Mongo::Logger.logger.level = ::Logger::INFO
 # fixtures
 FactoryGirl.find_definitions
 # TODO: not always needed!

@@ -50,7 +50,7 @@ module Profiles
         begin
           RestClient::Request.execute(method: :get, url: @profile['url'], timeout: 10)
         rescue StandardError
-          $stderr.puts "WARN: #{@profile['name']} url must respond with status OK"
+          $stderr.puts "WARN: #{@profile['name']} URL must respond with status 200 (OK)"
         end
       end
 
