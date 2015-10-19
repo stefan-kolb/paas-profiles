@@ -18,7 +18,7 @@ require_relative 'tasks/assets'
 require_relative 'tasks/profiles'
 require_relative 'tasks/geo'
 
-Mongoid.load!('./config/mongoid.yml', :test)
+Mongoid.load!('./config/mongoid.yml')
 
 # code style
 require 'rubocop/rake_task'
