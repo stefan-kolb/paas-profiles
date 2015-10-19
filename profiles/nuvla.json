@@ -46,67 +46,78 @@
     {
       "continent": "AS",
       "country": "JP",
-      "region": "ec2-ap-northeast-1 - Tokyo",
+      "region": "Tokyo",
+      "region_code": "ec2-ap-northeast-1",
       "provider": "AWS"
     },
     {
       "continent": "AS",
       "country": "SG",
-      "region": "ec2-ap-southeast-1 - Singapore",
+      "region": "Singapore",
+      "region_code": "ec2-ap-southeast-1",
       "provider": "AWS"
     },
     {
       "continent": "EU",
       "country": "IE",
-      "region": "ec2-eu-west - Dublin",
+      "region": "Dublin",
+      "region_code": "ec2-eu-west",
       "provider": "AWS"
     },
     {
       "continent": "EU",
       "country": "DE",
-      "region": "ec2-eu-central-1 - Frankfurt",
+      "region": "Frankfurt",
+      "region_code": "ec2-eu-central-1",
       "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": "ec2-us-east-1 - N. Virginia",
+      "region": "N. Virginia",
+      "region_code": "ec2-us-east-1",
       "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": "ec2-us-west-1 - N. California",
+      "region": "N. California",
+      "region_code": "ec2-us-west-1",
       "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": "ec2-us-west-2 - Oregon",
+      "region": "Oregon",
+      "region_code": "ec2-us-west-2",
       "provider": "AWS"
     },
     {
       "continent": "OC",
       "country": "AU",
-      "region": "ec2-ap-southeast-2 - Sydney",
+      "region": "Sydney",
+      "region_code": "ec2-ap-southeast-2",
       "provider": "AWS"
     },
     {
       "continent": "SA",
       "country": "BR",
-      "region": "ec2-sa-east-1 - Sao Paulo",
+      "region": "Sao Paulo",
+      "region_code": "ec2-sa-east-1",
       "provider": "AWS"
     },
     {
       "continent": "EU",
       "country": "CH",
-      "region": "exoscale-ch-gva - Geneva",
+      "region": "Geneva",
+      "region_code": "exoscale-ch-gva",
       "provider": "Exoscale"
     },
     {
       "continent": "EU",
       "country": "CZ",
-      "region": "ultimum-cz1 - Prague",
+      "region": "Prague",
+      "region_code": "ultimum-cz1",
       "provider": "Ultimum"
     }
   ]
