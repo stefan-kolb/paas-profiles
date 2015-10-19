@@ -22,6 +22,22 @@ You can validate changes to the profiles via a simple test run, i.e., ```rake te
 
 Contribute either via [pull request](https://help.github.com/articles/using-pull-requests), create an [issue](https://github.com/stefan-kolb/paas-profiles/issues) or send me an [email](mailto:stefan.kolb@uni-bamberg.de).
 
+### Minimal contribution
+
+To add a PaaS please provide the info in JSON format in the folder
+[`profiles`](/profiles/):
+
+- `[paas-name].json`
+
+See [below](#profile-specification) for details on the format
+specification.
+
+To include a logo for a PaaS you must provide it in 2 `.png` sizes in
+the folder [`public/img/vendor`](/public/img/vendor):
+
+- `[paas-name].png` in 80x80 px
+- `[paas-name]_big.png` in 400x400 px
+
 ### Development
 
 #### Preparing the environment
