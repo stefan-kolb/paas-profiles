@@ -23,9 +23,7 @@
   },
   "runtimes": [
     { "language": "python",     "versions": [ "*.*" ] },
-    { "language": "ruby",       "versions": [ "*.*" ] },
-    { "language": "bash",       "versions": [ "*.*" ] },
-    { "language": "powershell", "versions": [ "*.*" ] }
+    { "language": "ruby",       "versions": [ "*.*" ] }
   ],
   "middleware": [
   ],
