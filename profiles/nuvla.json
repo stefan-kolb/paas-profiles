@@ -28,22 +28,6 @@
   "middleware": [
   ],
   "frameworks": [
-    { "name": "Couchbase",      "runtime": "bash",        "versions": [ "2.1.1", "*.*" ]  },
-    { "name": "Docker Swarm",   "runtime": "bash",        "versions": [ "*.*" ]  },
-    { "name": "Drupal",         "runtime": "bash",        "versions": [ "7.28", "*.*" ]  },
-    { "name": "Galaxy",         "runtime": "bash",        "versions": [ "15.07", "*.*" ]  },
-    { "name": "Hadoop",         "runtime": "bash",        "versions": [ "2.0.1", "*.*" ]  },
-    { "name": "LAMP",           "runtime": "bash",        "versions": [ "*.*" ]  },
-    { "name": "Minecraft",      "runtime": "bash",        "versions": [ "1.8.7", "*.*" ]  },
-    { "name": "MongoDB",        "runtime": "bash",        "versions": [ "3.0", "*.*" ]  },
-    { "name": "OpenERP",        "runtime": "bash",        "versions": [ "*.*" ]  },
-    { "name": "RStudio",        "runtime": "bash",        "versions": [ "0.97.551", "*.*" ]  },
-    { "name": "SlipStream",     "runtime": "bash",        "versions": [ "2.17", "*.*" ]  },
-    { "name": "Torque",         "runtime": "bash",        "versions": [ "*.*" ]  },
-    { "name": "WordPress",      "runtime": "bash",        "versions": [ "*.*" ]  },
-    { "name": "Windows Server", "runtime": "powershell",  "versions": [ "2012" ] },
-    { "name": "Ubuntu",         "runtime": "bash",        "versions": [ "14.04" ]  },
-    { "name": "CentOS",         "runtime": "bash",        "versions": [ "6" ]  }
   ],
   "services": {
     "native": [
@@ -52,7 +36,9 @@
       { "name": "Events",           "type": "profiling",   "description": "Unified overview of all events related to the account and its deployments.", "versions": [ "*.*" ] },
       { "name": "Usage",  "type": "management",  "description": "Aggregated and consolidated usage records.", "versions": [ "*.*" ] },
       { "name": "Quotas",           "type": "management",  "description": "Per cloud quota enforcement.", "versions": [ "*.*" ] },
-      { "name": "Multi-tier",       "type": "management",  "description": "Group and account ACLs for all modules", "versions": [ "*.*" ] }
+      { "name": "Multi-tier",       "type": "management",  "description": "Group and account ACLs for all modules", "versions": [ "*.*" ] },
+      { "name": "MongoDB",          "type": "database",    "description": "",     "versions": [ "3.0", "*.*" ]  },
+      { "name": "Couchbase",        "type": "database",    "description": "",     "versions": [ "2.1.1", "*.*" ]  }
     ]
   },
   "extensible": true,
