@@ -5,6 +5,8 @@ require 'geocoder'
 require 'rest-client'
 require 'open-uri'
 
+Mongoid.load!('config/mongoid.yml')
+
 # models
 require_relative 'app/models/vendor/vendor'
 
@@ -17,8 +19,6 @@ require_relative 'tasks/db'
 require_relative 'tasks/assets'
 require_relative 'tasks/profiles'
 require_relative 'tasks/geo'
-
-Mongoid.load!('./config/mongoid.yml')
 
 # code style
 require 'rubocop/rake_task'
