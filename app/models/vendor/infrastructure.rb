@@ -9,6 +9,7 @@ module Profiles
     field :continent, type: String
     field :country, type: String
     field :region, type: String
+    field :region_code, type: String
     field :provider, type: String
 
     # validations
