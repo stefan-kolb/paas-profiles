@@ -18,9 +18,8 @@ In any case, please add evidence for the information so I can verify your change
 
 I am also interested in direct **cooperation with vendors** in order to keep the profiles at first hand and spot-on. Contact me, if you are interested to supply a [vendor verified profile](#vendor-verification).
 
-You can validate changes to the profiles via a simple test run, i.e., ```rake test``` that only requires a local MongoDB instance.  
-
 Contribute either via [pull request](https://help.github.com/articles/using-pull-requests), create an [issue](https://github.com/stefan-kolb/paas-profiles/issues) or send me an [email](mailto:stefan.kolb@uni-bamberg.de).
+We love contributions from everyone! See our [contribution guidelines](CONTRIBUTING.md) for details.
 
 ## Profile Specification
 

@@ -1,0 +1,124 @@
+{
+  "name": "Nuvla",
+  "revision": "2015-10-13",
+  "vendor_verified": "2015-10-13",
+  "url": "http://nuv.la/login",
+  "status": "production",
+  "status_since": "2012-01-01",
+  "type": "IaaS-centric",
+  "hosting": {
+    "public": true, "private": true
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    },
+    {
+      "model": "free"
+    }
+  ],
+  "scaling": {
+    "vertical": true, "horizontal": true, "auto": false
+  },
+  "runtimes": [
+    { "language": "python",     "versions": [ "*.*" ] },
+    { "language": "ruby",       "versions": [ "*.*" ] }
+  ],
+  "middleware": [
+  ],
+  "frameworks": [
+  ],
+  "services": {
+    "native": [
+      { "name": "SlipStream Engine", "type": "deployment",  "description": "The Nuvla platform is powered by SlipStream.", "versions": [ "2.17" ] },
+      { "name": "Metering",         "type": "profiling",   "description": "Control the resources usage across all used clouds.", "versions": [ "*.*" ] },
+      { "name": "Events",           "type": "profiling",   "description": "Unified overview of all events related to the account and its deployments.", "versions": [ "*.*" ] },
+      { "name": "Usage",  "type": "management",  "description": "Aggregated and consolidated usage records.", "versions": [ "*.*" ] },
+      { "name": "Quotas",           "type": "management",  "description": "Per cloud quota enforcement.", "versions": [ "*.*" ] },
+      { "name": "Multi-tier",       "type": "management",  "description": "Group and account ACLs for all modules", "versions": [ "*.*" ] },
+      { "name": "MongoDB",          "type": "database",    "description": "",     "versions": [ "3.0", "*.*" ]  },
+      { "name": "Couchbase",        "type": "database",    "description": "",     "versions": [ "2.1.1", "*.*" ]  }
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Tokyo",
+      "region_code": "ec2-ap-northeast-1",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "region_code": "ec2-ap-southeast-1",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin",
+      "region_code": "ec2-eu-west",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Frankfurt",
+      "region_code": "ec2-eu-central-1",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "N. Virginia",
+      "region_code": "ec2-us-east-1",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "N. California",
+      "region_code": "ec2-us-west-1",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+      "region_code": "ec2-us-west-2",
+      "provider": "AWS"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
+      "region_code": "ec2-ap-southeast-2",
+      "provider": "AWS"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo",
+      "region_code": "ec2-sa-east-1",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "CH",
+      "region": "Geneva",
+      "region_code": "exoscale-ch-gva",
+      "provider": "Exoscale"
+    },
+    {
+      "continent": "EU",
+      "country": "CZ",
+      "region": "Prague",
+      "region_code": "ultimum-cz1",
+      "provider": "Ultimum"
+    }
+  ]
+}
