@@ -1,4 +1,7 @@
 # [PaaS Profiles](http://paasify.it)
+[![Build Status](https://travis-ci.org/stefan-kolb/paas-profiles.png)](https://travis-ci.org/stefan-kolb/paas-profiles)
+[![Dependency Status](https://gemnasium.com/stefan-kolb/paas-profiles.png)](https://gemnasium.com/stefan-kolb/paas-profiles)
+[![Code Climate](https://codeclimate.com/github/stefan-kolb/paas-profiles.png)](https://codeclimate.com/github/stefan-kolb/paas-profiles)
 
 *Making Platform as a Service offerings comparable - Ecosystem profiles for portability matching.*
 
@@ -306,8 +309,3 @@ The property region can be used to further specify the location of the datacente
 #### Provider
 
 This optional field may specify the name of the external IaaS provider used by the PaaS vendor, e.g. *Amazon Web Services*.
-
----
-[![Build Status](https://travis-ci.org/stefan-kolb/paas-profiles.png)](https://travis-ci.org/stefan-kolb/paas-profiles)
-[![Dependency Status](https://gemnasium.com/stefan-kolb/paas-profiles.png)](https://gemnasium.com/stefan-kolb/paas-profiles)
-[![Code Climate](https://codeclimate.com/github/stefan-kolb/paas-profiles.png)](https://codeclimate.com/github/stefan-kolb/paas-profiles)
