@@ -37,7 +37,7 @@ We love contributions from everyone! See our [contribution guidelines](CONTRIBUT
 - [Services](#services)
 - [Infrastructures](#infrastructures)
 
-The code below shows a sample profile. The profile specification is *beta* and the properties are subject to change. 
+The code below shows a sample profile.
 
 ```json
 {
@@ -99,11 +99,11 @@ The official name of the PaaS offering.
 
 ### Revision
 
-`Date` or `DateTime` of the profile's last update.
+[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) `Date` or `DateTime` of the profile's last update.
  
 ### Vendor Verification
 
-This may be set to the `Date` when the profile was officially created or audited by the vendor.
+This may be set to the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) `Date` when the profile was officially created or audited by the vendor.
 
 ### URL
 
@@ -120,7 +120,7 @@ The current status of the offering. This may be one of the following lifecycle s
 
 ### Status Since
 
-`Date` of the last status transition.
+[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) `Date` of the last status transition.
 
 ### Type
 
@@ -129,6 +129,8 @@ Positioning of the PaaS in between IaaS and SaaS. Currently allowed categories:
 ```
 SaaS-centric, Generic, IaaS-centric
 ```
+
+Please see [this paper](https://www.uni-bamberg.de/fileadmin/uni/fakultaeten/wiai_lehrstuehle/praktische_informatik/Dateien/Publikationen/sose14-towards-application-portability-in-paas.pdf) for more information about the suggested service types.
 
 ### Pricing
 
@@ -162,13 +164,13 @@ Currently a simple string array of compliance standards that are fulfilled by th
 ### Hosting
 
 An object that describes the different provided hosting styles of the PaaS.
-Values can be `public` for a publicly hosted service and `private` for a service that can be deployed on premises, too.
+Values can be `public` for a shared publicly hosted service and `private` for a service that is deployed per customer or on premises.
 
 ### Scaling
 
 An object including three boolean properties for characterizing the scaling capabilities:
 
-`vertical` = Can you scale the instance sizes, e.g. ram?
+`vertical` = Can you scale the instance sizes, e.g. memory?
 `horizontal` = Can you scale the number of instances?
 `auto` = Is the PaaS capable of scaling any of the above properties automatically?
 
@@ -239,7 +241,7 @@ Should be the official name in lowercase. Currently not restricted.
 
 #### Runtime
 
-The associated runtime of the framework.
+The associated runtime of the framework. Must be defined under [runtimes](#runtimes).
 
 #### Versions
 
@@ -260,11 +262,11 @@ A string array containing the supported framework versions.
 
 #### Native
 
-Native services or core services are provided and hosted by the PaaS vendor as integral part of the offering. Most often this will be performance critical core services like datastores.
+Native services or core services are *provided and hosted by the PaaS vendor* as integral part of the offering. Most often this will be performance critical core services like data stores.
 
 #### Add-on
 
-Add-on services are provided by external vendors and may or may not be hosted in the same infrastructure as the PaaS. However, we only categorize services as add-ons if they can be provisioned directly from the PaaS and will be billed as additional part of the platform fee.
+Add-on services are *provided by external vendors* and may or may not be hosted in the same infrastructure as the PaaS. However, we only categorize services as add-ons if they can be provisioned directly from the PaaS and will be billed as additional part of the platform fee.
 
 #### Type
 
@@ -304,7 +306,7 @@ The country codes must conform to the two-letter codes defined in [ISO 3166-1](h
 
 #### Region
 
-The property region can be used to further specify the location of the datacenter. This field is freeform and may specify a region or even the city the datacenter is located in.
+The property region can be used to further specify the location of the datacenter. This field is free-form and may specify a region or even better the city the datacenter is located in.
 
 #### Provider
 
