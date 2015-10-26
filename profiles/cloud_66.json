@@ -1,0 +1,52 @@
+{
+  "name": "Cloud 66",
+  "revision": "2015-09-28",
+  "vendor_verified": "2015-09-28",
+  "url": "http://www.cloud66.com",
+  "status": "production",
+  "status_since": "2013-03-01",
+  "type": "Generic",
+  "hosting": {
+    "public": false,
+    "private": true
+  },
+  "pricing": [
+    { "model": "fixed", "period": "monthly" },
+    { "model": "fixed", "period": "annually" }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "docker",
+      "versions": [
+
+      ]
+    }
+  ],
+  "middleware": [
+    { "name" : "NGINX", "versions": [ "1.8" ] },
+    { "name" : "HAProxy", "versions": [ "1.5" ] },
+    { "name" : "Rabbit MQ", "versions": [ "3.5.6" ] }
+  ],
+  "services": {
+    "native": [
+        { "name": "MySQL", "type": "datastore", "versions": [ "5.6.19" ] },
+        { "name": "PostgreSQL", "type": "datastore", "versions": [ "9.4.4" ] },
+        { "name": "MongoDB", "type": "datastore", "versions" : [ "2.6.11" ] },
+        { "name": "Redis", "type": "datastore", "versions": [ "3.0.4" ] },
+        { "name": "ElasticSearch", "type": "datastore", "versions": [ "1.7.2" ] },
+        { "name": "Memcached", "type": "datastore", "versions": [ "1.4.24" ] }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+
+  ]
+}
