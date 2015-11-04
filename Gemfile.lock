@@ -57,7 +57,7 @@ GEM
     minitest (5.8.2)
     mongo (2.1.2)
       bson (~> 3.0)
-    mongoid (5.0.0)
+    mongoid (5.0.1)
       activemodel (~> 4.0)
       mongo (~> 2.1)
       origin (~> 2.1)
