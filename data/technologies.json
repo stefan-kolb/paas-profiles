@@ -346,11 +346,6 @@
     "isolation": "Container"
   },
   {
-    "vendor": "Shelly Cloud",
-    "platform": "",
-    "isolation": ""
-  },
-  {
     "vendor": "Software AG Live",
     "platform": "",
     "isolation": ""
