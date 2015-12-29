@@ -42,13 +42,32 @@
     {
       "continent": "NA",
       "country": "US",
-      "region": "Reston",
-      "provider": "Equinix"
+      "region": "Phoenix"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Chicago"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Washington DC"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Ashburn"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Dallas"
     },
     {
       "continent": "AS",
       "country": "JP",
-      "region": "",
+      "region": "Tokyo",
       "provider": "Equinix"
     },
     {
@@ -56,6 +75,16 @@
       "country": "SG",
       "region": "Singapore",
       "provider": "Equinix"
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Frankfurt"
+    },
+    {
+      "continent": "EU",
+      "country": "UK",
+      "region": "London"
     }
   ]
 }
