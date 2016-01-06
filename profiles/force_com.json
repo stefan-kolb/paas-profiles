@@ -1,6 +1,6 @@
 {
   "name": "Force.com",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2016-01-06",
   "url": "http://www.force.com/",
   "status": "production",
   "status_since": "2008-01-01",
@@ -83,7 +83,7 @@
     },
     {
       "continent": "EU",
-      "country": "UK",
+      "country": "GB",
       "region": "London"
     }
   ]
