@@ -171,6 +171,11 @@
       "region": "Tokyo"
     },
     {
+      "continent": "AS",
+      "country": "KR",
+      "region": "Seoul"
+    },	
+    {
       "continent": "EU",
       "country": "IE",
       "region": "Dublin"
