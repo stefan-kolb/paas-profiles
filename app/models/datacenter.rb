@@ -22,7 +22,7 @@ module Profiles
     end
 
     def to_s
-      name = "#{region}"
+      name = region.to_s
       name << " (#{provider.join(',')})" unless provider.blank?
       name
     end

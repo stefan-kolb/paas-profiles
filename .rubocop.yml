@@ -10,6 +10,9 @@ Style/Documentation:
 Style/BlockComments:
   Enabled: false
 
+Style/GuardClause:
+  Enabled: false
+
 Style/IndentationConsistency:
   Enabled: false
 

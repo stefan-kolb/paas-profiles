@@ -14,8 +14,6 @@ module Profiles
     end
 
     def mean_maturity(status = nil)
-      result = 0
-
       if status
         sum = 0
         vendors = Vendor.where(status: status).only(:status_since)
@@ -25,7 +23,6 @@ module Profiles
         vendors.each do |v|
           sum += Date.today.to_time.to_i - v.status_since.to_time.to_i
         end
-        result = (sum / vendors.length.to_f / 2_592_000).to_i
       else
         sum = 0
         vendors = Vendor.all.only(:status_since)
@@ -35,9 +32,9 @@ module Profiles
           sum += Date.today.to_time.to_i - v.status_since.to_time.to_i unless v.status_since.nil?
         end
         puts sum
-        result = (sum / vendors.length.to_f / 2_592_000).to_i
       end
 
+      result = (sum / vendors.length.to_f / 2_592_000).to_i
       result
     end
 
@@ -69,7 +66,7 @@ module Profiles
 
     def support_categories(threshold = 0.05)
       arr = []
-      JSON.parse(support_columndata threshold).each { |e| arr << e['name'] }
+      JSON.parse(support_columndata(threshold)).each { |e| arr << e['name'] }
       arr
     end
 
@@ -89,7 +86,7 @@ module Profiles
 
       languages.each do |l|
         RuntimeTrend.where(language: l).order_by(:revision.asc).each do |d|
-          entry = data.find { |e| e[:name].downcase == d.language }
+          entry = data.find { |e| e[:name].casecmp(d.language) }
 
           if entry
             entry[:data] << d.percentage * 100

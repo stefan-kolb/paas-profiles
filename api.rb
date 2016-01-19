@@ -79,7 +79,7 @@ module Profiles
       markers = []
 
       Datacenter.all.each do |center|
-        markers << { latLng: center.coordinates, name: "#{center}" }
+        markers << { latLng: center.coordinates, name: center.to_s }
       end
 
       markers

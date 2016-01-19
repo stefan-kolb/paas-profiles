@@ -22,12 +22,9 @@ module Profiles
     end
 
     def unify
-      if major
+      return 'Unknown' unless major
 
-        return major << '.' << minor
-      else
-        return 'Unknown'
-      end
+      major << '.' << minor
     end
 
     def initialize(str, type = nil)

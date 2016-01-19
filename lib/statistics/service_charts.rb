@@ -20,7 +20,7 @@ module Profiles
 
     def support_categories(threshold = 0.04)
       arr = []
-      JSON.parse(support_columndata threshold).each { |e| arr << e['name'] }
+      JSON.parse(support_columndata(threshold)).each { |e| arr << e['name'] }
       arr
     end
   end

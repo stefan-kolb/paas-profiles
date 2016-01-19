@@ -10,7 +10,7 @@ module ApplicationHelpers
     'NA' => 'North America',
     'OC' => 'Oceania',
     'SA' => 'South America'
-  }
+  }.freeze
 
   def continent_by_code(code)
     CONTINENT_CODES[code]

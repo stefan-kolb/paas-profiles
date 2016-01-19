@@ -4,7 +4,7 @@ require 'rmagick'
 module IoHelper
   def write_json_file(filename, data)
     File.open(filename, 'w') do |f|
-      f.write(JSON.pretty_generate data)
+      f.write(JSON.pretty_generate(data))
     end
   end
 

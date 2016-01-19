@@ -28,16 +28,12 @@ namespace :geo do
               country: infra.country,
               region: infra.region
             )
-            if infra.provider.blank?
-              ds.provider = []
-            else
-              ds.provider = [infra.provider]
-            end
-            ds.save
+            ds.provider = infra.provider.blank? ? [] : [infra.provider]
           else
             ds.provider << infra.provider unless ds.provider.include?(infra.provider) || infra.provider.blank?
-            ds.save
           end
+
+          ds.save
           # end
           # dont hit query limit
           sleep(1 / 10.0)
@@ -55,7 +51,7 @@ namespace :geo do
     file = 'data/geo_datacenter.json'
 
     File.open(file, 'w') do |f|
-      f.write(JSON.pretty_generate JSON.parse(Profiles::Datacenter.all.without(:id).to_json))
+      f.write(JSON.pretty_generate(JSON.parse(Profiles::Datacenter.all.without(:id).to_json)))
     end
 
     # TODO: test if all are here = count distinct regions, country

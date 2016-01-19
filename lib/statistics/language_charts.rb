@@ -21,7 +21,7 @@ module Profiles
     def support_categories(threshold = 0.05)
       unless @support_categories
         arr = []
-        JSON.parse(support_columndata threshold).each { |e| arr << e['name'] }
+        JSON.parse(support_columndata(threshold)).each { |e| arr << e['name'] }
         @support_categories = arr
       end
       @support_categories
@@ -43,7 +43,7 @@ module Profiles
 
       languages.each do |l|
         RuntimeTrend.where(language: l).order_by(:revision.asc).each do |d|
-          entry = data.find { |e| e[:name].downcase == d.language }
+          entry = data.find { |e| e[:name].casecmp(d.language) }
 
           if entry
             entry[:data] << d.percentage * 100
