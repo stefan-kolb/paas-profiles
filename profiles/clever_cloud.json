@@ -25,7 +25,7 @@
     {
       "language": "go",
       "versions": [
-        "All versions"
+        "*.*"
       ]
     },
     {
@@ -85,13 +85,7 @@
     {
       "language": "scala",
       "versions": [
-        "All versions"
-      ]
-    },
-    {
-      "language": "docker",
-      "versions": [
-        "All versions"
+        "*.*"
       ]
     }
   ],
@@ -183,28 +177,28 @@
       "name": "symfony",
       "runtime": "php",
       "versions": [
-        "All versions"
+        "*.*"
       ]
     },
     {
       "name": "Magento",
       "runtime": "php",
       "versions": [
-        "All versions"
+        "*.*"
       ]
     },
     {
       "name": "express",
       "runtime": "node",
       "versions": [
-        "All versions"
+        "*.*"
       ]
     },
     {
       "name": "meteor",
       "runtime": "node",
       "versions": [
-        "All versions"
+        "*.*"
       ]
     }
   ],
@@ -259,6 +253,13 @@
         "versions": [
           "1.0"
         ]
+      },
+      {
+        "name": "Docker",
+        "versions": [
+          "1.6"
+        ],
+        "type": "other"
       },
       {
         "name": "redis",
