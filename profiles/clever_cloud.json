@@ -85,13 +85,13 @@
     {
       "language": "scala",
       "versions": [
-        "All versions"
+        "*.*"
       ]
     },
     {
       "language": "docker",
       "versions": [
-        "All versions"
+        "*.*"
       ]
     }
   ],
