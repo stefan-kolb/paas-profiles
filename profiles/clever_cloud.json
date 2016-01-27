@@ -270,7 +270,6 @@
       },
       {
         "name": "neo4j",
-        "url": "http://neo4j.com/",
         "description": "Graph Database",
         "type": "datastore"
       }
