@@ -37,6 +37,12 @@
       ]
     },
     {
+      "language": "groovy",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
       "language": "node",
       "versions": [
         "5.*",
