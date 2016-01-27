@@ -1,14 +1,14 @@
 {
   "name": "Clever Cloud",
-  "revision": "2014-09-19",
-  "url": "http://www.clever-cloud.com/en/",
-  "vendor_verified": "2014-12-08",
+  "revision": "2016-01-27",
+  "url": "https://www.clever-cloud.com/",
+  "vendor_verified": "2016-01-27",
   "status": "production",
   "status_since": "2013-01-30",
   "type": "Generic",
   "hosting": {
     "public": true,
-    "private": false
+    "private": true
   },
   "pricing": [
     {
@@ -25,7 +25,7 @@
     {
       "language": "go",
       "versions": [
-
+        "*.*"
       ]
     },
     {
@@ -37,9 +37,19 @@
       ]
     },
     {
+      "language": "groovy",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
       "language": "node",
       "versions": [
+        "5.*",
+        "4.*",
         "0.10.*",
+        "0.12.*",
+        "0.11.*",
         "0.9.*",
         "0.8.*",
         "0.7.*",
@@ -50,7 +60,9 @@
       "language": "php",
       "versions": [
         "5.4",
-        "5.5"
+        "5.5",
+        "5.6",
+        "7.0"
       ]
     },
     {
@@ -65,7 +77,8 @@
       "versions": [
         "1.9.3",
         "2.0.0",
-        "2.1.*"
+        "2.1.*",
+        "2.2.*"
       ]
     },
     {
@@ -128,10 +141,75 @@
         "1.*",
         "2.*"
       ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "2.*",
+        "3.*",
+        "4.*"
+      ]
+    },
+    {
+      "name": "grails",
+      "runtime": "groovy",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "symfony",
+      "runtime": "php",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "Magento",
+      "runtime": "php",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "express",
+      "runtime": "node",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "meteor",
+      "runtime": "node",
+      "versions": [
+        "*.*"
+      ]
     }
   ],
   "services": {
     "native": [
+      {
+        "name": "elasticsearch",
+        "type": "datastore",
+        "versions": [
+          "1.7.1"
+        ]
+      },
       {
         "name": "couchbase",
         "type": "datastore",
@@ -140,18 +218,18 @@
         ]
       },
       {
-        "name": "filesystem",
+        "name": "FS Buckets",
         "type": "datastore",
         "description": "Persistent file system",
         "versions": [
-          "1"
+          "1.1"
         ]
       },
       {
         "name": "mongodb",
         "type": "datastore",
         "versions": [
-          "2.6"
+          "3.0"
         ]
       },
       {
@@ -165,20 +243,67 @@
         "name": "postgresql",
         "type": "datastore",
         "versions": [
-          "9.2"
+          "9.3"
+        ]
+      },
+      {
+        "name": "Cellar, S3-like datastore",
+        "type": "datastore",
+        "versions": [
+          "1.0"
+        ]
+      },
+      {
+        "name": "Docker",
+        "versions": [
+          "1.6"
+        ],
+        "type": "other"
+      },
+      {
+        "name": "redis",
+        "type": "datastore",
+        "versions": [
+          "3.0"
+        ]
+      },
+      {
+        "name": "neo4j",
+        "description": "Graph Database",
+        "type": "datastore",
+        "versions": [
+
         ]
       }
     ],
     "addon": [
-
+      {
+        "name": "Algolia Realtime Search",
+        "url": "http://algolia.com/",
+        "description": "Hosted Search API",
+        "type": "search"
+      },
+      {
+        "name": "New Relic APM",
+        "url": "http://newrelic.com/",
+        "description": "Application Performance Management and Monitoring",
+        "type": "analytics"
+      },
+      {
+        "name": "Redsmin",
+        "url": "https://redsmin.com/",
+        "description": "A full-featured GUI client for Redis",
+        "type": "analytics"
+      }
     ]
   },
-  "extensible": false,
+  "extensible": true,
   "infrastructures": [
     {
       "continent": "EU",
       "country": "FR",
-      "region": "Paris"
+      "region": "Paris",
+      "provider": "Iliad Datacenter"
     },
     {
       "continent": "NA",
