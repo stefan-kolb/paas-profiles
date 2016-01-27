@@ -180,13 +180,6 @@
       ]
     },
     {
-      "name": "rails",
-      "runtime": "ruby",
-      "versions": [
-
-      ]
-    },
-    {
       "name": "symfony",
       "runtime": "php",
       "versions": [
