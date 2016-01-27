@@ -237,7 +237,7 @@
         "name": "mongodb",
         "type": "datastore",
         "versions": [
-          "3.0",
+          "3.0"
         ]
       },
       {
