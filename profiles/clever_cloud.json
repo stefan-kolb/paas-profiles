@@ -142,10 +142,82 @@
         "1.*",
         "2.*"
       ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "2.*",
+        "3.*",
+        "4.*"
+      ]
+    },
+    {
+      "name": "grails",
+      "runtime": "groovy",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "symfony",
+      "runtime": "php",
+      "versions": [
+        "All versions"
+      ]
+    },
+    {
+      "name": "Magento",
+      "runtime": "php",
+      "versions": [
+        "All versions"
+      ]
+    },
+    {
+      "name": "express",
+      "runtime": "node",
+      "versions": [
+        "All versions"
+      ]
+    },
+    {
+      "name": "meteor",
+      "runtime": "node",
+      "versions": [
+        "All versions"
+      ]
     }
   ],
   "services": {
     "native": [
+      {
+        "name": "elasticsearch",
+        "type": "datastore",
+        "versions": [
+          "1.7.1"
+        ]
+      },
       {
         "name": "couchbase",
         "type": "datastore",
@@ -154,18 +226,18 @@
         ]
       },
       {
-        "name": "filesystem",
+        "name": "FS Buckets",
         "type": "datastore",
         "description": "Persistent file system",
         "versions": [
-          "1"
+          "1.1"
         ]
       },
       {
         "name": "mongodb",
         "type": "datastore",
         "versions": [
-          "2.6"
+          "3.0",
         ]
       },
       {
