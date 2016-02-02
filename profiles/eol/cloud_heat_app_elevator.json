@@ -1,9 +1,9 @@
 {
   "name": "Cloud&Heat App Elevator",
-  "revision": "2015-05-21",
+  "revision": "2016-02-01",
   "url": "https://www.cloudandheat.com/en/paas.html",
-  "status": "production",
-  "status_since": null,
+  "status": "eol",
+  "status_since": "2016-01-26",
   "type": "Generic",
   "hosting": {
     "public": true,
