@@ -1,0 +1,373 @@
+{
+  "name": "Canopy Cloud Fabric",
+  "revision": "2016-01-15",
+  "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+  "status": "production",
+  "status_since": "2015-01-07",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": true
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    },
+	{
+      "model": "fixed",
+	  "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "runtimes": [
+    {
+      "language": "clojure",
+      "versions": [
+
+      ]
+    },
+	{
+      "language": "groovy",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+	  
+      ]
+    }
+  ],
+  "middleware": [
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "grails",
+      "runtime": "groovy",
+      "versions": [
+	  
+      ]
+    },
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+	  
+      ]
+    },
+	{
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+	  
+      ]
+    },
+    {
+      "name": "rack",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+	  
+      ]
+    },
+	{
+      "name": "hhvm",
+      "runtime": "php",
+      "versions": [
+	  
+      ]
+    },
+	{
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+	  
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "memcached",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "rabbitmq",
+        "description": "",
+        "type": "worker",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+	  {
+        "name": "neo4j",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+	  {
+        "name": "kafka",
+        "description": "",
+        "type": "message broker",
+        "versions": [
+
+        ]
+      },
+	  {
+        "name": "riakcs",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+	  {
+        "name": "cassandra",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+	  {
+        "name": "elasticsearch",
+        "description": "",
+        "type": "search",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+	{
+        "name": "AD/LDAP Integration",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "",
+        "type": "other"
+      },
+      {
+        "name": "Advanced Developer UI",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "",
+        "type": "console"
+      },
+      {
+        "name": "Jenkins",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "",
+        "type": "other"
+      },
+	  {
+        "name": "Canopy Compose Service Broker",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "",
+        "type": "broker"
+      }
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+	{
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Tokyo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern Virginia",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+      "provider": "AWS"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "AWS"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo",
+      "provider": "AWS"
+    },
+	{
+      "continent": "EU",
+      "country": "GB",
+      "region": "",
+      "provider": "vCloud Air"
+    },
+	{
+      "continent": "NA",
+      "country": "US",
+      "region": "",
+      "provider": "vCloud Air"
+    },
+	{
+      "continent": "NA",
+      "country": "US",
+      "region": "",
+      "provider": "Atos Cloud"
+    },
+	{
+      "continent": "EU",
+      "country": "DE",
+      "region": "",
+      "provider": "Atos Cloud"
+    },
+	{
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "Atos Cloud"
+    },
+	{
+      "continent": "OC",
+      "country": "AU",
+      "region": "Perth",
+      "provider": "Atos Cloud"
+    },
+	{
+      "continent": "EU",
+      "country": "DE",
+      "region": "",
+      "provider": "Atos Private Cloud (EPC)"
+    },
+	{
+      "continent": "NA",
+      "country": "US",
+      "region": "",
+      "provider": "Atos Private Cloud (EPC)"
+    },
+	{
+      "continent": "AS",
+      "country": "",
+      "region": "",
+      "provider": "Atos Private Cloud (EPC)"
+    }
+  ]
+}
