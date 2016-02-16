@@ -1,9 +1,9 @@
 {
   "name": "cloudControl",
-  "revision": "2015-05-28",
+  "revision": "2016-02-16",
   "url": "http://cloudcontrol.com/",
-  "status": "production",
-  "status_since": "2010-12-01",
+  "status": "eol",
+  "status_since": "2016-02-29",
   "type": "Generic",
   "hosting": {
     "public": true,
