@@ -67,6 +67,11 @@
     "isolation": ""
   },
   {
+    "vendor": "Canopy Cloud Fabric",
+    "platform": "Cloud Foundry",
+    "isolation": "Container"
+  },
+  {
     "vendor": "CatN",
     "platform": "",
     "isolation": ""
