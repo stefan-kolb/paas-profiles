@@ -52,7 +52,7 @@ namespace :assets do
         # FIXME: limit is 180
         resp = RestClient.get("https://api.twitter.com/1.1/users/show.json?screen_name=#{vendor['twitter']}", authorization: "Bearer #{ENV['TWITTER_SECRET']}")
 
-        fail 'Bad response' unless resp.code == 200
+        raise 'Bad response' unless resp.code == 200
 
         profile = JSON.parse(resp.body)
         # normal image URL

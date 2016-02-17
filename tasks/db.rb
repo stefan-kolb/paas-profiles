@@ -27,7 +27,7 @@ namespace :db do
     end
     # be sure everything was imported
     unless Dir['profiles/*.json'].length == Profiles::Vendor.count
-      fail 'Not all profiles were imported!'
+      raise 'Not all profiles were imported!'
     end
     # geographical information
     datacenter
