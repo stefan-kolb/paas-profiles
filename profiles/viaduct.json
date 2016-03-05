@@ -1,6 +1,6 @@
 {
   "name": "Viaduct",
-  "revision": "2015-03-05",
+  "revision": "2016-03-05",
   "url": "https://viaduct.io",
   "status": "production",
   "status_since": "2014-07-07",
@@ -10,9 +10,6 @@
     "private": false
   },
   "pricing": [
-    {
-      "model": "free"
-    },
     {
       "model": "fixed",
       "period": "monthly"
