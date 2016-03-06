@@ -1,7 +1,7 @@
 {
   "name": "fortrabbit",
-  "revision": "2015-04-14",
-  "url": "http://fortrabbit.com/",
+  "revision": "2016-03-06",
+  "url": "https://www.fortrabbit.com/",
   "vendor_verified": "2013-07-10",
   "status": "production",
   "status_since": "2012-10-04",
@@ -97,6 +97,12 @@
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern Virginia",
       "provider": "AWS"
     }
   ]
