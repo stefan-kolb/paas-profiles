@@ -8,7 +8,7 @@ module Profiles
 
     get '/terms' do
       @title = 'Platform as a Service Provider Comparison'
-      erb :'terms'
+      erb :terms
     end
 
     get '/vendors' do
