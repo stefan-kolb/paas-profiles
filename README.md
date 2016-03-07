@@ -277,6 +277,11 @@ A category the service does fit in. Currently allowed keys are:
 datastore, search, worker, analytics, payment, media, messaging, other, devops
 ```
 
+### Extensible
+
+This boolean describes if the PaaS can be extended by the customer to use additional runtime languages other than described by the profile and officially supported by the provider.
+Typical technological concepts to realize this are Heroku's buildpacks and OpenShift cartridges.
+
 ### Infrastructures
 
 The infrastructures an application can be deployed to. Defined as an array of objects.
