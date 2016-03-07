@@ -6,6 +6,11 @@ module Profiles
       redirect to('/vendors')
     end
 
+    get '/terms' do
+      @title = 'Platform as a Service Provider Comparison'
+      erb :'terms'
+    end
+
     get '/vendors' do
       @title = 'Platform as a Service Provider Comparison'
       erb :'profiles/vendors'
