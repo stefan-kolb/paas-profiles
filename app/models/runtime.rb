@@ -1,7 +1,7 @@
 require 'mongoid'
 
 module Profiles
-  class Runtime
+  class RuntimeVersion
     include Mongoid::Document
 
     field :name, type: String

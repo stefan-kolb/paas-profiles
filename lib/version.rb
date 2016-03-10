@@ -42,14 +42,14 @@ module Profiles
     end
 
     def latest?
-      result = Runtime.where(name: type).first
+      result = RuntimeVersion.where(name: type).first
       latest = result['version'] unless result.nil?
       return true unless /#{@str}/.match(latest).nil?
       false
     end
 
     def self.latest(language)
-      result = Runtime.where(name: language).first
+      result = RuntimeVersion.where(name: language).first
       return result['version'] unless result.nil?
       'unknown'
     end
