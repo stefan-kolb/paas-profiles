@@ -66,7 +66,7 @@ module Profiles
 
       distinct_values(type).each_with_index do |l, _i|
         count = Vendor.where(type => l).count
-        rt = Runtime.where(name: l).first
+        rt = RuntimeVersion.where(name: l).first
         latest = rt['version'] unless rt.blank?
 
         data << { name: l, y: (count / vendor_count.to_f * 100).to_i, drilldown: {
