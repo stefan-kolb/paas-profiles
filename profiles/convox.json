@@ -1,1 +1,214 @@
+{
+  "name": "Convox",
+  "revision": "2016-03-28",
+  "url": "http://www.convox.com/",
+  "status": "production",
+  "status_since": "2015-02-15",
+  "type": "Generic",
+  "hosting": {
+    "public": false,
+    "private": true
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    },
+    {
+      "model": "free"
+    }
+  ],
+  "quality of service": {
+    "uptime": "99.99%",
+  },
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "runtimes": [
+    {
+      "language": "clojure",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "cobol",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "dotnet",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "erlang",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "1.6",
+		    "1.5"
+      ]
+    },
+    {
+      "language": "groovy",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "haskell",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+        "1.7.*",
+        "1.8.*"
+      ]
+    },
+    {
+      "language": "lua",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "0.4.*",
+        "0.6.*",
+        "0.8.*",
+        "0.10.*",
+        "0.12.*",
+		    "4.0"
+      ]
+    },
+    {
+      "language": "perl",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.5",
+        "5.6",
+		    "7.0"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7.11",
+        "3.5.1"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.8.7",
+        "1.9.2",
+        "1.9.3",
+        "2.0.0",
+        "2.1.8",
+        "2.2.4",
+		    "2.3.0"
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+        "1.*",
+        "2.*"
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "2.*",
+        "3.*",
+        "4.*"
+      ]
+    },
+    {
+      "name": "grails",
+      "runtime": "groovy",
+      "versions": [
 
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "postgresql",
+        "type": "datastore",
+        "versions": [
+		      "9.5",
+          "9.4",
+          "9.3",
+          "9.2",
+          "9.1"
+        ]
+      },
+      {
+        "name": "redis",
+        "type": "datastore",
+        "versions": [
+          "*.*"  
+        ]
+      }
+    ],
+  },
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern Virginia",
+      "provider": "AWS"
+    }
+  ]
+}
