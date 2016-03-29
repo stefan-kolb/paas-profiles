@@ -11,7 +11,7 @@
   },
   "pricing": [
     {
-      "model": "metered",
+      "model": "fixed",
       "period": "monthly"
     },
     {
@@ -118,6 +118,43 @@
       ]
     }
   ],
+  "middleware": [
+    {
+      "name": "glassfish",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "jboss",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "jetty",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "resin",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
   "frameworks": [
     {
       "name": "grails",
@@ -129,6 +166,20 @@
     {
       "name": "play",
       "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "angularJS",
+      "runtime": "node",
       "versions": [
         "*.*"
       ]
@@ -150,6 +201,20 @@
     {
       "name": "rails",
       "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "laravel",
+      "runtime": "php",
       "versions": [
         "*.*"
       ]
@@ -280,21 +345,21 @@
       "provider": "AWS"
     },
     {
-      "continent": "APAC",
+      "continent": "AS",
       "country": "JP",
       "region": "Tokyo",
       "provider": "AWS"
     },
     {
-      "continent": "APAC",
-      "country": "AU",
-      "region": "Sydney",
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
       "provider": "AWS"
     },
     {
-      "continent": "APAC",
-      "country": "SG",
-      "region": "Singapore",
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
       "provider": "AWS"
     },
     {
