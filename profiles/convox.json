@@ -54,8 +54,7 @@
     {
       "language": "go",
       "versions": [
-        "1.6",
-	"1.5"
+       "*.*"
       ]
     },
     {
@@ -73,8 +72,7 @@
     {
       "language": "java",
       "versions": [
-        "1.7.*",
-        "1.8.*"
+        "*.*"
       ]
     },
     {
@@ -86,12 +84,7 @@
     {
       "language": "node",
       "versions": [
-        "0.4.*",
-        "0.6.*",
-        "0.8.*",
-        "0.10.*",
-        "0.12.*",
-	"4.0"
+        "*.*"
       ]
     },
     {
@@ -103,28 +96,19 @@
     {
       "language": "php",
       "versions": [
-        "5.5",
-        "5.6",
-	"7.0"
+        "*.*"
       ]
     },
     {
       "language": "python",
       "versions": [
-        "2.7.11",
-        "3.5.1"
+        "*.*"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-        "1.8.7",
-        "1.9.2",
-        "1.9.3",
-        "2.0.0",
-        "2.1.8",
-        "2.2.4",
-	"2.3.0"
+        "*.*"
       ]
     },
     {
@@ -146,8 +130,7 @@
       "name": "play",
       "runtime": "java",
       "versions": [
-        "1.*",
-        "2.*"
+        "*.*"
       ]
     },
     {
@@ -168,9 +151,7 @@
       "name": "rails",
       "runtime": "ruby",
       "versions": [
-        "2.*",
-        "3.*",
-        "4.*"
+        "*.*"
       ]
     },
     {
@@ -243,11 +224,7 @@
         "name": "postgresql",
         "type": "datastore",
         "versions": [
-	  "9.5",
-          "9.4",
-          "9.3",
-          "9.2",
-          "9.1"
+	  "*.*"
         ]
       },
       {
@@ -294,6 +271,42 @@
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Frankfurt",
+      "provider": "AWS"
+    },
+    {
+      "continent": "APAC",
+      "country": "JP",
+      "region": "Tokyo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "APAC",
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "AWS"
+    },
+    {
+      "continent": "APAC",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
       "provider": "AWS"
     },
     {
