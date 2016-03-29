@@ -177,6 +177,41 @@
   "services": {
     "native": [
       {
+        "name": "CircleCI",
+        "type": "",
+        "versions": [
+          "*.*"  
+        ]
+      },
+      {
+        "name": "DockerHub",
+        "type": "",
+        "versions": [
+          "*.*"  
+        ]
+      },
+      {
+        "name": "GitHub",
+        "type": "",
+        "versions": [
+          "*.*"  
+        ]
+      },
+      {
+        "name": "GitLab",
+        "type": "",
+        "versions": [
+          "*.*"  
+        ]
+      },
+      {
+        "name": "Papertrail",
+        "type": "",
+        "versions": [
+          "*.*"  
+        ]
+      },
+      {
         "name": "postgresql",
         "type": "datastore",
         "versions": [
@@ -188,8 +223,29 @@
         ]
       },
       {
+        "name": "Quay",
+        "type": "",
+        "versions": [
+          "*.*"  
+        ]
+      },
+      {
         "name": "redis",
         "type": "datastore",
+        "versions": [
+          "*.*"  
+        ]
+      },
+      {
+        "name": "Slack",
+        "type": "",
+        "versions": [
+          "*.*"  
+        ]
+      },
+      {
+        "name": "TravisCI",
+        "type": "",
         "versions": [
           "*.*"  
         ]
