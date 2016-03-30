@@ -42,7 +42,7 @@
     }
   ],
   "middleware": [
-
+    { "name": "java ee", "runtime": "java", "versions": [ ] }
   ],
   "frameworks": [
 
