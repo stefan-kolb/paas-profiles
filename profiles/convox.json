@@ -320,14 +320,6 @@
           "*.*"  
         ]
       }
-    ],
-    "addon": [
-      {
-        "name": "New Relic APM",
-        "url": "http://newrelic.com/",
-        "description": "Application Performance Management and Monitoring",
-        "type": "analytics"
-      }
     ]
   },
   "extensible": true,
