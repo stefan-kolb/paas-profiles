@@ -1,0 +1,101 @@
+{
+  "name": "SAP HANA Cloud Platform",
+  "revision": "2016-03-29",
+  "vendor_verified": "2016-03-29",
+  "url": "https://hcp.sap.com/index.html",
+  "status": "production",
+  "status_since": "2012-05-01",
+  "type": "SaaS-centric",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "fixed",
+      "period": "monthly"
+    }
+  ],
+  "qos": {
+    "uptime": 99.9,
+    "compliance": [
+      "ISO 9001", "ISO 27001"
+    ]
+  },
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "java",
+      "versions": [
+        "7.*"
+      ]
+    },
+    {
+      "language": "xsjs",
+      "versions": [
+
+      ]
+    }
+  ],
+  "middleware": [
+    { "name": "java ee", "runtime": "java", "versions": [ ] },
+    { "name": "HANA Cloud Integration", "versions": [ ] }
+  ],
+  "frameworks": [
+    { "name": "java ee web profile", "runtime": "java", "versions": [ ] }
+  ],
+  "services": {
+    "native": [
+      { "name": "SAP HANA persistence Services", "description": "It enables organization to analyze business operations based on large volume and variety of detailed data in real-time with capabilities like predictive analytics, geospatial, text search etc", "type": "storage", "versions": [ ] },
+      { "name": "SAP ASE persistence Services", "description": "It is a cost-effective database solution that can handle large numbers of transactions and concurrent users with superior performance, reliability, efficiency and is used by customers worldwide.", "type": "storage", "versions": [ ] },
+      { "name": "Document Services", "description": "The SAP HANA Cloud Platform Document Service provides an open standard based(CMIS) enterprise cloud content repository for unstructured or semi-structured content.", "type": "storage", "versions": [ ] },
+      { "name": "SAP API Management", "description": "It’s a simple, scalable and secure access to digital assets and enables engagement of employees and developers.", "type": "integration", "versions": [ ] },
+      { "name": "SAP HANA Cloud Connector", "description": "This enables easy integration of the on-premise data with the SAP HANA Cloud Platform without compromising security of the onPrem landscape", "type": "integration", "versions": [ ] },
+      { "name": "SAP Fiori, Cloud Edition", "description": "Renew your SAP Business Suite UX by deploying the new SAP Fiori UI on the cloud, securely connected to your on-premise systems.", "type": "ux", "versions": [ ] },
+      { "name": "SAP HANA Cloud Portal", "description": "Provides an easy way for creating enterprise-grade business sites with the full power of authorization management, content development and integration to SAP's cloud, on-premise and third-party solutions.", "type": "ux", "versions": [ ] },
+      { "name": "SAP Forms as a Service by Adobe", "description": "Forms service running on SAP HANA Cloud Platform to generate print & interactive forms-including PDF/A for archiving on-premise. Has integration with SAP backend data & SAP printing servers.", "type": "ux", "versions": [ ] },
+      { "name": "SAP HANA spatial/GIS", "description": "It provides functions to analyze and process geospatial information in SAP HANA with high performance.", "type": "analytics", "versions": [ ] },
+      { "name": "SAP HANA Predictive Analysis Library", "description": "A built-in and native SAP HANA library to perform predictions based on in-database data mining and statistical calculations.", "type": "analytics", "versions": [ ] },
+      { "name": "SAP HANA Text search and analysis", "description": "Enables processing of texts in unstructured content (e.g. for sentiment analysis).", "type": "analytics", "versions": [ ] },
+      { "name": "SAP HANA Series Data", "description": "It allows the measuring of data over time where time is commonly equidistant; it allows to detect and forecast trends in data.", "type": "analytics", "versions": [ ] },
+      { "name": "SAP Jam", "description": "Enables developers to build collaborative application experiences for enterprise and external teams.", "type": "collaboration", "versions": [ ] },
+      { "name": "Gamification Service", "description": "Brings gamification into the enterprise to engage and motivate employees with rewarding experiences.", "type": "collaboration", "versions": [ ] },
+      { "name": "SAP Mobile documents", "description": "Provides unified access of on-premise business content (SAP Business Suite or 3rd party such as MS SharePoint). Enables sharing of content inside and outside the enterprise in a secure way.", "type": "collaboration", "versions": [ ] },
+      { "name": "SAP Cloud Identity", "description": "Offers central user authentication, web single sign-on (SS0) and user management as Software-as-a-Service enabling a seamless experience for end users across solutions. It’s based on open industry-standard SAML and OAuth protocols.", "type": "security", "versions": [ ] },
+      { "name": "Mobile Services", "description": "It enable developers build & manage mobile apps for iOS, Android and Windows with a scalable cloud backend.", "type": "mobile", "versions": [ ] },
+      { "name": "IoT Services", "description": "These services can be used to manage & connect devices to the HANA Cloud Platform in order to use data from these devices in applications.", "type": "iot", "versions": [ ] },
+      { "name": "Remote Data Sync Services", "description": "It provides a service for synchronizing data from a huge numbers sensors in a remote database into a consolidated SAP HANA database in the cloud. Ensuring consistency of data inspite of connection loss etc.", "type": "iot", "versions": [ ] },
+      { "name": "SAP Hybris as a Service", "description": "It allows developers to create, offer and sell business service packages based on a micro-service centric programming model and customers to leverage these services for extending existing and new front-office solutions faster than ever.", "type": "business", "versions": [ ] }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "St. Leon-Rot"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Ashburn"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Phoenix"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney"
+    }
+  ]
+}
