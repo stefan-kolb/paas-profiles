@@ -42,10 +42,11 @@
     }
   ],
   "middleware": [
-    { "name": "java ee", "runtime": "java", "versions": [ ] }
+    { "name": "java ee", "runtime": "java", "versions": [ ] },
+    { "name": "HANA Cloud Integration", "versions": [ ] }
   ],
   "frameworks": [
-
+    { "name": "java ee web profile", "runtime": "java", "versions": [ ] }
   ],
   "services": {
     "native": [
