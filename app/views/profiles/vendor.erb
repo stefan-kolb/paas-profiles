@@ -217,7 +217,7 @@
           %>
               <tr>
                 <td>
-                  <%= rt["name"].capitalize %>
+                  <%= rt["name"] %>
                 </td>
                 <td>
                   <%= rt["runtime"].capitalize unless rt["runtime"].blank? %>
@@ -311,7 +311,7 @@
                     <% @profile["services"]["native"].sort { |a, b| a["name"] <=> b["name"] }.each do |rt| %>
                         <tr>
                           <td>
-                            <%= rt["name"].split(" ").map(&:capitalize).join(" ") %>
+                            <%= rt["name"] %>
                           </td>
                           <td class="hidden-phone"><em><%= rt["description"] %></em></td>
                           <td>
