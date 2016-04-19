@@ -34,12 +34,6 @@
 
       ]
     },
-	{
-      "language": "groovy",
-      "versions": [
-
-      ]
-    },
     {
       "language": "go",
       "versions": [
@@ -80,6 +74,42 @@
       "language": "ruby",
       "versions": [
 	  
+      ]
+    },
+	{
+      "language": "binary",
+      "versions": [
+
+      ]
+    },
+	{
+      "language": "staticfile",
+      "versions": [
+
+      ]
+    },
+	{
+      "language": ".net",
+      "versions": [
+
+      ]
+    },
+	{
+      "language": "TC Server",
+      "versions": [
+
+      ]
+    },
+	{
+      "language": "swift",
+      "versions": [
+
+      ]
+    },
+	{
+      "language": "tomee",
+      "versions": [
+
       ]
     }
   ],
@@ -138,6 +168,27 @@
 	{
       "name": "hhvm",
       "runtime": "php",
+      "versions": [
+	  
+      ]
+    },
+	{
+      "name": "javascript",
+      "runtime": "nodejs",
+      "versions": [
+	  
+      ]
+    },
+	{
+      "name": "html",
+      "runtime": "staticfile",
+      "versions": [
+	  
+      ]
+    },
+	{
+      "name": "css",
+      "runtime": "staticfile",
       "versions": [
 	  
       ]
@@ -236,6 +287,14 @@
         "name": "elasticsearch",
         "description": "",
         "type": "search",
+        "versions": [
+
+        ]
+      },
+	  {
+        "name": "couchdb",
+        "description": "",
+        "type": "datastore",
         "versions": [
 
         ]
