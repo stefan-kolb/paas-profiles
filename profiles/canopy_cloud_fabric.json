@@ -81,11 +81,37 @@
       "versions": [
 	  
       ]
+    },
+	{
+      "language": "dotnet",
+      "versions": [
+
+      ]
+    },
+	{
+      "language": "swift",
+      "versions": [
+
+      ]
     }
   ],
   "middleware": [
     {
       "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+	{
+      "name": "tomee",
+      "runtime": "java",
+      "versions": [
+
+      ]
+    },
+	{
+      "name": "jboss",
       "runtime": "java",
       "versions": [
 
@@ -236,6 +262,14 @@
         "name": "elasticsearch",
         "description": "",
         "type": "search",
+        "versions": [
+
+        ]
+      },
+	  {
+        "name": "couchdb",
+        "description": "",
+        "type": "datastore",
         "versions": [
 
         ]
