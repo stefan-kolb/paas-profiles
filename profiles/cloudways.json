@@ -159,12 +159,12 @@
     "provider": "DigitalOcean"
   }, {
     "continent": "EU",
-    "country": "ENG",
+    "country": "",
     "region": "London",
     "provider": "DigitalOcean"
   }, {
     "continent": "EU",
-    "country": "GER",
+    "country": "DE",
     "region": "Frankfurt",
     "provider": "DigitalOcean"
   }, {
@@ -214,12 +214,12 @@
     "provider": "AWS"
   }, {
     "continent": "EU",
-    "country": "GER",
+    "country": "DE",
     "region": "Frankfurt",
     "provider": "AWS"
   }, {
     "continent": "EU",
-    "country": "IRE",
+    "country": "IE",
     "region": "Ireland",
     "provider": "AWS"
   }, {
@@ -279,32 +279,32 @@
     "provider": "Vultr"
   }, {
     "continent": "EU",
-    "country": "ENG",
+    "country": "",
     "region": "London",
     "provider": "Vultr"
   }, {
     "continent": "EU",
-    "country": "NED",
+    "country": "NL",
     "region": "Amsterdam",
     "provider": "Vultr"
   }, {
     "continent": "EU",
-    "country": "Fr",
+    "country": "FR",
     "region": "Paris",
     "provider": "Vultr"
   }, {
     "continent": "EU",
-    "country": "GER",
+    "country": "DE",
     "region": "Frankfurt",
     "provider": "Vultr"
   }, {
     "continent": "AS",
-    "country": "JAP",
+    "country": "JP",
     "region": "Tokyo",
     "provider": "Vultr"
   }, {
-    "continent": "AUS",
-    "country": "AUS",
+    "continent": "AU",
+    "country": "AU",
     "region": "Sydney",
     "provider": "Vultr"
   }]
