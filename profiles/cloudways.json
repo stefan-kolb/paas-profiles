@@ -223,12 +223,12 @@
     "region": "Ireland",
     "provider": "AWS"
   }, {
-    "continent": "GB",
+    "continent": "NA",
     "country": "US",
     "region": "Iowa",
     "provider": "GCE"
   }, {
-    "continent": "GB",
+    "continent": "NA",
     "country": "US",
     "region": "South Carolina",
     "provider": "GCE"
