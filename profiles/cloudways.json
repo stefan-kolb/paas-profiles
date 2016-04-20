@@ -4,7 +4,7 @@
   "url": "http://www.cloudways.com/en/",
   "status": "production",
   "status_since": "2012-03-21",
-  "type": "PaaS-centric",
+  "type": "SaaS-centric",
   "hosting": {
     "public": true,
     "private": false
@@ -159,7 +159,7 @@
     "provider": "DigitalOcean"
   }, {
     "continent": "EU",
-    "country": "",
+    "country": "GB",
     "region": "London",
     "provider": "DigitalOcean"
   }, {
@@ -223,63 +223,63 @@
     "region": "Ireland",
     "provider": "AWS"
   }, {
-    "continent": "",
+    "continent": "GB",
     "country": "US",
     "region": "Iowa",
     "provider": "GCE"
   }, {
-    "continent": "",
+    "continent": "GB",
     "country": "US",
     "region": "South Carolina",
     "provider": "GCE"
   }, {
     "continent": "EU",
-    "country": "",
-    "region": "",
+    "country": "GB",
+    "region": "GB",
     "provider": "GCE"
   }, {
     "continent": "AS",
-    "country": "",
-    "region": "",
+    "country": "GB",
+    "region": "GB",
     "provider": "GCE"
   }, {
-    "continent": "",
+    "continent": "NA",
     "country": "US",
     "region": "Seattle",
     "provider": "Vultr"
   }, {
-    "continent": "",
+    "continent": "NA",
     "country": "US",
     "region": "Silicon Valley",
     "provider": "Vultr"
   }, {
-    "continent": "",
+    "continent": "NA",
     "country": "US",
     "region": "Los Angeles",
     "provider": "Vultr"
   }, {
-    "continent": "",
+    "continent": "NA",
     "country": "US",
     "region": "Dallas",
     "provider": "Vultr"
   }, {
-    "continent": "",
+    "continent": "NA",
     "country": "US",
     "region": "Chicago",
     "provider": "Vultr"
   }, {
-    "continent": "",
+    "continent": "NA",
     "country": "US",
     "region": "Miami",
     "provider": "Vultr"
   }, {
-    "continent": "",
+    "continent": "NA",
     "country": "US",
     "region": "New York",
     "provider": "Vultr"
   }, {
     "continent": "EU",
-    "country": "",
+    "country": "GB",
     "region": "London",
     "provider": "Vultr"
   }, {
