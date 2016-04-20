@@ -234,13 +234,13 @@
     "provider": "GCE"
   }, {
     "continent": "EU",
-    "country": "GB",
-    "region": "",
+    "country": "BE",
+    "region": "St. Ghislain",
     "provider": "GCE"
   }, {
     "continent": "AS",
     "country": "TW",
-    "region": "Pacific",
+    "region": "Changhua County",
     "provider": "GCE"
   }, {
     "continent": "NA",
