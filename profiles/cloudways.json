@@ -123,18 +123,15 @@
 
     "addon": [{
         "name": "Elasticsearch",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "1.7"
-        ]
+        "url" : "http://www.elastic.co",
+        "description": "Elasticsearch is available on single click installation",
+        "type": "datastore"
+      
       }, {
         "name": "Redis",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "3"
-        ]
+        "url" : "http://redis.io/",
+        "description": "Elasticsearch is available on single click installation",
+        "type": "datastore"
       }
 
     ]
