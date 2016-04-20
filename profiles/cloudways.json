@@ -235,12 +235,12 @@
   }, {
     "continent": "EU",
     "country": "GB",
-    "region": "GB",
+    "region": "",
     "provider": "GCE"
   }, {
     "continent": "AS",
     "country": "GB",
-    "region": "GB",
+    "region": "",
     "provider": "GCE"
   }, {
     "continent": "NA",
