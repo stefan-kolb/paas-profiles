@@ -9,303 +9,349 @@
     "public": true,
     "private": false
   },
-  "pricing": [{
-    "model": "metered",
-    "period": "monthly"
-  }],
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
+  ],
   "scaling": {
     "vertical": true,
     "horizontal": false,
     "auto": false
   },
-  "runtimes": [{
-    "language": "php",
-    "versions": [
-      "5.6",
-      "7"
-    ]
-  }],
-  "middleware": [
-
+  "runtimes": [
+    {
+      "language": "php",
+      "versions": [
+        "5.6",
+        "7"
+      ]
+    }
   ],
-  "frameworks": [{
+  "middleware": [
+  ],
+  "frameworks": [
+    {
       "name": "WordPress",
       "runtime": "php",
       "versions": [
         "4.5"
       ]
-    }, {
+    },
+    {
       "name": "drupal",
       "runtime": "php",
       "versions": [
         "7",
         "8"
       ]
-    }, {
+    },
+    {
       "name": "Restler",
       "runtime": "php",
       "versions": [
         "3.0"
       ]
-    }, {
+    },
+    {
       "name": "laravel",
       "runtime": "php",
       "versions": [
         "5"
       ]
-    }, {
+    },
+    {
       "name": "Magento",
       "runtime": "php",
       "versions": [
         "1",
         "2"
       ]
-    }, {
+    },
+    {
       "name": "Joomla",
       "runtime": "php",
       "versions": [
         "3"
       ]
-    }, {
+    },
+    {
       "name": "Moodle",
       "runtime": "php",
       "versions": [
         "3"
       ]
-    }, {
+    },
+    {
       "name": "SugarCrm",
       "runtime": "php",
       "versions": [
         "6"
       ]
     }
-
   ],
   "services": {
-    "native": [{
-      "name": "Memcached",
-      "description": "",
-      "type": "datastore",
-      "versions": [
-
-      ]
-    }, {
-      "name": "Nginx",
-      "description": "",
-      "type": "server",
-      "versions": [
-
-      ]
-    }, {
-      "name": "Varnish",
-      "description": "",
-      "type": "Cache",
-      "versions": [
-
-      ]
-    }, {
-      "name": "MySQL",
-      "description": "",
-      "type": "datastore",
-      "versions": [
-        "5.5",
-        "5.6"
-      ]
-    }, {
-      "name": "MariaDb",
-      "description": "",
-      "type": "datastore",
-      "versions": [
-        "10"
-      ]
-    }],
-
-
-    "addon": [{
+    "native": [
+      {
+        "name": "Memcached",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+        ]
+      },
+      {
+        "name": "Nginx",
+        "description": "",
+        "type": "server",
+        "versions": [
+        ]
+      },
+      {
+        "name": "Varnish",
+        "description": "",
+        "type": "Cache",
+        "versions": [
+        ]
+      },
+      {
+        "name": "MySQL",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.5",
+          "5.6"
+        ]
+      },
+      {
+        "name": "MariaDb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "10"
+        ]
+      },
+      {
         "name": "Elasticsearch",
-        "url" : "http://www.elastic.co",
-        "description": "Elasticsearch is available on single click installation",
-        "type": "datastore"
-      
-      }, {
+        "type": "datastore",
+        "versions": [
+        ]
+      },
+      {
         "name": "Redis",
-        "url" : "http://redis.io/",
-        "description": "Elasticsearch is available on single click installation",
-        "type": "datastore"
+        "type": "datastore",
+        "versions": [
+        ]
       }
-
+    ],
+    "addon": [
     ]
   },
   "extensible": false,
-  "infrastructures": [{
-    "continent": "EU",
-    "country": "NL",
-    "region": "Amsterdam",
-    "provider": "DigitalOcean"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "San Francisco",
-    "provider": "DigitalOcean"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "New York",
-    "provider": "DigitalOcean"
-  }, {
-    "continent": "AS",
-    "country": "SG",
-    "region": "Singapore",
-    "provider": "DigitalOcean"
-  }, {
-    "continent": "EU",
-    "country": "GB",
-    "region": "London",
-    "provider": "DigitalOcean"
-  }, {
-    "continent": "EU",
-    "country": "DE",
-    "region": "Frankfurt",
-    "provider": "DigitalOcean"
-  }, {
-    "continent": "AS",
-    "country": "JP",
-    "region": "Tokyo",
-    "provider": "DigitalOcean"
-  }, {
-    "continent": "AS",
-    "country": "SG",
-    "region": "Singapore",
-    "provider": "AWS"
-  }, {
-    "continent": "AS",
-    "country": "JP",
-    "region": "Tokyo",
-    "provider": "AWS"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "Northern California",
-    "provider": "AWS"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "Northern Virginia",
-    "provider": "AWS"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "Oregon",
-    "provider": "AWS"
-  }, {
-    "continent": "OC",
-    "country": "AU",
-    "region": "Sydney",
-    "provider": "AWS"
-  }, {
-    "continent": "SA",
-    "country": "BR",
-    "region": "Sao Paulo",
-    "provider": "AWS"
-  }, {
-    "continent": "AS",
-    "country": "KR",
-    "region": "Seoul",
-    "provider": "AWS"
-  }, {
-    "continent": "EU",
-    "country": "DE",
-    "region": "Frankfurt",
-    "provider": "AWS"
-  }, {
-    "continent": "EU",
-    "country": "IE",
-    "region": "Ireland",
-    "provider": "AWS"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "Iowa",
-    "provider": "GCE"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "South Carolina",
-    "provider": "GCE"
-  }, {
-    "continent": "EU",
-    "country": "BE",
-    "region": "St. Ghislain",
-    "provider": "GCE"
-  }, {
-    "continent": "AS",
-    "country": "TW",
-    "region": "Changhua County",
-    "provider": "GCE"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "Seattle",
-    "provider": "Vultr"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "Silicon Valley",
-    "provider": "Vultr"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "Los Angeles",
-    "provider": "Vultr"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "Dallas",
-    "provider": "Vultr"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "Chicago",
-    "provider": "Vultr"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "Miami",
-    "provider": "Vultr"
-  }, {
-    "continent": "NA",
-    "country": "US",
-    "region": "New York",
-    "provider": "Vultr"
-  }, {
-    "continent": "EU",
-    "country": "GB",
-    "region": "London",
-    "provider": "Vultr"
-  }, {
-    "continent": "EU",
-    "country": "NL",
-    "region": "Amsterdam",
-    "provider": "Vultr"
-  }, {
-    "continent": "EU",
-    "country": "FR",
-    "region": "Paris",
-    "provider": "Vultr"
-  }, {
-    "continent": "EU",
-    "country": "DE",
-    "region": "Frankfurt",
-    "provider": "Vultr"
-  }, {
-    "continent": "AS",
-    "country": "JP",
-    "region": "Tokyo",
-    "provider": "Vultr"
-  }, {
-    "continent": "OC",
-    "country": "AU",
-    "region": "Sydney",
-    "provider": "Vultr"
-  }]
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "NL",
+      "region": "Amsterdam",
+      "provider": "DigitalOcean"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "San Francisco",
+      "provider": "DigitalOcean"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "New York",
+      "provider": "DigitalOcean"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "DigitalOcean"
+    },
+    {
+      "continent": "EU",
+      "country": "GB",
+      "region": "London",
+      "provider": "DigitalOcean"
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Frankfurt",
+      "provider": "DigitalOcean"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Tokyo",
+      "provider": "DigitalOcean"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Tokyo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern Virginia",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+      "provider": "AWS"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "AWS"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "KR",
+      "region": "Seoul",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Frankfurt",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Ireland",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Iowa",
+      "provider": "GCE"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "South Carolina",
+      "provider": "GCE"
+    },
+    {
+      "continent": "EU",
+      "country": "BE",
+      "region": "St. Ghislain",
+      "provider": "GCE"
+    },
+    {
+      "continent": "AS",
+      "country": "TW",
+      "region": "Changhua County",
+      "provider": "GCE"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Seattle",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Silicon Valley",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Los Angeles",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Dallas",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Chicago",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Miami",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "New York",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "EU",
+      "country": "GB",
+      "region": "London",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "EU",
+      "country": "NL",
+      "region": "Amsterdam",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "EU",
+      "country": "FR",
+      "region": "Paris",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Frankfurt",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Tokyo",
+      "provider": "Vultr"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "Vultr"
+    }
+  ]
 }
