@@ -23,7 +23,7 @@ module Profiles
 
     def unify
       return 'Unknown' unless major
-
+      return major unless minor
       major << '.' << minor
     end
 
