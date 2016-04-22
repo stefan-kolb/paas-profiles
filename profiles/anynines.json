@@ -172,7 +172,7 @@
         ]
       },
       {
-        "name": "swift",
+        "name": "swift store",
         "description": "",
         "type": "datastore",
         "versions": [
