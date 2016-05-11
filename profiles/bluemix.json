@@ -7,7 +7,7 @@
   "type": "Generic",
   "hosting": {
     "public": true,
-    "private": false
+    "private": true
   },
   "pricing": [
     {
