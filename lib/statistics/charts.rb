@@ -74,8 +74,7 @@ module Profiles
           categories: distinct_versions(l),
           latest: latest,
           data: distinct_versions_data(l)
-        }
-        }
+        } }
       end
 
       # capitalize each word
