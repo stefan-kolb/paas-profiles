@@ -1,0 +1,35 @@
+{
+  "name": "APPUiO",
+  "revision": "2016-05-26",
+  "url": "http://appuio.ch",
+  "vendor_verified": "2016-05-26",
+  "status": "beta",
+  "status_since": "2016-05-26",
+  "type": "Generic",
+  "hosting": {
+    "public": false,
+    "private": true
+  },
+  "pricing": [
+    {
+      "model": "fixed"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "runtimes": [
+  ],
+  "middleware": [
+  ],
+  "frameworks": [
+  ],
+  "services": {
+  },
+  "extensible": true,
+  "infrastructures": [
+
+  ]
+}
