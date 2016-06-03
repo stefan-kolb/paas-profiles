@@ -1,7 +1,7 @@
 # [PaaS Profiles](http://paasify.it)
 [![Build Status](https://travis-ci.org/stefan-kolb/paas-profiles.png)](https://travis-ci.org/stefan-kolb/paas-profiles)
 [![Dependency Status](https://gemnasium.com/stefan-kolb/paas-profiles.png)](https://gemnasium.com/stefan-kolb/paas-profiles)
-[![Code Climate](https://codeclimate.com/github/stefan-kolb/paas-profiles.png)](https://codeclimate.com/github/stefan-kolb/paas-profiles)
+[![Donation](https://img.shields.io/badge/donate-paypal-orange.svg)](https://www.paypal.com/cgi-bin/webscr?item_name=PaaSify&cmd=_donations&lc=US&currency_code=EUR&business=stefan-kolb%40web.de)
 
 *Making Platform as a Service offerings comparable - Ecosystem profiles for portability matching.*
 
