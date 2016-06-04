@@ -6,17 +6,12 @@ require 'sinatra/base'
 require 'sinatra/simple-navigation'
 SimpleNavigation.config_file_paths << File.join(__dir__, '..', 'config')
 
-require_relative 'middleware/sabayon_middleware'
-
 # helpers
 require_all 'app/helpers'
 
 module Profiles
   class Base < Sinatra::Base
     register Sinatra::SimpleNavigation
-
-    # lets encrypt endpoint
-    use SabayonMiddleware
 
     configure do
       helpers ApplicationHelpers
