@@ -67,18 +67,13 @@
     "isolation": ""
   },
   {
-    "vendor": "Canopy Cloud Fabric",
+    "vendor": "Atos Cloud Foundry",
     "platform": "Cloud Foundry",
     "isolation": "Container"
   },
   {
     "vendor": "CatN",
     "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "CenturyLink Cloud",
-    "platform": "Cloud Foundry",
     "isolation": ""
   },
   {
