@@ -629,6 +629,12 @@
       "country": "GB",
       "region": "London",
       "provider": "Softlayer"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "Softlayer"
     }
   ]
 }
