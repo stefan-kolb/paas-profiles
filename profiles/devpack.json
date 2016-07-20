@@ -30,7 +30,7 @@
       "versions": [
         "1.7.*",
         "1.8.*"
-      ]a
+      ]
     },
     {
       "language": "node",
