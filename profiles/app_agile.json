@@ -22,6 +22,12 @@
   },
   "runtimes": [
     {
+      "language": "java",
+      "versions": [
+        
+      ]
+    },
+    {
       "language": "node",
       "versions": [
         "0.10",
