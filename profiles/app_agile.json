@@ -1,0 +1,201 @@
+{
+  "name": "AppAgile",
+  "revision": "2016-07-22",
+  "url": "https://cloud.telekom.de/infrastruktur/appagile/",
+  "status": "beta",
+  "status_since": "2015-04-01",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "runtimes": [
+    {
+      "language": "node",
+      "versions": [
+        "0.10",
+        "0.6"
+      ]
+    },
+    {
+      "language": "perl",
+      "versions": [
+        "5.10",
+        "5.16"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.3",
+        "5.4",
+        "5.5"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.6",
+        "2.7",
+        "3.3"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.8",
+        "1.9",
+        "2.0"
+      ]
+    }
+  ],
+  "middleware": [
+    {
+      "name": "jboss",
+      "runtime": "java",
+      "versions": [
+        "6.1",
+        "6.2",
+        "7.1",
+        "8.0"
+      ]
+    },
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "name": "WSO2 application server",
+      "runtime": "java",
+      "versions": [
+        "5.2.1"
+      ]
+    },
+    {
+      "name": "WSO2 identity server",
+      "versions": [
+        "5.0.0"
+      ]
+    },
+    {
+      "name": "IBM WebSphere",
+      "versions": [
+        "8.5.5.5"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "drupal",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "switchyard",
+      "runtime": "java",
+      "versions": [
+        "0.8"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "jenkins",
+        "versions": [
+          "1.4",
+          "1.5"
+        ],
+        "type": "devops"
+      },
+      {
+        "name": "mongodb",
+        "versions": [
+          "2.4"
+        ],
+        "type": "datastore"
+      },
+      {
+        "name": "cassandra",
+        "versions": [
+          "1.2.4",
+          "1.2.5"
+        ],
+        "type": "datastore"
+      },
+      {
+        "name": "mysql",
+        "versions": [
+          "5.1",
+          "5.5"
+        ],
+        "type": "datastore"
+      },
+      {
+        "name": "postgresql",
+        "versions": [
+          "8.4",
+          "9.2"
+        ],
+        "type": "datastore"
+      },
+      {
+        "name": "apache activemq",
+        "versions": [
+          "5.1"
+        ],
+        "type": "worker"
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": ""
+    }
+  ]
+}

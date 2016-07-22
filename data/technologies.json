@@ -26,6 +26,11 @@
     "isolation": ""
   },
   {
+    "vendor": "AppAgile",
+    "platform": "OpenShift Origin",
+    "isolation": "Container"
+  },
+  {
     "vendor": "AppFog",
     "platform": "",
     "isolation": "Container"
