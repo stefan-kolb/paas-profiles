@@ -27,6 +27,7 @@ RuboCop::RakeTask.new
 # tests
 Rake::TestTask.new do |t|
   t.test_files = FileList['test/**/test*.rb']
+  t.ruby_opts = ['-W1']
 end
 
 task default: [:rubocop, :test]
