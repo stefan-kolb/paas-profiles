@@ -176,7 +176,7 @@
                end unless rt['versions'].blank?
             %>
             <td>
-              <em><%= rt["versions"].join(", ") unless rt['versions'].blank? %></em>
+              <em><%= rt["versions"].join(', ') unless rt['versions'].blank? %></em>
               <% if rt['versions'].blank? %>
                   <span class="status grey pull-right" title="No version information"></span>
               <% elsif rt['versions'].any? { |v| Profiles::Version.new(v, rt['language']).latest? } %>
@@ -224,8 +224,8 @@
                 </td>
                 <% rt["versions"].each do |v|
                   v.gsub! /\*\.\*/, 'All versions'
-                end %>
-                <td><em><%= rt["versions"].join(", ") %></em></td>
+                end unless rt['versions'].blank? %>
+                <td><em><%= rt["versions"].join(", ") unless rt['versions'].blank? %></em></td>
               </tr>
           <% end %>
           </tbody>
@@ -262,8 +262,8 @@
                 </td>
                 <% rt["versions"].each do |v|
                   v.gsub! /\*\.\*/, 'All versions'
-                end %>
-                <td><em><%= rt["versions"].join(", ") %></em></td>
+                end unless rt['versions'].blank? %>
+                <td><em><%= rt["versions"].join(", ") unless rt['versions'].blank? %></em></td>
               </tr>
           <% end %>
           </tbody>
@@ -319,7 +319,7 @@
                                 <em><%= rt["type"].upcase %></em>
                             <% end %>
                           </td>
-                          <td><em><%= rt["versions"].join(", ") %></em></td>
+                          <td><em><%= rt["versions"].join(", ") unless rt['versions'].blank? %></em></td>
                         </tr>
                     <% end %>
                     </tbody>
