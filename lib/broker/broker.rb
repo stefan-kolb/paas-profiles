@@ -95,7 +95,6 @@ module Profiles
         end
       end
 
-      puts query.inspect
       res
     end
   end
