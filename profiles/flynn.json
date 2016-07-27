@@ -1,10 +1,10 @@
 {
   "name": "Flynn",
-  "revision": "2014-11-12",
-  "vendor_verified": "2014-11-12",
+  "revision": "2016-07-27",
+  "vendor_verified": "2016-07-27",
   "url": "https://flynn.io/",
-  "status": "beta",
-  "status_since": "2014-08-13",
+  "status": "production",
+  "status_since": "2016-07-26",
   "type": "Generic",
   "hosting": {
     "public": false,
@@ -22,98 +22,53 @@
   },
   "runtimes": [
     {
-      "language": "clojure",
-      "versions": [
-
-      ]
+      "language": "clojure"
     },
     {
-      "language": "go",
-      "versions": [
-
-      ]
+      "language": "go"
     },
     {
-      "language": "groovy",
-      "versions": [
-
-      ]
+      "language": "groovy"
     },
     {
-      "language": "java",
-      "versions": [
-
-      ]
+      "language": "java"
     },
     {
-      "language": "node",
-      "versions": [
-
-      ]
+      "language": "node"
     },
     {
-      "language": "php",
-      "versions": [
-
-      ]
+      "language": "php"
     },
     {
-      "language": "python",
-      "versions": [
-
-      ]
+      "language": "python"
     },
     {
-      "language": "ruby",
-      "versions": [
-
-      ]
+      "language": "ruby"
     },
     {
-      "language": "scala",
-      "versions": [
-
-      ]
+      "language": "scala"
     }
-  ],
-  "middleware": [
-
   ],
   "frameworks": [
     {
       "name": "django",
-      "runtime": "python",
-      "versions": [
-
-      ]
+      "runtime": "python"
     },
     {
       "name": "flask",
-      "runtime": "python",
-      "versions": [
-
-      ]
+      "runtime": "python"
     },
     {
       "name": "grails",
-      "runtime": "groovy",
-      "versions": [
-
-      ]
+      "runtime": "groovy"
     },
     {
       "name": "play",
-      "runtime": "java",
-      "versions": [
-
-      ]
+      "runtime": "java"
     },
     {
       "name": "rails",
-      "runtime": "ruby",
-      "versions": [
-
-      ]
+      "runtime": "ruby"
     }
   ],
   "services": {
@@ -122,16 +77,31 @@
         "name": "postgresql",
         "type": "datastore",
         "versions": [
-          "9.3"
+          "9.5"
+        ]
+      },
+      {
+        "name": "mariadb",
+        "type": "datastore",
+        "versions": [
+          "10.1"
+        ]
+      },
+      {
+        "name": "mongodb",
+        "type": "datastore",
+        "versions": [
+          "3.2"
+        ]
+      },
+      {
+        "name": "redis",
+        "type": "datastore",
+        "versions": [
+          "3.0"
         ]
       }
-    ],
-    "addon": [
-
     ]
   },
-  "extensible": true,
-  "infrastructures": [
-
-  ]
+  "extensible": true
 }
