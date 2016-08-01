@@ -139,6 +139,11 @@
     "dev_model": "open source"
   },
   {
+    "vendor": "devpack",
+    "platform": "Cloud Foundry",
+    "isolation": "Container"
+  },
+  {
     "vendor": "dotCloud",
     "platform": "cloudControl",
     "isolation": "Container"
