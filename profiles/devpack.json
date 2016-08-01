@@ -1,0 +1,183 @@
+{
+  "name": "devpack",
+  "revision": "2016-07-19",
+  "url": "https://devpack.co.kr",
+  "status": "production",
+  "status_since": "2016-05-16",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true, "horizontal": true, "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "go",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+        "1.7.*",
+        "1.8.*"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "0.4.*",
+        "0.6.*",
+        "0.8.*",
+        "0.10.*",
+        "0.12.*"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7.*",
+        "3.2.*",
+        "3.3.*",
+        "3.4.*"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.8.*",
+        "1.9.*",
+        "2.0.*",
+        "2.1.*",
+        "2.2.*"
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
+  "middleware": null,
+  "frameworks": [
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "2.*",
+        "3.*",
+        "4.*"
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "meteor",
+      "runtime": "node",
+      "versions": [
+        "0.9.*",
+        "1.0.*",
+        "1.1.*"
+      ]
+    },
+    {
+      "name": "express",
+      "runtime": "node",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "meanjs",
+      "runtime": "node",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+        "1.2.*",
+        "2.*"
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "spark",
+      "runtime": "java",
+      "versions": [
+        "1.*",
+        "2.*"
+      ]
+    },
+    {
+      "name": "symfony",
+      "runtime": "php",
+      "versions": [
+        "2.*"
+      ]
+    },
+    {
+      "name": "cakephp",
+      "runtime": "php",
+      "versions": [
+        "2.*"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.5.41"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "AS",
+      "country": "KR",
+      "region": "Seoul",
+      "provider": "KT"
+    }
+  ]
+}
