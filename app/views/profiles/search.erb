@@ -76,6 +76,13 @@
      # ignore infras if hosting == private
    end
 
+   # log user queries
+   Profiles::Logs::Query.create(
+       ip: request.ip,
+       selector: query.selector,
+       size: query.size
+   ) unless query.selector.empty?
+
    unless query.exists?
 
 %>
