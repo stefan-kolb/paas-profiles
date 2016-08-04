@@ -1,6 +1,6 @@
 {
   "name": "Scalingo",
-  "revision": "2016-07-22",
+  "revision": "2016-08-04",
   "vendor_verified": "2015-02-23",
   "url": "https://scalingo.com",
   "status": "production",
@@ -11,9 +11,6 @@
     "private": true
   },
   "pricing": [
-    {
-      "model": "free"
-    },
     {
       "model": "metered",
       "period": "monthly"
@@ -48,7 +45,7 @@
       "versions": [
         "1.7.*",
         "1.8.*",
-        "1.8.*"
+        "1.9.*"
       ]
     },
     {
@@ -56,9 +53,9 @@
       "versions": [
         "0.10.*",
         "0.12.*",
-        "4.x",
-        "5.x",
-        "6.x"
+        "4.*",
+        "5.*",
+        "6.*"
       ]
     },
     {
@@ -148,13 +145,6 @@
       "runtime": "java",
       "versions": [
         "1.2.*",
-        "2.*"
-      ]
-    },
-    {
-      "name": "play",
-      "runtime": "scala",
-      "versions": [
         "2.*"
       ]
     },
@@ -260,7 +250,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "3.2.x"
+          "3.2.*"
         ]
       },
       {
@@ -268,7 +258,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "5.5.x"
+          "5.5.*"
         ]
       },
       {
@@ -276,7 +266,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "9.4.x"
+          "9.4.*"
         ]
       },
       {
@@ -284,7 +274,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "3.x"
+          "3.*"
         ]
       },
       {
@@ -292,7 +282,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "1.7.x"
+          "1.7.*"
         ]
       }
     ],
