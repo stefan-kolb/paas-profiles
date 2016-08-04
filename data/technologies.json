@@ -52,11 +52,6 @@
     "dev_model": "open source"
   },
   {
-    "vendor": "Appsembler",
-    "platform": "",
-    "isolation": ""
-  },
-  {
     "vendor": "BitNami",
     "platform": "",
     "isolation": ""
@@ -92,10 +87,6 @@
     "dev_model": "open source"
   },
   {
-    "vendor": "cloudControl",
-    "isolation": "Container"
-  },
-  {
     "vendor": "Cloudify",
     "platform": "",
     "isolation": "",
@@ -115,11 +106,6 @@
     "vendor": "Cloudways",
     "platform": "",
     "isolation": ""
-  },
-  {
-    "vendor": "Cloud&Heat App Elevator",
-    "platform": "cloudControl",
-    "isolation": "Container"
   },
   {
     "vendor": "ConPaaS",
@@ -144,11 +130,6 @@
     "isolation": "Container"
   },
   {
-    "vendor": "dotCloud",
-    "platform": "cloudControl",
-    "isolation": "Container"
-  },
-  {
     "vendor": "ElasticBox",
     "platform": "",
     "isolation": ""
@@ -164,13 +145,8 @@
     "isolation": "Virtual Machine"
   },
   {
-    "vendor": "Evia",
-    "platform": "",
-    "isolation": ""
-  },
-  {
     "vendor": "exoscale Apps",
-    "platform": "cloudControl",
+    "platform": "",
     "isolation": "Container"
   },
   {
@@ -240,11 +216,6 @@
     "isolation": ""
   },
   {
-    "vendor": "Moncai",
-    "platform": "",
-    "isolation": ""
-  },
-  {
     "vendor": "MoPaaS",
     "platform": "",
     "isolation": ""
@@ -256,17 +227,7 @@
     "dev_model": "open source"
   },
   {
-    "vendor": "Ninefold",
-    "platform": "",
-    "isolation": ""
-  },
-  {
     "vendor": "Nitrous.io",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "Nodejitsu",
     "platform": "",
     "isolation": ""
   },
@@ -301,11 +262,6 @@
     "isolation": ""
   },
   {
-    "vendor": "Paasmaker",
-    "platform": "",
-    "isolation": ""
-  },
-  {
     "vendor": "Pagoda Box",
     "platform": "",
     "isolation": ""
@@ -321,7 +277,7 @@
     "isolation": "Container"
   },
   {
-    "vendor": "platform.sh",
+    "vendor": "Platform.sh",
     "platform": "",
     "isolation": "Container"
   },
@@ -336,17 +292,7 @@
     "isolation": ""
   },
   {
-    "vendor": "Railscloud",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "Rapidcloud.io",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "SAP HANA Cloud",
+    "vendor": "SAP HANA Cloud Platform",
     "platform": "",
     "isolation": ""
   },
@@ -361,17 +307,12 @@
     "isolation": ""
   },
   {
-    "vendor": "Stackato",
+    "vendor": "HPE Helion Stackato",
     "platform": "Cloud Foundry",
     "isolation": ""
   },
   {
     "vendor": "Standing Cloud",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "Static",
     "platform": "",
     "isolation": ""
   },
@@ -387,17 +328,7 @@
     "dev_model": "open source"
   },
   {
-    "vendor": "Uhuru AppCloud",
-    "platform": "Cloud Foundry",
-    "isolation": "Container"
-  },
-  {
     "vendor": "Viaduct",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "VMWARE vFabric",
     "platform": "",
     "isolation": ""
   },
