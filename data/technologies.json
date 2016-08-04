@@ -32,7 +32,7 @@
   },
   {
     "vendor": "AppFog",
-    "platform": "",
+    "platform": "Cloud Foundry",
     "isolation": "Container"
   },
   {
