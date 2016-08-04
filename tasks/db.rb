@@ -62,7 +62,7 @@ namespace :db do
           dev_model: e['dev_model']
         )
       rescue Mongoid::Errors::DocumentNotFound
-        puts "WARN: Vendor #{e['vendor']} is missing for technology update"
+        puts "WARN: No profile found for '#{e['vendor']}' while trying to update technology data"
       end
     end
   end
