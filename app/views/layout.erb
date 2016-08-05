@@ -33,6 +33,14 @@
     ga('create', 'UA-64667246-1', 'auto');
     ga('send', 'pageview');
   </script>
+  <script>
+    var trackOutboundLink = function(url) {
+      ga('send', 'event', 'outbound', 'click', url, {
+        'transport': 'beacon',
+        'hitCallback': function(){document.location = url;}
+      });
+    }
+  </script>
 </head>
 <body>
 <div style="background-color: #f5f5f5">

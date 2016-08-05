@@ -7,7 +7,7 @@
     <% if File.exist?(settings.public_folder << '/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>
     <img src="<%= url('/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded" style="margin-bottom: 8px">
     <% end %>
-    <a href="<%= @profile['url'] %>" target="_blank"><%= @profile['name'] %></a>
+    <a href="<%= @profile['url'] %>" onclick="trackOutboundLink('<%= @profile['url'] %>'); return false;" target="_blank"><%= @profile['name'] %></a>
     <% unless @profile['vendor_verified'].nil? %>
     <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @profile['vendor_verified'].to_date %>"></i>
     <% end %>
@@ -16,7 +16,7 @@
 </div>
 <div class="row">
   <div class="span2">
-    <a href="<%= @profile["url"] %>" target="_blank" class="btn btn-inverse btn-mini">Visit Vendor Page</a>
+    <a href="<%= @profile['url'] %>" onclick="trackOutboundLink('<%= @profile['url'] %>'); return false;" target="_blank" class="btn btn-inverse btn-mini">Visit Vendor Page</a>
   </div>
 
   <div class="span6 text-center">
@@ -52,7 +52,7 @@
   </div>
   <div class="span1">
     <p class="pull-right">
-      <a href="https://github.com/stefan-kolb/paas-profiles#contribution" title="Report error" class="tip"><i class="fa fa-bug fa-lg"></i></a>
+      <a href="https://github.com/stefan-kolb/paas-profiles#contribution" onclick="trackOutboundLink('https://github.com/stefan-kolb/paas-profiles#contribution'); return false;" title="Report error" class="tip"><i class="fa fa-bug fa-lg"></i></a>
     </p>
   </div>
 </div>
