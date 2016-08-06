@@ -145,11 +145,6 @@
     "isolation": "Virtual Machine"
   },
   {
-    "vendor": "exoscale Apps",
-    "platform": "",
-    "isolation": "Container"
-  },
-  {
     "vendor": "Flynn",
     "platform": "",
     "isolation": "Container",
