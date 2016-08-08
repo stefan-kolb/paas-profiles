@@ -1,10 +1,10 @@
 {
   "name": "Scalingo",
   "revision": "2016-08-04",
-  "vendor_verified": "2015-02-23",
+  "vendor_verified": "2016-08-04",
   "url": "https://scalingo.com",
   "status": "production",
-  "status_since": "2015-02-03",
+  "status_since": "2015-04-17",
   "type": "Generic",
   "hosting": {
     "public": true,
