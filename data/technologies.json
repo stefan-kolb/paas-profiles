@@ -227,7 +227,7 @@
     "isolation": ""
   },
   {
-    "vendor": "OpenShift Enterprise",
+    "vendor": "OpenShift Container Platform",
     "platform": "OpenShift Origin",
     "isolation": "Container"
   },
