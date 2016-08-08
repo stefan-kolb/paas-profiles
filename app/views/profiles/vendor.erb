@@ -9,7 +9,7 @@
     <% end %>
     <a href="<%= @profile['url'] %>" onclick="trackOutboundLink('<%= @profile['url'] %>'); return false;" target="_blank"><%= @profile['name'] %></a>
     <% unless @profile['vendor_verified'].nil? %>
-    <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @profile['vendor_verified'].to_date %>"></i>
+    <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @profile['vendor_verified'].strftime('%F') %>"></i>
     <% end %>
     </h1>
   </div>
@@ -47,7 +47,7 @@
   </div>
   <div class="span3 text-center">
     <small>
-      <em>Last updated <span class="date" title="<%= @profile['revision'].to_datetime %>"></span> ago.</em>
+      <em>Last updated <span class="date" title="<%= @profile['revision'].strftime('%F') %>"><%= @profile['revision'].strftime('%F') %></span> ago.</em>
     </small>
   </div>
   <div class="span1">
@@ -154,7 +154,7 @@
         <span class="label label-success">Production</span>
     <% end %>
     <% unless @profile["status_since"].nil? %>
-        since <span class="date" title="<%= @profile["status_since"].to_date %>"></span><% end %>.
+        since <span class="date" title="<%= @profile['status_since'].strftime('%F') %>"><%= @profile['status_since'].strftime('%F') %></span><% end %>.
     </p>
     <% if @profile.hosting.public %>
     <p>Stipulated Uptime: <% if @profile["qos"].blank? || @profile["qos"]["uptime"].blank? %>
@@ -436,63 +436,72 @@
 
 </div>
 
-<script src="../js/jquery.prettydate.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
 <script src="../js/jquery-jvectormap-2.0.2.min.js"></script>
 <script src="../js/jquery-jvectormap-world-mill-en.js"></script>
 <script>
-    $(document).ready(function () {
-        $(".date").prettyDate();
-
-        $('#map').vectorMap({
-            map: 'world_mill_en',
-            backgroundColor: '#ffffff',
-            regionStyle: {
-                initial: {
-                    fill: '#0088cc'
-                },
-                hover: {
-                    'fill-opacity': 0.6
-                },
-                selected: {
-                    fill: '#f89406'
-                }
-            },
-            markerStyle: {
-                initial: {
-                    fill: '#ffffff',
-                    stroke: '#000000'
-                }
-            },
-            <% if !@profile['infrastructures'].nil? && @profile['infrastructures'].uniq { |h| h['continent'] }.size == 1 %>
-            <%= "focusOn: '" << @profile['infrastructures'][0]['country'] << "'," %>
-            <% end %>
-            <%
-                arr = []
-                unless @profile['infrastructures'].blank?
-                    @profile['infrastructures'].each do |i|
-                        arr << i['country'] unless i['country'].blank?
-                    end
-                end
-            %>
-            <%= 'selectedRegions: ' << arr.to_s %>
-        });
-
-        <% unless @profile['infrastructures'].blank? %>
-        // Geographic information
-        $.getJSON('/api/vendors/<%=  @profile['name'].gsub(/[^a-z]/i, '_') %>/infrastructures').done(function(data) {
-            var mapObject = $('#map').vectorMap('get', 'mapObject');
-            mapObject.addMarkers(data, []);
-        });
-
-        $.ajax( {
-            url: '//freegeoip.net/json/',
-            type: 'POST',
-            dataType: 'jsonp',
-            success: function(location) {
-                var mapObject = $('#map').vectorMap('get', 'mapObject');
-                mapObject.addMarker('user', { latLng: [location.latitude, location.longitude], name: "Yeah, that's you!", style: { fill: 'red' } }, []);
-            }
-        } );
-        <% end %>
+  $(document).ready(function () {
+    $('.date').each(function (index, dateElem) {
+      var $dateElem = $(dateElem);
+      console.log($dateElem.text());
+      var formatted = moment($dateElem.text(), 'YYYY-MM-DD').fromNow(true);
+      $dateElem.text(formatted);
     });
+
+    $('#map').vectorMap({
+      map: 'world_mill_en',
+      backgroundColor: '#ffffff',
+      regionStyle: {
+        initial: {
+          fill: '#0088cc'
+        },
+        hover: {
+          'fill-opacity': 0.6
+        },
+        selected: {
+          fill: '#f89406'
+        }
+      },
+      markerStyle: {
+        initial: {
+          fill: '#ffffff',
+          stroke: '#000000'
+        }
+      },
+      <% if !@profile['infrastructures'].nil? && @profile['infrastructures'].uniq { |h| h['continent'] }.size == 1 %>
+      <%= "focusOn: '" << @profile['infrastructures'][0]['country'] << "'," %>
+      <% end %>
+      <%
+          arr = []
+          unless @profile['infrastructures'].blank?
+              @profile['infrastructures'].each do |i|
+                  arr << i['country'] unless i['country'].blank?
+              end
+          end
+      %>
+      <%= 'selectedRegions: ' << arr.to_s %>
+    });
+
+    <% unless @profile['infrastructures'].blank? %>
+    // Geographic information
+    $.getJSON('/api/vendors/<%=  @profile['name'].gsub(/[^a-z]/i, '_') %>/infrastructures').done(function (data) {
+      var mapObject = $('#map').vectorMap('get', 'mapObject');
+      mapObject.addMarkers(data, []);
+    });
+
+    $.ajax({
+      url: '//freegeoip.net/json/',
+      type: 'POST',
+      dataType: 'jsonp',
+      success: function (location) {
+        var mapObject = $('#map').vectorMap('get', 'mapObject');
+        mapObject.addMarker('user', {
+          latLng: [location.latitude, location.longitude],
+          name: "Yeah, that's you!",
+          style: {fill: 'red'}
+        }, []);
+      }
+    });
+    <% end %>
+  });
 </script>
