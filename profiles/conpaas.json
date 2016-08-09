@@ -1,12 +1,12 @@
 {
   "name": "ConPaaS",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2016-08-09",
   "url": "http://www.conpaas.eu",
   "status": "beta",
   "status_since": "2011-08-01",
   "type": "IaaS-centric",
   "hosting": {
-    "public": false,
+    "public": true,
     "private": true
   },
   "pricing": [
@@ -37,7 +37,55 @@
 
   ],
   "frameworks": null,
-  "services": null,
+  "services": {
+    "native": [
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "Scalarix",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "XtreemFS",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "MapReduce",
+        "type": "worker",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "TaskFarming",
+        "type": "worker",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "HTCondor",
+        "type": "worker",
+        "versions": [
+
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
   "extensible": true,
   "infrastructures": [
 
