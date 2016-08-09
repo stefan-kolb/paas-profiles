@@ -8,6 +8,7 @@
   "type": "Generic",
   "hosting": {
     "public": true,
+    "vps": true,
     "private": false
   },
   "pricing": [
