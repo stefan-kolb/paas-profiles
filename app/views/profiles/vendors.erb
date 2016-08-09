@@ -249,6 +249,9 @@
               <% if profile['hosting']['public'] %>
                   <i class="fa fa-eye" title="public"></i>
               <% end %>
+              <% if profile['hosting']['vps'] %>
+                  <i class="fa fa-low-vision" title="virtual private"></i>
+              <% end %>
               <% if profile['hosting']['private'] %>
                   <i class="fa fa-lock" title="private"></i>
               <% end %>

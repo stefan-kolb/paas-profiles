@@ -49,7 +49,7 @@ The code below shows a sample profile.
   "status_since": "2012-07-15",
   "type": "Generic",
   "hosting": {
-    "public": true, "private": false
+    "public": true, "vps": true, "private": false
   },
   "pricing": [
 		{ "model": "fixed", "period": "monthly" }
@@ -164,7 +164,7 @@ Currently a simple string array of compliance standards that are fulfilled by th
 ### Hosting
 
 An object that describes the different provided hosting styles of the PaaS.
-Values can be `public` for a shared publicly hosted service and `private` for a service that is deployed per customer or on premises.
+Values can be `public` for a shared (multi-tenant) publicly hosted service, `vps` for a virtual private cloud deployment (single-tenant), and `private` for a service that can be deployed on premises.
 
 ### Scaling
 
