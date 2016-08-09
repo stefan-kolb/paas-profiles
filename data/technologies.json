@@ -67,6 +67,11 @@
     "isolation": ""
   },
   {
+    "vendor": "Bytemark",
+    "platform": "",
+    "isolation": ""
+  },
+  {
     "vendor": "Atos Cloud Foundry",
     "platform": "Cloud Foundry",
     "isolation": "Container"
