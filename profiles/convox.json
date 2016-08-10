@@ -1,12 +1,13 @@
 {
   "name": "Convox",
-  "revision": "2016-03-28",
-  "url": "http://www.convox.com/",
-  "status": "production",
+  "revision": "2016-08-10",
+  "url": "https://convox.com",
+  "status": "beta",
   "status_since": "2015-02-15",
-  "type": "Generic",
+  "type": "IaaS-centric",
   "hosting": {
     "public": false,
+    "vps": true,
     "private": true
   },
   "pricing": [
@@ -18,9 +19,6 @@
       "model": "free"
     }
   ],
-  "quality of service": {
-    "uptime": "99.99%",
-  },
   "scaling": {
     "vertical": true,
     "horizontal": true,
@@ -28,69 +26,9 @@
   },
   "runtimes": [
     {
-      "language": "clojure",
+      "language": "docker",
       "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "language": "cobol",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "language": "dotnet",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "language": "erlang",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "language": "go",
-      "versions": [
-       "*.*"
-      ]
-    },
-    {
-      "language": "groovy",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "language": "haskell",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "language": "java",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "language": "lua",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "language": "node",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "language": "perl",
-      "versions": [
-        "*.*"
+
       ]
     },
     {
@@ -110,94 +48,12 @@
       "versions": [
         "*.*"
       ]
-    },
-    {
-      "language": "scala",
-      "versions": [
-        "*.*"
-      ]
     }
   ],
   "middleware": [
-    {
-      "name": "glassfish",
-      "runtime": "java",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "jboss",
-      "runtime": "java",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "jetty",
-      "runtime": "java",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "resin",
-      "runtime": "java",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "tomcat",
-      "runtime": "java",
-      "versions": [
-        "*.*"
-      ]
-    }
+
   ],
   "frameworks": [
-    {
-      "name": "grails",
-      "runtime": "groovy",
-      "versions": [
-
-      ]
-    },
-    {
-      "name": "play",
-      "runtime": "java",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "spring",
-      "runtime": "java",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "angularJS",
-      "runtime": "node",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "express",
-      "runtime": "node",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "meteor",
-      "runtime": "node",
-      "versions": [
-        "*.*"
-      ]
-    },
     {
       "name": "rails",
       "runtime": "ruby",
@@ -213,35 +69,7 @@
       ]
     },
     {
-      "name": "laravel",
-      "runtime": "php",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "symfony",
-      "runtime": "php",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "Magento",
-      "runtime": "php",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
       "name": "django",
-      "runtime": "python",
-      "versions": [
-
-      ]
-    },
-    {
-      "name": "flask",
       "runtime": "python",
       "versions": [
 
@@ -251,73 +79,52 @@
   "services": {
     "native": [
       {
-        "name": "CircleCI",
-        "type": "",
+        "name": "mysql",
+        "type": "datastore",
         "versions": [
-          "*.*"  
-        ]
-      },
-      {
-        "name": "DockerHub",
-        "type": "",
-        "versions": [
-          "*.*"  
-        ]
-      },
-      {
-        "name": "GitHub",
-        "type": "",
-        "versions": [
-          "*.*"  
-        ]
-      },
-      {
-        "name": "GitLab",
-        "type": "",
-        "versions": [
-          "*.*"  
-        ]
-      },
-      {
-        "name": "Papertrail",
-        "type": "",
-        "versions": [
-          "*.*"  
+
         ]
       },
       {
         "name": "postgresql",
         "type": "datastore",
         "versions": [
-	  "*.*"
-        ]
-      },
-      {
-        "name": "Quay",
-        "type": "",
-        "versions": [
-          "*.*"  
+
         ]
       },
       {
         "name": "redis",
         "type": "datastore",
         "versions": [
-          "*.*"  
+
         ]
       },
       {
-        "name": "Slack",
-        "type": "",
+        "name": "s3",
+        "type": "datastore",
         "versions": [
-          "*.*"  
+
         ]
       },
       {
-        "name": "TravisCI",
-        "type": "",
+        "name": "sqs",
+        "type": "worker",
         "versions": [
-          "*.*"  
+
+        ]
+      },
+      {
+        "name": "syslog",
+        "type": "analytics",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "webhooks",
+        "type": "other",
+        "versions": [
+
         ]
       }
     ]
@@ -325,52 +132,54 @@
   "extensible": true,
   "infrastructures": [
     {
-      "continent": "EU",
-      "country": "IE",
-      "region": "Dublin",
-      "provider": "AWS"
-    },
-    {
-      "continent": "EU",
-      "country": "DE",
-      "region": "Frankfurt",
-      "provider": "AWS"
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore"
     },
     {
       "continent": "AS",
       "country": "JP",
-      "region": "Tokyo",
-      "provider": "AWS"
+      "region": "Tokyo"
     },
     {
       "continent": "AS",
-      "country": "SG",
-      "region": "Singapore",
-      "provider": "AWS"
+      "country": "KR",
+      "region": "Seoul"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern Virginia"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon"
     },
     {
       "continent": "OC",
       "country": "AU",
-      "region": "Sydney",
-      "provider": "AWS"
+      "region": "Sydney"
     },
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Northern California",
-      "provider": "AWS"
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo"
     },
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Oregon",
-      "provider": "AWS"
-    },
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "Northern Virginia",
-      "provider": "AWS"
+      "continent": "AS",
+      "country": "IN",
+      "region": "Mumbai"
     }
   ]
 }
