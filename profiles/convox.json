@@ -8,7 +8,7 @@
   "hosting": {
     "public": false,
     "vps": true,
-    "private": true
+    "private": false
   },
   "pricing": [
     {
