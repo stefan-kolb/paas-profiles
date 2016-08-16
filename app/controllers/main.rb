@@ -7,7 +7,7 @@ module Profiles
     end
 
     get '/terms' do
-      @title = 'Platform as a Service Provider Comparison'
+      @title = 'Terms of Service'
       erb :terms
     end
 
