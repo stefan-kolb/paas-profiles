@@ -181,11 +181,6 @@
     "isolation": "Container"
   },
   {
-    "vendor": "HP Helion Development Platform",
-    "platform": "Cloud Foundry",
-    "isolation": "Container"
-  },
-  {
     "vendor": "iKnode",
     "platform": "",
     "isolation": ""
