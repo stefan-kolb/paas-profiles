@@ -6,4 +6,4 @@ require './api'
 
 Mongoid.load!('./config/mongoid.yml')
 
-run Rack::Cascade.new [Profiles::Web, Profiles::API]
+run Rack::Cascade.new [Profiles::API, Profiles::Web]
