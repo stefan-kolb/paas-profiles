@@ -1,6 +1,6 @@
 {
   "name": "OpenShift Container Platform",
-  "revision": "2016-08-08",
+  "revision": "2016-08-17",
   "url": "https://www.openshift.com/container-platform/index.html",
   "vendor_verified": "2014-01-07",
   "status": "production",
@@ -29,20 +29,22 @@
     {
       "language": "node",
       "versions": [
-        "0.10"
+        "0.10",
+        "4.*"
       ]
     },
     {
       "language": "perl",
       "versions": [
-        "5.10"
+        "5.16",
+        "5.20"
       ]
     },
     {
       "language": "php",
       "versions": [
-        "5.3",
-        "5.4"
+        "5.5",
+        "5.6"
       ]
     },
     {
@@ -56,9 +58,9 @@
     {
       "language": "ruby",
       "versions": [
-        "1.8",
-        "1.9",
-        "2.0"
+        "2.0",
+        "2.2",
+        "2.3"
       ]
     }
   ],
@@ -67,16 +69,15 @@
       "name": "jboss",
       "runtime": "java",
       "versions": [
-        "6.2",
-        "6.3"
+        "6.4"
       ]
     },
     {
       "name": "tomcat",
       "runtime": "java",
       "versions": [
-        "6",
-        "7"
+        "7",
+        "8"
       ]
     }
   ],
@@ -114,33 +115,36 @@
     "native": [
       {
         "name": "jenkins",
+        "type": "devops",
         "versions": [
-          "1.5"
-        ],
-        "type": "devops"
+          "1.6"
+        ]
       },
       {
         "name": "mongodb",
+        "type": "datastore",
         "versions": [
-          "2.4"
-        ],
-        "type": "datastore"
+          "2.4",
+          "2.6",
+          "3.2"
+        ]
       },
       {
         "name": "mysql",
+        "type": "datastore",
         "versions": [
-          "5.1",
-          "5.5"
-        ],
-        "type": "datastore"
+          "5.5",
+          "5.6"
+        ]
       },
       {
         "name": "postgresql",
+        "type": "datastore",
         "versions": [
-          "8.4",
-          "9.2"
-        ],
-        "type": "datastore"
+          "9.2",
+          "9.4",
+          "9.5"
+        ]
       }
     ],
     "addon": [
