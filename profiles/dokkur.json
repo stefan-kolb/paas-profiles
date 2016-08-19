@@ -172,19 +172,19 @@
     { 
       "continent": "NA",
       "country": "US",
-      "region": "",
+      "region": "Iowa",
       "provider": "Microsoft Azure"
     },
     { 
       "continent": "NA",
       "country": "CA",
-      "region": "",
+      "region": "Toronto",
       "provider": "Microsoft Azure"
     },
     { 
       "continent": "EU",
       "country": "RU",
-      "region": "",
+      "region": "Moscow",
       "provider": "Croc"
     }
   ]
