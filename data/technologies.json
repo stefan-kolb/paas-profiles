@@ -307,11 +307,6 @@
     "isolation": ""
   },
   {
-    "vendor": "Trucker.io",
-    "platform": "Cloud Foundry",
-    "isolation": ""
-  },
-  {
     "vendor": "Tsuru",
     "platform": "",
     "isolation": "Container",
