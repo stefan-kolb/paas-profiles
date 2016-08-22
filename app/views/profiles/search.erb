@@ -19,6 +19,11 @@
      end
    end
 
+   # platform
+   unless params[:platform].nil? || params[:platform].empty?
+     query = query.where(platform: params[:platform])
+   end
+ 
    # pricing
    unless params[:pricing].nil? || params[:pricing].empty?
      query = query.where('pricing.model' => params[:pricing])

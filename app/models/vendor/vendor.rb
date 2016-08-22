@@ -23,6 +23,7 @@ module Profiles
     field :status, type: String
     field :status_since, type: Date
     field :type, type: String
+    field :platform, type: String
     field :extensible, type: Boolean
     # relations
     embeds_one :hosting
@@ -42,6 +43,7 @@ module Profiles
     validates :extensible, presence: true
     validates :hosting, presence: true
     validates :pricings, presence: false, allow_blank: true
+    validates :platform, presence: false
     validates :scaling, presence: false
     validates :runtimes, presence: false
     validates :middlewares, presence: false, allow_blank: true
