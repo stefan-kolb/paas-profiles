@@ -19,6 +19,9 @@ Style/IndentationConsistency:
 Style/FileName:
   Enabled: false
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+  
 Metrics/AbcSize:
   Enabled: false
 
