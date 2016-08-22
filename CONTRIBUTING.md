@@ -73,9 +73,9 @@ export RACK_ENV=development
 ### Preparing the Database
 
 To run the tests and a local instance of the application, you will
-need an instance of MongoDB running (see /config/mongoid.yml for conenction details)
-- You can install it, e.g. via [this script](https://gist.github.com/rbf/4001e6cc6d74465803f3)  
-- Alternatively run it in docker: `docker run -d -p 27017:27017 --name mongodb mongo`
+need an instance of MongoDB running (see `./config/mongoid.yml` for connection details)
+- You can install it, e.g., via [this script](https://gist.github.com/rbf/4001e6cc6d74465803f3)  
+- Alternatively, run it with Docker: `docker run -d -p 27017:27017 --name mongodb mongo`
 
 Next, you need to seed the database:
 
