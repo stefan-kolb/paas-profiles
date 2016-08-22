@@ -6,6 +6,7 @@ Fork, then clone the repo:
 
     git clone git@github.com:your-username/paas-profiles.git
 
+Please see below how to setup your environment for development. 
 Make your change. Add tests for your change. Make sure the tests and code style validations pass:
 
     bundle exec rake
@@ -43,7 +44,7 @@ Set your local rack environment to `development` via an environment variable.
 export RACK_ENV=development
 ```
 
-> **Note:** On some Ubuntu installations you might find the following
+> **Note:** On some Ubuntu and OSX installations you might find the following
 > error concerning the MagickCore package:
 >
 > ```
@@ -53,12 +54,20 @@ export RACK_ENV=development
 > Make sure that `gem install rmagick -v '2.15.4'` succeeds before bundling.
 > ```
 >
+> On Ubuntu:
+>
 > In that case you might need to manually install `libmagickwand-dev`
 > and `imagemagick` libraries, and relaunch the install:
 >
 > ``` bash
 > sudo apt-get install libmagickwand-dev imagemagick
 > bundle install
+> ```
+>
+> On OS X, install imagemagick via homebrew (overwrites system imagemagick!): 
+> ``` bash
+> brew install imagemagick
+> brew link --overwrite imagemagick
 > ```
 
 ### Preparing the Database
