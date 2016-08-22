@@ -6,7 +6,7 @@ Fork, then clone the repo:
 
     git clone git@github.com:your-username/paas-profiles.git
 
-Please see below how to setup your environment for development. 
+Please see below how to setup your environment for development if you haven't done so already.
 Make your change. Add tests for your change. Make sure the tests and code style validations pass:
 
     bundle exec rake
@@ -73,8 +73,9 @@ export RACK_ENV=development
 ### Preparing the Database
 
 To run the tests and a local instance of the application, you will
-need an instance of MongoDB running. On Ubuntu you might want to
-follow [this script](https://gist.github.com/rbf/4001e6cc6d74465803f3) to install it.
+need an instance of MongoDB running (see /config/mongoid.yml for conenction details)
+- You can install it, e.g. via [this script](https://gist.github.com/rbf/4001e6cc6d74465803f3)  
+- Alternatively run it in docker: `docker run -d -p 27017:27017 --name mongodb mongo`
 
 Next, you need to seed the database:
 
