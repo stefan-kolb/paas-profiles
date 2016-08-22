@@ -63,6 +63,19 @@
       </div>
 
       <div class="control-group">
+        <label class="control-label" for="selectPlatform">Platform</label>
+
+        <div class="controls">
+          <select id="selectPlatform" name="platform" class="selectpicker show-tick" data-width="100%">
+            <option value="">Any</option>
+            <% Profiles::Vendor.distinct(:platform).reject(&:empty?).each do |s| %>
+            <option value="<%= s %>"><%= s.titleize %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+      
+      <div class="control-group">
         <label class="control-label">Runtimes</label>
 
         <div class="controls">
