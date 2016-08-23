@@ -277,27 +277,15 @@
   "extensible": true,
   "infrastructures": [
     {
-      "continent": "AS",
-      "country": "SG",
-      "region": "Singapore",
-      "provider": "AWS"
-    },
-    {
-      "continent": "EU",
-      "country": "IE",
-      "region": "Dublin",
-      "provider": "AWS"
+      "continent": "NA",
+      "country": "US",
+      "region": "US East",
+      "provider": "CenturyLink"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": "Northern Virginia",
-      "provider": "AWS"
-    },
-    {
-      "continent": "NA",
-      "country": "US",
-      "region": "Santa Clara",
+      "region": "US West",
       "provider": "CenturyLink"
     }
   ]
