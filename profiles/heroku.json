@@ -1,12 +1,13 @@
 {
   "name": "Heroku",
-  "revision": "2016-01-14",
+  "revision": "2016-08-09",
   "url": "http://www.heroku.com/",
   "status": "production",
   "status_since": "2009-04-24",
   "type": "Generic",
   "hosting": {
     "public": true,
+    "vps": true,
     "private": false
   },
   "pricing": [

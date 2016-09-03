@@ -20,5 +20,7 @@ require_all 'app/models'
 # TODO: not always needed!
 # entities
 require_all 'app/entities'
+# TODO: deprecation warnings, remove with active support 5
+ActiveSupport::TestCase.test_order = :random
 
 APPLICATION = Rack::Builder.parse_file(__dir__ << '/../config.ru').first

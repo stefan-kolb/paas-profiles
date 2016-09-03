@@ -11,11 +11,19 @@
      if params[:hosting].include? 'public'
        query = query.where('hosting.public' => true)
      end
+     if params[:hosting].include? 'vps'
+       query = query.where('hosting.vps' => true)
+     end
      if params[:hosting].include? 'private'
        query = query.where('hosting.private' => true)
      end
    end
 
+   # platform
+   unless params[:platform].nil? || params[:platform].empty?
+     query = query.where(platform: params[:platform])
+   end
+ 
    # pricing
    unless params[:pricing].nil? || params[:pricing].empty?
      query = query.where('pricing.model' => params[:pricing])
@@ -76,12 +84,19 @@
      # ignore infras if hosting == private
    end
 
+   # log user queries
+   Profiles::Logs::Query.create(
+       ip: request.ip,
+       selector: query.selector,
+       size: query.size
+   ) unless query.selector.empty?
+
    unless query.exists?
 
 %>
     <div class="alert alert-error">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      We're sorry, but we could not find any PaaS that matches your requirements!
+      We're sorry, but we could not find any PaaS that matches your requirements! Maybe relax your query a bit?
     </div>
 <% else %>
     <table class="table table-bordered table-hover">
@@ -148,9 +163,11 @@
             <td class="hidden-phone">
               <% if profile['hosting']['public'] %>
                   <i class="fa fa-eye" title="public"></i>
-              <% end
-                 if profile['hosting']['private']
-              %>
+              <% end %>
+              <% if profile['hosting']['vps'] %>
+                  <i class="fa fa-low-vision" title="virtual private"></i>
+              <% end %>
+              <% if profile['hosting']['private'] %>
                   <i class="fa fa-lock" title="private"></i>
               <% end %>
             </td>

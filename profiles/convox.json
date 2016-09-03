@@ -1,0 +1,185 @@
+{
+  "name": "Convox",
+  "revision": "2016-08-10",
+  "url": "https://convox.com",
+  "status": "beta",
+  "status_since": "2015-02-15",
+  "type": "IaaS-centric",
+  "hosting": {
+    "public": false,
+    "vps": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "fixed",
+      "period": "monthly"
+    },
+    {
+      "model": "free"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "runtimes": [
+    {
+      "language": "docker",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "postgresql",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "redis",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "s3",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "sqs",
+        "type": "worker",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "syslog",
+        "type": "analytics",
+        "versions": [
+
+        ]
+      },
+      {
+        "name": "webhooks",
+        "type": "other",
+        "versions": [
+
+        ]
+      }
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Tokyo"
+    },
+    {
+      "continent": "AS",
+      "country": "KR",
+      "region": "Seoul"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern Virginia"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo"
+    },
+    {
+      "continent": "AS",
+      "country": "IN",
+      "region": "Mumbai"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "Atos Cloud Foundry",
-  "revision": "2016-01-15",
-  "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+  "revision": "2016-08-01",
+  "url": "https://canopy-cloud.com/application-platforms/atos-cloud-foundry",
   "vendor_verified": "2016-05-25",
   "status": "production",
   "status_since": "2015-01-07",
@@ -18,9 +18,9 @@
       "model": "metered",
       "period": "monthly"
     },
-	{
+    {
       "model": "fixed",
-	  "period": "monthly"
+      "period": "monthly"
     }
   ],
   "scaling": {
@@ -35,7 +35,7 @@
 
       ]
     },
-	{
+    {
       "language": "groovy",
       "versions": [
 
@@ -80,16 +80,16 @@
     {
       "language": "ruby",
       "versions": [
-	  
+      
       ]
     },
-	{
+    {
       "language": "dotnet",
       "versions": [
 
       ]
     },
-	{
+    {
       "language": "swift",
       "versions": [
 
@@ -104,14 +104,14 @@
 
       ]
     },
-	{
+    {
       "name": "tomee",
       "runtime": "java",
       "versions": [
 
       ]
     },
-	{
+    {
       "name": "jboss",
       "runtime": "java",
       "versions": [
@@ -124,7 +124,7 @@
       "name": "grails",
       "runtime": "groovy",
       "versions": [
-	  
+      
       ]
     },
     {
@@ -138,14 +138,14 @@
       "name": "spring",
       "runtime": "java",
       "versions": [
-	  
+      
       ]
     },
-	{
+    {
       "name": "rails",
       "runtime": "ruby",
       "versions": [
-	  
+      
       ]
     },
     {
@@ -159,21 +159,21 @@
       "name": "sinatra",
       "runtime": "ruby",
       "versions": [
-	  
+      
       ]
     },
-	{
+    {
       "name": "hhvm",
       "runtime": "php",
       "versions": [
-	  
+    
       ]
     },
-	{
+    {
       "name": "django",
       "runtime": "python",
       "versions": [
-	  
+    
       ]
     }
   ],
@@ -227,7 +227,7 @@
 
         ]
       },
-	  {
+      {
         "name": "neo4j",
         "description": "",
         "type": "datastore",
@@ -235,7 +235,7 @@
 
         ]
       },
-	  {
+      {
         "name": "kafka",
         "description": "",
         "type": "message broker",
@@ -243,7 +243,7 @@
 
         ]
       },
-	  {
+      {
         "name": "riakcs",
         "description": "",
         "type": "datastore",
@@ -251,7 +251,7 @@
 
         ]
       },
-	  {
+      {
         "name": "cassandra",
         "description": "",
         "type": "datastore",
@@ -259,7 +259,7 @@
 
         ]
       },
-	  {
+      {
         "name": "elasticsearch",
         "description": "",
         "type": "search",
@@ -267,8 +267,16 @@
 
         ]
       },
-	  {
+      {
         "name": "couchdb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
+      },
+       {
+        "name": "dingo-postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -277,7 +285,7 @@
       }
     ],
     "addon": [
-	{
+    {
         "name": "AD/LDAP Integration",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
         "description": "",
@@ -295,17 +303,23 @@
         "description": "",
         "type": "other"
       },
-	  {
+      {
         "name": "Canopy Compose Service Broker",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
         "description": "",
         "type": "broker"
+      },
+      {
+        "name": "Administrative app for postgresql db",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "",
+        "type": "app"
       }
     ]
   },
   "extensible": true,
   "infrastructures": [
-	{
+    {
       "continent": "AS",
       "country": "SG",
       "region": "Singapore",
@@ -353,55 +367,55 @@
       "region": "Sao Paulo",
       "provider": "AWS"
     },
-	{
+    {
       "continent": "EU",
       "country": "GB",
       "region": "",
       "provider": "vCloud Air"
     },
-	{
+    {
       "continent": "NA",
       "country": "US",
       "region": "",
       "provider": "vCloud Air"
     },
-	{
+    {
       "continent": "NA",
       "country": "US",
       "region": "",
       "provider": "Atos Cloud"
     },
-	{
+    {
       "continent": "EU",
       "country": "DE",
       "region": "",
       "provider": "Atos Cloud"
     },
-	{
+    {
       "continent": "AS",
       "country": "SG",
       "region": "Singapore",
       "provider": "Atos Cloud"
     },
-	{
+    {
       "continent": "OC",
       "country": "AU",
       "region": "Perth",
       "provider": "Atos Cloud"
     },
-	{
+    {
       "continent": "EU",
       "country": "DE",
       "region": "",
       "provider": "Atos Private Cloud (EPC)"
     },
-	{
+    {
       "continent": "NA",
       "country": "US",
       "region": "",
       "provider": "Atos Private Cloud (EPC)"
     },
-	{
+    {
       "continent": "AS",
       "country": "",
       "region": "",

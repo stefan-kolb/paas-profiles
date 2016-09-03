@@ -56,7 +56,7 @@ module Profiles
 
       # must be available either as public or private service
       define_method('test_hosting_existence') do
-        assert(@profile.hosting.public || @profile.hosting.private, 'A PaaS must be available either as public or private service')
+        assert(@profile.hosting.public || @profile.hosting.private || @profile.hosting.vps, 'A PaaS must be available either as public, virtual private or private service')
       end
 
       # no runtime (language) duplicates
@@ -127,19 +127,23 @@ module Profiles
       define_method('test_version_formats') do
         # runtimes
         @profile.runtimes.each do |r|
+          break if r.versions.nil?
           refute(r.versions.any?(&:empty?), 'Runtime versions must not include empty version strings')
         end
         # middleware
         @profile.middlewares.each do |m|
+          break if m.versions.nil?
           refute(m.versions.any?(&:empty?), 'Middleware versions must not include empty version strings')
         end
         # frameworks
         @profile.frameworks.each do |f|
+          break if f.versions.nil?
           refute(f.versions.any?(&:empty?), 'Framework versions must not include empty version strings')
         end
         # native services
         unless @profile.service.blank? || @profile.service.natives.blank?
           @profile.service.natives.each do |s|
+            break if s.versions.nil?
             refute(s.versions.any?(&:empty?), 'Native service versions must not include empty version strings')
           end
         end
@@ -150,27 +154,31 @@ module Profiles
       define_method('test_version_duplicates') do
         # runtimes
         @profile.runtimes.each do |r|
-          uniq_versions = r.versions.uniq
+          break if r.versions.nil?
 
+          uniq_versions = r.versions.uniq
           assert_equal(uniq_versions.length, r.versions.length, 'There must be no duplicate runtime versions. This includes versions overlapped by a version superset')
         end
         # middleware
         @profile.middlewares.each do |m|
-          uniq_versions = m.versions.uniq
+          break if m.versions.nil?
 
+          uniq_versions = m.versions.uniq
           assert_equal(uniq_versions.length, m.versions.length, 'There must be no duplicate middleware versions. This includes versions overlapped by a version superset')
         end
         # frameworks
         @profile.frameworks.each do |f|
-          uniq_versions = f.versions.uniq
+          break if f.versions.nil?
 
+          uniq_versions = f.versions.uniq
           assert_equal(uniq_versions.length, f.versions.length, 'There must be no duplicate framework versions. This includes versions overlapped by a version superset')
         end
         # native services
         unless @profile.service.blank? || @profile.service.natives.blank?
           @profile.service.natives.each do |s|
-            uniq_versions = s.versions.uniq
+            break if s.versions.nil?
 
+            uniq_versions = s.versions.uniq
             assert_equal(uniq_versions.length, s.versions.length, 'There must be no duplicate native service versions. This includes versions overlapped by a version superset')
           end
         end

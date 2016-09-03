@@ -7,16 +7,16 @@
     <% if File.exist?(settings.public_folder << '/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>
     <img src="<%= url('/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded" style="margin-bottom: 8px">
     <% end %>
-    <a href="<%= @profile['url'] %>" target="_blank"><%= @profile['name'] %></a>
+    <a href="<%= @profile['url'] %>" onclick="trackOutboundLink('<%= @profile['url'] %>'); return false;" target="_blank"><%= @profile['name'] %></a>
     <% unless @profile['vendor_verified'].nil? %>
-    <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @profile['vendor_verified'].to_date %>"></i>
+    <i style="vertical-align: super; font-size: 14px" class="fa fa-check-circle" title="Verified by Vendor on <%= @profile['vendor_verified'].strftime('%F') %>"></i>
     <% end %>
     </h1>
   </div>
 </div>
 <div class="row">
   <div class="span2">
-    <a href="<%= @profile["url"] %>" target="_blank" class="btn btn-inverse btn-mini">Visit Vendor Page</a>
+    <a href="<%= @profile['url'] %>" onclick="trackOutboundLink('<%= @profile['url'] %>'); return false;" target="_blank" class="btn btn-inverse btn-mini">Visit Vendor Page</a>
   </div>
 
   <div class="span6 text-center">
@@ -47,15 +47,16 @@
   </div>
   <div class="span3 text-center">
     <small>
-      <em>Last updated <span class="date" title="<%= @profile['revision'].to_datetime %>"></span> ago.</em>
+      <em>Last updated <span class="date" title="<%= @profile['revision'].strftime('%F') %>"><%= @profile['revision'].strftime('%F') %></span> ago.</em>
     </small>
   </div>
   <div class="span1">
     <p class="pull-right">
-      <a href="https://github.com/stefan-kolb/paas-profiles#contribution" title="Report error" class="tip"><i class="fa fa-bug fa-lg"></i></a>
+      <a href="https://github.com/stefan-kolb/paas-profiles#contribution" onclick="trackOutboundLink('https://github.com/stefan-kolb/paas-profiles#contribution'); return false;" title="Report error" class="tip"><i class="fa fa-bug fa-lg"></i></a>
     </p>
   </div>
 </div>
+
 <hr/>
 <div class="row">
   <div class="span12"><h3>Facts</h3></div>
@@ -64,6 +65,9 @@
       <%= @profile["name"] %> is available as
       <% if @profile['hosting']['public'] %>
           public <i class="fa fa-eye" title="public"></i>
+      <% end %>
+      <% if @profile['hosting']['vps'] %>
+          and virtual private <i class="fa fa-low-vision" title="virtual private"></i>
       <% end %>
       <% if @profile['hosting']['public'] && @profile['hosting']['private'] %>
           and as
@@ -121,6 +125,25 @@
 </div>
 
 <hr/>
+  <% providers = Profiles::Vendor.where(platform: /#{@profile['name']}/i) %>
+  <% if providers.size > 1 %>
+      <div class="row">
+        <div class="span12"><h3>Providers</h3></div>
+        <div class="span12">
+          <p>
+            <%= @profile['name'] %> is used as base technology by <span class="label label-inverse"><%= providers.size %></span> providers.
+          </p>
+          <p>These are
+            <% providers.each_with_index do |provider, i| %>
+              <strong>&nbsp;<a href="/vendors/<%= url_encode(provider['name']) %>"><%= provider['name'] %></a></strong><%= ',' unless i == providers.size - 1 %>
+            <% end %>
+          </p>
+        </div>
+      </div>
+
+      <hr/>
+  <% end %>
+
 <div class="row">
   <div class="span12"><h3>Quality of Service</h3></div>
   <div class="span12">
@@ -134,7 +157,7 @@
         <span class="label label-success">Production</span>
     <% end %>
     <% unless @profile["status_since"].nil? %>
-        since <span class="date" title="<%= @profile["status_since"].to_date %>"></span><% end %>.
+        since <span class="date" title="<%= @profile['status_since'].strftime('%F') %>"><%= @profile['status_since'].strftime('%F') %></span><% end %>.
     </p>
     <% if @profile.hosting.public %>
     <p>Stipulated Uptime: <% if @profile["qos"].blank? || @profile["qos"]["uptime"].blank? %>
@@ -176,7 +199,7 @@
                end unless rt['versions'].blank?
             %>
             <td>
-              <em><%= rt["versions"].join(", ") unless rt['versions'].blank? %></em>
+              <em><%= rt["versions"].join(', ') unless rt['versions'].blank? %></em>
               <% if rt['versions'].blank? %>
                   <span class="status grey pull-right" title="No version information"></span>
               <% elsif rt['versions'].any? { |v| Profiles::Version.new(v, rt['language']).latest? } %>
@@ -224,8 +247,8 @@
                 </td>
                 <% rt["versions"].each do |v|
                   v.gsub! /\*\.\*/, 'All versions'
-                end %>
-                <td><em><%= rt["versions"].join(", ") %></em></td>
+                end unless rt['versions'].blank? %>
+                <td><em><%= rt["versions"].join(", ") unless rt['versions'].blank? %></em></td>
               </tr>
           <% end %>
           </tbody>
@@ -262,8 +285,8 @@
                 </td>
                 <% rt["versions"].each do |v|
                   v.gsub! /\*\.\*/, 'All versions'
-                end %>
-                <td><em><%= rt["versions"].join(", ") %></em></td>
+                end unless rt['versions'].blank? %>
+                <td><em><%= rt["versions"].join(", ") unless rt['versions'].blank? %></em></td>
               </tr>
           <% end %>
           </tbody>
@@ -319,7 +342,7 @@
                                 <em><%= rt["type"].upcase %></em>
                             <% end %>
                           </td>
-                          <td><em><%= rt["versions"].join(", ") %></em></td>
+                          <td><em><%= rt["versions"].join(", ") unless rt['versions'].blank? %></em></td>
                         </tr>
                     <% end %>
                     </tbody>
@@ -416,63 +439,72 @@
 
 </div>
 
-<script src="../js/jquery.prettydate.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
 <script src="../js/jquery-jvectormap-2.0.2.min.js"></script>
 <script src="../js/jquery-jvectormap-world-mill-en.js"></script>
 <script>
-    $(document).ready(function () {
-        $(".date").prettyDate();
-
-        $('#map').vectorMap({
-            map: 'world_mill_en',
-            backgroundColor: '#ffffff',
-            regionStyle: {
-                initial: {
-                    fill: '#0088cc'
-                },
-                hover: {
-                    'fill-opacity': 0.6
-                },
-                selected: {
-                    fill: '#f89406'
-                }
-            },
-            markerStyle: {
-                initial: {
-                    fill: '#ffffff',
-                    stroke: '#000000'
-                }
-            },
-            <% if !@profile['infrastructures'].nil? && @profile['infrastructures'].uniq { |h| h['continent'] }.size == 1 %>
-            <%= "focusOn: '" << @profile['infrastructures'][0]['country'] << "'," %>
-            <% end %>
-            <%
-                arr = []
-                unless @profile['infrastructures'].blank?
-                    @profile['infrastructures'].each do |i|
-                        arr << i['country'] unless i['country'].blank?
-                    end
-                end
-            %>
-            <%= 'selectedRegions: ' << arr.to_s %>
-        });
-
-        <% unless @profile['infrastructures'].blank? %>
-        // Geographic information
-        $.getJSON('/api/vendors/<%=  @profile['name'].gsub(/[^a-z]/i, '_') %>/infrastructures').done(function(data) {
-            var mapObject = $('#map').vectorMap('get', 'mapObject');
-            mapObject.addMarkers(data, []);
-        });
-
-        $.ajax( {
-            url: '//freegeoip.net/json/',
-            type: 'POST',
-            dataType: 'jsonp',
-            success: function(location) {
-                var mapObject = $('#map').vectorMap('get', 'mapObject');
-                mapObject.addMarker('user', { latLng: [location.latitude, location.longitude], name: "Yeah, that's you!", style: { fill: 'red' } }, []);
-            }
-        } );
-        <% end %>
+  $(document).ready(function () {
+    $('.date').each(function (index, dateElem) {
+      var $dateElem = $(dateElem);
+      console.log($dateElem.text());
+      var formatted = moment($dateElem.text(), 'YYYY-MM-DD').fromNow(true);
+      $dateElem.text(formatted);
     });
+
+    $('#map').vectorMap({
+      map: 'world_mill_en',
+      backgroundColor: '#ffffff',
+      regionStyle: {
+        initial: {
+          fill: '#0088cc'
+        },
+        hover: {
+          'fill-opacity': 0.6
+        },
+        selected: {
+          fill: '#f89406'
+        }
+      },
+      markerStyle: {
+        initial: {
+          fill: '#ffffff',
+          stroke: '#000000'
+        }
+      },
+      <% if !@profile['infrastructures'].nil? && @profile['infrastructures'].uniq { |h| h['continent'] }.size == 1 %>
+      <%= "focusOn: '" << @profile['infrastructures'][0]['country'] << "'," %>
+      <% end %>
+      <%
+          arr = []
+          unless @profile['infrastructures'].blank?
+              @profile['infrastructures'].each do |i|
+                  arr << i['country'] unless i['country'].blank?
+              end
+          end
+      %>
+      <%= 'selectedRegions: ' << arr.to_s %>
+    });
+
+    <% unless @profile['infrastructures'].blank? %>
+    // Geographic information
+    $.getJSON('/api/vendors/<%=  @profile['name'].gsub(/[^a-z]/i, '_') %>/infrastructures').done(function (data) {
+      var mapObject = $('#map').vectorMap('get', 'mapObject');
+      mapObject.addMarkers(data, []);
+    });
+
+    $.ajax({
+      url: '//freegeoip.net/json/',
+      type: 'POST',
+      dataType: 'jsonp',
+      success: function (location) {
+        var mapObject = $('#map').vectorMap('get', 'mapObject');
+        mapObject.addMarker('user', {
+          latLng: [location.latitude, location.longitude],
+          name: "Yeah, that's you!",
+          style: {fill: 'red'}
+        }, []);
+      }
+    });
+    <% end %>
+  });
 </script>

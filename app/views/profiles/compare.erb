@@ -88,11 +88,18 @@
                   <i class="fa fa-circle-thin fa-stack-2x"></i>
                   <i class="fa fa-eye fa-stack-1x"></i>
                 </span>
-      <% elsif @p1['hosting']['private'] %>
+      <% end %>
+      <% if @p1['hosting']['vps'] %>
+               <span class="fa-stack fa-lg tip" title="Virtual Private PaaS">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-low-vision fa-stack-1x"></i>
+                </span>
+      <% end %>
+      <% if @p1['hosting']['private'] %>
                <span class="fa-stack fa-lg tip" title="Private PaaS">
                   <i class="fa fa-circle-thin fa-stack-2x"></i>
                   <i class="fa fa-lock fa-stack-1x"></i>
-                </span>
+               </span>
       <% end %>
     </div>
   </td>
@@ -374,11 +381,18 @@
                   <i class="fa fa-circle-thin fa-stack-2x"></i>
                   <i class="fa fa-eye fa-stack-1x"></i>
                 </span>
-      <% elsif @p2['hosting']['private'] %>
+      <% end %>
+      <% if @p2['hosting']['vps'] %>
+               <span class="fa-stack fa-lg tip" title="Virtual Private PaaS">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-low-vision fa-stack-1x"></i>
+                </span>
+      <% end %>
+      <% if @p2['hosting']['private'] %>
                <span class="fa-stack fa-lg tip" title="Private PaaS">
                   <i class="fa fa-circle-thin fa-stack-2x"></i>
                   <i class="fa fa-lock fa-stack-1x"></i>
-                </span>
+               </span>
       <% end %>
     </div>
   </td>
@@ -629,7 +643,6 @@
 
 </div>
 
-<script src="../js/jquery.prettydate.js"></script>
 <link href="../css/bootstrap-select.min.css" rel="stylesheet"/>
 <script src="../js/bootstrap-select.min.js"></script>
 

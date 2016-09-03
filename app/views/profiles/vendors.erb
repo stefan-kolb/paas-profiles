@@ -160,7 +160,7 @@
 
           <h3>Publications</h3>
 
-          <p><i>Scientific deliverables discussing the work around PaaSify.</i></p>
+          <p><i>Scientific deliverables discussing the work around PaaSfinder.</i></p>
 
           <p>
             <span>
@@ -248,6 +248,9 @@
             <td class="hidden-phone">
               <% if profile['hosting']['public'] %>
                   <i class="fa fa-eye" title="public"></i>
+              <% end %>
+              <% if profile['hosting']['vps'] %>
+                  <i class="fa fa-low-vision" title="virtual private"></i>
               <% end %>
               <% if profile['hosting']['private'] %>
                   <i class="fa fa-lock" title="private"></i>

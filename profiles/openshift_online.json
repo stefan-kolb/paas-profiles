@@ -1,6 +1,6 @@
 {
   "name": "OpenShift Online",
-  "revision": "2015-03-16",
+  "revision": "2016-08-17",
   "url": "https://www.openshift.com/products/online",
   "vendor_verified": "2014-01-07",
   "status": "production",
@@ -8,6 +8,7 @@
   "type": "Generic",
   "hosting": {
     "public": true,
+    "vps": true,
     "private": false
   },
   "pricing": [
@@ -39,8 +40,8 @@
     {
       "language": "node",
       "versions": [
-        "0.10",
-        "0.6"
+        "0.6",
+        "0.10"
       ]
     },
     {
@@ -78,9 +79,7 @@
       "name": "jboss",
       "runtime": "java",
       "versions": [
-        "6.2",
-        "7.1",
-        "8.0"
+        "6.4"
       ]
     },
     {
@@ -149,54 +148,40 @@
     "native": [
       {
         "name": "jenkins",
+        "type": "devops",
         "versions": [
           "1.5"
-        ],
-        "type": "devops"
+        ]
       },
       {
         "name": "mongodb",
+        "type": "datastore",
         "versions": [
           "2.4"
-        ],
-        "type": "datastore"
+        ]
       },
       {
         "name": "mysql",
+        "type": "datastore",
         "versions": [
           "5.1",
           "5.5"
-        ],
-        "type": "datastore"
+        ]
       },
       {
         "name": "openshift metrics",
+        "type": "analytics",
         "versions": [
           "0.1"
-        ],
-        "type": "analytics"
-      },
-      {
-        "name": "pgrouting",
-        "versions": [
-          "2.0"
-        ],
-        "type": "datastore"
-      },
-      {
-        "name": "postgis",
-        "versions": [
-          "2.1"
-        ],
-        "type": "datastore"
+        ]
       },
       {
         "name": "postgresql",
+        "type": "datastore",
         "versions": [
           "8.4",
           "9.2"
-        ],
-        "type": "datastore"
+        ]
       }
     ],
     "addon": [

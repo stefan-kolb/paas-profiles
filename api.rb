@@ -9,7 +9,7 @@ require_relative 'lib/broker/broker'
 
 module Profiles
   class API < Grape::API
-    version 'v1', using: :header, vendor: 'paasify'
+    version 'v1', using: :header, vendor: 'paasfinder'
     format :json
     prefix :api
 

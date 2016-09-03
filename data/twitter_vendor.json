@@ -303,7 +303,7 @@
     "image": "https://pbs.twimg.com/profile_images/525060263645437952/AHlE-Vne_400x400.png"
   },
   {
-    "vendor": "platform.sh",
+    "vendor": "Platform.sh",
     "twitter": "platformsh",
     "image": "https://pbs.twimg.com/profile_images/515156001591283712/UCMw85fT_400x400.png"
   },
@@ -318,7 +318,7 @@
     "image": "https://pbs.twimg.com/profile_images/378800000055212829/f175bed35167142ffed21a91eaa8b64b_400x400.png"
   },
   {
-    "vendor": "SAP HANA Cloud",
+    "vendor": "SAP HANA Cloud Platform",
     "twitter": "saphcp",
     "image": "https://pbs.twimg.com/profile_images/543044894910984194/FqEv4nSJ_400x400.png"
   },
@@ -333,8 +333,8 @@
     "image": "https://pbs.twimg.com/profile_images/473168081351475200/0j7zmgcL_400x400.png"
   },
   {
-    "vendor": "Stackato",
-    "twitter": "ActiveState",
+    "vendor": "HPE Helion Stackato",
+    "twitter": "hpe_cloud",
     "image": "https://pbs.twimg.com/profile_images/481233205303844864/Ls-3Im30_400x400.jpeg"
   },
   {

@@ -274,7 +274,7 @@
       }
     ]
   },
-  "extensible": false,
+  "extensible": true,
   "infrastructures": [
     {
       "continent": "AS",

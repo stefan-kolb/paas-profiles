@@ -1,7 +1,7 @@
-# [PaaS Profiles](http://paasify.it)
+# [PaaS Profiles](https://paasfinder.org)
 [![Build Status](https://travis-ci.org/stefan-kolb/paas-profiles.png)](https://travis-ci.org/stefan-kolb/paas-profiles)
 [![Dependency Status](https://gemnasium.com/badges/github.com/stefan-kolb/paas-profiles.svg)](https://gemnasium.com/github.com/stefan-kolb/paas-profiles)
-[![Donation](https://img.shields.io/badge/donate-paypal-orange.svg)](https://www.paypal.com/cgi-bin/webscr?item_name=PaaSify PaaS Provider Comparison&cmd=_donations&lc=US&currency_code=EUR&business=stefan-kolb%40web.de)
+[![Donation](https://img.shields.io/badge/donate-paypal-orange.svg)](https://www.paypal.com/cgi-bin/webscr?item_name=PaaSfinder PaaS Provider Comparison&cmd=_donations&lc=US&currency_code=EUR&business=stefan-kolb%40web.de)
 
 *Making Platform as a Service offerings comparable - Ecosystem profiles for portability matching.*
 
@@ -10,7 +10,7 @@ A no-standards approach for application portability.
 
 Currently over 100 PaaS vendor profiles. Profiles are encoded as [JSON files](/profiles/).
 
-**The web interface can be viewed at [PaaSify.it](http://paasify.it)**
+**The web interface can be viewed at [PaaSfinder.org](https://paasfinder.org)**
 
 **Any errors? Important missing properties? Suggestions? [Contribute](#contribution).**
 
@@ -49,7 +49,7 @@ The code below shows a sample profile.
   "status_since": "2012-07-15",
   "type": "Generic",
   "hosting": {
-    "public": true, "private": false
+    "public": true, "vps": true, "private": false
   },
   "pricing": [
 		{ "model": "fixed", "period": "monthly" }
@@ -164,7 +164,7 @@ Currently a simple string array of compliance standards that are fulfilled by th
 ### Hosting
 
 An object that describes the different provided hosting styles of the PaaS.
-Values can be `public` for a shared publicly hosted service and `private` for a service that is deployed per customer or on premises.
+Values can be `public` for a shared (multi-tenant) publicly hosted service, `vps` for a virtual private cloud deployment (single-tenant), and `private` for a service that can be deployed on premises.
 
 ### Scaling
 

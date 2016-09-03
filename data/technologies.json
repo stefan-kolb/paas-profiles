@@ -26,8 +26,13 @@
     "isolation": ""
   },
   {
+    "vendor": "AppAgile",
+    "platform": "OpenShift Origin",
+    "isolation": "Container"
+  },
+  {
     "vendor": "AppFog",
-    "platform": "",
+    "platform": "Cloud Foundry",
     "isolation": "Container"
   },
   {
@@ -45,11 +50,6 @@
     "platform": "",
     "isolation": "",
     "dev_model": "open source"
-  },
-  {
-    "vendor": "Appsembler",
-    "platform": "",
-    "isolation": ""
   },
   {
     "vendor": "BitNami",
@@ -87,10 +87,6 @@
     "dev_model": "open source"
   },
   {
-    "vendor": "cloudControl",
-    "isolation": "Container"
-  },
-  {
     "vendor": "Cloudify",
     "platform": "",
     "isolation": "",
@@ -112,11 +108,6 @@
     "isolation": ""
   },
   {
-    "vendor": "Cloud&Heat App Elevator",
-    "platform": "cloudControl",
-    "isolation": "Container"
-  },
-  {
     "vendor": "ConPaaS",
     "platform": "",
     "isolation": "",
@@ -134,8 +125,8 @@
     "dev_model": "open source"
   },
   {
-    "vendor": "dotCloud",
-    "platform": "cloudControl",
+    "vendor": "devpack",
+    "platform": "Cloud Foundry",
     "isolation": "Container"
   },
   {
@@ -152,16 +143,6 @@
     "vendor": "EngineYard",
     "platform": "",
     "isolation": "Virtual Machine"
-  },
-  {
-    "vendor": "Evia",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "exoscale Apps",
-    "platform": "cloudControl",
-    "isolation": "Container"
   },
   {
     "vendor": "Flynn",
@@ -200,11 +181,6 @@
     "isolation": "Container"
   },
   {
-    "vendor": "HP Helion Development Platform",
-    "platform": "Cloud Foundry",
-    "isolation": "Container"
-  },
-  {
     "vendor": "iKnode",
     "platform": "",
     "isolation": ""
@@ -230,11 +206,6 @@
     "isolation": ""
   },
   {
-    "vendor": "Moncai",
-    "platform": "",
-    "isolation": ""
-  },
-  {
     "vendor": "MoPaaS",
     "platform": "",
     "isolation": ""
@@ -246,22 +217,12 @@
     "dev_model": "open source"
   },
   {
-    "vendor": "Ninefold",
-    "platform": "",
-    "isolation": ""
-  },
-  {
     "vendor": "Nitrous.io",
     "platform": "",
     "isolation": ""
   },
   {
-    "vendor": "Nodejitsu",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "OpenShift Enterprise",
+    "vendor": "OpenShift Container Platform",
     "platform": "OpenShift Origin",
     "isolation": "Container"
   },
@@ -291,11 +252,6 @@
     "isolation": ""
   },
   {
-    "vendor": "Paasmaker",
-    "platform": "",
-    "isolation": ""
-  },
-  {
     "vendor": "Pagoda Box",
     "platform": "",
     "isolation": ""
@@ -311,7 +267,7 @@
     "isolation": "Container"
   },
   {
-    "vendor": "platform.sh",
+    "vendor": "Platform.sh",
     "platform": "",
     "isolation": "Container"
   },
@@ -326,17 +282,7 @@
     "isolation": ""
   },
   {
-    "vendor": "Railscloud",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "Rapidcloud.io",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "SAP HANA Cloud",
+    "vendor": "SAP HANA Cloud Platform",
     "platform": "",
     "isolation": ""
   },
@@ -351,7 +297,7 @@
     "isolation": ""
   },
   {
-    "vendor": "Stackato",
+    "vendor": "HPE Helion Stackato",
     "platform": "Cloud Foundry",
     "isolation": ""
   },
@@ -361,33 +307,13 @@
     "isolation": ""
   },
   {
-    "vendor": "Static",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "Trucker.io",
-    "platform": "Cloud Foundry",
-    "isolation": ""
-  },
-  {
     "vendor": "Tsuru",
     "platform": "",
     "isolation": "Container",
     "dev_model": "open source"
   },
   {
-    "vendor": "Uhuru AppCloud",
-    "platform": "Cloud Foundry",
-    "isolation": "Container"
-  },
-  {
     "vendor": "Viaduct",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "VMWARE vFabric",
     "platform": "",
     "isolation": ""
   },

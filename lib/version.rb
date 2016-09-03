@@ -8,16 +8,16 @@ module Profiles
     # http://semver.org/
     # java > 1.3.0: http://www.oracle.com/technetwork/java/javase/versioning-naming-139433.html
     def <=>(other)
-      return major <=> other.major unless (major <=> other.major) == 0
-      return minor <=> other.minor unless (minor <=> other.minor) == 0
-      return patch <=> other.patch unless (patch <=> other.patch) == 0
+      return major <=> other.major unless (major <=> other.major).zero?
+      return minor <=> other.minor unless (minor <=> other.minor).zero?
+      return patch <=> other.patch unless (patch <=> other.patch).zero?
     end
 
     def match(other)
       return true if anOther.major == '*'
-      return true if (major <=> other.major) == 0 && other.minor == '*'
-      return major <=> other.major unless (major <=> other.major) == 0
-      return minor <=> other.minor unless (minor <=> other.minor) == 0
+      return true if (major <=> other.major).zero? && other.minor == '*'
+      return major <=> other.major unless (major <=> other.major).zero?
+      return minor <=> other.minor unless (minor <=> other.minor).zero?
       true
     end
 

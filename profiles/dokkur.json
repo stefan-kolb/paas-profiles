@@ -1,0 +1,191 @@
+{
+  "name": "Dokkur",
+  "revision": "2016-08-18",
+  "vendor_verified": "2016-08-18",
+  "url": "https://dokkur.com",
+  "status": "production",
+  "status_since": "2016-07-01",
+  "type": "Generic",
+  "hosting": {
+    "public": true, "vps": false, "private": false
+  },
+  "pricing": [
+        { "model": "hybrid", "period": "monthly" }
+  ],
+  "qos": {
+        "uptime": 99.9,
+        "compliance": [
+
+        ]
+  },
+  "scaling": {
+    "vertical": true, "horizontal": true, "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "ruby",
+      "versions": [ "*.*" ]
+    },
+    {
+      "language": "node",
+      "versions": [ "*.*" ]
+    },
+    {
+      "language": "clojure",
+      "versions": [ "*.*" ]
+    },
+    {
+      "language": "python",
+      "versions": [ "*.*" ]
+    },
+    {
+      "language": "java",
+      "versions": [ "*.*" ]
+    },
+    {
+      "language": "scala",
+      "versions": [ "*.*" ]
+    },
+    {
+      "language": "php",
+      "versions": [ "*.*" ]
+    },
+    {
+      "language": "go",
+      "versions": [ "*.*" ]
+    }
+  ],
+  "middleware": [
+
+  ],
+  "frameworks": [
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+        "1.*",
+        "2.*"
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "2.*",
+        "3.*",
+        "4.*"
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      { 
+        "name": "mongodb",
+        "description": "",
+        "type": "datastore",
+        "versions": [ "3.2.6" ]
+      },
+      { 
+        "name": "couchdb",
+        "description": "",
+        "type": "datastore",
+        "versions": [ "1.6" ]
+      },
+      { 
+        "name": "elasticsearch",
+        "description": "",
+        "type": "datastore",
+        "versions": [ "1.7.5" ]
+      },
+      { 
+        "name": "mariadb",
+        "description": "",
+        "type": "datastore",
+        "versions": [ "10.1.13" ]
+      },
+      { 
+        "name": "memcached",
+        "description": "",
+        "type": "datastore",
+        "versions": [ "1.4.25" ]
+      },
+      { 
+        "name": "mysql",
+        "description": "",
+        "type": "datastore",
+        "versions": [ "5.7.10" ]
+      },
+      { 
+        "name": "nats",
+        "description": "",
+        "type": "datastore",
+        "versions": [ "0.8.1" ]
+      },
+      { 
+        "name": "postgres",
+        "description": "",
+        "type": "datastore",
+        "versions": [ "9.5.2" ]
+      },
+      { 
+        "name": "rabbitmq",
+        "description": "",
+        "type": "datastore",
+        "versions": [ "3.6.1" ]
+      },
+      { 
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [ "3.0.7" ]
+      },
+      { 
+        "name": "rethinkdb",
+        "description": "",
+        "type": "datastore",
+        "versions": [ "2.3.2" ]
+      },
+      { 
+        "name": "sqlite",
+        "description": "",
+        "type": "datastore",
+        "versions": []
+      }
+    ],
+    "addon": [
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+    { 
+      "continent": "NA",
+      "country": "US",
+      "region": "Iowa",
+      "provider": "Microsoft Azure"
+    },
+    { 
+      "continent": "NA",
+      "country": "CA",
+      "region": "Toronto",
+      "provider": "Microsoft Azure"
+    },
+    { 
+      "continent": "EU",
+      "country": "RU",
+      "region": "Moscow",
+      "provider": "Croc"
+    }
+  ]
+}

@@ -95,7 +95,7 @@ module Profiles
           end
         end
 
-        data << others unless others[:y] == 0
+        data << others unless (others[:y]).zero?
       end
 
       # colors

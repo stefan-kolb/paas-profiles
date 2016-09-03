@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <title><%= @title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Platform as a Service Provider Comparison">
+  <meta name="description" content="Platform as a Service Provider Comparison. Find the best PaaS vendor for your requirements.
+  <%= "Discover detailed information about the PaaS provider #{@paas}" if @paas %>">
   <meta name="keywords" content="PaaS, Comparison, Matching, Cloud, Platform as a Service, Cloud Computing">
   <meta name="author" content="Stefan Kolb">
   <link href="<%= url('/css/paasify.css') %>" rel="stylesheet">
   <link href="<%= url('/css/bootstrap.min.css') %>" rel="stylesheet">
   <link href="<%= url('/css/bootstrap-responsive.min.css') %>" rel="stylesheet">
   <link href="<%= url('/css/nprogress.css') %>" rel="stylesheet">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="icon" href="<%= url('/favicon.png') %>" type="image/png">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <!-- jQuery fallback if CDN is blocked or fails -->
@@ -32,6 +33,28 @@
 
     ga('create', 'UA-64667246-1', 'auto');
     ga('send', 'pageview');
+  </script>
+  <script>
+    var trackOutboundLink = function(url) {
+      ga('send', 'event', 'outbound', 'click', url, {
+        'transport': 'beacon',
+        'hitCallback': function(){document.location = url;}
+      });
+    }
+  </script>
+  <script>
+    Userback = window.Userback || {};
+
+    (function(id) {
+      if (document.getElementById(id)) {return;}
+      var s = document.createElement('script');
+      s.id = id;
+      s.src = 'https://app.userback.io/widget.js';
+      var parent_node = document.head || document.body;
+      parent_node.appendChild(s);
+    })('userback-sdk');
+
+    Userback.access_token = '271|320|MEFNYgwKfFyRi38T61O5FYatoBNLa6yWLdKKtguJV3Ae7I8dJX';
   </script>
 </head>
 <body>
@@ -70,6 +93,7 @@
 <script>
     $(document).ready(function () {
         // progress bar
+        NProgress.configure({ showSpinner: false });
         NProgress.start();
         // tooltips
         $('.tip').tooltip({ placement: 'top' });

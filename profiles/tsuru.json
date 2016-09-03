@@ -1,9 +1,9 @@
 {
   "name": "Tsuru",
-  "revision": "2014-05-23",
+  "revision": "2016-08-04",
   "url": "http://www.tsuru.io/",
-  "status": "beta",
-  "status_since": "2013-08-28",
+  "status": "production",
+  "status_since": "2016-07-02",
   "type": "Generic",
   "hosting": {
     "public": true,

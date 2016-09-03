@@ -91,7 +91,7 @@ module Profiles
 
     def averages_data
       infra_count = Vendor.where('hosting.public' => true).collect { |v| v.infrastructures.count }
-      infra_count.delete_if { |e| e == 0 }
+      infra_count.delete_if(&:zero?)
       infra_count.sort!
     end
 
@@ -101,7 +101,7 @@ module Profiles
       # only public offerings
       infra_count = Vendor.where('hosting.public' => true).collect { |v| v.infrastructures.count }
       # TODO: data fuzz: remove missing infrastructures
-      infra_count.delete_if { |e| e == 0 }
+      infra_count.delete_if(&:zero?)
       @mean_count = Charts.mean(infra_count)
       @median_count = Charts.median(infra_count)
       @mode_count = Charts.mode(infra_count)

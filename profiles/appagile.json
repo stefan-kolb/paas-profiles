@@ -1,12 +1,13 @@
 {
-  "name": "Getup Cloud",
-  "revision": "2014-08-08",
-  "url": "http://getupcloud.com/",
-  "status": "production",
-  "status_since": "2013-04-30",
+  "name": "AppAgile",
+  "revision": "2016-07-22",
+  "url": "https://cloud.telekom.de/infrastruktur/appagile/",
+  "status": "beta",
+  "status_since": "2015-04-01",
   "type": "Generic",
   "hosting": {
     "public": true,
+    "vps": true,
     "private": false
   },
   "pricing": [
@@ -24,20 +25,21 @@
     {
       "language": "java",
       "versions": [
-        "1.6",
-        "1.7"
+
       ]
     },
     {
       "language": "node",
       "versions": [
-        "0.10"
+        "0.10",
+        "0.6"
       ]
     },
     {
       "language": "perl",
       "versions": [
-        "5.10"
+        "5.10",
+        "5.16"
       ]
     },
     {
@@ -60,7 +62,8 @@
       "language": "ruby",
       "versions": [
         "1.8",
-        "1.9"
+        "1.9",
+        "2.0"
       ]
     }
   ],
@@ -69,7 +72,10 @@
       "name": "jboss",
       "runtime": "java",
       "versions": [
-        "7"
+        "6.1",
+        "6.2",
+        "7.1",
+        "8.0"
       ]
     },
     {
@@ -78,6 +84,25 @@
       "versions": [
         "6",
         "7"
+      ]
+    },
+    {
+      "name": "WSO2 application server",
+      "runtime": "java",
+      "versions": [
+        "5.2.1"
+      ]
+    },
+    {
+      "name": "WSO2 identity server",
+      "versions": [
+        "5.0.0"
+      ]
+    },
+    {
+      "name": "IBM WebSphere",
+      "versions": [
+        "8.5.5.5"
       ]
     }
   ],
@@ -107,7 +132,15 @@
       "name": "rails",
       "runtime": "ruby",
       "versions": [
-
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "switchyard",
+      "runtime": "java",
+      "versions": [
+        "0.8"
       ]
     }
   ],
@@ -116,21 +149,31 @@
       {
         "name": "jenkins",
         "versions": [
-          "1.4"
+          "1.4",
+          "1.5"
         ],
         "type": "devops"
       },
       {
         "name": "mongodb",
         "versions": [
-          "2.2"
+          "2.4"
+        ],
+        "type": "datastore"
+      },
+      {
+        "name": "cassandra",
+        "versions": [
+          "1.2.4",
+          "1.2.5"
         ],
         "type": "datastore"
       },
       {
         "name": "mysql",
         "versions": [
-          "5.1"
+          "5.1",
+          "5.5"
         ],
         "type": "datastore"
       },
@@ -141,6 +184,13 @@
           "9.2"
         ],
         "type": "datastore"
+      },
+      {
+        "name": "apache activemq",
+        "versions": [
+          "5.1"
+        ],
+        "type": "worker"
       }
     ],
     "addon": [
@@ -150,15 +200,9 @@
   "extensible": true,
   "infrastructures": [
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Oregon",
-      "provider": "AWS"
-    },
-    {
-      "continent": "SA",
-      "country": "BR",
-      "region": "Sao Paulo"
+      "continent": "EU",
+      "country": "DE",
+      "region": ""
     }
   ]
 }

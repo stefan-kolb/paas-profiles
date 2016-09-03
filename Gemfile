@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.3.1'
 
 gem 'sinatra'
 gem 'mongoid', '~> 5.0'
@@ -9,6 +9,7 @@ gem 'rest-client'
 gem 'versionomy'
 gem 'sinatra-simple-navigation', '~> 4.0'
 gem 'geocoder'
+gem 'rake'
 gem 'rmagick'
 gem 'activesupport'
 gem 'require_all'
@@ -17,7 +18,6 @@ gem 'grape-entity'
 gem 'rubocop', require: false
 
 group :test do
-  gem 'rake'
   gem 'minitest'
   gem 'shoulda-context'
   gem 'rack-test'
