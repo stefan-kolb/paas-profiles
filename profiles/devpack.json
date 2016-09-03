@@ -165,6 +165,14 @@
         "versions": [
           "5.5.41"
         ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
       }
     ],
     "addon": [
