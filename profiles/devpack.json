@@ -69,15 +69,12 @@
         "2.1.*",
         "2.2.*"
       ]
-<<<<<<< HEAD
     },
     {
       "language": "scala",
       "versions": [
         "*.*"
       ]
-=======
->>>>>>> upstream/master
     }
   ],
   "middleware": null,
@@ -168,7 +165,6 @@
         "versions": [
           "5.5.41"
         ]
-<<<<<<< HEAD
       },
       {
         "name": "redis",
@@ -177,19 +173,13 @@
         "versions": [
 
         ]
-=======
->>>>>>> upstream/master
       }
     ],
     "addon": [
 
     ]
   },
-<<<<<<< HEAD
-  "extensible": false,
-=======
   "extensible": true,
->>>>>>> upstream/master
   "infrastructures": [
     {
       "continent": "AS",
