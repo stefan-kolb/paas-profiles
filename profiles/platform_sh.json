@@ -1,6 +1,6 @@
 {
   "name": "Platform.sh",
-  "revision": "2015-05-29",
+  "revision": "2016-09-21",
   "url": "https://platform.sh",
   "status": "production",
   "status_since": "2014-09-01",
@@ -27,10 +27,31 @@
     {
       "language": "php",
       "versions": [
-        "5.3.10",
-        "5.4.33",
-        "5.5.17",
-        "5.6.1"
+        "5.4",
+        "5.5",
+        "5.6",
+        "7.0"
+      ]
+    },
+    {
+      "language": "node.js",
+      "versions": [
+        "0.12",
+        "4.4",
+        "6.3"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7",
+        "3.5"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "2.3"
       ]
     }
   ],
@@ -133,7 +154,8 @@
         "type": "datastore",
         "versions": [
           "0.9",
-          "1.4"
+          "1.4",
+          "1.7"
         ]
       },
       {
@@ -149,15 +171,16 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "2.6"
+          "3.0"
         ]
       },
       {
         "name": "mysql",
-        "description": "",
+        "description": "MariaDB, MySQL-compatible",
         "type": "datastore",
         "versions": [
-          "5.6"
+          "5.5",
+          "10.0"
         ]
       },
       {
@@ -181,7 +204,8 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "2.8"
+          "2.8",
+          "3.0"
         ]
       },
       {
@@ -189,7 +213,16 @@
         "description": "",
         "type": "datastore",
         "versions": [
+          "3.6",
           "4.10"
+        ]
+      },
+      {
+        "name": "rabbitmq",
+        "description": "",
+        "type": "other",
+        "versions": [
+          "3.5"
         ]
       }
     ],
@@ -222,12 +255,6 @@
   },
   "extensible": false,
   "infrastructures": [
-    {
-      "continent": "AS",
-      "country": "SG",
-      "region": "Singapore",
-      "provider": "AWS"
-    },
     {
       "continent": "EU",
       "country": "IE",
