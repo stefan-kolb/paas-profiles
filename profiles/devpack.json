@@ -69,6 +69,12 @@
         "2.1.*",
         "2.2.*"
       ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+        "*.*"
+      ]
     }
   ],
   "middleware": null,
@@ -158,6 +164,14 @@
         "type": "datastore",
         "versions": [
           "5.5.41"
+        ]
+      },
+      {
+        "name": "redis",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
         ]
       }
     ],

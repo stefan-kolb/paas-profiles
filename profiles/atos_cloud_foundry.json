@@ -274,6 +274,14 @@
         "versions": [
 
         ]
+      },
+       {
+        "name": "dingo-postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+
+        ]
       }
     ],
     "addon": [
@@ -300,6 +308,12 @@
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
         "description": "",
         "type": "broker"
+      },
+      {
+        "name": "Administrative app for postgresql db",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "",
+        "type": "app"
       }
     ]
   },
