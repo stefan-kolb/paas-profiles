@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'sinatra'
-gem 'mongoid', '~> 5.0'
+gem 'mongoid', '~> 6.0'
 gem 'iso_country_codes'
 gem 'rest-client'
 gem 'versionomy'
