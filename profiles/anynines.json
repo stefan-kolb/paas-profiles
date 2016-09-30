@@ -1,6 +1,6 @@
 {
   "name": "Anynines",
-  "revision": "2015-06-18",
+  "revision": "2016-09-30",
   "url": "http://www.anynines.com/",
   "vendor_verified": "2013-07-11",
   "status": "production",
@@ -188,8 +188,9 @@
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "DE",
-      "region": ""
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
     }
   ]
 }
