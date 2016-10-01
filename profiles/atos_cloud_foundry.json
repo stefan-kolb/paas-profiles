@@ -30,69 +30,65 @@
   },
   "runtimes": [
     {
-      "language": "clojure",
-      "versions": [
-
-      ]
-    },
-    {
       "language": "groovy",
       "versions": [
-
-      ]
-    },
-    {
-      "language": "go",
-      "versions": [
-
+        "*.*"
       ]
     },
     {
       "language": "java",
       "versions": [
-
+        "1.6.*",
+        "1.7.*",
+        "1.8.*"
       ]
     },
     {
       "language": "node",
       "versions": [
-
-      ]
-    },
-    {
-      "language": "scala",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "php",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "python",
-      "versions": [
-
+        "0.10.*",
+        "0.12.*",
+        "4.*",
+        "5.*",
+        "6.*"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-      
+        "2.1.*",
+        "2.2.*",
+        "2.3.*"
       ]
     },
     {
-      "language": "dotnet",
+      "language": "php",
       "versions": [
-
+        "5.5.*",
+        "5.6.*",
+        "7.0.*"
       ]
     },
     {
-      "language": "swift",
+      "language": "python",
       "versions": [
-
+        "2.7.*",
+        "3.3.*",
+        "3.4.*",
+        "3.5.*"
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "1.5.*",
+        "1.6.*"
       ]
     }
   ],
@@ -101,21 +97,8 @@
       "name": "tomcat",
       "runtime": "java",
       "versions": [
-
-      ]
-    },
-    {
-      "name": "tomee",
-      "runtime": "java",
-      "versions": [
-
-      ]
-    },
-    {
-      "name": "jboss",
-      "runtime": "java",
-      "versions": [
-
+        "6",
+        "7"
       ]
     }
   ],
@@ -124,7 +107,7 @@
       "name": "grails",
       "runtime": "groovy",
       "versions": [
-      
+
       ]
     },
     {
@@ -138,18 +121,11 @@
       "name": "spring",
       "runtime": "java",
       "versions": [
-      
+
       ]
     },
     {
       "name": "rails",
-      "runtime": "ruby",
-      "versions": [
-      
-      ]
-    },
-    {
-      "name": "rack",
       "runtime": "ruby",
       "versions": [
 
@@ -159,21 +135,21 @@
       "name": "sinatra",
       "runtime": "ruby",
       "versions": [
-      
+
       ]
     },
     {
-      "name": "hhvm",
+      "name": "cake",
       "runtime": "php",
       "versions": [
-    
+
       ]
     },
     {
-      "name": "django",
-      "runtime": "python",
+      "name": "symfony",
+      "runtime": "php",
       "versions": [
-    
+
       ]
     }
   ],

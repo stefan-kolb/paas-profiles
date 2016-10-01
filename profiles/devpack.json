@@ -20,7 +20,7 @@
   },
   "runtimes": [
     {
-      "language": "go",
+      "language": "groovy",
       "versions": [
         "*.*"
       ]
@@ -28,6 +28,7 @@
     {
       "language": "java",
       "versions": [
+        "1.6.*",
         "1.7.*",
         "1.8.*"
       ]
@@ -35,39 +36,36 @@
     {
       "language": "node",
       "versions": [
-        "0.4.*",
-        "0.6.*",
-        "0.8.*",
         "0.10.*",
-        "0.12.*"
+        "0.12.*",
+        "4.*",
+        "5.*",
+        "6.*"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "2.1.*",
+        "2.2.*",
+        "2.3.*"
       ]
     },
     {
       "language": "php",
       "versions": [
-        "5.3",
-        "5.4",
-        "5.5",
-        "5.6"
+        "5.5.*",
+        "5.6.*",
+        "7.0.*"
       ]
     },
     {
       "language": "python",
       "versions": [
         "2.7.*",
-        "3.2.*",
         "3.3.*",
-        "3.4.*"
-      ]
-    },
-    {
-      "language": "ruby",
-      "versions": [
-        "1.8.*",
-        "1.9.*",
-        "2.0.*",
-        "2.1.*",
-        "2.2.*"
+        "3.4.*",
+        "3.5.*"
       ]
     },
     {
@@ -75,84 +73,73 @@
       "versions": [
         "*.*"
       ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "1.5.*",
+        "1.6.*"
+      ]
     }
   ],
-  "middleware": null,
+  "middleware": [
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6",
+        "7"
+      ]
+    }
+  ],
   "frameworks": [
     {
-      "name": "rails",
-      "runtime": "ruby",
+      "name": "grails",
+      "runtime": "groovy",
       "versions": [
-        "2.*",
-        "3.*",
-        "4.*"
-      ]
-    },
-    {
-      "name": "django",
-      "runtime": "python",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "meteor",
-      "runtime": "node",
-      "versions": [
-        "0.9.*",
-        "1.0.*",
-        "1.1.*"
-      ]
-    },
-    {
-      "name": "express",
-      "runtime": "node",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "meanjs",
-      "runtime": "node",
-      "versions": [
-        "*.*"
+
       ]
     },
     {
       "name": "play",
       "runtime": "java",
       "versions": [
-        "1.2.*",
-        "2.*"
+
       ]
     },
     {
-      "name": "flask",
-      "runtime": "python",
-      "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "spark",
+      "name": "spring",
       "runtime": "java",
       "versions": [
-        "1.*",
-        "2.*"
+
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "cake",
+      "runtime": "php",
+      "versions": [
+
       ]
     },
     {
       "name": "symfony",
       "runtime": "php",
       "versions": [
-        "2.*"
-      ]
-    },
-    {
-      "name": "cakephp",
-      "runtime": "php",
-      "versions": [
-        "2.*"
+
       ]
     }
   ],

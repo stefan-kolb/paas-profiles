@@ -17,16 +17,12 @@
     "horizontal": true,
     "auto": true
   },
+
   "runtimes": [
     {
       "language": "groovy",
       "versions": [
-        "1.5.*",
-        "1.6.*",
-        "1.7.*",
-        "1.8.*",
-        "2.0.*",
-        "2.1.*"
+        "*.*"
       ]
     },
     {
@@ -40,44 +36,49 @@
     {
       "language": "node",
       "versions": [
-        "0.4.*",
-        "0.6.*",
-        "0.8.*",
-        "0.10.*"
+        "0.10.*",
+        "0.12.*",
+        "4.*",
+        "5.*",
+        "6.*"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-        "1.8.7",
-        "1.9.2",
-        "1.9.3",
-        "2.0.0"
-      ]
-    },
-    {
-      "language": "scala",
-      "versions": [
-
-      ]
-    },
-    {
-      "language": "go",
-      "versions": [
-        "1.1",
-        "1.2"
-      ]
-    },
-    {
-      "language": "python",
-      "versions": [
-
+        "2.1.*",
+        "2.2.*",
+        "2.3.*"
       ]
     },
     {
       "language": "php",
       "versions": [
-
+        "5.5.*",
+        "5.6.*",
+        "7.0.*"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7.*",
+        "3.3.*",
+        "3.4.*",
+        "3.5.*"
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "1.5.*",
+        "1.6.*"
       ]
     }
   ],
@@ -123,6 +124,20 @@
     {
       "name": "sinatra",
       "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "cake",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "symfony",
+      "runtime": "php",
       "versions": [
 
       ]

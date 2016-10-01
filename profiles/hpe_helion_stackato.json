@@ -21,72 +21,55 @@
     "horizontal": true,
     "auto": true
   },
+
   "runtimes": [
-    {
-      "language": "clojure",
-      "versions": [
-        "1.2.1"
-      ]
-    },
-    {
-      "language": "go",
-      "versions": [
-        "1.2"
-      ]
-    },
     {
       "language": "groovy",
       "versions": [
-        "1.5.*",
-        "1.6.*",
-        "1.7.*",
-        "1.8.*",
-        "2.0.*",
-        "2.1.*"
+        "*.*"
       ]
     },
     {
       "language": "java",
       "versions": [
-        "1.7",
-        "1.6"
+        "1.6.*",
+        "1.7.*",
+        "1.8.*"
       ]
     },
     {
       "language": "node",
       "versions": [
-        "0.6.20",
-        "0.8.22",
-        "0.10.1",
-        "0.10.31"
-      ]
-    },
-    {
-      "language": "perl",
-      "versions": [
-        "5.16"
-      ]
-    },
-    {
-      "language": "php",
-      "versions": [
-        "5.3",
-        "5.5"
-      ]
-    },
-    {
-      "language": "python",
-      "versions": [
-        "2.7",
-        "3.3"
+        "0.10.*",
+        "0.12.*",
+        "4.*",
+        "5.*",
+        "6.*"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-        "1.9.2",
-        "1.9.3",
-        "2.0.0"
+        "2.1.*",
+        "2.2.*",
+        "2.3.*"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.5.*",
+        "5.6.*",
+        "7.0.*"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7.*",
+        "3.3.*",
+        "3.4.*",
+        "3.5.*"
       ]
     },
     {
@@ -94,35 +77,22 @@
       "versions": [
         "*.*"
       ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "1.5.*",
+        "1.6.*"
+      ]
     }
   ],
   "middleware": [
     {
-      "name": "apache",
-      "versions": [
-        "2.4.9"
-      ]
-    },
-    {
-      "name": "jboss",
-      "runtime": "java",
-      "versions": [
-        "7.0.2"
-      ]
-    },
-    {
-      "name": "nginx",
-      "versions": [
-        "1.6"
-      ]
-    },
-    {
       "name": "tomcat",
       "runtime": "java",
       "versions": [
-        "6.0.*",
-        "7.0.*",
-        "8.0.*"
+        "6",
+        "7"
       ]
     }
   ],
@@ -138,8 +108,14 @@
       "name": "play",
       "runtime": "java",
       "versions": [
-        "1.2.*",
-        "2.0.*"
+
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+
       ]
     },
     {
@@ -157,8 +133,15 @@
       ]
     },
     {
-      "name": "spring",
-      "runtime": "java",
+      "name": "cake",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "symfony",
+      "runtime": "php",
       "versions": [
 
       ]
