@@ -297,6 +297,11 @@
     "isolation": ""
   },
   {
+    "vendor": "Swisscom",
+    "platform": "Cloud Foundry",
+    "isolation": ""
+  },
+  {
     "vendor": "HPE Helion Stackato",
     "platform": "Cloud Foundry",
     "isolation": ""
