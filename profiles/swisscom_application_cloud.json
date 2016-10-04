@@ -1,0 +1,159 @@
+{
+  "name": "Cloud Foundry",
+  "revision": "2016-09-30",
+  "url": "https://www.swisscom.ch/en/business/enterprise/offer/cloud-data-center-services/paas/application-cloud.html",
+  "status": "production",
+  "status_since": "2016-09-30",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "vps": true,
+    "private": false
+  },
+  "pricing": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "groovy",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
+  "middleware": [
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "grails",
+      "runtime": "groovy",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "cake",
+      "runtime": "php",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "symfony",
+      "runtime": "php",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      { "name": "s3", "type": "datastore", "description": "Dynamic Object Storage with S3 Interface based on ATMOS", "versions": [ "2.2.3" ] },
+      { "name": "elk", "type": "devops", "description": "Elasticsearch v2.1.0, LogStash v2.1.0 and Kibana v4.3.0 for realtime logging", "versions": [ "2.1.0/2.1.0/4.3.0" ] },
+      { "name": "mariadb", "type": "datastore", "description": "MariaDB", "versions": [ "5.5.4" ] },
+      { "name": "mongodb", "type": "datastore", "description": "MongoDB", "versions": [ "3.2.9" ] },
+      { "name": "mongodbent", "type": "datastore", "description": "MongoDB Enterprise", "versions": [ "3.2.6" ] },
+      { "name": "rabbitmq", "type": "messaging", "description": "RabbitMQ", "versions": [ "3.5.3" ] },
+      { "name": "rabbitmqent", "type": "messaging", "description": "RabbitMQ Enterprise", "versions": [ "3.6.3" ] },
+      { "name": "redis", "type": "datastore", "description": "Redis", "versions": [ "3.2.3" ] },
+      { "name": "redisent", "type": "datastore", "description": "Redis Enterprise", "versions": [ "3.2.3" ] }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+  {
+    "continent": "EU",
+    "country": "CH",
+    "region": "",
+    "provider": "OpenStack"
+  }
+]
+}
