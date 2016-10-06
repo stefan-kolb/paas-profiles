@@ -69,13 +69,6 @@
       ]
     },
     {
-      "language": "Docker",
-      "versions": [
-        "1.9",
-        "1.10"
-      ]
-    },
-    {
       "language": "scala",
       "versions": [
         "*.*"
@@ -173,6 +166,13 @@
   "services": {
     "native": [
       {
+        "name": "Docker",
+        "versions": [
+          "1.9",
+          "1.10"
+        ]
+      },
+      {
         "name": "jenkins",
         "type": "devops",
         "versions": [
@@ -210,7 +210,6 @@
 
     ]
   },
-  "extensible": true,
   "extensible": true,
   "infrastructures": [
     {
