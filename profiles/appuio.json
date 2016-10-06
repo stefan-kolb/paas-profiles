@@ -13,7 +13,8 @@
   },
   "pricing": [
     {
-      "model": "fixed"
+      "model": "fixed",
+      "period": "monthly"
     }
   ],
   "scaling": {
