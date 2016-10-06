@@ -1,0 +1,223 @@
+{
+  "name": "APPUiO",
+  "revision": "2016-10-05",
+  "url": "https://appuio.ch",
+  "vendor_verified": "2016-10-05",
+  "status": "production",
+  "status_since": "2016-10-05",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": true,
+    "vps": true
+  },
+  "pricing": [
+    {
+      "model": "fixed",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": true
+  },
+  "runtimes": [
+    {
+      "language": "java",
+      "versions": [
+        "1.6",
+        "1.7",
+        "1.8"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "0.10",
+        "4.*"
+      ]
+    },
+    {
+      "language": "perl",
+      "versions": [
+        "5.16",
+        "5.20"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.5",
+        "5.6"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.6",
+        "2.7",
+        "3.3"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "2.0",
+        "2.2",
+        "2.3"
+      ]
+    },
+    {
+      "language": "Docker",
+      "versions": [
+        "1.9",
+        "1.10"
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
+  "middleware": [
+    {
+      "name": "jboss",
+      "runtime": "java",
+      "versions": [
+        "6.4"
+      ]
+    },
+    {
+      "name": "wildfly",
+      "runtime": "java",
+      "versions": [
+        "10"
+      ]
+    },
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "7",
+        "8"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "drupal",
+      "runtime": "php",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "cake",
+      "runtime": "php",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "symfony",
+      "runtime": "php",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "jenkins",
+        "type": "devops",
+        "versions": [
+          "1.6"
+        ]
+      },
+      {
+        "name": "mongodb",
+        "type": "datastore",
+        "versions": [
+          "2.4",
+          "2.6",
+          "3.2"
+        ]
+      },
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+          "5.5",
+          "5.6"
+        ]
+      },
+      {
+        "name": "postgresql",
+        "type": "datastore",
+        "versions": [
+          "9.2",
+          "9.4",
+          "9.5"
+        ]
+      }
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": true,
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "CH",
+      "region": "Zurich",
+      "provider": "OpenStack"
+    }
+  ]
+}

@@ -41,6 +41,11 @@
     "isolation": ""
   },
   {
+    "vendor": "APPUiO",
+    "platform": "OpenShift Container Platform",
+    "isolation": "Container"
+  },
+  {
     "vendor": "Apprenda",
     "platform": "",
     "isolation": ""
