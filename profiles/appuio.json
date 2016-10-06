@@ -1,5 +1,5 @@
 {
-  "name": "APPUiO - Swiss Container Platform",
+  "name": "APPUiO",
   "revision": "2016-10-05",
   "url": "https://appuio.ch",
   "vendor_verified": "2016-10-05",
@@ -8,7 +8,8 @@
   "type": "Generic",
   "hosting": {
     "public": true,
-    "private": true
+    "private": true,
+    "vps": true
   },
   "pricing": [
     {
@@ -214,7 +215,7 @@
     {
       "continent": "EU",
       "country": "CH",
-      "region": "",
+      "region": "Zurich",
       "provider": "OpenStack"
     }
   ]
