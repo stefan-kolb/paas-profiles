@@ -1,6 +1,6 @@
 {
   "name": "Google App Engine",
-  "revision": "2015-06-17",
+  "revision": "2016-10-10",
   "url": "https://cloud.google.com/appengine",
   "status": "production",
   "status_since": "2011-11-07",
@@ -33,40 +33,57 @@
     {
       "language": "go",
       "versions": [
-        "1.4.2"
+        "1.6.2"
       ]
     },
     {
       "language": "java",
       "versions": [
-        "1.7"
+        "1.7",
+        "1.8"
       ]
     },
     {
       "language": "php",
       "versions": [
-        "5.4.35",
         "5.5"
       ]
     },
     {
       "language": "python",
       "versions": [
-        "2.7.5",
-        "2.5"
+        "2.7.10",
+        "3.4"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "*.*"
       ]
     }
   ],
   "middleware": [
-
+    {
+      "name": "jetty",
+      "runtime": "java",
+      "versions": [
+        "9"
+      ]
+    }
   ],
   "frameworks": [
     {
       "name": "django",
       "runtime": "python",
       "versions": [
-        "1.4.13",
-        "1.5.8"
+
       ]
     },
     {
@@ -108,17 +125,22 @@
 
     ]
   },
-  "extensible": false,
+  "extensible": true,
   "infrastructures": [
     {
       "continent": "EU",
-      "country": "",
-      "region": ""
+      "country": "BE",
+      "region": "St. Ghislain, Belgium"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": ""
+      "region": "Council Bluffs, Iowa"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Berkeley County, South Carolina"
     }
   ]
 }
