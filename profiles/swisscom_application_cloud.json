@@ -1,7 +1,7 @@
 {
   "name": "Swisscom Application Cloud",
   "revision": "2016-09-30",
-  "url": "https://www.swisscom.ch/en/business/enterprise/offer/cloud-data-center-services/paas/application-cloud.html",
+  "url": "https://developer.swisscom.com/",
   "status": "production",
   "status_since": "2016-09-30",
   "type": "Generic",
@@ -31,31 +31,44 @@
     {
       "language": "java",
       "versions": [
-        "*.*"
+        "1.6.*",
+        "1.7.*",
+        "1.8.*"
       ]
     },
     {
       "language": "node",
       "versions": [
-        "*.*"
+        "0.10.*",
+        "0.12.*",
+        "4.*",
+        "5.*",
+        "6.*"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-        "*.*"
+        "2.1.*",
+        "2.2.*",
+        "2.3.*"
       ]
     },
     {
       "language": "php",
       "versions": [
-        "*.*"
+        "5.5.*",
+        "5.6.*",
+        "7.0.*"
       ]
     },
     {
       "language": "python",
       "versions": [
-        "*.*"
+        "2.7.*",
+        "3.3.*",
+        "3.4.*",
+        "3.5.*"
       ]
     },
     {
@@ -67,7 +80,8 @@
     {
       "language": "go",
       "versions": [
-        "*.*"
+        "1.5.*",
+        "1.6.*"
       ]
     }
   ],
@@ -76,7 +90,8 @@
       "name": "tomcat",
       "runtime": "java",
       "versions": [
-        "*.*"
+        "6",
+        "7"
       ]
     }
   ],
@@ -133,27 +148,91 @@
   ],
   "services": {
     "native": [
-      { "name": "s3", "type": "datastore", "description": "Dynamic Object Storage with S3 Interface based on ATMOS", "versions": [ "2.2.3" ] },
-      { "name": "elk", "type": "devops", "description": "Elasticsearch v2.1.0, LogStash v2.1.0 and Kibana v4.3.0 for realtime logging", "versions": [ "2.1.0/2.1.0/4.3.0" ] },
-      { "name": "mariadb", "type": "datastore", "description": "MariaDB", "versions": [ "5.5.4" ] },
-      { "name": "mongodb", "type": "datastore", "description": "MongoDB", "versions": [ "3.2.9" ] },
-      { "name": "mongodbent", "type": "datastore", "description": "MongoDB Enterprise", "versions": [ "3.2.6" ] },
-      { "name": "rabbitmq", "type": "messaging", "description": "RabbitMQ", "versions": [ "3.5.3" ] },
-      { "name": "rabbitmqent", "type": "messaging", "description": "RabbitMQ Enterprise", "versions": [ "3.6.3" ] },
-      { "name": "redis", "type": "datastore", "description": "Redis", "versions": [ "3.2.3" ] },
-      { "name": "redisent", "type": "datastore", "description": "Redis Enterprise", "versions": [ "3.2.3" ] }
+      {
+        "name": "s3",
+        "type": "datastore",
+        "description": "Dynamic Object Storage with S3 Interface based on ATMOS",
+        "versions": [
+          "2.2.3"
+        ]
+      },
+      {
+        "name": "elk",
+        "type": "devops",
+        "description": "Elasticsearch v2.1.0, LogStash v2.1.0 and Kibana v4.3.0 for realtime logging",
+        "versions": [
+          "2.1.0",
+          "2.1.0",
+          "4.3.0"
+        ]
+      },
+      {
+        "name": "mariadb",
+        "type": "datastore",
+        "description": "MariaDB",
+        "versions": [
+          "5.5.4"
+        ]
+      },
+      {
+        "name": "mongodb",
+        "type": "datastore",
+        "description": "MongoDB",
+        "versions": [
+          "3.2.9"
+        ]
+      },
+      {
+        "name": "mongodbent",
+        "type": "datastore",
+        "description": "MongoDB Enterprise",
+        "versions": [
+          "3.2.6"
+        ]
+      },
+      {
+        "name": "rabbitmq",
+        "type": "messaging",
+        "description": "RabbitMQ",
+        "versions": [
+          "3.5.3"
+        ]
+      },
+      {
+        "name": "rabbitmqent",
+        "type": "messaging",
+        "description": "RabbitMQ Enterprise",
+        "versions": [
+          "3.6.3"
+        ]
+      },
+      {
+        "name": "redis",
+        "type": "datastore",
+        "description": "Redis",
+        "versions": [
+          "3.2.3"
+        ]
+      },
+      {
+        "name": "redisent",
+        "type": "datastore",
+        "description": "Redis Enterprise",
+        "versions": [
+          "3.2.3"
+        ]
+      }
     ],
     "addon": [
-
     ]
   },
   "extensible": true,
   "infrastructures": [
-  {
-    "continent": "EU",
-    "country": "CH",
-    "region": "",
-    "provider": "OpenStack"
-  }
-]
+    {
+      "continent": "EU",
+      "country": "CH",
+      "region": "Bern",
+      "provider": "OpenStack"
+    }
+  ]
 }

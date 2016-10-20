@@ -302,9 +302,9 @@
     "isolation": ""
   },
   {
-    "vendor": "Swisscom",
+    "vendor": "Swisscom Application Cloud",
     "platform": "Cloud Foundry",
-    "isolation": ""
+    "isolation": "Container"
   },
   {
     "vendor": "HPE Helion Stackato",
