@@ -34,7 +34,7 @@
       ]
     },
     {
-      "language": "node.js",
+      "language": "node",
       "versions": [
         "0.12",
         "4.4",
