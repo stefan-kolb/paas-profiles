@@ -310,7 +310,7 @@
         "type": "broker"
       },
       {
-        "name": "Administrative app for postgresql db",
+        "name": "Database administrative app : [Postgresql,MySQL,MongoDB,CouchDB]",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
         "description": "",
         "type": "app"
