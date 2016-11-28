@@ -1,6 +1,6 @@
 {
   "name": "Atos Cloud Foundry",
-  "revision": "2016-08-01",
+  "revision": "2016-11-28",
   "url": "https://canopy-cloud.com/application-platforms/atos-cloud-foundry",
   "vendor_verified": "2016-05-25",
   "status": "production",
@@ -310,7 +310,7 @@
         "type": "broker"
       },
       {
-        "name": "Administrative app for postgresql db",
+        "name": "Database administrative app for Postgresql, MySQL, MongoDB, CouchDB",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
         "description": "",
         "type": "app"
