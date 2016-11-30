@@ -2,8 +2,7 @@ require_relative 'charts'
 
 module Profiles
   class StatusCharts
-    def initialize
-    end
+    def initialize; end
 
     def status_count(status)
       Vendor.where(status: status).count
