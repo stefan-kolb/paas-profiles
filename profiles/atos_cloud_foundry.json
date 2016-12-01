@@ -30,61 +30,61 @@
   },
   "runtimes": [
     {
-      "language": "Clojure",
+      "language": "clojure",
       "versions": [
 
       ]
     },
     {
-      "language": "Go",
+      "language": "go",
       "versions": [
 
       ]
     },
     {
-      "language": "Java",
+      "language": "java",
       "versions": [
 
       ]
     },
     {
-      "language": "Node.js",
+      "language": "node.js",
       "versions": [
 
       ]
     },
     {
-      "language": "Scala",
+      "language": "scala",
       "versions": [
 
       ]
     },
     {
-      "language": "PHP",
+      "language": "php",
       "versions": [
 
       ]
     },
     {
-      "language": "Python",
+      "language": "python",
       "versions": [
 
       ]
     },
     {
-      "language": "Ruby",
+      "language": "ruby",
       "versions": [
       
       ]
     },
     {
-      "language": ".NET Core",
+      "language": "dotnet core",
       "versions": [
 
       ]
     },
     {
-      "language": "Swift",
+      "language": "swift",
       "versions": [
 
       ]
@@ -106,7 +106,7 @@
       ]
     },
     {
-      "name": "Groovy",
+      "name": "groovy",
       "runtime": "java",
       "versions": [
 
@@ -181,7 +181,7 @@
   "services": {
     "native": [
       {
-        "name": "MongoDB",
+        "name": "mongodb",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -189,7 +189,7 @@
         ]
       },
       {
-        "name": "Memcached",
+        "name": "memcached",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -197,7 +197,7 @@
         ]
       },
       {
-        "name": "MySQL",
+        "name": "mysql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -205,7 +205,7 @@
         ]
       },
       {
-        "name": "PostgreSQL",
+        "name": "postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -213,7 +213,7 @@
         ]
       },
       {
-        "name": "RabbitMQ",
+        "name": "rabbitmq",
         "description": "",
         "type": "worker",
         "versions": [
@@ -221,7 +221,7 @@
         ]
       },
       {
-        "name": "Redis",
+        "name": "redis",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -237,7 +237,7 @@
         ]
       },
       {
-        "name": "Kafka",
+        "name": "kafka",
         "description": "",
         "type": "message broker",
         "versions": [
@@ -245,7 +245,7 @@
         ]
       },
       {
-        "name": "RiakCS",
+        "name": "riakcs",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -253,7 +253,7 @@
         ]
       },
       {
-        "name": "Cassandra",
+        "name": "cassandra",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -261,7 +261,7 @@
         ]
       },
       {
-        "name": "ElasticSearch",
+        "name": "elasticsearch",
         "description": "",
         "type": "search",
         "versions": [
@@ -269,7 +269,7 @@
         ]
       },
       {                                                                                                                                                                     
-        "name": "Abacus",                                                                                                                                                  
+        "name": "abacus",                                                                                                                                                  
         "description": "",                                                                                                                                                  
         "type": "metering",                                                                                                                                                
         "versions": [                                                                                                                                                       
@@ -277,7 +277,7 @@
         ]                                                                                                                                                                   
       },
       {
-        "name": "CouchDB",
+        "name": "couchdb",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -285,7 +285,7 @@
         ]
       },
        {
-        "name": "Dingo-postgreSQL",
+        "name": "dingo-postgresql",
         "description": "",
         "type": "datastore",
         "versions": [
