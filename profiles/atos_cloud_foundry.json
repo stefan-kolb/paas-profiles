@@ -42,13 +42,19 @@
       ]
     },
     {
+      "language": "groovy",
+      "versions": [
+
+      ]
+    },
+    {
       "language": "java",
       "versions": [
 
       ]
     },
     {
-      "language": "node.js",
+      "language": "node",
       "versions": [
 
       ]
@@ -78,7 +84,7 @@
       ]
     },
     {
-      "language": "dotnet core",
+      "language": "dotnet",
       "versions": [
 
       ]
@@ -100,13 +106,6 @@
     },
     {
       "name": "tomee",
-      "runtime": "java",
-      "versions": [
-
-      ]
-    },
-    {
-      "name": "groovy",
       "runtime": "java",
       "versions": [
 
