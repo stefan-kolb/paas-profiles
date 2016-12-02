@@ -36,13 +36,13 @@
       ]
     },
     {
-      "language": "groovy",
+      "language": "go",
       "versions": [
 
       ]
     },
     {
-      "language": "go",
+      "language": "groovy",
       "versions": [
 
       ]
@@ -228,7 +228,7 @@
         ]
       },
       {
-        "name": "neo4j",
+        "name": "Neo4J",
         "description": "",
         "type": "datastore",
         "versions": [
@@ -267,6 +267,14 @@
 
         ]
       },
+      {                                                                                                                                                                     
+        "name": "abacus",                                                                                                                                                  
+        "description": "",                                                                                                                                                  
+        "type": "metering",                                                                                                                                                
+        "versions": [                                                                                                                                                       
+                                                                                                                                                                            
+        ]                                                                                                                                                                   
+      },
       {
         "name": "couchdb",
         "description": "",
@@ -286,13 +294,13 @@
     ],
     "addon": [
     {
-        "name": "AD/LDAP Integration",
+        "name": "ADFS/LDAP/AS",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
         "description": "",
         "type": "other"
       },
       {
-        "name": "Advanced Developer UI",
+        "name": "Advanced Developer GUI",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
         "description": "",
         "type": "console"
@@ -302,6 +310,42 @@
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
         "description": "",
         "type": "other"
+      },
+      {
+        "name": "Datadog",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "",
+        "type": "monitoring"
+      },
+      {
+        "name": "NewRelic",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "",
+        "type": "monitoring"
+      },
+      {
+        "name": "Dynatrace",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "",
+        "type": "other"
+      },
+      {
+        "name": "Nagios",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "Internal monitoring",
+        "type": "monitoring"
+      },
+      {
+        "name": "Pingdom",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "External monitoring",
+        "type": "monitoring"
+      },
+      {
+        "name": "StatusPage",
+        "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
+        "description": "External monitoring",
+        "type": "monitoring"
       },
       {
         "name": "Canopy Compose Service Broker",
