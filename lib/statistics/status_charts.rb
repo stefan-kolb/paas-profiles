@@ -13,8 +13,8 @@ module Profiles
     end
 
     def mean_maturity(status = nil)
+      sum = 0
       if status
-        sum = 0
         vendors = Vendor.where(status: status).only(:status_since)
         # remove nil status_since
         vendors = vendors.delete_if { |x| x.status_since.nil? }
@@ -23,7 +23,6 @@ module Profiles
           sum += Date.today.to_time.to_i - v.status_since.to_time.to_i
         end
       else
-        sum = 0
         vendors = Vendor.all.only(:status_since)
         # remove nil status_since
         vendors = vendors.delete_if { |x| x.status_since.nil? }
