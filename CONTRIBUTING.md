@@ -66,11 +66,11 @@ export RACK_ENV=development
 >
 > On OS X:
 
-> Install imagemagick via macports (requires pre installed macports) 
+> Install imagemagick via macports (requires pre-installed macports) 
 > ``` bash
 > sudo port install ImageMagick
 > ```
-> Note: Homebrew installs imagemagick 7 that causes problems while installing rmagick.
+> Note: Homebrew installs ImageMagick 7 that causes problems while installing rmagick.
 >
 
 ### Preparing the Database
