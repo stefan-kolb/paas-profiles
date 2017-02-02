@@ -1,9 +1,9 @@
 {
   "name": "Webbynode",
-  "revision": "2014-02-17",
+  "revision": "2017-02-02",
   "url": "http://webbynode.com/",
-  "status": "production",
-  "status_since": "2009-06-11",
+  "status": "eol",
+  "status_since": "2016-03-31",
   "type": "Generic",
   "hosting": {
     "public": true,
