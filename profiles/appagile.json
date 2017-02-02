@@ -2,8 +2,8 @@
   "name": "AppAgile",
   "revision": "2016-07-22",
   "url": "https://cloud.telekom.de/infrastruktur/appagile/",
-  "status": "beta",
-  "status_since": "2015-04-01",
+  "status": "production",
+  "status_since": null,
   "type": "Generic",
   "hosting": {
     "public": true,
