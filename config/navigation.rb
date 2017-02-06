@@ -1,7 +1,9 @@
 SimpleNavigation::Configuration.run do |navigation|
   navigation.items do |primary|
     primary.item :index, 'PaaSfinder', '/vendors' do |index|
-      index.item :vendor, @paas, @vendor_path
+      index.item :vendor, @paas, @vendor_path do |vendor|
+        vendor.item :update, 'Add an Update', @update_vendor_path
+      end
       index.item :filter, 'Find your PaaS', '/filter'
       index.item :terms, 'Terms of service', '/terms'
       index.item :compare, '1on1', @versus_path

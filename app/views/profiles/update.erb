@@ -1,0 +1,222 @@
+<link href="../../css/bootstrap-select.min.css" rel="stylesheet"/>
+
+<div id="top" class="container">
+
+  <div>
+    <form id="updateForm" class="form-horizontal span9">
+      <h3 class="group-titles">General Properties</h3>
+      <div class="control-group">
+        <label class="control-label" for="selectName">Name</label>
+        <div class="controls">
+          <input id="selectName" class="form-control span5" type="text"/>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="selectStatus">Status</label>
+        <div class="controls">
+          <select id="selectStatus" class="selectpicker show-tick span5">
+            <option data-hidden="true"></option>
+            <% Profiles::Vendor.distinct(:status).each do |s| %>
+            <option value="<%= s %>"><%= s.capitalize %></option>
+            <% end %>
+            </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="selectPlatform">Platform</label>
+        <div class="controls">
+          <select id="selectPlatform" name="platform" class="selectpicker show-tick span5">
+            <option data-hidden="true"></option>
+            <% Profiles::Vendor.distinct(:platform).reject(&:empty?).each do |s| %>
+            <option value="<%= s %>"><%= s.titleize %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="selectType">Type</label>
+        <div class="controls">
+          <select id="selectType" name="type" class="selectpicker show-tick span5">
+            <option data-hidden="true"></option>
+            <% Profiles::Vendor.distinct(:type).each do |t| %>
+            <option value="<%= t %>"><%= t.capitalize %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="selectUrl">URL</label>
+        <div class="controls">
+          <input id="selectUrl" class="form-control span5" type="url"/>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label title="Possibility to add custom runtimes, services, ..." class="control-label">Extensible</label>
+        <div class="controls">
+          <input id="selectExtensible" name="extensible" type="checkbox"/>
+        </div>
+      </div>
+
+      <h3 class="group-titles">Scaling</h3>
+      <div class="controls">
+        <label class="checkbox inline" title="Number of instances">
+          <input type="checkbox" id="selectHorizontalScaling">horizontal
+        </label>
+        <label class="checkbox inline" title="Size of RAM, CPU, ...">
+          <input type="checkbox" id="selectVerticalScaling">vertical
+        </label>
+        <label class="checkbox inline" title="Automatic scaling of one or both directions">
+          <input type="checkbox" id="selectAutoScaling">auto
+        </label>
+      </div>
+
+      <h3 class="group-titles">Hosting</h3>
+      <div class="controls">
+        <label class="checkbox inline">
+          <input type="checkbox" id="selectPublicHosting">public
+        </label>
+        <label class="checkbox inline">
+          <input type="checkbox" id="selectVpsHosting">vps
+        </label>
+        <label class="checkbox inline">
+          <input type="checkbox" id="selectPrivateHosting">private
+        </label>
+      </div>
+
+      <h3 class="group-titles">Quality of Service</h3>
+      <div class="control-group">
+        <label class="control-label">Uptime</label>
+        <div class="controls">
+          <input id="selectQosUptime" class="form-control span5" type="text" placeholder="Provider's uptime, e.g. 99,99">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Compliance</label>
+        <div class="controls">
+          <input id="selectQosCompliance" class="form-control span5" type="text" placeholder="Compliance standards separated by commas, e.g. HIPPA, ISO 9001">
+        </div>
+      </div>
+
+      <h3 class="group-titles">Pricing</h3>
+      <% @profile.pricings.each do |pricing| %>
+        <%= erb(:'profiles/partitials/_pricing', locals: {pricing: pricing}) %>
+      <% end %>
+
+
+      <h3 class="group-titles">Runtimes</h3>
+      <% @profile.runtimes.each do |runtime| %>
+        <%= erb(:'profiles/partitials/_runtime', locals: {runtime: runtime}) %>
+      <% end %>
+
+      <h3 class="group-titles">Middlewares</h3>
+      <% @profile.middlewares.each do |middleware| %>
+        <%= erb(:'profiles/partitials/_middleware', locals: {middleware: middleware}) %>
+      <% end %>
+
+      <h3 class="group-titles">Frameworks</h3>
+      <% @profile.frameworks.each do |framework| %>
+        <%= erb(:'profiles/partitials/_framework', locals: {framework: framework}) %>
+      <% end %>
+
+      <h3 class="group-titles">Infrastructures</h3>
+      <% @profile.infrastructures.each do |infrastructure| %>
+        <%= erb(:'profiles/partitials/_infrastructure', locals: {infrastructure: infrastructure}) %>
+      <% end %>
+
+      <h3 class="group-titles">Services</h3>
+      <h4 class="group-titles">Native</h4>
+      <% @profile.service.natives.each do |native_service| %>
+        <%= erb(:'profiles/partitials/_native_service', locals: {native_service: native_service}) %>
+      <% end %>
+
+      <h4 class="group-titles">Add-on</h4>
+      <% @profile.service.addons.each do |addon_service| %>
+        <%= erb(:'profiles/partitials/_addon_service', locals: {addon_service: addon_service}) %>
+      <% end %>
+
+    </form>
+
+    <div class="text-center" style="padding:20px">
+      <button type="reset" title="Reset all your chages" class="btn btn-info btn-large">Reset Changes</button>
+      <button id="submit" type="submit" class="btn btn-success btn-large">Submit Update</button>
+    </div>
+  <div>
+
+<style>
+.group-titles { 
+  padding-bottom: 10px;
+  padding-left: 100px;
+}
+
+#updateForm {
+  margin-left: auto; 
+  margin-right: auto; 
+  float: none;
+}
+
+#top {
+  margin-top: 10px; 
+  padding-bottom: 20px;
+}
+
+</style>
+
+<script src="../../js/bootstrap-select.min.js"></script>
+<script>
+  var vendor = {};
+  $(document).ready(function () {
+    $.getJSON('/api/vendors/<%=  @profile['name'].gsub(/[^a-z]/i, '_') %>').done(function (data) {
+      vendor = data;
+      console.log(vendor);
+      setOptions();
+    });
+
+    $('#submit').click(function(){
+      vendor.name = $('#selectName').val();
+      vendor.status = $('#selectStatus').val();
+      vendor.type = $('#selectType').val();
+      vendor.url = $('#selectUrl').val();
+      vendor.extensible = $('#selectExtensible').is(':checked');
+      vendor.hosting.public = $('#selectPublicHosting').is(':checked');
+      vendor.hosting.vps = $('#selectVpsHosting').is(':checked');  
+      vendor.hosting.private = $('#selectPrivateHosting').is(':checked');
+      console.log(vendor);
+    }); 
+  });
+
+  function setOptions(){
+    $('#selectName').val(vendor.name);
+    $('#selectStatus').val(vendor.status);
+    $('#selectType').val(vendor.type);
+    $('#selectUrl').val(vendor.url);
+    $('#selectExtensible').prop('checked', vendor.extensible);
+    if(vendor.quality != null){
+      $('#selectQosUptime').val(vendor.quality.uptime);
+      $('#selectQosCompliance').val( stringifyArray(vendor.quality.compliance) );
+    }
+    $('#selectHorizontalScaling').prop('checked', vendor.scaling.horizontal);
+    $('#selectVerticalScaling').prop('checked', vendor.scaling.vertical);
+    $('#selectAutoScaling').prop('checked', vendor.scaling.auto);
+    $('#selectPublicHosting').prop('checked', vendor.hosting.public);
+    $('#selectVpsHosting').prop('checked', vendor.hosting.vps);
+    $('#selectPrivateHosting').prop('checked', vendor.hosting.private);
+    $('.selectpicker').selectpicker("refresh");
+  }
+
+  function stringifyArray(array){
+    if( array != null && array.length != 0 ){
+      array = array.map(function(e){
+        return JSON.stringify(e);
+      });
+      array = array.join(", ");
+      array = ("" + array);               //convert Object to String
+      array = array.replace(/\"/g, "");   //remove "", e.g. "house" -> house
+    }
+    return array;
+  }
+</script>
