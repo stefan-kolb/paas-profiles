@@ -139,6 +139,8 @@
         <%= erb(:'profiles/partitials/_addon_service', locals: {addon_service: addon_service}) %>
       <% end %>
 
+      <ul id="results"></ul>
+
     </form>
 
     <div class="text-center" style="padding:20px">
@@ -163,12 +165,12 @@
   margin-top: 10px; 
   padding-bottom: 20px;
 }
-
 </style>
 
 <script src="../../js/bootstrap-select.min.js"></script>
 <script>
   var vendor = {};
+
   $(document).ready(function () {
     $.getJSON('/api/vendors/<%=  @profile['name'].gsub(/[^a-z]/i, '_') %>').done(function (data) {
       vendor = data;
@@ -187,6 +189,13 @@
       vendor.hosting.private = $('#selectPrivateHosting').is(':checked');
       console.log(vendor);
     }); 
+    
+    MyObject.prototype.change = function (value) {
+      this.data = value;
+      this.element.value = value;
+      console.log("New name of input: " + this.data);
+    };
+
   });
 
   function setOptions(){
