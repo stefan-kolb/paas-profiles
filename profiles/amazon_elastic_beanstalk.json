@@ -1,6 +1,6 @@
 {
   "name": "Amazon Elastic Beanstalk",
-  "revision": "2014-07-01",
+  "revision": "2016-12-19",
   "url": "http://aws.amazon.com/elasticbeanstalk/",
   "status": "production",
   "status_since": "2014-07-14",
@@ -180,6 +180,11 @@
       "country": "IE",
       "region": "Dublin"
     },
+    {
+      "continent": "EU",
+      "country": "GB",
+      "region": "London"
+    },    
     {
       "continent": "NA",
       "country": "US",

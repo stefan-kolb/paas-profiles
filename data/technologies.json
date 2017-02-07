@@ -222,11 +222,6 @@
     "dev_model": "open source"
   },
   {
-    "vendor": "Nitrous.io",
-    "platform": "",
-    "isolation": ""
-  },
-  {
     "vendor": "OpenShift Container Platform",
     "platform": "OpenShift Origin",
     "isolation": "Container"
@@ -334,11 +329,6 @@
   },
   {
     "vendor": "Webappcabaret",
-    "platform": "",
-    "isolation": ""
-  },
-  {
-    "vendor": "Webbynode",
     "platform": "",
     "isolation": ""
   }

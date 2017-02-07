@@ -22,6 +22,18 @@ module Profiles
       DatabaseCleaner.clean
     end
 
+    # do only allow a limited set of runtimes for now
+    def test_runtime_names
+      runtimes = %w(java ruby scala groovy php dotnet node go python perl clojure swift apex cobol erlang lua xsjs docker)
+
+      Vendor.all.each do |v|
+        v[:runtimes].each do |rt|
+          runtime = rt[:language]
+          assert(runtimes.include?(runtime), "Runtime not allowed: #{runtime}. Should be one of: #{runtimes.join(',')}")
+        end
+      end
+    end
+
     # do not allow to have one software in any of the other categories
     def test_software_intersection
       software = %w(runtimes.language middleware.name frameworks.name services.native.name services.addon.name)

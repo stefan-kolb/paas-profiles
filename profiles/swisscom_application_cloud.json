@@ -162,7 +162,6 @@
         "description": "Elasticsearch v2.1.0, LogStash v2.1.0 and Kibana v4.3.0 for realtime logging",
         "versions": [
           "2.1.0",
-          "2.1.0",
           "4.3.0"
         ]
       },

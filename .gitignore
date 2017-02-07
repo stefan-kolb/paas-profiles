@@ -22,3 +22,6 @@ doc/
 public/images
 log
 .idea
+
+# Mac OS X
+*.DS_Store
