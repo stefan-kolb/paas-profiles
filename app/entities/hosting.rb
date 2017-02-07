@@ -3,7 +3,7 @@ require 'grape-entity'
 module Profiles
   class Hosting
     class Entity < Grape::Entity
-      expose :public, :private
+      expose :public, :private, :vps
     end
   end
 end
