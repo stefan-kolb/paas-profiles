@@ -1,0 +1,50 @@
+{
+  "name": "d2c",
+  "revision": "2017-02-10",
+  "vendor_verified": "2017-02-10",
+  "url": "https://d2c.io",
+  "status": "production",
+  "status_since": "2017-01-10",
+  "hosting": {
+    "public": true,
+    "private": true
+  },
+  "pricing": [
+    { "model": "fixed", "period": "monthly" },
+    { "model": "fixed", "period": "annually" }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    { "language": "node", "versions": [ "0.12", "4", "6", "7" ] },
+    { "language": "python", "versions": [ "2.7", "3.3", "3.4", "3.5", "3.6" ] },
+    { "language": "go", "versions": [ "1.6", "1.7" ] },
+    { "language": "ruby", "versions": [ "1.9", "2.0", "2.1", "2.2", "2.3", "2.4" ] },
+    { "language": "php", "versions": [ "5.4", "5.5", "5.6", "7.0", "7.1" ] }
+  ],
+  "middleware": [
+    { "name" : "nginx", "versions": [ "1.10", "1.11" ] },
+    { "name" : "haproxy", "versions": [ "1.7" ] },
+    { "name" : "apache", "runtime": "php", "versions": [ "2.2" ] }
+  ],
+  "services": {
+    "native": [
+        { "name": "mysql", "type": "datastore", "versions": [ "5.5", "5.6", "5.7", "8.0" ] },
+        { "name": "mariadb", "type": "datastore", "versions": [ "5.5", "10.0", "10.1" ] },
+        { "name": "percona", "type": "datastore", "versions": [ "5.5", "5.6", "5.7" ] },
+        { "name": "postgresql", "type": "datastore", "versions": [ "9.3", "9.4", "9.5", "9.6" ] },
+        { "name": "mongodb", "type": "datastore", "versions" : [ "2.6", "3.0", "3.2", "3.4" ] },
+        { "name": "redis", "type": "datastore", "versions": [ "2.8", "3.0", "3.2" ] },
+        { "name": "crate", "type": "datastore", "versions": [ "0.57", "1.0" ] },
+        { "name": "elasticsearch", "type": "datastore", "versions": [ "1.4", "1.5", "1.6", "1.7", "2.0", "2.1", "2.2", "2.3", "2.4", "5.0", "5.1", "5.2" ] },
+        { "name": "memcached", "type": "datastore", "versions": [ "1.4" ] }
+    ],
+    "addon": [
+        { "name": "let's encrypt", "url": "https://letsencrypt.org/", "description": "free ssl/tls certificates", "type": "other" }
+    ]
+  },
+  "extensible": true
+}
