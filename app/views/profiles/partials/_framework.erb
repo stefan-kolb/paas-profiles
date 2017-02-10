@@ -1,0 +1,45 @@
+<div id="framework-<%=framework.id%>" name="framework" class="control-group">
+  <label class="control-label"></label>
+  <div class="controls">
+    <div class="input-append">
+      <input id="name-framework-<%=framework.id%>" type="text" class="span2" placeholder="The name of a framework...">
+      <select id="runtime-framework-<%=framework.id%>" class="selectpicker show-tick span2">
+        <option data-hidden="true"></option>
+        <option value="apex">apex</option>
+        <option value="clojure">clojure</option>
+        <option value="cobol">cobol</option>
+        <option value="dotnet">dotnet</option>
+        <option value="erlang">erlang</option>
+        <option value="go">go</option>
+        <option value="groovy">groovy</option>
+        <option value="haskell">haskell</option>
+        <option value="java">java</option>
+        <option value="lua">lua</option>     
+        <option value="node">node</option>
+        <option value="perl">perl</option>      
+        <option value="php">php</option>      
+        <option value="python">python</option>       
+        <option value="ruby">ruby</option>      
+        <option value="scala">scala</option>      
+      </select>
+      <input id="versions-framework<%=framework.id%>" type="text" class="span2" placeholder="Versions, e.g. 2.1, 3">
+      <button id="delete-framework-<%=framework.id%>" class="btn btn-danger" type="button">Delete</button>
+    </div>
+  </div>
+</div>
+<script>
+  $(function() {
+    $('#name-framework-<%=framework.id%>').val('<%= framework.name %>');
+    $('#runtime-framework-<%= framework.id %>').val('<%= framework.runtime %>');
+    $('#versions-framework-<%=framework.id%>').val( stringifyArray(<%= framework.versions %>) );
+    
+    $('#delete-framework-<%=framework.id%>').click(function() {
+      if (confirm('Do you want to delete this framework?')) {
+        $('#framework-<%=framework.id%>').remove();
+      } else {
+        return false;
+      }
+    });
+
+  });
+</script>

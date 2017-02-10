@@ -1,0 +1,38 @@
+<div id="native-service<%=native_service.id%>" name="native-service" class="control-group">
+  <label class="control-label"></label>
+  <div class="controls">
+    <div class="input-append">
+      <input id="name-native-service-<%=native_service.id%>" type="text" class="span2" placeholder="Name">
+      <select id="type-native-service-<%=native_service.id%>" class="selectpicker show-tick span2">
+        <option data-hidden="true"></option>
+        <option value="datastore">datastore</option>
+        <option value="search">search</option>
+        <option value="worker">worker</option>
+        <option value="analytics">analytics</option>
+        <option value="payment">payment</option>
+        <option value="media">media</option>    
+        <option value="messaging">messaging</option>  
+        <option value="devops">devops</option>   
+        <option value="other">other</option>   
+      </select>
+      <input id="versions-native_service-<%=native_service.id%>" type="text" class="span2" placeholder="Versions of the service">
+      <button id="delete-native-service-<%=native_service.id%>" class="btn btn-danger" type="button">Delete</button>
+    </div>
+  </div>
+</div>
+<script>
+  $(function() {
+    $('#name-native-service-<%=native_service.id%>').val('<%= native_service.name %>');
+    $('#type-native-service-<%=native_service.id%>').val('<%= native_service.type %>');
+    $('#versions-native_service-<%=native_service.id%>').val( stringifyArray(<%= native_service.versions %>) );
+
+    $('#delete-native-service-<%=native_service.id%>').click(function() {
+      if (confirm('Do you want to delete this service?')) {
+        $('#native-service<%=native_service.id%>').remove();
+      } else {
+        return false;
+      }
+    });
+
+  });
+</script>
