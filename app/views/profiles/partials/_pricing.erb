@@ -1,0 +1,37 @@
+<div id="pricing-<%=pricing.id%>" name="pricing" class="control-group">
+  <label class="control-label"></label>
+  <div class="controls">
+    <div class="input-append">
+      <select id="model-pricing-<%=pricing.id%>" class="selectpicker show-tick span2" title="Select model">
+        <option data-hidden="true"></option>
+        <option data-icon="icon-signal" value="metered">Metered</option>
+        <option data-icon="icon-lock" value="fixed">Fixed</option>
+        <option data-icon="icon-gift" value="free">Free</option>
+        <option data-icon="icon-asterisk" value="hybrid">Hybrid</option>
+      </select>
+      <select id="period-pricing-<%=pricing.id%>" class="selectpicker show-tick span2">
+        <option data-hidden="false">No period selected</option>
+        <option value="daily">Daily</option>
+        <option value="monthly">Monthly</option>
+        <option value="annually">Annually</option>
+      </select>
+      <button id="delete-pricing-<%=pricing.id%>" class="btn btn-danger" type="button">Delete</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    $("#model-pricing-<%=pricing.id%>").val("<%= pricing.model %>");
+    $("#period-pricing-<%=pricing.id%>").val("<%= pricing.period %>");
+    
+    $('#delete-pricing-<%=pricing.id%>').click(function() {
+      if (confirm('Do you want to delete this pricing?')) {
+        $("#pricing-<%=pricing.id%>").remove();
+      } else {
+        return false;
+      }
+    });
+
+  });
+</script>
