@@ -6,7 +6,7 @@
   "status": "production",
   "status_since": "2017-01-10",
   "hosting": {
-    "public": true,
+    "public": false,
     "private": true
   },
   "pricing": [
