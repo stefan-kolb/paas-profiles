@@ -27,8 +27,7 @@
   ],
   "middleware": [
     { "name" : "nginx", "versions": [ "1.10", "1.11" ] },
-    { "name" : "haproxy", "versions": [ "1.7" ] },
-    { "name" : "apache", "runtime": "php", "versions": [ "2.2" ] }
+    { "name" : "haproxy", "versions": [ "1.7" ] }
   ],
   "services": {
     "native": [
