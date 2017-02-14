@@ -134,7 +134,7 @@
         "versions": [ "0.8.1" ]
       },
       { 
-        "name": "postgres",
+        "name": "postgresql",
         "description": "",
         "type": "datastore",
         "versions": [ "9.5.2" ]

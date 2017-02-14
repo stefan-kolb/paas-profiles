@@ -244,7 +244,7 @@
         ]
       },
       {
-        "name": "riakcs",
+        "name": "riak cs",
         "description": "",
         "type": "datastore",
         "versions": [
