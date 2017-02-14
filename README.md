@@ -1,7 +1,6 @@
 # [PaaS Profiles](https://paasfinder.org)
 [![Build Status](https://travis-ci.org/stefan-kolb/paas-profiles.png)](https://travis-ci.org/stefan-kolb/paas-profiles)
 [![Dependency Status](https://gemnasium.com/badges/github.com/stefan-kolb/paas-profiles.svg)](https://gemnasium.com/github.com/stefan-kolb/paas-profiles)
-[![Donation](https://img.shields.io/badge/donate-paypal-orange.svg)](https://www.paypal.com/cgi-bin/webscr?item_name=PaaSfinder PaaS Provider Comparison&cmd=_donations&lc=US&currency_code=EUR&business=stefan-kolb%40web.de)
 
 *Making Platform as a Service offerings comparable - Ecosystem profiles for portability matching.*
 
