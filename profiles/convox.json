@@ -1,6 +1,6 @@
 {
   "name": "Convox",
-  "revision": "2016-08-10",
+  "revision": "2017-02-14",
   "url": "https://convox.com",
   "status": "beta",
   "status_since": "2015-02-15",
@@ -142,11 +142,6 @@
       "region": "Tokyo"
     },
     {
-      "continent": "AS",
-      "country": "KR",
-      "region": "Seoul"
-    },
-    {
       "continent": "EU",
       "country": "IE",
       "region": "Dublin"
@@ -164,6 +159,11 @@
     {
       "continent": "NA",
       "country": "US",
+      "region": "Ohio"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
       "region": "Oregon"
     },
     {
@@ -172,14 +172,9 @@
       "region": "Sydney"
     },
     {
-      "continent": "SA",
-      "country": "BR",
-      "region": "Sao Paulo"
-    },
-    {
-      "continent": "AS",
-      "country": "IN",
-      "region": "Mumbai"
+      "continent": "EU",
+      "country": "DE",
+      "region": "Frankfurt"
     }
   ]
 }
