@@ -8,6 +8,7 @@ FactoryGirl.define do
     revision Date.today
     status 'production'
     extensible false
+    type 'Generic'
 
     hosting { FactoryGirl.build(:hosting) }
     scaling { FactoryGirl.build(:scaling) }
