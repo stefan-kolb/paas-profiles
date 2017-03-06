@@ -132,7 +132,7 @@
       ]
     },
     {
-      "name": "cake",
+      "name": "cakephp",
       "runtime": "php",
       "versions": [
         "*.*"
