@@ -10,7 +10,7 @@
     "public": true,
     "private": true
   },
-  "pricing": [
+  "pricings": [
     {
       "model": "fixed",
       "period": "monthly"

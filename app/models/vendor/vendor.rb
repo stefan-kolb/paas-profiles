@@ -27,7 +27,7 @@ module Profiles
     field :extensible, type: Boolean
     # relations
     embeds_one :hosting
-    embeds_many :pricings, store_as: 'pricing'
+    embeds_many :pricings
     embeds_one :quality, store_as: 'qos'
     embeds_one :scaling
     embeds_many :runtimes

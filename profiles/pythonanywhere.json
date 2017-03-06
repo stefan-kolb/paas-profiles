@@ -9,7 +9,7 @@
   "hosting": {
     "public": true, "private": false
   },
-  "pricing": [
+  "pricings": [
         { "model": "fixed", "period": "monthly" }
   ],
   "scaling": {

@@ -11,7 +11,7 @@
     "private": true,
     "virtual_private": true
   },
-  "pricing": [
+  "pricings": [
     {
       "model": "fixed",
       "period": "monthly"

@@ -23,7 +23,7 @@ module Profiles
       end
       # pricing
       # lookup.pricings.each do |p|
-      #   query = query.and({'pricing.model' => p.model}, {'pricing.period' => p.period})
+      #   query = query.and({'pricings.model' => p.model}, {'pricings.period' => p.period})
       # end
       # scaling
       if lookup.scaling

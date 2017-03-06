@@ -50,7 +50,7 @@ The code below shows a sample profile.
   "hosting": {
     "public": true, "virtual_private": true, "private": false
   },
-  "pricing": [
+  "pricings": [
 		{ "model": "fixed", "period": "monthly" }
   ],
   "qos": {

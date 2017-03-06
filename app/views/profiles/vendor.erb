@@ -110,9 +110,9 @@
     <% end %>
 
     <p>
-      <% unless @profile['pricing'].blank? %>
+      <% unless @profile['pricings'].blank? %>
           Usage and pricing options available are
-          <% @profile['pricing'].each_with_index do |p, i|
+          <% @profile['pricings'].each_with_index do |p, i|
             if i > 0 %>
                   or
               <% end %>

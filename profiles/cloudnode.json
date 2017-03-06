@@ -9,7 +9,7 @@
     "public": true,
     "private": false
   },
-  "pricing": [
+  "pricings": [
     {
       "model": "free"
     }

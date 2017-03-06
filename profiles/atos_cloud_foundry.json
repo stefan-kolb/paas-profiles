@@ -13,7 +13,7 @@
   "qos": {
     "uptime": 99.9
   },  
-  "pricing": [
+  "pricings": [
     {
       "model": "metered",
       "period": "monthly"

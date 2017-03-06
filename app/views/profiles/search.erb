@@ -26,7 +26,7 @@
  
    # pricing
    unless params[:pricing].nil? || params[:pricing].empty?
-     query = query.where('pricing.model' => params[:pricing])
+     query = query.where('pricings.model' => params[:pricing])
    end
 
    # scaling

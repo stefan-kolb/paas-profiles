@@ -9,7 +9,7 @@
   "hosting": {
     "public": true, "virtual_private": false, "private": false
   },
-  "pricing": [
+  "pricings": [
         { "model": "hybrid", "period": "monthly" }
   ],
   "qos": {

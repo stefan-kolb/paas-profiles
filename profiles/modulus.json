@@ -9,7 +9,7 @@
     "public": true,
     "private": true
   },
-  "pricing": [
+  "pricings": [
     {
       "model": "metered",
       "period": "monthly"

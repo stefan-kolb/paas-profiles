@@ -11,7 +11,7 @@
     "virtual_private": true,
     "private": false
   },
-  "pricing": [
+  "pricings": [
     {
       "model": "hybrid",
       "period": "monthly"

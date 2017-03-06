@@ -10,7 +10,7 @@
     "virtual_private": true,
     "private": false
   },
-  "pricing": [
+  "pricings": [
     {
       "model": "metered",
       "period": "monthly"
