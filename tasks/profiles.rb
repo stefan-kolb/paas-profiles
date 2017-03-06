@@ -8,7 +8,7 @@ namespace :profiles do
         data = JSON.parse(File.read(file_name))
         # sort
         data['runtimes'].sort_by! { |r| r['language'] } unless data['runtimes'].blank?
-        data['middleware'].sort_by! { |m| m['name'] } unless data['middleware'].blank?
+        data['middlewares'].sort_by! { |m| m['name'] } unless data['middlewares'].blank?
         data['frameworks'].sort_by! { |f| f['name'] } unless data['frameworks'].blank?
         unless data['services'].blank?
           data['services']['native'].sort_by! { |n| n['name'] } unless data['services']['native'].blank?

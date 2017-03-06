@@ -99,7 +99,7 @@
       ]
     }
   ],
-  "middleware": [
+  "middlewares": [
     {
       "name": "glassfish",
       "runtime": "java",

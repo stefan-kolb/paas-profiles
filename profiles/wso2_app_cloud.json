@@ -32,7 +32,7 @@
       ]
     }
   ],
-  "middleware": [
+  "middlewares": [
     {
       "name": "WSO2 Application Server",
       "runtime": "java",

@@ -220,7 +220,7 @@
 </div>
 
 <%
-   unless @profile["middleware"].nil? || @profile["middleware"].empty?
+   unless @profile["middlewares"].nil? || @profile["middlewares"].empty?
 %>
     <hr/>
     <div class="row">
@@ -236,7 +236,7 @@
           </thead>
           <tbody>
           <%
-             @profile["middleware"].sort_by { |a| [a["name"], a["runtime"]] }.each do |rt|
+             @profile["middlewares"].sort_by { |a| [a["name"], a["runtime"]] }.each do |rt|
           %>
               <tr>
                 <td>

@@ -38,7 +38,7 @@ FactoryGirl.define do
     end
 
     factory :vendor_with_middleware do
-      # middleware
+      # middlewares
       transient do
         middleware_count 5
       end

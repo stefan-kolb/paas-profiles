@@ -41,7 +41,7 @@
       ]
     }
   ],
-  "middleware": [
+  "middlewares": [
     { "name": "HANA Cloud Integration", "versions": [ ] }
   ],
   "frameworks": [

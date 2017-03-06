@@ -34,7 +34,7 @@
             ]
         }
     ],
-    "middleware": [
+    "middlewares": [
         {
             "name": "example",
             "runtime": "example",

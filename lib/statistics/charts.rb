@@ -33,7 +33,7 @@ module Profiles
 
       distinct_values(type).each do |l|
         count = Vendor.where(type => l).count
-        # TODO: if property is not mandatory this will lead to false % distribution, e.g. middleware
+        # TODO: if property is not mandatory this will lead to false % distribution, e.g. middlewares
         # Wrong chart type because values don't add up to a 100 %
         data << [l, count]
       end

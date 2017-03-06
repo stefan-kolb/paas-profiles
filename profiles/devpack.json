@@ -77,7 +77,7 @@
       ]
     }
   ],
-  "middleware": null,
+  "middlewares": null,
   "frameworks": [
     {
       "name": "rails",

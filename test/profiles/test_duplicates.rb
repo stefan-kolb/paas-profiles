@@ -23,7 +23,7 @@ module Profiles
     end
 
     def test_middleware
-      find_duplicates :middleware
+      find_duplicates :middlewares
     end
 
     def test_frameworks

@@ -65,7 +65,7 @@ The code below shows a sample profile.
   "runtimes": [
     { "language": "java", "versions": [ "1.7", "1.6" ] }
   ],
-  "middleware": [
+  "middlewares": [
     { "name": "tomcat", "runtime": "java", "versions": [ "6.0.35" ] }
   ],
   "frameworks": [
@@ -205,7 +205,7 @@ A string array containing the supported runtime versions. Wildcards `*` may be u
 An array of *preinstalled or fully supported* middleware stacks.
 
 ```json
-"middleware": [
+"middlewares": [
     { "name": "tomcat", "runtime": "java", "versions": [ "6", "7" ] },
     { "name": "nginx", "versions": [ "1.6" ] }
 ]

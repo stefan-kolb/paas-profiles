@@ -37,9 +37,9 @@ module Profiles
       lookup.runtimes.each do |r|
         query = query.all('runtimes.language' => r.language)
       end
-      # middleware
+      # middlewares
       lookup.middlewares.each do |m|
-        query = query.all('middleware.name' => m.name)
+        query = query.all('middlewares.name' => m.name)
       end
       # frameworks
       lookup.frameworks.each do |f|

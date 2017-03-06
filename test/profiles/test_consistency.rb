@@ -36,7 +36,7 @@ module Profiles
 
     # do not allow to have one software in any of the other categories
     def test_software_intersection
-      software = %w(runtimes.language middleware.name frameworks.name services.native.name services.addon.name)
+      software = %w(runtimes.language middlewares.name frameworks.name services.native.name services.addon.name)
       arr = []
       software.each do |s|
         arr << Vendor.distinct(s)
@@ -59,7 +59,7 @@ module Profiles
 
     # only one distinct runtime allowed per middleware
     def test_middleware_runtimes
-      distinct_runtime :middleware
+      distinct_runtime :middlewares
     end
 
     # TODO: distinct url per add-on

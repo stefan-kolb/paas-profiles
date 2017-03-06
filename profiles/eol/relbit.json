@@ -28,7 +28,7 @@
       ]
     }
   ],
-  "middleware": [
+  "middlewares": [
 
   ],
   "frameworks": null,

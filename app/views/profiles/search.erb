@@ -47,9 +47,9 @@
      query = query.all('runtimes.language' => params[:runtimes])
    end
 
-   # middleware
-   unless params[:middleware].nil?
-     query = query.all('middleware.name' => params[:middleware])
+   # middlewares
+   unless params[:middlewares].nil?
+     query = query.all('middlewares.name' => params[:middlewares])
    end
 
    # frameworks

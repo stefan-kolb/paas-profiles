@@ -60,7 +60,7 @@
       ]
     }
   ],
-  "middleware": [
+  "middlewares": [
     {
       "name": "gunicorn",
       "runtime": "python",

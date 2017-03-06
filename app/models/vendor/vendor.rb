@@ -31,7 +31,7 @@ module Profiles
     embeds_one :quality, store_as: 'qos'
     embeds_one :scaling
     embeds_many :runtimes
-    embeds_many :middlewares, store_as: 'middleware'
+    embeds_many :middlewares
     embeds_many :frameworks
     embeds_one :service, store_as: 'services'
     embeds_many :infrastructures

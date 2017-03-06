@@ -55,7 +55,7 @@
       "versions": [ "*.*" ]
     }
   ],
-  "middleware": [
+  "middlewares": [
 
   ],
   "frameworks": [

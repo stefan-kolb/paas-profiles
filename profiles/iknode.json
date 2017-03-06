@@ -30,7 +30,7 @@
       ]
     }
   ],
-  "middleware": [
+  "middlewares": [
 
   ],
   "services": {

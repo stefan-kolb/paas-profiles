@@ -40,7 +40,7 @@
       ]
     }
   ],
-  "middleware": null,
+  "middlewares": null,
   "frameworks": null,
   "services": null,
   "extensible": false,

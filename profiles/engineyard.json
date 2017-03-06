@@ -52,7 +52,7 @@
       ]
     }
   ],
-  "middleware": [
+  "middlewares": [
     {
       "name": "jetty",
       "runtime": "java",

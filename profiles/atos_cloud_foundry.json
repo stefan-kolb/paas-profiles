@@ -96,7 +96,7 @@
       ]
     }
   ],
-  "middleware": [
+  "middlewares": [
     {
       "name": "tomcat",
       "runtime": "java",

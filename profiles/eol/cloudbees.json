@@ -33,7 +33,7 @@
       ]
     }
   ],
-  "middleware": [
+  "middlewares": [
     {
       "name": "jboss",
       "runtime": "java",
