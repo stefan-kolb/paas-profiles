@@ -31,6 +31,20 @@ module Profiles
       erb :'profiles/vendor'
     end
 
+    get '/vendors/:name/update' do
+      @vendor_path = request.referer
+      @update_vendor_path = request.fullpath
+      paas = url_decode(params[:name])
+      @profile = Vendor.where(name: /^#{paas}$/i).first
+
+      halt 404 if @profile.nil?
+
+      @paas = @profile['name']
+      @title = 'Update vendor'
+
+      erb :'profiles/update'
+    end
+
     get '/filter' do
       @title = 'Find your PaaS | PaaS Comparison'
       erb :'profiles/filter'
