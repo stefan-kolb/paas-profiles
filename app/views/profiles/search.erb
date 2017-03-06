@@ -11,8 +11,8 @@
      if params[:hosting].include? 'public'
        query = query.where('hosting.public' => true)
      end
-     if params[:hosting].include? 'vps'
-       query = query.where('hosting.vps' => true)
+     if params[:hosting].include? 'virtual_private'
+       query = query.where('hosting.virtual_private' => true)
      end
      if params[:hosting].include? 'private'
        query = query.where('hosting.private' => true)
@@ -164,7 +164,7 @@
               <% if profile['hosting']['public'] %>
                   <i class="fa fa-eye" title="public"></i>
               <% end %>
-              <% if profile['hosting']['vps'] %>
+              <% if profile['hosting']['virtual_private'] %>
                   <i class="fa fa-low-vision" title="virtual private"></i>
               <% end %>
               <% if profile['hosting']['private'] %>

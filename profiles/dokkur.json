@@ -7,7 +7,7 @@
   "status_since": "2016-07-01",
   "type": "Generic",
   "hosting": {
-    "public": true, "vps": false, "private": false
+    "public": true, "virtual_private": false, "private": false
   },
   "pricing": [
         { "model": "hybrid", "period": "monthly" }

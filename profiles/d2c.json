@@ -9,7 +9,7 @@
   "hosting": {
     "public": false,
     "private": false,
-    "vps": true
+    "virtual_private": true
   },
   "pricing": [
     { "model": "fixed", "period": "monthly" },

@@ -56,7 +56,7 @@ module Profiles
 
       # must be available either as public or private service
       define_method('test_hosting_existence') do
-        assert(@profile.hosting.public || @profile.hosting.private || @profile.hosting.vps, 'A PaaS must be available either as public, virtual private or private service')
+        assert(@profile.hosting.public || @profile.hosting.private || @profile.hosting.virtual_private, 'A PaaS must be available either as public, virtual private or private service')
       end
 
       # no runtime (language) duplicates

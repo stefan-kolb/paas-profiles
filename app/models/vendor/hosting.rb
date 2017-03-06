@@ -7,7 +7,7 @@ module Profiles
     embedded_in :vendor
 
     field :public, type: Boolean
-    field :vps, type: Boolean
+    field :virtual_private, type: Boolean
     field :private, type: Boolean
     # validations
     validates :public, presence: true

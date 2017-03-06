@@ -7,7 +7,7 @@
   "type": "IaaS-centric",
   "hosting": {
     "public": false,
-    "vps": true,
+    "virtual_private": true,
     "private": false
   },
   "pricing": [
