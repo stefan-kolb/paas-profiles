@@ -1,490 +1,12 @@
 [
   {
     "_id": {
-      "$oid": "57a9a714f72c7618704a2ad6"
+      "$oid": "58c16a3034c7c50774e72ee1"
     },
     "continent": "AS",
     "coordinates": [
-      19.0759837,
-      72.8776559
-    ],
-    "country": "IN",
-    "provider": [
-
-    ],
-    "region": "Mumbai"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a714f72c7618704a2ad7"
-    },
-    "continent": "NA",
-    "coordinates": [
-      37.3541079,
-      -121.9552356
-    ],
-    "country": "US",
-    "provider": [
-      "CenturyLink"
-    ],
-    "region": "Santa Clara"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a716f72c7618704a2ad8"
-    },
-    "continent": "OC",
-    "coordinates": [
-      -31.9505269,
-      115.8604572
-    ],
-    "country": "AU",
-    "provider": [
-      "Atos Cloud"
-    ],
-    "region": "Perth"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a716f72c7618704a2ad9"
-    },
-    "continent": "NA",
-    "coordinates": [
-      32.7766642,
-      -96.79698789999999
-    ],
-    "country": "US",
-    "provider": [
-      "Softlayer",
-      "Vultr"
-    ],
-    "region": "Dallas"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a716f72c7618704a2ada"
-    },
-    "continent": "EU",
-    "coordinates": [
-      51.5073509,
-      -0.1277583
-    ],
-    "country": "GB",
-    "provider": [
-      "Softlayer",
-      "DigitalOcean",
-      "Vultr",
-      "Rackspace"
-    ],
-    "region": "London"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a717f72c7618704a2adb"
-    },
-    "continent": "EU",
-    "coordinates": [
-      48.856614,
-      2.3522219
-    ],
-    "country": "FR",
-    "provider": [
-      "Iliad Datacenter",
-      "Vultr"
-    ],
-    "region": "Paris"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a717f72c7618704a2adc"
-    },
-    "continent": "NA",
-    "coordinates": [
-      45.5016889,
-      -73.567256
-    ],
-    "country": "CA",
-    "provider": [
-      "Netelligent"
-    ],
-    "region": "Montreal"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a717f72c7618704a2add"
-    },
-    "continent": "EU",
-    "coordinates": [
-      52.3702157,
-      4.895167900000001
-    ],
-    "country": "NL",
-    "provider": [
-      "DigitalOcean",
-      "Vultr",
-      "Joyent"
-    ],
-    "region": "Amsterdam"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a718f72c7618704a2ade"
-    },
-    "continent": "NA",
-    "coordinates": [
-      37.7749295,
-      -122.4194155
-    ],
-    "country": "US",
-    "provider": [
-      "DigitalOcean"
-    ],
-    "region": "San Francisco"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a718f72c7618704a2adf"
-    },
-    "continent": "NA",
-    "coordinates": [
-      40.7127837,
-      -74.0059413
-    ],
-    "country": "US",
-    "provider": [
-      "DigitalOcean",
-      "Vultr"
-    ],
-    "region": "New York"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a718f72c7618704a2ae0"
-    },
-    "continent": "EU",
-    "coordinates": [
-      50.1109221,
-      8.6821267
-    ],
-    "country": "DE",
-    "provider": [
-      "DigitalOcean",
-      "AWS",
-      "Vultr"
-    ],
-    "region": "Frankfurt"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71af72c7618704a2ae1"
-    },
-    "continent": "EU",
-    "coordinates": [
-      53.41291,
-      -8.24389
-    ],
-    "country": "IE",
-    "provider": [
-      "AWS"
-    ],
-    "region": "Ireland"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71af72c7618704a2ae2"
-    },
-    "continent": "NA",
-    "coordinates": [
-      41.8780025,
-      -93.097702
-    ],
-    "country": "US",
-    "provider": [
-      "GCE",
-      "Azure"
-    ],
-    "region": "Iowa"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71af72c7618704a2ae3"
-    },
-    "continent": "NA",
-    "coordinates": [
-      33.836081,
-      -81.1637245
-    ],
-    "country": "US",
-    "provider": [
-      "GCE"
-    ],
-    "region": "South Carolina"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71af72c7618704a2ae4"
-    },
-    "continent": "EU",
-    "coordinates": [
-      50.4491086,
-      3.8183757
-    ],
-    "country": "BE",
-    "provider": [
-      "GCE"
-    ],
-    "region": "St. Ghislain"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71af72c7618704a2ae5"
-    },
-    "continent": "AS",
-    "coordinates": [
-      24.0517963,
-      120.5161352
-    ],
-    "country": "TW",
-    "provider": [
-      "GCE"
-    ],
-    "region": "Changhua County"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71bf72c7618704a2ae6"
-    },
-    "continent": "NA",
-    "coordinates": [
-      47.6062095,
-      -122.3320708
-    ],
-    "country": "US",
-    "provider": [
-      "Vultr"
-    ],
-    "region": "Seattle"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71bf72c7618704a2ae7"
-    },
-    "continent": "NA",
-    "coordinates": [
-      37.387474,
-      -122.0575434
-    ],
-    "country": "US",
-    "provider": [
-      "Vultr"
-    ],
-    "region": "Silicon Valley"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71bf72c7618704a2ae8"
-    },
-    "continent": "NA",
-    "coordinates": [
-      34.0522342,
-      -118.2436849
-    ],
-    "country": "US",
-    "provider": [
-      "Vultr"
-    ],
-    "region": "Los Angeles"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71bf72c7618704a2ae9"
-    },
-    "continent": "NA",
-    "coordinates": [
-      41.8781136,
-      -87.6297982
-    ],
-    "country": "US",
-    "provider": [
-      "Vultr",
-      "Rackspace"
-    ],
-    "region": "Chicago"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71cf72c7618704a2aea"
-    },
-    "continent": "NA",
-    "coordinates": [
-      25.7616798,
-      -80.1917902
-    ],
-    "country": "US",
-    "provider": [
-      "Vultr"
-    ],
-    "region": "Miami"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71ef72c7618704a2aeb"
-    },
-    "continent": "NA",
-    "coordinates": [
-      37.4315734,
-      -78.6568942
-    ],
-    "country": "US",
-    "provider": [
-      "Azure",
-      "AWS"
-    ],
-    "region": "Virginia"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71ef72c7618704a2aec"
-    },
-    "continent": "NA",
-    "coordinates": [
-      40.6331249,
-      -89.3985283
-    ],
-    "country": "US",
-    "provider": [
-      "Azure"
-    ],
-    "region": "Illinois"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71ef72c7618704a2aed"
-    },
-    "continent": "NA",
-    "coordinates": [
-      31.9685988,
-      -99.9018131
-    ],
-    "country": "US",
-    "provider": [
-      "Azure"
-    ],
-    "region": "Texas"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71ff72c7618704a2aee"
-    },
-    "continent": "NA",
-    "coordinates": [
-      36.778261,
-      -119.4179324
-    ],
-    "country": "US",
-    "provider": [
-      "Azure"
-    ],
-    "region": "California"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71ff72c7618704a2aef"
-    },
-    "continent": "AS",
-    "coordinates": [
-      22.2783151,
-      114.174695
-    ],
-    "country": "CN",
-    "provider": [
-      "Azure"
-    ],
-    "region": "Hong Kong"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71ff72c7618704a2af0"
-    },
-    "continent": "AS",
-    "coordinates": [
-      35.8617292,
-      139.6454822
-    ],
-    "country": "JP",
-    "provider": [
-      "Azure"
-    ],
-    "region": "Saitama"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a71ff72c7618704a2af1"
-    },
-    "continent": "AS",
-    "coordinates": [
-      34.6937378,
-      135.5021651
-    ],
-    "country": "JP",
-    "provider": [
-      "Azure"
-    ],
-    "region": "Osaka"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a721f72c7618704a2af2"
-    },
-    "continent": "NA",
-    "coordinates": [
-      37.3382082,
-      -121.8863286
-    ],
-    "country": "US",
-    "provider": [
-      "Equinix"
-    ],
-    "region": "San Jose"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a721f72c7618704a2af3"
-    },
-    "continent": "NA",
-    "coordinates": [
-      33.4483771,
-      -112.0740373
-    ],
-    "country": "US",
-    "provider": [
-
-    ],
-    "region": "Phoenix"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a721f72c7618704a2af4"
-    },
-    "continent": "NA",
-    "coordinates": [
-      38.9071923,
-      -77.0368707
-    ],
-    "country": "US",
-    "provider": [
-
-    ],
-    "region": "Washington DC"
-  },
-  {
-    "_id": {
-      "$oid": "57a9a712f72c7618704a2acd"
-    },
-    "continent": "AS",
-    "coordinates": [
-      1.3553794,
-      103.8677444
+      1.352083,
+      103.819836
     ],
     "country": "SG",
     "provider": [
@@ -498,7 +20,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a712f72c7618704a2ace"
+      "$oid": "58c16a3034c7c50774e72ee2"
     },
     "continent": "EU",
     "coordinates": [
@@ -514,7 +36,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a712f72c7618704a2acf"
+      "$oid": "58c16a3134c7c50774e72ee3"
     },
     "continent": "OC",
     "coordinates": [
@@ -533,7 +55,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a712f72c7618704a2ad0"
+      "$oid": "58c16a3134c7c50774e72ee4"
     },
     "continent": "AS",
     "coordinates": [
@@ -551,7 +73,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a712f72c7618704a2ad1"
+      "$oid": "58c16a3234c7c50774e72ee5"
     },
     "continent": "AS",
     "coordinates": [
@@ -567,7 +89,25 @@
   },
   {
     "_id": {
-      "$oid": "57a9a713f72c7618704a2ad2"
+      "$oid": "58c16a3234c7c50774e72ee6"
+    },
+    "continent": "EU",
+    "coordinates": [
+      51.5073509,
+      -0.1277583
+    ],
+    "country": "GB",
+    "provider": [
+      "Softlayer",
+      "DigitalOcean",
+      "Vultr",
+      "Rackspace"
+    ],
+    "region": "London"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a3334c7c50774e72ee7"
     },
     "continent": "NA",
     "coordinates": [
@@ -582,7 +122,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a713f72c7618704a2ad3"
+      "$oid": "58c16a3434c7c50774e72ee8"
     },
     "continent": "NA",
     "coordinates": [
@@ -597,7 +137,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a713f72c7618704a2ad4"
+      "$oid": "58c16a3434c7c50774e72ee9"
     },
     "continent": "NA",
     "coordinates": [
@@ -612,7 +152,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a713f72c7618704a2ad5"
+      "$oid": "58c16a3634c7c50774e72eea"
     },
     "continent": "SA",
     "coordinates": [
@@ -628,7 +168,543 @@
   },
   {
     "_id": {
-      "$oid": "57a9a721f72c7618704a2af5"
+      "$oid": "58c16a3734c7c50774e72eeb"
+    },
+    "continent": "AS",
+    "coordinates": [
+      19.0759837,
+      72.8776559
+    ],
+    "country": "IN",
+    "provider": [
+
+    ],
+    "region": "Mumbai"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a3834c7c50774e72eec"
+    },
+    "continent": "NA",
+    "coordinates": [
+      37.09024,
+      -95.712891
+    ],
+    "country": "US",
+    "provider": [
+      "CenturyLink"
+    ],
+    "region": "US East"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a3934c7c50774e72eed"
+    },
+    "continent": "NA",
+    "coordinates": [
+      37.09024,
+      -95.712891
+    ],
+    "country": "US",
+    "provider": [
+      "CenturyLink"
+    ],
+    "region": "US West"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a3a34c7c50774e72eee"
+    },
+    "continent": "EU",
+    "coordinates": [
+      47.3768866,
+      8.541694
+    ],
+    "country": "CH",
+    "provider": [
+      "OpenStack"
+    ],
+    "region": "Zurich"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a3c34c7c50774e72eef"
+    },
+    "continent": "OC",
+    "coordinates": [
+      -31.9505269,
+      115.8604572
+    ],
+    "country": "AU",
+    "provider": [
+      "Atos Cloud"
+    ],
+    "region": "Perth"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a3d34c7c50774e72ef0"
+    },
+    "continent": "NA",
+    "coordinates": [
+      32.7766642,
+      -96.79698789999999
+    ],
+    "country": "US",
+    "provider": [
+      "Softlayer",
+      "Vultr"
+    ],
+    "region": "Dallas"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a3e34c7c50774e72ef1"
+    },
+    "continent": "EU",
+    "coordinates": [
+      48.856614,
+      2.3522219
+    ],
+    "country": "FR",
+    "provider": [
+      "Iliad Datacenter",
+      "Vultr"
+    ],
+    "region": "Paris"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a3f34c7c50774e72ef2"
+    },
+    "continent": "NA",
+    "coordinates": [
+      45.5016889,
+      -73.567256
+    ],
+    "country": "CA",
+    "provider": [
+      "Netelligent"
+    ],
+    "region": "Montreal"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4034c7c50774e72ef3"
+    },
+    "continent": "EU",
+    "coordinates": [
+      52.3702157,
+      4.895167900000001
+    ],
+    "country": "NL",
+    "provider": [
+      "DigitalOcean",
+      "Vultr",
+      "Joyent"
+    ],
+    "region": "Amsterdam"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4134c7c50774e72ef4"
+    },
+    "continent": "NA",
+    "coordinates": [
+      37.7749295,
+      -122.4194155
+    ],
+    "country": "US",
+    "provider": [
+      "DigitalOcean"
+    ],
+    "region": "San Francisco"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4134c7c50774e72ef5"
+    },
+    "continent": "NA",
+    "coordinates": [
+      40.7127837,
+      -74.0059413
+    ],
+    "country": "US",
+    "provider": [
+      "DigitalOcean",
+      "Vultr"
+    ],
+    "region": "New York"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4234c7c50774e72ef6"
+    },
+    "continent": "EU",
+    "coordinates": [
+      50.1109221,
+      8.6821267
+    ],
+    "country": "DE",
+    "provider": [
+      "DigitalOcean",
+      "AWS",
+      "Vultr"
+    ],
+    "region": "Frankfurt"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4534c7c50774e72ef7"
+    },
+    "continent": "EU",
+    "coordinates": [
+      53.41291,
+      -8.24389
+    ],
+    "country": "IE",
+    "provider": [
+      "AWS"
+    ],
+    "region": "Ireland"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4634c7c50774e72ef8"
+    },
+    "continent": "NA",
+    "coordinates": [
+      41.8780025,
+      -93.097702
+    ],
+    "country": "US",
+    "provider": [
+      "GCE",
+      "Microsoft Azure",
+      "Azure"
+    ],
+    "region": "Iowa"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4734c7c50774e72ef9"
+    },
+    "continent": "NA",
+    "coordinates": [
+      33.836081,
+      -81.1637245
+    ],
+    "country": "US",
+    "provider": [
+      "GCE"
+    ],
+    "region": "South Carolina"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4834c7c50774e72efa"
+    },
+    "continent": "EU",
+    "coordinates": [
+      50.4491086,
+      3.8183757
+    ],
+    "country": "BE",
+    "provider": [
+      "GCE"
+    ],
+    "region": "St. Ghislain"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4934c7c50774e72efb"
+    },
+    "continent": "AS",
+    "coordinates": [
+      24.0517963,
+      120.5161352
+    ],
+    "country": "TW",
+    "provider": [
+      "GCE"
+    ],
+    "region": "Changhua County"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4934c7c50774e72efc"
+    },
+    "continent": "NA",
+    "coordinates": [
+      47.6062095,
+      -122.3320708
+    ],
+    "country": "US",
+    "provider": [
+      "Vultr"
+    ],
+    "region": "Seattle"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4a34c7c50774e72efd"
+    },
+    "continent": "NA",
+    "coordinates": [
+      37.387474,
+      -122.0575434
+    ],
+    "country": "US",
+    "provider": [
+      "Vultr"
+    ],
+    "region": "Silicon Valley"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4a34c7c50774e72efe"
+    },
+    "continent": "NA",
+    "coordinates": [
+      34.0522342,
+      -118.2436849
+    ],
+    "country": "US",
+    "provider": [
+      "Vultr"
+    ],
+    "region": "Los Angeles"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4b34c7c50774e72eff"
+    },
+    "continent": "NA",
+    "coordinates": [
+      41.8781136,
+      -87.6297982
+    ],
+    "country": "US",
+    "provider": [
+      "Vultr",
+      "Rackspace"
+    ],
+    "region": "Chicago"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4c34c7c50774e72f00"
+    },
+    "continent": "NA",
+    "coordinates": [
+      25.7616798,
+      -80.1917902
+    ],
+    "country": "US",
+    "provider": [
+      "Vultr"
+    ],
+    "region": "Miami"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a4f34c7c50774e72f01"
+    },
+    "continent": "NA",
+    "coordinates": [
+      40.4172871,
+      -82.90712300000001
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Ohio"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5034c7c50774e72f02"
+    },
+    "continent": "NA",
+    "coordinates": [
+      43.653226,
+      -79.3831843
+    ],
+    "country": "CA",
+    "provider": [
+      "Microsoft Azure"
+    ],
+    "region": "Toronto"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5134c7c50774e72f03"
+    },
+    "continent": "EU",
+    "coordinates": [
+      55.755826,
+      37.6173
+    ],
+    "country": "RU",
+    "provider": [
+      "Croc"
+    ],
+    "region": "Moscow"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5334c7c50774e72f04"
+    },
+    "continent": "NA",
+    "coordinates": [
+      37.4315734,
+      -78.6568942
+    ],
+    "country": "US",
+    "provider": [
+      "Azure",
+      "AWS"
+    ],
+    "region": "Virginia"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5434c7c50774e72f05"
+    },
+    "continent": "NA",
+    "coordinates": [
+      40.6331249,
+      -89.3985283
+    ],
+    "country": "US",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Illinois"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5534c7c50774e72f06"
+    },
+    "continent": "NA",
+    "coordinates": [
+      31.9685988,
+      -99.9018131
+    ],
+    "country": "US",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Texas"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5634c7c50774e72f07"
+    },
+    "continent": "NA",
+    "coordinates": [
+      36.778261,
+      -119.4179324
+    ],
+    "country": "US",
+    "provider": [
+      "Azure"
+    ],
+    "region": "California"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5634c7c50774e72f08"
+    },
+    "continent": "AS",
+    "coordinates": [
+      22.396428,
+      114.109497
+    ],
+    "country": "CN",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Hong Kong"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5734c7c50774e72f09"
+    },
+    "continent": "AS",
+    "coordinates": [
+      35.8569991,
+      139.6488487
+    ],
+    "country": "JP",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Saitama"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5834c7c50774e72f0a"
+    },
+    "continent": "AS",
+    "coordinates": [
+      34.6937378,
+      135.5021651
+    ],
+    "country": "JP",
+    "provider": [
+      "Azure"
+    ],
+    "region": "Osaka"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5a34c7c50774e72f0b"
+    },
+    "continent": "NA",
+    "coordinates": [
+      37.3382082,
+      -121.8863286
+    ],
+    "country": "US",
+    "provider": [
+      "Equinix"
+    ],
+    "region": "San Jose"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5b34c7c50774e72f0c"
+    },
+    "continent": "NA",
+    "coordinates": [
+      33.4483771,
+      -112.0740373
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Phoenix"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5c34c7c50774e72f0d"
+    },
+    "continent": "NA",
+    "coordinates": [
+      38.9071923,
+      -77.0368707
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Washington DC"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5c34c7c50774e72f0e"
     },
     "continent": "NA",
     "coordinates": [
@@ -643,7 +719,52 @@
   },
   {
     "_id": {
-      "$oid": "57a9a724f72c7618704a2af6"
+      "$oid": "58c16a5e34c7c50774e72f0f"
+    },
+    "continent": "EU",
+    "coordinates": [
+      50.4491086,
+      3.8183757
+    ],
+    "country": "BE",
+    "provider": [
+
+    ],
+    "region": "St. Ghislain, Belgium"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a5f34c7c50774e72f10"
+    },
+    "continent": "NA",
+    "coordinates": [
+      41.2619444,
+      -95.8608333
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Council Bluffs, Iowa"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a6034c7c50774e72f11"
+    },
+    "continent": "NA",
+    "coordinates": [
+      33.1260618,
+      -80.0087746
+    ],
+    "country": "US",
+    "provider": [
+
+    ],
+    "region": "Berkeley County, South Carolina"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a6334c7c50774e72f12"
     },
     "continent": "OC",
     "coordinates": [
@@ -658,7 +779,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a725f72c7618704a2af7"
+      "$oid": "58c16a6434c7c50774e72f13"
     },
     "continent": "OC",
     "coordinates": [
@@ -673,7 +794,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a727f72c7618704a2af8"
+      "$oid": "58c16a6634c7c50774e72f14"
     },
     "continent": "NA",
     "coordinates": [
@@ -688,12 +809,12 @@
   },
   {
     "_id": {
-      "$oid": "57a9a727f72c7618704a2af9"
+      "$oid": "58c16a6734c7c50774e72f15"
     },
     "continent": "NA",
     "coordinates": [
-      36.778261,
-      -119.4179324
+      38.8375215,
+      -120.8958242
     ],
     "country": "US",
     "provider": [
@@ -703,7 +824,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a727f72c7618704a2afa"
+      "$oid": "58c16a6834c7c50774e72f16"
     },
     "continent": "EU",
     "coordinates": [
@@ -718,7 +839,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a728f72c7618704a2afb"
+      "$oid": "58c16a6834c7c50774e72f17"
     },
     "continent": "EU",
     "coordinates": [
@@ -733,7 +854,22 @@
   },
   {
     "_id": {
-      "$oid": "57a9a72af72c7618704a2afc"
+      "$oid": "58c16a6b34c7c50774e72f18"
+    },
+    "continent": "EU",
+    "coordinates": [
+      47.497912,
+      19.040235
+    ],
+    "country": "HU",
+    "provider": [
+
+    ],
+    "region": "Budapest"
+  },
+  {
+    "_id": {
+      "$oid": "58c16a6c34c7c50774e72f19"
     },
     "continent": "NA",
     "coordinates": [
@@ -748,7 +884,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a72af72c7618704a2afd"
+      "$oid": "58c16a6c34c7c50774e72f1a"
     },
     "continent": "NA",
     "coordinates": [
@@ -763,7 +899,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a72af72c7618704a2afe"
+      "$oid": "58c16a6d34c7c50774e72f1b"
     },
     "continent": "EU",
     "coordinates": [
@@ -778,7 +914,7 @@
   },
   {
     "_id": {
-      "$oid": "57a9a72bf72c7618704a2aff"
+      "$oid": "58c16a6f34c7c50774e72f1c"
     },
     "continent": "EU",
     "coordinates": [
@@ -793,17 +929,17 @@
   },
   {
     "_id": {
-      "$oid": "57a9a72bf72c7618704a2b00"
+      "$oid": "58c16a6f34c7c50774e72f1d"
     },
-    "continent": "NA",
+    "continent": "EU",
     "coordinates": [
-      27.6648274,
-      -81.5157535
+      46.9479739,
+      7.4474468
     ],
-    "country": "US",
+    "country": "CH",
     "provider": [
-
+      "OpenStack"
     ],
-    "region": "Florida"
+    "region": "Bern"
   }
 ]
