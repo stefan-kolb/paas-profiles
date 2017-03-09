@@ -12,11 +12,6 @@
     "isolation": "Container"
   },
   {
-    "vendor": "Apache Stratos",
-    "isolation": "",
-    "dev_model": "open source"
-  },
-  {
     "vendor": "App42 PaaS",
     "isolation": ""
   },
