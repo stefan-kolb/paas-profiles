@@ -47,6 +47,7 @@ The code below shows a sample profile.
   "status": "production",
   "status_since": "2012-07-15",
   "type": "Generic",
+  "platform": "Cloud Foundry",
   "hosting": {
     "public": true, "virtual_private": true, "private": false
   },
@@ -130,6 +131,11 @@ SaaS-centric, Generic, IaaS-centric
 ```
 
 Please see [this paper](https://www.uni-bamberg.de/fileadmin/uni/fakultaeten/wiai_lehrstuehle/praktische_informatik/Dateien/Publikationen/sose14-towards-application-portability-in-paas.pdf) for more information about the suggested service types.
+
+### Platform
+
+If you are a provider using a core platform like Cloud Foundry or OpenShift, please specify this within the `platform` attribute via the platform's name from the linked profile.
+Customers are then able to find your offering when looking for providers of the core platform.
 
 ### Pricing
 

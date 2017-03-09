@@ -5,6 +5,7 @@
   "status": "production",
   "status_since": "2016-09-30",
   "type": "Generic",
+  "platform": "Cloud Foundry",
   "hosting": {
     "public": true,
     "virtual_private": true,

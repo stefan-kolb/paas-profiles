@@ -57,7 +57,6 @@ namespace :db do
     data.each do |e|
       begin
         Profiles::Vendor.find_by(name: e['vendor']).update(
-          platform: e['platform'],
           isolation: e['isolation'],
           dev_model: e['dev_model']
         )

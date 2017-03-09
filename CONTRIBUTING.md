@@ -20,6 +20,7 @@ To add a new PaaS offering, add a new JSON file inside the folder [`profiles`](/
     paas_name_without_special_characters.json
 
 Please see the [profile specification](README.md#profile-specification) for details on the expected format.
+Additionally, you may add technological information like user space isolation or licensing model about the offering inside the [technologies file](/data/technologies.json).
 
 To include a logo for your PaaS you must provide two `.png` images inside the folder [`public/img/vendor`](/public/img/vendor).
 

@@ -5,6 +5,7 @@
   "status": "production",
   "status_since": null,
   "type": "Generic",
+  "platform": "OpenShift Origin",
   "hosting": {
     "public": true,
     "virtual_private": true,

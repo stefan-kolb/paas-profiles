@@ -6,6 +6,7 @@
   "status": "production",
   "status_since": "2016-10-05",
   "type": "Generic",
+  "platform": "OpenShift Container Platform",
   "hosting": {
     "public": true,
     "private": true,
