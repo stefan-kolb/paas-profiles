@@ -17,8 +17,7 @@ module Profiles
         end
       end
 
-      technologies = JSON.parse(File.read(File.join(__dir__, '..', '..', 'data/technologies.json')))
-      @providers = technologies.reject { |t| t['platform'].blank? }
+      @providers = Vendor.in(platform: Vendor.distinct(:platform))
     end
 
     def teardown
@@ -80,7 +79,7 @@ module Profiles
 
     def loop_providers
       @providers.each do |p|
-        provider = Vendor.find_by(name: p['vendor'])
+        provider = p
         platform = Vendor.find_by(name: p['platform'])
 
         yield provider, platform
