@@ -2,7 +2,7 @@
   "name": "Nuvla",
   "revision": "2015-10-13",
   "vendor_verified": "2015-10-13",
-  "url": "http://nuv.la/login",
+  "url": "https://nuv.la",
   "status": "production",
   "status_since": "2012-01-01",
   "type": "IaaS-centric",
