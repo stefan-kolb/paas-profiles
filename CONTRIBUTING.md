@@ -44,6 +44,8 @@ Set your local rack environment to `development` via an environment variable.
 export RACK_ENV=development
 ```
 
+> __Problems with the installation of rmagick gem__
+>
 > **Note:** On some Ubuntu and OS X installations you might find the following
 > error concerning the MagickCore package:
 >
@@ -65,12 +67,16 @@ export RACK_ENV=development
 > ```
 >
 > On OS X:
-
+>
 > Install imagemagick via macports (requires pre-installed macports) 
 > ``` bash
 > sudo port install ImageMagick
 > ```
 > Note: Homebrew installs ImageMagick 7 that causes problems while installing rmagick.
+>
+> On Windows:  
+>
+> Please see [https://github.com/rmagick/rmagick/wiki/Installing-on-Windows](https://github.com/rmagick/rmagick/wiki/Installing-on-Windows) for installation instructions.
 >
 
 ### Preparing the Database
