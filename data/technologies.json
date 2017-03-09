@@ -331,5 +331,10 @@
     "vendor": "Webappcabaret",
     "platform": "",
     "isolation": ""
+  },
+  {
+    "vendor": "PodSpace",
+    "platform": "OpenShift Origin",
+    "isolation": "Container"
   }
 ]
