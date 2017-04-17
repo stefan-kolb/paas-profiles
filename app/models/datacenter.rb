@@ -13,7 +13,7 @@ module Profiles
     field :coordinates, type: Array
 
     # validations
-    validates :continent, inclusion: { in: %w(AF AS EU NA OC SA) }
+    validates :continent, inclusion: { in: %w[AF AS EU NA OC SA] }
     validate :country_codes, if: proc { !country.nil? && !country.empty? }
 
     def country_codes

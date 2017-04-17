@@ -16,8 +16,8 @@ module Profiles
     configure do
       helpers ApplicationHelpers
 
-      set :root, proc { File.join(__dir__, '..') }
-      set :views, proc { File.join(root, 'app/views') }
+      set(:root, proc { File.join(__dir__, '..') })
+      set(:views, proc { File.join(root, 'app/views') })
       not_found { erb :'404', layout: false }
       error { erb :'500', layout: false }
     end

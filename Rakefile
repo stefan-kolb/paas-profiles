@@ -30,4 +30,4 @@ Rake::TestTask.new do |t|
   t.ruby_opts = ['-W1']
 end
 
-task default: [:rubocop, :test]
+task default: %i[rubocop test]

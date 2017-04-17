@@ -24,7 +24,7 @@ module Profiles
 
     # do only allow a limited set of runtimes for now
     def test_runtime_names
-      runtimes = %w(java ruby scala groovy php dotnet node go python perl clojure swift apex cobol erlang lua xsjs docker)
+      runtimes = %w[java ruby scala groovy php dotnet node go python perl clojure swift apex cobol erlang lua xsjs docker]
 
       Vendor.all.each do |v|
         v[:runtimes].each do |rt|
@@ -36,7 +36,7 @@ module Profiles
 
     # do not allow to have one software in any of the other categories
     def test_software_intersection
-      software = %w(runtimes.language middlewares.name frameworks.name services.native.name services.addon.name)
+      software = %w[runtimes.language middlewares.name frameworks.name services.native.name services.addon.name]
       arr = []
       software.each do |s|
         arr << Vendor.distinct(s)

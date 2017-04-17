@@ -9,7 +9,7 @@ module Profiles
     field :model, type: String
     field :period, type: String
     # validations
-    validates :model, inclusion: { in: %w(fixed metered hybrid free) }
-    validates :period, inclusion: { in: %w(daily monthly annually) }, if: proc { !model.eql?('free') }
+    validates :model, inclusion: { in: %w[fixed metered hybrid free] }
+    validates :period, inclusion: { in: %w[daily monthly annually] }, if: proc { !model.eql?('free') }
   end
 end

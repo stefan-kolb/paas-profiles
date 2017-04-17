@@ -78,7 +78,6 @@ namespace :assets do
           image.scale!(80, 80)
           image.write("public/sources/#{type}/" << to_filename(vendor['vendor']) << '.png')
         end
-
       rescue StandardError => e
         puts "Error retrieving image of #{vendor['vendor']}."
         puts e.message

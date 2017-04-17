@@ -39,7 +39,7 @@ module Profiles
     validates :name, presence: true
     validates :revision, presence: true
     validates :url, presence: true, format: { with: %r{http[s]?://.*} }
-    validates :status, presence: true, inclusion: { in: %w(alpha beta production eol) }
+    validates :status, presence: true, inclusion: { in: %w[alpha beta production eol] }
     validates :type, presence: true
     validates :extensible, presence: true
     validates :hosting, presence: true

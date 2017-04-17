@@ -36,7 +36,6 @@ module Profiles
       arr = /^((\*|\d+)\.)?((\*|\d+)\.)?(\*|\d+)$/.match(@str)[0].split('.')
       @major = arr[0]
       @minor = arr[1]
-
     rescue StandardError => e
       puts 'Error in version.rb ' << e.to_s
     end

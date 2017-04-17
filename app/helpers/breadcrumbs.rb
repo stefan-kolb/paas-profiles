@@ -25,7 +25,7 @@ module SimpleNavigation
       end
 
       def last_item?(item_container)
-        !item_container.items.any?(&:selected?)
+        item_container.items.none?(&:selected?)
       end
 
       def divider
