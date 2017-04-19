@@ -1,0 +1,53 @@
+{
+  "name": "Bytemark",
+  "revision": "2016-08-11",
+  "url": "https://www.bytemark.co.uk/",
+  "status": "production",
+  "status_since": "2002-07-12",
+  "vendor_verified": "2016-08-11",
+  "type": "IaaS-centric",
+  "hosting": {
+    "public": true,
+    "private": false
+  },
+  "qos": {
+    "uptime": null,
+    "compliance": ["ISO27001"]
+  },
+  "pricing": [
+    {
+      "model": "fixed",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+  ],
+  "middleware": [
+  ],
+  "frameworks": [
+  ],
+  "services": {
+    "native": [
+    ],
+    "addon": [
+    ]
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "GB",
+      "region": "Manchester"
+    },
+    {
+      "continent": "EU",
+      "country": "GB",
+      "region": "York"
+    }
+  ]
+}
