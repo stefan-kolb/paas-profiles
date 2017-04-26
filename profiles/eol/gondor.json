@@ -1,9 +1,9 @@
 {
   "name": "Gondor",
-  "revision": "2013-12-19",
+  "revision": "2017-04-26",
   "url": "https://gondor.io/",
-  "status": "production",
-  "status_since": "2011-09-02",
+  "status": "eol",
+  "status_since": "2016-09-02",
   "type": "Generic",
   "hosting": {
     "public": true,
