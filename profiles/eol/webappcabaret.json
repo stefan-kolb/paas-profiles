@@ -1,9 +1,9 @@
 {
   "name": "Webappcabaret",
-  "revision": "2014-05-28",
+  "revision": "2017-04-26",
   "url": "http://webappcabaret.com/",
-  "status": "production",
-  "status_since": null,
+  "status": "eol",
+  "status_since": "2017-04-26",
   "type": "IaaS-centric",
   "hosting": {
     "public": true,
