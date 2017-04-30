@@ -1,0 +1,97 @@
+Fall 1: Zwei (oder mehr) Parameter, die nur in Kombination ausgewählt werden können. Der Preis wird daher nur beim Parameter angegeben. Verdoppelt sich die Anzahl von Parameter1 vedoppelt sich auch Parameter2.
+{
+	"Provider1": [
+		{
+			"Tarif": "T01",
+			"Date": "01.01.2017",
+			"Params": [
+				{
+					"Name": "CPU",
+					"Unit": "MHz",
+					"Upper_Bound": 16,
+					"Currency": "EUR",
+					"Bundle": 1,
+					"Price": [
+						{
+							"Minimum": 1,
+							"Pricing_unit": 1,
+							"Price_per_unit": 100,
+							"Interval": "Monthly"
+						}
+					]
+				},
+				{
+					"Name": "RAM",
+					"Unit": "MHz",
+					"Upper_Bound": 32000,
+					"Currency": "EUR",
+					"Bundle": 1,
+					"Price": [
+						{
+							"Minimum": 200,
+							"Pricing_unit": 100,
+							"Price_per_unit": 0,
+							"Interval": "Monthly"
+						}
+					]
+				}
+			
+			]
+		}
+	]
+}
+
+Fall 2: Der Preis steigt linear. Jedoch wachsen beide Parameter nicht im selben Maße pro "Bundleeinheit". Hier: CPU-Zahl verdoppelt sich, RAM vervierfacht sich.
+{
+	"Provider2": [
+		{
+			"Tarif": "T02",
+			"Date": "01.01.2017",
+			"Params": [
+				{
+					"Name": "CPU",
+					"Unit": "MHz",
+					"Upper_Bound": 16,
+					"Currency": "EUR",
+					"Bundle": 1,
+					"Price": [
+						{
+							"Minimum": 1,
+							"Pricing_unit": 1,
+							"Price_per_unit": 100,
+							"Interval": "Monthly"
+						}
+					]
+				},
+				{
+					"Name": "RAM",
+					"Unit": "MHz",
+					"Upper_Bound": 32000,
+					"Currency": "EUR",
+					"Bundle": 1,
+					"Price": [
+						{
+							"Minimum": 200,
+							"Pricing_unit": 200,
+							"Price_per_unit": 0,
+							"Interval": "Monthly"
+						},
+						{
+							"Minimum": 400,
+							"Pricing_unit": 400,
+							"Price_per_unit": 0,
+							"Interval": "Monthly"
+						},
+						{
+							"Minimum": 800,
+							"Pricing_unit": 800,
+							"Price_per_unit": 0,
+							"Interval": "Monthly"
+						}
+					]
+				}
+			
+			]
+		}
+	]
+}

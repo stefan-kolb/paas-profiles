@@ -1,0 +1,88 @@
+Fall 1: Der Preis hängt von einem Parameter ab, dessen Anzahl sich individuell verstellen lässt. Der Preis steigt nicht linear mit der Anzahl, sondern wird z.B. ab einer bestimmten Menge billiger.
+{
+	"Provider1": [
+		{
+			"Tarif": "T01",
+			"Date": "01.01.2017",
+			"Params": [
+				{
+					"Name": "CPU",
+					"Unit": "MHz",
+					"Upper_Bound": 16,
+					"Currency": "EUR",
+					"Bundle": null,
+					"Price": [
+						{
+							"Minimum": 1,
+							"Pricing_unit": 1,
+							"Price_per_unit": 100,
+							"Interval": "Monthly"
+						},
+						{
+							"Minimum": 9,
+							"Pricing_unit": 1,
+							"Price_per_unit": 80,
+							"Interval": "Monthly"
+						}
+					]
+				}
+			
+			]
+		}
+	]
+}
+
+Fall 2: Der Preis hat zwei(oder mehr) Parameter, die sich unabhängig voneinander einstellen lassen können. Die Preise steigen jeweils nicht linear.
+{
+	"Provider2": [
+		{
+			"Tarif": "T02",
+			"Date": "01.01.2017",
+			"Params": [
+				{
+					"Name": "CPU",
+					"Unit": "MHz",
+					"Upper_Bound": 16,
+					"Currency": "EUR",
+					"Bundle": null,
+					"Price": [
+						{
+							"Minimum": 1,
+							"Pricing_unit": 1,
+							"Price_per_unit": 100,
+							"Interval": "Monthly"
+						},
+						{
+							"Minimum": 9,
+							"Pricing_unit": 1,
+							"Price_per_unit": 80,
+							"Interval": "Monthly"
+						}
+					]
+				},
+				{
+					"Name": "RAM",
+					"Unit": "MHz",
+					"Upper_Bound": 32000,
+					"Currency": "EUR",
+					"Bundle": null,
+					"Price": [
+						{
+							"Minimum": 200,
+							"Pricing_unit": 100,
+							"Price_per_unit": 100,
+							"Interval": "Monthly"
+						},
+						{
+							"Minimum": 16000,
+							"Pricing_unit": 100,
+							"Price_per_unit": 80,
+							"Interval": "Monthly"
+						}
+					]
+				}
+			
+			]
+		}
+	]
+}
