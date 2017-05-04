@@ -14,7 +14,7 @@ module Profiles
   class Vendor
     class Entity < Grape::Entity
       expose :name, :revision, :url, :status, :status_since, :type, :extensible, :platform
-      expose :vendor_verified, if: :vendor_verified
+      expose :vendor_verified, unless: proc { |e| e.vendor_verified.nil? }
 
       expose :hosting, using: Hosting::Entity
       expose :pricings, using: Pricing::Entity
