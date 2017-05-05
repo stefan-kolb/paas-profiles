@@ -51,8 +51,8 @@
     </small>
   </div>
   <div class="span1">
-    <p class="pull-right">
-      <a href="https://github.com/stefan-kolb/paas-profiles#contribution" onclick="trackOutboundLink('https://github.com/stefan-kolb/paas-profiles#contribution'); return false;" title="Report error" class="tip"><i class="fa fa-bug fa-lg"></i></a>
+    <p class="pull-left">
+      <a href="<%= url("/vendors/#{url_encode(@profile['name'])}/update") %>"; title="Add an Update" class="tip"><i class="fa fa-pencil-square fa-2x"></i></a>
     </p>
   </div>
 </div>
@@ -424,7 +424,7 @@
         <% @profile['infrastructures'].sort { |a, b| a['continent'] <=> b['continent'] }.each do |rt| %>
             <div class="text-left">
               <span class="label label-inverse" title="<%= continent_by_code rt['continent'] %>"><%= rt['continent'] %></span>
-			  <span>
+        <span>
               <%= country_by_code rt['country'] unless rt['country'].blank? %><% unless rt['region'].blank? %>, <em><%= rt['region'] %></em><% end %>
               </span>
               <% unless rt['provider'].blank? %>

@@ -1,0 +1,340 @@
+<link href="../../css/bootstrap-select.min.css" rel="stylesheet"/>
+
+<div id="top" class="container">
+  <form id="updateForm" class="form-horizontal span8">
+    
+    <h3 class="center">General Properties</h3>
+    <div class="control-group">
+      <label class="control-label">Name</label>
+      <div class="controls">
+        <input class="form-control span5" data-bind="value: name" type="text" required/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Status</label>
+      <div class="controls">
+        <select class="selectpicker show-tick span5" data-bind="value: status">
+          <option data-hidden="true"></option>
+          <% Profiles::Vendor.distinct(:status).each do |s| %>
+          <option value="<%= s %>"><%= s.capitalize %></option>
+          <% end %>
+        </select>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Platform</label>
+      <div class="controls">
+        <select class="selectpicker show-tick span5" data-bind="value: platform">
+          <option data-hidden="true"></option>
+          <% Profiles::Vendor.distinct(:platform).reject(&:empty?).each do |s| %>
+          <option value="<%= s %>"><%= s.titleize %></option>
+          <% end %>
+        </select>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Type</label>
+      <div class="controls">
+        <select class="selectpicker show-tick span5" data-bind="value: type">
+          <option data-hidden="true"></option>
+          <% Profiles::Vendor.distinct(:type).each do |t| %>
+          <option value="<%= t %>"><%= t.capitalize %></option>
+          <% end %>
+        </select>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">URL</label>
+      <div class="controls">
+        <input class="form-control span5" data-bind="value: url" type="url" required/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label title="Possibility to add custom runtimes, services, ..." class="control-label">Extensible</label>
+      <div class="controls">
+        <input data-bind="checked: extensible" type="checkbox"/>
+      </div>
+    </div>
+
+    <h3 class="center">Scaling</h3>
+    <div class="controls">
+      <label class="checkbox inline" title="Size of RAM, CPU, ...">
+        <input data-bind="checked: scaling.vertical" type="checkbox">vertical</input>
+      </label>
+      <label class="checkbox inline" title="Number of instances">
+        <input data-bind="checked: scaling.horizontal" type="checkbox">horizontal</input>
+      </label>
+      <label class="checkbox inline" title="Automatic scaling of one or both directions">
+        <input data-bind="checked: scaling.auto" type="checkbox">auto</input>
+      </label>
+    </div>
+
+    <h3 class="center">Hosting</h3>
+    <div class="controls">
+      <label class="checkbox inline">
+        <input data-bind="checked:hosting.public" type="checkbox">public</input>
+      </label>
+      <label class="checkbox inline">
+        <input data-bind="checked:hosting.virtual_private" type="checkbox">virtual private</input>
+      </label>
+      <label class="checkbox inline">
+        <input data-bind="checked:hosting.private" type="checkbox">private</input>
+      </label>
+    </div>
+
+    <h3 class="center">Quality of Service</h3>
+    <div class="control-group">
+      <label class="control-label">Uptime</label>
+      <div class="controls">
+        <input class="form-control" data-bind="value: quality.uptime" type="number" step="any" min="0" max="100" placeholder="Type a uptime, e.g. 99.99"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Compliance</label>
+      <div class="controls">
+        <table>
+          <tbody data-bind="foreach: quality.compliance">
+            <td><input data-bind="value: $parent.quality.compliance()[$index()].value" type="text" placeholder="Type a compliance, e.g. HIPPA"/></td>
+            <td><button data-bind="click: $parent.quality.removeCompliance" class="btn btn-danger">Delete compliance</button></td>
+          </tbody>
+          <td><button data-bind="click: quality.addCompliance" class="btn btn-success">Add compliance</button></td>
+        </table>
+      </div>
+    </div>
+
+    <h3 class="center">Pricings</h3>
+    <table class="data">
+      <thead data-bind="visible: pricings().length > 0"><th>Model</th><th>Period</th><th></th></thead>
+      <tbody data-bind="foreach: pricings">
+        <tr>
+          <td>
+            <select title="Select model" data-bind="value: model" class="selectpicker show-tick span2">
+              <option value="metered">Metered</option>
+              <option value="fixed">Fixed</option>
+              <option value="free">Free</option>
+              <option value="hybrid">Hybrid</option>
+            </select>
+          </td>
+          <td>
+            <select title="Select period" data-bind="value: period" class="selectpicker show-tick span2">
+              <option value="">Nothing selected</option>
+              <option value="annually">Annually</option>
+              <option value="monthly">Monthly</option>
+              <option value="daily">Daily</option>
+            </select>
+          </td>
+          <td><button data-bind="click: $root.removePricing" class="btn btn-danger">Delete pricing</button></td>
+        </tr>
+      </tbody>
+      <td><button data-bind="click: addPricing" class="btn btn-success">Add pricing</button></td>
+    </table>
+
+    <h3 class="center">Runtimes</h3>
+    <table class="data">
+      <thead data-bind="visible: runtimes().length > 0"><th>Language</th><th>Versions</th><th></th></thead>
+      <tbody data-bind="foreach: runtimes">
+        <td><select data-bind="value: language" class="selectpicker show-tick span2">
+              <% Profiles::Vendor.distinct('runtimes.language').map(&:downcase).sort.each do |r| %>
+              <option value="<%= r %>"><%= r.capitalize %></option>
+              <% end %>
+            </select>
+        </td>
+        <td><%= erb(:'profiles/_versions') %></td>
+        <td><button data-bind="click: $root.removeRuntime" class="btn btn-danger">Delete runtime</button></td>
+      </tbody>
+      <td><button data-bind="click: addRuntime" class="btn btn-success">Add runtime</button></td>
+    </table>
+
+    <h3 class="center">Middlewares</h3>
+    <table class="data">
+      <thead data-bind="visible: middlewares().length > 0"><th>Name</th><th>Runtime</th><th>Versions</th><th></th></thead>
+      <tbody data-bind="foreach: middlewares">
+        <td><input data-bind="value: name" class="span2" type="text"/></td>
+        <td><select data-bind="value: runtime" class="selectpicker show-tick span2">
+              <option data-hidden="true"></option>
+              <% Profiles::Vendor.distinct('runtimes.language').map(&:downcase).sort.each do |r| %>
+              <option value="<%= r %>"><%= r.capitalize %></option>
+              <% end %>
+            </select>
+        </td>
+        <td><%= erb(:'profiles/_versions') %></td>
+        <td><button data-bind="click: $root.removeMiddleware" class="btn btn-danger">Delete middleware</button></td>
+      </tbody>
+      <td><button data-bind="click: addMiddleware" class="btn btn-success">Add middleware</button></td>
+    </table>
+
+    <h3 class="center">Frameworks</h3>
+    <table class="data">
+      <thead data-bind="visible: frameworks().length > 0"><th>Name</th><th>Runtime</th><th>Versions</th><th></th></thead>
+      <tbody data-bind="foreach: frameworks">
+        <td><input data-bind="value: name" class="span2" type="text"/></td>
+        <td><select data-bind="value: runtime" class="selectpicker show-tick span2">
+              <option data-hidden="true"></option>
+              <% Profiles::Vendor.distinct('runtimes.language').map(&:downcase).sort.each do |r| %>
+              <option value="<%= r %>"><%= r.capitalize %></option>
+              <% end %>
+            </select>
+        </td>
+        <td><%= erb(:'profiles/_versions') %></td>
+        <td><button data-bind="click: $root.removeFramework" class="btn btn-danger">Delete framework</button></td>
+      </tbody>
+      <td><button data-bind="click: addFramework" class="btn btn-success">Add framework</button></td>
+    </table>
+
+    <h3 class="center">Infrastructures</h3>
+    <table class="data">
+      <thead data-bind="visible: infrastructures().length > 0"><th>Continent</th><th>Country</th><th>Provider</th><th>Region</th><th></th></thead>
+      <tbody data-bind="foreach: infrastructures">
+        <td>
+          <select title="Select continent" data-bind="value: continent" class="selectpicker show-tick span2">
+            <option value="nothing">Nothing selected</option>
+            <option title="Africa" value="AF">Africa</option>
+            <option title="Asia" value="AS">Asia</option>
+            <option title="Europe" value="EU">Europe</option>
+            <option title="North America" value="NA">North America</option>
+            <option title="Oceania" value="OC">Oceania</option>
+            <option title="South America" value="SA">South America</option>    
+          </select>
+        </td>
+        <td><input data-bind="value: country" class="span2" type="text" placeholder="Country"/></td>
+        <td><input data-bind="value: provider" class="span2" type="text" placeholder="External IaaS provider"/></td>
+        <td><input data-bind="value: region" class="span2" type="text" placeholder="Region or city"/></td>
+        <td><button data-bind="click: $root.removeInfrastructure" class="btn btn-danger">Delete</button><td>
+      </tbody>
+      <td><button data-bind="click: addInfrastructure" class="btn btn-success">Add infrastructure</button></td>
+    </table>
+
+    <h3 class="center">Services</h3>
+    <h4 class="center">Natives</h4>
+    <table class="data">
+      <thead data-bind="visible: services.native().length > 0"><th>Name</th><th>Type</th><th>Versions</th><th></th></thead>
+      <tbody data-bind="foreach: services.native">
+        <td><input data-bind="value: name" class="span2" type="text" placeholder="Name"/></td>
+        <td>
+          <select title="Select type" data-bind="value: type" class="selectpicker show-tick span2">
+            <option value="nothing">Nothing selected</option>
+            <option value="datastore">Datastore</option>
+            <option value="search">Search</option>
+            <option value="worker">Worker</option>
+            <option value="analytics">Analytics</option>
+            <option value="payment">Payment</option>
+            <option value="media">Media</option>    
+            <option value="messaging">Messaging</option>  
+            <option value="devops">Devops</option>   
+            <option value="other">Other</option>   
+          </select>
+        </td>
+        <td><%= erb(:'profiles/_versions') %></td>
+        <td><button data-bind="click: function() { $root.services.removeNativeService($data) }" class="btn btn-danger">Delete native</button></td>
+      </tbody>
+      <td><button data-bind="click: function() { $root.services.addNativeService() }" class="btn btn-success">Add native service</button></td>
+    </table>
+
+    <h4 class="center">Addons</h4>
+    <table class="data">
+      <thead data-bind="visible: services.addon().length > 0"><th>Name</th><th>Type</th><th>URL</th><th></th></thead>
+      <tbody data-bind="foreach: services.addon">
+        <td><input data-bind="value: name" placeholder="Name" class="span2" type="text"/></td>
+        <td>
+          <select title="Select type" data-bind="value: type" class="selectpicker show-tick span2">
+            <option value="">Nothing selected</option>
+            <option value="datastore">Datastore</option>
+            <option value="search">Search</option>
+            <option value="worker">Worker</option>
+            <option value="analytics">Analytics</option>
+            <option value="payment">Payment</option>
+            <option value="media">Media</option>    
+            <option value="messaging">Messaging</option>  
+            <option value="devops">Devops</option>   
+            <option value="other">Other</option>   
+          </select>
+        </td>
+        <td><input data-bind="value: url" class="span3" type="url" placeholder="https://www.example.org"/></td>
+        <td><button data-bind="click: function() { $root.services.removeAddonService($data) }" class="btn btn-danger">Delete</button><td>
+      </tbody>
+      <td><button data-bind="click: function() { $root.services.addAddonService() }" class="btn btn-success">Add addon service</button></td>
+    </table>
+  </form>
+  
+  <div class="form-actions center">
+    <a id="reset" class="btn btn-warning btn-large">Reset</a>
+    <a id="review" class="btn btn-success btn-large" href="<%= url("/vendors/#{url_encode(@profile['name'])}/update/review") %>">Review</a>
+  </div>
+
+</div>
+
+<style type="text/css">
+  table.data TR { vertical-align: top; }
+  table.data > tbody > TR { border-bottom: 5px solid white; }
+  table.versions td { padding: 0px; }
+  #updateForm, table.data { margin-left:auto; margin-right:auto; float: none; }
+  .center { text-align: center; }
+</style>
+
+<script src="../../js/bootstrap-select.min.js"></script>
+<script src="../../js/update/knockout-3.4.1.js"></script>
+<script src="../../js/update/storage.js"></script>
+
+<!-- vendor model -->
+<script src="../../js/update/model/addon.js"></script>
+<script src="../../js/update/model/commons.js"></script>
+<script src="../../js/update/model/compliance.js"></script>
+<script src="../../js/update/model/framework.js"></script>
+<script src="../../js/update/model/infrastructure.js"></script>
+<script src="../../js/update/model/middleware.js"></script>
+<script src="../../js/update/model/native.js"></script>
+<script src="../../js/update/model/quality.js"></script>
+<script src="../../js/update/model/runtime.js"></script>
+<script src="../../js/update/model/service.js"></script>
+<script src="../../js/update/model/vendorModel.js"></script>
+<script src="../../js/update/model/version.js"></script>
+
+<script>
+$(document).ready( function() {
+  // vendor key for profile access from PaaSfinder-API
+  var vendorKey = "<%=  @profile['name'].gsub(/[^a-z,0-9]/i, '_').downcase %>";
+  var vendorModel;
+
+  if (!localStorage.getItem(vendorKey)){
+    getVendorFromAPI();
+  } else {
+    getVendorFromLocalStorage();
+  } 
+
+  function getVendorFromAPI(){
+    $.getJSON('/api/vendors/'+ vendorKey).done(function (data) {
+      console.log(data);
+      initializeModel(data);
+    });  
+  }
+
+  function getVendorFromLocalStorage(){
+    var data = localStorage.getObject(vendorKey);
+    initializeModel(data);
+  }
+
+  function initializeModel(data){
+    vendorModel = new VendorModel(data);
+    ko.applyBindings(vendorModel);
+    $('.selectpicker').selectpicker();
+  }
+  
+  $('#reset').click( function() {   
+    if(confirm('Do you really want to reset your changes?')){
+      localStorage.removeItem(vendorKey);
+      location.reload();
+    } 
+  });
+
+  $('#review').click( function() {       
+    localStorage.setItem(vendorKey, ko.toJSON(vendorModel));
+  });
+
+});
+</script>

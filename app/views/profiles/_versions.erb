@@ -1,0 +1,10 @@
+<!-- versions table template -->
+<table class="versions">
+	<tbody data-bind="foreach: versions">
+  	<tr>
+			<td><input data-bind="value: $parent.versions()[$index()].value" class="span2" type="text" placeholder="version e.g. 1.8"/></td>
+			<td><button data-bind="click: $parent.removeVersion" title="Remove version" class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+		</tr>
+	</tbody>
+	<td><button data-bind="click: addVersion" class="btn btn-success">Add version</button></td>
+</table>
