@@ -123,7 +123,7 @@
           </td>
           <td>
             <select title="Select period" data-bind="value: period" class="selectpicker show-tick span2">
-              <option value="">Nothing selected</option>
+              <option data-hidden="false"></option>
               <option value="annually">Annually</option>
               <option value="monthly">Monthly</option>
               <option value="daily">Daily</option>
@@ -140,6 +140,7 @@
       <thead data-bind="visible: runtimes().length > 0"><th>Language</th><th>Versions</th><th></th></thead>
       <tbody data-bind="foreach: runtimes">
         <td><select data-bind="value: language" class="selectpicker show-tick span2">
+              <option data-hidden="true"></option>
               <% Profiles::Vendor.distinct('runtimes.language').map(&:downcase).sort.each do |r| %>
               <option value="<%= r %>"><%= r.capitalize %></option>
               <% end %>
@@ -193,7 +194,7 @@
       <tbody data-bind="foreach: infrastructures">
         <td>
           <select title="Select continent" data-bind="value: continent" class="selectpicker show-tick span2">
-            <option value="nothing">Nothing selected</option>
+            <option data-hidden="true"></option>
             <option title="Africa" value="AF">Africa</option>
             <option title="Asia" value="AS">Asia</option>
             <option title="Europe" value="EU">Europe</option>
@@ -218,16 +219,10 @@
         <td><input data-bind="value: name" class="span2" type="text" placeholder="Name"/></td>
         <td>
           <select title="Select type" data-bind="value: type" class="selectpicker show-tick span2">
-            <option value="nothing">Nothing selected</option>
-            <option value="datastore">Datastore</option>
-            <option value="search">Search</option>
-            <option value="worker">Worker</option>
-            <option value="analytics">Analytics</option>
-            <option value="payment">Payment</option>
-            <option value="media">Media</option>    
-            <option value="messaging">Messaging</option>  
-            <option value="devops">Devops</option>   
-            <option value="other">Other</option>   
+            <option data-hidden="true"></option>
+            <% Profiles::Vendor.distinct('services.native.type').map(&:downcase).sort.each do |r| %>
+            <option value="<%= r %>"><%= r.capitalize %></option>
+            <% end %>
           </select>
         </td>
         <td><%= erb(:'profiles/_versions') %></td>
@@ -243,16 +238,10 @@
         <td><input data-bind="value: name" placeholder="Name" class="span2" type="text"/></td>
         <td>
           <select title="Select type" data-bind="value: type" class="selectpicker show-tick span2">
-            <option value="">Nothing selected</option>
-            <option value="datastore">Datastore</option>
-            <option value="search">Search</option>
-            <option value="worker">Worker</option>
-            <option value="analytics">Analytics</option>
-            <option value="payment">Payment</option>
-            <option value="media">Media</option>    
-            <option value="messaging">Messaging</option>  
-            <option value="devops">Devops</option>   
-            <option value="other">Other</option>   
+            <option data-hidden="true"></option>
+            <% Profiles::Vendor.distinct('services.addon.type').map(&:downcase).sort.each do |r| %>
+            <option value="<%= r %>"><%= r.capitalize %></option>
+            <% end %>
           </select>
         </td>
         <td><input data-bind="value: url" class="span3" type="url" placeholder="https://www.example.org"/></td>
