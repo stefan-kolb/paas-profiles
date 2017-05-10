@@ -209,8 +209,9 @@ $(document).ready(function(){
         window.location='<%= url("/success") %>'
         localStorage.removeItem(vendorKey);
       },
-      error: function( jqXhr, textStatus, errorThrown ){
-        alert(textStatus);
+      error: function( jqXhr, textStatus ){
+        console.log(errorThrown)
+        alert("Something get wrong. Please try to submit again.");
         $('#spinner').hide();
       },
       timeout: 15000
