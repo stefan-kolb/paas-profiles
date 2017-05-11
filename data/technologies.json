@@ -57,10 +57,6 @@
     "isolation": "Container"
   },
   {
-    "vendor": "CatN",
-    "isolation": ""
-  },
-  {
     "vendor": "Clever Cloud",
     "isolation": "Container"
   },
