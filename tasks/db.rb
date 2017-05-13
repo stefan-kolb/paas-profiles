@@ -9,6 +9,8 @@ require_relative '../app/models/statistics/runtime_trend'
 # require_relative '../app/models/software/middleware'
 require_relative '../app/models/datacenter'
 require_relative '../app/models/service_vendor'
+require_relative '../app/models/pricing/vendor_pricing'
+require_relative '../app/models/pricing/form_parameter'
 
 namespace :db do
 
@@ -35,6 +37,8 @@ namespace :db do
     technologies
     # service vendors
     service_vendors
+    # pricing
+    pricing
   end
 
   def service_vendors
@@ -94,6 +98,33 @@ namespace :db do
       rescue StandardError => e
         raise "An error occurred while writing datacenter #{dc}: #{e.message}"
       end
+    end
+  end
+
+  def pricing
+    Pricing::VendorPricing.delete_all
+    Pricing::FormParameter.delete_all
+
+    Dir.glob('pricings/*.json').each do |file|
+      begin
+        data = JSON.parse(File.read(file))
+        Pricing::VendorPricing.create!(data)
+      rescue StandardError => e
+        raise "An error occurred while parsing #{file}: #{e.message}"
+      end
+    end
+    Pricing::VendorPricing.distinct(:tarif).each do |tarif|
+        tarif["parameter"].each do |param|
+          alreadyExists = false
+          Pricing::FormParameter.distinct("name").each do |existing|
+            if existing == param["name"]
+              alreadyExists = true
+            end
+          end
+          if !alreadyExists
+            Pricing::FormParameter.create!(param.without("price", "bundle", "upper_bound"))
+          end
+        end
     end
   end
 
