@@ -1,0 +1,25 @@
+{
+	"name": "Provider1",
+	"date": "01.01.2017",
+	"currency": "EUR",
+	"tarif": [
+		{
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU",
+					"unit": "MHz",
+					"upper_bound": 16,
+					"bundle": null,
+					"price": [
+						{
+							"minimum": 1,
+							"pricing_unit": 1,
+							"price_per_unit": 100
+						}
+					]
+				}
+			]
+		}
+	]
+}
