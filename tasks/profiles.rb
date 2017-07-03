@@ -38,7 +38,7 @@ namespace :profiles do
             next unless s['type'].blank?
 
             puts "[MISSING] #{data['name']} #{s['name']} is missing service type"
-            alt = Vendor.ne(name: data['name']).find_by('services.native.name' => /#{s['name']}/)
+            alt = Profiles::Vendor.ne(name: data['name']).find_by('services.native.name' => /#{s['name']}/)
             type = alt['services']['native'].select { |v| v['name'] =~ /#{s['name']}/ }[0]
             puts "What about #{type['type']}? (y/n)"
             accept = STDIN.gets.chomp
