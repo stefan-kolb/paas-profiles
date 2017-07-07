@@ -95,6 +95,12 @@
       "versions": [
 
       ]
+    },
+    {
+      "language": "hhvm",
+      "versions": [
+
+      ]
     }
   ],
   "middlewares": [
@@ -159,13 +165,6 @@
     {
       "name": "sinatra",
       "runtime": "ruby",
-      "versions": [
-
-      ]
-    },
-    {
-      "name": "hhvm",
-      "runtime": "php",
       "versions": [
 
       ]

@@ -24,7 +24,7 @@ module Profiles
 
     # do only allow a limited set of runtimes for now
     def test_runtime_names
-      runtimes = %w[java ruby scala groovy php dotnet node go python perl clojure swift apex cobol erlang lua xsjs docker]
+      runtimes = %w[java ruby scala groovy php dotnet node go python perl clojure swift apex cobol erlang lua xsjs docker hhvm]
 
       Vendor.all.each do |v|
         v[:runtimes].each do |rt|
