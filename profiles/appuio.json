@@ -171,7 +171,8 @@
         "versions": [
           "1.9",
           "1.10"
-        ]
+        ],
+        "type": "other"
       },
       {
         "name": "jenkins",
