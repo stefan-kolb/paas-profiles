@@ -5,7 +5,7 @@
   "url": "https://platform.sh",
   "status": "production",
   "status_since": "2014-09-01",
-  "type": "SaaS-centric, Generic, IaaS-centric",
+  "type": "Generic",
   "hosting": {
     "public": true,
     "private": true
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "language": "golang",
+      "language": "go",
       "versions": [
         "1.8"
       ]
