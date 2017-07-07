@@ -13,7 +13,7 @@
   },
   "qos": {
     "uptime": 99.9
-  },  
+  },
   "pricings": [
     {
       "model": "metered",
@@ -81,7 +81,7 @@
     {
       "language": "ruby",
       "versions": [
-      
+
       ]
     },
     {
@@ -92,6 +92,12 @@
     },
     {
       "language": "swift",
+      "versions": [
+
+      ]
+    },
+    {
+      "language": "hhvm",
       "versions": [
 
       ]
@@ -125,7 +131,7 @@
       "name": "grails",
       "runtime": "groovy",
       "versions": [
-      
+
       ]
     },
     {
@@ -139,14 +145,14 @@
       "name": "spring",
       "runtime": "java",
       "versions": [
-      
+
       ]
     },
     {
       "name": "rails",
       "runtime": "ruby",
       "versions": [
-      
+
       ]
     },
     {
@@ -160,21 +166,14 @@
       "name": "sinatra",
       "runtime": "ruby",
       "versions": [
-      
-      ]
-    },
-    {
-      "name": "hhvm",
-      "runtime": "php",
-      "versions": [
-    
+
       ]
     },
     {
       "name": "django",
       "runtime": "python",
       "versions": [
-    
+
       ]
     }
   ],
@@ -268,13 +267,13 @@
 
         ]
       },
-      {                                                                                                                                                                     
-        "name": "abacus",                                                                                                                                                  
-        "description": "",                                                                                                                                                  
-        "type": "metering",                                                                                                                                                
-        "versions": [                                                                                                                                                       
-                                                                                                                                                                            
-        ]                                                                                                                                                                   
+      {
+        "name": "abacus",
+        "description": "",
+        "type": "metering",
+        "versions": [
+
+        ]
       },
       {
         "name": "couchdb",
@@ -284,7 +283,7 @@
 
         ]
       },
-       {
+      {
         "name": "dingo-postgresql",
         "description": "",
         "type": "datastore",
@@ -294,7 +293,7 @@
       }
     ],
     "addon": [
-    {
+      {
         "name": "ADFS/LDAP/AS",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
         "description": "",

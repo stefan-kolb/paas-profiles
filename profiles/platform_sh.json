@@ -1,13 +1,14 @@
 {
   "name": "Platform.sh",
-  "revision": "2016-09-21",
+  "revision": "2017-07-03",
+  "vendor_verified": "2017-07-03",
   "url": "https://platform.sh",
   "status": "production",
   "status_since": "2014-09-01",
   "type": "Generic",
   "hosting": {
     "public": true,
-    "private": false
+    "private": true
   },
   "pricings": [
     {
@@ -25,33 +26,58 @@
   },
   "runtimes": [
     {
+      "language": "hhvm",
+      "versions": [
+        "3.9",
+        "3.18"
+      ]
+    },
+    {
       "language": "php",
       "versions": [
         "5.4",
         "5.5",
         "5.6",
-        "7.0"
+        "7.0",
+        "7.1",
+        "7.2"
       ]
     },
     {
       "language": "node",
       "versions": [
         "0.12",
-        "4.4",
-        "6.3"
+        "4.7",
+        "4.8",
+        "6.9",
+        "6.10"
       ]
     },
     {
       "language": "python",
       "versions": [
         "2.7",
-        "3.5"
+        "3.5",
+        "3.6"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-        "2.3"
+        "2.3",
+        "2.4"
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+        "8"
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "1.8"
       ]
     }
   ],
@@ -77,7 +103,9 @@
       "name": "drupal",
       "runtime": "php",
       "versions": [
-
+        "6",
+        "7",
+        "8"
       ]
     },
     {
@@ -92,7 +120,8 @@
       "runtime": "php",
       "versions": [
         "1",
-        "2"
+        "2",
+        "3"
       ]
     },
     {
@@ -113,7 +142,8 @@
       "name": "magento",
       "runtime": "php",
       "versions": [
-
+        "1",
+        "2"
       ]
     },
     {
@@ -136,13 +166,27 @@
       "versions": [
 
       ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": [
+
+      ]
     }
   ],
   "services": {
     "native": [
       {
         "name": "blob",
-        "description": "",
+        "description": "You can write to local mounts (on replicated storage grid)",
         "type": "datastore",
         "versions": [
 
@@ -155,12 +199,14 @@
         "versions": [
           "0.9",
           "1.4",
-          "1.7"
+          "1.7",
+          "2.4",
+          "5.2"
         ]
       },
       {
         "name": "filesystem",
-        "description": "",
+        "description": "You can write to local mounts (on replicated storage grid)",
         "type": "datastore",
         "versions": [
 
@@ -171,6 +217,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
+          "2.6",
           "3.0"
         ]
       },
@@ -180,7 +227,9 @@
         "type": "datastore",
         "versions": [
           "5.5",
-          "10.0"
+          "10.0",
+          "10.1",
+          "10.2"
         ]
       },
       {
@@ -188,7 +237,7 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "9.4"
+          "9.6"
         ]
       },
       {
@@ -196,7 +245,8 @@
         "description": "",
         "type": "datastore",
         "versions": [
-          "9.4"
+          "9.3",
+          "9.6"
         ]
       },
       {
@@ -209,12 +259,22 @@
         ]
       },
       {
+        "name": "memcached",
+        "description": "1.4",
+        "type": "cache",
+        "versions": [
+          "2.8",
+          "3.0"
+        ]
+      },
+      {
         "name": "solr",
         "description": "",
         "type": "datastore",
         "versions": [
           "3.6",
-          "4.10"
+          "4.10",
+          "6.3"
         ]
       },
       {
@@ -223,6 +283,14 @@
         "type": "other",
         "versions": [
           "3.5"
+        ]
+      },
+      {
+        "name": "influxdb",
+        "description": "",
+        "type": "other",
+        "versions": [
+          "1.2"
         ]
       }
     ],
@@ -233,6 +301,12 @@
         "description": "Blackfire Profiler automatically instruments your code to gather data about consumed server resources like memory, CPU time, and I/O. ",
         "type": "analytics"
       },
+      {
+        "name": "NewRelic",
+        "url": "http://newrelic.com/",
+        "type": "monitoring"
+      },
+      
       {
         "name": "bitbucket",
         "url": "https://bitbucket.org/",
@@ -256,16 +330,95 @@
   "extensible": false,
   "infrastructures": [
     {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern Virginia",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Ohio",
+      "provider": "AWS"
+    },    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California",
+      "provider": "AWS"
+    },    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+      "provider": "AWS"
+    },    {
+      "continent": "AS",
+      "country": "IN",
+      "region": "Mumbai",
+      "provider": "AWS"
+    },    {
+      "continent": "AS",
+      "country": "KR",
+      "region": "Seoul",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "CN",
+      "region": "China",
+      "provider": "Microsoft Azure"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "AWS"
+    },   {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Tokyo",
+      "provider": "AWS"
+    },
+    {
       "continent": "EU",
       "country": "IE",
       "region": "Dublin",
       "provider": "AWS"
     },
     {
-      "continent": "NA",
-      "country": "US",
-      "region": "Northern Virginia",
+      "continent": "EU",
+      "country": "DE",
+      "region": "Frankfurt",
       "provider": "AWS"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "São Paulo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "FR",
+      "region": "Paris",
+      "provider": "Orange Business Services"
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Frankfurt",
+      "provider": "Microsoft Azure"
+    },
+    {
+      "continent": "EU",
+      "country": "NL",
+      "region": "Netherlands",
+      "provider": "Microsoft Azure"
     }
   ]
 }
