@@ -4,7 +4,7 @@ module Profiles
   class Main < Base
 
     def url_for(vendor)
-      return '/vendors/' + vendor
+      '/vendors/' + vendor
     end
 
     get '/' do
@@ -15,10 +15,10 @@ module Profiles
       @title = 'Terms of Service'
       erb :terms
     end
-    
+
     get '/success' do
       @title = 'Successful Submit'
-      erb :'success'
+      erb :success
     end
 
     get '/vendors' do
@@ -44,9 +44,9 @@ module Profiles
     get '/vendors/:name/update' do
       paas = url_decode(params[:name])
       @profile = Vendor.where(name: /^#{paas}$/i).first
-     
+
       halt 404 if @profile.nil?
-      
+
       @paas = @profile['name']
       @title = 'Update vendor'
 
@@ -57,13 +57,13 @@ module Profiles
       erb :'profiles/update'
     end
 
-    get '/vendors/:name/update/review' do   
+    get '/vendors/:name/update/review' do
       paas = url_decode(params[:name])
       @profile = Vendor.where(name: /^#{paas}$/i).first
-      
+
       @paas = @profile['name']
       @title = 'Review of your Update'
-      
+
       vendor = params[:name]
       @vendor_path = url_for(vendor)
       @update_vendor_path = url_for(vendor) + '/update'
