@@ -2,6 +2,11 @@ require 'feed'
 
 module Profiles
   class Main < Base
+
+    def url_for(vendor)
+      return '/vendors/' + vendor
+    end
+
     get '/' do
       redirect to('/vendors')
     end
@@ -9,6 +14,11 @@ module Profiles
     get '/terms' do
       @title = 'Terms of Service'
       erb :terms
+    end
+    
+    get '/success' do
+      @title = 'Successful Submit'
+      erb :'success'
     end
 
     get '/vendors' do
@@ -29,6 +39,37 @@ module Profiles
       @title = "#{@paas} | PaaS Comparison"
 
       erb :'profiles/vendor'
+    end
+
+    get '/vendors/:name/update' do
+      paas = url_decode(params[:name])
+      @profile = Vendor.where(name: /^#{paas}$/i).first
+     
+      halt 404 if @profile.nil?
+      
+      @paas = @profile['name']
+      @title = 'Update vendor'
+
+      vendor = params[:name]
+      @vendor_path = url_for(vendor)
+      @update_vendor_path = url_for(vendor) + '/update'
+
+      erb :'profiles/update'
+    end
+
+    get '/vendors/:name/update/review' do   
+      paas = url_decode(params[:name])
+      @profile = Vendor.where(name: /^#{paas}$/i).first
+      
+      @paas = @profile['name']
+      @title = 'Review of your Update'
+      
+      vendor = params[:name]
+      @vendor_path = url_for(vendor)
+      @update_vendor_path = url_for(vendor) + '/update'
+      @review_vendor_path = url_for(vendor) + '/update/review'
+
+      erb :'profiles/review'
     end
 
     get '/filter' do

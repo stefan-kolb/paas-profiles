@@ -1,0 +1,222 @@
+<link href="../../../css/bootstrap-select.min.css" rel="stylesheet"/>
+
+<div id="top" class="container">
+  
+  <div id="review" class="row span8">
+    <h3 class="center">General Properties</h3>
+    <table class="table table-condensed table-hover">
+      <tbody>
+        <tr><td class="span2">Name</td><td class="span5" id="name"></td></tr>
+        <tr><td class="span2">Status</td><td class="span5" id="status"></td></tr>
+        <tr><td class="span2" >Platform</td><td class="span5" id="platform"></td></tr>
+        <tr><td class="span2">Type</td><td class="span5" id="type"></td></tr>
+        <tr><td class="span2">URL</td><td class="span5" id="url"></td></tr>
+        <tr><td class="span2">Extensible</td><td class="span5"> <input id="extensible" type="checkbox" disabled/> </td></tr>
+      </tbody>
+    </table>
+    
+    <h3 class="center">Scaling</h3>
+    <table id="scaling" class="table table-condensed table-hover">
+      <tbody>
+        <tr><td class="span2">Vertical</td><td class="span5"> <input id="vertical" type="checkbox" disabled/> </td></tr>
+        <tr><td class="span2">Horizontal</td><td class="span5"> <input id="horizontal" type="checkbox" disabled/> </td></tr>
+        <tr><td class="span2">Auto</td><td class="span5"> <input id="auto" type="checkbox" disabled/> </td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="center">Hosting</h3>
+    <table id="scaling" class="table table-condensed table-hover">
+      <tbody>
+        <tr><td class="span2">Public</td><td class="span5"> <input id="public" type="checkbox" disabled/> </td></tr>
+        <tr><td class="span2">Virtual private</td><td class="span5"> <input id="virtual_private" type="checkbox" disabled/> </td></tr>
+        <tr><td class="span2">Private</td><td class="span5"> <input id="private" type="checkbox" disabled/> </td></tr>
+      </tbody>
+    </table>
+    
+    <h3 class="center">Quality of Service</h3>
+    <table class="table table-condensed table-hover">
+      <tbody>
+        <tr><td class="span2">Uptime</td><td class="span5" id="uptime"></td></tr>
+        <tr><td class="span2">Compliance</td><td class="span5" id="compliance"></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="center">Pricings</h3>
+    <table class="table table-condensed table-hover">
+      <thead><th>#</th><th>Model</th><th>Period</th></thead>
+      <tbody id="pricings"></tbody>
+    </table>
+
+    <h3 class="center">Runtimes</h3>
+    <table class="table table-condensed table-hover">
+      <thead><th>#</th><th>Language</th><th>Versions</th></thead>
+      <tbody id="runtimes"></tbody>
+    </table>
+
+    <h3 class="center">Middlewares</h3>
+    <table class="table table-condensed table-hover">
+      <thead><th>#</th><th>Name</th><th>Runtime</th><th>Versions</th></thead>
+      <tbody id="middlewares"></tbody>
+    </table>
+
+    <h3 class="center">Frameworks</h3>
+    <table class="table table-condensed table-hover">
+      <thead><th>#</th><th>Name</th><th>Runtime</th><th>Versions</th></thead>
+      <tbody id="frameworks"></tbody>
+    </table>
+
+    <h3 class="center">Infrastructures</h3>
+    <table class="table table-condensed table-hover">
+      <thead><th>#</th><th>Continent</th><th>Country</th><th>Provider</th><th>Region</th></thead>
+      <tbody id="infrastructures"></tbody>
+    </table>
+
+    <h3 class="center">Services</h3>
+    <h4 class="center">Natives</h4>
+    <table class="table table-condensed table-hover">
+      <thead><th>#</th><th>Name</th><th>Type</th><th>Versions</th></thead>
+      <tbody id="natives"></tbody>
+    </table>
+
+    <h4 class="center">Addons</h4>
+    <table class="table table-condensed table-hover">
+      <thead><th>#</th><th>Name</th><th>Type</th><th>URL</th></thead>
+      <tbody id="addons"></tbody>
+    </table>
+
+    <form id="updateForm" class="form-horizontal span8">
+      <div class="control-group">
+        <label class="control-label">Name</label>
+        <div class="controls">
+          <div class="input-prepend">
+            <span class="add-on"><i class="icon-user"></i></span>
+            <input id="contributorName" class="form-control span5" type="text" placeholder="Please let us know your name"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Email</label>
+        <div class="controls">
+          <div class="input-prepend">
+            <span class="add-on"><i class="icon-envelope"></i></span>
+            <input id="contributorEmail" class="form-control span5" type="email" placeholder="test@example.com"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Message</label>
+        <div class="controls">
+          <div class="input-prepend">
+            <span class="add-on"><i class="icon-comment"></i></span>
+            <textarea id="contributorMessage" class="form-control span5" type="text" rows="3" placeholder="Please leave a messeage to your update"></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <div class="form-actions center">
+    <a id="back" class="btn btn-warning btn-large" onclick="history.back(-1)">Get Back</a>
+    <a id="submit" class="btn btn-success btn-large">Submit</a>
+  </div>
+
+  <div id="spinner" class="spinner">
+    <img id="img-spinner" src="../../../spinner.gif" alt="Sending data"/></br>
+    <p id="sendingDataText">Sending data...</p>
+  </div>
+
+</div>
+
+<style type="text/css">
+  #review { margin-left: auto; margin-right: auto; float: none; }
+  .center { text-align: center; }
+  #status { text-transform: capitalize; }
+  #sendingDataText { color: white; padding: 15px; font-size: 18px; }
+  td { padding: 5px 20px 5px 5px; }
+  textarea { resize: vertical; }
+  #spinner {
+    display:none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+    -webkit-transition: all .5s ease;
+    z-index: 1000;
+    padding-top: 220px;
+  }
+</style>
+
+<script src="../../../js/bootstrap-select.min.js"></script>
+<script src="../../../js/update/tables.js"></script>
+<script src="../../../js/update/storage.js"></script>
+
+<script>
+$(document).ready(function(){
+  $('#submit').click(function() {
+    $('#spinner').show();
+  });
+ 
+  var vendorKey = "<%=  @profile['name'].gsub(/[^a-z,0-9]/i, '_').downcase %>";
+  var vendor = localStorage.getObject(vendorKey);
+  console.log(localStorage.getItem(vendorKey));
+  vendor["vendorKey"] = vendorKey;
+
+  $('#name').text(vendor.name);
+  $('#status').text(vendor.status);
+  $('#platform').text(vendor.platform);
+  $('#type').text(vendor.type);
+  $('#url').text(vendor.url);
+  $('#extensible').prop('checked', vendor.extensible);
+
+  $('#horizontal').prop('checked', vendor.scaling.horizontal);
+  $('#vertical').prop('checked', vendor.scaling.vertical);
+  $('#auto').prop('checked', vendor.scaling.auto);
+
+  $('#public').prop('checked', vendor.hosting.public);
+  $('#virtual_private').prop('checked', vendor.hosting.virtual_private);
+  $('#private').prop('checked', vendor.hosting.private);
+
+  if (typeof vendor["quality"] !== 'undefined') {
+    $('#uptime').text(vendor.quality.uptime);
+    $('#compliance').text(vendor.quality.compliance.toString().split(',').join(', '));
+  };
+
+  fillPricingTable(vendor.pricings);
+  fillRuntimeTable(vendor.runtimes);
+  fillMiddlewareTable(vendor.middlewares);
+  fillFrameworkTable(vendor.frameworks);
+  fillInfrastructureTable(vendor.infrastructures);
+  fillNativeTable(vendor.services.native);
+  fillAddonTable(vendor.services.addon);
+
+  $('#submit').click(function(){
+    vendor["contributorName"] = $('#contributorName').val();
+    vendor["contributorEmail"] = $('#contributorEmail').val();
+    vendor["contributorMessage"] = $('#contributorMessage').val();
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:9090/vendor",
+      crossDomain: true,
+      data: JSON.stringify(vendor),
+      contentType: "application/json; charset=utf-8",
+      success: function (data, status, jqXHR) {
+        window.location='<%= url("/success") %>'
+        localStorage.removeItem(vendorKey);
+      },
+      error: function( jqXhr, textStatus ){
+        console.log(errorThrown)
+        alert("Something get wrong. Please try to submit again.");
+        $('#spinner').hide();
+      },
+      timeout: 15000
+    });
+  });
+
+});
+</script>
