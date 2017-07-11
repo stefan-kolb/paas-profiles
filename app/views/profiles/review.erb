@@ -110,7 +110,7 @@
         <div class="controls">
           <div class="input-prepend">
             <span class="add-on"><i class="icon-comment"></i></span>
-            <textarea id="contributorMessage" class="form-control span5" type="text" rows="3" placeholder="Please leave a messeage to your update"></textarea>
+            <textarea id="contributorMessage" class="form-control span5" type="text" rows="3" placeholder="Please describe the major changes and sources of your update"></textarea>
           </div>
         </div>
       </div>
@@ -165,7 +165,6 @@ $(document).ready(function(){
   var vendorKey = "<%=  @profile['name'].gsub(/[^a-z,0-9]/i, '_').downcase %>";
   var vendor = localStorage.getObject(vendorKey);
   console.log(localStorage.getItem(vendorKey));
-  vendor["vendorKey"] = vendorKey;
 
   $('#name').text(vendor.name);
   $('#status').text(vendor.status);
@@ -196,22 +195,28 @@ $(document).ready(function(){
   fillAddonTable(vendor.services.addon);
 
   $('#submit').click(function(){
-    vendor["contributorName"] = $('#contributorName').val();
-    vendor["contributorEmail"] = $('#contributorEmail').val();
-    vendor["contributorMessage"] = $('#contributorMessage').val();
+    var prData = {
+        metadata: {
+          "contributor_name": $('#contributorName').val(),
+          "contributor_email": $('#contributorEmail').val(),
+          "contributor_message": $('#contributorMessage').val(),
+          "vendor_key": vendorKey
+        },
+        profile: vendor
+    };
+
     $.ajax({
       type: "POST",
-      url: "http://localhost:9090/vendor",
+      url: "http://paas-updater.herokuapp.com/vendors/" + vendorKey,
       crossDomain: true,
-      data: JSON.stringify(vendor),
+      data: JSON.stringify(prData),
       contentType: "application/json; charset=utf-8",
       success: function (data, status, jqXHR) {
         window.location='<%= url("/success") %>'
         localStorage.removeItem(vendorKey);
       },
       error: function( jqXhr, textStatus ){
-        console.log(errorThrown)
-        alert("Something get wrong. Please try to submit again.");
+        alert("Something went wrong. Please try to submit again.");
         $('#spinner').hide();
       },
       timeout: 15000

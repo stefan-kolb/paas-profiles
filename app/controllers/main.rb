@@ -17,7 +17,7 @@ module Profiles
     end
 
     get '/success' do
-      @title = 'Successful Submit'
+      @title = 'Successful data update'
       erb :success
     end
 
