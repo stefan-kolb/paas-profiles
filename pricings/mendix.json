@@ -1,0 +1,73 @@
+{
+	"name": "Mendix",
+	"date": "29.06.2017",
+	"currency": "USD",
+	"tarif": [
+		{
+			"name": "Single App",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "Backups",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 1.875
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Pro",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "Backups",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 5.375
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Enterprise",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "Backups",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 7.825
+						}
+					]
+				},
+				{
+					"name": "Scalability",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 7.825
+						}
+					]
+				}
+			]
+		}
+	]
+}

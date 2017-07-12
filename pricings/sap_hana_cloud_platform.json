@@ -1,0 +1,312 @@
+{
+	"name": "SAP Hana",
+	"date": "29.06.2017",
+	"currency": "USD",
+	"tarif": [
+		{
+			"name": "Tarif1",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1,
+							"maximum": 1,
+							"pricing_unit": 1,
+							"price_per_unit": 500
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 32,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 32,
+							"maximum": 32,
+							"pricing_unit": 32,
+							"price_per_unit": 500
+						}
+					]
+				},
+        {
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 4096,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 4096,
+							"maximum": 4096,
+							"pricing_unit": 4096,
+							"price_per_unit": 500
+						}
+					]
+				},
+        {
+					"name": "Bandwidth",
+					"unit": "GB",
+					"upper_bound": 512,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 512,
+							"maximum": 512,
+							"pricing_unit": 512,
+							"price_per_unit": 500
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Tarif2",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 2,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 2,
+							"maximum": 2,
+							"pricing_unit": 2,
+							"price_per_unit": 700
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 80,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 80,
+							"maximum": 80,
+							"pricing_unit": 80,
+							"price_per_unit": 700
+						}
+					]
+				},
+        {
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 8192,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 8192,
+							"maximum": 8192,
+							"pricing_unit": 8192,
+							"price_per_unit": 700
+						}
+					]
+				},
+        {
+					"name": "Bandwidth",
+					"unit": "GB",
+					"upper_bound": 512,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 512,
+							"maximum": 512,
+							"pricing_unit": 512,
+							"price_per_unit": 700
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Tarif3",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 4,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 4,
+							"maximum": 4,
+							"pricing_unit": 4,
+							"price_per_unit": 1000
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 160,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 160,
+							"maximum": 160,
+							"pricing_unit": 160,
+							"price_per_unit": 1000
+						}
+					]
+				},
+        {
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 16384,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 16384,
+							"maximum": 16384,
+							"pricing_unit": 16384,
+							"price_per_unit": 1000
+						}
+					]
+				},
+        {
+					"name": "Bandwidth",
+					"unit": "GB",
+					"upper_bound": 512,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 512,
+							"maximum": 512,
+							"pricing_unit": 512,
+							"price_per_unit": 1000
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Tarif4",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 8,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 8,
+							"maximum": 8,
+							"pricing_unit": 8,
+							"price_per_unit": 1900
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 320,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 320,
+							"maximum": 320,
+							"pricing_unit": 320,
+							"price_per_unit": 1900
+						}
+					]
+				},
+        {
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 32768,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 32768,
+							"maximum": 32768,
+							"pricing_unit": 32768,
+							"price_per_unit": 1900
+						}
+					]
+				},
+        {
+					"name": "Bandwidth",
+					"unit": "GB",
+					"upper_bound": 1024,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1024,
+							"maximum": 1024,
+							"pricing_unit": 1024,
+							"price_per_unit": 1900
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Tarif5",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 16,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 16,
+							"maximum": 16,
+							"pricing_unit": 16,
+							"price_per_unit": 3500
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 320,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 320,
+							"maximum": 320,
+							"pricing_unit": 320,
+							"price_per_unit": 3500
+						}
+					]
+				},
+        {
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 65536,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 65536,
+							"maximum": 65536,
+							"pricing_unit": 65536,
+							"price_per_unit": 3500
+						}
+					]
+				},
+        {
+					"name": "Bandwidth",
+					"unit": "GB",
+					"upper_bound": 1024,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1024,
+							"maximum": 1024,
+							"pricing_unit": 1024,
+							"price_per_unit": 3500
+						}
+					]
+				}
+			]
+		}
+	]
+}

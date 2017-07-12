@@ -9,12 +9,14 @@ module Pricing
 
     # fields
     field :minimum, type: Integer
-    field :pricing_unit, type: String
+    field :maximum, type: Integer
+    field :pricing_unit, type: Integer
     field :price_per_unit, type: Float
 
     # validations
-    validates :minimum, presence: true
-    validates :pricing_unit, presence: true
-    validates :price_per_unit, presence: false
+    validates :minimum, presence: false
+    validates :maximum, presence: false
+    validates :pricing_unit, presence: false
+    validates :price_per_unit, presence: true
   end
 end

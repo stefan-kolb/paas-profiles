@@ -113,18 +113,19 @@ namespace :db do
         raise "An error occurred while parsing #{file}: #{e.message}"
       end
     end
+    
     Pricing::VendorPricing.distinct(:tarif).each do |tarif|
-        tarif["parameter"].each do |param|
-          alreadyExists = false
-          Pricing::FormParameter.distinct("name").each do |existing|
-            if existing == param["name"]
-              alreadyExists = true
-            end
-          end
-          if !alreadyExists
-            Pricing::FormParameter.create!(param.without("price", "bundle", "upper_bound"))
+      tarif["parameter"].each do |param|
+        alreadyExists = false
+        Pricing::FormParameter.distinct("name").each do |existing|
+          if existing == param["name"]
+            alreadyExists = true
           end
         end
+        if !alreadyExists
+          Pricing::FormParameter.create!(param.without("price", "bundle", "upper_bound"))
+        end
+      end
     end
   end
 

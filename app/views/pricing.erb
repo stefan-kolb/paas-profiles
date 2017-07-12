@@ -1,0 +1,63 @@
+<link href="../css/bootstrap-select.min.css" rel="stylesheet"/>
+<div class="container">
+  <div class="jumbotron" style="margin: 50px 0px;color: #000">
+    <h1>PaaS Pricing Comparison</h1>
+    <p class="lead">Find the best priced PaaS for your demands.</p>
+    <hr>
+  </div>
+    <form class="" method="GET" action="/pricing">
+      <div class="row">
+        <div class="row">
+          <div class="span3" style="border-right: solid 1px #dddddd";>
+            <% Pricing::FormParameter.each do |param| %>
+              <% if param["unit"] == "binary" %>
+                <p class="row"><span class="span1 offset1"><%=param["name"]%></span><span class="span1"><input type="checkbox" name="<%=param["name"] %>"></span></p>
+              <% end %>
+            <% end %>
+          </div>
+        <div class="span5">
+          <% Pricing::FormParameter.each do |param| %>
+            <% if param["unit"] != "binary" %>
+                <p class="row">
+                  <span class="span1"><%=param["name"] + ":"%></span>
+                  <span class="span4"><input type="number" name="<%=param["name"]%>" step="1" min="0"> <%=param["unit"]%></span>
+                </p>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <hr/>
+        <div class="span12">
+          <% if @results != nil%>
+            <% @results.each do |vendor, tarif| %>
+              <div class="row" style="margin: 10px;">
+                <span class="span2"><%= vendor %>: </span>
+                <span class="span1"><%= tarif["name"] %> </span>
+                <span class="span5">
+                  <% counter = 0 %>
+                  <% separator = ", "  %>
+                  <% tarif["params"].each do |param, number| %>
+                    <% counter += 1 %>
+                    <% if counter == tarif["params"].length %>
+                      <% separator = "" %>
+                    <% end %>
+                    <% if number == 0 %>
+                      <span><%=param%><%=separator%> </span>
+                    <% else %>
+                      <span><%=number%> <%=param%><%=separator%></span>
+                    <% end %>
+                  <% end %>
+                </span>
+                <span class="span1"><%= tarif["price"] %> $</span>
+                <a class="span1 offset1 btn btn-success" href="/vendors/<%=vendor%>">Details</a>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" class="offset1 btn btn-primary btn-large" style="margin-top: 40px; margin-bottom: 50px">
+      </div>
+    </form>
+
+</div>

@@ -13,7 +13,7 @@ module Pricing
 
     # validations
     validates :name, presence: true
-    validates :unit, presence: true
+    validates :unit, presence: false
     # validates :upper_bound, presence: false
     # validates :bundle, presence: false
   end

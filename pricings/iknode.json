@@ -1,0 +1,40 @@
+{
+	"name": "iKnode",
+	"date": "29.06.2017",
+	"currency": "USD",
+	"tarif": [
+		{
+			"name": "Tarif1",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "API-Requests",
+					"upper_bound": 1000000,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1000000,
+							"maximum": 1000000,
+							"pricing_unit": 1000000,
+							"price_per_unit": 9
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1,
+							"maximum": 1,
+							"pricing_unit": 1,
+							"price_per_unit": 9
+						}
+					]
+				}
+			]
+		}
+	]
+}

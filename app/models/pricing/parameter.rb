@@ -20,8 +20,8 @@ module Pricing
 
     # validations
     validates :name, presence: true
-    validates :unit, presence: true
-    validates :upper_bound, presence: false
+    validates :unit, presence: false
+    validates :upper_bound, presence: true
     validates :bundle, presence: false
   end
 end

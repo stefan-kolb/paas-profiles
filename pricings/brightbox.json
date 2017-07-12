@@ -1,0 +1,242 @@
+{
+	"name": "Brightbox",
+	"date": "29.06.2017",
+	"currency": "GBP",
+	"tarif": [
+		{
+			"name": "Tarif1",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1,
+							"maximum": 1,
+							"pricing_unit": 1,
+							"price_per_unit": 7
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 15,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 15,
+							"maximum": 15,
+							"pricing_unit": 15,
+							"price_per_unit": 7
+						}
+					]
+				},
+				{
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 512,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 512,
+							"maximum": 512,
+							"pricing_unit": 512,
+							"price_per_unit": 7
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Tarif2",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1,
+							"maximum": 1,
+							"pricing_unit": 1,
+							"price_per_unit": 15
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 30,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 30,
+							"maximum": 30,
+							"pricing_unit": 30,
+							"price_per_unit": 15
+						}
+					]
+				},
+				{
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 1024,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1024,
+							"maximum": 1024,
+							"pricing_unit": 1024,
+							"price_per_unit": 15
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Tarif3",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 2,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 2,
+							"maximum": 2,
+							"pricing_unit": 2,
+							"price_per_unit": 27
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 40,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 40,
+							"maximum": 40,
+							"pricing_unit": 40,
+							"price_per_unit": 27
+						}
+					]
+				},
+				{
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 2048,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 2048,
+							"maximum": 2048,
+							"pricing_unit": 2048,
+							"price_per_unit": 27
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Tarif4",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 2,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 2,
+							"maximum": 2,
+							"pricing_unit": 2,
+							"price_per_unit": 49
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 60,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 60,
+							"maximum": 60,
+							"pricing_unit": 60,
+							"price_per_unit": 49
+						}
+					]
+				},
+				{
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 4096,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 4096,
+							"maximum": 4096,
+							"pricing_unit": 4096,
+							"price_per_unit": 49
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Tarif5",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 2,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 2,
+							"maximum": 2,
+							"pricing_unit": 2,
+							"price_per_unit": 90
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 80,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 80,
+							"maximum": 80,
+							"pricing_unit": 80,
+							"price_per_unit": 90
+						}
+					]
+				},
+				{
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 8192,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 8192,
+							"maximum": 8192,
+							"pricing_unit": 8192,
+							"price_per_unit": 90
+						}
+					]
+				}
+			]
+		}
+	]
+}
