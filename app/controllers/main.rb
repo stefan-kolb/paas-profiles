@@ -108,7 +108,7 @@ module Profiles
     end
 
     get '/pricing' do
-      require_relative 'price_calculator'
+      require_relative '../../lib/pricing/price_calculator'
       @title = 'PaaS Pricing Comparison'
       if params.length != 0
         calc = PriceCalculator.new(params)

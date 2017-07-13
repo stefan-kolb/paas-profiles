@@ -1,5 +1,6 @@
 require 'mongoid'
 
+
 module Pricing
   class FormParameter
     include Mongoid::Document

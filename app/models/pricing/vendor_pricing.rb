@@ -17,7 +17,7 @@ module Pricing
 
     # validation
     validates :name, presence: true
-    validates :currency, presence: true, inclusion: { in: %w[EUR USD GBP] }
+    validates :currency, presence: true, inclusion: {in: %w[EUR USD GBP]}
     validates :date, presence: true
     validates :tarif, presence: true
   end

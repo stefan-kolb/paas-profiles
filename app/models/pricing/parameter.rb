@@ -2,6 +2,7 @@ require 'mongoid'
 
 require_relative 'price'
 
+
 module Pricing
   class Parameter
     include Mongoid::Document

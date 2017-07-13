@@ -18,7 +18,7 @@ module Pricing
 
     # validations
     validates :interval, presence: true
-    validates :interval, presence: true, inclusion: { in: %w[daily monthly annually] }
+    validates :interval, presence: true, inclusion: {in: %w[daily monthly annually]}
     validates :parameter, presence: true
   end
 end

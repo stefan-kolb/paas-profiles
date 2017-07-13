@@ -1,4 +1,4 @@
-require_relative '../models/pricing/vendor_pricing'
+require_relative '../../app/models/pricing/vendor_pricing'
 
 class PriceCalculator
 
@@ -119,10 +119,9 @@ class PriceCalculator
         end
       end
     end
-    results = results.sort_by{|vendor, tar| tar["price"]}
+    results = results.sort_by { |vendor, tar| tar["price"] }
     return results
   end
-
 
 
   def formParamWasSelected(param)
