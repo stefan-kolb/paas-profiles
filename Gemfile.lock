@@ -50,8 +50,6 @@ GEM
     mime-types-data (3.2016.0521)
     minitest (5.10.2)
     mongo (2.4.2)
-    money (6.9.0)
-      i18n (>= 0.6.4, < 0.9)
       bson (>= 4.2.1, < 5.0.0)
     mongoid (6.2.0)
       activemodel (~> 5.1)
@@ -139,7 +137,6 @@ DEPENDENCIES
   grape-entity
   iso_country_codes
   minitest
-  money
   mongoid (~> 6.0)
   newrelic_rpm
   rack-test
@@ -155,7 +152,7 @@ DEPENDENCIES
   versionomy
 
 RUBY VERSION
-   ruby 2.3.4p301
+   ruby 2.3.3p222
 
 BUNDLED WITH
    1.14.6
