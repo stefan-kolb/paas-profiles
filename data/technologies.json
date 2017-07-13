@@ -130,10 +130,6 @@
     "isolation": "Container"
   },
   {
-    "vendor": "Gondor",
-    "isolation": ""
-  },
-  {
     "vendor": "Google App Engine",
     "isolation": ""
   },
@@ -156,10 +152,6 @@
   {
     "vendor": "Microsoft Azure",
     "isolation": "Virtual Machine"
-  },
-  {
-    "vendor": "Modulus",
-    "isolation": ""
   },
   {
     "vendor": "MoPaaS",
@@ -251,10 +243,6 @@
   },
   {
     "vendor": "Voxoz",
-    "isolation": ""
-  },
-  {
-    "vendor": "Webappcabaret",
     "isolation": ""
   },
   {
