@@ -1,0 +1,42 @@
+{
+	"name": "Convox",
+	"date": "29.06.2017",
+	"currency": "USD",
+	"tarif": [
+		{
+			"name": "Pro",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "Business-day support",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 500
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Enterprise",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "24/7 Support",
+          "unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 500
+						}
+					]
+				}
+			]
+		}
+	]
+}

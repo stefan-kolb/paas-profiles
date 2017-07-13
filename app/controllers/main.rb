@@ -106,5 +106,16 @@ module Profiles
       content_type 'application/rss+xml'
       Feed.rss
     end
+
+    get '/pricing' do
+      require_relative 'price_calculator'
+      @title = 'PaaS Pricing Comparison'
+      if params.length != 0
+        calc = PriceCalculator.new(params)
+        @results = calc.calculatePrices()
+      end
+      erb :pricing
+    end
+
   end
 end

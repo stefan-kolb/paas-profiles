@@ -1,0 +1,347 @@
+{
+	"name": "Cloudways",
+	"date": "29.06.2017",
+	"currency": "USD",
+	"tarif": [
+		{
+			"name": "Tarif1",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1,
+							"maximum": 1,
+							"pricing_unit": 1,
+							"price_per_unit": 7
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 20,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 20,
+							"maximum": 20,
+							"pricing_unit": 20,
+							"price_per_unit": 7
+						}
+					]
+				},
+				{
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 512,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 512,
+							"maximum": 512,
+							"pricing_unit": 512,
+							"price_per_unit": 7
+						}
+					]
+				},
+        {
+					"name": "Bandwidth",
+					"unit": "GB",
+					"upper_bound": 1024,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1024,
+							"maximum": 1024,
+							"pricing_unit": 1024,
+							"price_per_unit": 7
+						}
+					]
+				},
+        {
+					"name": "SSL",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 7
+						}
+					]
+				},
+        {
+					"name": "24/7 Support",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 7
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Tarif2",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1,
+							"maximum": 1,
+							"pricing_unit": 1,
+							"price_per_unit": 17
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 30,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 30,
+							"maximum": 30,
+							"pricing_unit": 30,
+							"price_per_unit": 17
+						}
+					]
+				},
+				{
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 1024,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 1024,
+							"maximum": 1024,
+							"pricing_unit": 1024,
+							"price_per_unit": 17
+						}
+					]
+				},
+        {
+					"name": "Bandwidth",
+					"unit": "GB",
+					"upper_bound": 2048,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 2048,
+							"maximum": 2048,
+							"pricing_unit": 2048,
+							"price_per_unit": 17
+						}
+					]
+				},
+        {
+					"name": "SSL",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 17
+						}
+					]
+				},
+        {
+					"name": "24/7 Support",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 17
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Tarif3",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 2,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 2,
+							"maximum": 2,
+							"pricing_unit": 2,
+							"price_per_unit": 34
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 40,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 40,
+							"maximum": 40,
+							"pricing_unit": 40,
+							"price_per_unit": 34
+						}
+					]
+				},
+				{
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 2048,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 2048,
+							"maximum": 2048,
+							"pricing_unit": 2048,
+							"price_per_unit": 34
+						}
+					]
+				},
+        {
+					"name": "Bandwidth",
+					"unit": "GB",
+					"upper_bound": 3072,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 3072,
+							"maximum": 3072,
+							"pricing_unit": 3072,
+							"price_per_unit": 34
+						}
+					]
+				},
+        {
+					"name": "SSL",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 34
+						}
+					]
+				},
+        {
+					"name": "24/7 Support",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 34
+						}
+					]
+				}
+			]
+		},
+    {
+			"name": "Tarif4",
+			"interval": "monthly",
+			"parameter": [
+				{
+					"name": "CPU-Cores",
+					"upper_bound": 2,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 2,
+							"maximum": 2,
+							"pricing_unit": 2,
+							"price_per_unit": 70
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"unit": "GB",
+					"upper_bound": 60,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 60,
+							"maximum": 60,
+							"pricing_unit": 60,
+							"price_per_unit": 70
+						}
+					]
+				},
+				{
+					"name": "RAM",
+					"unit": "MB",
+					"upper_bound": 4096,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 4096,
+							"maximum": 4096,
+							"pricing_unit": 4096,
+							"price_per_unit": 70
+						}
+					]
+				},
+        {
+					"name": "Bandwidth",
+					"unit": "GB",
+					"upper_bound": 4096,
+          "bundle": 1,
+					"price": [
+						{
+							"minimum": 4096,
+							"maximum": 4096,
+							"pricing_unit": 4096,
+							"price_per_unit": 70
+						}
+					]
+				},
+        {
+					"name": "SSL",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 70
+						}
+					]
+				},
+        {
+					"name": "24/7 Customer Support",
+					"unit": "binary",
+					"upper_bound": 1,
+          "bundle": 1,
+					"price": [
+						{
+							"pricing_unit": 1,
+							"price_per_unit": 70
+						}
+					]
+				}
+			]
+		}
+	]
+}
