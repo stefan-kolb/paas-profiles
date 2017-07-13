@@ -1,5 +1,4 @@
 require_relative '../models/pricing/vendor_pricing'
-require 'money'
 
 class PriceCalculator
 
