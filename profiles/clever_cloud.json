@@ -1,6 +1,6 @@
 {
   "name": "Clever Cloud",
-  "revision": "2016-01-27",
+  "revision": "2017-08-22",
   "url": "https://www.clever-cloud.com/",
   "vendor_verified": "2016-01-27",
   "status": "production",
@@ -29,11 +29,29 @@
       ]
     },
     {
+      "language": "haskell",
+      "versions": [
+        "*"
+      ]
+    },
+    {
+      "language": "rust",
+      "versions": [
+        "*"
+      ]
+    },
+    {
+      "language": "elixir",
+      "versions": [
+        "1.4.5"
+      ]
+    },
+    {
       "language": "java",
       "versions": [
-        "1.6.*",
-        "1.7.*",
-        "1.8.*"
+        "6.*",
+        "7.*",
+        "8.*"
       ]
     },
     {
@@ -46,23 +64,15 @@
       "language": "node",
       "versions": [
         "5.*",
-        "4.*",
-        "0.10.*",
-        "0.12.*",
-        "0.11.*",
-        "0.9.*",
-        "0.8.*",
-        "0.7.*",
-        "0.6.*"
+        "4.*"
       ]
     },
     {
       "language": "php",
       "versions": [
-        "5.4",
-        "5.5",
         "5.6",
-        "7.0"
+        "7.0",
+        "7.1"
       ]
     },
     {
@@ -211,13 +221,6 @@
         ]
       },
       {
-        "name": "couchbase",
-        "type": "datastore",
-        "versions": [
-          "2.0"
-        ]
-      },
-      {
         "name": "FS Buckets",
         "type": "datastore",
         "description": "Persistent file system",
@@ -229,21 +232,21 @@
         "name": "mongodb",
         "type": "datastore",
         "versions": [
-          "3.0"
+          "3.4"
         ]
       },
       {
         "name": "mysql",
         "type": "datastore",
         "versions": [
-          "5.5"
+          "5.7"
         ]
       },
       {
         "name": "postgresql",
         "type": "datastore",
         "versions": [
-          "9.3"
+          "9.6"
         ]
       },
       {
@@ -256,7 +259,7 @@
       {
         "name": "Docker",
         "versions": [
-          "1.6"
+          "*"
         ],
         "type": "other"
       },
@@ -264,15 +267,7 @@
         "name": "redis",
         "type": "datastore",
         "versions": [
-          "3.0"
-        ]
-      },
-      {
-        "name": "neo4j",
-        "description": "Graph Database",
-        "type": "datastore",
-        "versions": [
-
+          "4.1"
         ]
       }
     ],
