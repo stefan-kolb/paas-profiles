@@ -58,7 +58,7 @@
   },
   {
     "vendor": "Clever Cloud",
-    "isolation": "Container"
+    "isolation": "Virtual Machine"
   },
   {
     "vendor": "Cloud Foundry",
