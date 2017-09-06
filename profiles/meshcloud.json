@@ -1,0 +1,195 @@
+{
+  "name": "Meshcloud",
+  "revision": "2017-09-06",
+  "url": "https://panel.meshcloud.io/",
+  "status": "production",
+  "status_since": "2017-09-06",
+  "type": "Generic",
+  "platform": "Cloud Foundry",
+  "hosting": {
+    "public": true,
+    "virtual_private": true,
+    "private": true
+  },
+  "pricings": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "groovy",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
+  "middlewares": [
+    {
+      "name": "tomcat",
+      "runtime": "java",
+      "versions": [
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "grails",
+      "runtime": "groovy",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "spring",
+      "runtime": "java",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "cakephp",
+      "runtime": "php",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "symfony",
+      "runtime": "php",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "swift",
+        "type": "datastore",
+        "description": "Dynamic Object Storage based on OpenStack Swift",
+        "versions": []
+      },
+      {
+        "name": "PostgreSQL",
+        "type": "datastore",
+        "description": "",
+        "versions": [
+          "9.5.*"
+        ]
+      },
+      {
+        "name": "MySQL",
+        "type": "datastore",
+        "description": "MariaDB. We offer shared instances (S), dedicated instances (M) and dedicated clusters (L, XL).",
+        "versions": [
+          "10.1.*"
+        ]
+      },
+      {
+        "name": "MongoDB",
+        "type": "datastore",
+        "description": "MongoDB. We offer shared instances (S), dedicated instances (M) and dedicated clusters (L, XL).",
+        "versions": [
+          "3.4.*"
+        ]
+      },
+      {
+        "name": "RabbitMQ",
+        "type": "messaging",
+        "description": "RabbitMQ. We offer shared instances (S), dedicated instances (M) and dedicated clusters (L, XL).",
+        "versions": [
+          "3.6.*"
+        ]
+      } 
+    ],
+    "addon": [
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Darmstadt",
+      "provider": "Meshcloud OpenStack, DARZ GmbH"
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Hannover (net.de)",
+      "provider": "Meshcloud OpenStack, net.DE AG"
+    }
+  ]
+}
