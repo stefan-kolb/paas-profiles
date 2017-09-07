@@ -136,9 +136,15 @@
   "services": {
     "native": [
       {
-        "name": "swift",
+        "name": "Object Storage",
         "type": "datastore",
         "description": "Dynamic Object Storage based on OpenStack Swift",
+        "versions": []
+      },
+      {
+        "name": "LBaaS",
+        "type": "devops",
+        "description": "Load Balancer as a Service for your own domains, with optional SSL. Based on OpenStack LBaaS.",
         "versions": []
       },
       {
