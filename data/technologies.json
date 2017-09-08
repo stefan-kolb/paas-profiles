@@ -150,6 +150,10 @@
     "isolation": "Container"
   },
   {
+    "vendor": "Meshcloud",
+    "isolation": "Container"
+  },
+  {
     "vendor": "Mendix",
     "isolation": ""
   },
