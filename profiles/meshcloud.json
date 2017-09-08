@@ -2,6 +2,7 @@
   "name": "Meshcloud",
   "revision": "2017-09-06",
   "url": "https://panel.meshcloud.io/",
+  "vendor_verified": "2017-09-06",
   "status": "production",
   "status_since": "2017-09-06",
   "type": "Generic",
