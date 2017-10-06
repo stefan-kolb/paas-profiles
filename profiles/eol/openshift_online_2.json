@@ -1,10 +1,10 @@
 {
-  "name": "OpenShift Online",
-  "revision": "2017-10-06",
+  "name": "OpenShift Online 2",
+  "revision": "2016-08-17",
   "url": "https://www.openshift.com/products/online",
   "vendor_verified": "2014-01-07",
   "status": "production",
-  "status_since": "2017-07-11",
+  "status_since": "2017-12-31",
   "type": "Generic",
   "platform": "OpenShift Origin",
   "hosting": {
@@ -34,79 +34,69 @@
     {
       "language": "java",
       "versions": [
-        "1.8"
+        "1.6",
+        "1.7"
       ]
     },
     {
       "language": "node",
       "versions": [
-        "0.10",
-        "4.*",
-        "6.*"
+        "0.6",
+        "0.10"
       ]
     },
     {
       "language": "perl",
       "versions": [
-        "5.16",
-        "5.20",
-        "5.24"
+        "5.10"
       ]
     },
     {
       "language": "php",
       "versions": [
-        "5.5",
-        "5.6",
-        "7.0"
+        "5.3",
+        "5.4"
       ]
     },
     {
       "language": "python",
       "versions": [
+        "2.6",
         "2.7",
-        "3.3",
-        "3.4",
-        "3.5"
-      ]
-    },
-    {
-      "language": "dotnet",
-      "versions": [
-        "1.0",
-        "1.1",
-        "2.0"
+        "3.3"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-        "2.0",
-        "2.2",
-        "2.3",
-        "2.4"
+        "1.8",
+        "1.9",
+        "2.0"
       ]
     }
   ],
   "middlewares": [
     {
-      "name": "3scale APIcast",
+      "name": "jboss",
+      "runtime": "java",
       "versions": [
-        "2"
+        "6.4"
       ]
     },
     {
       "name": "tomcat",
       "runtime": "java",
       "versions": [
-        "7",
-        "8"
+        "6",
+        "7"
       ]
     },
     {
-      "name": "httpd",
+      "name": "zend server",
+      "runtime": "php",
       "versions": [
-        "2.4"
+        "5.6",
+        "6.1"
       ]
     }
   ],
@@ -161,49 +151,37 @@
         "name": "jenkins",
         "type": "devops",
         "versions": [
-          "1",
-          "2"
+          "1.5"
         ]
       },
       {
         "name": "mongodb",
         "type": "datastore",
         "versions": [
-          "2.4",
-          "2.6",
-          "3.2"
+          "2.4"
         ]
       },
       {
         "name": "mysql",
         "type": "datastore",
         "versions": [
-          "5.5",
-          "5.6",
-          "5.7"
+          "5.1",
+          "5.5"
+        ]
+      },
+      {
+        "name": "openshift metrics",
+        "type": "analytics",
+        "versions": [
+          "0.1"
         ]
       },
       {
         "name": "postgresql",
         "type": "datastore",
         "versions": [
-          "9.2",
-          "9.3",
-          "9.5"
-        ]
-      },
-      {
-        "name": "redis",
-        "type": "datastore",
-        "versions": [
-          "3.2"
-        ]
-      },
-      {
-        "name": "maria db",
-        "type": "datastore",
-        "versions": [
-          "10.1"
+          "8.4",
+          "9.2"
         ]
       }
     ],
