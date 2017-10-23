@@ -16,7 +16,7 @@ Style/GuardClause:
 Layout/IndentationConsistency:
   Enabled: false
 
-Style/FileName:
+Naming/FileName:
   Enabled: false
 
 Style/FrozenStringLiteralComment:

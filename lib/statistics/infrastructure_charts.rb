@@ -2,7 +2,7 @@ require_relative 'charts'
 
 module Profiles
   class InfrastructureCharts < Charts
-    attr_reader :continent_codes, :mean_count, :mode_count, :median_count, :variance, :sd, :min, :max, :external_providers
+    attr_reader :mean_count, :mode_count, :median_count, :variance, :sd, :min, :max
 
     def initialize
       compute_averages
@@ -65,7 +65,7 @@ module Profiles
     def top_continents
       data = []
 
-      continent_codes.keys.each do |c|
+      continent_codes.each_key do |c|
         count = Vendor.where('infrastructures.continent' => c).count
         public = Vendor.where('hosting.public' => true).count
         # TODO: missing public infras

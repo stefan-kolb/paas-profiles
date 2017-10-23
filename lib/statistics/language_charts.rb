@@ -4,7 +4,7 @@ require_relative '../../app/models/statistics'
 # Chart class for language runtime statistics
 module Profiles
   class LanguageCharts < Charts
-    attr_reader :language_count, :mean_count, :mode_count, :median_count, :support_data, :support_categories
+    attr_reader :mean_count, :mode_count, :median_count, :support_data
 
     def initialize
       compute_averages

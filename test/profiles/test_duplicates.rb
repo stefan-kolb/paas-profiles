@@ -47,7 +47,7 @@ module Profiles
 
         if partial.size != exact.size
           vendors = partial - exact
-          $stderr.puts "WARN: Potential duplicate #{field} of #{e} found @ vendors #{vendors.collect!(&:name).to_a.join(',')}"
+          warn "WARN: Potential duplicate #{field} of #{e} found @ vendors #{vendors.collect!(&:name).to_a.join(',')}"
         end
       end
     end

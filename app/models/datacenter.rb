@@ -18,7 +18,7 @@ module Profiles
 
     def country_codes
       code = IsoCountryCodes.find(country)
-      errors[:country] = '#{country} is not a valid ISO 3166-1 code' if code.nil?
+      errors[:country] = "#{country} is not a valid ISO 3166-1 code" if code.nil?
     end
 
     def to_s

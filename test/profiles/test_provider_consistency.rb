@@ -43,7 +43,7 @@ module Profiles
     def test_runtime_capabilities
       loop_providers do |provider, platform|
         platform.runtimes.each do |runtime|
-          $stderr.puts "WARN: #{provider.name} does not support default runtime #{runtime.language} of base platform #{platform.name}" unless provider.runtimes.any? { |r| r.language.eql? runtime.language }
+          warn "WARN: #{provider.name} does not support default runtime #{runtime.language} of base platform #{platform.name}" unless provider.runtimes.any? { |r| r.language.eql? runtime.language }
         end
       end
     end
@@ -52,7 +52,7 @@ module Profiles
     def test_middleware_capabilities
       loop_providers do |provider, platform|
         platform.middlewares.each do |mw|
-          $stderr.puts "WARN: #{provider.name} does not support default middleware #{mw.name} of base platform #{platform.name}" unless provider.middlewares.any? { |m| m.name.eql? mw.name }
+          warn "WARN: #{provider.name} does not support default middleware #{mw.name} of base platform #{platform.name}" unless provider.middlewares.any? { |m| m.name.eql? mw.name }
         end
       end
     end
@@ -61,7 +61,7 @@ module Profiles
     def test_frameworks_capabilities
       loop_providers do |provider, platform|
         platform.frameworks.each do |fw|
-          $stderr.puts "WARN: #{provider.name} does not support default framework #{fw.name} of base platform #{platform.name}" unless provider.frameworks.any? { |f| f.name.eql? fw.name }
+          warn "WARN: #{provider.name} does not support default framework #{fw.name} of base platform #{platform.name}" unless provider.frameworks.any? { |f| f.name.eql? fw.name }
         end
       end
     end
@@ -70,7 +70,7 @@ module Profiles
     def test_services_capabilities
       loop_providers do |provider, platform|
         platform.service.natives.each do |s|
-          $stderr.puts "WARN: #{provider.name} does not support default service #{s.name} of base platform #{platform.name}" unless provider.service.natives.any? { |r| r.name.eql? s.name }
+          warn "WARN: #{provider.name} does not support default service #{s.name} of base platform #{platform.name}" unless provider.service.natives.any? { |r| r.name.eql? s.name }
         end
       end
     end
