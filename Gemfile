@@ -13,7 +13,7 @@ gem 'require_all'
 gem 'rest-client'
 gem 'rmagick'
 gem 'rubocop', require: false
-gem 'sinatra', '~> 1.0'
+gem 'sinatra', '~> 2.0'
 gem 'sinatra-simple-navigation', '~> 4.0'
 gem 'versionomy'
 
