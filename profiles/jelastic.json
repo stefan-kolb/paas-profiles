@@ -1,14 +1,15 @@
 {
   "name": "Jelastic",
-  "revision": "2014-10-17",
+  "revision": "2017-11-02",
   "vendor_verified": "2014-12-18",
-  "url": "http://jelastic.com",
+  "url": "https://jelastic.com",
   "status": "production",
   "status_since": "2012-03-01",
   "type": "Generic",
   "hosting": {
     "public": true,
-    "private": true
+    "private": true,
+    "virtual_private": true
   },
   "pricings": [
     {
@@ -24,9 +25,13 @@
       "period": "monthly"
     }
   ],
+  "quality": {
+    "uptime": "99.99",
+    "compliance": []
+  },
   "scaling": {
-    "vertical": true,
     "horizontal": true,
+    "vertical": true,
     "auto": true
   },
   "runtimes": [
@@ -35,7 +40,8 @@
       "versions": [
         "1.6.*",
         "1.7.*",
-        "1.8.*"
+        "1.8.*",
+        "1.9.*"
       ]
     },
     {
@@ -44,7 +50,9 @@
         "5.3.*",
         "5.4.*",
         "5.5.*",
-        "5.6.*"
+        "5.6.*",
+        "7.0.*",
+        "7.1.*"
       ]
     },
     {
@@ -52,7 +60,8 @@
       "versions": [
         "2.7.6",
         "3.3.5",
-        "3.4.0"
+        "3.4.5",
+        "3.5.2"
       ]
     },
     {
@@ -60,13 +69,32 @@
       "versions": [
         "1.9.3",
         "2.0.0",
-        "2.1.2"
+        "2.1.2",
+        "2.2.7",
+        "2.3.4",
+        "2.4.1"
       ]
     },
     {
       "language": "node",
       "versions": [
-        "0.10.*"
+        "0.10.*",
+        "0.12.*",
+        "4.2.*",
+        "4.5.*",
+        "5.1.*",
+        "5.6.*",
+        "6.5.*"
+      ]
+    },
+    {
+      "language": "docker",
+      "versions": []
+    },
+    {
+      "language": "dotnet",
+      "versions": [
+        "4"
       ]
     }
   ],
@@ -75,20 +103,25 @@
       "name": "glassfish",
       "runtime": "java",
       "versions": [
-        "3.1.2.2"
+        "3.1.2.2",
+        "4.*",
+        "5.*"
       ]
     },
     {
       "name": "jetty",
       "runtime": "java",
       "versions": [
-        "6.1.26"
+        "6.1.26",
+        "8.1.*",
+        "9.3.*"
       ]
     },
     {
       "name": "nginx",
+      "runtime": "",
       "versions": [
-        "1.6.1"
+        "1.10"
       ]
     },
     {
@@ -96,28 +129,85 @@
       "runtime": "java",
       "versions": [
         "6.0.39",
-        "7.0.55"
+        "7.0.55",
+        "8.*",
+        "9.*"
       ]
     },
     {
       "name": "tomee",
       "runtime": "java",
       "versions": [
-        "1.7.0"
+        "7.0.3"
       ]
     },
     {
       "name": "apache",
+      "runtime": "",
       "versions": [
-        "2.2.15"
+        "2.4.6"
+      ]
+    },
+    {
+      "name": "springboot",
+      "runtime": "java",
+      "versions": [
+        "1.*",
+        "2.*"
+      ]
+    },
+    {
+      "name": "wildfly",
+      "runtime": "java",
+      "versions": [
+        "8.2",
+        "9.0",
+        "10.1"
+      ]
+    },
+    {
+      "name": "payara",
+      "runtime": "java",
+      "versions": [
+        "4.*",
+        "5.*"
       ]
     }
   ],
   "frameworks": [
-
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": []
+    },
+    {
+      "name": "zend",
+      "runtime": "php",
+      "versions": []
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": []
+    },
+    {
+      "name": "struts",
+      "runtime": "java",
+      "versions": []
+    },
+    {
+      "name": "portofino",
+      "runtime": "java",
+      "versions": []
+    },
+    {
+      "name": "socketstream",
+      "runtime": "node",
+      "versions": []
+    }
   ],
   "services": {
-    "native": [
+"native": [
       {
         "name": "couchdb",
         "description": "",
@@ -167,9 +257,7 @@
         ]
       }
     ],
-    "addon": [
-
-    ]
+    "addon": []
   },
   "extensible": true,
   "infrastructures": [
