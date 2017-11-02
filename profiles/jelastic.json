@@ -207,7 +207,56 @@
     }
   ],
   "services": {
-    "native": [],
+"native": [
+      {
+        "name": "couchdb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "1.6.0"
+        ]
+      },
+      {
+        "name": "mariadb",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "5.5.39",
+          "10.0.13"
+        ]
+      },
+      {
+        "name": "memcached",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "1.4.20"
+        ]
+      },
+      {
+        "name": "mongodb",
+        "type": "datastore",
+        "versions": [
+          "2.6.4"
+        ]
+      },
+      {
+        "name": "mysql",
+        "type": "datastore",
+        "versions": [
+          "5.7.4"
+        ]
+      },
+      {
+        "name": "postgresql",
+        "description": "",
+        "type": "datastore",
+        "versions": [
+          "8.4.22",
+          "9.3.5"
+        ]
+      }
+    ],
     "addon": []
   },
   "extensible": true,
