@@ -1,14 +1,14 @@
 {
   "name": "Heroku",
-  "revision": "2017-10-23",
+  "revision": "2017-11-02",
   "url": "http://www.heroku.com/",
   "status": "production",
   "status_since": "2009-04-24",
   "type": "Generic",
   "hosting": {
     "public": true,
-    "virtual_private": true,
-    "private": false
+    "private": false,
+    "virtual_private": true
   },
   "pricings": [
     {
@@ -20,8 +20,8 @@
     }
   ],
   "scaling": {
-    "vertical": true,
     "horizontal": true,
+    "vertical": true,
     "auto": true
   },
   "runtimes": [
@@ -41,7 +41,8 @@
       "language": "java",
       "versions": [
         "1.7.*",
-        "1.8.*"
+        "1.8.*",
+        "1.9.*"
       ]
     },
     {
@@ -52,7 +53,7 @@
         "0.8.*",
         "0.10.*",
         "0.12.*",
-	"4.0"
+        "4.0"
       ]
     },
     {
@@ -60,8 +61,8 @@
       "versions": [
         "5.5",
         "5.6",
-	"7.0",
-	"7.1"
+        "7.0",
+        "7.1"
       ]
     },
     {
@@ -80,16 +81,16 @@
         "2.0.0",
         "2.1.8",
         "2.2.7",
-	"2.3.4",
-	"2.4.1",
-	"2.5.0"
+        "2.3.4",
+        "2.4.1",
+        "2.5.0"
       ]
     },
     {
       "language": "go",
       "versions": [
         "1.8",
-	"1.7"
+        "1.7"
       ]
     },
     {
@@ -99,9 +100,7 @@
       ]
     }
   ],
-  "middlewares": [
-
-  ],
+  "middlewares": [],
   "frameworks": [
     {
       "name": "play",
@@ -123,23 +122,17 @@
     {
       "name": "grails",
       "runtime": "groovy",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "django",
       "runtime": "python",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "flask",
       "runtime": "python",
-      "versions": [
-
-      ]
+      "versions": []
     }
   ],
   "services": {
@@ -149,7 +142,7 @@
         "type": "datastore",
         "versions": [
           "10",
-	  "9.5",
+          "9.5",
           "9.4",
           "9.3",
           "9.2",
@@ -159,9 +152,7 @@
       {
         "name": "redis",
         "type": "datastore",
-        "versions": [
-
-        ]
+        "versions": []
       }
     ],
     "addon": [
@@ -174,47 +165,39 @@
       {
         "name": "adminium",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
         "name": "airbrake",
         "url": "https://airbrake.io",
-        "description": "",
         "type": ""
       },
       {
         "name": "appsignal",
-        "description": "",
         "type": ""
       },
       {
         "name": "bablic",
-        "description": "",
         "type": ""
       },
       {
         "name": "blitline",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
         "name": "blitz",
         "url": "https://www.blitz.io/",
-        "description": "",
         "type": ""
       },
       {
         "name": "bomberman",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
         "name": "bonsai",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
@@ -224,412 +207,337 @@
       },
       {
         "name": "cameratag",
-        "description": "",
         "type": ""
       },
       {
         "name": "fastly",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
         "name": "chargify",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
         "name": "circle ci",
-        "description": "",
         "type": ""
       },
       {
         "name": "cleardb",
         "url": "http://www.cleardb.com/",
-        "description": "",
         "type": ""
       },
       {
         "name": "cloudamqp",
         "url": "http://cloudamqp.com/",
-        "description": "",
         "type": ""
       },
       {
         "name": "cloudinary",
         "url": "http://cloudinary.com/",
-        "description": "",
         "type": ""
       },
       {
         "name": "cloudmailin",
         "url": "http://www.cloudmailin.com/",
-        "description": "",
         "type": ""
       },
       {
         "name": "cloudmqtt",
-        "description": "",
         "type": ""
       },
       {
         "name": "cloudvertical",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
         "name": "codeship",
         "url": "https://www.codeship.io/",
-        "description": "",
         "type": ""
       },
       {
         "name": "dbinsights",
         "url": "https://dbinsights.herokuapp.com/",
-        "description": "",
         "type": ""
       },
       {
         "name": "docraptor",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
         "name": "dyn",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
         "name": "eltanin",
-        "description": "",
         "type": ""
       },
       {
         "name": "errorapp",
-        "description": "",
         "type": ""
       },
       {
         "name": "filepicker",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
         "name": "flydata",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
         "name": "flying sphinx",
         "url": "",
-        "description": "",
         "type": ""
       },
       {
         "name": "gemfury",
-        "description": "",
         "type": ""
       },
       {
         "name": "groupdocs",
-        "description": "",
         "type": ""
       },
       {
         "name": "honeybadger",
-        "description": "",
         "type": ""
       },
       {
         "name": "hosted graphite",
         "url": "https://www.hostedgraphite.com/",
-        "description": "",
         "type": "analytics"
       },
       {
         "name": "ironcache",
-        "description": "",
         "type": ""
       },
       {
         "name": "ironmq",
-        "description": "",
         "type": ""
       },
       {
         "name": "ironworker",
-        "description": "",
         "type": ""
       },
       {
         "name": "librato",
-        "description": "",
-        "type": "",
-        "url": "https://metrics.librato.com/"
+        "url": "https://metrics.librato.com/",
+        "type": ""
       },
       {
         "name": "loader.io",
-        "description": "",
         "type": ""
       },
       {
         "name": "logentries",
-        "description": "",
-        "type": "",
-        "url": "https://logentries.com/"
+        "url": "https://logentries.com/",
+        "type": ""
       },
       {
         "name": "mailgun",
-        "description": "",
-        "type": "",
-        "url": "http://www.mailgun.com/"
+        "url": "http://www.mailgun.com/",
+        "type": ""
       },
       {
         "name": "mailtrap",
-        "description": "",
         "type": ""
       },
       {
         "name": "mandrill",
-        "description": "",
         "type": ""
       },
       {
         "name": "memcachier",
-        "description": "",
-        "type": "",
-        "url": "http://www.memcachier.com/"
+        "url": "http://www.memcachier.com/",
+        "type": ""
       },
       {
         "name": "compose mongodb",
+        "url": "https://www.compose.io/mongodb/",
         "description": "datastore",
-        "type": "",
-        "url": "https://www.compose.io/mongodb/"
+        "type": ""
       },
       {
         "name": "mongolab",
-        "description": "",
-        "type": "",
-        "url": "https://mongolab.com/"
+        "url": "https://mongolab.com/",
+        "type": ""
       },
       {
         "name": "new relic",
-        "description": "",
         "type": ""
       },
       {
         "name": "nodetime",
-        "description": "",
         "type": ""
       },
       {
         "name": "openredis",
-        "description": "",
-        "type": "",
-        "url": "https://openredis.com/"
+        "url": "https://openredis.com/",
+        "type": ""
       },
       {
         "name": "pandastream",
-        "description": "",
         "type": ""
       },
       {
         "name": "papertrail",
-        "description": "",
-        "type": "",
-        "url": "https://papertrailapp.com/"
+        "url": "https://papertrailapp.com/",
+        "type": ""
       },
       {
         "name": "phraseapp",
-        "description": "",
-        "type": "",
-        "url": "https://phraseapp.com/"
+        "url": "https://phraseapp.com/",
+        "type": ""
       },
       {
         "name": "postmark",
-        "description": "",
         "type": ""
       },
       {
         "name": "proximo",
-        "description": "",
         "type": ""
       },
       {
         "name": "pubnub",
-        "description": "",
         "type": ""
       },
       {
         "name": "pusher",
-        "description": "",
         "type": ""
       },
       {
         "name": "ranger",
-        "description": "",
         "type": ""
       },
       {
         "name": "redis cloud",
-        "description": "",
         "type": ""
       },
       {
         "name": "redisgreen",
-        "description": "",
         "type": ""
       },
       {
         "name": "redis to go",
-        "description": "",
         "type": ""
       },
       {
         "name": "rollbar",
-        "description": "",
-        "type": "",
-        "url": "https://rollbar.com/"
+        "url": "https://rollbar.com/",
+        "type": ""
       },
       {
         "name": "runtimeerror",
-        "description": "",
         "type": ""
       },
       {
         "name": "scheduler",
-        "description": "",
         "type": ""
       },
       {
         "name": "searchbox",
-        "description": "",
         "type": ""
       },
       {
         "name": "searchify",
-        "description": "",
-        "type": "",
-        "url": "http://www.searchify.com/"
+        "url": "http://www.searchify.com/",
+        "type": ""
       },
       {
         "name": "semaphore",
-        "description": "",
         "type": ""
       },
       {
         "name": "sendgrid",
-        "description": "",
-        "type": "",
-        "url": "http://sendgrid.com/"
+        "url": "http://sendgrid.com/",
+        "type": ""
       },
       {
         "name": "sentry",
-        "description": "",
         "type": ""
       },
       {
         "name": "signature",
-        "description": "",
         "type": ""
       },
       {
         "name": "spreedly",
-        "description": "",
         "type": ""
       },
       {
         "name": "ssl",
-        "description": "",
         "type": ""
       },
       {
         "name": "statsmix",
-        "description": "",
-        "type": "",
-        "url": "https://www.statsmix.com/"
+        "url": "https://www.statsmix.com/",
+        "type": ""
       },
       {
         "name": "statuspage",
-        "description": "",
         "type": ""
       },
       {
         "name": "stillalive",
-        "description": "",
         "type": ""
       },
       {
         "name": "stormpath",
-        "description": "",
         "type": ""
       },
       {
         "name": "swiftype",
-        "description": "",
         "type": ""
       },
       {
         "name": "telapi",
-        "description": "",
         "type": ""
       },
       {
         "name": "temporize",
-        "description": "",
         "type": ""
       },
       {
         "name": "tinfoil security",
-        "description": "",
         "type": ""
       },
       {
         "name": "treasure data",
-        "description": "",
-        "type": "",
-        "url": "http://www.treasure-data.com/"
+        "url": "http://www.treasure-data.com/",
+        "type": ""
       },
       {
         "name": "twist",
-        "description": "",
         "type": ""
       },
       {
         "name": "websolr",
-        "description": "",
-        "type": "",
-        "url": "http://www.websolr.com/"
+        "url": "http://www.websolr.com/",
+        "type": ""
       },
       {
         "name": "wercker",
-        "description": "",
         "type": ""
       },
       {
         "name": "wwwhisper",
-        "description": "",
         "type": ""
       },
       {
         "name": "zencoder",
-        "description": "",
         "type": ""
       },
       {
         "name": "zerigo dns",
-        "description": "",
         "type": ""
       },
       {
         "name": "zeropush",
-        "description": "",
         "type": ""
       },
       {
@@ -873,7 +781,7 @@
         "type": ""
       },
       {
-        "name": "Dead Man's Snitch",
+        "name": "Dead Man\u0027s Snitch",
         "url": "",
         "type": ""
       },
@@ -1023,7 +931,7 @@
         "type": ""
       },
       {
-        "name": "Ruppell's Sockets",
+        "name": "Ruppell\u0027s Sockets",
         "url": "",
         "type": ""
       },
@@ -1058,7 +966,7 @@
         "type": ""
       },
       {
-        "name": "Swiftype Search & Autocomplete",
+        "name": "Swiftype Search \u0026 Autocomplete",
         "url": "",
         "type": ""
       },
