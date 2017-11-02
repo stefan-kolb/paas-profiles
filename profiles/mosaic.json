@@ -1,7 +1,7 @@
 {
   "name": "mOSAIC",
-  "revision": "2015-05-26",
-  "url": "http://www.mosaic-cloud.eu",
+  "revision": "2017-11-02",
+  "url": "http://www.modaclouds.eu/software/mosaic/",
   "status": "beta",
   "status_since": "2011-09-01",
   "type": "Generic",
@@ -11,31 +11,27 @@
   },
   "pricings": [
     {
-      "model": "free"
+      "model": "free",
+      "period": ""
     }
   ],
   "scaling": {
-    "vertical": false,
     "horizontal": true,
+    "vertical": false,
     "auto": true
   },
   "runtimes": [
     {
       "language": "java",
-      "versions": [
-
-      ]
+      "versions": []
     }
   ],
-  "middlewares": [
-
-  ],
-  "frameworks": [
-
-  ],
-  "services": null,
+  "middlewares": [],
+  "frameworks": [],
+  "services": {
+    "native": [],
+    "addon": []
+  },
   "extensible": false,
-  "infrastructures": [
-
-  ]
+  "infrastructures": []
 }
