@@ -1,8 +1,8 @@
 {
   "name": "Jelastic",
-  "revision": "2017-11-02",
+  "revision": "2017-11-03",
   "vendor_verified": "2014-12-18",
-  "url": "https://jelastic.com",
+  "url": "http://jelastic.com",
   "status": "production",
   "status_since": "2012-03-01",
   "type": "Generic",
@@ -26,7 +26,7 @@
     }
   ],
   "quality": {
-    "uptime": "99.99",
+    "uptime": "100",
     "compliance": []
   },
   "scaling": {
@@ -41,7 +41,7 @@
         "1.6.*",
         "1.7.*",
         "1.8.*",
-        "1.9.*"
+        "1.9*"
       ]
     },
     {
@@ -51,8 +51,8 @@
         "5.4.*",
         "5.5.*",
         "5.6.*",
-        "7.0.*",
-        "7.1.*"
+        "7.0*",
+        "7.1*"
       ]
     },
     {
@@ -79,12 +79,12 @@
       "language": "node",
       "versions": [
         "0.10.*",
-        "0.12.*",
-        "4.2.*",
-        "4.5.*",
-        "5.1.*",
-        "5.6.*",
-        "6.5.*"
+        "0.12*",
+        "4.2*",
+        "4.5*",
+        "5.1*",
+        "5.6*",
+        "6.5*"
       ]
     },
     {
@@ -104,8 +104,8 @@
       "runtime": "java",
       "versions": [
         "3.1.2.2",
-        "4.*",
-        "5.*"
+        "4*",
+        "5*"
       ]
     },
     {
@@ -113,12 +113,13 @@
       "runtime": "java",
       "versions": [
         "6.1.26",
-        "8.1.*",
-        "9.3.*"
+        "8.1*",
+        "9.3*"
       ]
     },
     {
       "name": "nginx",
+      "runtime": "",
       "versions": [
         "1.10"
       ]
@@ -129,8 +130,8 @@
       "versions": [
         "6.0.39",
         "7.0.55",
-        "8.*",
-        "9.*"
+        "8*",
+        "9*"
       ]
     },
     {
@@ -142,6 +143,7 @@
     },
     {
       "name": "apache",
+      "runtime": "",
       "versions": [
         "2.4.6"
       ]
@@ -150,8 +152,7 @@
       "name": "springboot",
       "runtime": "java",
       "versions": [
-        "1.*",
-        "2.*"
+        "1.x-2.x"
       ]
     },
     {
@@ -167,14 +168,14 @@
       "name": "payara",
       "runtime": "java",
       "versions": [
-        "4.*",
-        "5.*"
+        "4*",
+        "5*"
       ]
     }
   ],
   "frameworks": [
     {
-      "name": "play",
+      "name": "play!",
       "runtime": "java",
       "versions": []
     },
@@ -205,57 +206,14 @@
     }
   ],
   "services": {
-"native": [
+    "native": [],
+    "addon": [
       {
-        "name": "couchdb",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "1.6.0"
-        ]
-      },
-      {
-        "name": "mariadb",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "5.5.39",
-          "10.0.13"
-        ]
-      },
-      {
-        "name": "memcached",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "1.4.20"
-        ]
-      },
-      {
-        "name": "mongodb",
-        "type": "datastore",
-        "versions": [
-          "2.6.4"
-        ]
-      },
-      {
-        "name": "mysql",
-        "type": "datastore",
-        "versions": [
-          "5.7.4"
-        ]
-      },
-      {
-        "name": "postgresql",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-          "8.4.22",
-          "9.3.5"
-        ]
+        "name": "",
+        "url": "",
+        "type": ""
       }
-    ],
-    "addon": []
+    ]
   },
   "extensible": true,
   "infrastructures": [
@@ -281,25 +239,13 @@
       "continent": "AS",
       "country": "KZ",
       "region": "",
-      "provider": "DNR.kz"
-    },
-    {
-      "continent": "AS",
-      "country": "KZ",
-      "region": "",
-      "provider": "Hoster.kz"
+      "provider": "PS.kz"
     },
     {
       "continent": "EU",
       "country": "RU",
       "region": "",
       "provider": "reg.ru"
-    },
-    {
-      "continent": "EU",
-      "country": "RU",
-      "region": "",
-      "provider": "Infobox"
     },
     {
       "continent": "EU",
@@ -321,12 +267,6 @@
     },
     {
       "continent": "EU",
-      "country": "RO",
-      "region": "",
-      "provider": "Star Storage"
-    },
-    {
-      "continent": "EU",
       "country": "BY",
       "region": "",
       "provider": "MyCloud"
@@ -336,12 +276,6 @@
       "country": "LU",
       "region": "",
       "provider": "Telecom Luxembourg"
-    },
-    {
-      "continent": "EU",
-      "country": "UA",
-      "region": "",
-      "provider": "Neohost"
     },
     {
       "continent": "EU",
@@ -404,10 +338,154 @@
       "provider": "Websolute"
     },
     {
+      "continent": "NA",
+      "country": "US",
+      "provider": "eApps",
+      "region": ""
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "provider": "MassiveGrid",
+      "region": ""
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "provider": "Adaptainer",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "FI",
+      "provider": "DataCenter Finland",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "NL",
+      "provider": "MIRhosting",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "CY",
+      "provider": "Scaleforce",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "PL",
+      "provider": "UniCloud",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "IT",
+      "provider": "TIM",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "CH",
+      "provider": "Hidora",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "NL",
+      "provider": "HostedNL",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "SP",
+      "provider": "Infortelecom",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "BE",
+      "provider": "Interhost",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "EE",
+      "provider": "Levira",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "provider": "Linevast",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "MD",
+      "provider": "MoldData",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "IT",
+      "provider": "neen",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "provider": "QuariNET",
+      "region": ""
+    },
+    {
+      "continent": "EU",
+      "country": "FR",
+      "provider": "Click\u0026Cloud",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "IL",
+      "provider": "Box",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "IN",
+      "provider": "Diadem Technologies",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "ID",
+      "provider": "CloudKilat",
+      "region": ""
+    },
+    {
+      "continent": "AS",
+      "country": "IN",
+      "provider": "MilesWeb",
+      "region": ""
+    },
+    {
+      "continent": "AF",
+      "country": "TN",
+      "provider": "Platform 4 Developers",
+      "region": ""
+    },
+    {
       "continent": "SA",
-      "country": "BR",
-      "region": "",
-      "provider": "Hostdime"
+      "country": "PY",
+      "provider": "SaveInCloud",
+      "region": ""
+    },
+    {
+      "continent": "SA",
+      "country": "MX",
+      "provider": "ServNet",
+      "region": ""
     }
   ]
 }
