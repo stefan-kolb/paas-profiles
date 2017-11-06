@@ -1,4 +1,5 @@
 require 'feed'
+require 'iso_country_codes'
 
 module Profiles
   class Main < Base

@@ -203,7 +203,14 @@
             <option title="South America" value="SA">South America</option>    
           </select>
         </td>
-        <td><input data-bind="value: country" class="span2" type="text" placeholder="Country"/></td>
+        <td>
+          <select title="Select country" data-bind="value: country" class="selectpicker show-tick span2">
+              <option data-hidden="true"></option>
+              <% IsoCountryCodes.all.each do |c| %>
+                  <option value="<%= c.alpha2 %>"><%= c.name %></option>
+              <% end %>
+          </select>
+        </td>
         <td><input data-bind="value: provider" class="span2" type="text" placeholder="External IaaS provider"/></td>
         <td><input data-bind="value: region" class="span2" type="text" placeholder="Region or city"/></td>
         <td><button data-bind="click: $root.removeInfrastructure" class="btn btn-danger">Delete</button><td>
