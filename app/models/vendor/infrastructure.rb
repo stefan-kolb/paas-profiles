@@ -20,9 +20,9 @@ module Profiles
     def country_codes
       code = IsoCountryCodes.find(country)
       # valid code
-      errors.add(:country, :invalid, message: "#{country} is not a valid ISO 3166-1 code") if code.nil?
+      errors.add(:base, :invalid, message: "#{country} is not a valid ISO 3166-1 code") if code.nil?
       # valid continent
-      errors.add(:country, :invalid, message: "Wrong continent code for #{country}") unless code.continent.eql?(continent)
+      errors.add(:base, :invalid, message: "Wrong continent code for #{country}") unless code.continent.eql?(continent)
     end
   end
 end
