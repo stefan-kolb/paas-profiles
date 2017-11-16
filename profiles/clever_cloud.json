@@ -31,13 +31,13 @@
     {
       "language": "haskell",
       "versions": [
-        "*"
+        "*:*"
       ]
     },
     {
       "language": "rust",
       "versions": [
-        "*"
+        "*.*"
       ]
     },
     {
