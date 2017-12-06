@@ -1,47 +1,53 @@
 {
-  "name": "Zeit now",
-  "revision": "2017-07-10",
+  "name": "Now",
+  "revision": "2017-12-06",
   "url": "https://zeit.co/now",
   "status": "production",
-  "status_since": "2017-07-10",
+  "status_since": "2016-04-14",
   "type": "Generic",
   "hosting": {
-    "public": false,
+    "public": true,
     "private": true
   },
   "pricings": [
     {
       "model": "free"
+    },
+    {
+      "model": "fixed",
+      "period": "monthly"
+    },
+    {
+      "model": "metered",
+      "period": "monthly"
     }
   ],
   "scaling": {
-    "vertical": true,
+    "vertical": false,
     "horizontal": true,
-    "auto": false
+    "auto": true
   },
   "runtimes": [
     {
       "language": "node",
       "versions": [
-        "0.10.*",
-        "0.12.*",
-        "4.*",
-        "5.*",
-        "6.*",
-        "8.*"
+        "*.*"
       ]
     }
   ],
   "services": {
     "native": [
-
     ],
     "addon": [
-
     ]
   },
   "extensible": true,
   "infrastructures": [
-
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California",
+      "provider": "AWS"
+    }
   ]
 }
