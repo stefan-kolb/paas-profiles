@@ -1,0 +1,47 @@
+{
+  "name": "Zeit now",
+  "revision": "2017-07-10",
+  "url": "https://zeit.co/now",
+  "status": "production",
+  "status_since": "2017-07-10",
+  "type": "Generic",
+  "hosting": {
+    "public": false,
+    "private": true
+  },
+  "pricings": [
+    {
+      "model": "free"
+    }
+  ],
+  "scaling": {
+    "vertical": true,
+    "horizontal": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "node",
+      "versions": [
+        "0.10.*",
+        "0.12.*",
+        "4.*",
+        "5.*",
+        "6.*",
+        "8.*"
+      ]
+    }
+  ],
+  "services": {
+    "native": [
+
+    ],
+    "addon": [
+
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+
+  ]
+}
