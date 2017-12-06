@@ -130,10 +130,6 @@
     "isolation": "Container"
   },
   {
-    "vendor": "Gondor",
-    "isolation": ""
-  },
-  {
     "vendor": "Google App Engine",
     "isolation": ""
   },
@@ -162,12 +158,12 @@
     "isolation": "Virtual Machine"
   },
   {
-    "vendor": "Modulus",
+    "vendor": "MoPaaS",
     "isolation": ""
   },
   {
-    "vendor": "MoPaaS",
-    "isolation": ""
+    "vendor": "Now",
+    "isolation": "Container"
   },
   {
     "vendor": "mOSAIC",
@@ -255,10 +251,6 @@
   },
   {
     "vendor": "Voxoz",
-    "isolation": ""
-  },
-  {
-    "vendor": "Webappcabaret",
     "isolation": ""
   },
   {
