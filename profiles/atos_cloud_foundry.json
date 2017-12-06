@@ -1,19 +1,20 @@
 {
   "name": "Atos Cloud Foundry",
-  "revision": "2016-08-01",
+  "revision": "2016-11-28",
   "url": "https://canopy-cloud.com/application-platforms/atos-cloud-foundry",
   "vendor_verified": "2016-05-25",
   "status": "production",
   "status_since": "2015-01-07",
   "type": "Generic",
+  "platform": "Cloud Foundry",
   "hosting": {
     "public": true,
     "private": true
   },
   "qos": {
     "uptime": 99.9
-  },  
-  "pricing": [
+  },
+  "pricings": [
     {
       "model": "metered",
       "period": "monthly"
@@ -31,72 +32,78 @@
   "runtimes": [
     {
       "language": "clojure",
-      "versions": [
+      "versions": "75"
 
-      ]
+      
     },
     {
       "language": "go",
-      "versions": [
+      "versions": "1.8.6"
 
-      ]
+      
     },
     {
       "language": "groovy",
-      "versions": [
+      "versions": 
 
-      ]
+      
     },
     {
       "language": "java",
-      "versions": [
+      "versions": "3.19"
 
-      ]
+     
     },
     {
       "language": "node",
-      "versions": [
+      "versions": 
 
-      ]
+      
     },
     {
       "language": "scala",
-      "versions": [
+      "versions": "67"
 
-      ]
+      
     },
     {
       "language": "php",
-      "versions": [
+      "versions": "4.3.40"
 
-      ]
+      
     },
     {
       "language": "python",
-      "versions": [
+      "versions": "1.5.24"
 
-      ]
+      
     },
     {
       "language": "ruby",
-      "versions": [
+      "versions": "1.6.47"
+
       
-      ]
     },
     {
       "language": "dotnet",
-      "versions": [
+      "versions": "1.0.24"
 
-      ]
+      
     },
     {
       "language": "swift",
+      "versions": "1.0.6"
+
+      
+    },
+    {
+      "language": "hhvm",
       "versions": [
 
       ]
     }
   ],
-  "middleware": [
+  "middlewares": [
     {
       "name": "tomcat",
       "runtime": "java",
@@ -107,16 +114,16 @@
     {
       "name": "tomee",
       "runtime": "java",
-      "versions": [
+      "versions": "3.6"
 
-      ]
+      
     },
     {
       "name": "jboss",
       "runtime": "java",
-      "versions": [
+      "versions": "3.6"
 
-      ]
+      
     }
   ],
   "frameworks": [
@@ -124,7 +131,7 @@
       "name": "grails",
       "runtime": "groovy",
       "versions": [
-      
+
       ]
     },
     {
@@ -138,14 +145,14 @@
       "name": "spring",
       "runtime": "java",
       "versions": [
-      
+
       ]
     },
     {
       "name": "rails",
       "runtime": "ruby",
       "versions": [
-      
+
       ]
     },
     {
@@ -159,21 +166,14 @@
       "name": "sinatra",
       "runtime": "ruby",
       "versions": [
-      
-      ]
-    },
-    {
-      "name": "hhvm",
-      "runtime": "php",
-      "versions": [
-    
+
       ]
     },
     {
       "name": "django",
       "runtime": "python",
       "versions": [
-    
+
       ]
     }
   ],
@@ -181,122 +181,122 @@
     "native": [
       {
         "name": "mongodb",
-        "description": "",
+        "description": " It is a open-source cross-platform document-oriented database program. ",
         "type": "datastore",
-        "versions": [
+        "versions": "25.1"
 
-        ]
+        
       },
       {
         "name": "memcached",
-        "description": "",
+        "description": " It is a general-purpose distributed memory caching system. ",
         "type": "datastore",
-        "versions": [
+        "versions": "15.6"
 
-        ]
+        
       },
       {
         "name": "mysql",
-        "description": "",
+        "description": " It is an open-source relational database management system (RDBMS).",
         "type": "datastore",
-        "versions": [
+        "versions": "32"
 
-        ]
+        
       },
       {
         "name": "postgresql",
-        "description": "",
+        "description": " It is an object-relational database management system (ORDBMS).",
         "type": "datastore",
-        "versions": [
+        "versions": "2"
 
-        ]
+        
       },
       {
         "name": "rabbitmq",
-        "description": "",
+        "description": " It is an open source message broker software",
         "type": "worker",
-        "versions": [
+        "versions": "222.0.0"
 
-        ]
+        
       },
       {
         "name": "redis",
-        "description": "",
+        "description": " It is an in-memory database that persists on disk.",
         "type": "datastore",
-        "versions": [
+        "versions": "426.0.0"
 
-        ]
+        
       },
       {
         "name": "Neo4J",
-        "description": "",
+        "description": " Neo4j is a graph database management system.",
         "type": "datastore",
-        "versions": [
+        "versions": "11"
 
-        ]
+        
       },
       {
         "name": "kafka",
-        "description": "",
+        "description": " is used for building real-time data pipelines and streaming apps.",
         "type": "message broker",
-        "versions": [
+        "versions": "1"
 
-        ]
+        
       },
       {
-        "name": "riakcs",
-        "description": "",
+        "name": "riak cs",
+        "description": " It is an object storage system",
         "type": "datastore",
-        "versions": [
+        "versions": "11"
 
-        ]
+        
       },
       {
         "name": "cassandra",
-        "description": "",
+        "description": " it is open-source distributed NoSQL DBMS.",
         "type": "datastore",
-        "versions": [
+        "versions": "1.4"
 
-        ]
+        
       },
       {
         "name": "elasticsearch",
-        "description": "",
+        "description": " It helps in Securely and reliably search, analyze, and visualize your data.",
         "type": "search",
-        "versions": [
+        "versions": "3"
 
-        ]
+        
       },
-      {                                                                                                                                                                     
-        "name": "abacus",                                                                                                                                                  
-        "description": "",                                                                                                                                                  
-        "type": "metering",                                                                                                                                                
-        "versions": [                                                                                                                                                       
-                                                                                                                                                                            
-        ]                                                                                                                                                                   
+      {
+        "name": "abacus",
+        "description": " It is a metering tool.",
+        "type": "metering",
+        "versions": 
+
+        
       },
       {
         "name": "couchdb",
-        "description": "",
+        "description":" It is open source database software that focuses on ease of use and having a scalable architecture for distributed server-clusters.", 
         "type": "datastore",
-        "versions": [
+        "versions": "2"
 
-        ]
+  
       },
-       {
+      {
         "name": "dingo-postgresql",
-        "description": "",
+        "description": "It Allow users to provision High-Availability PostgreSQL clusters and Disaster recovery for the entire server and the slices of your DB instance.",
         "type": "datastore",
-        "versions": [
+        "versions": "0.10.2"
 
-        ]
+        
       }
     ],
     "addon": [
-    {
+      {
         "name": "ADFS/LDAP/AS",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
-        "description": "",
+        "description": "Single Sign On and web based authentication.",
         "type": "other"
       },
       {
@@ -308,7 +308,7 @@
       {
         "name": "Jenkins",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
-        "description": "",
+        "description": " It is a open source automation server.",
         "type": "other"
       },
       {
@@ -320,8 +320,8 @@
       {
         "name": "NewRelic",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
-        "description": "",
-        "type": "monitoring"
+        "description": " Manage and monitor your apps.",
+        "type": "ANALYTICS"
       },
       {
         "name": "Dynatrace",
@@ -332,14 +332,14 @@
       {
         "name": "Nagios",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
-        "description": "Internal monitoring",
-        "type": "monitoring"
+        "description": "External monitoring",
+        "type": "external monitoring tool"
       },
       {
         "name": "Pingdom",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
-        "description": "External monitoring",
-        "type": "monitoring"
+        "description": "Internal monitoring",
+        "type": "internal monitoring tool for checking the API's"
       },
       {
         "name": "StatusPage",
@@ -354,7 +354,7 @@
         "type": "broker"
       },
       {
-        "name": "Database administrative app : [Postgresql,MySQL,MongoDB,CouchDB]",
+        "name": "Database administrative app for Postgresql, MySQL, MongoDB, CouchDB",
         "url": "https://canopy-cloud.com/application-platforms/canopy-cloud-fabric",
         "description": "",
         "type": "app"
