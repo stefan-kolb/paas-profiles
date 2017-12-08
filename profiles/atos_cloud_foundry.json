@@ -32,96 +32,92 @@
   "runtimes": [
     {
       "language": "clojure",
-      "versions": "75"
+      "versions": []
 
       
     },
     {
       "language": "go",
-      "versions": "1.8.6"
+      "versions": []
 
       
     },
     {
       "language": "groovy",
-      "versions": 
+      "versions": []
 
       
     },
     {
       "language": "java",
-      "versions": "3.19"
+      "versions": ["1.6","1.7","1.8"]
 
      
     },
     {
       "language": "node",
-      "versions": 
+      "versions": []
 
       
     },
     {
       "language": "scala",
-      "versions": "67"
+      "versions": []
 
       
     },
     {
       "language": "php",
-      "versions": "4.3.40"
+      "versions": []
 
       
     },
     {
       "language": "python",
-      "versions": "1.5.24"
+      "versions": []
 
       
     },
     {
       "language": "ruby",
-      "versions": "1.6.47"
+      "versions": []
 
       
     },
     {
       "language": "dotnet",
-      "versions": "1.0.24"
+      "versions": []
 
       
     },
     {
       "language": "swift",
-      "versions": "1.0.6"
+      "versions": []
 
       
     },
     {
       "language": "hhvm",
-      "versions": [
-
-      ]
+      "versions": []
     }
   ],
   "middlewares": [
     {
       "name": "tomcat",
       "runtime": "java",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "tomee",
       "runtime": "java",
-      "versions": "3.6"
+      "versions": ["3.6"]
 
       
     },
     {
       "name": "jboss",
       "runtime": "java",
-      "versions": "3.6"
+      "versions": ["3.6"]
 
       
     }
@@ -130,51 +126,37 @@
     {
       "name": "grails",
       "runtime": "groovy",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "play",
       "runtime": "java",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "spring",
       "runtime": "java",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "rails",
       "runtime": "ruby",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "rack",
       "runtime": "ruby",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "sinatra",
       "runtime": "ruby",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "django",
       "runtime": "python",
-      "versions": [
-
-      ]
+      "versions": []
     }
   ],
   "services": {
@@ -183,7 +165,7 @@
         "name": "mongodb",
         "description": " It is a open-source cross-platform document-oriented database program. ",
         "type": "datastore",
-        "versions": "25.1"
+        "versions": ["25.1"]
 
         
       },
@@ -191,7 +173,7 @@
         "name": "memcached",
         "description": " It is a general-purpose distributed memory caching system. ",
         "type": "datastore",
-        "versions": "15.6"
+        "versions": ["15.6"]
 
         
       },
@@ -199,7 +181,7 @@
         "name": "mysql",
         "description": " It is an open-source relational database management system (RDBMS).",
         "type": "datastore",
-        "versions": "32"
+        "versions": ["32"]
 
         
       },
@@ -207,7 +189,7 @@
         "name": "postgresql",
         "description": " It is an object-relational database management system (ORDBMS).",
         "type": "datastore",
-        "versions": "2"
+        "versions": ["2"]
 
         
       },
@@ -215,7 +197,7 @@
         "name": "rabbitmq",
         "description": " It is an open source message broker software",
         "type": "worker",
-        "versions": "222.0.0"
+        "versions": ["222"]
 
         
       },
@@ -223,7 +205,7 @@
         "name": "redis",
         "description": " It is an in-memory database that persists on disk.",
         "type": "datastore",
-        "versions": "426.0.0"
+        "versions": ["426"]
 
         
       },
@@ -231,7 +213,7 @@
         "name": "Neo4J",
         "description": " Neo4j is a graph database management system.",
         "type": "datastore",
-        "versions": "11"
+        "versions": ["11"]
 
         
       },
@@ -239,7 +221,7 @@
         "name": "kafka",
         "description": " is used for building real-time data pipelines and streaming apps.",
         "type": "message broker",
-        "versions": "1"
+        "versions": ["1"]
 
         
       },
@@ -247,7 +229,7 @@
         "name": "riak cs",
         "description": " It is an object storage system",
         "type": "datastore",
-        "versions": "11"
+        "versions": ["11"]
 
         
       },
@@ -255,7 +237,7 @@
         "name": "cassandra",
         "description": " it is open-source distributed NoSQL DBMS.",
         "type": "datastore",
-        "versions": "1.4"
+        "versions": ["1.4"]
 
         
       },
@@ -263,7 +245,7 @@
         "name": "elasticsearch",
         "description": " It helps in Securely and reliably search, analyze, and visualize your data.",
         "type": "search",
-        "versions": "3"
+        "versions": ["3"]
 
         
       },
@@ -271,7 +253,7 @@
         "name": "abacus",
         "description": " It is a metering tool.",
         "type": "metering",
-        "versions": 
+        "versions": []
 
         
       },
@@ -279,7 +261,7 @@
         "name": "couchdb",
         "description":" It is open source database software that focuses on ease of use and having a scalable architecture for distributed server-clusters.", 
         "type": "datastore",
-        "versions": "2"
+        "versions": ["2"]
 
   
       },
@@ -287,7 +269,7 @@
         "name": "dingo-postgresql",
         "description": "It Allow users to provision High-Availability PostgreSQL clusters and Disaster recovery for the entire server and the slices of your DB instance.",
         "type": "datastore",
-        "versions": "0.10.2"
+        "versions": ["0.10.2"]
 
         
       }
