@@ -12,7 +12,6 @@ require_relative 'app/models/vendor/vendor'
 
 # helper
 require_relative 'lib/io_helper'
-include IoHelper
 
 # subtasks
 require_relative 'tasks/db'

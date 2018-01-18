@@ -2,6 +2,8 @@ require 'rmagick'
 
 namespace :assets do
 
+  include IoHelper
+
   desc 'Retrieves vendor logos from Twitter'
   task :vendor do
     puts '----> Retrieving vendor logos...'
