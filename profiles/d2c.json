@@ -29,8 +29,7 @@
   ],
   "middlewares": [
     { "name" : "nginx", "versions": [ "1.10", "1.11", "1.12", "1.13" ] },
-    { "name" : "haproxy", "versions": [ "latest" ] },
-    { "name" : "Docker", "versions": [  ] }
+    { "name" : "haproxy", "versions": [ "latest" ] }
   ],
   "services": {
     "native": [
