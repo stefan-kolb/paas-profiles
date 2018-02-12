@@ -1,6 +1,5 @@
 # [PaaS Profiles](https://paasfinder.org)
 [![Build Status](https://travis-ci.org/stefan-kolb/paas-profiles.png)](https://travis-ci.org/stefan-kolb/paas-profiles)
-[![Dependency Status](https://gemnasium.com/badges/github.com/stefan-kolb/paas-profiles.svg)](https://gemnasium.com/github.com/stefan-kolb/paas-profiles)
 
 *Making Platform as a Service offerings comparable - Ecosystem profiles for portability matching.*
 
