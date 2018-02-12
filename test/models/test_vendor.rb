@@ -1,7 +1,7 @@
 require_relative '../test_helper'
 
 class TestVendor < MiniTest::Test
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   def setup
     @json = JSON.parse(File.read(__dir__ + '/../fixtures/vendor.json'))

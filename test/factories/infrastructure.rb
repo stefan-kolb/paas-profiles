@@ -1,6 +1,6 @@
 require_relative '../../app/models/vendor/infrastructure'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :infrastructure, class: Profiles::Infrastructure do
     continent 'EU'
     country 'DE'

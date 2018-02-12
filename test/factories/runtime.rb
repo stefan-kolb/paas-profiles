@@ -1,6 +1,6 @@
 require_relative '../../app/models/vendor/runtime'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :runtime, class: Profiles::Runtime do
     sequence(:language) { |n| "language#{n}" }
   end

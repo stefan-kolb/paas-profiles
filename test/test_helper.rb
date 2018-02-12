@@ -1,6 +1,6 @@
 ENV['RACK_ENV'] = 'test'
 
-require 'factory_girl'
+require 'factory_bot'
 require 'require_all'
 require 'database_cleaner'
 require 'mongoid'
@@ -13,7 +13,7 @@ require 'rest-client'
 Mongoid.load!('config/mongoid.yml')
 Mongo::Logger.logger.level = ::Logger::INFO
 # fixtures
-FactoryGirl.find_definitions
+FactoryBot.find_definitions
 # TODO: not always needed!
 # models
 require_all 'app/models'

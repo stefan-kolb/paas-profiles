@@ -2,7 +2,7 @@ require_relative '../test_helper'
 
 class TestMain < MiniTest::Test
   include Rack::Test::Methods
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   def app
     APPLICATION

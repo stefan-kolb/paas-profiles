@@ -6,7 +6,7 @@ require_relative '../../lib/statistics/language_charts'
 
 module Profiles
   class TestLanguageStats < MiniTest::Test
-    include FactoryGirl::Syntax::Methods
+    include FactoryBot::Syntax::Methods
 
     def teardown
       DatabaseCleaner.clean

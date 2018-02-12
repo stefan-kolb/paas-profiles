@@ -1,6 +1,6 @@
 require_relative '../../app/models/vendor/vendor'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :vendor, class: Profiles::Vendor do
     # mandatory properties
     name 'unibapaas'
@@ -10,14 +10,14 @@ FactoryGirl.define do
     extensible false
     type 'Generic'
 
-    hosting { FactoryGirl.build(:hosting) }
-    scaling { FactoryGirl.build(:scaling) }
-    pricings { [FactoryGirl.build(:pricing)] }
+    hosting { FactoryBot.build(:hosting) }
+    scaling { FactoryBot.build(:scaling) }
+    pricings { [FactoryBot.build(:pricing)] }
 
     middlewares { [] }
     frameworks { [] }
     # service { [] }
-    infrastructures { [FactoryGirl.build(:infrastructure)] }
+    infrastructures { [FactoryBot.build(:infrastructure)] }
     # runtimes
     transient do
       language 'ruby'
