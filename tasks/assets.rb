@@ -63,7 +63,7 @@ namespace :assets do
 
         # download largest image version
         img_url.gsub!('normal', '400x400')
-        write_png_image("public/sources/#{type}/" << to_filename(vendor['vendor']), open(img_url).read)
+        write_png_image("public/sources/#{type}/" << to_filename(vendor['vendor']), IO.open(img_url).read)
 
         # process image
         image = Magick::Image.read("public/sources/#{type}/" << to_filename(vendor['vendor']) << '.png').first
