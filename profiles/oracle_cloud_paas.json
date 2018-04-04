@@ -1,9 +1,8 @@
 {
   "name": "Oracle Cloud PaaS",
-  "revision": "2013-07-05T17:47:54+02:00",
+  "revision": "2018-04-04",
   "url": "http://cloud.oracle.com",
   "status": "production",
-  "status_since": null,
   "type": "IaaS-centric",
   "hosting": {
     "public": true,
@@ -13,26 +12,163 @@
     {
       "model": "fixed",
       "period": "monthly"
+    },
+    {
+      "model": "metered",
+      "period": ""
+    },
+    {
+      "model": "hybrid",
+      "period": ""
     }
   ],
+  "quality": {
+    "uptime": "99.95",
+    "compliance": [
+      "SOC 1",
+      "SOC 2",
+      "ISO 27017",
+      "HIPAA"
+    ]
+  },
   "scaling": {
-    "vertical": false,
-    "horizontal": false,
-    "auto": false
+    "horizontal": true,
+    "vertical": true,
+    "auto": true
   },
   "runtimes": [
     {
       "language": "java",
-      "versions": [
-
-      ]
+      "versions": []
+    },
+    {
+      "language": "docker",
+      "versions": []
+    },
+    {
+      "language": "node",
+      "versions": []
+    },
+    {
+      "language": "php",
+      "versions": []
+    },
+    {
+      "language": "python",
+      "versions": []
+    },
+    {
+      "language": "ruby",
+      "versions": []
     }
   ],
-  "middlewares": null,
-  "frameworks": null,
-  "services": null,
-  "extensible": false,
+  "middlewares": [],
+  "frameworks": [],
+  "services": {
+    "native": [
+      {
+        "name": "Analytics Cloud Service",
+        "type": "analytics",
+        "versions": []
+      },
+      {
+        "name": "Content and Experience",
+        "type": "collaboration",
+        "versions": []
+      },
+      {
+        "name": "Database Cloud Service",
+        "type": "database",
+        "versions": []
+      },
+      {
+        "name": "Developer Cloud Service",
+        "type": "devops",
+        "versions": []
+      },
+      {
+        "name": "Integration Cloud Service",
+        "type": "integration",
+        "versions": []
+      },
+      {
+        "name": "IoT Cloud Service",
+        "type": "iot",
+        "versions": []
+      },
+      {
+        "name": "Management Cloud Service",
+        "type": "management",
+        "versions": []
+      },
+      {
+        "name": "Messaging Cloud Service",
+        "type": "messaging",
+        "versions": []
+      },
+      {
+        "name": "Mobile and Chatbots",
+        "type": "mobile",
+        "versions": []
+      }
+    ],
+    "addon": []
+  },
+  "extensible": true,
   "infrastructures": [
-
+    {
+      "continent": "NA",
+      "country": "US",
+      "provider": "",
+      "region": "Chicago"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "provider": "",
+      "region": "Ashburn "
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "provider": "",
+      "region": "Phoenix"
+    },
+    {
+      "continent": "EU",
+      "country": "GB",
+      "provider": "",
+      "region": "Slough"
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "provider": "",
+      "region": "Frankfurt"
+    },
+    {
+      "continent": "EU",
+      "country": "NL",
+      "provider": "",
+      "region": "Amsterdam"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "provider": "",
+      "region": "Sydney"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "provider": "",
+      "region": "Tatebayashi"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "provider": "",
+      "region": "Sao Paulo"
+    }
   ]
 }
