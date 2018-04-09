@@ -18,7 +18,7 @@ module ApplicationHelpers
 
   def country_by_code(code)
     country = IsoCountryCodes.find(code)
-    country.name unless country.nil?
+    country&.name
   end
 
   def url_encode(string)

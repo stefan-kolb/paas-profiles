@@ -57,11 +57,9 @@ module Profiles
       # extensibility
       query = query.where(extensible: lookup.extensible) if lookup['extensible']
       # infrastructures
-      if lookup.infrastructures
-        lookup.infrastructures.each do |i|
-          query = query.all('infrastructures.continent' => i.continent)
+      lookup.infrastructures&.each do |i|
+        query = query.all('infrastructures.continent' => i.continent)
           query = query.all('infrastructures.country' => i.country) if i.country
-        end
       end
 
       result = []
@@ -72,16 +70,16 @@ module Profiles
       # TODO: check versions on result
       res = result.dup
       lookup.runtimes.each do |runtime|
-        runtime.versions.map! { |v| v.gsub! '*', '99' } unless runtime.versions
-        runtime.versions.map! { |v| Versionomy.parse(v) } unless runtime.versions
+        runtime.versions&.map! { |v| v.gsub! '*', '99' }
+        runtime.versions&.map! { |v| Versionomy.parse(v) }
         version_support = false
 
         result.each do |provider|
           provider['runtimes'].each do |r|
             next unless r['language'] == runtime['language']
 
-            r['versions'].map! { |v| v.gsub! '*', '99' } unless r['versions']
-            r['versions'].map! { |v| Versionomy.parse(v) } unless r['versions']
+            r['versions']&.map! { |v| v.gsub! '*', '99' }
+            r['versions']&.map! { |v| Versionomy.parse(v) }
 
             runtime.versions.each do |v1|
               r['versions'].each do |v2|
