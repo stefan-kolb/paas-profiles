@@ -15,11 +15,11 @@
     },
     {
       "model": "metered",
-      "period": ""
+      "period": "monthly"
     },
     {
       "model": "hybrid",
-      "period": ""
+      "period": "monthly"
     }
   ],
   "quality": {
