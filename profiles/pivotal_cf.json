@@ -1,7 +1,7 @@
 {
-  "name": "Pivotal CF",
-  "revision": "2014-05-22",
-  "url": "http://www.gopivotal.com/paas",
+  "name": "Pivotal Cloud Foundry (PCF)",
+  "revision": "2018-05-10",
+  "url": "https://pivotal.io/platform",
   "status": "production",
   "status_since": "2013-11-12",
   "type": "Generic",
@@ -10,12 +10,10 @@
     "public": false,
     "private": true
   },
-  "pricings": [
-
-  ],
+  "pricings": [],
   "scaling": {
-    "vertical": true,
     "horizontal": true,
+    "vertical": true,
     "auto": true
   },
   "runtimes": [
@@ -58,9 +56,7 @@
     },
     {
       "language": "scala",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "language": "go",
@@ -71,15 +67,11 @@
     },
     {
       "language": "python",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "language": "php",
-      "versions": [
-
-      ]
+      "versions": []
     }
   ],
   "middlewares": [
@@ -96,112 +88,33 @@
     {
       "name": "grails",
       "runtime": "groovy",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "play",
       "runtime": "java",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "spring",
       "runtime": "java",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "rails",
       "runtime": "ruby",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "sinatra",
       "runtime": "ruby",
-      "versions": [
-
-      ]
+      "versions": []
     }
   ],
   "services": {
-    "native": [
-      {
-        "name": "hadoop",
-        "description": "",
-        "type": "worker",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "rabbitmq",
-        "description": "",
-        "type": "worker",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "mysql",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "mongodb",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "redis",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "riak cs",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "neo4j",
-        "description": "",
-        "type": "datastore",
-        "versions": [
-
-        ]
-      },
-      {
-        "name": "elasticsearch",
-        "description": "",
-        "type": "search",
-        "versions": [
-
-        ]
-      }
-    ],
-    "addon": [
-
-    ]
+    "native": [],
+    "addon": []
   },
   "extensible": true,
-  "infrastructures": [
-
-  ]
+  "infrastructures": []
 }
