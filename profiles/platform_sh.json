@@ -1,6 +1,6 @@
 {
   "name": "Platform.sh",
-  "revision": "2017-07-03",
+  "revision": "2018-06-21",
   "vendor_verified": "2017-07-03",
   "url": "https://platform.sh",
   "status": "production",
@@ -8,7 +8,8 @@
   "type": "Generic",
   "hosting": {
     "public": true,
-    "private": true
+    "private": true,
+    "virtual_private": true
   },
   "pricings": [
     {
@@ -16,22 +17,19 @@
       "period": "monthly"
     }
   ],
-  "qos": {
-    "uptime": 99.99
+  "quality": {
+    "uptime": 99.99,
+    "compliance": [
+      "GDPR",
+      "BDSG"
+    ]
   },
   "scaling": {
-    "vertical": true,
     "horizontal": true,
+    "vertical": true,
     "auto": false
   },
   "runtimes": [
-    {
-      "language": "hhvm",
-      "versions": [
-        "3.9",
-        "3.18"
-      ]
-    },
     {
       "language": "php",
       "versions": [
@@ -50,7 +48,8 @@
         "4.7",
         "4.8",
         "6.9",
-        "6.10"
+        "6.10",
+        "8.10"
       ]
     },
     {
@@ -58,14 +57,16 @@
       "versions": [
         "2.7",
         "3.5",
-        "3.6"
+        "3.6",
+        "3.7"
       ]
     },
     {
       "language": "ruby",
       "versions": [
         "2.3",
-        "2.4"
+        "2.4",
+        "2.5"
       ]
     },
     {
@@ -77,27 +78,22 @@
     {
       "language": "go",
       "versions": [
-        "1.8"
+        "1.8",
+        "1.9"
       ]
     }
   ],
-  "middlewares": [
-
-  ],
+  "middlewares": [],
   "frameworks": [
     {
       "name": "cakephp",
       "runtime": "php",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "codeigniter",
       "runtime": "php",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "drupal",
@@ -111,9 +107,7 @@
     {
       "name": "laravel",
       "runtime": "php",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "symfony",
@@ -127,16 +121,12 @@
     {
       "name": "wordpress",
       "runtime": "php",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "zend",
       "runtime": "php",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "magento",
@@ -149,37 +139,27 @@
     {
       "name": "prestashop",
       "runtime": "php",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "silex",
       "runtime": "php",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "sonata",
       "runtime": "php",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "rails",
       "runtime": "ruby",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "django",
       "runtime": "python",
-      "versions": [
-
-      ]
+      "versions": []
     }
   ],
   "services": {
@@ -188,13 +168,10 @@
         "name": "blob",
         "description": "You can write to local mounts (on replicated storage grid)",
         "type": "datastore",
-        "versions": [
-
-        ]
+        "versions": []
       },
       {
         "name": "elasticsearch",
-        "description": "",
         "type": "datastore",
         "versions": [
           "0.9",
@@ -208,17 +185,17 @@
         "name": "filesystem",
         "description": "You can write to local mounts (on replicated storage grid)",
         "type": "datastore",
-        "versions": [
-
-        ]
+        "versions": []
       },
       {
         "name": "mongodb",
-        "description": "",
         "type": "datastore",
         "versions": [
           "2.6",
-          "3.0"
+          "3.0",
+          "3.2",
+          "3.4",
+          "3.6"
         ]
       },
       {
@@ -234,7 +211,6 @@
       },
       {
         "name": "postgis",
-        "description": "",
         "type": "datastore",
         "versions": [
           "9.6"
@@ -242,7 +218,6 @@
       },
       {
         "name": "postgresql",
-        "description": "",
         "type": "datastore",
         "versions": [
           "9.3",
@@ -251,11 +226,11 @@
       },
       {
         "name": "redis",
-        "description": "",
         "type": "datastore",
         "versions": [
           "2.8",
-          "3.0"
+          "3.0",
+          "3.2"
         ]
       },
       {
@@ -263,23 +238,21 @@
         "description": "1.4",
         "type": "cache",
         "versions": [
-          "2.8",
-          "3.0"
+          "1.4"
         ]
       },
       {
         "name": "solr",
-        "description": "",
         "type": "datastore",
         "versions": [
           "3.6",
           "4.10",
-          "6.3"
+          "6.3",
+          "6.6"
         ]
       },
       {
         "name": "rabbitmq",
-        "description": "",
         "type": "other",
         "versions": [
           "3.5"
@@ -287,10 +260,10 @@
       },
       {
         "name": "influxdb",
-        "description": "",
         "type": "other",
         "versions": [
-          "1.2"
+          "1.2",
+          "1.3"
         ]
       }
     ],
@@ -306,24 +279,33 @@
         "url": "http://newrelic.com/",
         "type": "monitoring"
       },
-      
       {
         "name": "bitbucket",
         "url": "https://bitbucket.org/",
         "description": "Git and Mercurial code management for teams.",
-        "type": "other"
+        "type": "devops"
       },
       {
         "name": "github",
         "url": "https://github.com/",
         "description": "Powerful collaboration, code review, and code management for open source and private projects.",
-        "type": "other"
+        "type": "devops"
       },
       {
         "name": "hipchat",
         "url": "https://www.hipchat.com/",
         "description": "Group and private chat, file sharing, and integrations",
         "type": "other"
+      },
+      {
+        "name": "gitlab",
+        "url": "https://www.gitlab.com",
+        "type": "messaging"
+      },
+      {
+        "name": "slack",
+        "url": "https://www.slack.com",
+        "type": "devops"
       }
     ]
   },
@@ -340,22 +322,26 @@
       "country": "US",
       "region": "Ohio",
       "provider": "AWS"
-    },    {
+    },
+    {
       "continent": "NA",
       "country": "US",
       "region": "Northern California",
       "provider": "AWS"
-    },    {
+    },
+    {
       "continent": "NA",
       "country": "US",
       "region": "Oregon",
       "provider": "AWS"
-    },    {
+    },
+    {
       "continent": "AS",
       "country": "IN",
       "region": "Mumbai",
       "provider": "AWS"
-    },    {
+    },
+    {
       "continent": "AS",
       "country": "KR",
       "region": "Seoul",
@@ -378,7 +364,8 @@
       "country": "AU",
       "region": "Sydney",
       "provider": "AWS"
-    },   {
+    },
+    {
       "continent": "AS",
       "country": "JP",
       "region": "Tokyo",
@@ -419,6 +406,12 @@
       "country": "NL",
       "region": "Netherlands",
       "provider": "Microsoft Azure"
+    },
+    {
+      "continent": "NA",
+      "country": "CA",
+      "provider": "AWS",
+      "region": "Toronto"
     }
   ]
 }
