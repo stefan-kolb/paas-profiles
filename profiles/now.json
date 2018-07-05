@@ -1,6 +1,6 @@
 {
   "name": "Now",
-  "revision": "2017-12-06",
+  "revision": "2018-07-05",
   "url": "https://zeit.co/now",
   "status": "production",
   "status_since": "2016-04-14",
@@ -11,7 +11,8 @@
   },
   "pricings": [
     {
-      "model": "free"
+      "model": "free",
+      "period": ""
     },
     {
       "model": "fixed",
@@ -23,8 +24,8 @@
     }
   ],
   "scaling": {
-    "vertical": false,
     "horizontal": true,
+    "vertical": false,
     "auto": true
   },
   "runtimes": [
@@ -33,13 +34,17 @@
       "versions": [
         "*.*"
       ]
+    },
+    {
+      "language": "docker",
+      "versions": []
     }
   ],
+  "middlewares": [],
+  "frameworks": [],
   "services": {
-    "native": [
-    ],
-    "addon": [
-    ]
+    "native": [],
+    "addon": []
   },
   "extensible": true,
   "infrastructures": [
@@ -47,7 +52,13 @@
       "continent": "NA",
       "country": "US",
       "region": "Northern California",
-      "provider": "AWS"
+      "provider": ""
+    },
+    {
+      "continent": "EU",
+      "country": "BE",
+      "provider": "",
+      "region": "Brussels"
     }
   ]
 }
