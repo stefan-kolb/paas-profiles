@@ -11,8 +11,7 @@
   },
   "pricings": [
     {
-      "model": "free",
-      "period": ""
+      "model": "free"
     },
     {
       "model": "fixed",
@@ -52,7 +51,7 @@
       "continent": "NA",
       "country": "US",
       "region": "Northern California",
-      "provider": ""
+      "provider": "AWS"
     },
     {
       "continent": "EU",
