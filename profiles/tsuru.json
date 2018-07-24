@@ -1,12 +1,12 @@
 {
   "name": "Tsuru",
-  "revision": "2016-08-04",
-  "url": "http://www.tsuru.io/",
+  "revision": "2018-07-24",
+  "url": "https://tsuru.io",
   "status": "production",
   "status_since": "2016-07-02",
   "type": "Generic",
   "hosting": {
-    "public": true,
+    "public": false,
     "private": true
   },
   "pricings": [
