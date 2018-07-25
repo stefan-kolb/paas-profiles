@@ -48,3 +48,6 @@ Metrics/BlockLength:
 
 EndOfLine:
   Enabled: false
+
+Style/AccessModifierDeclarations:
+  Enabled: false
