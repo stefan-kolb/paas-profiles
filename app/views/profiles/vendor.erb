@@ -493,13 +493,13 @@
     });
 
     $.ajax({
-      url: '//api.ipstack.com/check?access_key=21413fc17ced2a45433496788d5ca9eb',
-      type: 'POST',
-      dataType: 'jsonp',
+      url: '//ipinfo.io?token=ead4e34f5a4af8',
+      type: 'GET',
+      dataType: 'json',
       success: function (location) {
         var mapObject = $('#map').vectorMap('get', 'mapObject');
         mapObject.addMarker('user', {
-          latLng: [location.latitude, location.longitude],
+          latLng: location.loc.split(','),
           name: "Yeah, that's you!",
           style: {fill: 'red'}
         }, []);
