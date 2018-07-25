@@ -36,7 +36,9 @@ module Profiles
         name = params[:name].tr('_', '.')
         # TODO: move to main configuration file
         Geocoder.configure(
-          timeout: 5
+          timeout: 5,
+          use_https: true,
+          api_key: ENV['GEO_KEY']
         )
 
         markers = []
