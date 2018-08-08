@@ -3,7 +3,7 @@
   "revision": "2016-01-16",
   "url": "https://railscloud.de",
   "status": "eol",
-  "status_since": "",
+  "status_since": "2015-08-01",
   "type": "IaaS-centric",
   "hosting": {
     "public": true,
