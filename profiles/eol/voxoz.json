@@ -1,9 +1,9 @@
 {
   "name": "Voxoz",
-  "revision": "2014-03-11",
+  "revision": "2018-08-10",
   "url": "http://voxoz.com",
-  "status": "alpha",
-  "status_since": null,
+  "status": "eol",
+  "status_since": "2017-01-08",
   "type": "Generic",
   "hosting": {
     "public": true,
