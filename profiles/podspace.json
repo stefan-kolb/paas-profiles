@@ -44,7 +44,7 @@
       "versions": [ "2.0", "2.2", "2.3" ]
     }
   ],
-  "middleware": [
+  "middlewares": [
     { "name": "wildfly", "runtime": "java", "versions": [ "8.1", "9.0", "10.0", "10.1" ] }
   ],
   "frameworks": [
