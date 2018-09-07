@@ -1,6 +1,6 @@
 {
   "name": "d2c",
-  "revision": "2018-06-22",
+  "revision": "2018-09-07",
   "vendor_verified": "2017-02-10",
   "url": "https://d2c.io",
   "status": "production",
@@ -22,13 +22,13 @@
   },
   "runtimes": [
     { "language": "node", "versions": [ "4", "6", "8", "latest(9)" ] },
-    { "language": "python", "versions": [ "2.7", "3.5", "3.6" ] },
-    { "language": "go", "versions": [ "1.7", "1.8", "1.9", "1.10" ] },
+    { "language": "python", "versions": [ "2.7", "3.5", "3.6", "3.7" ] },
+    { "language": "go", "versions": [ "1.7", "1.8", "1.9", "1.10", "1.11" ] },
     { "language": "ruby", "versions": [ "1.9", "2.0", "2.1", "2.2", "2.3", "2.4", "2.5" ] },
     { "language": "php", "versions": [ "5.6", "7.0", "7.1", "7.2" ] }
   ],
   "middlewares": [
-    { "name" : "nginx", "versions": [ "1.10", "1.11", "1.12", "1.13", "1.14" ] },
+    { "name" : "nginx", "versions": [ "1.10", "1.11", "1.12", "1.13", "1.14", "1.15" ] },
     { "name" : "haproxy", "versions": [ "latest" ] }
   ],
   "services": {
@@ -36,8 +36,8 @@
         { "name": "mysql", "type": "datastore", "versions": [ "5.5", "5.6", "5.7", "8.0" ] },
         { "name": "mariadb", "type": "datastore", "versions": [ "5.5", "10.0", "10.1", "10.2", "10.3" ] },
         { "name": "percona", "type": "datastore", "versions": [ "5.5", "5.6", "5.7" ] },
-        { "name": "postgresql", "type": "datastore", "versions": [ "9.6", "10.1", "10.2", "10.3" ] },
-        { "name": "mongodb", "type": "datastore", "versions" : [ "3.0", "3.2", "3.4", "3.6" ] },
+        { "name": "postgresql", "type": "datastore", "versions": [ "9.6", "10.1", "10.2", "10.3", "10.4", "10.5" ] },
+        { "name": "mongodb", "type": "datastore", "versions" : [ "3.0", "3.2", "3.4", "3.6", "4.0" ] },
         { "name": "redis", "type": "datastore", "versions": [ "2.8", "3.0", "3.2", "4.0" ] },
         { "name": "crate", "type": "datastore", "versions": [ "2.0", "2.1", "2.2", "2.3" ] },
         { "name": "elasticsearch", "type": "datastore", "versions": [ "2.4", "5.3", "5.5", "5.6" ] },
