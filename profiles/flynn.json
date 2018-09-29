@@ -1,6 +1,6 @@
 {
   "name": "Flynn",
-  "revision": "2016-07-27",
+  "revision": "2018-09-29",
   "vendor_verified": "2016-07-27",
   "url": "https://flynn.io/",
   "status": "production",
@@ -12,63 +12,79 @@
   },
   "pricings": [
     {
-      "model": "free"
+      "model": "fixed",
+      "period": ""
     }
   ],
   "scaling": {
-    "vertical": true,
     "horizontal": true,
+    "vertical": true,
     "auto": false
   },
   "runtimes": [
     {
-      "language": "clojure"
+      "language": "clojure",
+      "versions": []
     },
     {
-      "language": "go"
+      "language": "go",
+      "versions": []
     },
     {
-      "language": "groovy"
+      "language": "groovy",
+      "versions": []
     },
     {
-      "language": "java"
+      "language": "java",
+      "versions": []
     },
     {
-      "language": "node"
+      "language": "node",
+      "versions": []
     },
     {
-      "language": "php"
+      "language": "php",
+      "versions": []
     },
     {
-      "language": "python"
+      "language": "python",
+      "versions": []
     },
     {
-      "language": "ruby"
+      "language": "ruby",
+      "versions": []
     },
     {
-      "language": "scala"
+      "language": "scala",
+      "versions": []
     }
   ],
+  "middlewares": [],
   "frameworks": [
     {
       "name": "django",
-      "runtime": "python"
+      "runtime": "python",
+      "versions": []
     },
     {
       "name": "flask",
-      "runtime": "python"
+      "runtime": "python",
+      "versions": []
     },
     {
       "name": "grails",
-      "runtime": "groovy"
+      "runtime": "groovy",
+      "versions": []
     },
     {
       "name": "play",
-      "runtime": "java"
+      "runtime": "java",
+      "versions": []
     },
     {
       "name": "rails",
-      "runtime": "ruby"
+      "runtime": "ruby",
+      "versions": []
     }
   ],
   "services": {
@@ -101,7 +117,9 @@
           "3.0"
         ]
       }
-    ]
+    ],
+    "addon": []
   },
-  "extensible": true
+  "extensible": true,
+  "infrastructures": []
 }
