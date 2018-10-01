@@ -1,0 +1,179 @@
+{
+  "name": "Gigalixir",
+  "revision": "2018-09-30",
+  "url": "https://www.gigalixir.com/",
+  "status": "production",
+  "status_since": "2017-05-05",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": false,
+    "virtual_private": false
+  },
+  "pricings": [
+    {
+      "model": "metered",
+      "period": "monthly"
+    },
+    {
+      "model": "free"
+    }
+  ],
+  "scaling": {
+    "horizontal": true,
+    "vertical": true,
+    "auto": false
+  },
+  "runtimes": [
+    {
+      "language": "elixir",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "clojure",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+        "1.7.*",
+        "1.8.*",
+        "1.9.*"
+      ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "0.4.*",
+        "0.6.*",
+        "0.8.*",
+        "0.10.*",
+        "0.12.*",
+        "4.0"
+      ]
+    },
+    {
+      "language": "php",
+      "versions": [
+        "5.5",
+        "5.6",
+        "7.0",
+        "7.1"
+      ]
+    },
+    {
+      "language": "python",
+      "versions": [
+        "2.7.11",
+        "3.6.1"
+      ]
+    },
+    {
+      "language": "ruby",
+      "versions": [
+        "1.8.7",
+        "1.9.2",
+        "1.9.3",
+        "2.0.0",
+        "2.1.8",
+        "2.2.7",
+        "2.3.4",
+        "2.4.1",
+        "2.5.0"
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "1.8",
+        "1.7"
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+        "*.*"
+      ]
+    }
+  ],
+  "middlewares": [],
+  "frameworks": [
+    {
+      "name": "phoenix",
+      "runtime": "elixir",
+      "versions": [
+        "1.*"
+      ]
+    },
+    {
+      "name": "play",
+      "runtime": "java",
+      "versions": [
+        "1.*",
+        "2.*"
+      ]
+    },
+    {
+      "name": "rails",
+      "runtime": "ruby",
+      "versions": [
+        "2.*",
+        "3.*",
+        "4.*"
+      ]
+    },
+    {
+      "name": "django",
+      "runtime": "python",
+      "versions": []
+    },
+    {
+      "name": "flask",
+      "runtime": "python",
+      "versions": []
+    }
+  ],
+  "services": {
+    "native": [
+      {
+        "name": "postgresql",
+        "type": "datastore",
+        "versions": [
+          "9.5",
+          "9.6"
+        ]
+      }
+    ]
+  },
+  "extensible": true,
+  "infrastructures": [
+    {
+      "continent": "EU",
+      "country": "BE",
+      "region": "St. Ghislain, Belgium",
+      "provider": "GCP"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Council Bluffs, Iowa",
+      "provider": "GCP"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern Virginia",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+      "provider": "AWS"
+    }
+  ]
+}
