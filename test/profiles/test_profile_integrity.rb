@@ -110,9 +110,7 @@ module Profiles
       # middleware runtime must be present
       define_method('test_middleware_runtime_existence') do
         @profile.middlewares.each do |m|
-          unless m['runtime'].blank?
-            assert(@profile.runtimes.any? { |r| r['language'] == m['runtime'] }, "Referenced middleware runtime '#{m['runtime']}' of '#{m['name']}' must be defined under runtimes")
-          end
+          assert(@profile.runtimes.any? { |r| r['language'] == m['runtime'] }, "Referenced middleware runtime '#{m['runtime']}' of '#{m['name']}' must be defined under runtimes") unless m['runtime'].blank?
         end
       end
 
@@ -128,22 +126,26 @@ module Profiles
         # runtimes
         @profile.runtimes.each do |r|
           break if r.versions.nil?
+
           refute(r.versions.any?(&:empty?), 'Runtime versions must not include empty version strings')
         end
         # middleware
         @profile.middlewares.each do |m|
           break if m.versions.nil?
+
           refute(m.versions.any?(&:empty?), 'Middleware versions must not include empty version strings')
         end
         # frameworks
         @profile.frameworks.each do |f|
           break if f.versions.nil?
+
           refute(f.versions.any?(&:empty?), 'Framework versions must not include empty version strings')
         end
         # native services
         unless @profile.service.blank? || @profile.service.natives.blank?
           @profile.service.natives.each do |s|
             break if s.versions.nil?
+
             refute(s.versions.any?(&:empty?), 'Native service versions must not include empty version strings')
           end
         end

@@ -99,9 +99,7 @@ module Profiles
       # colors
       data.each_with_index do |l, i|
         l[:color] = COLORS[i % COLORS.length]
-        if l[:name] != 'Others'
-          l[:drilldown][:color] = COLORS[i % COLORS.length]
-        end
+        l[:drilldown][:color] = COLORS[i % COLORS.length] if l[:name] != 'Others'
       end
 
       data.to_json

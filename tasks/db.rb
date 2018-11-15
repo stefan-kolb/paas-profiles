@@ -26,9 +26,8 @@ namespace :db do
       end
     end
     # be sure everything was imported
-    unless Dir['profiles/*.json'].length == Profiles::Vendor.count
-      raise 'Not all profiles were imported!'
-    end
+    raise 'Not all profiles were imported!' unless Dir['profiles/*.json'].length == Profiles::Vendor.count
+
     # geographical information
     datacenter
     # technology information
@@ -147,9 +146,7 @@ namespace :db do
       # only write if something has changed TODO?
       last = DataTrend.asc(:revision).last
 
-      if last.nil? || last.active_count != dt.active_count || last.eol_count != dt.eol_count
-        dt.save
-      end
+      dt.save if last.nil? || last.active_count != dt.active_count || last.eol_count != dt.eol_count
 
       # restore historic database
       # TODO: problem if test does not pass!
@@ -168,9 +165,7 @@ namespace :db do
         # only write if something has changed TODO?
         last = RuntimeStats.asc(:revision).last
 
-        if last.nil? || last.polyglot != new.polyglot || last.language_specific != new.language_specific || last.distinct_languages != new.distinct_languages
-          new.save
-        end
+        new.save if last.nil? || last.polyglot != new.polyglot || last.language_specific != new.language_specific || last.distinct_languages != new.distinct_languages
       rescue StandardError => e
         puts e.message
       end

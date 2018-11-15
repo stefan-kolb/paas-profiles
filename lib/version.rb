@@ -18,12 +18,14 @@ module Profiles
       return true if (major <=> other.major).zero? && other.minor == '*'
       return major <=> other.major unless (major <=> other.major).zero?
       return minor <=> other.minor unless (minor <=> other.minor).zero?
+
       true
     end
 
     def unify
       return 'Unknown' unless major
       return major unless minor
+
       major << '.' << minor
     end
 
@@ -44,12 +46,14 @@ module Profiles
       result = RuntimeVersion.where(name: type).first
       latest = result['version'] unless result.nil?
       return true unless /#{@str}/.match(latest).nil?
+
       false
     end
 
     def self.latest(language)
       result = RuntimeVersion.where(name: language).first
       return result['version'] unless result.nil?
+
       'unknown'
     end
 

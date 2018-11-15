@@ -51,3 +51,7 @@ EndOfLine:
 
 Style/AccessModifierDeclarations:
   Enabled: false
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: false
+
