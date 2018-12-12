@@ -134,7 +134,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   database_cleaner
-  factory_bot
+  factory_bot (~> 4.0)
   geocoder
   grape
   grape-entity
