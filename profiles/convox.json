@@ -1,14 +1,14 @@
 {
   "name": "Convox",
-  "revision": "2017-02-14",
+  "revision": "2018-12-11",
   "url": "https://convox.com",
-  "status": "beta",
+  "status": "production",
   "status_since": "2015-02-15",
   "type": "IaaS-centric",
   "hosting": {
     "public": false,
-    "virtual_private": true,
-    "private": false
+    "private": false,
+    "virtual_private": true
   },
   "pricings": [
     {
@@ -16,20 +16,26 @@
       "period": "monthly"
     },
     {
-      "model": "free"
+      "model": "free",
+      "period": ""
     }
   ],
+  "quality": {
+    "uptime": "",
+    "compliance": [
+      "HIPAA",
+      "PCI"
+    ]
+  },
   "scaling": {
-    "vertical": true,
     "horizontal": true,
+    "vertical": true,
     "auto": true
   },
   "runtimes": [
     {
       "language": "docker",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "language": "php",
@@ -48,11 +54,33 @@
       "versions": [
         "*.*"
       ]
+    },
+    {
+      "language": "node",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "go",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "scala",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "java",
+      "versions": [
+        "*.*"
+      ]
     }
   ],
-  "middlewares": [
-
-  ],
+  "middlewares": [],
   "frameworks": [
     {
       "name": "rails",
@@ -71,9 +99,7 @@
     {
       "name": "django",
       "runtime": "python",
-      "versions": [
-
-      ]
+      "versions": []
     }
   ],
   "services": {
@@ -81,100 +107,101 @@
       {
         "name": "mysql",
         "type": "datastore",
-        "versions": [
-
-        ]
+        "versions": []
       },
       {
         "name": "postgresql",
         "type": "datastore",
-        "versions": [
-
-        ]
+        "versions": []
       },
       {
         "name": "redis",
         "type": "datastore",
-        "versions": [
-
-        ]
+        "versions": []
       },
       {
         "name": "s3",
         "type": "datastore",
-        "versions": [
-
-        ]
+        "versions": []
       },
       {
         "name": "sqs",
         "type": "worker",
-        "versions": [
-
-        ]
+        "versions": []
       },
       {
         "name": "syslog",
         "type": "analytics",
-        "versions": [
-
-        ]
+        "versions": []
       },
       {
         "name": "webhooks",
         "type": "other",
-        "versions": [
-
-        ]
+        "versions": []
+      },
+      {
+        "name": "dynamo",
+        "type": "datastore",
+        "versions": []
       }
-    ]
+    ],
+    "addon": []
   },
   "extensible": true,
   "infrastructures": [
     {
       "continent": "AS",
       "country": "SG",
-      "region": "Singapore"
+      "region": "Singapore",
+      "provider": "AWS"
     },
     {
       "continent": "AS",
       "country": "JP",
-      "region": "Tokyo"
+      "region": "Tokyo",
+      "provider": "AWS"
     },
     {
       "continent": "EU",
       "country": "IE",
-      "region": "Dublin"
+      "region": "Dublin",
+      "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": "Northern California"
+      "region": "Northern California",
+      "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": "Northern Virginia"
+      "region": "Northern Virginia",
+      "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": "Ohio"
+      "region": "Ohio",
+      "provider": "AWS"
     },
     {
       "continent": "NA",
       "country": "US",
-      "region": "Oregon"
+      "region": "Oregon",
+      "provider": "AWS"
     },
     {
       "continent": "OC",
       "country": "AU",
-      "region": "Sydney"
+      "region": "Sydney",
+      "provider": "AWS"
     },
     {
       "continent": "EU",
       "country": "DE",
-      "region": "Frankfurt"
+      "region": "Frankfurt",
+      "provider": "AWS"
     }
   ]
 }
