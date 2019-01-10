@@ -1,8 +1,8 @@
 {
   "name": "Cloud Foundry",
-  "revision": "2016-08-17",
+  "revision": "2019-01-10",
   "url": "http://www.cloudfoundry.org/",
-  "status": "production",
+  "status": "beta",
   "status_since": "2011-04-12",
   "type": "Generic",
   "hosting": {
@@ -11,12 +11,13 @@
   },
   "pricings": [
     {
-      "model": "free"
+      "model": "free",
+      "period": ""
     }
   ],
   "scaling": {
-    "vertical": true,
     "horizontal": true,
+    "vertical": true,
     "auto": false
   },
   "runtimes": [
@@ -97,63 +98,43 @@
     {
       "name": "grails",
       "runtime": "groovy",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "play",
       "runtime": "java",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "spring",
       "runtime": "java",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "rails",
       "runtime": "ruby",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "sinatra",
       "runtime": "ruby",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "cakephp",
       "runtime": "php",
-      "versions": [
-
-      ]
+      "versions": []
     },
     {
       "name": "symfony",
       "runtime": "php",
-      "versions": [
-
-      ]
+      "versions": []
     }
   ],
   "services": {
-    "native": [
-
-    ],
-    "addon": [
-
-    ]
+    "native": [],
+    "addon": []
   },
   "extensible": true,
-  "infrastructures": [
-
-  ]
+  "infrastructures": []
 }
