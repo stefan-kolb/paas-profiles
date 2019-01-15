@@ -21,7 +21,7 @@
     "auto": false
   },
   "runtimes": [
-    { "language": "node", "versions": [ "4", "6", "8", "10", "latest(11)" ] },
+    { "language": "node", "versions": [ "4", "6", "8", "10", "11.*" ] },
     { "language": "python", "versions": [ "2.7", "3.5", "3.6", "3.7" ] },
     { "language": "go", "versions": [ "1.7", "1.8", "1.9", "1.10", "1.11" ] },
     { "language": "ruby", "versions": [ "1.9", "2.0", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6" ] },
