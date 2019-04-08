@@ -3,12 +3,12 @@ require_relative '../../app/models/vendor/vendor'
 FactoryBot.define do
   factory :vendor, class: Profiles::Vendor do
     # mandatory properties
-    name 'unibapaas'
-    url 'http://example.com'
-    revision Date.today
-    status 'production'
-    extensible false
-    type 'Generic'
+    name { 'unibapaas' }
+    url { 'http://example.com' }
+    revision { Date.today }
+    status { 'production' }
+    extensible { false }
+    type { 'Generic' }
 
     hosting { FactoryBot.build(:hosting) }
     scaling { FactoryBot.build(:scaling) }
@@ -20,7 +20,7 @@ FactoryBot.define do
     infrastructures { [FactoryBot.build(:infrastructure)] }
     # runtimes
     transient do
-      language 'ruby'
+      language { 'ruby' }
     end
 
     after(:build) do |vendor, evaluator|
@@ -29,7 +29,7 @@ FactoryBot.define do
 
     factory :vendor_with_distinct_runtimes do
       transient do
-        runtime_count 2
+        runtime_count { 2 }
       end
 
       after(:build) do |vendor, evaluator|
@@ -40,7 +40,7 @@ FactoryBot.define do
     factory :vendor_with_middleware do
       # middlewares
       transient do
-        middleware_count 5
+        middleware_count { 5 }
       end
 
       after(:build) do |vendor, evaluator|
@@ -51,7 +51,7 @@ FactoryBot.define do
     factory :vendor_with_frameworks do
       # frameworks
       transient do
-        frameworks_count 5
+        frameworks_count { 5 }
       end
 
       after(:build) do |vendor, evaluator|
@@ -63,7 +63,7 @@ FactoryBot.define do
     factory :vendor_with_infrastructures do
       # infrastructures
       transient do
-        infrastructures_count 5
+        infrastructures_count { 5 }
       end
 
       after(:build) do |vendor, evaluator|

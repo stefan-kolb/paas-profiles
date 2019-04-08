@@ -19,7 +19,7 @@ gem 'versionomy'
 
 group :test do
   gem 'database_cleaner'
-  gem 'factory_bot', '~> 4.0'
+  gem 'factory_bot'
   gem 'minitest'
   gem 'rack-test'
   gem 'shoulda-context'
