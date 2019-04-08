@@ -108,7 +108,7 @@
   "extensible": false,
   "infrastructures": [
     { 
-      "continent": "FR",
+      "continent": "EU",
       "country": "NL",
       "region": "Amsterdam",
       "provider": "Online SAS"
