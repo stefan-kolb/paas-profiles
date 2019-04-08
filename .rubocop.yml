@@ -55,3 +55,6 @@ Style/AccessModifierDeclarations:
 Lint/ParenthesesAsGroupedExpression:
   Enabled: false
 
+Layout/EmptyLinesAroundAccessModifier:
+  Exclude:
+    - test/factories/hosting.rb
