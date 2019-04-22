@@ -87,7 +87,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rmagick (2.16.0)
+    rmagick (3.1.0)
     rubocop (0.67.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -147,7 +147,7 @@ DEPENDENCIES
   rake
   require_all
   rest-client
-  rmagick (~> 2.16)
+  rmagick (~> 3.1)
   rubocop
   shoulda-context
   sinatra (~> 2.0)
