@@ -1,6 +1,6 @@
 {
   "name": "Scalingo",
-  "revision": "2016-08-04",
+  "revision": "2019-05-13",
   "vendor_verified": "2016-08-04",
   "url": "https://scalingo.com",
   "status": "production",
@@ -17,9 +17,9 @@
     }
   ],
   "scaling": {
-    "vertical": true,
     "horizontal": true,
-    "auto": false
+    "vertical": true,
+    "auto": true
   },
   "runtimes": [
     {
@@ -51,21 +51,17 @@
     {
       "language": "node",
       "versions": [
-        "0.10.*",
-        "0.12.*",
-        "4.*",
-        "5.*",
-        "6.*"
+        "*.*"
       ]
     },
     {
       "language": "php",
       "versions": [
-        "5.3",
-        "5.4",
-        "5.5",
         "5.6",
-        "7.0"
+        "7.0",
+        "7.1",
+        "7.2",
+        "7.3"
       ]
     },
     {
@@ -85,7 +81,10 @@
         "2.0.*",
         "2.1.*",
         "2.2.*",
-        "2.3.*"
+        "2.3.*",
+        "2.4.*",
+        "2.5.*",
+        "2.6.*"
       ]
     },
     {
@@ -93,10 +92,27 @@
       "versions": [
         "*.*"
       ]
+    },
+    {
+      "language": "elixir",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "erlang",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "language": "haskell",
+      "versions": [
+        "*.*"
+      ]
     }
   ],
-  "middlewares": [
-  ],
+  "middlewares": [],
   "frameworks": [
     {
       "name": "rails",
@@ -112,7 +128,10 @@
       "name": "django",
       "runtime": "python",
       "versions": [
-        "*.*"
+        "2.7.*",
+        "3.2.*",
+        "3.3.*",
+        "3.4.*"
       ]
     },
     {
@@ -123,14 +142,17 @@
         "1.0.*",
         "1.1.*",
         "1.2.*",
-        "1.3.*"
+        "1.3.*",
+        "1.4.*",
+        "1.5.*",
+        "1.6.*"
       ]
     },
     {
       "name": "express",
       "runtime": "node",
       "versions": [
-        "**"
+        "*.*"
       ]
     },
     {
@@ -145,6 +167,7 @@
       "runtime": "java",
       "versions": [
         "1.2.*",
+        "1.4.*",
         "2.*"
       ]
     },
@@ -159,15 +182,10 @@
       "name": "flask",
       "runtime": "python",
       "versions": [
-        "*.*"
-      ]
-    },
-    {
-      "name": "spark",
-      "runtime": "java",
-      "versions": [
-        "1.*",
-        "2.*"
+        "2.7.*",
+        "3.2.*",
+        "3.3.*",
+        "3.4.*"
       ]
     },
     {
@@ -175,7 +193,8 @@
       "runtime": "php",
       "versions": [
         "2.*",
-        "3.*"
+        "3.*",
+        "4.*"
       ]
     },
     {
@@ -241,52 +260,161 @@
       "versions": [
         "4.*"
       ]
+    },
+    {
+      "name": "spark",
+      "runtime": "java",
+      "versions": [
+        "1.*",
+        "2.*"
+      ]
+    },
+    {
+      "name": "scalatra",
+      "runtime": "scala",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "zend framework",
+      "runtime": "php",
+      "versions": [
+        "2.*",
+        "3.*"
+      ]
+    },
+    {
+      "name": "sinatra",
+      "runtime": "ruby",
+      "versions": [
+        "1.*",
+        "2.*"
+      ]
+    },
+    {
+      "name": "phoenix",
+      "runtime": "elixir",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "next.js",
+      "runtime": "node",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "sails",
+      "runtime": "node",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "scala play",
+      "runtime": "scala",
+      "versions": [
+        "2.*"
+      ]
+    },
+    {
+      "name": "codeigniter",
+      "runtime": "",
+      "versions": [
+        "*.*"
+      ]
+    },
+    {
+      "name": "phalcon",
+      "runtime": "php",
+      "versions": [
+        "3.4.3"
+      ]
     }
   ],
   "services": {
     "native": [
       {
         "name": "mongodb",
-        "description": "",
-        "type": "datastore",
+        "type": "database",
         "versions": [
-          "3.2.*"
+          "3.2.22",
+          "3.4.19",
+          "3.6.8",
+          "4.0.3"
         ]
       },
       {
         "name": "mysql",
-        "description": "",
-        "type": "datastore",
+        "type": "database",
         "versions": [
-          "5.5.*"
+          "5.5.*",
+          "5.6.*",
+          "5.7.*"
         ]
       },
       {
         "name": "postgresql",
-        "description": "",
-        "type": "datastore",
+        "type": "database",
         "versions": [
-          "9.4.*"
+          "9.4.*",
+          "9.5.*",
+          "9.6.*",
+          "10.*"
         ]
       },
       {
         "name": "redis",
-        "description": "",
-        "type": "datastore",
+        "type": "database",
         "versions": [
-          "3.*"
+          "3.*",
+          "4.*",
+          "5.*"
         ]
       },
       {
         "name": "elasticsearch",
-        "description": "",
-        "type": "datastore",
+        "type": "database",
         "versions": [
-          "1.7.*"
+          "2.3.*",
+          "5.5.*",
+          "5.6.*",
+          "6.6.*"
+        ]
+      },
+      {
+        "name": "influxdb",
+        "type": "database",
+        "versions": [
+          "1.5.*",
+          "1.6.*"
         ]
       }
     ],
     "addon": [
+      {
+        "name": "Scalingo Docker Image",
+        "url": "https://scalingo.com/addons/scalingo-docker-image",
+        "type": "other"
+      },
+      {
+        "name": "Scalingo OpenVPN",
+        "url": "https://scalingo.com/addons/scalingo-openvpn",
+        "type": "other"
+      },
+      {
+        "name": "Scalingo VPN IPSec",
+        "url": "https://scalingo.com/addons/scalingo-vpn-ipsec",
+        "type": "other"
+      },
+      {
+        "name": "TCP Gateway",
+        "url": "https://scalingo.com/addons/tcp-gateway",
+        "type": "other"
+      }
     ]
   },
   "extensible": true,
