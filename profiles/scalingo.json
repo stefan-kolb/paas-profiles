@@ -322,7 +322,7 @@
     },
     {
       "name": "codeigniter",
-      "runtime": "",
+      "runtime": "php",
       "versions": [
         "*.*"
       ]
