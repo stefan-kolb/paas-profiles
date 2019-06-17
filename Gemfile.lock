@@ -29,7 +29,7 @@ GEM
       activesupport (>= 4.2.0)
     ffi (1.10.0-x86-mingw32)
     geocoder (1.5.1)
-    grape (1.2.3)
+    grape (1.2.4)
       activesupport
       builder
       mustermann-grape (~> 1.0.0)
