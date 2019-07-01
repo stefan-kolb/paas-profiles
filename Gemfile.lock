@@ -61,7 +61,7 @@ GEM
     mustermann-grape (1.0.0)
       mustermann (~> 1.0.0)
     netrc (0.11.0)
-    newrelic_rpm (6.4.0.356)
+    newrelic_rpm (6.5.0.357)
     parallel (1.17.0)
     parser (2.6.3.0)
       ast (~> 2.4.0)
