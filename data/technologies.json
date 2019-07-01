@@ -196,11 +196,6 @@
     "isolation": ""
   },
   {
-    "vendor": "Pagoda Box",
-    "platform": "",
-    "isolation": ""
-  },
-  {
     "vendor": "Pivotal CF",
     "isolation": "Container"
   },
