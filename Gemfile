@@ -12,7 +12,7 @@ gem 'mongoid', '~> 6.0'
 gem 'rake'
 gem 'require_all'
 gem 'rest-client'
-gem 'rmagick', '~> 2.16'
+gem 'rmagick', '~> 4.0'
 gem 'rubocop', require: false
 gem 'sinatra', '~> 2.0'
 gem 'sinatra-simple-navigation', '~> 4.0'
