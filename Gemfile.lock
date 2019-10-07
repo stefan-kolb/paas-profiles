@@ -28,7 +28,7 @@ GEM
     factory_bot (5.1.0)
       activesupport (>= 4.2.0)
     ffi (1.11.1-x86-mingw32)
-    geocoder (1.5.1)
+    geocoder (1.5.2)
     grape (1.2.4)
       activesupport
       builder
