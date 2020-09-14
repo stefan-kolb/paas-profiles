@@ -136,7 +136,7 @@ GEM
     unf_ext (0.0.7.7)
     unf_ext (0.0.7.7-x86-mingw32)
     unicode-display_width (1.7.0)
-    unicorn (5.5.5)
+    unicorn (5.7.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
     versionomy (0.5.0)
