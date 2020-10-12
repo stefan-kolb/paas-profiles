@@ -27,7 +27,7 @@ GEM
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.3.0)
     dry-inflector (0.2.0)
-    dry-logic (1.0.6)
+    dry-logic (1.0.8)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
@@ -42,7 +42,7 @@ GEM
       activesupport (>= 4.2.0)
     ffi (1.13.1-x86-mingw32)
     geocoder (1.6.3)
-    grape (1.4.0)
+    grape (1.5.0)
       activesupport
       builder
       dry-types (>= 1.1)
