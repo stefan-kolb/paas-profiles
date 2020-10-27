@@ -1,7 +1,7 @@
 {
   "name": "Cloudify",
   "revision": "2013-07-05T17:47:54+02:00",
-  "url": "http://www.gigaspaces.com/cloudify",
+  "url": "https://cloudify.co/",
   "status": "production",
   "status_since": "2012-02-14",
   "type": "IaaS-centric",
