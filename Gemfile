@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.4.2'
+ruby '~> 2'
 
 gem 'activesupport'
 gem 'geocoder'
@@ -14,7 +14,7 @@ gem 'require_all'
 gem 'rest-client'
 gem 'rmagick', '~> 2.16'
 gem 'rubocop', require: false
-gem 'sinatra', '~> 2.0'
+gem 'sinatra', '~> 2.1'
 gem 'sinatra-simple-navigation', '~> 4.0'
 gem 'versionomy'
 
