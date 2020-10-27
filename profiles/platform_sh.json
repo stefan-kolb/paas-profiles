@@ -1,6 +1,6 @@
 {
   "name": "Platform.sh",
-  "revision": "2018-07-25",
+  "revision": "2020-10-23",
   "vendor_verified": "2017-07-03",
   "url": "https://platform.sh",
   "status": "production",
@@ -13,19 +13,29 @@
   },
   "pricings": [
     {
-      "model": "hybrid",
+      "model": "fixed",
+      "period": "daily"
+    },
+    {
+      "model": "fixed",
       "period": "monthly"
-    }
+    },
+    {
+      "model": "fixed",
+      "period": "annually"
+    }    
   ],
   "quality": {
     "uptime": 99.99,
     "compliance": [
       "GDPR",
-      "BDSG"
+      "BDSG",
+      "PCI-DSS",
+      "SOC-2"
     ]
   },
   "scaling": {
-    "horizontal": false,
+    "horizontal": true,
     "vertical": true,
     "auto": false
   },
@@ -38,52 +48,91 @@
         "5.6",
         "7.0",
         "7.1",
-        "7.2"
+        "7.2",
+        "7.3",
+        "7.4",
+        "8.0"
       ]
     },
     {
       "language": "node",
       "versions": [
-        "0.12",
-        "4.7",
-        "4.8",
-        "6.9",
-        "6.11",
-        "8.9",
-        "10"
+          "6",
+          "8",
+          "10",
+          "12",
+          "14"
       ]
     },
     {
       "language": "python",
       "versions": [
-        "2.7",
-        "3.5",
-        "3.6"
+          "2.7",
+          "3.5",
+          "3.6",
+          "3.7",
+          "3.8"
       ]
     },
     {
       "language": "ruby",
       "versions": [
-        "2.3",
-        "2.4",
-        "2.5"
+          "2.3",
+          "2.4",
+          "2.5",
+          "2.6",
+          "2.7"
       ]
     },
     {
       "language": "java",
       "versions": [
-        "8"
+          "8",
+          "11",
+          "12",
+          "13"
       ]
     },
     {
       "language": "go",
       "versions": [
         "1.8",
-        "1.9"
+        "1.9",
+        "1.10",
+        "1.11",
+        "1.12",
+        "1.13",
+        "1.14",
+        "1.15"
+      ]
+    },
+    {
+      "language": "elixir",
+      "versions": [
+        "1.9",
+        "1.10"
+      ]
+    },
+    {
+      "language": "lisp",
+      "versions": [
+        "2.5"
+      ]
+    },
+    {
+      "language": "dotnet",
+      "versions": [
+         "2.0",
+         "2.1",
+         "2.2",
+         "3.1"
       ]
     }
   ],
-  "middlewares": [],
+  "middlewares": [
+      { "name": "nginx" },
+      { "name": "varnish" }
+  ],
   "frameworks": [
     {
       "name": "cakephp",
@@ -116,7 +165,8 @@
         "1",
         "2",
         "3",
-        "4"
+        "4",
+        "5"
       ]
     },
     {
@@ -163,8 +213,18 @@
       "versions": []
     },
     {
+      "name": "flask",
+      "runtime": "python",
+      "versions": []
+    },
+    {
       "name": "joomla",
       "runtime": "php",
+      "versions": []
+    },
+    {
+      "name": "play",
+      "runtime": "java",
       "versions": []
     }
   ],
@@ -178,7 +238,11 @@
           "1.4",
           "1.7",
           "2.4",
-          "5.2"
+          "5.2",
+          "6.5",
+          "7.2",
+          "7.5",
+          "7.7"
         ]
       },
       {
@@ -193,14 +257,25 @@
         ]
       },
       {
-        "name": "MySQL",
+        "name": "MariaDB",
         "description": "MariaDB, MySQL-compatible",
         "type": "datastore",
         "versions": [
-          "5.5",
-          "10.0",
-          "10.1",
-          "10.2"
+            "5.7",
+            "10.0",
+            "10.1",
+            "10.2",
+            "10.3",
+            "10.4"
+        ]
+      },
+      {
+        "name": "MySQL",
+        "description": "Oracle MySQL",
+        "type": "datastore",
+        "versions": [
+            "5.7",
+            "8.0"
         ]
       },
       {
@@ -208,7 +283,10 @@
         "type": "datastore",
         "versions": [
           "9.3",
-          "9.6"
+          "9.6",
+          "10",
+          "11",
+          "12"
         ]
       },
       {
@@ -217,7 +295,10 @@
         "versions": [
           "2.8",
           "3.0",
-          "3.2"
+          "3.2",
+          "4.0",
+          "5.0",
+          "6.0"
         ]
       },
       {
@@ -225,7 +306,9 @@
         "description": "1.4",
         "type": "cache",
         "versions": [
-          "1.4"
+            "1.4",
+            "1.5",
+            "1.6"
         ]
       },
       {
@@ -235,14 +318,21 @@
           "3.6",
           "4.10",
           "6.3",
-          "6.6"
+          "6.6",
+          "7.7",
+          "8.0",
+          "8.4",
+          "8.6"
         ]
       },
       {
         "name": "RabbitMQ",
-        "type": "other",
+        "type": "messaging",
         "versions": [
-          "3.5"
+          "3.5",
+          "3.6",
+          "3.7",
+          "3.8"
         ]
       },
       {
@@ -250,8 +340,29 @@
         "type": "other",
         "versions": [
           "1.2",
-          "1.3"
+          "1.3",
+          "1.7",
+          "1.8"
         ]
+      },
+      {
+        "name": "Kafka",
+        "type": "messaging",
+        "versions": [
+          "2.1",
+          "2.2",
+          "2.3",
+          "2.4",
+          "2.5"
+        ]
+      },
+      {
+        "name": "nfs",
+        "type": "storage"
+      },
+      {
+        "name": "headless-chrome",
+        "type": "other"
       }
     ],
     "addon": [
@@ -381,6 +492,18 @@
       "country": "FR",
       "region": "Paris",
       "provider": "Orange Business Services"
+    },
+    {
+      "continent": "EU",
+      "country": "GB",
+      "region": "London",
+      "provider": "Google Cloud"
+    },
+    {
+      "continent": "EU",
+      "country": "FR",
+      "region": "Paris",
+      "provider": "OVH"
     },
     {
       "continent": "EU",
