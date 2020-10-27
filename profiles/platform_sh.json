@@ -14,8 +14,16 @@
   "pricings": [
     {
       "model": "fixed",
-      "period": "daily, monthly, annually"
-    }
+      "period": "daily"
+    },
+    {
+      "model": "fixed",
+      "period": "monthly"
+    },
+    {
+      "model": "fixed",
+      "period": "annually"
+    }    
   ],
   "quality": {
     "uptime": 99.99,
