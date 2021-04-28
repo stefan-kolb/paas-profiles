@@ -1,0 +1,37 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: rubocop
+    versions:
+    - 1.10.0
+    - 1.11.0
+    - 1.12.0
+    - 1.12.1
+    - 1.8.1
+    - 1.9.0
+    - 1.9.1
+  - dependency-name: grape
+    versions:
+    - 1.5.1
+    - 1.5.2
+  - dependency-name: newrelic_rpm
+    versions:
+    - 6.15.0
+  - dependency-name: minitest
+    versions:
+    - 5.14.3
+  - dependency-name: unicorn
+    versions:
+    - 5.8.0
+  - dependency-name: mongoid
+    versions:
+    - 7.1.6
+  - dependency-name: grape-entity
+    versions:
+    - 0.8.2
