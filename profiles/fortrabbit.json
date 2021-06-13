@@ -2,7 +2,7 @@
   "name": "fortrabbit",
   "revision": "2016-03-06",
   "url": "https://www.fortrabbit.com/",
-  "vendor_verified": "2013-07-10",
+  "vendor_verified": "2021-06-10",
   "status": "production",
   "status_since": "2012-10-04",
   "type": "Generic",
@@ -29,8 +29,8 @@
     {
       "language": "php",
       "versions": [
-        "5.4",
-        "5.5"
+        "7.3",
+        "8.0"
       ]
     }
   ],
@@ -39,32 +39,32 @@
   ],
   "frameworks": [
     {
-      "name": "phalcon",
+      "name": "Craft CMS",
       "runtime": "php",
       "versions": [
-
+        "3"
       ]
     },
     {
-      "name": "drupal",
+      "name": "WordPress",
       "runtime": "php",
       "versions": [
-        "8"
+        "5"
       ]
     },
     {
-      "name": "symfony",
+      "name": "Symfony",
       "runtime": "php",
       "versions": [
         "2"
       ]
     },
     {
-      "name": "laravel",
+      "name": "Laravel",
       "runtime": "php",
       "versions": [
-        "3",
-        "4"
+        "7",
+        "8"
       ]
     }
   ],
