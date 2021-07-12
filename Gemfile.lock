@@ -87,7 +87,7 @@ GEM
       rack (>= 1.0, < 3)
     rainbow (3.0.0)
     raindrops (0.19.1)
-    rake (13.0.4)
+    rake (13.0.6)
     regexp_parser (1.8.0)
     require_all (3.0.0)
     rest-client (2.1.0)
