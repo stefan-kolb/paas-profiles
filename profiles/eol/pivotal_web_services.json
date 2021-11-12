@@ -2,8 +2,8 @@
   "name": "Pivotal Web Services",
   "revision": "2014-05-22",
   "url": "https://run.pivotal.io/",
-  "status": "production",
-  "status_since": "2014-05-07",
+  "status": "eol",
+  "status_since": "2020-09-17",
   "type": "Generic",
   "platform": "Cloud Foundry",
   "hosting": {
