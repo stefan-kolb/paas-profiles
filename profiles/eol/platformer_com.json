@@ -2,8 +2,8 @@
   "name": "Platformer.com",
   "revision": "2014-07-14",
   "url": "https://platformer.com/",
-  "status": "production",
-  "status_since": "2014-07-08",
+  "status": "eol",
+  "status_since": "2021-06-16",
   "type": "Generic",
   "hosting": {
     "public": true,
