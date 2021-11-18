@@ -3,7 +3,7 @@
   "revision": "2021-11-18",
   "url": "https://flashdrive.io/",
   "status": "production",
-  "status_since": "20020-11-01",
+  "status_since": "2020-11-01",
   "type": "Generic",
   "hosting": {
     "public": true,
