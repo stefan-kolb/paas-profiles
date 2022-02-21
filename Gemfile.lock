@@ -81,7 +81,7 @@ GEM
     rack (2.2.3)
     rack-accept (0.4.5)
       rack (>= 0.4)
-    rack-protection (2.1.0)
+    rack-protection (2.2.0)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -116,14 +116,14 @@ GEM
       parser (>= 2.7.1.5)
       strscan (>= 1.0.0)
     ruby-progressbar (1.10.1)
-    ruby2_keywords (0.0.2)
+    ruby2_keywords (0.0.5)
     shoulda-context (2.0.0)
     simple-navigation (4.3.0)
       activesupport (>= 2.3.2)
-    sinatra (2.1.0)
+    sinatra (2.2.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
-      rack-protection (= 2.1.0)
+      rack-protection (= 2.2.0)
       tilt (~> 2.0)
     sinatra-simple-navigation (4.1.0)
       simple-navigation (~> 4.0)
@@ -167,7 +167,7 @@ DEPENDENCIES
   rmagick (~> 2.16)
   rubocop
   shoulda-context
-  sinatra (~> 2.1)
+  sinatra (~> 2.2)
   sinatra-simple-navigation (~> 4.0)
   unicorn
   versionomy
