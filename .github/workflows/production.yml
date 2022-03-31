@@ -40,4 +40,4 @@ jobs:
     - name: Seed database
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku run rake db:seed
+      run: heroku run rake db:seed --app paas-profiles
