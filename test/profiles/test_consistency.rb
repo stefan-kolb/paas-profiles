@@ -36,7 +36,7 @@ module Profiles
 
     # do not allow to have one software in any of the other categories
     def test_software_intersection
-      software = %w[runtimes.language middlewares.name frameworks.name services.native.name services.addon.name]
+      software = %w[runtimes.language middlewares.name frameworks.name services.native.name]
       arr = []
       software.each do |s|
         arr << Vendor.distinct(s)
