@@ -56,13 +56,13 @@ class TestApi < MiniTest::Test
       # TODO: test factory
     end
 
-#    should 'query external geo API when location is unknown' do
-#      vendor = create(:vendor)
-#      response = [{ latLng: [49.8916044, 10.8868478], name: 'Bamberg' }]
-#      get "/api/vendors/#{vendor.name}/infrastructures"
-#      assert(last_response.ok?)
-#      assert_equal(response.to_json, last_response.body, 'Unexpected JSON response')
-#    end
+    # should 'query external geo API when location is unknown' do
+    #  vendor = create(:vendor)
+    #  response = [{ latLng: [49.8916044, 10.8868478], name: 'Bamberg' }]
+    #  get "/api/vendors/#{vendor.name}/infrastructures"
+    #  assert(last_response.ok?)
+    #  assert_equal(response.to_json, last_response.body, 'Unexpected JSON response')
+    # end
 
     should 'unescape vendor name correctly' do
       create(:vendor, name: 'OpenShift Online')
