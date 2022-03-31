@@ -15,7 +15,7 @@ module Profiles
     # validations
     validates :continent, presence: true, inclusion: { in: %w[AF AS EU NA OC SA] }
     validates :country, presence: true, if: proc { !region.blank? }
-    validate :country_codes, if: proc { !country.blank? }
+    # validate :country_codes, if: proc { !country.blank? }
 
     def country_codes
       code = IsoCountryCodes.find(country)
