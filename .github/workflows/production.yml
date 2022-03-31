@@ -1,0 +1,43 @@
+name: Production
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  test:
+    env:
+      RACK_ENV: test
+    runs-on: ubuntu-latest
+    services:
+      mongo:
+        image: mongo:3.6
+        ports:
+        - 27017:27017
+            
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+    - run: bundle exec rake
+        
+  deploy:
+  
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: master
+        fetch-depth: 0
+    - name: Deploy to Heroku
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/volley-pagetab.git master
+    - name: Seed database
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku run rake db:seed

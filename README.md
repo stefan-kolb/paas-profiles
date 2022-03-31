@@ -1,4 +1,4 @@
-# [PaaS Profiles](https://paasfinder.org) [![Build Status](https://travis-ci.org/stefan-kolb/paas-profiles.png)](https://travis-ci.org/stefan-kolb/paas-profiles)
+# [PaaS Profiles](https://paasfinder.org)
 
 *Making Platform as a Service offerings comparable - Ecosystem profiles for portability matching.*
 

@@ -1,0 +1,21 @@
+name: Development
+
+on: [push]
+
+jobs:
+  test:
+    env:
+      RACK_ENV: test
+    runs-on: ubuntu-latest
+    services:
+      mongo:
+        image: mongo:3.6
+        ports:
+        - 27017:27017
+            
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+    - run: bundle exec rake
