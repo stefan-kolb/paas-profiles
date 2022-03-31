@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-ruby '~> 2'
+ruby '~> 2.7'
 
 gem 'activesupport'
 gem 'geocoder'
 gem 'grape'
 gem 'grape-entity'
 gem 'iso_country_codes'
-gem 'mongo', '~> 2.8.0'
+gem 'mongo', '~> 2.17.1'
 gem 'mongoid', '~> 6.0'
 gem 'rake'
 gem 'require_all'
