@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :infrastructure, class: Profiles::Infrastructure do
     continent { 'EU' }
     country { 'DE' }
-    region { 'Bamberg' }
+    region { 'Bamberg, Germany' }
 
     trait :provider do
       provider { 'Amazon Web Services' }

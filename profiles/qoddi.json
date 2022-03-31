@@ -42,6 +42,12 @@
       ]
     },
     {
+      "language": "groovy",
+      "versions": [
+        "*.*"
+      ]
+    },	
+    {
       "language": "node",
       "versions": [
         "0.12.*",

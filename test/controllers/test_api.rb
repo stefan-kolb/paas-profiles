@@ -58,7 +58,7 @@ class TestApi < MiniTest::Test
 
     should 'query external geo API when location is unknown' do
       vendor = create(:vendor)
-      response = [{ latLng: [49.8916044, 10.8868478], name: 'Bamberg' }]
+      response = [{ latLng: [49.8916044, 10.8868478], name: 'Bamberg, Germany' }]
       get "/api/vendors/#{vendor.name}/infrastructures"
       assert(last_response.ok?)
       assert_equal(response.to_json, last_response.body, 'Unexpected JSON response')
