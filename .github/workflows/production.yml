@@ -36,7 +36,7 @@ jobs:
     - name: Deploy to Heroku
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/volley-pagetab.git master
+      run: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/volley-pagetab.git master -f
     - name: Seed database
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
