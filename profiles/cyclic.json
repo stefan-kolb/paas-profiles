@@ -1,0 +1,186 @@
+{
+  "name": "Cyclic",
+  "revision": "2022-03-28",
+  "vendor_verified": "2022-03-28",
+  "url": "https://cyclic.sh/",
+  "status": "beta",
+  "status_since": "2021-09-01",
+  "type": "Generic",
+  "hosting": {
+    "public": true,
+    "private": true
+  },
+  "pricings": [
+    {
+      "model": "free"
+    },
+    {
+      "model": "metered",
+      "period": "monthly"
+    }
+  ],
+  "scaling": {
+    "horizontal": true,
+    "vertical": false,
+    "auto": true
+  },
+  "runtimes": [
+    {
+      "language": "node",
+      "versions": [
+        "14.*"
+      ]
+    }
+  ],
+  "middlewares": [],
+  "frameworks": [
+    { "name": "express", "runtime": "node", "versions": [ "*.*" ] },
+    { "name": "next.js", "runtime": "node", "versions": [ "*.*" ] },
+    { "name": "react", "runtime": "node", "versions": [ "*.*" ] },
+    { "name": "svelte", "runtime": "node", "versions": [ "*.*" ] },
+    { "name": "vue", "runtime": "node", "versions": [ "*.*" ] }
+  ],
+  "services": {
+    "native": [
+      { "name": "dynamodb", "type": "datastore", "description": "Integrated global serverless database", "versions": [ "*.*" ] },
+      { "name": "monitoring", "type": "analytics", "description": "HTTP call based req/res logging, inclusive of logging", "versions": [ "*.*" ] },
+      { "name": "authentication", "type": "other", "description": "Integrated token based authentication", "versions": [ "*.*" ] }
+    ],
+    "addon": []
+  },
+  "extensible": false,
+  "infrastructures": [
+    {
+      "continent": "AF",
+      "country": "ZA",
+      "region": "Cape Town",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "BH",
+      "region": "Bahrain",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "HK",
+      "region": "Hong Kong",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "SG",
+      "region": "Singapore",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Tokyo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "JP",
+      "region": "Osaka",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "KR",
+      "region": "Seoul",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "DE",
+      "region": "Frankfurt",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "IE",
+      "region": "Dublin",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "IT",
+      "region": "Milan",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "FR",
+      "region": "Paris",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "GB",
+      "region": "London",
+      "provider": "AWS"
+    },
+    {
+      "continent": "EU",
+      "country": "SE",
+      "region": "Stockholm",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "CA",
+      "region": "Canada Central",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern California",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Northern Virginia",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Oregon",
+      "provider": "AWS"
+    },
+    {
+      "continent": "NA",
+      "country": "US",
+      "region": "Ohio",
+      "provider": "AWS"
+    },
+    {
+      "continent": "OC",
+      "country": "AU",
+      "region": "Sydney",
+      "provider": "AWS"
+    },
+    {
+      "continent": "SA",
+      "country": "BR",
+      "region": "Sao Paulo",
+      "provider": "AWS"
+    },
+    {
+      "continent": "AS",
+      "country": "IN",
+      "region": "Mumbai",
+      "provider": "AWS"
+    }
+  ]
+}
