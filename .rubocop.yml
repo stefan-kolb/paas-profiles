@@ -31,7 +31,7 @@ Metrics/ClassLength:
 Metrics/CyclomaticComplexity:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 Metrics/MethodLength:
@@ -58,3 +58,6 @@ Lint/ParenthesesAsGroupedExpression:
 Layout/EmptyLinesAroundAccessModifier:
   Exclude:
     - test/factories/hosting.rb
+
+Style/RedundantBegin:
+  Enabled: false
