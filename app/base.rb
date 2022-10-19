@@ -23,8 +23,6 @@ module Profiles
     end
 
     configure :production do
-      # monitoring
-      require 'newrelic_rpm'
       # protection
       set :protection, except: :frame_options
     end
