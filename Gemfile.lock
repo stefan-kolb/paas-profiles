@@ -74,7 +74,6 @@ GEM
     mustermann-grape (1.0.1)
       mustermann (>= 1.0.0)
     netrc (0.11.0)
-    newrelic_rpm (6.13.1)
     parallel (1.19.2)
     parser (2.7.1.5)
       ast (~> 2.4.1)
@@ -159,7 +158,6 @@ DEPENDENCIES
   minitest
   mongo (~> 2.8.0)
   mongoid (~> 6.0)
-  newrelic_rpm
   rack-test
   rake
   require_all
