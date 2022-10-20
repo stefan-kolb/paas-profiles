@@ -185,7 +185,6 @@
       <thead>
       <tr>
         <th>Language</th>
-        <th>Versions</th>
       </tr>
       </thead>
       <tbody>
@@ -193,20 +192,6 @@
           <tr>
             <td>
               <%= rt["language"].capitalize %>
-            </td>
-            <% rt["versions"].each do |v|
-                 v.gsub!(/\*\.\*/, 'All versions')
-               end unless rt['versions'].blank?
-            %>
-            <td>
-              <em><%= rt["versions"].join(', ') unless rt['versions'].blank? %></em>
-              <% if rt['versions'].blank? %>
-                  <span class="status grey pull-right" title="No version information"></span>
-              <% elsif rt['versions'].any? { |v| Profiles::Version.new(v, rt['language']).latest? } %>
-                  <span class="status green pull-right" title="Up-to-date"></span>
-              <% else %>
-                  <span class="status yellow pull-right" title="Latest version: <%= Profiles::Version.latest(rt['language']) %>"></span>
-              <% end %>
             </td>
           </tr>
       <% end %>
@@ -231,7 +216,6 @@
           <tr>
             <th>Name</th>
             <th>Runtime</th>
-            <th>Versions</th>
           </tr>
           </thead>
           <tbody>
@@ -245,10 +229,6 @@
                 <td>
                   <%= rt["runtime"].capitalize unless rt["runtime"].blank? %>
                 </td>
-                <% rt["versions"].each do |v|
-                  v.gsub! /\*\.\*/, 'All versions'
-                end unless rt['versions'].blank? %>
-                <td><em><%= rt["versions"].join(", ") unless rt['versions'].blank? %></em></td>
               </tr>
           <% end %>
           </tbody>
@@ -269,7 +249,6 @@
           <tr>
             <th>Name</th>
             <th>Runtime</th>
-            <th>Versions</th>
           </tr>
           </thead>
           <tbody>
@@ -283,10 +262,6 @@
                 <td>
                   <%= rt["runtime"].capitalize %>
                 </td>
-                <% rt["versions"].each do |v|
-                  v.gsub! /\*\.\*/, 'All versions'
-                end unless rt['versions'].blank? %>
-                <td><em><%= rt["versions"].join(", ") unless rt['versions'].blank? %></em></td>
               </tr>
           <% end %>
           </tbody>
@@ -327,7 +302,6 @@
                       <th>Name</th>
                       <th class="hidden-phone">Description</th>
                       <th>Type</th>
-                      <th>Versions</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -342,7 +316,6 @@
                                 <em><%= rt["type"].upcase %></em>
                             <% end %>
                           </td>
-                          <td><em><%= rt["versions"].join(", ") unless rt['versions'].blank? %></em></td>
                         </tr>
                     <% end %>
                     </tbody>
