@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '~> 2'
+ruby File.read('.ruby-version').strip
 
 gem 'activesupport'
 gem 'geocoder'
