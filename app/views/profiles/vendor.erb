@@ -3,6 +3,9 @@
 <div id="top" class="container" style="margin-top: 10px; padding-bottom: 30px;">
 <div class="row">
   <div class="span12">
+    <div class="alert">
+      <strong>Unmaintained!</strong> Please be aware that the data on this site may be out-of-date.
+    </div>
     <h1>
     <% if File.exist?(settings.public_folder << '/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>
     <img src="<%= url('/img/vendor/' << @profile['name'].downcase.gsub(/[^a-z0-9]/, '_') << '.png') %>" class="img-rounded" style="margin-bottom: 8px">
