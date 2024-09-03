@@ -154,7 +154,7 @@ DEPENDENCIES
   iso_country_codes
   minitest
   mongo (~> 2.8.0)
-  mongoid (~> 6.0)
+  mongoid (~> 6.4)
   rack-test
   rake
   require_all
