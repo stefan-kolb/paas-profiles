@@ -36,7 +36,7 @@ class TestMain < Minitest::Test
 
     should 'show a default comparison page' do
       create(:vendor, name: 'Heroku')
-      create(:vendor, name: 'Pivotal Web Services')
+      create(:vendor, name: 'Openshift Online')
       get '/compare'
       assert(last_response.ok?)
     end
