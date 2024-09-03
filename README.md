@@ -1,3 +1,8 @@
+# ⚠️ Unmaintained ⚠️
+
+**This repository is no longer actively maintained.**  
+Thank you to everyone who contributed to this project.
+
 # [PaaS Profiles](https://paasfinder.org)
 
 *Making Platform as a Service offerings comparable - Ecosystem profiles for portability matching.*
