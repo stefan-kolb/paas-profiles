@@ -2,7 +2,7 @@ ENV['RACK_ENV'] = 'test'
 
 require 'factory_bot'
 require 'require_all'
-require 'database_cleaner'
+require 'database_cleaner/mongoid'
 require 'mongoid'
 require 'minitest/autorun'
 require 'rack/test'

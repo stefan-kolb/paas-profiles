@@ -1,5 +1,4 @@
 require_relative '../test_helper'
-require 'database_cleaner/mongoid'
 
 class TestApi < Minitest::Test
   include Rack::Test::Methods
