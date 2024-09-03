@@ -12,7 +12,7 @@ module Profiles
     filename = File.basename(file, '.json')
 
     # test class
-    test_class = Class.new(MiniTest::Test) do
+    test_class = Class.new(Minitest::Test) do
       # set file path
       @file_path = file
       # profile

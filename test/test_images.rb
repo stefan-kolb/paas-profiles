@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 
 module Profiles
-  class TestImages < MiniTest::Test
+  class TestImages < Minitest::Test
     PROFILE_DIR = File.join(__dir__, '..', 'profiles')
     IMAGE_DIR = File.join(__dir__, '..', 'public', 'img', 'vendor')
 

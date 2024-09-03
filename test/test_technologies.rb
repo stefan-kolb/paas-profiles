@@ -2,7 +2,7 @@ require 'minitest/autorun'
 require 'json'
 
 module Profiles
-  class TestTechnologies < MiniTest::Test
+  class TestTechnologies < Minitest::Test
     # for every vendor, technology data must be available
     def test_vendor_technologies
       profile_dir = File.join(__dir__, '..', 'profiles', '*.json')

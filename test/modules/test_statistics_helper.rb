@@ -2,7 +2,7 @@ require_relative '../../lib/helper/statistics_helper'
 
 class DummyClass; extend StatisticsHelper; end
 
-class TestStatisticsHelper < MiniTest::Test
+class TestStatisticsHelper < Minitest::Test
   def test_mean
     array = [2, 4, 5]
     assert_equal(3.7, DummyClass.mean(array), 'Unexpected mean value')

@@ -1,6 +1,6 @@
 require_relative '../test_helper'
 
-class TestVendor < MiniTest::Test
+class TestVendor < Minitest::Test
   include FactoryBot::Syntax::Methods
 
   def setup

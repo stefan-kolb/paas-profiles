@@ -6,7 +6,7 @@ require_relative '../test_helper'
 require_relative '../../app/models/vendor/vendor'
 
 module Profiles
-  class TestConsistency < MiniTest::Test
+  class TestConsistency < Minitest::Test
     def setup
       Dir.glob(File.join(__dir__, '..', '..', 'profiles/*.json')).each do |file|
         begin

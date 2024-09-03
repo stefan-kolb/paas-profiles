@@ -5,7 +5,7 @@ require_relative '../../app/models/vendor/vendor'
 require_relative '../../lib/statistics/language_charts'
 
 module Profiles
-  class TestLanguageStats < MiniTest::Test
+  class TestLanguageStats < Minitest::Test
     include FactoryBot::Syntax::Methods
 
     def teardown
