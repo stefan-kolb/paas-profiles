@@ -81,7 +81,7 @@ module Profiles
     get '/compare' do
       @versus_path = request.fullpath
       @p1 = Vendor.where(name: /heroku/i).first
-      @p2 = Vendor.where(name: /pivotal web services/i).first
+      @p2 = Vendor.where(name: /openshift online/i).first
       @title = "#{@p1.name} vs #{@p2.name} | PaaS Comparison"
 
       erb :'profiles/compare'
