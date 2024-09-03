@@ -154,8 +154,8 @@ DEPENDENCIES
   database_cleaner
   factory_bot
   geocoder
-  grape
-  grape-entity
+  grape (~> 1.4.0)
+  grape-entity (~> 0.8.1)
   iso_country_codes
   minitest
   mongo (~> 2.8.0)
@@ -164,7 +164,6 @@ DEPENDENCIES
   rake
   require_all
   rest-client
-  rmagick (~> 2.16)
   rss
   rubocop
   shoulda-context
