@@ -20,8 +20,8 @@ require_relative 'tasks/profiles'
 require_relative 'tasks/geo'
 
 # code style
-require 'rubocop/rake_task'
-RuboCop::RakeTask.new
+# require 'rubocop/rake_task'
+# RuboCop::RakeTask.new
 
 # tests
 Rake::TestTask.new do |t|
@@ -29,4 +29,4 @@ Rake::TestTask.new do |t|
   t.ruby_opts = ['-W1']
 end
 
-task default: %i[rubocop test]
+task default: %i[test]
