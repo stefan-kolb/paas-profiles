@@ -27,7 +27,7 @@ module Profiles
         begin
           vendor = Vendor.find_by(name: /\A#{params[:name].tr('_', '.')}\z/i)
           present vendor
-        rescue Mongoid::Errors::DocumentNotFound
+        rescue Exception
           error! 'Vendor not found', 404
         end
       end
@@ -51,7 +51,7 @@ module Profiles
             begin
               dc = Datacenter.find_by(region: infra['region'], country: infra['country'])
               markers << { latLng: dc.coordinates, name: dc.to_s }
-            rescue Mongoid::Errors::DocumentNotFound
+            rescue Exception
               coord = Geocoder.coordinates("#{infra['region']}, #{infra['country']}")
               markers << { latLng: coord, name: infra['region'] }
             end
