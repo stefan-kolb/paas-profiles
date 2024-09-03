@@ -102,6 +102,8 @@ GEM
       netrc (~> 0.8)
     rexml (3.2.5)
     rmagick (2.16.0)
+    rss (0.3.1)
+      rexml
     rubocop (0.92.0)
       parallel (~> 1.10)
       parser (>= 2.7.1.5)
@@ -163,6 +165,7 @@ DEPENDENCIES
   require_all
   rest-client
   rmagick (~> 2.16)
+  rss
   rubocop
   shoulda-context
   sinatra (~> 2.1)
@@ -171,7 +174,7 @@ DEPENDENCIES
   versionomy
 
 RUBY VERSION
-   ruby 2.4.2p198
+   ruby 3.1.4p223
 
 BUNDLED WITH
    2.1.4
