@@ -4,7 +4,7 @@ ruby File.read('.ruby-version').strip
 
 gem 'activesupport'
 gem 'geocoder'
-gem 'grape', '~> 1.5.3'
+gem 'grape', '~> 1.8.0'
 gem 'grape-entity', '~> 0.8.1'
 gem 'iso_country_codes'
 gem 'mongo', '~> 2.8.0'
