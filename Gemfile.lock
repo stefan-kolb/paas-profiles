@@ -101,7 +101,6 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rexml (3.2.5)
-    rmagick (2.16.0)
     rss (0.3.1)
       rexml
     rubocop (0.92.0)

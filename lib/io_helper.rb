@@ -1,5 +1,5 @@
 require 'json'
-require 'rmagick'
+# require 'rmagick'
 
 module IoHelper
   def write_json_file(filename, data)
@@ -9,9 +9,9 @@ module IoHelper
   end
 
   def write_png_image(filename, data)
-    image = Magick::Image.from_blob(data).first
-    image.format = 'PNG'
-    image.write(filename << '.png')
+    # image = Magick::Image.from_blob(data).first
+    # image.format = 'PNG'
+    # image.write(filename << '.png')
   end
 
   def to_filename(str)
