@@ -59,7 +59,7 @@ namespace :db do
           isolation: e['isolation'],
           dev_model: e['dev_model']
         )
-      rescue Mongoid::Errors::DocumentNotFound
+      rescue Exception
         puts "WARN: No profile found for '#{e['vendor']}' while trying to update technology data"
       end
     end
@@ -75,7 +75,7 @@ namespace :db do
         Profiles::Vendor.find_by(name: e['vendor']).update(
           twitter: e['twitter']
         )
-      rescue Mongoid::Errors::DocumentNotFound
+      rescue Exception
         puts 'WARN: Vendor is missing for twitter update'
       end
 

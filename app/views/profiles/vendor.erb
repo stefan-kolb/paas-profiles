@@ -357,7 +357,7 @@
                         <%
                            begin
                              addon = Profiles::ServiceVendor.find_by(:key => rt['name'].downcase)
-                           rescue Mongoid::Errors::DocumentNotFound
+                           rescue Exception
                              addon = rt
                            end
                         %>
