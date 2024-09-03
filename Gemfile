@@ -20,7 +20,7 @@ gem 'sinatra-simple-navigation', '~> 4.0'
 gem 'versionomy'
 
 group :test do
-  gem 'database_cleaner'
+  gem 'database_cleaner-mongoid'
   gem 'factory_bot'
   gem 'minitest'
   gem 'rack-test'
